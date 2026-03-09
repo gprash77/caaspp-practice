@@ -1,26 +1,891 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --tds-blue: #00529b;
+  --tds-dark-blue: #003366;
+  --tds-teal: #1a7a7a;
+  --tds-green: #2e7d32;
+  --tds-orange: #f57c00;
+  --tds-border: #ccc;
+  --tds-light-bg: #f0f0f0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e8e8e8;
+  color: #222;
+}
+
+/* ========================================
+   TDS (Test Delivery System) - CAASPP UI
+   ======================================== */
+
+.tds-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #e8e8e8;
+}
+
+/* Row 1: Info bar */
+.tds-info-bar {
+  background: white;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  gap: 10px;
+  font-size: 13px;
+  min-height: 32px;
+}
+
+.tds-questions-btn {
+  background: white;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 3px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tds-questions-btn:hover {
+  background: #f0f0f0;
+}
+
+.tds-progress-bar {
+  flex: 0 0 160px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+}
+
+.tds-progress-fill {
+  height: 100%;
+  background: var(--tds-teal);
+  transition: width 0.3s ease;
+}
+
+.tds-progress-text {
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tds-session-label {
+  color: #888;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.tds-help-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--tds-blue);
+  background: white;
+  color: var(--tds-blue);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Row 2: Navigation toolbar */
+.tds-toolbar {
+  background: white;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  min-height: 48px;
+}
+
+.tds-toolbar-left,
+.tds-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tds-nav-icon,
+.tds-tool-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 10px;
+  color: #4a90d9;
+  transition: opacity 0.15s;
+}
+
+.tds-nav-icon:hover,
+.tds-tool-icon:hover {
+  opacity: 0.7;
+}
+
+.tds-nav-icon:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.tds-nav-icon.active-flag svg rect {
+  fill: #f57c00;
+}
+
+.tds-icon-label {
+  font-size: 10px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Row 3: Progress dots */
+.tds-progress-dots {
+  background: white;
+  border-bottom: 2px solid var(--tds-teal);
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  overflow-x: auto;
+}
+
+.tds-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.tds-dot.current {
+  background: var(--tds-teal);
+  border-color: var(--tds-teal);
+  width: 14px;
+  height: 14px;
+  border-width: 3px;
+  border-color: #333;
+}
+
+.tds-dot.answered {
+  background: var(--tds-teal);
+  border-color: var(--tds-teal);
+}
+
+.tds-dot.flagged {
+  border-color: var(--tds-orange);
+  box-shadow: 0 0 0 2px var(--tds-orange);
+}
+
+/* Main content area */
+.tds-content {
+  flex: 1;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.tds-content.split-view {
+  flex-direction: row;
+}
+
+/* ELA passage panel (left side) */
+.tds-passage-panel {
+  flex: 0 0 42%;
+  border-right: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+
+.tds-passage-header {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.tds-passage-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.tds-passage-body h3,
+.tds-passage-body h4 {
+  margin-top: 0;
+}
+
+.tds-passage-body p {
+  margin: 0 0 12px;
+}
+
+.tds-passage-toggle {
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  transform: translateY(-50%);
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 28px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #666;
+  z-index: 2;
+}
+
+/* Question panel (right side for ELA, full width for Math) */
+.tds-question-panel {
+  flex: 1;
+  padding: 16px 24px 32px;
+  overflow-y: auto;
+}
+
+/* Question number boxes (ELA top) */
+.tds-question-numbers {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 12px;
+  justify-content: flex-end;
+}
+
+.tds-q-num {
+  width: 32px;
+  height: 28px;
+  border: 1px solid #999;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tds-q-num.current {
+  background: var(--tds-teal);
+  color: white;
+  border-color: var(--tds-teal);
+}
+
+.tds-q-num.answered {
+  background: #d0e8e8;
+  border-color: var(--tds-teal);
+}
+
+/* Question badge row */
+.tds-q-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.tds-q-badge {
+  width: 36px;
+  height: 36px;
+  background: var(--tds-teal);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tds-q-progress-line {
+  flex: 1;
+  height: 4px;
+  background: #ddd;
+  position: relative;
+}
+
+.tds-q-line-fill {
+  height: 100%;
+  background: var(--tds-teal);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.tds-menu-icon {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tds-guest-label {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 16px;
+  margin-left: 2px;
+}
+
+/* Question text */
+.tds-question-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* Answer options - radio/checkbox style like real CAASPP */
+.tds-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tds-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.1s;
+}
+
+.tds-option:hover {
+  background: #f5f5f5;
+}
+
+.tds-option.selected {
+  background: #e8f4fd;
+}
+
+.tds-option-marker {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #666;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.tds-option-marker.radio {
+  border-radius: 50%;
+}
+
+.tds-option-marker.checkbox {
+  border-radius: 3px;
+}
+
+.tds-option.selected .tds-option-marker {
+  border-color: var(--tds-blue);
+}
+
+.marker-fill {
+  width: 10px;
+  height: 10px;
+  background: var(--tds-blue);
+  border-radius: 50%;
+}
+
+.marker-check {
+  color: var(--tds-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tds-option-label {
+  font-weight: 700;
+  color: #333;
+  font-size: 15px;
+  min-width: 18px;
+  flex-shrink: 0;
+}
+
+.tds-option-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Number pad (for math text-input questions) */
+.number-pad {
+  margin-top: 8px;
+  border: 2px solid #b0c4de;
+  border-radius: 4px;
+  display: inline-block;
+  background: #f0f4f8;
+  padding: 8px;
+  max-width: 320px;
+}
+
+.number-pad-display {
+  margin-bottom: 8px;
+}
+
+.number-pad-input {
+  width: 100%;
+  border: 1px solid #999;
+  padding: 8px 12px;
+  font-size: 20px;
+  font-family: monospace;
+  text-align: left;
+  background: white;
+}
+
+.number-pad-input:focus {
+  outline: 2px solid var(--tds-blue);
+}
+
+.number-pad-controls {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.pad-control {
+  width: 36px;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pad-control:hover {
+  background: #e0e0e0;
+}
+
+.number-pad-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.pad-key {
+  height: 44px;
+  border: 1px solid #999;
+  background: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+}
+
+.pad-key:hover {
+  background: #e8e8e8;
+}
+
+.pad-key:active {
+  background: #d0d0d0;
+}
+
+/* Submit bar */
+.tds-submit-bar {
+  padding: 12px 24px;
+  text-align: center;
+  background: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+.tds-submit-btn {
+  background: var(--tds-green);
+  color: white;
+  border: none;
+  padding: 12px 48px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.tds-submit-btn:hover {
+  background: #1b5e20;
+}
+
+/* Attention dialog (must answer before proceeding) */
+.attention-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.attention-dialog {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  max-width: 420px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.attention-icon-bar {
+  background: var(--tds-blue);
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.attention-bell {
+  font-size: 32px;
+  filter: grayscale(1) brightness(10);
+}
+
+.attention-body {
+  padding: 20px 24px;
+  flex: 1;
+}
+
+.attention-body h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+}
+
+.attention-body p {
+  margin: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.attention-ok-btn {
+  background: var(--tds-blue);
+  color: white;
+  border: none;
+  padding: 8px 32px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+}
+
+.attention-ok-btn:hover {
+  background: var(--tds-dark-blue);
+}
+
+/* ========================================
+   Landing page
+   ======================================== */
+
+.landing-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.landing-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.landing-header {
+  background: var(--tds-blue);
+  color: white;
+  padding: 24px 32px;
+  text-align: center;
+}
+
+.landing-header h1 {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+}
+
+.landing-header p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.landing-body {
+  padding: 32px;
+}
+
+.select-group {
+  margin-bottom: 24px;
+}
+
+.select-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+}
+
+.select-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background: white;
+  cursor: pointer;
+}
+
+.select-group select:focus {
+  border-color: var(--tds-blue);
+  outline: none;
+}
+
+.start-btn {
+  background: var(--tds-green);
+  color: white;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 8px;
+}
+
+.start-btn:hover {
+  background: #1b5e20;
+}
+
+/* ========================================
+   Results page
+   ======================================== */
+
+.results-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+.results-header {
+  background: var(--tds-blue);
+  color: white;
+  padding: 24px 32px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+.results-body {
+  background: white;
+  padding: 32px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.score-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.score-card {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.score-card .score-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--tds-blue);
+}
+
+.score-card .score-label {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.claim-section {
+  margin-bottom: 24px;
+}
+
+.claim-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f0f4f8;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.claim-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.claim-score {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.claim-score.good {
+  color: var(--tds-green);
+}
+
+.claim-score.needs-work {
+  color: var(--tds-orange);
+}
+
+.claim-score.struggling {
+  color: #c62828;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.question-review {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.question-review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.question-review-body {
+  padding: 16px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.correct-badge {
+  background: #c8e6c9;
+  color: #2e7d32;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.incorrect-badge {
+  background: #ffcdd2;
+  color: #c62828;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.improvement-section {
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+
+.improvement-section h3 {
+  color: #e65100;
+  margin: 0 0 12px 0;
+}
+
+.improvement-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.improvement-section li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.retake-btn {
+  display: inline-block;
+  background: var(--tds-blue);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 24px;
+  transition: background 0.15s;
+}
+
+.retake-btn:hover {
+  background: var(--tds-dark-blue);
 }

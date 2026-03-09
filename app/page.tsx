@@ -1,65 +1,130 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+const tests = [
+  {
+    id: "math-cat",
+    subject: "math",
+    type: "cat",
+    label: "Mathematics — Computer Adaptive Test",
+    description: "Multiple-choice, text-input, and multi-select questions covering all math claims.",
+  },
+  {
+    id: "math-pt",
+    subject: "math",
+    type: "pt",
+    label: "Mathematics — Performance Task",
+    description: "Multi-step problems that require modeling, reasoning, and problem solving.",
+  },
+  {
+    id: "ela-cat",
+    subject: "ela",
+    type: "cat",
+    label: "ELA — Computer Adaptive Test",
+    description: "Reading comprehension, vocabulary, and writing questions with passages.",
+  },
+  {
+    id: "ela-pt",
+    subject: "ela",
+    type: "pt",
+    label: "ELA — Performance Task Segment",
+    description: "Read sources, answer research questions, and respond to a writing task.",
+  },
+];
 
 export default function Home() {
+  const router = useRouter();
+  const [grade, setGrade] = useState("3");
+
+  const handleStart = (subject: string, type: string) => {
+    router.push(`/test?grade=${grade}&subject=${subject}&type=${type}`);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="landing-container">
+      <div className="landing-card">
+        <div className="landing-header">
+          <h1>CAASPP Practice Test</h1>
+          <p>California Assessment of Student Performance and Progress</p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="landing-body">
+          <div className="select-group">
+            <label htmlFor="grade">Select Grade</label>
+            <select
+              id="grade"
+              value={grade}
+              onChange={(e) => setGrade(e.target.value)}
+            >
+              <option value="3">Grade 3</option>
+              <option value="4" disabled>
+                Grade 4 (Coming Soon)
+              </option>
+              <option value="5" disabled>
+                Grade 5 (Coming Soon)
+              </option>
+            </select>
+          </div>
+
+          <div style={{ marginBottom: 16 }}>
+            <label style={{ display: "block", fontWeight: 600, marginBottom: 12, color: "#333", fontSize: 15 }}>
+              Select a Test
+            </label>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {tests.map((t) => (
+                <button
+                  key={t.id}
+                  onClick={() => handleStart(t.subject, t.type)}
+                  style={{
+                    background: "white",
+                    border: "2px solid #ccc",
+                    borderRadius: 8,
+                    padding: "14px 18px",
+                    textAlign: "left",
+                    cursor: "pointer",
+                    transition: "border-color 0.15s, background 0.15s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#00529b";
+                    e.currentTarget.style.background = "#f0f6ff";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "#ccc";
+                    e.currentTarget.style.background = "white";
+                  }}
+                >
+                  <div style={{ fontWeight: 600, fontSize: 15, color: "#00529b", marginBottom: 4 }}>
+                    {t.label}
+                  </div>
+                  <div style={{ fontSize: 13, color: "#666", lineHeight: 1.4 }}>
+                    {t.description}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div
+            style={{
+              background: "#f0f4f8",
+              borderRadius: 6,
+              padding: "16px 20px",
+              marginBottom: 8,
+              fontSize: 14,
+              lineHeight: 1.6,
+              color: "#444",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <strong>About this practice test:</strong>
+            <ul style={{ margin: "8px 0 0", paddingLeft: 20 }}>
+              <li>Questions similar to the real CAASPP test</li>
+              <li>Interface matches the actual test format you will see at school</li>
+              <li>After you finish, you will get a score report showing what you did well and what to practice more</li>
+            </ul>
+          </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
