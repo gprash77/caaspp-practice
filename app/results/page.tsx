@@ -28,7 +28,14 @@ function normalizeAnswer(a: string): string {
   return a.trim().toLowerCase().replace(/\s+/g, " ");
 }
 
+function isManuallyScored(question: Question): boolean {
+  return question.type === "short-answer" || question.type === "extended-writing";
+}
+
 function checkAnswer(question: Question, userAnswer: string | string[]): boolean {
+  // Manually scored questions can't be auto-graded
+  if (isManuallyScored(question)) return false;
+
   const correct = question.correctAnswer;
 
   if (Array.isArray(correct)) {
@@ -91,15 +98,17 @@ export default function ResultsPage() {
     return <div style={{ padding: 40, textAlign: "center" }}>Loading results...</div>;
   }
 
-  const totalCorrect = results.filter((r) => r.isCorrect).length;
-  const totalQuestions = results.length;
-  const totalPct = Math.round((totalCorrect / totalQuestions) * 100);
+  const autoScoredResults = results.filter((r) => !isManuallyScored(r.question));
+  const manualResults = results.filter((r) => isManuallyScored(r.question));
+  const totalCorrect = autoScoredResults.filter((r) => r.isCorrect).length;
+  const totalAutoQuestions = autoScoredResults.length;
+  const totalPct = totalAutoQuestions > 0 ? Math.round((totalCorrect / totalAutoQuestions) * 100) : 0;
   const overallLevel = getPerformanceLevel(totalPct);
 
-  // Group by claim
+  // Group by claim (only auto-scored for claim percentages)
   const claimLabels = testData.subject === "math" ? mathClaims : elaClaims;
   const claimGroups: Record<number, QuestionResult[]> = {};
-  results.forEach((r) => {
+  autoScoredResults.forEach((r) => {
     const claim = r.question.claim;
     if (!claimGroups[claim]) claimGroups[claim] = [];
     claimGroups[claim].push(r);
@@ -157,9 +166,9 @@ export default function ResultsPage() {
         <div className="score-summary">
           <div className="score-card">
             <div className="score-value">
-              {totalCorrect}/{totalQuestions}
+              {totalCorrect}/{totalAutoQuestions}
             </div>
-            <div className="score-label">Questions Correct</div>
+            <div className="score-label">Auto-Scored Questions Correct</div>
           </div>
           <div className="score-card">
             <div className="score-value" style={{ color: overallLevel.color }}>
@@ -168,6 +177,19 @@ export default function ResultsPage() {
             <div className="score-label">{overallLevel.label}</div>
           </div>
         </div>
+        {manualResults.length > 0 && (
+          <div style={{
+            background: "#e3f2fd",
+            border: "1px solid #90caf9",
+            borderRadius: 8,
+            padding: "14px 20px",
+            marginBottom: 24,
+            fontSize: 14,
+            lineHeight: 1.5,
+          }}>
+            <strong>Note:</strong> {manualResults.length} question{manualResults.length > 1 ? "s" : ""} (short-answer and essay writing) require manual scoring by a parent or teacher. See the rubrics below to evaluate those responses.
+          </div>
+        )}
 
         {/* Claim breakdown */}
         <h2 style={{ fontSize: 18, marginBottom: 16 }}>
@@ -247,64 +269,100 @@ export default function ResultsPage() {
         <h2 style={{ fontSize: 18, marginTop: 32, marginBottom: 16 }}>
           Question Review
         </h2>
-        {results.map((r, i) => (
-          <div key={r.question.id} className="question-review">
-            <div
-              className="question-review-header"
-              onClick={() => toggleQuestion(r.question.id)}
-            >
-              <span>
-                <strong>Q{i + 1}.</strong>{" "}
-                {r.question.questionText.slice(0, 80)}
-                {r.question.questionText.length > 80 ? "..." : ""}
-              </span>
-              <span>
-                {r.isCorrect ? (
-                  <span className="correct-badge">Correct</span>
-                ) : (
-                  <span className="incorrect-badge">Incorrect</span>
-                )}
-              </span>
-            </div>
-            {expandedQ.has(r.question.id) && (
-              <div className="question-review-body">
-                <p>
-                  <strong>Question:</strong> {r.question.questionText}
-                </p>
-                <p>
-                  <strong>Your answer:</strong>{" "}
-                  {Array.isArray(r.userAnswer)
-                    ? r.userAnswer.join(", ") || "(no answer)"
-                    : r.userAnswer || "(no answer)"}
-                </p>
-                <p>
-                  <strong>Correct answer:</strong>{" "}
-                  {Array.isArray(r.question.correctAnswer)
-                    ? r.question.correctAnswer.join(", ")
-                    : r.question.correctAnswer}
-                </p>
-                {r.question.evidenceStatement && (
-                  <p style={{ color: "#666", fontSize: 13 }}>
-                    <strong>Skill tested:</strong>{" "}
-                    {r.question.evidenceStatement}
-                  </p>
-                )}
-                <p style={{ color: "#666", fontSize: 13 }}>
-                  <strong>Standard:</strong> {r.question.standard} |{" "}
-                  <strong>Claim:</strong>{" "}
-                  {claimLabels[r.question.claim] || r.question.claim}
-                  {r.question.domain && testData.subject === "math" && (
-                    <>
-                      {" "}
-                      | <strong>Domain:</strong>{" "}
-                      {mathDomains[r.question.domain] || r.question.domain}
-                    </>
+        {results.map((r, i) => {
+          const manual = isManuallyScored(r.question);
+          const hasAnswer = Array.isArray(r.userAnswer)
+            ? r.userAnswer.length > 0
+            : r.userAnswer !== undefined && r.userAnswer !== "";
+
+          return (
+            <div key={r.question.id} className="question-review">
+              <div
+                className="question-review-header"
+                onClick={() => toggleQuestion(r.question.id)}
+              >
+                <span>
+                  <strong>Q{i + 1}.</strong>{" "}
+                  {r.question.questionText
+                    ? r.question.questionText.slice(0, 80) + (r.question.questionText.length > 80 ? "..." : "")
+                    : "(Essay writing task)"}
+                </span>
+                <span>
+                  {manual ? (
+                    <span className="manual-badge">Needs Manual Scoring</span>
+                  ) : r.isCorrect ? (
+                    <span className="correct-badge">Correct</span>
+                  ) : (
+                    <span className="incorrect-badge">Incorrect</span>
                   )}
-                </p>
+                </span>
               </div>
-            )}
-          </div>
-        ))}
+              {expandedQ.has(r.question.id) && (
+                <div className="question-review-body">
+                  {r.question.questionText && (
+                    <p>
+                      <strong>Question:</strong> {r.question.questionText}
+                    </p>
+                  )}
+                  <p>
+                    <strong>Student response:</strong>{" "}
+                    {Array.isArray(r.userAnswer)
+                      ? r.userAnswer.join(", ") || "(no answer)"
+                      : r.userAnswer || "(no answer)"}
+                  </p>
+                  {!manual && (
+                    <p>
+                      <strong>Correct answer:</strong>{" "}
+                      {Array.isArray(r.question.correctAnswer)
+                        ? r.question.correctAnswer.join(", ")
+                        : r.question.correctAnswer}
+                    </p>
+                  )}
+                  {manual && (
+                    <div style={{
+                      background: "#fff8e1",
+                      border: "1px solid #ffe082",
+                      borderRadius: 6,
+                      padding: "12px 16px",
+                      marginTop: 8,
+                      marginBottom: 8,
+                    }}>
+                      <p style={{ margin: "0 0 8px", fontWeight: 600, color: "#e65100" }}>
+                        Scoring Rubric ({r.question.points} point{r.question.points > 1 ? "s" : ""}):
+                      </p>
+                      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: "#555" }}>
+                        {r.question.rubric}
+                      </p>
+                      {!hasAnswer && (
+                        <p style={{ margin: "8px 0 0", color: "#c62828", fontSize: 13 }}>
+                          No response was provided for this question.
+                        </p>
+                      )}
+                    </div>
+                  )}
+                  {r.question.evidenceStatement && (
+                    <p style={{ color: "#666", fontSize: 13 }}>
+                      <strong>Skill tested:</strong>{" "}
+                      {r.question.evidenceStatement}
+                    </p>
+                  )}
+                  <p style={{ color: "#666", fontSize: 13 }}>
+                    <strong>Standard:</strong> {r.question.standard} |{" "}
+                    <strong>Claim:</strong>{" "}
+                    {claimLabels[r.question.claim] || r.question.claim}
+                    {r.question.domain && testData.subject === "math" && (
+                      <>
+                        {" "}
+                        | <strong>Domain:</strong>{" "}
+                        {mathDomains[r.question.domain] || r.question.domain}
+                      </>
+                    )}
+                  </p>
+                </div>
+              )}
+            </div>
+          );
+        })}
 
         {/* Actions */}
         <div style={{ marginTop: 32, textAlign: "center" }}>

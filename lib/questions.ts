@@ -1647,7 +1647,7 @@ After you have reviewed these sources, you will answer some questions about them
       "Source #1: Treasure in the Field",
       "Source #2: Sap's Running",
     ],
-    correctAnswer: ["1:1,2:1,2:2,1:3,2:3,1:4,2:4"],
+    correctAnswer: ["0:0", "0:1", "1:0", "1:1", "2:1", "3:0", "3:1"],
     rubric: "The student correctly matches ideas to the appropriate sources.",
     points: 2,
     evidenceStatement: "The student will locate information from multiple sources to support a central idea.",

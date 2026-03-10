@@ -999,6 +999,15 @@ body {
   font-weight: 600;
 }
 
+.manual-badge {
+  background: #fff3e0;
+  color: #e65100;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .improvement-section {
   background: #fff3e0;
   border: 1px solid #ffcc80;
