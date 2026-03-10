@@ -621,6 +621,157 @@ body {
   background: var(--tds-dark-blue);
 }
 
+/* Student Directions (ELA PT) */
+.tds-student-directions {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Grid match (source matching table) */
+.grid-match {
+  margin-top: 8px;
+  overflow-x: auto;
+}
+
+.grid-match-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+.grid-match-table th {
+  background: var(--tds-teal);
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid #999;
+  min-width: 140px;
+}
+
+.grid-match-table th:first-child {
+  background: transparent;
+  border: none;
+}
+
+.grid-match-label {
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  text-align: left;
+  font-weight: 500;
+}
+
+.grid-match-cell {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.grid-match-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--tds-teal);
+}
+
+/* Short answer text box */
+.short-answer {
+  margin-top: 8px;
+}
+
+.short-answer-input {
+  width: 100%;
+  min-height: 150px;
+  border: 2px solid #999;
+  border-radius: 2px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  resize: vertical;
+  background: white;
+}
+
+.short-answer-input:focus {
+  outline: none;
+  border-color: var(--tds-blue);
+}
+
+/* Rich text editor (extended writing) */
+.extended-writing {
+  margin-top: 8px;
+}
+
+.extended-writing-directions {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.rich-editor {
+  border: 2px solid #999;
+  border-radius: 2px;
+  background: white;
+}
+
+.rich-editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #ccc;
+  background: #f5f5f5;
+  flex-wrap: wrap;
+}
+
+.rich-editor-toolbar button {
+  width: 30px;
+  height: 28px;
+  border: 1px solid #bbb;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  color: #333;
+}
+
+.rich-editor-toolbar button:hover {
+  background: #e0e0e0;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+  margin: 0 4px;
+}
+
+.rich-editor-body {
+  min-height: 300px;
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1.8;
+  outline: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rich-editor-body:focus {
+  box-shadow: inset 0 0 0 2px var(--tds-blue);
+}
+
+.rich-editor-body p {
+  margin: 0 0 8px;
+}
+
 /* ========================================
    Landing page
    ======================================== */

@@ -7,13 +7,16 @@ export interface Question {
   target: string;
   dok: number;
   standard: string;
-  type: "multiple-choice" | "multi-select" | "text-input" | "two-part";
+  type: "multiple-choice" | "multi-select" | "text-input" | "two-part" | "short-answer" | "extended-writing" | "grid-match";
   testType: "cat" | "pt";
   passage?: string;
   passageTitle?: string;
   passageAuthor?: string;
+  studentDirections?: string;
   questionText: string;
   options?: { label: string; text: string }[];
+  gridRows?: string[];
+  gridColumns?: string[];
   correctAnswer: string | string[];
   rubric: string;
   points: number;
@@ -1487,83 +1490,231 @@ export const grade3ELA: Question[] = [
     points: 1,
     evidenceStatement: "The student will determine the main ideas and supporting details of information presented orally.",
   },
-  // ── ELA PT: Extended Writing Task ──
-  // Based on the passages already read, students complete a writing-focused performance task
+  // ── Additional ELA CAT questions to reach 30 ──
+  {
+    id: 132,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 1,
+    target: "10",
+    dok: 2,
+    standard: "RI.4",
+    type: "multiple-choice",
+    passage: sapPassage,
+    passageTitle: "Sap's Running",
+    questionText:
+      'What does the word "tradition" mean in the sentence "It is a family tradition"?',
+    options: [
+      { label: "A", text: "A new invention" },
+      { label: "B", text: "Something passed down through a family over many years" },
+      { label: "C", text: "A type of recipe" },
+      { label: "D", text: "A holiday celebration" },
+    ],
+    correctAnswer: "B",
+    rubric: "The student selects the correct meaning.",
+    points: 1,
+    evidenceStatement: "The student will determine the meaning of a word in context.",
+  },
+  {
+    id: 133,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 1,
+    target: "8",
+    dok: 2,
+    standard: "RI.1",
+    type: "multiple-choice",
+    passage: sapPassage,
+    passageTitle: "Sap's Running",
+    questionText:
+      "According to the legend of Woksis, how was maple syrup first discovered?",
+    options: [
+      { label: "A", text: "A scientist at the University of Vermont found it." },
+      { label: "B", text: "The Coleman brothers invented a new process." },
+      { label: "C", text: "Sap dripped from a gash in a maple tree into a bowl and was boiled by accident." },
+      { label: "D", text: "Rain mixed with tree sap and created syrup." },
+    ],
+    correctAnswer: "C",
+    rubric: "The student selects the correct detail from the legend.",
+    points: 1,
+    evidenceStatement: "The student will cite textual evidence to support a conclusion.",
+  },
+  {
+    id: 134,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 1,
+    target: "2",
+    dok: 2,
+    standard: "RL.2",
+    type: "multiple-choice",
+    passage: treasurePassage,
+    passageTitle: "Treasure in the Field",
+    questionText:
+      "Which sentence best summarizes the ending of the story?",
+    options: [
+      { label: "A", text: "The sons dug up the entire field but never found any treasure." },
+      { label: "B", text: "The sons planted and sold rice, realizing that hard work was the real treasure." },
+      { label: "C", text: "The father told his sons where to dig for gold coins." },
+      { label: "D", text: "The neighbor helped the sons find the treasure." },
+    ],
+    correctAnswer: "B",
+    rubric: "The student selects the best summary.",
+    points: 1,
+    evidenceStatement: "The student will summarize key events in a literary text.",
+  },
+  {
+    id: 135,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 1,
+    target: "11",
+    dok: 3,
+    standard: "RI.9",
+    type: "multi-select",
+    passage: sapPassage,
+    passageTitle: "Sap's Running",
+    questionText:
+      'The passage says that people used to think sap rises up from the roots, but Dr. Tim Perkins says it actually flows downward. Select TWO details that support Dr. Perkins\' explanation.',
+    options: [
+      { label: "A", text: "The Coleman brothers have made maple syrup all their lives." },
+      { label: "B", text: "During cold nights, water rises into the trunk and branches." },
+      { label: "C", text: "Sap will flow from the cut end of a trunk, not from the stump." },
+      { label: "D", text: "Charles Darwin studied sap flow long ago." },
+      { label: "E", text: "A 50-foot-high sugar maple has nearly two hundred thousand leaves." },
+    ],
+    correctAnswer: ["B", "C"],
+    rubric: "The student selects the two correct supporting details.",
+    points: 1,
+    evidenceStatement: "The student will compare and evaluate evidence within an informational text.",
+  },
+  {
+    id: 136,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 3,
+    target: "4",
+    dok: 2,
+    standard: "SL.3",
+    type: "multiple-choice",
+    questionText:
+      "A student says: \"I think dogs are better pets than cats because dogs can learn tricks, they protect your home, and they love to play outside with you.\"\n\nHow does the student support her opinion?",
+    options: [
+      { label: "A", text: "By telling a story about her dog" },
+      { label: "B", text: "By giving three reasons why dogs are better" },
+      { label: "C", text: "By explaining what cats do wrong" },
+      { label: "D", text: "By asking the audience a question" },
+    ],
+    correctAnswer: "B",
+    rubric: "The student selects the correct option.",
+    points: 1,
+    evidenceStatement: "The student will identify how a speaker supports a point with reasons.",
+  },
+  // ── ELA PT: Performance Task matching real CAASPP format ──
+  // Student Directions + sources + grid matching + short answer + full essay
   {
     id: 150,
     testType: "pt",
     subject: "ela",
     grade: 3,
-    claim: 2,
-    target: "1bE",
+    claim: 4,
+    target: "2",
     dok: 2,
-    standard: "W.3b, W.5",
-    type: "multi-select",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
+    standard: "W.8, RI.1",
+    type: "grid-match",
+    passage: treasurePassage + "\n\n---\n\n" + sapPassage,
+    passageTitle: "Student Directions",
+    studentDirections: `**Informational Performance Task**
+
+**Task:**
+Your class has been learning about how people get rewards from nature. Your teacher has asked each student to learn about a different topic. You decide to learn about how people work with nature to get food and other rewards. You have found two sources about this topic.
+
+After you have reviewed these sources, you will answer some questions about them. Briefly scan the sources and the questions that follow. Then, go back and read the sources carefully so you will have the information you need to answer the questions and complete your research.`,
     questionText:
-      'A student is writing a summary of "Treasure in the Field." Read the student\'s draft:\n\n"A father lived with two lazy sons on a farm. He told them there was treasure in the field. They dug up the whole field but found nothing. Then they planted rice and sold it."\n\nSelect TWO sentences that should be added to make this a better summary.',
-    options: [
-      { label: "A", text: "The farm was in Vietnam, which is a country in Asia." },
-      { label: "B", text: "The sons learned that the real treasure was the reward of hard work." },
-      { label: "C", text: "The neighbor asked the father if his sons were helping." },
-      { label: "D", text: "The father\'s trick taught his sons to become hard workers." },
-      { label: "E", text: "The father cooked dinner because the sons forgot." },
+      "Click on the boxes to match each source with the idea or ideas that it supports. Some ideas may have more than one source selected.",
+    gridRows: [
+      "Hard work can lead to unexpected rewards.",
+      "Nature provides resources that people can use.",
+      "A family tradition is passed down through generations.",
+      "People must be patient to get results from their work.",
     ],
-    correctAnswer: ["B", "D"],
-    rubric: "The student selects the two sentences that best complete the summary.",
-    points: 1,
-    evidenceStatement: "The student will revise a text to improve clarity and completeness.",
+    gridColumns: [
+      "Source #1: Treasure in the Field",
+      "Source #2: Sap's Running",
+    ],
+    correctAnswer: ["1:1,2:1,2:2,1:3,2:3,1:4,2:4"],
+    rubric: "The student correctly matches ideas to the appropriate sources.",
+    points: 2,
+    evidenceStatement: "The student will locate information from multiple sources to support a central idea.",
   },
   {
     id: 151,
     testType: "pt",
     subject: "ela",
     grade: 3,
-    claim: 2,
-    target: "9",
-    dok: 2,
-    standard: "L.1, L.2",
-    type: "multi-select",
+    claim: 4,
+    target: "3",
+    dok: 3,
+    standard: "W.8, RI.1",
+    type: "short-answer",
+    passage: treasurePassage + "\n\n---\n\n" + sapPassage,
+    passageTitle: "Student Directions",
+    studentDirections: `**Informational Performance Task**
+
+**Task:**
+Your class has been learning about how people get rewards from nature. Your teacher has asked each student to learn about a different topic. You decide to learn about how people work with nature to get food and other rewards. You have found two sources about this topic.
+
+After you have reviewed these sources, you will answer some questions about them. Briefly scan the sources and the questions that follow. Then, go back and read the sources carefully so you will have the information you need to answer the questions and complete your research.`,
     questionText:
-      'Read the paragraph a student wrote about maple syrup:\n\n"Making maple syrup is a long process. first, you tap holes in maple trees. Then you colect the sap in buckets. Next, you boil the sap until most of the water is gone. Finaly, you have delicious maple syrup!"\n\nSelect TWO mistakes in the paragraph that need to be fixed.',
-    options: [
-      { label: "A", text: '"first" should be capitalized to "First"' },
-      { label: "B", text: '"tap" should be changed to "tapped"' },
-      { label: "C", text: '"colect" should be spelled "collect"' },
-      { label: "D", text: '"Next" should not be capitalized' },
-      { label: "E", text: '"Finaly" should be spelled "Finally"' },
-    ],
-    correctAnswer: ["A", "C"],
-    rubric: "The student identifies the two errors.",
-    points: 1,
-    evidenceStatement: "The student will edit text for capitalization, spelling, and conventions.",
+      'Explain how both sources show that people must work hard to get rewards from nature. Give one example from Source #1 and one example from Source #2. For each example, include the source title or number.',
+    correctAnswer: "Source 1: The sons had to dig the field and plant rice to earn money. Source 2: The Colemans collect sap and boil it for hours to make maple syrup.",
+    rubric: "Full credit: The student provides one relevant example from each source that shows hard work leading to rewards from nature, and identifies which source each example comes from. Partial credit: The student provides examples but only from one source, or does not clearly identify the sources.",
+    points: 2,
+    evidenceStatement: "The student will cite evidence from multiple sources to support analysis.",
   },
   {
     id: 152,
     testType: "pt",
     subject: "ela",
     grade: 3,
-    claim: 4,
-    target: "2",
-    dok: 3,
-    standard: "W.2, W.8",
-    type: "multi-select",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      'A student is writing a report about how maple syrup is made. She wants to use information from "Sap\'s Running." Which THREE details from the passage should she include in her report?',
-    options: [
-      { label: "A", text: "The Coleman brothers step out their front door in Vermont." },
-      { label: "B", text: "It takes about thirty-five gallons of sap to make one gallon of maple syrup." },
-      { label: "C", text: "Charles Darwin wrote that sap flow was a mysterious subject." },
-      { label: "D", text: "Sap is heated in big open pans so that most of the water will boil away." },
-      { label: "E", text: "During cold nights, water rises into the trunk and branches and forms frost." },
-    ],
-    correctAnswer: ["B", "D", "E"],
-    rubric: "The student selects the three most relevant details for the report.",
-    points: 1,
-    evidenceStatement: "The student will select relevant evidence from a source to support a research topic.",
+    claim: 2,
+    target: "1aI",
+    dok: 4,
+    standard: "W.2, W.4, W.5",
+    type: "extended-writing",
+    passage: treasurePassage + "\n\n---\n\n" + sapPassage,
+    passageTitle: "Student Directions",
+    studentDirections: `**Informational Performance Task**
+
+**Part 2**
+
+You will review your notes and sources, and plan, draft, revise, and edit your writing. You may use your notes and go back to the sources. Now read your assignment and the information about how your writing will be scored, then begin your work.
+
+**Your Assignment:**
+Your teacher is creating a bulletin board display in the school library to show what your class has learned about how people get rewards from nature. You decide to write an informational article about this topic. Your article will be read by other students, teachers, and parents.
+
+Using more than one source, develop a main idea about how people work hard to get rewards from nature. Choose the most important information from the sources to support your main idea. Then, write an informational article that is several paragraphs long. Clearly organize your article and support your main idea with details from the sources. Be sure to use your own words except when quoting directly from the sources. Be sure to give the source title or number when using details from the sources.
+
+**REMEMBER: You must**
+1. plan your informational article.
+2. write your informational article.
+3. revise and edit the final draft of your article.
+
+Word-processing tools and spell check are available to you.
+
+For Part 2, you are being asked to write an informational article that is several paragraphs long. Type your response in the box below. The box will get bigger as you type.
+
+Remember to check your notes and your prewriting/planning as you write, and then revise and edit your informational article.`,
+    questionText: "",
+    correctAnswer: "extended-writing-rubric",
+    rubric: "Full credit (4 points): The article has a clear main idea about rewards from nature, uses details from both sources, is well organized with multiple paragraphs, uses the student's own words, and has few errors in grammar/spelling. 3 points: Adequate main idea, uses details from at least one source, mostly organized. 2 points: Partial main idea, limited evidence, some organization. 1 point: Minimal response with little evidence or organization.",
+    points: 4,
+    evidenceStatement: "The student will write a full informational article using evidence from multiple sources.",
   },
 ];
 

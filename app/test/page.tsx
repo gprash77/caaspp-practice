@@ -5,6 +5,97 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { getQuestions, type Question } from "@/lib/questions";
 import ReactMarkdown from "react-markdown";
 
+function RichTextEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const execFormat = (cmd: string) => {
+    document.execCommand(cmd, false);
+  };
+
+  return (
+    <div className="rich-editor">
+      <div className="rich-editor-toolbar">
+        <button type="button" onClick={() => execFormat("bold")} title="Bold"><b>B</b></button>
+        <button type="button" onClick={() => execFormat("italic")} title="Italic"><i>I</i></button>
+        <button type="button" onClick={() => execFormat("underline")} title="Underline"><u>U</u></button>
+        <button type="button" onClick={() => execFormat("strikeThrough")} title="Strikethrough"><s>S</s></button>
+        <span className="toolbar-divider" />
+        <button type="button" onClick={() => execFormat("insertUnorderedList")} title="Bullet list">•≡</button>
+        <button type="button" onClick={() => execFormat("insertOrderedList")} title="Numbered list">1≡</button>
+        <span className="toolbar-divider" />
+        <button type="button" onClick={() => document.execCommand("cut")} title="Cut">✂</button>
+        <button type="button" onClick={() => document.execCommand("copy")} title="Copy">⧉</button>
+        <button type="button" onClick={() => document.execCommand("paste")} title="Paste">📋</button>
+        <span className="toolbar-divider" />
+        <button type="button" onClick={() => execFormat("undo")} title="Undo">↩</button>
+        <button type="button" onClick={() => execFormat("redo")} title="Redo">↪</button>
+      </div>
+      <div
+        className="rich-editor-body"
+        contentEditable
+        suppressContentEditableWarning
+        onInput={(e) => onChange((e.target as HTMLDivElement).innerText)}
+        dangerouslySetInnerHTML={{ __html: value || "" }}
+      />
+    </div>
+  );
+}
+
+function GridMatch({
+  rows,
+  columns,
+  value,
+  onChange,
+}: {
+  rows: string[];
+  columns: string[];
+  value: string[];
+  onChange: (v: string[]) => void;
+}) {
+  const toggleCell = (rowIdx: number, colIdx: number) => {
+    const key = `${rowIdx}:${colIdx}`;
+    if (value.includes(key)) {
+      onChange(value.filter((v) => v !== key));
+    } else {
+      onChange([...value, key]);
+    }
+  };
+
+  return (
+    <div className="grid-match">
+      <table className="grid-match-table">
+        <thead>
+          <tr>
+            <th></th>
+            {columns.map((col, i) => (
+              <th key={i}>{col}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, ri) => (
+            <tr key={ri}>
+              <td className="grid-match-label">{row}</td>
+              {columns.map((_, ci) => {
+                const key = `${ri}:${ci}`;
+                const checked = value.includes(key);
+                return (
+                  <td key={ci} className="grid-match-cell">
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={() => toggleCell(ri, ci)}
+                      className="grid-match-checkbox"
+                    />
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function NumberPad({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   const handleKey = (key: string) => {
     if (key === "del") {
@@ -164,7 +255,7 @@ function TestContent() {
   const pctComplete = Math.round((answeredCount / questions.length) * 100);
   const subjectLabel = subject === "math" ? "MATH" : "ELA";
   const testTypeLabel = testType === "pt" ? "Performance Task" : "Practice Test";
-  const hasPassage = subject === "ela" && current.passage;
+  const hasPassage = subject === "ela" && (current.passage || current.studentDirections);
 
   return (
     <div className="tds-wrapper">
@@ -273,10 +364,17 @@ function TestContent() {
             {showPassage && (
               <>
                 <div className="tds-passage-header">
-                  Read the passage and answer the questions.
+                  {current.studentDirections ? "Student Directions" : "Read the passage and answer the questions."}
                 </div>
                 <div className="tds-passage-body">
-                  <ReactMarkdown>{current.passage!}</ReactMarkdown>
+                  {current.studentDirections && (
+                    <div className="tds-student-directions">
+                      <ReactMarkdown>{current.studentDirections}</ReactMarkdown>
+                    </div>
+                  )}
+                  {current.passage && (
+                    <ReactMarkdown>{current.passage}</ReactMarkdown>
+                  )}
                 </div>
               </>
             )}
@@ -367,6 +465,39 @@ function TestContent() {
               value={(answers[current.id] as string) || ""}
               onChange={(v) => handleTextInput(v)}
             />
+          )}
+
+          {/* Short answer text box */}
+          {current.type === "short-answer" && (
+            <div className="short-answer">
+              <textarea
+                className="short-answer-input"
+                value={(answers[current.id] as string) || ""}
+                onChange={(e) => handleTextInput(e.target.value)}
+                placeholder=""
+                rows={6}
+              />
+            </div>
+          )}
+
+          {/* Grid match (source matching) */}
+          {current.type === "grid-match" && current.gridRows && current.gridColumns && (
+            <GridMatch
+              rows={current.gridRows}
+              columns={current.gridColumns}
+              value={(answers[current.id] as string[]) || []}
+              onChange={(v) => setAnswers({ ...answers, [current.id]: v })}
+            />
+          )}
+
+          {/* Extended writing with rich text editor */}
+          {current.type === "extended-writing" && (
+            <div className="extended-writing">
+              <RichTextEditor
+                value={(answers[current.id] as string) || ""}
+                onChange={(v) => handleTextInput(v)}
+              />
+            </div>
           )}
         </div>
       </div>
