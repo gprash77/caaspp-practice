@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
-  getQuestions,
+  fetchQuestions,
   mathClaims,
   elaClaims,
   mathDomains,
@@ -85,13 +85,14 @@ export default function ResultsPage() {
     const data: TestData = JSON.parse(stored);
     setTestData(data);
 
-    const questions = getQuestions(data.grade, data.subject, data.testType || "cat");
-    const qResults: QuestionResult[] = questions.map((q) => ({
-      question: q,
-      userAnswer: data.answers[q.id] || "",
-      isCorrect: checkAnswer(q, data.answers[q.id] || ""),
-    }));
-    setResults(qResults);
+    fetchQuestions(data.grade, data.subject, data.testType || "cat").then((questions) => {
+      const qResults: QuestionResult[] = questions.map((q) => ({
+        question: q,
+        userAnswer: data.answers[q.id] || "",
+        isCorrect: checkAnswer(q, data.answers[q.id] || ""),
+      }));
+      setResults(qResults);
+    });
   }, [router]);
 
   if (!testData || results.length === 0) {

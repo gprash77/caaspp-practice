@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { getQuestions, type Question } from "@/lib/questions";
+import { fetchQuestions, type Question } from "@/lib/questions";
 import ReactMarkdown from "react-markdown";
 
 function RichTextEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
@@ -151,8 +151,7 @@ function TestContent() {
   const [showAttentionDialog, setShowAttentionDialog] = useState(false);
 
   useEffect(() => {
-    const q = getQuestions(grade, subject, testType);
-    setQuestions(q);
+    fetchQuestions(grade, subject, testType).then(setQuestions);
   }, [grade, subject, testType]);
 
   const current = questions[currentIndex];

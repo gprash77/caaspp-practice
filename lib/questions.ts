@@ -1,3 +1,5 @@
+import { supabase } from "./supabase";
+
 export interface Question {
   id: number;
   subject: "math" | "ela";
@@ -1727,6 +1729,53 @@ export function getQuestions(
   if (grade === 3 && subject === "math") questions = grade3Math;
   if (grade === 3 && subject === "ela") questions = grade3ELA;
   return questions.filter((q) => q.testType === testType);
+}
+
+// Fetch questions from Supabase
+export async function fetchQuestions(
+  grade: number,
+  subject: "math" | "ela",
+  testType: "cat" | "pt" = "cat"
+): Promise<Question[]> {
+  const { data, error } = await supabase
+    .from("questions")
+    .select("*")
+    .eq("grade", grade)
+    .eq("subject", subject)
+    .eq("test_type", testType)
+    .order("id");
+
+  if (error) {
+    console.error("Supabase fetch error:", error.message);
+    // Fall back to local questions
+    return getQuestions(grade, subject, testType);
+  }
+
+  // Map snake_case DB columns to camelCase Question interface
+  return (data || []).map((row) => ({
+    id: row.id,
+    subject: row.subject,
+    grade: row.grade,
+    claim: row.claim,
+    domain: row.domain || undefined,
+    target: row.target,
+    dok: row.dok,
+    standard: row.standard,
+    type: row.type,
+    testType: row.test_type,
+    passage: row.passage || undefined,
+    passageTitle: row.passage_title || undefined,
+    passageAuthor: row.passage_author || undefined,
+    studentDirections: row.student_directions || undefined,
+    questionText: row.question_text,
+    options: row.options || undefined,
+    gridRows: row.grid_rows || undefined,
+    gridColumns: row.grid_columns || undefined,
+    correctAnswer: row.correct_answer,
+    rubric: row.rubric,
+    points: row.points,
+    evidenceStatement: row.evidence_statement || undefined,
+  }));
 }
 
 // Claim descriptions for reporting
