@@ -82,7 +82,13 @@ export default function ResultsPage() {
       router.push("/");
       return;
     }
-    const data: TestData = JSON.parse(stored);
+    let data: TestData;
+    try {
+      data = JSON.parse(stored);
+    } catch {
+      router.push("/");
+      return;
+    }
     setTestData(data);
 
     fetchQuestions(data.grade, data.subject, data.testType || "cat").then((questions) => {
