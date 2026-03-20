@@ -1751,8 +1751,13 @@ export async function fetchQuestions(
     return getQuestions(grade, subject, testType);
   }
 
+  // Fall back to local questions if Supabase returned no results
+  if (!data || data.length === 0) {
+    return getQuestions(grade, subject, testType);
+  }
+
   // Map snake_case DB columns to camelCase Question interface
-  return (data || []).map((row) => ({
+  return data.map((row) => ({
     id: row.id,
     subject: row.subject,
     grade: row.grade,

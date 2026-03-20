@@ -149,9 +149,13 @@ function TestContent() {
   const [showPassage, setShowPassage] = useState(true);
   const [lastPassageTitle, setLastPassageTitle] = useState<string | null>(null);
   const [showAttentionDialog, setShowAttentionDialog] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchQuestions(grade, subject, testType).then(setQuestions);
+    setLoading(true);
+    fetchQuestions(grade, subject, testType)
+      .then(setQuestions)
+      .finally(() => setLoading(false));
   }, [grade, subject, testType]);
 
   const current = questions[currentIndex];
@@ -240,8 +244,32 @@ function TestContent() {
     }
   }, [current, lastPassageTitle]);
 
-  if (questions.length === 0) {
+  if (loading) {
     return <div style={{ padding: 40, textAlign: "center" }}>Loading...</div>;
+  }
+
+  if (questions.length === 0) {
+    return (
+      <div style={{ padding: 40, textAlign: "center" }}>
+        <p style={{ fontSize: 18, marginBottom: 16 }}>
+          No questions available for this test yet.
+        </p>
+        <button
+          onClick={() => router.push("/")}
+          style={{
+            background: "#00529b",
+            color: "white",
+            border: "none",
+            padding: "10px 28px",
+            borderRadius: 4,
+            fontSize: 15,
+            cursor: "pointer",
+          }}
+        >
+          Back to Home
+        </button>
+      </div>
+    );
   }
 
   const isAnswered = (id: number) => {
