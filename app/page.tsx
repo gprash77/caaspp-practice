@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { TOTAL_PRACTICE_TESTS } from "@/lib/questions";
 
 const tests = [
   {
@@ -37,9 +38,10 @@ const tests = [
 export default function Home() {
   const router = useRouter();
   const [grade, setGrade] = useState("3");
+  const [practiceTest, setPracticeTest] = useState("1");
 
   const handleStart = (subject: string, type: string) => {
-    router.push(`/test?grade=${grade}&subject=${subject}&type=${type}`);
+    router.push(`/test?grade=${grade}&subject=${subject}&type=${type}&test=${practiceTest}`);
   };
 
   return (
@@ -50,21 +52,37 @@ export default function Home() {
           <p>California Assessment of Student Performance and Progress</p>
         </div>
         <div className="landing-body">
-          <div className="select-group">
-            <label htmlFor="grade">Select Grade</label>
-            <select
-              id="grade"
-              value={grade}
-              onChange={(e) => setGrade(e.target.value)}
-            >
-              <option value="3">Grade 3</option>
-              <option value="4" disabled>
-                Grade 4 (Coming Soon)
-              </option>
-              <option value="5" disabled>
-                Grade 5 (Coming Soon)
-              </option>
-            </select>
+          <div style={{ display: "flex", gap: 16, marginBottom: 0 }}>
+            <div className="select-group" style={{ flex: 1 }}>
+              <label htmlFor="grade">Select Grade</label>
+              <select
+                id="grade"
+                value={grade}
+                onChange={(e) => setGrade(e.target.value)}
+              >
+                <option value="3">Grade 3</option>
+                <option value="4" disabled>
+                  Grade 4 (Coming Soon)
+                </option>
+                <option value="5" disabled>
+                  Grade 5 (Coming Soon)
+                </option>
+              </select>
+            </div>
+            <div className="select-group" style={{ flex: 1 }}>
+              <label htmlFor="practiceTest">Practice Test</label>
+              <select
+                id="practiceTest"
+                value={practiceTest}
+                onChange={(e) => setPracticeTest(e.target.value)}
+              >
+                {Array.from({ length: TOTAL_PRACTICE_TESTS }, (_, i) => (
+                  <option key={i + 1} value={String(i + 1)}>
+                    Test {i + 1}{i === 0 ? " (Original)" : ""}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
           <div style={{ marginBottom: 16 }}>

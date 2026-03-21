@@ -14,6 +14,7 @@ interface TestData {
   grade: number;
   subject: "math" | "ela";
   testType?: "cat" | "pt";
+  practiceTest?: number;
   answers: Record<number, string | string[]>;
   questionIds: number[];
 }
@@ -91,7 +92,7 @@ export default function ResultsPage() {
     }
     setTestData(data);
 
-    fetchQuestions(data.grade, data.subject, data.testType || "cat").then((questions) => {
+    fetchQuestions(data.grade, data.subject, data.testType || "cat", data.practiceTest || 1).then((questions) => {
       const qResults: QuestionResult[] = questions.map((q) => ({
         question: q,
         userAnswer: data.answers[q.id] || "",
@@ -164,7 +165,7 @@ export default function ResultsPage() {
           Practice Test Results
         </h1>
         <p style={{ margin: 0, opacity: 0.85 }}>
-          Grade {testData.grade} {subjectLabel}
+          Grade {testData.grade} {subjectLabel} — Practice Test {testData.practiceTest || 1}
         </p>
       </div>
 
@@ -312,18 +313,44 @@ export default function ResultsPage() {
                     </p>
                   )}
                   <p>
-                    <strong>Student response:</strong>{" "}
-                    {Array.isArray(r.userAnswer)
-                      ? r.userAnswer.join(", ") || "(no answer)"
-                      : r.userAnswer || "(no answer)"}
+                    <strong>Your answer:</strong>{" "}
+                    <span style={{
+                      color: manual ? "#333" : r.isCorrect ? "#2e7d32" : "#c62828",
+                      fontWeight: 600,
+                    }}>
+                      {Array.isArray(r.userAnswer)
+                        ? r.userAnswer.join(", ") || "(no answer)"
+                        : r.userAnswer || "(no answer)"}
+                    </span>
+                    {!manual && (
+                      <span style={{ marginLeft: 8 }}>
+                        {r.isCorrect ? "✓" : "✗"}
+                      </span>
+                    )}
                   </p>
-                  {!manual && (
+                  {!manual && !r.isCorrect && (
                     <p>
                       <strong>Correct answer:</strong>{" "}
-                      {Array.isArray(r.question.correctAnswer)
-                        ? r.question.correctAnswer.join(", ")
-                        : r.question.correctAnswer}
+                      <span style={{ color: "#2e7d32", fontWeight: 600 }}>
+                        {Array.isArray(r.question.correctAnswer)
+                          ? r.question.correctAnswer.join(", ")
+                          : r.question.correctAnswer}
+                      </span>
                     </p>
+                  )}
+                  {!manual && r.question.explanation && (
+                    <div style={{
+                      background: r.isCorrect ? "#e8f5e9" : "#fff3e0",
+                      border: `1px solid ${r.isCorrect ? "#a5d6a7" : "#ffcc80"}`,
+                      borderRadius: 6,
+                      padding: "12px 16px",
+                      marginTop: 8,
+                      marginBottom: 8,
+                    }}>
+                      <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: "#333" }}>
+                        <strong>Explanation:</strong> {r.question.explanation}
+                      </p>
+                    </div>
                   )}
                   {manual && (
                     <div style={{
@@ -340,6 +367,11 @@ export default function ResultsPage() {
                       <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: "#555" }}>
                         {r.question.rubric}
                       </p>
+                      {r.question.explanation && (
+                        <p style={{ margin: "8px 0 0", fontSize: 13, lineHeight: 1.6, color: "#555" }}>
+                          <strong>Guidance:</strong> {r.question.explanation}
+                        </p>
+                      )}
                       {!hasAnswer && (
                         <p style={{ margin: "8px 0 0", color: "#c62828", fontSize: 13 }}>
                           No response was provided for this question.

@@ -141,6 +141,7 @@ function TestContent() {
   const grade = parseInt(searchParams.get("grade") || "3");
   const subject = (searchParams.get("subject") || "math") as "math" | "ela";
   const testType = (searchParams.get("type") || "cat") as "cat" | "pt";
+  const practiceTest = parseInt(searchParams.get("test") || "1");
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -153,10 +154,10 @@ function TestContent() {
 
   useEffect(() => {
     setLoading(true);
-    fetchQuestions(grade, subject, testType)
+    fetchQuestions(grade, subject, testType, practiceTest)
       .then(setQuestions)
       .finally(() => setLoading(false));
-  }, [grade, subject, testType]);
+  }, [grade, subject, testType, practiceTest]);
 
   const current = questions[currentIndex];
 
@@ -230,6 +231,7 @@ function TestContent() {
       grade,
       subject,
       testType,
+      practiceTest,
       answers,
       questionIds: questions.map((q) => q.id),
     };

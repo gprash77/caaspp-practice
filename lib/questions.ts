@@ -1,4 +1,6 @@
 import { supabase } from "./supabase";
+import { explanations } from "./explanations";
+import { practiceTestQuestions } from "./practice-tests-extra";
 
 export interface Question {
   id: number;
@@ -23,6 +25,8 @@ export interface Question {
   rubric: string;
   points: number;
   evidenceStatement?: string;
+  explanation?: string;
+  practiceTest?: number;
 }
 
 // ──────────────────────────────────────────
@@ -2076,23 +2080,47 @@ Remember to check your notes and your prewriting/planning as you write, and then
   },
 ];
 
+function mergeExplanations(questions: Question[]): Question[] {
+  return questions.map((q) => ({
+    ...q,
+    explanation: q.explanation || explanations[q.id],
+  }));
+}
+
 export function getQuestions(
   grade: number,
   subject: "math" | "ela",
-  testType: "cat" | "pt" = "cat"
+  testType: "cat" | "pt" = "cat",
+  practiceTest: number = 1
 ): Question[] {
+  if (practiceTest > 1) {
+    const extra = practiceTestQuestions.filter(
+      (q) =>
+        q.grade === grade &&
+        q.subject === subject &&
+        q.testType === testType &&
+        q.practiceTest === practiceTest
+    );
+    return mergeExplanations(extra);
+  }
   let questions: Question[] = [];
   if (grade === 3 && subject === "math") questions = grade3Math;
   if (grade === 3 && subject === "ela") questions = grade3ELA;
-  return questions.filter((q) => q.testType === testType);
+  return mergeExplanations(questions.filter((q) => q.testType === testType));
 }
 
 // Fetch questions from Supabase
 export async function fetchQuestions(
   grade: number,
   subject: "math" | "ela",
-  testType: "cat" | "pt" = "cat"
+  testType: "cat" | "pt" = "cat",
+  practiceTest: number = 1
 ): Promise<Question[]> {
+  // For practice tests 2+, always use local data (not in Supabase)
+  if (practiceTest > 1) {
+    return getQuestions(grade, subject, testType, practiceTest);
+  }
+
   const { data, error } = await supabase
     .from("questions")
     .select("*")
@@ -2104,17 +2132,17 @@ export async function fetchQuestions(
   if (error) {
     console.error("Supabase fetch error:", error.message);
     // Fall back to local questions
-    return getQuestions(grade, subject, testType);
+    return getQuestions(grade, subject, testType, practiceTest);
   }
 
   // Fall back to local questions if Supabase returned fewer results
-  const localQuestions = getQuestions(grade, subject, testType);
+  const localQuestions = getQuestions(grade, subject, testType, practiceTest);
   if (!data || data.length === 0 || data.length < localQuestions.length) {
     return localQuestions;
   }
 
   // Map snake_case DB columns to camelCase Question interface
-  return data.map((row) => ({
+  return mergeExplanations(data.map((row) => ({
     id: row.id,
     subject: row.subject,
     grade: row.grade,
@@ -2137,8 +2165,11 @@ export async function fetchQuestions(
     rubric: row.rubric,
     points: row.points,
     evidenceStatement: row.evidence_statement || undefined,
-  }));
+  })));
 }
+
+// Total number of available practice tests
+export const TOTAL_PRACTICE_TESTS = 3;
 
 // Claim descriptions for reporting
 export const mathClaims: Record<number, string> = {
