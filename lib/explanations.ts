@@ -73,6 +73,25 @@ export const explanations: Record<number, string> = {
   142: "The main idea of the science section is explaining how sap actually flows in maple trees—driven by freezing and thawing cycles.",
   143: "A complete sentence needs a subject and a predicate and expresses a complete thought.",
 
+  // ── ELA CAT (passage-based) ──
+  114: '"Mysterious" means hard to explain or understand. The passage says scientists found sap flow confusing, which matches "hard to explain."',
+  121: "The story is about two lazy sons who learn that hard work brings its own rewards when their digging leads to a great rice harvest.",
+  122: "At the beginning, Ta and Hai are described as lazy—they avoid work and let their father do everything.",
+  123: "The father knew his sons wouldn't listen if he simply told them to work, so he used the idea of treasure to motivate them to discover the value of hard work on their own.",
+  124: 'When someone\'s "eyes widen," it shows surprise and excitement. The sons were thrilled at the idea of finding treasure.',
+  125: "The passage is mainly about how maple syrup is made from sap that flows from sugar-maple trees in spring. The other choices are supporting details, not the main idea.",
+  126: 'In this sentence, "tap" means to drill into. The Colemans drill holes into the trees so sap can flow out.',
+  127: "The passage states it takes about thirty-five gallons of sap to make one gallon of maple syrup.",
+  128: "Part A: Dr. Perkins explains that frost formed inside the tree overnight melts in the morning, creating pressure that moves the sap. Part B: The detail about sap flowing from the cut end of a trunk (not the stump) supports the idea that sap flows downward.",
+  129: "A fact can be checked and proven true. The statement about 35 gallons of sap making one gallon of syrup is a measurable fact. The other options are opinions or legends.",
+  130: "A specific fact (saving enough energy to run a TV for 3 hours) makes her argument convincing because it gives concrete evidence, not just a general opinion.",
+  131: 'The announcement clearly states: "Students who buy two or more books will receive a free bookmark."',
+  132: '"Tradition" means something passed down through a family over many years. The passage describes maple sugaring as an activity the family has done for generations.',
+  133: "According to the legend, sap dripped from a gash in a maple tree into a bowl below, and when the liquid was heated it became sweet syrup.",
+  134: "At the end, the sons planted rice in the turned-over soil, sold the harvest, and realized that hard work itself was the real treasure their father meant.",
+  135: "Two details support Dr. Perkins: (B) water rises into the trunk during cold nights, and (C) sap flows from the cut end of a trunk, not from the stump—both showing sap moves downward.",
+  136: "The student supports her opinion by giving three specific reasons: dogs learn tricks, protect your home, and love to play outside.",
+
   // ── ELA PT ──
   150: "The directions tell you to read the sources first, then answer questions and write an essay. Following directions carefully helps you do your best work.",
   151: "Both sources discuss how sap is collected and processed, but they present the information differently—one as legend, one as science.",
