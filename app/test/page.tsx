@@ -1,11 +1,28 @@
 "use client";
 
-import { useState, useEffect, useCallback, Suspense } from "react";
+import { useState, useEffect, useCallback, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { fetchQuestions, type Question } from "@/lib/questions";
 import ReactMarkdown from "react-markdown";
 
 function RichTextEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const editorRef = useRef<HTMLDivElement>(null);
+  const isInitialized = useRef(false);
+
+  useEffect(() => {
+    if (editorRef.current && !isInitialized.current) {
+      editorRef.current.innerText = value || "";
+      isInitialized.current = true;
+    }
+  }, [value]);
+
+  // Reset when switching questions (value becomes empty)
+  useEffect(() => {
+    if (editorRef.current && value === "" && isInitialized.current) {
+      editorRef.current.innerText = "";
+    }
+  }, [value]);
+
   const execFormat = (cmd: string) => {
     document.execCommand(cmd, false);
   };
@@ -29,11 +46,11 @@ function RichTextEditor({ value, onChange }: { value: string; onChange: (v: stri
         <button type="button" onClick={() => execFormat("redo")} title="Redo">↪</button>
       </div>
       <div
+        ref={editorRef}
         className="rich-editor-body"
         contentEditable
         suppressContentEditableWarning
         onInput={(e) => onChange((e.target as HTMLDivElement).innerText)}
-        dangerouslySetInnerHTML={{ __html: value || "" }}
       />
     </div>
   );
