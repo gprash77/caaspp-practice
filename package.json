@@ -9,8 +9,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "notify:test": "./scripts/notify-codex.sh \"Codex reusable notifier test\" \"caaspp-practice\" \"Glass\""
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.1",
