@@ -34,3 +34,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## macOS notifications
+
+This repo includes a reusable macOS notification command for Codex task completion or blockers.
+
+Send a notification with:
+
+```bash
+./scripts/notify-codex.sh "Build finished" "caaspp-practice" "Glass"
+```
+
+Or run the built-in test:
+
+```bash
+npm run notify:test
+```
+
+How it works:
+
+- It calls `osascript` directly to trigger a native macOS notification.
+- It does not depend on window-title or app-state detection.
+- Use it when Codex is done or when Codex needs your input.
+
+Requirements:
+
+- macOS
+- Notification permission for the launcher app if macOS asks for it
+
+Notes:
+
+- The reusable notifier command is `./scripts/notify-codex.sh`, which is the path to approve if you want future completion alerts without repeated prompts.
