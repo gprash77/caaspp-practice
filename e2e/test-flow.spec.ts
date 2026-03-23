@@ -116,6 +116,24 @@ test.describe("Practice test 2 loads correctly", () => {
     await expect(page.locator(".tds-q-badge")).toHaveText("1");
     await expect(page.locator(".tds-question-text")).toBeVisible();
   });
+
+  test("loads test 6 math CAT questions", async ({ page }) => {
+    await page.goto("/test?grade=3&subject=math&type=cat&test=6");
+    await expect(page.locator(".tds-q-badge")).toHaveText("1");
+    await expect(page.locator(".tds-question-text")).toBeVisible();
+  });
+
+  test("loads test 7 ela CAT questions", async ({ page }) => {
+    await page.goto("/test?grade=3&subject=ela&type=cat&test=7");
+    await expect(page.locator(".tds-q-badge")).toHaveText("1");
+    await expect(page.locator(".tds-question-text")).toBeVisible();
+  });
+
+  test("loads test 8 math PT questions", async ({ page }) => {
+    await page.goto("/test?grade=3&subject=math&type=pt&test=8");
+    await expect(page.locator(".tds-q-badge")).toHaveText("1");
+    await expect(page.locator(".tds-question-text")).toBeVisible();
+  });
 });
 
 test.describe("ELA test with passages", () => {

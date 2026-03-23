@@ -14,11 +14,11 @@ test.describe("Homepage", () => {
     await expect(gradeSelect).toHaveValue("3");
   });
 
-  test("has practice test selector with 5 options", async ({ page }) => {
+  test("has practice test selector with 8 options", async ({ page }) => {
     const testSelect = page.locator("#practiceTest");
     await expect(testSelect).toHaveValue("1");
     const options = testSelect.locator("option");
-    await expect(options).toHaveCount(5);
+    await expect(options).toHaveCount(8);
   });
 
   test("practice test dropdown shows correct labels", async ({ page }) => {
@@ -28,6 +28,9 @@ test.describe("Homepage", () => {
     await expect(options.nth(2)).toHaveText("Test 3");
     await expect(options.nth(3)).toHaveText("Test 4");
     await expect(options.nth(4)).toHaveText("Test 5");
+    await expect(options.nth(5)).toHaveText("Test 6");
+    await expect(options.nth(6)).toHaveText("Test 7");
+    await expect(options.nth(7)).toHaveText("Test 8");
   });
 
   test("shows all 4 test buttons", async ({ page }) => {
@@ -58,5 +61,17 @@ test.describe("Homepage", () => {
     await page.locator("#practiceTest").selectOption("5");
     await page.getByText("ELA — Computer Adaptive Test").click();
     await expect(page).toHaveURL(/\/test\?grade=3&subject=ela&type=cat&test=5/);
+  });
+
+  test("selecting Test 6 and Math PT navigates correctly", async ({ page }) => {
+    await page.locator("#practiceTest").selectOption("6");
+    await page.getByText("Mathematics — Performance Task").click();
+    await expect(page).toHaveURL(/\/test\?grade=3&subject=math&type=pt&test=6/);
+  });
+
+  test("selecting Test 8 and ELA PT navigates correctly", async ({ page }) => {
+    await page.locator("#practiceTest").selectOption("8");
+    await page.getByText("ELA — Performance Task Segment").click();
+    await expect(page).toHaveURL(/\/test\?grade=3&subject=ela&type=pt&test=8/);
   });
 });

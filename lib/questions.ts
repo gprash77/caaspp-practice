@@ -2,6 +2,8 @@ import { supabase } from "./supabase";
 import { explanations } from "./explanations";
 import { practiceTestQuestions } from "./practice-tests-extra";
 import { easyPracticeTestQuestions } from "./practice-tests-easy";
+import { mediumPracticeTestQuestions } from "./practice-tests-medium";
+import { challengePracticeTestQuestions } from "./practice-tests-challenge";
 
 export interface Question {
   id: number;
@@ -2095,7 +2097,12 @@ export function getQuestions(
   practiceTest: number = 1
 ): Question[] {
   if (practiceTest > 1) {
-    const extra = [...practiceTestQuestions, ...easyPracticeTestQuestions].filter(
+    const extra = [
+      ...practiceTestQuestions,
+      ...easyPracticeTestQuestions,
+      ...mediumPracticeTestQuestions,
+      ...challengePracticeTestQuestions,
+    ].filter(
       (q) =>
         q.grade === grade &&
         q.subject === subject &&
@@ -2170,7 +2177,7 @@ export async function fetchQuestions(
 }
 
 // Total number of available practice tests
-export const TOTAL_PRACTICE_TESTS = 5;
+export const TOTAL_PRACTICE_TESTS = 8;
 
 // Claim descriptions for reporting
 export const mathClaims: Record<number, string> = {
