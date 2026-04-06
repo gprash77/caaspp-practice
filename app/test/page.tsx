@@ -505,12 +505,23 @@ function TestContent() {
               </div>
             )}
 
-          {/* Number pad for text input */}
-          {current.type === "text-input" && (
+          {/* Number pad for math text input; plain text box for ELA */}
+          {current.type === "text-input" && subject !== "ela" && (
             <NumberPad
               value={(answers[current.id] as string) || ""}
               onChange={(v) => handleTextInput(v)}
             />
+          )}
+          {current.type === "text-input" && subject === "ela" && (
+            <div className="short-answer">
+              <textarea
+                className="short-answer-input"
+                value={(answers[current.id] as string) || ""}
+                onChange={(e) => handleTextInput(e.target.value)}
+                placeholder=""
+                rows={4}
+              />
+            </div>
           )}
 
           {/* Short answer text box */}
