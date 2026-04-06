@@ -1,4 +1,3 @@
-import { supabase } from "./supabase";
 import { explanations } from "./explanations";
 import { practiceTestQuestions } from "./practice-tests-extra";
 import { easyPracticeTestQuestions } from "./practice-tests-easy";
@@ -2129,6 +2128,7 @@ export async function fetchQuestions(
     return getQuestions(grade, subject, testType, practiceTest);
   }
 
+  const { supabase } = await import("./supabase");
   const { data, error } = await supabase
     .from("questions")
     .select("*")
@@ -2177,7 +2177,7 @@ export async function fetchQuestions(
 }
 
 // Total number of available practice tests
-export const TOTAL_PRACTICE_TESTS = 8;
+export const TOTAL_PRACTICE_TESTS = 10;
 
 // Claim descriptions for reporting
 export const mathClaims: Record<number, string> = {
