@@ -14,11 +14,11 @@ test.describe("Homepage", () => {
     await expect(gradeSelect).toHaveValue("3");
   });
 
-  test("has practice test selector with 8 options", async ({ page }) => {
+  test("has practice test selector with 15 options", async ({ page }) => {
     const testSelect = page.locator("#practiceTest");
     await expect(testSelect).toHaveValue("1");
     const options = testSelect.locator("option");
-    await expect(options).toHaveCount(8);
+    await expect(options).toHaveCount(15);
   });
 
   test("practice test dropdown shows correct labels", async ({ page }) => {
@@ -31,6 +31,13 @@ test.describe("Homepage", () => {
     await expect(options.nth(5)).toHaveText("Test 6");
     await expect(options.nth(6)).toHaveText("Test 7");
     await expect(options.nth(7)).toHaveText("Test 8");
+    await expect(options.nth(8)).toHaveText("Test 9");
+    await expect(options.nth(9)).toHaveText("Test 10");
+    await expect(options.nth(10)).toHaveText("Test 11");
+    await expect(options.nth(11)).toHaveText("Test 12");
+    await expect(options.nth(12)).toHaveText("Test 13");
+    await expect(options.nth(13)).toHaveText("Test 14");
+    await expect(options.nth(14)).toHaveText("Test 15");
   });
 
   test("shows all 4 test buttons", async ({ page }) => {
@@ -69,9 +76,9 @@ test.describe("Homepage", () => {
     await expect(page).toHaveURL(/\/test\?grade=3&subject=math&type=pt&test=6/);
   });
 
-  test("selecting Test 8 and ELA PT navigates correctly", async ({ page }) => {
-    await page.locator("#practiceTest").selectOption("8");
+  test("selecting Test 15 and ELA PT navigates correctly", async ({ page }) => {
+    await page.locator("#practiceTest").selectOption("15");
     await page.getByText("ELA — Performance Task Segment").click();
-    await expect(page).toHaveURL(/\/test\?grade=3&subject=ela&type=pt&test=8/);
+    await expect(page).toHaveURL(/\/test\?grade=3&subject=ela&type=pt&test=15/);
   });
 });

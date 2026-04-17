@@ -3,6 +3,7 @@ import { practiceTestQuestions } from "./practice-tests-extra";
 import { easyPracticeTestQuestions } from "./practice-tests-easy";
 import { mediumPracticeTestQuestions } from "./practice-tests-medium";
 import { challengePracticeTestQuestions } from "./practice-tests-challenge";
+import { parallelPracticeTestQuestions } from "./practice-tests-parallel";
 
 export interface Question {
   id: number;
@@ -2101,6 +2102,7 @@ export function getQuestions(
       ...easyPracticeTestQuestions,
       ...mediumPracticeTestQuestions,
       ...challengePracticeTestQuestions,
+      ...parallelPracticeTestQuestions,
     ].filter(
       (q) =>
         q.grade === grade &&
@@ -2177,7 +2179,7 @@ export async function fetchQuestions(
 }
 
 // Total number of available practice tests
-export const TOTAL_PRACTICE_TESTS = 10;
+export const TOTAL_PRACTICE_TESTS = 15;
 
 // Claim descriptions for reporting
 export const mathClaims: Record<number, string> = {
