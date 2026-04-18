@@ -6,17 +6,18 @@ April 17, 2026
 
 ## Summary
 
-Test 1 baseline correction is in progress.
+Test 1 baseline correction is complete enough to serve as the reference scaffold for the rest of the rollout.
 
-The first completed section is:
+The completed sections are:
 
 - Test 1 Math CAT
 - Test 1 Math PT
 - Test 1 ELA CAT
 - Test 1 ELA PT
 
-The remaining sections are:
-- browser verification only
+The remaining work for Test 1 is:
+
+- optional follow-up polish if later `Tests 2-15` comparison work reveals any fidelity gaps
 
 ## Completed Work
 
@@ -52,16 +53,12 @@ Key code areas touched:
 
 ## Remaining Work
 
-### 1. ELA CAT
+Test 1 no longer has a blocking implementation gap.
 
-Current state:
+The remaining work is rollout work that depends on Test 1:
 
-- official public `30`-item CAT sequence is now restored in Test 1
-- custom Test 1 CAT tail has been removed from the baseline
-
-Next action:
-
-- browser-check the restored official items `#22-#30`
+- use corrected Test 1 as the scaffold for Tests `2-10`
+- keep Tests `11-15` aligned with the same scaffold during any follow-up fixes
 
 ### Completed Math PT Work
 
@@ -95,7 +92,7 @@ Key doc:
 - `TEST1_ELA_CAT_BASELINE_MATRIX.md`
 - `TEST1_ELA_CAT_15_21_IMPLEMENTATION_PLAN.md`
 
-Next action:
+Next action at the time this section was completed:
 
 - browser-check items `#22-#30`, then move to ELA PT
 
@@ -111,7 +108,7 @@ Key doc:
 
 - `TEST1_ELA_PT_GAP_ANALYSIS.md`
 
-Next action:
+Next action at the time this section was completed:
 
 - browser-check the restored astronaut/space PT
 
@@ -119,14 +116,13 @@ Next action:
 
 Start with:
 
-- **Prepare the Test 1 + Tests 11-15 check-in**
+- **Begin Tests 2-10 rebaseline work**
 
 Reason:
 
-- all four Test 1 sections now have baseline-correction passes completed
-- dedicated authored banks for Tests `11-15` are now integrated into the main question path
-- Tests `11-15` have now had local browser verification on titles, PT tables, and custom interactions
-- the next highest-value work is a final content review and GitHub check-in for this completed scope
+- Test 1 baseline correction is complete enough to act as the reference scaffold
+- Tests `11-15` are now integrated, browser-verified, pushed to GitHub, and deployed
+- the next planned rollout phase is to re-evaluate and correct Tests `2-10` against the corrected Test 1 baseline
 
 ## Full Rollout Plan
 
