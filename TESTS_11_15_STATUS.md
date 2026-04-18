@@ -98,6 +98,18 @@ Confirmed in the browser:
 - Test `15` custom `shade-grid` interaction renders and its filled state persists across navigation
 - browser console showed no errors during the verification pass
 
+## Eval Follow-Up Completed
+
+A deeper stimulus audit is now also complete for the highest-risk `11-15` content:
+
+- presentation / transcript-style ELA CAT blocks
+- shared Math PT table stimuli
+- table-driven Math CAT items
+
+That follow-up did not find a blocking fairness issue in Tests `11-15`.
+
+The detailed audit notes live in `STIMULUS_AUDIT_2_15.md`.
+
 ## Approved Clean Mapping
 
 - Test 11 easy -> brand-new easy set A
@@ -116,4 +128,6 @@ Each set should have its own:
 
 ## Next Step
 
-Before any further deploy, do one final content-quality review of the new ELA/math families against Tests `1-10`, then prepare the `Test 1` + `Tests 11-15` check-in.
+- commit the focused eval-gate follow-up changes
+- push `main` to GitHub
+- let Vercel deploy from `main`

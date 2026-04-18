@@ -214,9 +214,59 @@ describe("Question data integrity", () => {
               });
           });
 
+          it("custom interaction questions include their required metadata", () => {
+            questions
+              .filter((q) => q.type === "table-input")
+              .forEach((q) => {
+                expect(q.dataTable).toBeDefined();
+                expect(q.dataTable!.columns.length).toBeGreaterThan(0);
+                expect(q.dataTable!.rows.length).toBeGreaterThan(0);
+              });
+
+            questions
+              .filter((q) => q.type === "line-plot")
+              .forEach((q) => {
+                expect(q.linePlotLabels).toBeDefined();
+                expect(q.linePlotLabels!.length).toBeGreaterThan(0);
+                expect(q.linePlotMaxDots).toBeGreaterThan(0);
+              });
+
+            questions
+              .filter((q) => q.type === "fraction-model")
+              .forEach((q) => {
+                expect(q.fractionModel).toBeDefined();
+                expect(
+                  q.fractionModel!.thirdsMax > 0 || q.fractionModel!.fourthsMax > 0
+                ).toBe(true);
+              });
+
+            questions
+              .filter((q) => q.type === "shade-grid")
+              .forEach((q) => {
+                expect(q.shadeGrid).toBeDefined();
+                expect(q.shadeGrid!.rows).toBeGreaterThan(0);
+                expect(q.shadeGrid!.cols).toBeGreaterThan(0);
+                expect(q.shadeGrid!.requiredCount).toBeGreaterThan(0);
+              });
+          });
+
           it("all questions have an explanation", () => {
             questions.forEach((q) => {
               expect(q.explanation).toBeTruthy();
+            });
+          });
+
+          it("ELA PT questions keep the full source set visible", () => {
+            if (!(subject === "ela" && testType === "pt")) {
+              return;
+            }
+
+            questions.forEach((q) => {
+              expect(
+                (q.passage?.includes("\n\n---\n\n") ?? false) ||
+                  ((q.passage?.includes("Source 1") ?? false) &&
+                    (q.passage?.includes("Source 2") ?? false))
+              ).toBe(true);
             });
           });
         });

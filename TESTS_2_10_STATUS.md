@@ -86,8 +86,18 @@ Representative browser verification also passed on localhost:
 - Test `8` ELA CAT loaded with `30` questions and `The Map in the Bell Tower`
 - Test `10` ELA PT loaded with `3` questions and visible student directions
 
+## Eval Follow-Up Completed
+
+A later detailed eval pass found and fixed one fairness issue in the adapted Tests `2-10` bank:
+
+- Tests `2` and `3` ELA PT had been trimmed to `3` items, but the final retained writing item was still showing only one source while asking students to use both sources
+
+That issue is now fixed in `lib/practice-test-adapter.ts`, and the loaded ELA PT questions for Tests `2` and `3` now show the full combined source set on all retained PT items.
+
+Additional runtime scans did not find any other blocking source-visibility or custom math-interaction metadata issue in Tests `2-10`.
+
 ## Next Step
 
-- commit the focused Tests `2-10` rebaseline changes
+- commit the focused eval-gate follow-up changes
 - push `main` to GitHub
 - let Vercel deploy from `main`
