@@ -116,12 +116,16 @@ These are the existing test families that should be preserved unless a quality i
 
 ## Implementation Decision
 
-Instead of hand-authoring nine giant replacement files, the chosen implementation uses:
+The rollout used two stages:
 
-- dedicated per-test entry files for Tests `2-10`
-- one shared adapter that trims each legacy bank to the corrected Test 1 scaffold
+1. normalize Tests `2-10` with a shared adapter so the scaffold matched corrected Test 1
+2. replace the wrapper-only dedicated files with real standalone bank files
 
-This preserves the existing companion-test themes while normalizing the section counts and PT direction behavior.
+The current result is:
+
+- dedicated standalone per-test files for Tests `2-10`
+- a retained adapter that was useful for normalization and source recovery during rebuild work
+- rebuilt ELA CAT tails that now use authored presentation-style endings closer to corrected Test 1 and authored Tests `11-15`
 
 ## Verification Plan
 
@@ -134,6 +138,7 @@ Before check-in:
 
 ## Result
 
-- Tests `2-10` now have dedicated routing targets
+- Tests `2-10` now have dedicated standalone routing targets
 - the normalized scaffold is enforced in code
-- shared ELA PT directions are preserved after trimming
+- shared ELA PT directions are preserved
+- ELA CAT tails were rebuilt to use stronger authored presentation/transcript-style endings

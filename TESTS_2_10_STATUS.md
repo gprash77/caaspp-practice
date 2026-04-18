@@ -59,7 +59,7 @@ Use the same delivery flow used for Test 1 and Tests `11-15`:
 
 ## Current Work Split
 
-- Dedicated file draft for Tests `2-10`: complete through shared adapter-backed dedicated files
+- Dedicated standalone files for Tests `2-10`: complete
 - Router updates: complete
 - Automated verification: complete
 - Browser verification: complete
@@ -67,9 +67,11 @@ Use the same delivery flow used for Test 1 and Tests `11-15`:
 ## What Was Done
 
 - added dedicated entry files for Tests `2-10`
-- added a shared adapter that trims the legacy grouped banks to the corrected Test 1 scaffold
+- added a shared adapter that first normalized the legacy grouped banks to the corrected Test 1 scaffold
 - routed Tests `2-10` through the dedicated files in `lib/questions.ts`
 - preserved shared ELA PT directions when the normalized `3`-item PT cut would otherwise drop them
+- replaced the wrapper-only dedicated files with real standalone bank files for Tests `2-10`
+- rebuilt the ELA CAT tails so Tests `2-10` now use presentation-style authored endings that feel closer to corrected Test 1 and authored Tests `11-15`
 
 ## Verification Completed
 
@@ -86,6 +88,12 @@ Representative browser verification also passed on localhost:
 - Test `8` ELA CAT loaded with `30` questions and `The Map in the Bell Tower`
 - Test `10` ELA PT loaded with `3` questions and visible student directions
 
+Additional localhost browser verification after the authored-bank rebuild:
+
+- Test `5` ELA CAT loaded cleanly
+- Test `7` ELA CAT loaded cleanly
+- Test `10` ELA CAT loaded cleanly
+
 ## Eval Follow-Up Completed
 
 A later detailed eval pass found and fixed one fairness issue in the adapted Tests `2-10` bank:
@@ -96,8 +104,14 @@ That issue is now fixed in `lib/practice-test-adapter.ts`, and the loaded ELA PT
 
 Additional runtime scans did not find any other blocking source-visibility or custom math-interaction metadata issue in Tests `2-10`.
 
+After the authored-bank rebuild, the new presentation-style ELA CAT tails for Tests `2-10` also passed:
+
+- `npm test -- --run tests/question-data.test.ts`
+- `npm test -- --run tests/scoring.test.ts`
+- `npm run build`
+
 ## Next Step
 
-- commit the focused eval-gate follow-up changes
+- commit the authored Tests `2-10` rebuild
 - push `main` to GitHub
 - let Vercel deploy from `main`
