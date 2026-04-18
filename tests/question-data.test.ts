@@ -24,15 +24,15 @@ function expectedCount(testNum: number, subject: "math" | "ela", testType: "cat"
     return 3;
   }
 
-  if (testNum >= 11 && testNum <= 15 && subject === "math" && testType === "pt") {
+  if (testNum >= 2 && testNum <= 15 && subject === "math" && testType === "pt") {
     return 5;
   }
 
-  if (testNum >= 11 && testNum <= 15 && subject === "ela" && testType === "cat") {
+  if (testNum >= 2 && testNum <= 15 && subject === "ela" && testType === "cat") {
     return 30;
   }
 
-  if (testNum >= 11 && testNum <= 15 && subject === "ela" && testType === "pt") {
+  if (testNum >= 2 && testNum <= 15 && subject === "ela" && testType === "pt") {
     return 3;
   }
 

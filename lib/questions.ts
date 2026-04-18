@@ -4,6 +4,15 @@ import { easyPracticeTestQuestions } from "./practice-tests-easy";
 import { mediumPracticeTestQuestions } from "./practice-tests-medium";
 import { challengePracticeTestQuestions } from "./practice-tests-challenge";
 import { parallelPracticeTestQuestions } from "./practice-tests-parallel";
+import { practiceTest2Questions } from "./practice-test-2";
+import { practiceTest3Questions } from "./practice-test-3";
+import { practiceTest4Questions } from "./practice-test-4";
+import { practiceTest5Questions } from "./practice-test-5";
+import { practiceTest6Questions } from "./practice-test-6";
+import { practiceTest7Questions } from "./practice-test-7";
+import { practiceTest8Questions } from "./practice-test-8";
+import { practiceTest9Questions } from "./practice-test-9";
+import { practiceTest10Questions } from "./practice-test-10";
 import { practiceTest11Questions } from "./practice-test-11";
 import { practiceTest12Questions } from "./practice-test-12";
 import { practiceTest13Questions } from "./practice-test-13";
@@ -2104,6 +2113,15 @@ export function getQuestions(
 ): Question[] {
   if (practiceTest > 1) {
     const dedicatedPracticeTests: Record<number, Question[]> = {
+      2: practiceTest2Questions,
+      3: practiceTest3Questions,
+      4: practiceTest4Questions,
+      5: practiceTest5Questions,
+      6: practiceTest6Questions,
+      7: practiceTest7Questions,
+      8: practiceTest8Questions,
+      9: practiceTest9Questions,
+      10: practiceTest10Questions,
       11: practiceTest11Questions,
       12: practiceTest12Questions,
       13: practiceTest13Questions,
