@@ -26,6 +26,27 @@ interface QuestionResult {
   isCorrect: boolean;
 }
 
+function formatAnswer(answer: string | string[]): string {
+  if (Array.isArray(answer)) {
+    return answer.join(", ") || "(no answer)";
+  }
+
+  return answer || "(no answer)";
+}
+
+function getManualAnswerKey(question: Question): string | null {
+  const answer = Array.isArray(question.correctAnswer)
+    ? question.correctAnswer.join(", ")
+    : question.correctAnswer;
+
+  const normalized = answer.trim().toLowerCase();
+  if (!normalized || normalized === "responses will vary. see rubric.") {
+    return null;
+  }
+
+  return answer;
+}
+
 function getPerformanceLevel(pct: number): { label: string; color: string; className: string } {
   if (pct >= 80) return { label: "Above Standard", color: "#2e7d32", className: "good" };
   if (pct >= 50) return { label: "Near Standard", color: "#f57c00", className: "needs-work" };
@@ -34,8 +55,10 @@ function getPerformanceLevel(pct: number): { label: string; color: string; class
 
 export default function ResultsPage() {
   const router = useRouter();
-  const [testData, setTestData] = useState<TestData | null>(null);
-  const [results, setResults] = useState<QuestionResult[]>([]);
+  const [loadedResults, setLoadedResults] = useState<{
+    testData: TestData;
+    results: QuestionResult[];
+  } | null>(null);
   const [expandedQ, setExpandedQ] = useState<Set<number>>(new Set());
 
   useEffect(() => {
@@ -51,21 +74,31 @@ export default function ResultsPage() {
       router.push("/");
       return;
     }
-    setTestData(data);
-
     fetchQuestions(data.grade, data.subject, data.testType || "cat", data.practiceTest || 1).then((questions) => {
       const qResults: QuestionResult[] = questions.map((q) => ({
         question: q,
         userAnswer: data.answers[q.id] || "",
         isCorrect: checkAnswer(q, data.answers[q.id] || ""),
       }));
-      setResults(qResults);
+      setLoadedResults({
+        testData: data,
+        results: qResults,
+      });
+      setExpandedQ(
+        new Set(
+          qResults
+            .filter((result) => isManuallyScored(result.question) || !result.isCorrect)
+            .map((result) => result.question.id)
+        )
+      );
     });
   }, [router]);
 
-  if (!testData || results.length === 0) {
+  if (!loadedResults || loadedResults.results.length === 0) {
     return <div style={{ padding: 40, textAlign: "center" }}>Loading results...</div>;
   }
+
+  const { testData, results } = loadedResults;
 
   const autoScoredResults = results.filter((r) => !isManuallyScored(r.question));
   const manualResults = results.filter((r) => isManuallyScored(r.question));
@@ -96,7 +129,7 @@ export default function ResultsPage() {
 
   // Identify specific weak domains/standards
   const weakStandards: string[] = [];
-  results.forEach((r) => {
+  autoScoredResults.forEach((r) => {
     if (!r.isCorrect) {
       const domain = r.question.domain;
       const domainName =
@@ -156,7 +189,7 @@ export default function ResultsPage() {
             fontSize: 14,
             lineHeight: 1.5,
           }}>
-            <strong>Note:</strong> {manualResults.length} question{manualResults.length > 1 ? "s" : ""} (short-answer and essay writing) require manual scoring by a parent or teacher. See the rubrics below to evaluate those responses.
+            <strong>Note:</strong> {manualResults.length} question{manualResults.length > 1 ? "s" : ""} (short-answer and essay writing) require manual scoring by a parent or teacher. The question review below now opens those items with the scoring guide, expected answer details, and rationale visible inline.
           </div>
         )}
 
@@ -279,9 +312,7 @@ export default function ResultsPage() {
                       color: manual ? "#333" : r.isCorrect ? "#2e7d32" : "#c62828",
                       fontWeight: 600,
                     }}>
-                      {Array.isArray(r.userAnswer)
-                        ? r.userAnswer.join(", ") || "(no answer)"
-                        : r.userAnswer || "(no answer)"}
+                      {formatAnswer(r.userAnswer)}
                     </span>
                     {!manual && (
                       <span style={{ marginLeft: 8 }}>
@@ -296,6 +327,14 @@ export default function ResultsPage() {
                         {Array.isArray(r.question.correctAnswer)
                           ? r.question.correctAnswer.join(", ")
                           : r.question.correctAnswer}
+                      </span>
+                    </p>
+                  )}
+                  {manual && getManualAnswerKey(r.question) && (
+                    <p>
+                      <strong>Expected answer:</strong>{" "}
+                      <span style={{ color: "#2e7d32", fontWeight: 600 }}>
+                        {getManualAnswerKey(r.question)}
                       </span>
                     </p>
                   )}
@@ -323,14 +362,14 @@ export default function ResultsPage() {
                       marginBottom: 8,
                     }}>
                       <p style={{ margin: "0 0 8px", fontWeight: 600, color: "#e65100" }}>
-                        Scoring Rubric ({r.question.points} point{r.question.points > 1 ? "s" : ""}):
+                        Answer and Scoring Guide ({r.question.points} point{r.question.points > 1 ? "s" : ""}):
                       </p>
                       <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: "#555" }}>
                         {r.question.rubric}
                       </p>
                       {r.question.explanation && (
                         <p style={{ margin: "8px 0 0", fontSize: 13, lineHeight: 1.6, color: "#555" }}>
-                          <strong>Guidance:</strong> {r.question.explanation}
+                          <strong>Rationale:</strong> {r.question.explanation}
                         </p>
                       )}
                       {!hasAnswer && (

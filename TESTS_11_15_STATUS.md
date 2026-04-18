@@ -4,6 +4,18 @@
 
 April 17, 2026
 
+## April 18 Follow-Up
+
+User validation on Test `11` found one scoring-review regression:
+
+- the end-of-test review told users to go check rubrics instead of keeping the answer, rubric, and rationale inline in the review flow
+
+Immediate follow-up:
+
+- restore inline answer / rubric / rationale display in the results review for manually scored items
+
+After that fix lands, continue the remaining lower-priority review work listed below.
+
 ## Project Info
 
 - App name: `CAASPP Practice Test`
@@ -128,6 +140,28 @@ Each set should have its own:
 
 ## Next Step
 
-- commit the focused eval-gate follow-up changes
-- push `main` to GitHub
-- let Vercel deploy from `main`
+- confirm the Test `11` scoring review once the inline answer / rubric / rationale fix is live
+- optional broader non-presentation editorial review if we want a stricter question-by-question pass beyond the completed stimulus eval
+
+## Tomorrow Handoff
+
+When work resumes, the remaining lower-priority review for Tests `11-15` is:
+
+- verify the repaired Test `11` scoring review flow in the browser
+- broader non-presentation editorial review across ELA
+- optional fuller answer-key spot checks
+- any follow-up polish if future comparison against corrected Test 1 reveals fidelity gaps
+
+## Open Product Exploration
+
+One experience question still needs a product decision for presentation-style ELA items:
+
+- whether transcript-only delivery is enough
+- or whether the app should provide actual presentation audio so the experience is closer to the real CAASPP / Smarter Balanced flow
+
+Possible direction to explore:
+
+- use the finalized transcript text as the source of truth
+- generate presentation-style narration audio from that text
+- attach audio playback to the relevant ELA CAT presentation items
+- keep visible transcript text as a fallback and accessibility aid
