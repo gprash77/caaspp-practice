@@ -152,6 +152,356 @@ function NumberPad({ value, onChange }: { value: string; onChange: (v: string) =
   );
 }
 
+function LinePlot({
+  labels,
+  maxDots,
+  value,
+  onChange,
+}: {
+  labels: string[];
+  maxDots: number;
+  value: string[];
+  onChange: (v: string[]) => void;
+}) {
+  const toggleCell = (labelIndex: number, rowIndex: number) => {
+    const key = `${labelIndex}:${rowIndex}`;
+    if (value.includes(key)) {
+      onChange(value.filter((item) => item !== key));
+      return;
+    }
+
+    const inColumn = value.filter((item) => item.startsWith(`${labelIndex}:`));
+    if (inColumn.length >= maxDots) return;
+    onChange([...value, key]);
+  };
+
+  return (
+    <div className="line-plot">
+      <div className="line-plot-grid">
+        {Array.from({ length: maxDots }).map((_, rowOffset) => {
+          const rowIndex = maxDots - rowOffset;
+          return (
+            <div className="line-plot-row" key={rowIndex}>
+              {labels.map((label, labelIndex) => {
+                const key = `${labelIndex}:${rowIndex}`;
+                const filled = value.includes(key);
+                return (
+                  <button
+                    key={key}
+                    type="button"
+                    className={`line-plot-cell ${filled ? "filled" : ""}`}
+                    onClick={() => toggleCell(labelIndex, rowIndex)}
+                    aria-label={`Toggle plot mark for ${label}`}
+                  >
+                    {filled ? "X" : ""}
+                  </button>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+      <div className="line-plot-labels">
+        {labels.map((label) => (
+          <span key={label} className="line-plot-label">{label}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function FractionModel({
+  value,
+  onChange,
+  thirdsMax,
+  fourthsMax,
+}: {
+  value: string[];
+  onChange: (v: string[]) => void;
+  thirdsMax: number;
+  fourthsMax: number;
+}) {
+  const [thirds = "0", fourths = "0", equal = "", comparison = ""] = value;
+  const setValueAt = (index: number, next: string) => {
+    const updated = [...value];
+    updated[index] = next;
+    while (updated.length < 4) updated.push("");
+    onChange(updated);
+  };
+
+  const renderPieces = (count: number, active: number, kind: "thirds" | "fourths") => (
+    <div className="fraction-piece-row">
+      {Array.from({ length: count }).map((_, idx) => (
+        <button
+          key={`${kind}-${idx}`}
+          type="button"
+          className={`fraction-piece ${idx < active ? "active" : ""} ${kind}`}
+          onClick={() => setValueAt(kind === "thirds" ? 0 : 1, String(idx + 1))}
+        >
+          {kind === "thirds" ? "1/3" : "1/4"}
+        </button>
+      ))}
+    </div>
+  );
+
+  return (
+    <div className="fraction-model">
+      <div className="fraction-model-section">
+        <div className="fraction-model-title">Part A: Click the correct number of 1/3 and 1/4 pieces.</div>
+        {renderPieces(thirdsMax, Number(thirds || "0"), "thirds")}
+        {renderPieces(fourthsMax, Number(fourths || "0"), "fourths")}
+      </div>
+      <div className="fraction-model-section">
+        <div className="fraction-model-title">Part B: Is the number of 1/3 pieces greater than the number of 1/4 pieces?</div>
+        <div className="fraction-model-actions">
+          <button
+            type="button"
+            className={`fraction-chip ${equal === "yes" ? "active" : ""}`}
+            onClick={() => setValueAt(2, "yes")}
+          >
+            Yes
+          </button>
+          <button
+            type="button"
+            className={`fraction-chip ${equal === "no" ? "active" : ""}`}
+            onClick={() => setValueAt(2, "no")}
+          >
+            No
+          </button>
+          <button
+            type="button"
+            className={`fraction-chip symbol ${comparison === ">" ? "active" : ""}`}
+            onClick={() => setValueAt(3, ">")}
+          >
+            &gt;
+          </button>
+          <button
+            type="button"
+            className={`fraction-chip symbol ${comparison === "<" ? "active" : ""}`}
+            onClick={() => setValueAt(3, "<")}
+          >
+            &lt;
+          </button>
+          <button
+            type="button"
+            className={`fraction-chip symbol ${comparison === "=" ? "active" : ""}`}
+            onClick={() => setValueAt(3, "=")}
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ShadeGrid({
+  rows,
+  cols,
+  value,
+  onChange,
+}: {
+  rows: number;
+  cols: number;
+  value: string[];
+  onChange: (v: string[]) => void;
+}) {
+  const toggleCell = (row: number, col: number) => {
+    const key = `${row}:${col}`;
+    if (value.includes(key)) {
+      onChange(value.filter((item) => item !== key));
+    } else {
+      onChange([...value, key]);
+    }
+  };
+
+  return (
+    <div
+      className="shade-grid"
+      style={{ gridTemplateColumns: `repeat(${cols}, minmax(48px, 1fr))` }}
+    >
+      {Array.from({ length: rows * cols }).map((_, index) => {
+        const row = Math.floor(index / cols);
+        const col = index % cols;
+        const key = `${row}:${col}`;
+        return (
+          <button
+            key={key}
+            type="button"
+            className={`shade-grid-cell ${value.includes(key) ? "filled" : ""}`}
+            onClick={() => toggleCell(row, col)}
+            aria-label={`Toggle shaded cell ${index + 1}`}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+function TableInput({
+  columns,
+  rowLabel,
+  value,
+  onChange,
+}: {
+  columns: string[];
+  rowLabel: string;
+  value: string[];
+  onChange: (v: string[]) => void;
+}) {
+  const normalized = Array.from({ length: columns.length }, (_, index) => value[index] ?? "");
+
+  const updateCell = (index: number, next: string) => {
+    const updated = [...normalized];
+    updated[index] = next;
+    onChange(updated);
+  };
+
+  return (
+    <div className="table-input">
+      <table className="table-input-table">
+        <thead>
+          <tr>
+            <th></th>
+            {columns.map((column) => (
+              <th key={column}>{column}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="table-input-label">{rowLabel}</td>
+            {columns.map((column, index) => (
+              <td key={column} className="table-input-cell">
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  value={normalized[index]}
+                  onChange={(e) => updateCell(index, e.target.value)}
+                  className="table-input-field"
+                  aria-label={`${rowLabel} ${column}`}
+                />
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function StimulusTable({
+  columns,
+  rows,
+}: {
+  columns: string[];
+  rows: { label: string; values: (string | number)[] }[];
+}) {
+  return (
+    <div className="stimulus-table">
+      <table className="stimulus-table-table">
+        <thead>
+          <tr>
+            <th>Class</th>
+            {columns.map((column) => (
+              <th key={column}>{column}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.label}>
+              <td className="stimulus-table-label">{row.label}</td>
+              {row.values.map((value, index) => (
+                <td key={`${row.label}-${columns[index]}`}>{value}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function TwoPartQuestion({
+  partAPrompt,
+  partAOptions,
+  partBPrompt,
+  partBOptions,
+  value,
+  onChange,
+}: {
+  partAPrompt: string;
+  partAOptions: { label: string; text: string }[];
+  partBPrompt: string;
+  partBOptions: { label: string; text: string }[];
+  value: string[];
+  onChange: (v: string[]) => void;
+}) {
+  const [partA = "", partB = ""] = value;
+
+  const updatePart = (index: 0 | 1, label: string) => {
+    const updated = [partA, partB];
+    updated[index] = label;
+    onChange(updated);
+  };
+
+  const renderOptions = (
+    prompt: string,
+    options: { label: string; text: string }[],
+    selected: string,
+    index: 0 | 1
+  ) => (
+    <div className="two-part-section">
+      <div className="two-part-prompt">{prompt}</div>
+      <div className="tds-options">
+        {options.map((opt) => {
+          const isSelected = selected === opt.label;
+          return (
+            <div
+              key={`${index}-${opt.label}`}
+              className={`tds-option ${isSelected ? "selected" : ""}`}
+              onClick={() => updatePart(index, opt.label)}
+            >
+              <span className="tds-option-marker radio">
+                {isSelected && <span className="marker-fill" />}
+              </span>
+              <span className="tds-option-label">{opt.label}</span>
+              <span className="tds-option-text">{opt.text}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="two-part-question">
+      {renderOptions(partAPrompt, partAOptions, partA, 0)}
+      {renderOptions(partBPrompt, partBOptions, partB, 1)}
+    </div>
+  );
+}
+
+function isQuestionAnswered(question: Question, answer: string | string[] | undefined): boolean {
+  if (Array.isArray(answer)) {
+    if (question.type === "two-part") {
+      return answer.length === 2 && answer.every((entry) => entry.trim() !== "");
+    }
+
+    if (question.type === "table-input") {
+      return (
+        answer.length === (question.tableColumns?.length ?? 0) &&
+        answer.every((entry) => entry.trim() !== "")
+      );
+    }
+
+    return answer.length > 0;
+  }
+
+  return answer !== undefined && answer !== "";
+}
+
 function TestContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -182,25 +532,28 @@ function TestContent() {
     (label: string) => {
       if (!current) return;
       if (current.type === "multi-select") {
-        const prev = (answers[current.id] as string[]) || [];
-        if (prev.includes(label)) {
-          setAnswers({ ...answers, [current.id]: prev.filter((l) => l !== label) });
-        } else {
-          setAnswers({ ...answers, [current.id]: [...prev, label] });
-        }
+        setAnswers((prevAnswers) => {
+          const prev = (prevAnswers[current.id] as string[]) || [];
+          return {
+            ...prevAnswers,
+            [current.id]: prev.includes(label)
+              ? prev.filter((l) => l !== label)
+              : [...prev, label],
+          };
+        });
       } else {
-        setAnswers({ ...answers, [current.id]: label });
+        setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: label }));
       }
     },
-    [current, answers]
+    [current]
   );
 
   const handleTextInput = useCallback(
     (value: string) => {
       if (!current) return;
-      setAnswers({ ...answers, [current.id]: value });
+      setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: value }));
     },
-    [current, answers]
+    [current]
   );
 
   const toggleFlag = useCallback(() => {
@@ -217,7 +570,7 @@ function TestContent() {
   const goNext = useCallback(() => {
     if (!current) return;
     const a = answers[current.id];
-    const answered = Array.isArray(a) ? a.length > 0 : a !== undefined && a !== "";
+    const answered = isQuestionAnswered(current, a);
     if (!answered) {
       setShowAttentionDialog(true);
       return;
@@ -236,8 +589,7 @@ function TestContent() {
   const handleSubmit = useCallback(() => {
     const unanswered = questions.filter((q) => {
       const a = answers[q.id];
-      if (Array.isArray(a)) return a.length === 0;
-      return a === undefined || a === "";
+      return !isQuestionAnswered(q, a);
     });
     if (unanswered.length > 0) {
       if (!confirm(`You have ${unanswered.length} unanswered question(s). Submit anyway?`)) {
@@ -291,17 +643,16 @@ function TestContent() {
     );
   }
 
-  const isAnswered = (id: number) => {
-    const a = answers[id];
-    if (Array.isArray(a)) return a.length > 0;
-    return a !== undefined && a !== "";
-  };
+  const isAnswered = (id: number) => isQuestionAnswered(
+    questions.find((q) => q.id === id) as Question,
+    answers[id]
+  );
 
   const answeredCount = questions.filter((q) => isAnswered(q.id)).length;
   const pctComplete = Math.round((answeredCount / questions.length) * 100);
   const subjectLabel = subject === "math" ? "MATH" : "ELA";
   const testTypeLabel = testType === "pt" ? "Performance Task" : "Practice Test";
-  const hasPassage = subject === "ela" && (current.passage || current.studentDirections);
+  const hasPassage = Boolean(current.passage || current.studentDirections);
 
   return (
     <div className="tds-wrapper">
@@ -418,6 +769,22 @@ function TestContent() {
                       <ReactMarkdown>{current.studentDirections}</ReactMarkdown>
                     </div>
                   )}
+                  {(current.passageTitle || current.passageAuthor) && (
+                    <div className="tds-passage-meta">
+                      {current.passageTitle && (
+                        <h2 className="tds-passage-title">{current.passageTitle}</h2>
+                      )}
+                      {current.passageAuthor && (
+                        <div className="tds-passage-author">{current.passageAuthor}</div>
+                      )}
+                    </div>
+                  )}
+                  {current.dataTable && (
+                    <StimulusTable
+                      columns={current.dataTable.columns}
+                      rows={current.dataTable.rows}
+                    />
+                  )}
                   {current.passage && (
                     <ReactMarkdown>{current.passage}</ReactMarkdown>
                   )}
@@ -476,8 +843,7 @@ function TestContent() {
 
           {/* Answer options */}
           {(current.type === "multiple-choice" ||
-            current.type === "multi-select" ||
-            current.type === "two-part") &&
+            current.type === "multi-select") &&
             current.options && (
               <div className="tds-options">
                 {current.options.map((opt) => {
@@ -503,6 +869,21 @@ function TestContent() {
                   );
                 })}
               </div>
+            )}
+
+          {current.type === "two-part" &&
+            current.partAPrompt &&
+            current.partAOptions &&
+            current.partBPrompt &&
+            current.partBOptions && (
+              <TwoPartQuestion
+                partAPrompt={current.partAPrompt}
+                partAOptions={current.partAOptions}
+                partBPrompt={current.partBPrompt}
+                partBOptions={current.partBOptions}
+                value={(answers[current.id] as string[]) || []}
+                onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+              />
             )}
 
           {/* Number pad for math text input; plain text box for ELA */}
@@ -543,7 +924,43 @@ function TestContent() {
               rows={current.gridRows}
               columns={current.gridColumns}
               value={(answers[current.id] as string[]) || []}
-              onChange={(v) => setAnswers({ ...answers, [current.id]: v })}
+              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+            />
+          )}
+
+          {current.type === "table-input" && current.tableColumns && current.tableRowLabel && (
+            <TableInput
+              columns={current.tableColumns}
+              rowLabel={current.tableRowLabel}
+              value={(answers[current.id] as string[]) || []}
+              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+            />
+          )}
+
+          {current.type === "line-plot" && current.linePlotLabels && current.linePlotMaxDots && (
+            <LinePlot
+              labels={current.linePlotLabels}
+              maxDots={current.linePlotMaxDots}
+              value={(answers[current.id] as string[]) || []}
+              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+            />
+          )}
+
+          {current.type === "fraction-model" && current.fractionModel && (
+            <FractionModel
+              thirdsMax={current.fractionModel.thirdsMax}
+              fourthsMax={current.fractionModel.fourthsMax}
+              value={(answers[current.id] as string[]) || []}
+              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+            />
+          )}
+
+          {current.type === "shade-grid" && current.shadeGrid && (
+            <ShadeGrid
+              rows={current.shadeGrid.rows}
+              cols={current.shadeGrid.cols}
+              value={(answers[current.id] as string[]) || []}
+              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
             />
           )}
 

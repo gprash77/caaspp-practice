@@ -236,6 +236,23 @@ body {
   line-height: 1.8;
 }
 
+.tds-passage-meta {
+  margin-bottom: 16px;
+}
+
+.tds-passage-title {
+  margin: 0 0 4px;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #17324d;
+}
+
+.tds-passage-author {
+  font-size: 14px;
+  color: #5a6b7b;
+  font-style: italic;
+}
+
 .tds-passage-body h3,
 .tds-passage-body h4 {
   margin-top: 0;
@@ -680,6 +697,102 @@ body {
   accent-color: var(--tds-teal);
 }
 
+.table-input {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.table-input-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 420px;
+}
+
+.table-input-table th,
+.table-input-table td {
+  border: 1px solid #9bb5d1;
+  padding: 10px;
+  text-align: center;
+}
+
+.table-input-table th {
+  background: #edf4fb;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.table-input-label {
+  min-width: 120px;
+  background: #f6f9fc;
+  font-weight: 700;
+  text-align: left;
+}
+
+.table-input-cell {
+  min-width: 90px;
+}
+
+.table-input-field {
+  width: 100%;
+  border: 1px solid #6f8fb2;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.table-input-field:focus {
+  outline: 2px solid #4a90d9;
+  outline-offset: 1px;
+}
+
+.stimulus-table {
+  margin: 18px 0 8px;
+  overflow-x: auto;
+}
+
+.stimulus-table-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  background: white;
+}
+
+.stimulus-table-table th,
+.stimulus-table-table td {
+  border: 1px solid #8fa6bf;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.stimulus-table-table th {
+  background: #dfeaf6;
+  font-weight: 700;
+}
+
+.stimulus-table-label {
+  background: #f4f8fc;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.two-part-question {
+  margin-top: 10px;
+}
+
+.two-part-section + .two-part-section {
+  margin-top: 18px;
+}
+
+.two-part-prompt {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f3e5a;
+  margin-bottom: 8px;
+}
+
 /* Short answer text box */
 .short-answer {
   margin-top: 8px;
@@ -701,6 +814,133 @@ body {
 .short-answer-input:focus {
   outline: none;
   border-color: var(--tds-blue);
+}
+
+.line-plot {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.line-plot-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.line-plot-row,
+.line-plot-labels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(48px, 1fr));
+  gap: 8px;
+}
+
+.line-plot-cell {
+  min-height: 42px;
+  border: 1px solid #b8c3d1;
+  background: white;
+  border-radius: 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1d5fa7;
+}
+
+.line-plot-cell.filled {
+  background: #eef5fd;
+  border-color: var(--tds-blue);
+}
+
+.line-plot-label {
+  text-align: center;
+  font-size: 14px;
+  color: #334;
+}
+
+.fraction-model {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.fraction-model-section {
+  border: 1px solid #d8e0ea;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fafcff;
+}
+
+.fraction-model-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #234;
+}
+
+.fraction-piece-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.fraction-piece {
+  min-width: 62px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #b9c6d8;
+  background: white;
+  font-weight: 600;
+}
+
+.fraction-piece.active {
+  background: #e7f1fd;
+  border-color: var(--tds-blue);
+  color: #114d8c;
+}
+
+.fraction-model-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fraction-chip {
+  min-width: 64px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid #b9c6d8;
+  background: white;
+  font-weight: 600;
+}
+
+.fraction-chip.symbol {
+  min-width: 52px;
+}
+
+.fraction-chip.active {
+  background: #e7f1fd;
+  border-color: var(--tds-blue);
+  color: #114d8c;
+}
+
+.shade-grid {
+  display: grid;
+  gap: 0;
+  max-width: 340px;
+  margin-top: 18px;
+  border: 2px solid #8fa1b6;
+}
+
+.shade-grid-cell {
+  min-height: 74px;
+  border: 1px solid #8fa1b6;
+  background: white;
+}
+
+.shade-grid-cell.filled {
+  background: linear-gradient(135deg, #4a90d9, #8dc1ff);
 }
 
 /* Rich text editor (extended writing) */

@@ -11,6 +11,34 @@ const EXPECTED_COUNTS: Record<string, Record<string, number>> = {
   ela: { cat: 37, pt: 4 },
 };
 
+function expectedCount(testNum: number, subject: "math" | "ela", testType: "cat" | "pt"): number {
+  if (testNum === 1 && subject === "math" && testType === "pt") {
+    return 5;
+  }
+
+  if (testNum === 1 && subject === "ela" && testType === "cat") {
+    return 30;
+  }
+
+  if (testNum === 1 && subject === "ela" && testType === "pt") {
+    return 3;
+  }
+
+  if (testNum >= 11 && testNum <= 15 && subject === "math" && testType === "pt") {
+    return 5;
+  }
+
+  if (testNum >= 11 && testNum <= 15 && subject === "ela" && testType === "cat") {
+    return 30;
+  }
+
+  if (testNum >= 11 && testNum <= 15 && subject === "ela" && testType === "pt") {
+    return 3;
+  }
+
+  return EXPECTED_COUNTS[subject][testType];
+}
+
 describe("Question data integrity", () => {
   for (const testNum of TESTS) {
     for (const subject of SUBJECTS) {
@@ -21,7 +49,7 @@ describe("Question data integrity", () => {
           const questions = getQuestions(3, subject, testType, testNum);
 
           it("has the expected number of questions", () => {
-            expect(questions.length).toBe(EXPECTED_COUNTS[subject][testType]);
+            expect(questions.length).toBe(expectedCount(testNum, subject, testType));
           });
 
           it("has no duplicate IDs", () => {
@@ -53,10 +81,14 @@ describe("Question data integrity", () => {
               "multiple-choice",
               "multi-select",
               "text-input",
+              "table-input",
               "two-part",
               "short-answer",
               "extended-writing",
               "grid-match",
+              "line-plot",
+              "fraction-model",
+              "shade-grid",
             ];
             questions.forEach((q) => {
               expect(validTypes).toContain(q.type);
@@ -111,11 +143,24 @@ describe("Question data integrity", () => {
           it("multiple-choice/multi-select questions have options", () => {
             questions
               .filter((q) =>
-                ["multiple-choice", "multi-select", "two-part"].includes(q.type)
+                ["multiple-choice", "multi-select"].includes(q.type)
               )
               .forEach((q) => {
                 expect(q.options).toBeDefined();
                 expect(q.options!.length).toBeGreaterThanOrEqual(2);
+              });
+          });
+
+          it("two-part questions have prompts and options for both parts", () => {
+            questions
+              .filter((q) => q.type === "two-part")
+              .forEach((q) => {
+                expect(q.partAPrompt).toBeTruthy();
+                expect(q.partAOptions).toBeDefined();
+                expect(q.partAOptions!.length).toBeGreaterThanOrEqual(2);
+                expect(q.partBPrompt).toBeTruthy();
+                expect(q.partBOptions).toBeDefined();
+                expect(q.partBOptions!.length).toBeGreaterThanOrEqual(2);
               });
           });
 
@@ -131,7 +176,7 @@ describe("Question data integrity", () => {
           it("correctAnswer references valid option labels for choice questions", () => {
             questions
               .filter((q) =>
-                ["multiple-choice", "multi-select", "two-part"].includes(q.type)
+                ["multiple-choice", "multi-select"].includes(q.type)
               )
               .forEach((q) => {
                 const labels = q.options!.map((o) => o.label);
@@ -142,6 +187,19 @@ describe("Question data integrity", () => {
                 } else {
                   expect(labels).toContain(q.correctAnswer);
                 }
+              });
+          });
+
+          it("two-part answers reference valid labels for both parts", () => {
+            questions
+              .filter((q) => q.type === "two-part")
+              .forEach((q) => {
+                expect(Array.isArray(q.correctAnswer)).toBe(true);
+                const [partA, partB] = q.correctAnswer as string[];
+                const labelsA = q.partAOptions!.map((o) => o.label);
+                const labelsB = q.partBOptions!.map((o) => o.label);
+                expect(labelsA).toContain(partA);
+                expect(labelsB).toContain(partB);
               });
           });
 

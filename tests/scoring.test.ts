@@ -131,6 +131,53 @@ describe("checkAnswer", () => {
     });
   });
 
+  describe("text-input with acceptedAnswers", () => {
+    const q = makeQuestion({
+      type: "text-input",
+      correctAnswer: "3",
+      acceptedAnswers: ["3", "4"],
+    });
+
+    it("accepts the first allowed answer", () => {
+      expect(checkAnswer(q, "3")).toBe(true);
+    });
+
+    it("accepts the second allowed answer", () => {
+      expect(checkAnswer(q, "4")).toBe(true);
+    });
+
+    it("rejects answers outside the allowed set", () => {
+      expect(checkAnswer(q, "5")).toBe(false);
+    });
+  });
+
+  describe("text-input with fractionRange", () => {
+    const q = makeQuestion({
+      type: "text-input",
+      correctAnswer: "range",
+      fractionRange: {
+        greaterThan: "2/6",
+        lessThan: "2/3",
+      },
+    });
+
+    it("accepts a fraction inside the range", () => {
+      expect(checkAnswer(q, "2/4")).toBe(true);
+    });
+
+    it("accepts a decimal inside the range", () => {
+      expect(checkAnswer(q, "0.5")).toBe(true);
+    });
+
+    it("rejects the lower endpoint", () => {
+      expect(checkAnswer(q, "2/6")).toBe(false);
+    });
+
+    it("rejects the upper endpoint", () => {
+      expect(checkAnswer(q, "2/3")).toBe(false);
+    });
+  });
+
   describe("multi-select (array answer)", () => {
     const q = makeQuestion({
       type: "multi-select",
@@ -163,6 +210,44 @@ describe("checkAnswer", () => {
 
     it("string instead of array is wrong", () => {
       expect(checkAnswer(q, "B")).toBe(false);
+    });
+  });
+
+  describe("shade-grid", () => {
+    const q = makeQuestion({
+      type: "shade-grid",
+      correctAnswer: ["0:0"],
+      shadeGrid: { rows: 1, cols: 4, requiredCount: 1 },
+    });
+
+    it("accepts any set with the required number of shaded cells", () => {
+      expect(checkAnswer(q, ["0:2"])).toBe(true);
+    });
+
+    it("rejects too many shaded cells", () => {
+      expect(checkAnswer(q, ["0:0", "0:1"])).toBe(false);
+    });
+  });
+
+  describe("table-input", () => {
+    const q = makeQuestion({
+      type: "table-input",
+      correctAnswer: ["150", "150", "150"],
+      tableColumns: ["Wednesday", "Thursday", "Friday"],
+      tableRowLabel: "2nd Grade",
+      tableMinSumExclusive: 410,
+    });
+
+    it("accepts a row total greater than the winning total", () => {
+      expect(checkAnswer(q, ["150", "150", "150"])).toBe(true);
+    });
+
+    it("rejects a row total that does not win", () => {
+      expect(checkAnswer(q, ["100", "100", "100"])).toBe(false);
+    });
+
+    it("rejects incomplete or non-numeric entries", () => {
+      expect(checkAnswer(q, ["200", "", "220"])).toBe(false);
     });
   });
 

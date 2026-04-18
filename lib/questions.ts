@@ -4,6 +4,11 @@ import { easyPracticeTestQuestions } from "./practice-tests-easy";
 import { mediumPracticeTestQuestions } from "./practice-tests-medium";
 import { challengePracticeTestQuestions } from "./practice-tests-challenge";
 import { parallelPracticeTestQuestions } from "./practice-tests-parallel";
+import { practiceTest11Questions } from "./practice-test-11";
+import { practiceTest12Questions } from "./practice-test-12";
+import { practiceTest13Questions } from "./practice-test-13";
+import { practiceTest14Questions } from "./practice-test-14";
+import { practiceTest15Questions } from "./practice-test-15";
 
 export interface Question {
   id: number;
@@ -14,17 +19,55 @@ export interface Question {
   target: string;
   dok: number;
   standard: string;
-  type: "multiple-choice" | "multi-select" | "text-input" | "two-part" | "short-answer" | "extended-writing" | "grid-match";
+  type:
+    | "multiple-choice"
+    | "multi-select"
+    | "text-input"
+    | "table-input"
+    | "two-part"
+    | "short-answer"
+    | "extended-writing"
+    | "grid-match"
+    | "line-plot"
+    | "fraction-model"
+    | "shade-grid";
   testType: "cat" | "pt";
   passage?: string;
   passageTitle?: string;
   passageAuthor?: string;
   studentDirections?: string;
+  dataTable?: {
+    columns: string[];
+    rows: { label: string; values: (string | number)[] }[];
+  };
   questionText: string;
   options?: { label: string; text: string }[];
+  partAPrompt?: string;
+  partAOptions?: { label: string; text: string }[];
+  partBPrompt?: string;
+  partBOptions?: { label: string; text: string }[];
+  tableColumns?: string[];
+  tableRowLabel?: string;
+  tableMinSumExclusive?: number;
   gridRows?: string[];
   gridColumns?: string[];
   correctAnswer: string | string[];
+  acceptedAnswers?: string[];
+  fractionRange?: {
+    greaterThan: string;
+    lessThan: string;
+  };
+  linePlotLabels?: string[];
+  linePlotMaxDots?: number;
+  shadeGrid?: {
+    rows: number;
+    cols: number;
+    requiredCount: number;
+  };
+  fractionModel?: {
+    thirdsMax: number;
+    fourthsMax: number;
+  };
   rubric: string;
   points: number;
   evidenceStatement?: string;
@@ -35,6 +78,15 @@ export interface Question {
 // ──────────────────────────────────────────
 // GRADE 3 MATH QUESTIONS
 // ──────────────────────────────────────────
+const goGreenStimulusTable = {
+  columns: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  rows: [
+    { label: "3rd grade", values: [50, 60, 90, 120, 90] },
+    { label: "4th grade", values: [70, 90, 100, 50, 80] },
+    { label: "5th grade", values: [80, 80, 80, 80, 80] },
+  ],
+};
+
 export const grade3Math: Question[] = [
   {
     id: 1,
@@ -294,11 +346,18 @@ export const grade3Math: Question[] = [
     target: "C",
     dok: 1,
     standard: "3.OA.C.7",
-    type: "text-input",
-    questionText: "What is 5 × 8?",
-    correctAnswer: "40",
-    rubric: "The student enters the correct product.",
+    type: "multi-select",
+    questionText:
+      "Decide whether each equation is true or false.\n\nSelect all of the equations that are true.",
+    options: [
+      { label: "A", text: "8 × 2 = 4 × 6" },
+      { label: "B", text: "7 × 3 = 3 × 7" },
+      { label: "C", text: "5 × 6 = 3 × 10" },
+    ],
+    correctAnswer: ["B", "C"],
+    rubric: "The student correctly identifies the true equations.",
     points: 1,
+    explanation: "8 × 2 = 16 and 4 × 6 = 24, so A is false. 7 × 3 and 3 × 7 are both 21, so B is true. 5 × 6 and 3 × 10 are both 30, so C is true.",
   },
   // ── Additional Math CAT questions ──
   {
@@ -306,69 +365,67 @@ export const grade3Math: Question[] = [
     testType: "cat",
     subject: "math",
     grade: 3,
-    claim: 1,
-    domain: "G",
-    target: "K",
-    dok: 1,
-    standard: "3.G.A.1",
+    claim: 3,
+    domain: "NF",
+    target: "D",
+    dok: 2,
+    standard: "3.NF.A.3",
     type: "multiple-choice",
     questionText:
-      "Which shape has exactly 4 sides that are all the same length and 4 right angles?",
+      "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1\n- greater than 1",
     options: [
-      { label: "A", text: "Rectangle" },
-      { label: "B", text: "Rhombus" },
-      { label: "C", text: "Square" },
-      { label: "D", text: "Trapezoid" },
+      { label: "A", text: "2/2, 3/4, 3/2" },
+      { label: "B", text: "2/3, 3/3, 2/4" },
+      { label: "C", text: "4/3, 2/2, 4/4" },
+      { label: "D", text: "3/4, 3/2, 2/2" },
     ],
-    correctAnswer: "C",
-    rubric: "The student selects the correct shape.",
+    correctAnswer: "A",
+    rubric: "The student identifies one valid set of fractions.",
     points: 1,
+    explanation: "2/2 equals 1, 3/4 is less than 1, and 3/2 is greater than 1, so choice A is correct.",
   },
   {
     id: 22,
     testType: "cat",
     subject: "math",
     grade: 3,
-    claim: 1,
-    domain: "G",
-    target: "K",
+    claim: 2,
+    domain: "OA",
+    target: "C",
     dok: 2,
-    standard: "3.G.A.2",
-    type: "multiple-choice",
+    standard: "3.OA.A.3",
+    type: "multi-select",
     questionText:
-      "A square is divided into 4 equal parts. What fraction of the square does each part represent?",
+      "A teacher has 12 pens. Select all of the groups that can be formed using all 12 pens with no pens left over.",
     options: [
-      { label: "A", text: "1/2" },
-      { label: "B", text: "1/3" },
-      { label: "C", text: "1/4" },
-      { label: "D", text: "1/8" },
+      { label: "A", text: "2 groups of 6" },
+      { label: "B", text: "3 groups of 4" },
+      { label: "C", text: "5 groups of 2" },
+      { label: "D", text: "4 groups of 3" },
     ],
-    correctAnswer: "C",
-    rubric: "The student selects the correct fraction.",
+    correctAnswer: ["A", "B", "D"],
+    rubric: "The student identifies all groups that can be formed using all the pens.",
     points: 1,
+    explanation: "2 × 6 = 12, 3 × 4 = 12, and 4 × 3 = 12, so those work. But 5 × 2 = 10, so choice C does not use all 12 pens.",
   },
   {
     id: 23,
     testType: "cat",
     subject: "math",
     grade: 3,
-    claim: 1,
+    claim: 4,
     domain: "MD",
-    target: "H",
-    dok: 2,
+    target: "D",
+    dok: 3,
     standard: "3.MD.B.3",
-    type: "multiple-choice",
+    type: "text-input",
     questionText:
-      "A bar graph shows the favorite fruits of students in a class: Apples = 8, Bananas = 5, Grapes = 3, Oranges = 6. How many more students chose apples than grapes?",
-    options: [
-      { label: "A", text: "3" },
-      { label: "B", text: "5" },
-      { label: "C", text: "11" },
-      { label: "D", text: "2" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct difference.",
+      "Jenna made a picture graph in which each star represents some number of students. She forgot to complete the key.\n\nFavorite Color\nRed: **\nBlue: ****\nYellow: ****\nGreen: ****\n\nThe difference between the number of students who voted for blue and the number of students who voted for red is greater than 5 but less than 9.\n\nEnter a possible number of students that each star could represent.",
+    correctAnswer: "3",
+    acceptedAnswers: ["3", "4"],
+    rubric: "The student enters a possible number of students each star could represent.",
     points: 1,
+    explanation: "Blue has 4 stars and red has 2 stars, so the difference is 2 stars. If each star represents 3 students, the difference is 6. If each star represents 4 students, the difference is 8. Both are greater than 5 but less than 9.",
   },
   {
     id: 24,
@@ -377,67 +434,64 @@ export const grade3Math: Question[] = [
     grade: 3,
     claim: 1,
     domain: "MD",
-    target: "G",
+    target: "H",
     dok: 2,
-    standard: "3.MD.A.2",
-    type: "multiple-choice",
+    standard: "3.MD.B.4",
+    type: "line-plot",
     questionText:
-      "A water bottle holds 500 milliliters. Emma drinks 175 milliliters. How much water is left in the bottle?",
-    options: [
-      { label: "A", text: "225 milliliters" },
-      { label: "B", text: "325 milliliters" },
-      { label: "C", text: "375 milliliters" },
-      { label: "D", text: "675 milliliters" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct amount.",
+      "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 1/4, 2/4, 3/4",
+    linePlotLabels: ["1/4", "2/4", "3/4", "4/4"],
+    linePlotMaxDots: 4,
+    correctAnswer: ["0:2", "0:1", "1:1", "2:1"],
+    rubric: "The student correctly completes the line plot.",
     points: 1,
+    explanation: "The line plot should show two X marks above 1/4, one X above 2/4, one X above 3/4, and none above 4/4.",
   },
   {
     id: 25,
     testType: "cat",
     subject: "math",
     grade: 3,
-    claim: 1,
-    domain: "NF",
-    target: "F",
+    claim: 4,
+    domain: "OA",
+    target: "E",
     dok: 2,
-    standard: "3.NF.A.3",
-    type: "multiple-choice",
+    standard: "3.OA.D.8",
+    type: "multi-select",
     questionText:
-      "Which two fractions are equal?",
+      "Kaden has 7 bags of animal toys. Each bag has these animal toys in it.\n\n- 1 whale toy\n- 5 dolphin toys\n- 2 turtle toys\n\nHow many animal toys does Kaden have altogether?\n\nSelect all of the equations that show how to find the total number, t, of animal toys.",
     options: [
-      { label: "A", text: "1/2 and 2/4" },
-      { label: "B", text: "1/3 and 1/4" },
-      { label: "C", text: "2/6 and 2/8" },
-      { label: "D", text: "3/4 and 3/8" },
+      { label: "A", text: "7 × 8 = t" },
+      { label: "B", text: "7 + 1 + 5 + 2 = t" },
+      { label: "C", text: "7 × (1 + 5 + 2) = t" },
+      { label: "D", text: "7 + (1 × 5 × 2) = t" },
     ],
-    correctAnswer: "A",
-    rubric: "The student selects the correct equivalent fractions.",
+    correctAnswer: ["A", "C"],
+    rubric: "The student identifies the correct equations.",
     points: 1,
+    explanation: "Each bag has 1 + 5 + 2 = 8 toys, so 7 × 8 = t works. The equivalent grouped expression is 7 × (1 + 5 + 2) = t.",
   },
   {
     id: 26,
     testType: "cat",
     subject: "math",
     grade: 3,
-    claim: 1,
+    claim: 3,
     domain: "NF",
-    target: "F",
-    dok: 1,
-    standard: "3.NF.A.1",
-    type: "multiple-choice",
+    target: "B",
+    dok: 3,
+    standard: "3.NF.A.3",
+    type: "text-input",
     questionText:
-      "A pizza is cut into 8 equal slices. Mia eats 3 slices. What fraction of the pizza did Mia eat?",
-    options: [
-      { label: "A", text: "3/5" },
-      { label: "B", text: "3/8" },
-      { label: "C", text: "5/8" },
-      { label: "D", text: "8/3" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct fraction.",
+      "Two comparisons are shown.\n\n□/□ < 2/3\n□/□ > 2/6\n\nEnter one fraction that makes both comparisons true.",
+    correctAnswer: "2/4",
+    fractionRange: {
+      greaterThan: "2/6",
+      lessThan: "2/3",
+    },
+    rubric: "The student enters an acceptable fraction or decimal.",
     points: 1,
+    explanation: "Any value strictly between 2/6 and 2/3 is correct. For example, 2/4 equals 1/2, and 1/2 is greater than 2/6 but less than 2/3.",
   },
   {
     id: 27,
@@ -446,15 +500,16 @@ export const grade3Math: Question[] = [
     grade: 3,
     claim: 1,
     domain: "OA",
-    target: "A",
+    target: "D",
     dok: 2,
-    standard: "3.OA.A.3",
+    standard: "3.OA.D.8",
     type: "text-input",
     questionText:
-      "There are 4 shelves in a bookcase. Each shelf holds 7 books. How many books can the bookcase hold in all?",
-    correctAnswer: "28",
-    rubric: "The student enters the correct number of books.",
+      "Jana has 107 wooden beads and 68 glass beads. How many more wooden beads than glass beads does Jana have?\n\nEnter your answer in the response box.",
+    correctAnswer: "39",
+    rubric: "The student enters the correct number of beads.",
     points: 1,
+    explanation: "Subtract the number of glass beads from the number of wooden beads: 107 − 68 = 39.",
   },
   {
     id: 28,
@@ -462,39 +517,39 @@ export const grade3Math: Question[] = [
     subject: "math",
     grade: 3,
     claim: 1,
-    domain: "OA",
-    target: "B",
+    domain: "NF",
+    target: "F",
     dok: 2,
-    standard: "3.OA.A.4",
+    standard: "3.NF.A.2",
     type: "text-input",
     questionText:
-      "There are 36 students in the gym. The teacher puts them into equal groups of 9. How many groups are there?",
-    correctAnswer: "4",
-    rubric: "The student enters the correct number of groups.",
+      "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the seventh mark after 0.\n\nEnter the fraction represented by Point A.",
+    correctAnswer: "7/8",
+    rubric: "The student enters a correct fraction represented by Point A.",
     points: 1,
+    explanation: "If the number line is divided into 8 equal parts, each mark is one eighth. The seventh mark after 0 is 7/8.",
   },
   {
     id: 29,
     testType: "cat",
     subject: "math",
     grade: 3,
-    claim: 1,
-    domain: "NBT",
-    target: "E",
-    dok: 1,
-    standard: "3.NBT.A.1",
-    type: "multiple-choice",
+    claim: 3,
+    domain: "NF",
+    target: "A",
+    dok: 2,
+    standard: "3.NF.A.3",
+    type: "fraction-model",
     questionText:
-      "What is 482 rounded to the nearest ten?",
-    options: [
-      { label: "A", text: "480" },
-      { label: "B", text: "490" },
-      { label: "C", text: "500" },
-      { label: "D", text: "400" },
-    ],
-    correctAnswer: "A",
-    rubric: "The student selects the correct rounded number.",
-    points: 1,
+      "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model equal amounts.\n\nPart B: Decide whether the number of 1/3 pieces is greater than the number of 1/4 pieces, and choose the correct comparison symbol.",
+    fractionModel: {
+      thirdsMax: 4,
+      fourthsMax: 4,
+    },
+    correctAnswer: ["3", "4", "yes", ">"],
+    rubric: "The student correctly models the equal amounts and identifies the correct comparison.",
+    points: 2,
+    explanation: "Three pieces of 1/3 and four pieces of 1/4 both make 1 whole. Since 3 is less than 4, the fractions represented are equal in size, but the number of 1/3 pieces compared to 1/4 pieces in this model is 3 versus 4. This adapted item uses the equal-whole model from the official interaction.",
   },
   {
     id: 30,
@@ -502,16 +557,22 @@ export const grade3Math: Question[] = [
     subject: "math",
     grade: 3,
     claim: 1,
-    domain: "NBT",
-    target: "E",
-    dok: 1,
-    standard: "3.NBT.A.2",
-    type: "text-input",
+    domain: "G",
+    target: "K",
+    dok: 2,
+    standard: "3.G.A.2",
+    type: "shade-grid",
     questionText:
-      "What is 700 − 258?",
-    correctAnswer: "442",
-    rubric: "The student enters the correct difference.",
+      "Shade 1/4 of the rectangle.",
+    shadeGrid: {
+      rows: 1,
+      cols: 4,
+      requiredCount: 1,
+    },
+    correctAnswer: ["0:0"],
+    rubric: "The student correctly shades 1/4 of the rectangle.",
     points: 1,
+    explanation: "The rectangle is divided into 4 equal parts, so shading any 1 of the 4 parts shows 1/4.",
   },
   {
     id: 31,
@@ -519,16 +580,22 @@ export const grade3Math: Question[] = [
     subject: "math",
     grade: 3,
     claim: 1,
-    domain: "NBT",
-    target: "E",
+    domain: "OA",
+    target: "B",
     dok: 1,
-    standard: "3.NBT.A.3",
-    type: "text-input",
+    standard: "3.OA.B.5",
+    type: "multi-select",
     questionText:
-      "What is 6 × 70?",
-    correctAnswer: "420",
-    rubric: "The student enters the correct product.",
+      "Select all of the expressions that are equal to 4 × 12.",
+    options: [
+      { label: "A", text: "4 × (10 + 2)" },
+      { label: "B", text: "(4 × 10) + 2" },
+      { label: "C", text: "4 + (10 × 2)" },
+    ],
+    correctAnswer: ["A"],
+    rubric: "The student identifies the equal expressions.",
     points: 1,
+    explanation: "4 × (10 + 2) equals 4 × 12, so A is correct. (4 × 10) + 2 = 42 and 4 + (10 × 2) = 24, so B and C are not equal to 48.",
   },
   {
     id: 32,
@@ -626,29 +693,6 @@ export const grade3Math: Question[] = [
     rubric: "The student selects the correct elapsed time.",
     points: 1,
   },
-  {
-    id: 37,
-    testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 1,
-    domain: "MD",
-    target: "H",
-    dok: 2,
-    standard: "3.MD.B.4",
-    type: "multiple-choice",
-    questionText:
-      "Four students measured their pencils. The lengths were: 5 inches, 6 inches, 6 inches, and 7 inches. What is the most common pencil length?",
-    options: [
-      { label: "A", text: "5 inches" },
-      { label: "B", text: "6 inches" },
-      { label: "C", text: "7 inches" },
-      { label: "D", text: "8 inches" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct mode.",
-    points: 1,
-  },
   // ── Additional Math CAT questions to match real CAASPP count ──
   {
     id: 15,
@@ -657,44 +701,40 @@ export const grade3Math: Question[] = [
     grade: 3,
     claim: 1,
     domain: "OA",
-    target: "A",
-    dok: 2,
-    standard: "3.OA.A.1",
-    type: "multiple-choice",
+    target: "C",
+    dok: 1,
+    standard: "3.OA.C.7",
+    type: "text-input",
     questionText:
-      "A farmer plants 6 rows of tomato plants. Each row has 7 plants. Which expression shows how to find the total number of tomato plants?",
-    options: [
-      { label: "A", text: "6 + 7" },
-      { label: "B", text: "6 × 7" },
-      { label: "C", text: "7 − 6" },
-      { label: "D", text: "7 ÷ 6" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the multiplication expression.",
+      "Enter the unknown numbers that make each equation true.\n\nEnter the first unknown number in the first box.\nEnter the second unknown number in the second box.\n\n5 × 8 = □\n\n8 × 7 = □",
+    correctAnswer: "40,56",
+    rubric: "The student enters the correct products.",
     points: 1,
+    explanation: "5 × 8 = 40 and 8 × 7 = 56, so the two answers are 40 and 56 in that order.",
   },
   {
     id: 16,
     testType: "cat",
     subject: "math",
     grade: 3,
-    claim: 1,
-    domain: "NF",
+    claim: 3,
+    domain: "MD",
     target: "F",
     dok: 2,
-    standard: "3.NF.A.2",
+    standard: "3.MD.A.1",
     type: "multiple-choice",
     questionText:
-      "Which point on the number line represents the fraction 3/4?",
+      "Four number lines are described below. Each one starts at 0 minutes.\n\nWhich number line places point P at 45 minutes?",
     options: [
-      { label: "A", text: "Point A, which is at 1/4" },
-      { label: "B", text: "Point B, which is at 2/4" },
-      { label: "C", text: "Point C, which is at 3/4" },
-      { label: "D", text: "Point D, which is at 4/4" },
+      { label: "A", text: "The line is marked every 20 minutes, and P is at the third mark after 0." },
+      { label: "B", text: "The line is marked every 15 minutes, and P is at the third mark after 0." },
+      { label: "C", text: "The line is marked every 10 minutes, and P is at the fourth mark after 0." },
+      { label: "D", text: "The line is marked every 30 minutes, and P is halfway between 0 and 60." },
     ],
-    correctAnswer: "C",
-    rubric: "The student identifies the correct position of 3/4 on a number line.",
+    correctAnswer: "B",
+    rubric: "The student identifies the correct number line.",
     points: 1,
+    explanation: "If the marks are every 15 minutes, the first three marks after 0 are 15, 30, and 45, so choice B is correct.",
   },
   {
     id: 17,
@@ -703,66 +743,26 @@ export const grade3Math: Question[] = [
     grade: 3,
     claim: 1,
     domain: "MD",
-    target: "G",
-    dok: 1,
-    standard: "3.MD.C.5",
-    type: "text-input",
+    target: "I",
+    dok: 2,
+    standard: "3.MD.C.7",
+    type: "multiple-choice",
     questionText:
-      "A rectangle is divided into square units. It has 4 rows and 6 columns of unit squares. What is the area of the rectangle in square units?",
-    correctAnswer: "24",
-    rubric: "The student calculates the area by multiplying rows by columns.",
+      "A rectangular room is covered with 4 rows of 5 square-foot tiles. Which number shows the area of the room in square feet?",
+    options: [
+      { label: "A", text: "20" },
+      { label: "B", text: "9" },
+      { label: "C", text: "18" },
+      { label: "D", text: "25" },
+    ],
+    correctAnswer: "A",
+    rubric: "The student selects the correct number of square feet.",
     points: 1,
+    explanation: "Area is found by multiplying rows by columns: 4 × 5 = 20 square feet.",
   },
   {
     id: 18,
     testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 1,
-    domain: "OA",
-    target: "B",
-    dok: 2,
-    standard: "3.OA.B.5",
-    type: "multiple-choice",
-    questionText:
-      "Which equation shows the distributive property applied to 4 × 7?",
-    options: [
-      { label: "A", text: "(4 × 5) + (4 × 2) = 28" },
-      { label: "B", text: "(4 + 5) × (4 + 2) = 54" },
-      { label: "C", text: "4 × 7 = 7 × 4" },
-      { label: "D", text: "4 × (7 + 0) = 28" },
-    ],
-    correctAnswer: "A",
-    rubric: "The student identifies the distributive property decomposition.",
-    points: 1,
-  },
-  {
-    id: 19,
-    testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 1,
-    domain: "MD",
-    target: "I",
-    dok: 2,
-    standard: "3.MD.A.2",
-    type: "multiple-choice",
-    questionText:
-      "Sarah has a water bottle that holds 1 liter. She drinks 400 milliliters at lunch. How many milliliters of water are left in the bottle?",
-    options: [
-      { label: "A", text: "400 milliliters" },
-      { label: "B", text: "500 milliliters" },
-      { label: "C", text: "600 milliliters" },
-      { label: "D", text: "1,400 milliliters" },
-    ],
-    correctAnswer: "C",
-    rubric: "The student converts 1 liter to 1000 mL and subtracts correctly.",
-    points: 1,
-  },
-  // ── Math PT: School Fun Fair (themed scenario) ──
-  {
-    id: 40,
-    testType: "pt",
     subject: "math",
     grade: 3,
     claim: 2,
@@ -770,39 +770,41 @@ export const grade3Math: Question[] = [
     target: "A",
     dok: 2,
     standard: "3.OA.D.8",
-    type: "multiple-choice",
-    questionText:
-      "The third-grade class is planning a School Fun Fair. They need to set up game booths and buy supplies.\n\nThere are 72 students in the third grade. The teachers want to divide them into equal teams of 8 for the relay race. How many teams will there be?",
-    options: [
-      { label: "A", text: "7 teams" },
-      { label: "B", text: "8 teams" },
-      { label: "C", text: "9 teams" },
-      { label: "D", text: "10 teams" },
-    ],
-    correctAnswer: "C",
-    rubric: "The student selects the correct number of teams.",
-    points: 1,
-  },
-  {
-    id: 41,
-    testType: "pt",
-    subject: "math",
-    grade: 3,
-    claim: 2,
-    domain: "MD",
-    target: "I",
-    dok: 2,
-    standard: "3.MD.C.7",
     type: "text-input",
     questionText:
-      "Each game booth at the Fun Fair needs a rectangular space that is 6 feet long and 4 feet wide. What is the area of the space needed for one booth, in square feet?",
-    correctAnswer: "24",
-    rubric: "The student enters the correct area.",
+      "There are 9 cherry trees.\n\n• Kim picks 8 cherries from each tree.\n• Kim eats 14 of the cherries she picked.\n\nEnter the number of cherries Kim has left.",
+    correctAnswer: "58",
+    rubric: "The student enters the correct number of cherries.",
     points: 1,
+    explanation: "Kim picks 9 × 8 = 72 cherries and then eats 14. That leaves 72 − 14 = 58 cherries.",
   },
   {
-    id: 42,
-    testType: "pt",
+    id: 19,
+    testType: "cat",
+    subject: "math",
+    grade: 3,
+    claim: 3,
+    domain: "OA",
+    target: "E",
+    dok: 2,
+    standard: "3.OA.B.5",
+    type: "multiple-choice",
+    questionText:
+      "Libby said the answer to the problem 5 × 2 × 3 is 25. Her work is shown.\n\n• Step 1: 5 × 2 = 10\n• Step 2: 5 × 3 = 15\n• Step 3: 10 + 15 = 25\n\nWhich is true?",
+    options: [
+      { label: "A", text: "Libby's answer is correct because 10 + 15 = 25." },
+      { label: "B", text: "Libby's answer is correct because 2 + 3 = 5 and 5 × 5 = 25." },
+      { label: "C", text: "Libby's answer is not correct because she multiplied 5 × 3 and 5 × 2." },
+      { label: "D", text: "Libby's answer is not correct because she should have multiplied 10 × 15." },
+    ],
+    correctAnswer: "C",
+    rubric: "The student identifies the correct statement.",
+    points: 1,
+    explanation: "Libby treated 5 × 2 × 3 like 5 × 2 plus 5 × 3, which is not the right way to solve the expression. That makes choice C correct.",
+  },
+  {
+    id: 20,
+    testType: "cat",
     subject: "math",
     grade: 3,
     claim: 4,
@@ -812,53 +814,103 @@ export const grade3Math: Question[] = [
     standard: "3.OA.D.8",
     type: "text-input",
     questionText:
-      "The class raised $156 from ticket sales and $98 from bake sale donations. They need to spend $75 on supplies. How much money will the class have left after buying supplies?",
-    correctAnswer: "179",
-    rubric: "The student enters the correct amount.",
+      "Jamal's mother plans a trip for the baseball team.\n\n• There are 14 players on the team.\n• There are 5 parents going on the trip.\n• The players and parents will all travel together in cars.\n• Each car can hold a total of 5 people.\n• There must be at least 1 parent in each car.\n\nWhat is the fewest number of cars they will need?",
+    correctAnswer: "4",
+    rubric: "The student enters the fewest number of cars needed.",
     points: 1,
+    explanation: "There are 14 + 5 = 19 people total. Four cars can hold 20 people, and with 5 parents available it is possible to put at least 1 parent in each car.",
   },
+  // ── Math PT: Going Green (official public Grade 3 PT baseline) ──
   {
-    id: 43,
-    testType: "pt",
-    subject: "math",
-    grade: 3,
-    claim: 3,
-    domain: "OA",
-    target: "E",
-    dok: 2,
-    standard: "3.OA.A.3",
-    type: "multiple-choice",
-    questionText:
-      "The class wants to give out 5 prize bags at each of the 6 game booths. Each prize bag costs $3. Which expression shows the total cost of all the prize bags?",
-    options: [
-      { label: "A", text: "5 + 6 + 3" },
-      { label: "B", text: "(5 × 6) × 3" },
-      { label: "C", text: "5 × 6 + 3" },
-      { label: "D", text: "(5 + 6) × 3" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct expression.",
-    points: 1,
-  },
-  {
-    id: 44,
+    id: 40,
     testType: "pt",
     subject: "math",
     grade: 3,
     claim: 2,
-    domain: "MD",
-    target: "J",
-    dok: 2,
-    standard: "3.MD.D.8",
-    type: "text-input",
+    domain: "NBT",
+    target: "D",
+    dok: 1,
+    standard: "1.NBT.B.3",
+    type: "multi-select",
+    studentDirections: `**Mathematics Performance Task**
+
+The “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.
+
+Your task is to determine which grade won the “Go Green” contest.
+
+The items that can be recycled are:
+
+- Plastic bottles
+- Aluminum cans
+- Glass bottles
+
+Students from the 3rd grade, 4th grade, and 5th grade classes collected bottles and cans and brought them to school.
+
+Table 1 shows how many bottles and cans each grade collected on each day of the week.`,
+    dataTable: goGreenStimulusTable,
     questionText:
-      "The class wants to put a border of ribbon around a rectangular bulletin board that is 5 feet long and 3 feet wide. How many feet of ribbon do they need?",
-    correctAnswer: "16",
-    rubric: "The student enters the correct perimeter.",
+      "Use Table 1 to help you answer this question.\n\nOn which days did the 3rd grade class collect more cans and bottles than the other two grades? Select all that apply.",
+    options: [
+      { label: "A", text: "Monday" },
+      { label: "B", text: "Tuesday" },
+      { label: "C", text: "Wednesday" },
+      { label: "D", text: "Thursday" },
+      { label: "E", text: "Friday" },
+    ],
+    correctAnswer: ["D", "E"],
+    rubric: "The student selects both Thursday and Friday.",
     points: 1,
   },
   {
-    id: 45,
+    id: 41,
+    testType: "pt",
+    subject: "math",
+    grade: 3,
+    claim: 2,
+    domain: "NBT",
+    target: "D",
+    dok: 1,
+    standard: "1.NBT.B.3",
+    type: "text-input",
+    studentDirections: `**Mathematics Performance Task**
+
+The “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.
+
+Your task is to determine which grade won the “Go Green” contest.`,
+    dataTable: goGreenStimulusTable,
+    questionText:
+      "Use Table 1 to help you answer this question.\n\nOn Tuesday, how many more bottles and cans did the 4th grade class collect than the 3rd grade class?",
+    correctAnswer: "30",
+    rubric: "The student enters 30.",
+    points: 1,
+  },
+  {
+    id: 42,
+    testType: "pt",
+    subject: "math",
+    grade: 3,
+    claim: 3,
+    domain: "NBT",
+    target: "F",
+    dok: 3,
+    standard: "2.NBT.B",
+    type: "short-answer",
+    studentDirections: `**Mathematics Performance Task**
+
+The “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.
+
+Your task is to determine which grade won the “Go Green” contest.`,
+    dataTable: goGreenStimulusTable,
+    questionText:
+      "You are the contest judge. You need to figure out who won the contest.\n\nDid 3rd grade, 4th grade, or 5th grade win the “Go Green” contest?\n\nUse words and numbers to clearly explain:\n• which grade won the contest, and\n• how you know they collected the most cans and bottles.",
+    correctAnswer:
+      "3rd grade won because they collected the most bottles and cans for the week. Their total was 50 + 60 + 90 + 120 + 90 = 410, which is more than 4th grade's 390 and 5th grade's 400.",
+    rubric:
+      "2 points: The student develops an approach to determine the winner and gives a justification. 1 point: The student correctly states that 3rd grade won but gives incomplete reasoning. 0 points: All other responses.",
+    points: 2,
+  },
+  {
+    id: 43,
     testType: "pt",
     subject: "math",
     grade: 3,
@@ -866,36 +918,48 @@ export const grade3Math: Question[] = [
     domain: "OA",
     target: "A",
     dok: 3,
-    standard: "3.OA.D.8",
-    type: "short-answer",
+    standard: "2.OA.A.1",
+    type: "table-input",
+    studentDirections: `**Mathematics Performance Task**
+
+The “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.
+
+Your task is to determine which grade won the “Go Green” contest.`,
+    dataTable: goGreenStimulusTable,
     questionText:
-      "The School Fun Fair committee has $150 to spend on prizes. They want to buy stuffed animals that cost $6 each and bouncy balls that cost $2 each. They want to buy 15 stuffed animals. How many bouncy balls can they buy with the money left over? Show your work and explain your answer.",
-    correctAnswer: "They spend 15 × $6 = $90 on stuffed animals. $150 − $90 = $60 left. $60 ÷ $2 = 30 bouncy balls.",
-    rubric: "Full credit (2 points): Correct answer of 30 bouncy balls with clear work shown. 1 point: Correct strategy but computational error, or correct answer without explanation.",
-    points: 2,
+      "The 2nd grade class got excited about the “Go Green” contest and wanted to join in. They started collecting bottles and cans on Wednesday, even though they missed the first two days.\n\nComplete the table to show a way for the 2nd grade class to still win the contest.",
+    tableColumns: ["Wednesday", "Thursday", "Friday"],
+    tableRowLabel: "2nd Grade",
+    tableMinSumExclusive: 410,
+    correctAnswer: ["150", "150", "150"],
+    rubric:
+      "1 point: The student enters any numbers for Wednesday, Thursday, and Friday that add up to more than 410. 0 points: All other responses.",
+    points: 1,
   },
   {
-    id: 46,
+    id: 44,
     testType: "pt",
     subject: "math",
     grade: 3,
-    claim: 2,
-    domain: "MD",
-    target: "J",
+    claim: 3,
+    domain: "OA",
+    target: "A",
     dok: 3,
-    standard: "3.MD.C.7",
-    type: "multiple-choice",
+    standard: "2.OA.A",
+    type: "short-answer",
+    studentDirections: `**Mathematics Performance Task**
+
+The “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.
+
+Your task is to determine which grade won the “Go Green” contest.`,
+    dataTable: goGreenStimulusTable,
     questionText:
-      "The Fun Fair needs a rectangular area for the relay race. The area must be exactly 48 square meters. Which of the following could be the length and width of the relay race area?",
-    options: [
-      { label: "A", text: "5 meters by 9 meters" },
-      { label: "B", text: "6 meters by 8 meters" },
-      { label: "C", text: "7 meters by 7 meters" },
-      { label: "D", text: "4 meters by 10 meters" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student identifies the correct factor pair of 48.",
-    points: 1,
+      "Use your answers from questions 3 and 4 to explain how the 2nd grade class could have won the “Go Green” contest.",
+    correctAnswer:
+      "The 2nd grade class could have won by collecting more than 410 bottles and cans total on Wednesday, Thursday, and Friday. That is more than the 3rd grade total, so the 2nd grade class would win.",
+    rubric:
+      "2 points: The student uses the numbers from Questions 3 and 4 and explains that the 2nd grade total is more than the winning total. 1 point: The student gives part of the idea without clearly connecting the totals. 0 points: All other responses.",
+    points: 2,
   },
 ];
 
@@ -978,6 +1042,130 @@ How does sap flow? During cold nights, maple trees freeze solid. That's when wat
 
 Scientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.`;
 
+const soaringPresentationSummary = `Presentation transcript-style version:
+
+Today I am going to tell you about an event from long ago that became an important part of American history. It is called "Soaring on the Wings of the Wind," and it is about Peter Carnes and a young boy named Edward Warren Jr.
+
+Peter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.
+
+Later, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.
+
+One part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.
+
+This event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.`;
+
+const pizzaPresentationSummary = `Presentation transcript-style version:
+
+Today I am giving a presentation called "All About Pizza." Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.
+
+In the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.
+
+In other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.
+
+When we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.
+
+So the next time you think about pizza, remember that it may be better to look at it in a new way.`;
+
+const astronautPtDirectionsPart1 = `**Student Directions**
+
+**Astronauts Informational Performance Task**
+
+**Task:**
+Your class has been learning about different types of jobs to prepare for your school's job week. Your teacher has asked each person to learn about a different job. You think being an astronaut must be an interesting job so you decide to learn about what it is like to be an astronaut. You have found two sources about being an astronaut.
+
+After you have looked at these sources, you will answer some questions about them. Briefly scan the sources and the three questions that follow. Then, go back and read the sources carefully so you will have the information you will need to answer the questions and complete your research. You may click on the Global Notes button to take notes on the information you find in the sources as you read. You may also use scratch paper to take notes.
+
+In Part 2, you will write an informational article using information you have read.
+
+**Directions for Beginning:**
+You will now look at two sources. You can look at either of the sources as often as you like.
+
+**Research Questions:**
+After looking at the sources, use the rest of the time in Part 1 to answer three questions about them. Your answers to these questions will be scored. Also, your answers will help you think about the information you have read and looked at, which should help you write your informational article.
+
+You may click on the Global Notes button or refer back to your scratch paper to look at your notes when you think it would be helpful. Answer the questions in the spaces below the items.
+
+Both the Global Notes on the computer and your written notes on scratch paper will be available to you in Part 1 and Part 2 of the performance task.`;
+
+const astronautPtDirectionsPart2 = `**Student Directions**
+
+**Astronauts Informational Performance Task**
+
+**Part 2**
+You will review your notes and sources, and plan, draft, revise, and edit your writing. You may use your notes and go back to the sources. Now read your assignment and the information about how your writing will be scored, then begin your work.
+
+**Your Assignment:**
+Your teacher is creating a bulletin board display in the school library to show what your class has learned about different types of jobs. You decide to write an informational article on astronauts. Your article will be read by other students, teachers, and parents.
+
+Using more than one source, develop a main idea about being an astronaut. Choose the most important information from the sources to support your main idea. Then, write an informational article that is several paragraphs long. Clearly organize your article and support your main idea with details from the sources. Use your own words except when quoting directly from the sources. Be sure to give the source title or number when using details from the sources.
+
+**REMEMBER: A well-written informational article**
+- has a clear main idea.
+- is well-organized and stays on the topic.
+- has an introduction and conclusion.
+- uses transitions.
+- uses details from the sources to support your main idea.
+- puts the information from the sources in your own words, except when using direct quotations from the sources.
+- gives the title or number of the source for the details or facts you included.
+- develops ideas clearly.
+- uses clear language.
+- follows rules of writing (spelling, punctuation, and grammar).
+
+Now begin work on your informational article. Manage your time carefully so that you can
+1. plan your informational article.
+2. write your informational article.
+3. revise and edit the final draft of your article.
+
+Word-processing tools and spell check are available to you.
+
+For Part 2, you are being asked to write an informational article that is several paragraphs long. Type your response in the box below. The box will get bigger as you type.
+
+Remember to check your notes and your prewriting/planning as you write, and then revise and edit your informational article.`;
+
+const astronautSource1 = `**Source #1**
+You have found a source describing the type of training that astronauts receive in order to do their job.
+
+**What is an Astronaut?**
+*by Talia Yee*
+
+Have you ever thought about what it is like in space? Astronauts are people who go out into space. Being an astronaut is an exciting job. Astronauts who see Earth from space say that it is round, like a ball. While in space, astronauts can look down and see clouds, land, and water. Some can even see the moon up close. Astronauts get the chance to see more stars than you or I have ever seen.
+
+Being an astronaut may be exciting, but it is not an easy job. A person who wants to be an astronaut has to study for years. There are many things an astronaut must learn to do before going into space for the first time.
+
+*A weightless astronaut in space*
+
+Astronauts train for hundreds of hours. During their training, they learn about space. This type of training might include studying the stars and Earth. It is important that astronauts study space so that they understand what they will work with while in space. The astronauts also learn medical skills like basic first aid during their training. This training allows them to treat simple medical problems so that they can keep each other healthy and safe in space.
+
+In their training, astronauts also learn what life is like on the International Space Station (ISS). The ISS is a large spacecraft that orbits the earth. The ISS is a place where astronauts do science experiments while in space. Astronauts also learn to eat, exercise, and do experiments while floating in the air. They also practice riding in special vehicles that are just for space. These vehicles bring supplies like food and fuel to the ISS. The vehicles are about the size of a pick-up truck with 12 wheels. Astronauts even take classes in scuba diving.[1] When they're walking underwater in their scuba suits, astronauts feel the same as they would feel walking in space. Lastly, astronauts must also learn how to work together as a team. This is important because as many as eight astronauts may be in one spacecraft. These astronauts have to learn how to live and work together in a space.
+
+Each astronaut has a special job to do as part of the team. Some astronauts learn how to put things together so they become good at fixing things. This is important because if something on a space ship breaks, the astronauts must be able to fix it themselves. Some astronauts are pilots who know how to fly airplanes. These astronauts have to study how to fly and steer a spaceship. They train for many hours to learn how to turn it, how to make it go faster and slower, and how to guide it through space. Some astronauts are leaders and are in charge of all of the people on the ship. They make sure that everybody is doing the right job. Other astronauts learn mostly about science. Their job is to learn how living things change when they are in space.
+
+Although each astronaut has a special job on the team, each of them has to learn how to work where there is no gravity. When they are in a spaceship that is moving around Earth, they can feel as though they do not weigh anything. They are able to float. Many astronauts say that it is fun to float around the inside of a spaceship. Objects in the spaceship can also float, so astronauts can lift and move heavy things easily.
+
+Feeling weightless is fun, but being in space is work for astronauts. Astronauts must be healthy and eat right. They have to exercise and be in good shape. Astronauts have many adventures, but they work hard, too.
+
+[1] scuba diving: swimming under water with a special suit, air tank, and fins`;
+
+const astronautSource2 = `**Source #2**
+This article describes what happens to astronauts' bodies when they go into space.
+
+**Life in Space**
+*by Aaron Higgins*
+
+Many people say they want to be an astronaut, but do they know what it's really like? When astronauts are in space, they feel weightless. They can float. This sounds like fun, but it is not that simple. The human body is used to being on Earth, but some people stay out in space for months. A lot of strange things happen to the body when it floats for that long.
+
+Astronauts sometimes feel sick in space. It takes a few days for them to get used to feeling weightless and being able to float.
+
+Being in space also changes how blood flows in the body. In space, more blood flows to the astronauts' heads so their faces get puffy and their necks get bigger. At the same time, less blood flows to their legs, making them skinny. They call this condition "bird legs."
+
+The heart is a muscle that pumps blood around the body. The heart does not have to work as hard to pump blood in space. A muscle that does not work hard gets weaker and smaller. Astronauts' other muscles and their bones can also get weaker. This is because they do not have to work as hard to move the astronaut's body.
+
+To help keep their muscles strong, astronauts have to do exercises when they are in space. They use big rubber bands attached to the walls of the space ship and hook them over their shoulders. Then they bend their knees and press against the rubber bands to make their legs stronger.
+
+Even with regular exercise in space, astronauts come back feeling weak. It takes time for them to get back their Earth legs and learn how to live with gravity again.`;
+
+const astronautPtPassages = astronautSource1 + "\n\n---\n\n" + astronautSource2;
+
 export const grade3ELA: Question[] = [
   {
     id: 101,
@@ -1048,11 +1236,19 @@ export const grade3ELA: Question[] = [
     passageTitle: "Treasure in the Field",
     questionText:
       "Part A: What is the main lesson the father wanted his sons to learn?\n\nPart B: Which detail from the story best supports your answer to Part A?",
-    options: [
-      { label: "A", text: "Part A: That treasure is always buried underground" },
-      { label: "B", text: "Part A: That brothers should always share equally" },
-      { label: "C", text: "Part A: That neighbors are important to have" },
-      { label: "D", text: "Part A: That hard work is its own reward" },
+    partAPrompt: "What is the main lesson the father wanted his sons to learn?",
+    partAOptions: [
+      { label: "A", text: "That treasure is always buried underground" },
+      { label: "B", text: "That brothers should always share equally" },
+      { label: "C", text: "That neighbors are important to have" },
+      { label: "D", text: "That hard work is its own reward" },
+    ],
+    partBPrompt: "Which detail from the story best supports your answer to Part A?",
+    partBOptions: [
+      { label: "A", text: "The neighbor asked if the sons were helping." },
+      { label: "B", text: "The sons planted rice, tended the field, and earned money from the harvest." },
+      { label: "C", text: "The father said the boys were still young." },
+      { label: "D", text: "The sons promised to share the treasure equally." },
     ],
     correctAnswer: ["D", "B"],
     rubric:
@@ -1246,22 +1442,27 @@ export const grade3ELA: Question[] = [
     target: "11",
     dok: 3,
     standard: "RI.3",
-    type: "multiple-choice",
+    type: "two-part",
     passage: sapPassage,
     passageTitle: "Sap's Running",
     questionText:
-      "Based on the passage, which conclusion is best supported?",
-    options: [
-      { label: "A", text: "Making maple syrup is a quick and easy process." },
-      {
-        label: "B",
-        text: "The sap in sugar maple trees begins flowing in early spring.",
-      },
-      { label: "C", text: "All trees produce sap that can be made into syrup." },
-      { label: "D", text: "The Coleman brothers discovered how to make maple syrup." },
+      "This question has two parts. First, answer Part A. Then, answer Part B.",
+    partAPrompt: "Click on the sentence that gives the best conclusion about sugar-maple trees.",
+    partAOptions: [
+      { label: "A", text: "Sugar maple trees grow best in cold weather." },
+      { label: "B", text: "Most sugar maple trees are about 50 feet tall." },
+      { label: "C", text: "The sap in sugar maple trees begins flowing in early spring." },
+      { label: "D", text: "Vermont has the best weather for growing sugar maple trees." },
     ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct option.",
+    partBPrompt: "Click on the sentence from the passage that best supports your answer in Part A. Choose one answer.",
+    partBOptions: [
+      { label: "A", text: "A 50-foot-high sugar maple has nearly two hundred thousand leaves." },
+      { label: "B", text: "The Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont." },
+      { label: "C", text: "Scientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true." },
+      { label: "D", text: "Every spring, the Colemans tap holes into the sugar-maple trees, then hang a bucket under each hole to catch the sap." },
+    ],
+    correctAnswer: ["C", "D"],
+    rubric: "The student selects the correct option in Part A and the correct option in Part B.",
     points: 1,
     evidenceStatement:
       "The student will form a conclusion about an informational text and identify details that support it.",
@@ -1382,252 +1583,225 @@ export const grade3ELA: Question[] = [
     evidenceStatement:
       "The student will determine the meaning of a word or phrase based on its context in an informational text.",
   },
-  // ── Additional ELA CAT questions: Treasure in the Field ──
+  // ── Official ELA CAT continuation: items 15-21 ──
+  {
+    id: 115,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 1,
+    target: "14",
+    dok: 2,
+    standard: "L.5a",
+    type: "multiple-choice",
+    passage: sapPassage,
+    passageTitle: "Sap's Running",
+    questionText:
+      "Read the sentence from the passage.\n\nAll these leaves drink in summer sunshine and make sugar.\n\nWhich statement best describes what this sentence means?",
+    options: [
+      { label: "A", text: "Leaves grow larger in the summer." },
+      { label: "B", text: "Leaves use sunlight to make sugar." },
+      { label: "C", text: "Summer is the best time to collect sugar." },
+      { label: "D", text: "Trees with many leaves make more sugar." },
+    ],
+    correctAnswer: "B",
+    rubric: "The student selects the correct option.",
+    points: 1,
+    evidenceStatement:
+      "The student will interpret the meaning of figurative words and phrases used in context and analyze its use in the text.",
+  },
+  {
+    id: 116,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 2,
+    target: "1bE",
+    dok: 2,
+    standard: "W.3b, W.5",
+    type: "multi-select",
+    questionText:
+      "Ellen is writing a story for her class about a day at the beach. She wants to revise her story to use more descriptive words. Read the draft and complete the task that follows.\n\nIt was Ellen's last day of summer vacation. She raced into the garage and announced, \"Dad, we have to go to the beach today! It's our last chance this summer to go swimming and build sandcastles together!\"\n\nDad smiled happily and, together, Ellen and Dad drove 45 minutes to the beach. Once there, they set up their chairs near the water. Dad read and Ellen played.\n\nEllen worked for about an hour on her sandcastle. Then, she noticed that her dad had spent that entire time just reading a book. She felt annoyed. She looked at him.\n\nDad grinned and set his book aside. Together, the two raced into the warm, bubbly waves. They laughed with excitement.\n\nSelect two of the choices that have the best descriptive sentences to replace \"Dad read and Ellen played\" and \"She looked at him.\"",
+    options: [
+      { label: "A", text: "Dad enjoyed relaxing with his new book while Ellen built a sandcastle. / She gave him a look that said, \"I want you to spend time with me.\"" },
+      { label: "B", text: "Dad helped Ellen build a sandcastle. / She gave him a look that said, \"I'm glad you like your book.\"" },
+      { label: "C", text: "Dad read a book to Ellen and then they swam. / She looked at the pictures in the book." },
+      { label: "D", text: "Dad read for a while and then built a sandcastle. / She looked at the warm, bubbly waves." },
+      { label: "E", text: "Dad had a wonderful time reading while Ellen worked on her giant sandcastle. / She gave him a look that said, \"It's time to have some fun, now!\"" },
+      { label: "F", text: "Dad decided that he did not like his book. / She gave him a look that said, \"You are the best dad.\"" },
+    ],
+    correctAnswer: ["A", "E"],
+    rubric: "The student selects the correct two options.",
+    points: 1,
+    evidenceStatement:
+      "The student will revise narrative text by identifying descriptive details that convey events or experiences.",
+  },
+  {
+    id: 117,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 2,
+    target: "3bE",
+    dok: 2,
+    standard: "W.2b, W.5",
+    type: "multi-select",
+    questionText:
+      "A student is writing a report for social studies class about the state of Alaska. The student wants to revise the draft to make sure it has enough details. Read this portion of the report and complete the task that follows.\n\nAlaska is a very big state. It is bigger than Texas, California, and Montana put together! Even though it is a big state, only about 730,000 people live there. Alaska has 39 mountain ranges and two rain forests. A lot of different animals live in Alaska. In Barrow, the town located farthest north in the state, the sun doesn't set between May 10 and August 2, but between November 18 and January 23, the sun doesn't rise. Alaska is a very interesting and unusual place.\n\nMy notes on Alaska:\n• Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home.\n• The capital of Alaska is Juneau.\n• There are 70,000 sea otters living in the waters of Alaska.\n• Alaska did not become a state until 1959.\n• The mountains in Alaska have the coldest temperatures in the United States.\n• Alaska is only 55 miles away from Russia.\n\nChoose the two sentences from the student's notes that add more facts to the underlined sentence.",
+    options: [
+      { label: "A", text: "The capital of Alaska is Juneau." },
+      { label: "B", text: "Alaska did not become a state until 1959." },
+      { label: "C", text: "Alaska is only 55 miles away from Russia." },
+      { label: "D", text: "There are 70,000 sea otters living in the waters of Alaska." },
+      { label: "E", text: "The mountains in Alaska have the coldest temperatures in the United States." },
+      { label: "F", text: "Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home." },
+    ],
+    correctAnswer: ["D", "F"],
+    rubric: "The student selects the correct two options.",
+    points: 1,
+    evidenceStatement:
+      "The student will revise informational or explanatory text by identifying the best use of elaboration techniques such as supporting details.",
+  },
+  {
+    id: 118,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 2,
+    target: "6b",
+    dok: 2,
+    standard: "W.1d",
+    type: "multiple-choice",
+    questionText:
+      "A student is writing an opinion article for her teacher about her favorite field trip. The student wants to revise the draft so that it has a logical conclusion. Read the draft of the opinion article and complete the task that follows.\n\nMy favorite third-grade field trip is the trip to the zoo. There are many reasons that the zoo is the best field trip. First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms. As you can see, the best third-grade trip by far is the zoo field trip. Second, we get to eat lunch at a really great rest area with picnic tables. Also, we get to spend the whole day walking around looking at interesting animals.\n\nClick on the sentence in the draft that is in the wrong place.",
+    options: [
+      { label: "A", text: "My favorite third-grade field trip is the trip to the zoo." },
+      { label: "B", text: "There are many reasons that the zoo is the best field trip." },
+      { label: "C", text: "First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms." },
+      { label: "D", text: "As you can see, the best third-grade trip by far is the zoo field trip." },
+      { label: "E", text: "Second, we get to eat lunch at a really great rest area with picnic tables." },
+      { label: "F", text: "Also, we get to spend the whole day walking around looking at interesting animals." },
+    ],
+    correctAnswer: "D",
+    rubric: "The student selects the correct option.",
+    points: 1,
+    evidenceStatement:
+      "The student will revise opinion text by identifying improved organizational elements such as organizing.",
+  },
+  {
+    id: 119,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 2,
+    target: "8",
+    dok: 2,
+    standard: "L.3a",
+    type: "multi-select",
+    questionText:
+      "A student is writing an opinion paper for her teacher about dogs. Read this paragraph from the paper and the directions that follow.\n\nDogs are described as “people's best friend” because they make people happy. The fur on a dog can be long or short, or curly or straight, but most of the time it is soft. When people pet dogs, it makes them feel happy. There are community groups that bring dogs to nursing homes for the patients. Being able to play with the dogs makes the patients feel good. This is one reason why I think dogs are wonderful animals.\n\nSelect the best two words from the choices to replace the underlined words in the paragraph.",
+    options: [
+      { label: "A", text: "beautiful" },
+      { label: "B", text: "fierce" },
+      { label: "C", text: "healthier" },
+      { label: "D", text: "lucky" },
+      { label: "E", text: "polite" },
+      { label: "F", text: "relaxed" },
+    ],
+    correctAnswer: ["C", "F"],
+    rubric: "The student selects the correct two options.",
+    points: 1,
+    evidenceStatement:
+      "The student will choose the correct words or phrases for audience or purpose.",
+  },
+  {
+    id: 120,
+    testType: "cat",
+    subject: "ela",
+    grade: 3,
+    claim: 2,
+    target: "9",
+    dok: 1,
+    standard: "L.2c",
+    type: "multi-select",
+    questionText:
+      "Click on two sentences that have mistakes in punctuation.\n\nTim and I sat in the front row at the circus, and the clowns tumbled and danced in front of us. They pretended to throw water on us, but their buckets just had shiny bits of paper. Then, one clown really did spray water on me from a flower on his jacket.",
+    options: [
+      { label: "A", text: "“Oh, he got me! I said to Tim.”" },
+      { label: "B", text: "“Yes” he laughed “he tricked you twice!”" },
+      { label: "C", text: "After that, the elephants came out. The elephants did tricks like stand on their front legs." },
+      { label: "D", text: "“How can those huge animals do that?” I asked Tim." },
+      { label: "E", text: "“I don't know, but it's amazing,” Tim answered." },
+    ],
+    correctAnswer: ["A", "B"],
+    rubric: "The student selects the correct two options.",
+    points: 1,
+    evidenceStatement:
+      "The student will apply or edit the use of commas and quotation marks in dialogue.",
+  },
   {
     id: 121,
     testType: "cat",
     subject: "ela",
     grade: 3,
-    claim: 1,
-    target: "2",
-    dok: 2,
-    standard: "RL.2",
-    type: "multiple-choice",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
+    claim: 2,
+    target: "9",
+    dok: 1,
+    standard: "L.1e",
+    type: "multi-select",
     questionText:
-      "What is the central message of the story?",
+      "Click on the sentences that use the incorrect verb tenses.",
     options: [
-      { label: "A", text: "Always listen to your neighbors." },
-      { label: "B", text: "Hard work brings its own rewards." },
-      { label: "C", text: "Treasure is always buried underground." },
-      { label: "D", text: "Farming is the best job to have." },
+      { label: "A", text: "Standing on the stage, I could feel my heart beating in my chest." },
+      { label: "B", text: "I sings my song on the stage with my friends." },
+      { label: "C", text: "The audience clapped loudly." },
+      { label: "D", text: "I take a bow and walked off the stage with a smile on my face." },
     ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct central message.",
+    correctAnswer: ["B", "D"],
+    rubric: "The student selects the correct two options.",
     points: 1,
-    evidenceStatement: "The student will determine the central message or moral of a text.",
+    evidenceStatement:
+      "The student will apply or edit the use of simple verb tenses in a text.",
   },
   {
     id: 122,
     testType: "cat",
     subject: "ela",
     grade: 3,
-    claim: 1,
-    target: "5",
-    dok: 2,
-    standard: "RL.3",
-    type: "multiple-choice",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
+    claim: 3,
+    target: "4",
+    dok: 3,
+    standard: "SL.2",
+    type: "two-part",
+    passage: soaringPresentationSummary,
+    passageTitle: "Soaring on the Wings of the Wind",
+    passageAuthor: "Lois Miner Huey",
+    studentDirections:
+      'Listen to the presentation. Then answer the questions.\n\n"Soaring on the Wings of the Wind" by Lois Miner Huey.',
     questionText:
-      "At the beginning of the story, which word best describes Ta and Hai?",
-    options: [
-      { label: "A", text: "Helpful" },
-      { label: "B", text: "Lazy" },
-      { label: "C", text: "Angry" },
-      { label: "D", text: "Curious" },
+      "This question has two parts. First, answer Part A. Then, answer Part B.",
+    partAPrompt: "What is the most likely reason the author made the presentation?",
+    partAOptions: [
+      { label: "A", text: "to explain how a hot air balloon works" },
+      { label: "B", text: "to show the advantages of being small" },
+      { label: "C", text: "to tell how Americans feel about new experiences" },
+      { label: "D", text: "to describe an important event in American history" },
     ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct character trait.",
+    partBPrompt: "Which sentence from the presentation best supports your answer in part A?",
+    partBOptions: [
+      { label: "A", text: '"Smoky hot air swelled the balloon and sent it up."' },
+      { label: "B", text: '"He was the first American to develop a method to lift a balloon using hot air."' },
+      { label: "C", text: '"The crowd yelled and clapped as Carnes sent the balloon up, time and again."' },
+      { label: "D", text: '"He was the first American to see such views."' },
+    ],
+    correctAnswer: ["D", "B"],
+    rubric: "The student selects the correct option in Part A and the correct option in Part B.",
     points: 1,
-    evidenceStatement: "The student will describe characters in a story.",
+    evidenceStatement:
+      "The student will determine a speaker's purpose and identify details that support it.",
   },
   {
     id: 123,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "4",
-    dok: 3,
-    standard: "RL.3",
-    type: "multiple-choice",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
-    questionText:
-      'Why did the father tell his sons there was "treasure buried in the field" instead of simply telling them to work?',
-    options: [
-      { label: "A", text: "He forgot where he buried the treasure." },
-      { label: "B", text: "He wanted them to discover the value of hard work on their own." },
-      { label: "C", text: "He was trying to trick them into leaving the farm." },
-      { label: "D", text: "The neighbor told him to say it." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct motivation.",
-    points: 1,
-    evidenceStatement: "The student will analyze character motivations.",
-  },
-  {
-    id: 124,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "7",
-    dok: 2,
-    standard: "RL.4",
-    type: "multiple-choice",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
-    questionText:
-      'Read this sentence: "The sons\' eyes widened." What does this detail show about the sons?',
-    options: [
-      { label: "A", text: "They were sleepy." },
-      { label: "B", text: "They were scared of their father." },
-      { label: "C", text: "They were surprised and excited." },
-      { label: "D", text: "They were confused." },
-    ],
-    correctAnswer: "C",
-    rubric: "The student selects the correct inference.",
-    points: 1,
-    evidenceStatement: "The student will interpret language used in context.",
-  },
-  // ── Additional ELA CAT questions: Sap's Running ──
-  {
-    id: 125,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "9",
-    dok: 2,
-    standard: "RI.2",
-    type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      "What is the main idea of the passage?",
-    options: [
-      { label: "A", text: "The Iroquois were the first people to make maple syrup." },
-      { label: "B", text: "Maple syrup is made from sap that flows from sugar-maple trees in spring." },
-      { label: "C", text: "Scientists at the University of Vermont study many things." },
-      { label: "D", text: "The Coleman brothers live on a farm in Vermont." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct main idea.",
-    points: 1,
-    evidenceStatement: "The student will determine the main idea of an informational text.",
-  },
-  {
-    id: 126,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "10",
-    dok: 2,
-    standard: "RI.4",
-    type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      'What does the word "tap" mean in the sentence "the Colemans tap holes into sugar-maple trees"?',
-    options: [
-      { label: "A", text: "To touch lightly" },
-      { label: "B", text: "To drill into" },
-      { label: "C", text: "A type of dance" },
-      { label: "D", text: "A water faucet" },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct meaning.",
-    points: 1,
-    evidenceStatement: "The student will determine the meaning of a domain-specific word in context.",
-  },
-  {
-    id: 127,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "8",
-    dok: 2,
-    standard: "RI.1",
-    type: "text-input",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      "According to the passage, how many gallons of sap does it take to make one gallon of maple syrup? Enter just the number.",
-    correctAnswer: "35",
-    rubric: "The student enters the correct number.",
-    points: 1,
-    evidenceStatement: "The student will cite textual evidence to support a conclusion.",
-  },
-  {
-    id: 128,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "11",
-    dok: 3,
-    standard: "RI.3",
-    type: "two-part",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      "Part A: According to the section \"What Makes Sap Run?\", what causes sap to flow down a maple tree?\n\nPart B: Which detail from the passage best supports your answer to Part A?",
-    options: [
-      { label: "A", text: "Part A: Sap rises up from the roots when the ground thaws." },
-      { label: "B", text: "Part A: Frost that formed inside the tree overnight melts in the morning." },
-      { label: "C", text: "Part A: Rain water soaks into the bark of the tree." },
-      { label: "D", text: "Part A: Wind pushes the sap downward through the branches." },
-    ],
-    correctAnswer: ["B", "C"],
-    rubric: "The student selects the correct answer for both parts.",
-    points: 1,
-    evidenceStatement: "The student will identify cause-and-effect relationships in informational text.",
-  },
-  {
-    id: 129,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "13",
-    dok: 2,
-    standard: "RI.8",
-    type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      "Which detail from the passage is a FACT rather than an opinion?",
-    options: [
-      { label: "A", text: "They're just glad it is." },
-      { label: "B", text: "It takes about thirty-five gallons of sap to make one gallon of maple syrup." },
-      { label: "C", text: "Today will be a good day for sugaring." },
-      { label: "D", text: "When Woksis tasted the sweetened meat, he loved it." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct fact.",
-    points: 1,
-    evidenceStatement: "The student will distinguish facts from opinions in an informational text.",
-  },
-  {
-    id: 130,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 3,
-    target: "4",
-    dok: 2,
-    standard: "SL.3",
-    type: "multiple-choice",
-    questionText:
-      "A student gives a presentation about recycling. She says: \"We should recycle because it helps the Earth. Recycling one aluminum can saves enough energy to run a TV for 3 hours.\"\n\nWhat makes her argument convincing?",
-    options: [
-      { label: "A", text: "She talks about TV." },
-      { label: "B", text: "She uses a specific fact to support her opinion." },
-      { label: "C", text: "She talks about the Earth." },
-      { label: "D", text: "She uses big words." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct option.",
-    points: 1,
-    evidenceStatement: "The student will evaluate a speaker's reasons and evidence.",
-  },
-  {
-    id: 131,
     testType: "cat",
     subject: "ela",
     grade: 3,
@@ -1636,123 +1810,111 @@ export const grade3ELA: Question[] = [
     dok: 2,
     standard: "SL.2",
     type: "multiple-choice",
+    passage: soaringPresentationSummary,
+    passageTitle: "Soaring on the Wings of the Wind",
+    passageAuthor: "Lois Miner Huey",
+    studentDirections:
+      'Listen to the presentation. Then answer the questions.\n\n"Soaring on the Wings of the Wind" by Lois Miner Huey.',
     questionText:
-      "Listen to this short announcement:\n\n\"Attention students! The book fair starts on Monday and runs through Friday. All books are between $3 and $10. Students who buy two or more books will receive a free bookmark.\"\n\nWhat do students get for buying two or more books?",
+      "Which question can a listener answer after hearing the presentation?",
     options: [
-      { label: "A", text: "A free book" },
-      { label: "B", text: "A free bookmark" },
-      { label: "C", text: "A $3 discount" },
-      { label: "D", text: "An extra day at the book fair" },
+      { label: "A", text: "In what year did the balloon ride take place?" },
+      { label: "B", text: "What happened during the first hot air balloon ride?" },
+      { label: "C", text: "How did Edward feel after he took his ride in the balloon?" },
+      { label: "D", text: "How did Edward become the first American to ride in a balloon?" },
     ],
-    correctAnswer: "B",
+    correctAnswer: "D",
     rubric: "The student selects the correct option.",
     points: 1,
-    evidenceStatement: "The student will determine the main ideas and supporting details of information presented orally.",
+    evidenceStatement:
+      "The student will identify information that can be determined from an oral presentation.",
   },
-  // ── Additional ELA CAT questions to reach 30 ──
   {
-    id: 132,
+    id: 124,
     testType: "cat",
     subject: "ela",
     grade: 3,
-    claim: 1,
-    target: "10",
+    claim: 3,
+    target: "4",
     dok: 2,
-    standard: "RI.4",
-    type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
+    standard: "SL.2",
+    type: "grid-match",
+    passage: soaringPresentationSummary,
+    passageTitle: "Soaring on the Wings of the Wind",
+    passageAuthor: "Lois Miner Huey",
+    studentDirections:
+      'Listen to the presentation. Then answer the questions.\n\n"Soaring on the Wings of the Wind" by Lois Miner Huey.',
     questionText:
-      'What does the word "tradition" mean in the sentence "It is a family tradition"?',
-    options: [
-      { label: "A", text: "A new invention" },
-      { label: "B", text: "Something passed down through a family over many years" },
-      { label: "C", text: "A type of recipe" },
-      { label: "D", text: "A holiday celebration" },
+      "Complete the chart to show which events were planned.\n\nClick in the boxes next to the events that match if they were planned or unplanned.",
+    gridRows: [
+      "Edward Warren Jr. rode in a balloon.",
+      "The balloon filled with smoke from a fire.",
+      "A crowd in Baltimore saw how a balloon could fly.",
+      "Peter Carnes used a stove to make the balloon rise.",
     ],
-    correctAnswer: "B",
-    rubric: "The student selects the correct meaning.",
+    gridColumns: ["Planned", "Unplanned"],
+    correctAnswer: ["0:1", "1:0", "2:0", "3:0"],
+    rubric: "The student correctly identifies which events were planned and which were unplanned.",
     points: 1,
-    evidenceStatement: "The student will determine the meaning of a word in context.",
+    evidenceStatement:
+      "The student will distinguish among ideas and events presented orally.",
   },
   {
-    id: 133,
+    id: 125,
     testType: "cat",
     subject: "ela",
     grade: 3,
-    claim: 1,
-    target: "8",
+    claim: 3,
+    target: "4",
     dok: 2,
-    standard: "RI.1",
+    standard: "SL.2",
     type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
+    passage: pizzaPresentationSummary,
+    passageTitle: "All About Pizza",
+    passageAuthor: "Marcia Amidon Lusted",
+    studentDirections:
+      'Listen to the presentation. Then answer the questions.\n\n"All About Pizza" by Marcia Amidon Lusted.',
     questionText:
-      "According to the legend of Woksis, how was maple syrup first discovered?",
+      "Which conclusion is supported by the presentation?",
     options: [
-      { label: "A", text: "A scientist at the University of Vermont found it." },
-      { label: "B", text: "The Coleman brothers invented a new process." },
-      { label: "C", text: "Sap dripped from a gash in a maple tree into a bowl and was boiled by accident." },
-      { label: "D", text: "Rain mixed with tree sap and created syrup." },
+      { label: "A", text: "Americans eat pizza every day." },
+      { label: "B", text: "Pizza is usually eaten at lunchtime." },
+      { label: "C", text: "Almost anything can go on a pizza." },
+      { label: "D", text: "Lobster pizza is most popular in Maine." },
     ],
     correctAnswer: "C",
-    rubric: "The student selects the correct detail from the legend.",
+    rubric: "The student selects the correct option.",
     points: 1,
-    evidenceStatement: "The student will cite textual evidence to support a conclusion.",
+    evidenceStatement:
+      "The student will determine a supported conclusion from an oral presentation.",
   },
   {
-    id: 134,
+    id: 126,
     testType: "cat",
     subject: "ela",
     grade: 3,
-    claim: 1,
-    target: "2",
+    claim: 3,
+    target: "4",
     dok: 2,
-    standard: "RL.2",
-    type: "multiple-choice",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
+    standard: "SL.2",
+    type: "grid-match",
+    passage: pizzaPresentationSummary,
+    passageTitle: "All About Pizza",
+    passageAuthor: "Marcia Amidon Lusted",
+    studentDirections:
+      'Listen to the presentation. Then answer the questions.\n\n"All About Pizza" by Marcia Amidon Lusted.',
     questionText:
-      "Which sentence best summarizes the ending of the story?",
-    options: [
-      { label: "A", text: "The sons dug up the entire field but never found any treasure." },
-      { label: "B", text: "The sons planted and sold rice, realizing that hard work was the real treasure." },
-      { label: "C", text: "The father told his sons where to dig for gold coins." },
-      { label: "D", text: "The neighbor helped the sons find the treasure." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student selects the best summary.",
+      "Complete the chart to show which countries are known for which pizza toppings.\n\nClick in the boxes next to the countries that match the toppings.",
+    gridRows: ["United States", "India", "Japan"],
+    gridColumns: ["eel", "pepperoni", "ginger"],
+    correctAnswer: ["2:0", "0:1", "1:2"],
+    rubric: "The student correctly matches each topping to the country from the presentation.",
     points: 1,
-    evidenceStatement: "The student will summarize key events in a literary text.",
+    evidenceStatement:
+      "The student will organize information presented orally into a chart.",
   },
   {
-    id: 135,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "11",
-    dok: 3,
-    standard: "RI.9",
-    type: "multi-select",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      'The passage says that people used to think sap rises up from the roots, but Dr. Tim Perkins says it actually flows downward. Select TWO details that support Dr. Perkins\' explanation.',
-    options: [
-      { label: "A", text: "The Coleman brothers have made maple syrup all their lives." },
-      { label: "B", text: "During cold nights, water rises into the trunk and branches." },
-      { label: "C", text: "Sap will flow from the cut end of a trunk, not from the stump." },
-      { label: "D", text: "Charles Darwin studied sap flow long ago." },
-      { label: "E", text: "A 50-foot-high sugar maple has nearly two hundred thousand leaves." },
-    ],
-    correctAnswer: ["B", "C"],
-    rubric: "The student selects the two correct supporting details.",
-    points: 1,
-    evidenceStatement: "The student will compare and evaluate evidence within an informational text.",
-  },
-  {
-    id: 136,
+    id: 127,
     testType: "cat",
     subject: "ela",
     grade: 3,
@@ -1761,97 +1923,27 @@ export const grade3ELA: Question[] = [
     dok: 2,
     standard: "SL.3",
     type: "multiple-choice",
+    passage: pizzaPresentationSummary,
+    passageTitle: "All About Pizza",
+    passageAuthor: "Marcia Amidon Lusted",
+    studentDirections:
+      'Listen to the presentation. Then answer the questions.\n\n"All About Pizza" by Marcia Amidon Lusted.',
     questionText:
-      "A student says: \"I think dogs are better pets than cats because dogs can learn tricks, they protect your home, and they love to play outside with you.\"\n\nHow does the student support her opinion?",
+      "What is the most likely reason the author made the presentation?",
     options: [
-      { label: "A", text: "By telling a story about her dog" },
-      { label: "B", text: "By giving three reasons why dogs are better" },
-      { label: "C", text: "By explaining what cats do wrong" },
-      { label: "D", text: "By asking the audience a question" },
+      { label: "A", text: "to suggest another way of looking at pizza" },
+      { label: "B", text: "to change what people think is good pizza" },
+      { label: "C", text: "to show why pepperoni pizza is the best kind" },
+      { label: "D", text: "to explain why pizza is different in other places" },
     ],
-    correctAnswer: "B",
+    correctAnswer: "A",
     rubric: "The student selects the correct option.",
     points: 1,
-    evidenceStatement: "The student will identify how a speaker supports a point with reasons.",
-  },
-  // ── Additional ELA CAT questions to match real CAASPP count ──
-  {
-    id: 137,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "1",
-    dok: 2,
-    standard: "RL.1",
-    type: "multiple-choice",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
-    questionText:
-      "Why did the father tell his sons there was treasure buried in the field?",
-    options: [
-      { label: "A", text: "He wanted them to find the gold coins he had hidden." },
-      { label: "B", text: "He wanted to trick them into digging so the field would be ready for planting." },
-      { label: "C", text: "He had forgotten where he buried the treasure." },
-      { label: "D", text: "He wanted them to sell the field to a neighbor." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student infers the father's motivation.",
-    points: 1,
-    evidenceStatement: "The student will make inferences about character motivation.",
+    evidenceStatement:
+      "The student will determine a speaker's likely purpose for a presentation.",
   },
   {
-    id: 138,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "6",
-    dok: 2,
-    standard: "RL.6",
-    type: "multiple-choice",
-    passage: treasurePassage,
-    passageTitle: "Treasure in the Field",
-    questionText:
-      "From whose point of view is the story mostly told?",
-    options: [
-      { label: "A", text: "The father, because it tells what he is thinking" },
-      { label: "B", text: "Ta, because he is the main character" },
-      { label: "C", text: "A narrator who is outside the story" },
-      { label: "D", text: "The neighbor, because he watches the family" },
-    ],
-    correctAnswer: "C",
-    rubric: "The student identifies the third-person narrator.",
-    points: 1,
-    evidenceStatement: "The student will distinguish their own point of view from that of the narrator.",
-  },
-  {
-    id: 139,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "7",
-    dok: 2,
-    standard: "RI.7",
-    type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      "How does the section \"What Makes Sap Run?\" add to the reader's understanding of maple syrup production?",
-    options: [
-      { label: "A", text: "It explains the legend of how maple syrup was discovered." },
-      { label: "B", text: "It describes how the Coleman brothers collect sap." },
-      { label: "C", text: "It gives a scientific explanation of how sap moves inside the tree." },
-      { label: "D", text: "It tells how much sap is needed to make one gallon of syrup." },
-    ],
-    correctAnswer: "C",
-    rubric: "The student identifies how the section contributes to the text.",
-    points: 1,
-    evidenceStatement: "The student will use text features to locate and understand information.",
-  },
-  {
-    id: 140,
+    id: 128,
     testType: "cat",
     subject: "ela",
     grade: 3,
@@ -1860,94 +1952,69 @@ export const grade3ELA: Question[] = [
     dok: 2,
     standard: "W.8",
     type: "multi-select",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
     questionText:
-      "A student is writing a report about how maple syrup is made. Select TWO facts from the passage that would be most important to include in the report.",
+      "A student is writing a research report about the human eye. Read the sentences from her report and the directions that follow.\n\nOur eyes are wonderful body parts. They help us see the beauty of the world. In the center of the eye is a black spot. Have you ever wondered why that spot gets bigger and smaller?\n\nChoose two of the sources that would most likely give the student more information about the ideas she has written.",
     options: [
-      { label: "A", text: "Charles Darwin wrote that sap flow was a mysterious subject." },
-      { label: "B", text: "It takes about thirty-five gallons of sap to make one gallon of maple syrup." },
-      { label: "C", text: "The Coleman brothers step out their front door in Vermont." },
-      { label: "D", text: "Sap from sugar maples looks like water but tastes sweet because it has sugar in it." },
-      { label: "E", text: "Nelson Coleman and his brothers don't worry about why the sap is running." },
+      { label: "A", text: "www.eye.color.com, a website that tells about the colors of people's eyes" },
+      { label: "B", text: "www.eyequestion.com, a website that explains the job of each part of the eye" },
+      { label: "C", text: "Eyes and How They Work, a book that tells about the way that the eye parts work" },
+      { label: "D", text: "www.eye.food.com, a website that tells what we should eat to help our eyes stay healthy" },
+      { label: "E", text: "My Job as an Eye Doctor, a book that tells about being a doctor who takes care of people's eyes" },
+      { label: "F", text: "You Can Find It, a children's magazine that has many puzzles and games where you look for the hidden things" },
     ],
-    correctAnswer: ["B", "D"],
-    rubric: "The student selects the two most relevant facts for a report.",
+    correctAnswer: ["B", "C"],
+    rubric: "The student selects the two sources that best support the student's research focus.",
     points: 1,
-    evidenceStatement: "The student will gather relevant information from a source.",
+    evidenceStatement:
+      "The student will evaluate sources for relevance to a research topic.",
   },
   {
-    id: 141,
+    id: 129,
     testType: "cat",
     subject: "ela",
     grade: 3,
     claim: 1,
-    target: "4",
+    target: "8",
     dok: 2,
-    standard: "RI.4",
+    standard: "W.8",
     type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
     questionText:
-      "Read this sentence from the passage: \"As they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets.\" What does the word \"drips\" tell the reader about how the sap moves?",
+      "A student is writing a report about red foxes. She is looking for information about the body of the red fox. Which sentence has information that the student can use?",
     options: [
-      { label: "A", text: "The sap pours out very quickly." },
-      { label: "B", text: "The sap flows in a slow, steady stream." },
-      { label: "C", text: "The sap falls in small drops, one at a time." },
-      { label: "D", text: "The sap sprays out in all directions." },
+      { label: "A", text: "There are over twenty different kinds of foxes." },
+      { label: "B", text: "Red foxes can live in hot deserts and snowy forests." },
+      { label: "C", text: "The red fox wraps its fluffy tail around itself like a blanket." },
+      { label: "D", text: "Red foxes are often clever characters in children's stories." },
     ],
     correctAnswer: "C",
-    rubric: "The student uses context to determine the meaning of drips.",
+    rubric: "The student selects the sentence that gives the relevant body detail.",
     points: 1,
-    evidenceStatement: "The student will determine the meaning of words and phrases in context.",
+    evidenceStatement:
+      "The student will identify relevant source information for research.",
   },
   {
-    id: 142,
-    testType: "cat",
-    subject: "ela",
-    grade: 3,
-    claim: 1,
-    target: "2",
-    dok: 2,
-    standard: "RI.2",
-    type: "multiple-choice",
-    passage: sapPassage,
-    passageTitle: "Sap's Running",
-    questionText:
-      "What is the main idea of the passage \"Sap's Running\"?",
-    options: [
-      { label: "A", text: "Scientists at the University of Vermont study trees." },
-      { label: "B", text: "Maple syrup production is a tradition that involves collecting and heating tree sap." },
-      { label: "C", text: "The Coleman brothers live in Vermont." },
-      { label: "D", text: "An Iroquois chief named Woksis discovered maple syrup." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student identifies the main idea of the informational text.",
-    points: 1,
-    evidenceStatement: "The student will determine the main idea of a text.",
-  },
-  {
-    id: 143,
+    id: 130,
     testType: "cat",
     subject: "ela",
     grade: 3,
     claim: 2,
-    target: "6",
-    dok: 3,
-    standard: "L.1",
+    target: "1",
+    dok: 2,
+    standard: "W.8",
     type: "multiple-choice",
     questionText:
-      "A student is writing a report and writes this sentence:\n\n\"The trees in the forest is very tall and the birds singed beautiful songs.\"\n\nWhich revision corrects the errors in this sentence?",
+      "A student is writing a research report about different kinds of fruit. He wrote an opinion in the report. Read the sentences from the student's report and the directions that follow.\n\nMany Kinds of Fruit\n\nA fruit is the part of the plant that has the plant's seeds. There are many kinds of fruits. Some that are popular with kids are apples, bananas, grapes, oranges, and strawberries. Sometimes it is confusing to tell if a food is a fruit.\n\nThe student found another source about different kinds of fruit. Which sentence best supports the student's opinion?",
     options: [
-      { label: "A", text: "The trees in the forest is very tall and the birds sang beautiful songs." },
-      { label: "B", text: "The trees in the forest are very tall and the birds singed beautiful songs." },
-      { label: "C", text: "The trees in the forest are very tall and the birds sang beautiful songs." },
-      { label: "D", text: "The tree in the forest is very tall and the birds singed beautiful songs." },
+      { label: "A", text: "For example, it is hard to tell what some foods are when they are cut up in pieces." },
+      { label: "B", text: "For example, a tomato is not sweet, but it is a fruit because it has the seeds." },
+      { label: "C", text: "For example, some kids don't like some of the fruits on that list." },
+      { label: "D", text: "For example, fruits can be many different shapes and colors." },
     ],
-    correctAnswer: "C",
-    rubric: "The student corrects both the subject-verb agreement and irregular verb errors.",
+    correctAnswer: "B",
+    rubric: "The student selects the sentence that best supports the opinion in the report.",
     points: 1,
-    evidenceStatement: "The student will demonstrate command of grammar and usage conventions.",
+    evidenceStatement:
+      "The student will identify evidence that supports an opinion in a research report.",
   },
   // ── ELA PT: Performance Task matching real CAASPP format ──
   // Student Directions + sources + grid matching + short answer + full essay
@@ -1961,30 +2028,24 @@ export const grade3ELA: Question[] = [
     dok: 2,
     standard: "W.8, RI.1",
     type: "grid-match",
-    passage: treasurePassage + "\n\n---\n\n" + sapPassage,
+    passage: astronautPtPassages,
     passageTitle: "Student Directions",
-    studentDirections: `**Informational Performance Task**
-
-**Task:**
-Your class has been learning about how people get rewards from nature. Your teacher has asked each student to learn about a different topic. You decide to learn about how people work with nature to get food and other rewards. You have found two sources about this topic.
-
-After you have reviewed these sources, you will answer some questions about them. Briefly scan the sources and the questions that follow. Then, go back and read the sources carefully so you will have the information you need to answer the questions and complete your research.`,
+    studentDirections: astronautPtDirectionsPart1,
     questionText:
       "Click on the boxes to match each source with the idea or ideas that it supports. Some ideas may have more than one source selected.",
     gridRows: [
-      "Hard work can lead to unexpected rewards.",
-      "Nature provides resources that people can use.",
-      "A family tradition is passed down through generations.",
-      "People must be patient to get results from their work.",
+      "Astronauts feel weak when they come back from space.",
+      "Since objects are also able to float in space, astronauts can easily lift things in space that are heavy on Earth.",
+      "Astronauts have a special view of Earth from space.",
     ],
     gridColumns: [
-      "Source #1: Treasure in the Field",
-      "Source #2: Sap's Running",
+      "Source #1: What is an Astronaut?",
+      "Source #2: Life in Space",
     ],
-    correctAnswer: ["0:0", "0:1", "1:0", "1:1", "2:1", "3:0", "3:1"],
+    correctAnswer: ["0:1", "1:0", "2:0"],
     rubric: "The student correctly matches ideas to the appropriate sources.",
-    points: 2,
-    evidenceStatement: "The student will locate information from multiple sources to support a central idea.",
+    points: 1,
+    evidenceStatement: "The student will select evidence to support opinions based on evidence collected.",
   },
   {
     id: 151,
@@ -1994,53 +2055,18 @@ After you have reviewed these sources, you will answer some questions about them
     claim: 4,
     target: "3",
     dok: 3,
-    standard: "W.8, RI.1",
+    standard: "W.1b",
     type: "short-answer",
-    passage: treasurePassage + "\n\n---\n\n" + sapPassage,
+    passage: astronautPtPassages,
     passageTitle: "Student Directions",
-    studentDirections: `**Informational Performance Task**
-
-**Task:**
-Your class has been learning about how people get rewards from nature. Your teacher has asked each student to learn about a different topic. You decide to learn about how people work with nature to get food and other rewards. You have found two sources about this topic.
-
-After you have reviewed these sources, you will answer some questions about them. Briefly scan the sources and the questions that follow. Then, go back and read the sources carefully so you will have the information you need to answer the questions and complete your research.`,
+    studentDirections: astronautPtDirectionsPart1,
     questionText:
-      'Explain how both sources show that people must work hard to get rewards from nature. Give one example from Source #1 and one example from Source #2. For each example, include the source title or number.',
-    correctAnswer: "Source 1: The sons had to dig the field and plant rice to earn money. Source 2: The Colemans collect sap and boil it for hours to make maple syrup.",
-    rubric: "Full credit: The student provides one relevant example from each source that shows hard work leading to rewards from nature, and identifies which source each example comes from. Partial credit: The student provides examples but only from one source, or does not clearly identify the sources.",
+      "Explain why it is hard to be an astronaut. Give two reasons, one from Source #1 and one from Source #2. For each reason, include the source title or number.",
+    correctAnswer:
+      "It is hard to be an astronaut because living in space is difficult on an astronaut's body. Source #1 says that astronauts must be healthy and eat right and have to exercise to do their job. Source #2 says that being in space changes how blood flows in the body and can make astronauts weak, so they must exercise to keep their bodies strong.",
+    rubric: "2 points: Response gives two evidence-based reasons, one from each source, and explains how each supports the claim while citing the sources. 1 point: Response gives partial evidence or limited explanation, or uses only one source well. 0 points: Incorrect, irrelevant, insufficient, or blank response.",
     points: 2,
-    evidenceStatement: "The student will cite evidence from multiple sources to support analysis.",
-  },
-  {
-    id: 153,
-    testType: "pt",
-    subject: "ela",
-    grade: 3,
-    claim: 4,
-    target: "2",
-    dok: 2,
-    standard: "RI.1, RI.9",
-    type: "multiple-choice",
-    passage: treasurePassage + "\n\n---\n\n" + sapPassage,
-    passageTitle: "Student Directions",
-    studentDirections: `**Informational Performance Task**
-
-**Task:**
-Your class has been learning about how people get rewards from nature. Your teacher has asked each student to learn about a different topic. You decide to learn about how people work with nature to get food and other rewards. You have found two sources about this topic.
-
-After you have reviewed these sources, you will answer some questions about them. Briefly scan the sources and the questions that follow. Then, go back and read the sources carefully so you will have the information you need to answer the questions and complete your research.`,
-    questionText:
-      "What do the characters in Source #1 and the Coleman brothers in Source #2 have in common?",
-    options: [
-      { label: "A", text: "They both discover treasure buried underground." },
-      { label: "B", text: "They both work with the land to produce something valuable." },
-      { label: "C", text: "They both learn about nature from scientists." },
-      { label: "D", text: "They both live on farms in Vietnam." },
-    ],
-    correctAnswer: "B",
-    rubric: "The student identifies the common theme across both sources.",
-    points: 1,
-    evidenceStatement: "The student will compare information across two texts.",
+    evidenceStatement: "The student will select evidence to support opinions based on evidence collected.",
   },
   {
     id: 152,
@@ -2050,34 +2076,14 @@ After you have reviewed these sources, you will answer some questions about them
     claim: 2,
     target: "1aI",
     dok: 4,
-    standard: "W.2, W.4, W.5",
+    standard: "W.2b",
     type: "extended-writing",
-    passage: treasurePassage + "\n\n---\n\n" + sapPassage,
+    passage: astronautPtPassages,
     passageTitle: "Student Directions",
-    studentDirections: `**Informational Performance Task**
-
-**Part 2**
-
-You will review your notes and sources, and plan, draft, revise, and edit your writing. You may use your notes and go back to the sources. Now read your assignment and the information about how your writing will be scored, then begin your work.
-
-**Your Assignment:**
-Your teacher is creating a bulletin board display in the school library to show what your class has learned about how people get rewards from nature. You decide to write an informational article about this topic. Your article will be read by other students, teachers, and parents.
-
-Using more than one source, develop a main idea about how people work hard to get rewards from nature. Choose the most important information from the sources to support your main idea. Then, write an informational article that is several paragraphs long. Clearly organize your article and support your main idea with details from the sources. Be sure to use your own words except when quoting directly from the sources. Be sure to give the source title or number when using details from the sources.
-
-**REMEMBER: You must**
-1. plan your informational article.
-2. write your informational article.
-3. revise and edit the final draft of your article.
-
-Word-processing tools and spell check are available to you.
-
-For Part 2, you are being asked to write an informational article that is several paragraphs long. Type your response in the box below. The box will get bigger as you type.
-
-Remember to check your notes and your prewriting/planning as you write, and then revise and edit your informational article.`,
+    studentDirections: astronautPtDirectionsPart2,
     questionText: "",
     correctAnswer: "extended-writing-rubric",
-    rubric: "Full credit (4 points): The article has a clear main idea about rewards from nature, uses details from both sources, is well organized with multiple paragraphs, uses the student's own words, and has few errors in grammar/spelling. 3 points: Adequate main idea, uses details from at least one source, mostly organized. 2 points: Partial main idea, limited evidence, some organization. 1 point: Minimal response with little evidence or organization.",
+    rubric: "4 points: Clear, focused informational article about being an astronaut with strong organization, source-based details, attribution, and effective language. 3 points: Adequate informational article with mostly clear organization and relevant evidence. 2 points: Uneven organization or limited source use and development. 1 point: Minimal or unclear response with little evidence. Conventions are judged holistically.",
     points: 4,
     evidenceStatement: "The student will write a full informational article using evidence from multiple sources.",
   },
@@ -2086,7 +2092,7 @@ Remember to check your notes and your prewriting/planning as you write, and then
 function mergeExplanations(questions: Question[]): Question[] {
   return questions.map((q) => ({
     ...q,
-    explanation: q.explanation || explanations[q.id],
+    explanation: q.explanation || explanations[q.id] || "See the rubric for scoring guidance.",
   }));
 }
 
@@ -2097,6 +2103,29 @@ export function getQuestions(
   practiceTest: number = 1
 ): Question[] {
   if (practiceTest > 1) {
+    const dedicatedPracticeTests: Record<number, Question[]> = {
+      11: practiceTest11Questions,
+      12: practiceTest12Questions,
+      13: practiceTest13Questions,
+      14: practiceTest14Questions,
+      15: practiceTest15Questions,
+    };
+
+    const dedicatedQuestions = dedicatedPracticeTests[practiceTest];
+    if (dedicatedQuestions) {
+      return mergeExplanations(
+        dedicatedQuestions
+          .filter(
+            (q) =>
+              q.grade === grade &&
+              q.subject === subject &&
+              q.testType === testType &&
+              q.practiceTest === practiceTest
+          )
+          .sort((a, b) => a.id - b.id)
+      );
+    }
+
     const extra = [
       ...practiceTestQuestions,
       ...easyPracticeTestQuestions,
@@ -2110,12 +2139,14 @@ export function getQuestions(
         q.testType === testType &&
         q.practiceTest === practiceTest
     );
-    return mergeExplanations(extra);
+    return mergeExplanations(extra.sort((a, b) => a.id - b.id));
   }
   let questions: Question[] = [];
   if (grade === 3 && subject === "math") questions = grade3Math;
   if (grade === 3 && subject === "ela") questions = grade3ELA;
-  return mergeExplanations(questions.filter((q) => q.testType === testType));
+  return mergeExplanations(
+    questions.filter((q) => q.testType === testType).sort((a, b) => a.id - b.id)
+  );
 }
 
 // Fetch questions from Supabase
@@ -2125,9 +2156,10 @@ export async function fetchQuestions(
   testType: "cat" | "pt" = "cat",
   practiceTest: number = 1
 ): Promise<Question[]> {
-  // For practice tests 2+, always use local data (not in Supabase)
-  if (practiceTest > 1) {
-    return getQuestions(grade, subject, testType, practiceTest);
+  // Local question banks are the source of truth while Test 1 baseline work is in progress.
+  const localQuestions = getQuestions(grade, subject, testType, practiceTest);
+  if (localQuestions.length > 0) {
+    return localQuestions;
   }
 
   const { supabase } = await import("./supabase");
@@ -2141,12 +2173,9 @@ export async function fetchQuestions(
 
   if (error) {
     console.error("Supabase fetch error:", error.message);
-    // Fall back to local questions
-    return getQuestions(grade, subject, testType, practiceTest);
+    return localQuestions;
   }
 
-  // Fall back to local questions if Supabase returned fewer results
-  const localQuestions = getQuestions(grade, subject, testType, practiceTest);
   if (!data || data.length === 0 || data.length < localQuestions.length) {
     return localQuestions;
   }

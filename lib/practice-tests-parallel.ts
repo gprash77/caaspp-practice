@@ -46,10 +46,10 @@ function getSourceQuestions(
   return sourcePools.filter(
     (q) =>
       q.practiceTest === sourceTest &&
-      q.subject === subject &&
-      q.testType === testType &&
-      q.grade === 3
-  );
+        q.subject === subject &&
+        q.testType === testType &&
+        q.grade === 3
+  ).sort((a, b) => a.id - b.id);
 }
 
 function permuteQuestions<T>(
@@ -154,11 +154,37 @@ function cloneSet(
   profile: RewriteProfile
 ): Question[] {
   const sourceQuestions = getSourceQuestions(source.sourceTest, subject, testType);
-  const orderedQuestions = permuteQuestions(sourceQuestions, source.step, source.offset);
+  const orderedQuestions =
+    newTest >= 11
+      ? sourceQuestions
+      : permuteQuestions(sourceQuestions, source.step, source.offset);
 
-  return orderedQuestions.map((question, index) =>
-    rewriteQuestion(question, newTest, index, profile)
-  );
+  const targetCount =
+    subject === "math" && testType === "pt"
+      ? 5
+      : subject === "ela" && testType === "cat"
+        ? 30
+        : subject === "ela" && testType === "pt"
+          ? 3
+          : orderedQuestions.length;
+
+  const sharedStudentDirections =
+    subject === "ela" && testType === "pt"
+      ? orderedQuestions.find((question) => question.studentDirections)?.studentDirections
+      : undefined;
+
+  return orderedQuestions.slice(0, targetCount).map((question, index) => {
+    const rewritten = rewriteQuestion(question, newTest, index, profile);
+
+    if (sharedStudentDirections && !rewritten.studentDirections) {
+      return {
+        ...rewritten,
+        studentDirections: applyRules(sharedStudentDirections, rewriteProfileForQuestion(question, profile)),
+      };
+    }
+
+    return rewritten;
+  });
 }
 
 function makeCommonProfile(label: string, replacements: Array<[string, string]>): RewriteProfile {
