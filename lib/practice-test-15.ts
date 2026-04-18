@@ -1692,7 +1692,7 @@ const elaPt: Question[] = [
   makeQuestion(15074, {
     testType: "pt",
     subject: "ela",
-    claim: 4,
+    claim: 2,
     target: "32",
     dok: 4,
     standard: "W.3.1",

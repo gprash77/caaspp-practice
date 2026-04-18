@@ -1860,7 +1860,7 @@ const test13ELAPT: Question[] = [
     testType: "pt",
     subject: "ela",
     grade: 3,
-    claim: 2,
+    claim: 4,
     target: "3",
     dok: 3,
     standard: "W.3.9",

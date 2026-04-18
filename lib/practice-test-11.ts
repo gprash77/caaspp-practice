@@ -1233,7 +1233,7 @@ const test11ELAPT: Question[] = [
   },
   {
     id: 11151, practiceTest: 11, testType: "pt", subject: "ela", grade: 3,
-    claim: 2, domain: "RI", target: "B", dok: 3, standard: "RI.3.9",
+    claim: 4, domain: "RI", target: "B", dok: 3, standard: "RI.3.9",
     type: "short-answer",
     passage: `${ptSourceOne}\n\n---\n\n${ptSourceTwo}`,
     passageTitle: "A Wall for Everyone / Why Public Art Matters",

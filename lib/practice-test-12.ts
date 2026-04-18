@@ -1246,7 +1246,7 @@ Read the two sources. Then answer the questions about how machines help people s
   },
   {
     id: 12152, practiceTest: 12, testType: "pt", subject: "ela", grade: 3,
-    claim: 4, domain: "W", target: "A", dok: 4, standard: "W.3.2",
+    claim: 2, domain: "W", target: "A", dok: 4, standard: "W.3.2",
     type: "extended-writing",
     passage: `${robotPtSource1}\n\n${robotPtSource2}`,
     passageTitle: "Sources for Writing",
