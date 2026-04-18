@@ -105,7 +105,7 @@ const robotPtSource2 = `Source 2
 
 **Machines in Everyday Life**
 
-Simple machines help people do jobs at home, at school, and at work. A ramp helps move heavy boxes into a truck. A pulley helps raise a flag. A wheel and axle helps a cart roll. These tools do not solve problems by themselves. People must choose the right tool and use it the right way. When people understand how a machine works, they can finish a task more safely and more easily.`;
+Simple machines help people do jobs at home, at school, and at work. A ramp helps move heavy boxes into a truck. A pulley helps raise a flag. A wheel and axle help a cart roll. These tools do not solve problems by themselves. People must choose the right tool and use it the right way. When people understand how a machine works, they can finish a task more safely and more easily.`;
 
 const petFairPtDirections = `**Mathematics Performance Task**
 
@@ -801,9 +801,9 @@ const practiceTest12ElaCAT: Question[] = [
     passage: brokenRobotPassage,
     passageTitle: "The Broken Robot",
     passageAuthor: "Nina Park",
-    questionText: "Which TWO details show that the class worked together? Select two answers.",
+    questionText: "Which TWO details show that classmates worked together to solve the problem with Pip? Select two answers.",
     options: [
-      { label: "A", text: "Ava checked the lights." },
+      { label: "A", text: "Ava checked the lights before Pip stopped moving." },
       { label: "B", text: "Theo looked at the battery pack." },
       { label: "C", text: "Mina noticed the string around the wheel." },
       { label: "D", text: "The parade was held in the gym." },
@@ -1000,7 +1000,20 @@ const practiceTest12ElaCAT: Question[] = [
     passageTitle: "How Simple Machines Help People Work",
     questionText: "What is an inclined plane? Use a word from the passage in your answer.",
     correctAnswer: "An inclined plane is a ramp",
-    acceptedAnswers: ["An inclined plane is a ramp", "A ramp", "It is a ramp"],
+    acceptedAnswers: [
+      "An inclined plane is a ramp",
+      "An inclined plane is a ramp.",
+      "A ramp",
+      "A ramp.",
+      "It is a ramp",
+      "It is a ramp.",
+      "A ramp is an inclined plane",
+      "A ramp is an inclined plane.",
+      "An inclined plane is called a ramp",
+      "An inclined plane is called a ramp.",
+      "A ramp is called an inclined plane",
+      "A ramp is called an inclined plane.",
+    ],
     rubric: "The student explains the meaning of inclined plane using the text.",
     points: 1,
   },

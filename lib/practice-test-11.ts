@@ -341,7 +341,7 @@ const test11MathCAT: Question[] = [
     id: 11017, practiceTest: 11, testType: "cat", subject: "math", grade: 3,
     claim: 1, domain: "MD", target: "H", dok: 1, standard: "3.MD.B.3",
     type: "multiple-choice",
-    questionText: "A chart shows how many flower signs each class made.\n\nClass A: 6\nClass B: 8\nClass C: 5\nClass D: 8\n\nWhich class made the most signs?",
+    questionText: "A chart shows how many flower signs each class made.\n\nClass A: 6\nClass B: 8\nClass C: 5\nClass D: 8\n\nWhich class or classes made the most signs?",
     options: [
       { label: "A", text: "Class A" },
       { label: "B", text: "Class B" },
@@ -874,7 +874,7 @@ const test11ELACAT: Question[] = [
     type: "multi-select",
     passage: sidewalkChalkTeamPassage,
     passageTitle: "The Sidewalk Chalk Team",
-    questionText: "Which two details belong in a summary of the story?",
+    questionText: "Which three details belong in a summary of the story?",
     options: [
       { label: "A", text: "Maya sees a sign about the Community Walk." },
       { label: "B", text: "The chalk box has many colors." },

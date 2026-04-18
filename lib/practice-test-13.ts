@@ -1325,7 +1325,7 @@ const test13ELACAT: Question[] = [
     partBPrompt: "Which sentence best supports the answer to Part A?",
     partBOptions: [
       { label: "A", text: "The ground was dry from three sunny days." },
-      { label: "B", text: "The class made a small display in the library with labels and drawings." },
+      { label: "B", text: "Students from other grades stopped to look." },
       { label: "C", text: "Mr. Bennett carried a wheelbarrow to the compost bin." },
       { label: "D", text: "Some guessed it was a feather." },
     ],
@@ -1629,12 +1629,12 @@ const test13ELACAT: Question[] = [
     ],
     partBPrompt: "Which sentence from the presentation best supports the answer to Part A?",
     partBOptions: [
-      { label: "A", text: "The museum team also printed maps to help families find the new Fossil Hall." },
+      { label: "A", text: "Today I want to tell you about the museum's newest fossil exhibit and how it was prepared for the public." },
       { label: "B", text: "One part of the opening did not happen as planned." },
       { label: "C", text: "Guides explained that fossils are useful because they give clues about ancient environments." },
       { label: "D", text: "The museum director said the goal of Discovery Week was to help young scientists ask new questions." },
     ],
-    correctAnswer: ["A", "D"],
+    correctAnswer: ["A", "A"],
     rubric: "The student selects the correct answer in both parts.",
     points: 1,
   },
