@@ -2256,37 +2256,34 @@ export const practiceTest4Questions: Question[] = [
     "testType": "pt",
     "subject": "ela",
     "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
+    "claim": 4,
+    "domain": "RI",
+    "target": "D",
+    "dok": 2,
+    "standard": "RI.3.9",
+    "type": "grid-match",
     "passage": "Read the passage and answer the questions.\n\n**The Lost Kite**\n*by Amy Chen*\n\nIt was a windy Saturday morning. Ben and his mom went to the park. Ben brought his favorite red kite. It had a long yellow tail that danced in the wind.\n\n\"This is perfect kite weather!\" said Mom.\n\nBen held the string tightly and ran across the grass. The kite lifted into the sky. It went higher and higher. Ben smiled as he watched it fly above the trees.\n\nThen a big gust of wind came. The string pulled hard. Ben tried to hold on, but the string slipped through his fingers. The kite flew away over the tall oak trees.\n\n\"Oh no!\" Ben cried. \"My kite is gone!\"\n\nBen sat on a bench and put his head in his hands. He felt so sad. That kite was a birthday gift from his grandma.\n\nHis friend Mia walked over. She was at the park with her dog, Biscuit.\n\n\"What's wrong, Ben?\" Mia asked.\n\n\"I lost my kite,\" Ben said. \"The wind took it.\"\n\n\"Let's go find it!\" said Mia. \"Biscuit is good at finding things.\"\n\nThey walked past the playground and through the picnic area. They looked up in every tree. Then Biscuit started barking near the fence at the edge of the park.\n\n\"Look!\" Mia pointed. The red kite was caught in a bush, just on the other side of the fence. The yellow tail was tangled in the branches.\n\nBen carefully reached through the fence and pulled the kite free. The string was a little tangled, but the kite was not broken.\n\n\"Thank you, Mia! Thank you, Biscuit!\" Ben said happily.\n\n\"That's what friends are for,\" Mia said with a smile.\n\nBen flew his kite for the rest of the morning. This time, he wrapped the string around his wrist so it couldn't slip away again.\n\n---\n\nRead the passage and answer the questions.\n\n**All About Butterflies**\n\nButterflies are insects that can be found all over the world. There are about 20,000 different kinds of butterflies. They live on every continent except Antarctica. Butterflies come in many colors, including orange, blue, yellow, and white.\n\n**Life Cycle**\n\nA butterfly goes through four stages in its life. First, a mother butterfly lays tiny eggs on a leaf. Next, a caterpillar hatches from each egg. The caterpillar eats leaves and grows bigger. Then the caterpillar makes a hard shell called a chrysalis around its body. Inside the chrysalis, the caterpillar changes. Finally, a butterfly comes out of the chrysalis and flies away.\n\n**Body Parts**\n\nA butterfly has three main body parts: a head, a thorax, and an abdomen. It has six legs and four wings. Butterfly wings are covered with tiny scales that give them their colors. Butterflies also have two antennae on their heads that help them smell flowers.\n\n**What Butterflies Eat**\n\nButterflies drink a sweet liquid called nectar from flowers. They use a long, thin tube called a proboscis to sip nectar. The proboscis works like a drinking straw. When a butterfly is not eating, it curls the proboscis up like a spring.\n\n**Butterflies and Gardens**\n\nButterflies help gardens grow. When a butterfly lands on a flower to drink nectar, pollen sticks to its body. Then the butterfly carries the pollen to other flowers. This is called pollination, and it helps plants make seeds and fruit. You can attract butterflies to your garden by planting colorful flowers like sunflowers and marigolds.",
     "passageTitle": "The Lost Kite / All About Butterflies",
-    "questionText": "In 'The Lost Kite,' Ben's kite was found in a bush. In 'All About Butterflies,' butterflies visit bushes and flowers. What is one thing that both the kite and a butterfly can do?",
-    "options": [
-      {
-        "label": "A",
-        "text": "They can both fly in the air"
-      },
-      {
-        "label": "B",
-        "text": "They can both eat nectar"
-      },
-      {
-        "label": "C",
-        "text": "They both have six legs"
-      },
-      {
-        "label": "D",
-        "text": "They are both red"
-      }
+    "questionText": "Match each detail to the source that best includes it.",
+    "gridRows": [
+      "Mia and Biscuit help Ben search around the park.",
+      "A butterfly changes inside a chrysalis.",
+      "Ben wraps the kite string around his wrist at the end.",
+      "Butterflies help flowers by carrying pollen."
     ],
-    "correctAnswer": "A",
-    "rubric": "The student makes a connection between the two texts.",
+    "gridColumns": [
+      "The Lost Kite",
+      "All About Butterflies"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:1",
+      "2:0",
+      "3:1"
+    ],
+    "rubric": "The student correctly matches each detail to the source where it belongs.",
     "points": 1,
-    "explanation": "Both a kite and a butterfly fly in the air! That is something they have in common.",
+    "explanation": "The story includes the search for the kite and Ben's lesson at the end, while the article explains the chrysalis stage and pollination.",
     "studentDirections": "You have read 'The Lost Kite' and 'All About Butterflies.' Now you will write a paragraph about something special you saw outside. Use details from BOTH passages to help you.\n\nIn your paragraph:\n- Tell about a time you saw something interesting outside (real or made up)\n- Use at least one detail or idea from 'The Lost Kite'\n- Use at least one detail or idea from 'All About Butterflies'\n- Use complete sentences with correct spelling and punctuation"
   },
   {
@@ -2300,32 +2297,14 @@ export const practiceTest4Questions: Question[] = [
     "target": "D",
     "dok": 2,
     "standard": "RI.3.9",
-    "type": "multiple-choice",
+    "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The Lost Kite**\n*by Amy Chen*\n\nIt was a windy Saturday morning. Ben and his mom went to the park. Ben brought his favorite red kite. It had a long yellow tail that danced in the wind.\n\n\"This is perfect kite weather!\" said Mom.\n\nBen held the string tightly and ran across the grass. The kite lifted into the sky. It went higher and higher. Ben smiled as he watched it fly above the trees.\n\nThen a big gust of wind came. The string pulled hard. Ben tried to hold on, but the string slipped through his fingers. The kite flew away over the tall oak trees.\n\n\"Oh no!\" Ben cried. \"My kite is gone!\"\n\nBen sat on a bench and put his head in his hands. He felt so sad. That kite was a birthday gift from his grandma.\n\nHis friend Mia walked over. She was at the park with her dog, Biscuit.\n\n\"What's wrong, Ben?\" Mia asked.\n\n\"I lost my kite,\" Ben said. \"The wind took it.\"\n\n\"Let's go find it!\" said Mia. \"Biscuit is good at finding things.\"\n\nThey walked past the playground and through the picnic area. They looked up in every tree. Then Biscuit started barking near the fence at the edge of the park.\n\n\"Look!\" Mia pointed. The red kite was caught in a bush, just on the other side of the fence. The yellow tail was tangled in the branches.\n\nBen carefully reached through the fence and pulled the kite free. The string was a little tangled, but the kite was not broken.\n\n\"Thank you, Mia! Thank you, Biscuit!\" Ben said happily.\n\n\"That's what friends are for,\" Mia said with a smile.\n\nBen flew his kite for the rest of the morning. This time, he wrapped the string around his wrist so it couldn't slip away again.\n\n---\n\nRead the passage and answer the questions.\n\n**All About Butterflies**\n\nButterflies are insects that can be found all over the world. There are about 20,000 different kinds of butterflies. They live on every continent except Antarctica. Butterflies come in many colors, including orange, blue, yellow, and white.\n\n**Life Cycle**\n\nA butterfly goes through four stages in its life. First, a mother butterfly lays tiny eggs on a leaf. Next, a caterpillar hatches from each egg. The caterpillar eats leaves and grows bigger. Then the caterpillar makes a hard shell called a chrysalis around its body. Inside the chrysalis, the caterpillar changes. Finally, a butterfly comes out of the chrysalis and flies away.\n\n**Body Parts**\n\nA butterfly has three main body parts: a head, a thorax, and an abdomen. It has six legs and four wings. Butterfly wings are covered with tiny scales that give them their colors. Butterflies also have two antennae on their heads that help them smell flowers.\n\n**What Butterflies Eat**\n\nButterflies drink a sweet liquid called nectar from flowers. They use a long, thin tube called a proboscis to sip nectar. The proboscis works like a drinking straw. When a butterfly is not eating, it curls the proboscis up like a spring.\n\n**Butterflies and Gardens**\n\nButterflies help gardens grow. When a butterfly lands on a flower to drink nectar, pollen sticks to its body. Then the butterfly carries the pollen to other flowers. This is called pollination, and it helps plants make seeds and fruit. You can attract butterflies to your garden by planting colorful flowers like sunflowers and marigolds.",
     "passageTitle": "The Lost Kite / All About Butterflies",
-    "questionText": "How are 'The Lost Kite' and 'All About Butterflies' different?",
-    "options": [
-      {
-        "label": "A",
-        "text": "'The Lost Kite' is a made-up story, and 'All About Butterflies' gives real facts"
-      },
-      {
-        "label": "B",
-        "text": "Both passages are about animals"
-      },
-      {
-        "label": "C",
-        "text": "Both passages are fiction stories"
-      },
-      {
-        "label": "D",
-        "text": "'All About Butterflies' is a made-up story, and 'The Lost Kite' gives real facts"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student distinguishes between fiction and informational text.",
-    "points": 1,
-    "explanation": "'The Lost Kite' is fiction — a made-up story about Ben. 'All About Butterflies' is informational — it teaches real facts about butterflies.",
+    "questionText": "How does each source help the reader learn about things that move through the air? Use one detail from each source in your answer.",
+    "correctAnswer": "The Lost Kite shows a story about Ben losing and finding a kite, so readers learn through characters and events. All About Butterflies teaches with facts about butterfly body parts, life cycle, and how butterflies fly and help flowers.",
+    "rubric": "2 points: The response explains how each source helps the reader learn and includes one accurate detail from each source. 1 point: The response uses only one source or gives a partial explanation.",
+    "points": 2,
+    "explanation": "A strong response explains that one source is a narrative example and the other source teaches through facts and explanations.",
     "studentDirections": "You have read 'The Lost Kite' and 'All About Butterflies.' Now you will write a paragraph about something special you saw outside. Use details from BOTH passages to help you.\n\nIn your paragraph:\n- Tell about a time you saw something interesting outside (real or made up)\n- Use at least one detail or idea from 'The Lost Kite'\n- Use at least one detail or idea from 'All About Butterflies'\n- Use complete sentences with correct spelling and punctuation"
   },
   {
@@ -2335,18 +2314,18 @@ export const practiceTest4Questions: Question[] = [
     "subject": "ela",
     "grade": 3,
     "claim": 2,
-    "domain": "RL",
-    "target": "B",
-    "dok": 2,
-    "standard": "RL.3.9",
-    "type": "short-answer",
+    "domain": "W",
+    "target": "E",
+    "dok": 4,
+    "standard": "W.3.2",
+    "type": "extended-writing",
     "passage": "Read the passage and answer the questions.\n\n**The Lost Kite**\n*by Amy Chen*\n\nIt was a windy Saturday morning. Ben and his mom went to the park. Ben brought his favorite red kite. It had a long yellow tail that danced in the wind.\n\n\"This is perfect kite weather!\" said Mom.\n\nBen held the string tightly and ran across the grass. The kite lifted into the sky. It went higher and higher. Ben smiled as he watched it fly above the trees.\n\nThen a big gust of wind came. The string pulled hard. Ben tried to hold on, but the string slipped through his fingers. The kite flew away over the tall oak trees.\n\n\"Oh no!\" Ben cried. \"My kite is gone!\"\n\nBen sat on a bench and put his head in his hands. He felt so sad. That kite was a birthday gift from his grandma.\n\nHis friend Mia walked over. She was at the park with her dog, Biscuit.\n\n\"What's wrong, Ben?\" Mia asked.\n\n\"I lost my kite,\" Ben said. \"The wind took it.\"\n\n\"Let's go find it!\" said Mia. \"Biscuit is good at finding things.\"\n\nThey walked past the playground and through the picnic area. They looked up in every tree. Then Biscuit started barking near the fence at the edge of the park.\n\n\"Look!\" Mia pointed. The red kite was caught in a bush, just on the other side of the fence. The yellow tail was tangled in the branches.\n\nBen carefully reached through the fence and pulled the kite free. The string was a little tangled, but the kite was not broken.\n\n\"Thank you, Mia! Thank you, Biscuit!\" Ben said happily.\n\n\"That's what friends are for,\" Mia said with a smile.\n\nBen flew his kite for the rest of the morning. This time, he wrapped the string around his wrist so it couldn't slip away again.\n\n---\n\nRead the passage and answer the questions.\n\n**All About Butterflies**\n\nButterflies are insects that can be found all over the world. There are about 20,000 different kinds of butterflies. They live on every continent except Antarctica. Butterflies come in many colors, including orange, blue, yellow, and white.\n\n**Life Cycle**\n\nA butterfly goes through four stages in its life. First, a mother butterfly lays tiny eggs on a leaf. Next, a caterpillar hatches from each egg. The caterpillar eats leaves and grows bigger. Then the caterpillar makes a hard shell called a chrysalis around its body. Inside the chrysalis, the caterpillar changes. Finally, a butterfly comes out of the chrysalis and flies away.\n\n**Body Parts**\n\nA butterfly has three main body parts: a head, a thorax, and an abdomen. It has six legs and four wings. Butterfly wings are covered with tiny scales that give them their colors. Butterflies also have two antennae on their heads that help them smell flowers.\n\n**What Butterflies Eat**\n\nButterflies drink a sweet liquid called nectar from flowers. They use a long, thin tube called a proboscis to sip nectar. The proboscis works like a drinking straw. When a butterfly is not eating, it curls the proboscis up like a spring.\n\n**Butterflies and Gardens**\n\nButterflies help gardens grow. When a butterfly lands on a flower to drink nectar, pollen sticks to its body. Then the butterfly carries the pollen to other flowers. This is called pollination, and it helps plants make seeds and fruit. You can attract butterflies to your garden by planting colorful flowers like sunflowers and marigolds.",
     "passageTitle": "The Lost Kite / All About Butterflies",
-    "questionText": "Both passages mention something that moves in the air. In 'The Lost Kite,' it is the kite. In 'All About Butterflies,' it is butterflies. How are the way the kite and butterflies move different? Write 1-2 sentences.",
-    "correctAnswer": "The kite needs wind and a person to fly, but butterflies fly on their own using their wings. Butterflies can choose where to go, but a kite goes wherever the wind takes it.",
-    "rubric": "The student compares how two things move. Accept any reasonable comparison: kite needs wind/person vs. butterfly flies on its own. 2 points for a clear comparison; 1 point for partial.",
-    "points": 2,
-    "explanation": "A kite needs wind and a person holding the string to fly. A butterfly uses its own four wings to fly wherever it wants to go.",
+    "questionText": "Write an essay explaining how the two sources show what people can notice and learn outdoors. Use details from both sources.",
+    "correctAnswer": "Responses will vary. See rubric.",
+    "rubric": "4 points: The response clearly explains what people can notice and learn outdoors, uses accurate details from both sources, is organized, and shows grade-appropriate conventions. 3 points: The response uses both sources but may be less developed. 2 points: The response uses limited evidence or depends mostly on one source. 1 point: Minimal response. 0 points: Off-topic or blank.",
+    "points": 4,
+    "explanation": "A strong essay explains how the story and article both help readers observe and learn about the outdoors in different ways.",
     "studentDirections": "You have read 'The Lost Kite' and 'All About Butterflies.' Now you will write a paragraph about something special you saw outside. Use details from BOTH passages to help you.\n\nIn your paragraph:\n- Tell about a time you saw something interesting outside (real or made up)\n- Use at least one detail or idea from 'The Lost Kite'\n- Use at least one detail or idea from 'All About Butterflies'\n- Use complete sentences with correct spelling and punctuation"
   }
 ];

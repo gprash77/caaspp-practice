@@ -2370,37 +2370,34 @@ export const practiceTest9Questions: Question[] = [
     "testType": "pt",
     "subject": "ela",
     "grade": 3,
-    "claim": 1,
+    "claim": 4,
     "domain": "RL",
     "target": "A",
     "dok": 2,
     "standard": "RL.3.1",
-    "type": "multiple-choice",
+    "type": "grid-match",
     "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.\n\n---\n\nRead the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
     "passageTitle": "The Rainy Day Plan / Clouds in the Sky",
-    "questionText": "In 'The Rainy Day Plan,' the children had a rainy day. In 'Clouds in the Sky,' we learn about stratus clouds. Based on both passages, what likely caused the rain in the story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Cumulus clouds"
-      },
-      {
-        "label": "B",
-        "text": "Stratus clouds"
-      },
-      {
-        "label": "C",
-        "text": "Cirrus clouds"
-      },
-      {
-        "label": "D",
-        "text": "No clouds at all"
-      }
+    "questionText": "Match each detail to the source where it belongs.",
+    "gridRows": [
+      "Maya and Eli build a fort using couch cushions and bedsheets.",
+      "Stratus clouds often bring drizzle or light rain.",
+      "Cirrus clouds can show that weather is changing.",
+      "By afternoon, the rain has stopped but the children keep playing indoors."
     ],
-    "correctAnswer": "B",
-    "rubric": "The student connects information across texts.",
+    "gridColumns": [
+      "Source 1",
+      "Source 2"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:1",
+      "2:1",
+      "3:0"
+    ],
+    "rubric": "The student correctly matches each detail to the source where it belongs.",
     "points": 1,
-    "explanation": "The article says stratus clouds often bring drizzle or light rain. Since it rained in the story, stratus clouds likely covered the sky.",
+    "explanation": "Rows 1 and 4 come from the rainy day story. Rows 2 and 3 come from the informational cloud article.",
     "studentDirections": "You have read 'The Rainy Day Plan' and 'Clouds in the Sky.' Now you will write a paragraph that explains what you learned about rain and weather from both passages.\n\nIn your paragraph:\n- State your main idea\n- Use at least one detail from 'The Rainy Day Plan'\n- Use at least one detail from 'Clouds in the Sky'\n- Explain how the details support your main idea\n- Use complete sentences"
   },
   {
@@ -2414,32 +2411,14 @@ export const practiceTest9Questions: Question[] = [
     "target": "D",
     "dok": 2,
     "standard": "RI.3.9",
-    "type": "multiple-choice",
+    "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.\n\n---\n\nRead the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
     "passageTitle": "The Rainy Day Plan / Clouds in the Sky",
-    "questionText": "How are 'The Rainy Day Plan' and 'Clouds in the Sky' different?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Both are made-up stories"
-      },
-      {
-        "label": "B",
-        "text": "'The Rainy Day Plan' is a story, and 'Clouds in the Sky' gives real facts about clouds"
-      },
-      {
-        "label": "C",
-        "text": "Both are informational articles about weather"
-      },
-      {
-        "label": "D",
-        "text": "'Clouds in the Sky' is a story and 'The Rainy Day Plan' gives facts"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student distinguishes between fiction and informational text.",
-    "points": 1,
-    "explanation": "'The Rainy Day Plan' is a made-up fiction story about characters. 'Clouds in the Sky' is a nonfiction article with real scientific facts.",
+    "questionText": "Explain one way the story and the article together help a reader understand rain and weather. Use one detail from each text.",
+    "correctAnswer": "The story shows how rain can change people's plans because Maya and Eli have to stay inside. The article explains that stratus clouds often bring light rain and that clouds help make rain. Together they help a reader understand both what rain feels like in daily life and how it happens.",
+    "rubric": "2 points: clear explanation with one accurate detail from each text. 1 point: partial response or clear use of only one text.",
+    "points": 2,
+    "explanation": "A strong answer connects the real-life rainy day in the story with the scientific explanation in the article.",
     "studentDirections": "You have read 'The Rainy Day Plan' and 'Clouds in the Sky.' Now you will write a paragraph that explains what you learned about rain and weather from both passages.\n\nIn your paragraph:\n- State your main idea\n- Use at least one detail from 'The Rainy Day Plan'\n- Use at least one detail from 'Clouds in the Sky'\n- Explain how the details support your main idea\n- Use complete sentences"
   },
   {
@@ -2453,14 +2432,14 @@ export const practiceTest9Questions: Question[] = [
     "target": "B",
     "dok": 3,
     "standard": "RI.3.9",
-    "type": "short-answer",
+    "type": "extended-writing",
     "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.\n\n---\n\nRead the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
     "passageTitle": "The Rainy Day Plan / Clouds in the Sky",
-    "questionText": "Both passages are connected to rain and weather. How does each passage show a different side of rain? Use one detail from each passage.",
-    "correctAnswer": "In 'The Rainy Day Plan,' rain was a problem at first because it stopped the kids from playing outside, but they ended up having a great day. In 'Clouds in the Sky,' rain is shown as something helpful because it provides water for people and the environment.",
-    "rubric": "2 points: mentions a specific detail from each passage and explains how each shows a different side of rain. 1 point: refers to only one passage or gives a general answer.",
-    "points": 2,
-    "explanation": "In the story, rain disrupted plans but led to unexpected fun. In the article, rain is explained as a natural process that benefits Earth by providing water.",
+    "questionText": "Write an informational response explaining what you learned about rain and weather from both passages. Use details from both texts.",
+    "correctAnswer": "Responses will vary. See rubric.",
+    "rubric": "4 points: clear main idea, organized explanation, relevant details from both passages, and grade-appropriate conventions. 3 points: adequate explanation using both passages with some development. 2 points: partial explanation with uneven source use. 1 point: minimal response. 0 points: off-topic or blank.",
+    "points": 4,
+    "explanation": "A strong response explains how the story shows a rainy day experience while the article explains cloud types and how rain forms.",
     "studentDirections": "You have read 'The Rainy Day Plan' and 'Clouds in the Sky.' Now you will write a paragraph that explains what you learned about rain and weather from both passages.\n\nIn your paragraph:\n- State your main idea\n- Use at least one detail from 'The Rainy Day Plan'\n- Use at least one detail from 'Clouds in the Sky'\n- Explain how the details support your main idea\n- Use complete sentences"
   }
 ];

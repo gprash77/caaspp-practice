@@ -2270,34 +2270,31 @@ export const practiceTest3Questions: Question[] = [
     "target": "1",
     "dok": 2,
     "standard": "W.2",
-    "type": "multiple-choice",
+    "type": "grid-match",
     "passage": "Read the passage and answer the questions.\n\n**The Surprise Garden**\n*by David Park*\n\nWhen Grandpa moved in with Ava's family, he brought three things: a worn leather suitcase, a rocking chair, and a bag of seeds.\n\n\"What are those for?\" Ava asked, eyeing the small paper packets.\n\n\"For the garden,\" Grandpa said with a wink.\n\n\"We don't have a garden,\" Ava replied.\n\n\"Not yet,\" said Grandpa.\n\nThe next morning, Ava found Grandpa in the backyard with a shovel. He had marked out a rectangle in the grass with string and wooden stakes.\n\n\"This will be our garden,\" he announced. \"But I need a helper.\"\n\nAva wasn't sure. Digging in the dirt didn't sound like fun. But Grandpa looked so excited that she picked up a small trowel and knelt beside him.\n\nTogether they turned the soil. Grandpa showed Ava how to make rows with her finger and drop tiny seeds into the ground. He taught her to cover them gently and sprinkle water from a can.\n\n\"Now we wait,\" Grandpa said.\n\nEvery morning, Ava checked the garden before school. For days, nothing happened. She was ready to give up.\n\n\"Patience,\" Grandpa reminded her. \"Good things take time.\"\n\nThen one Tuesday, Ava spotted something—a tiny green sprout pushing through the dark soil. She ran inside shouting, \"Grandpa! Something's growing!\"\n\nSoon there were sprouts everywhere. Grandpa taught Ava the names: tomatoes, cucumbers, sunflowers, and herbs like basil and mint. He showed her how to pull weeds carefully so she wouldn't disturb the baby plants.\n\nAs the weeks passed, the garden transformed. The tomato plants climbed up wooden stakes. The sunflowers stretched taller than Ava. The cucumber vines spread across the ground like green rivers.\n\nOne evening, Ava picked the first ripe tomato. It was warm from the sun and bright red. She washed it and sliced it for dinner.\n\n\"This is the best tomato I've ever tasted,\" said Dad, surprised.\n\nGrandpa smiled at Ava. \"That's because it was grown with patience and care.\"\n\nAva smiled back. She used to think gardening sounded boring. Now it was her favorite thing to do with Grandpa. And she was already planning what to plant next spring.\n\n---\n\nRead the passage and answer the questions.\n\n**The Busy World of Honeybees**\n*adapted from Smithsonian Education*\n\nA honeybee hive is one of nature's most organized communities. Inside a single hive, tens of thousands of bees work together to keep the colony alive. Each bee has a specific job based on its age and the needs of the hive.\n\n**Types of Bees**\n\nThere are three types of honeybees in a hive. The queen is the only bee that lays eggs. She can lay up to 2,000 eggs per day! Worker bees are all female. They do everything from building the honeycomb to collecting nectar to guarding the hive. Drones are male bees whose only job is to mate with a queen from another hive.\n\n**How Bees Make Honey**\n\nHoneybees visit flowers to collect nectar, a sweet liquid inside blossoms. A single bee might visit 50 to 100 flowers on one trip. The bee stores the nectar in a special stomach called a honey stomach. Back at the hive, the bee passes the nectar to other worker bees, who chew it and spread it into honeycomb cells. Then bees fan the nectar with their wings to remove water. When most of the water is gone, the nectar becomes thick, sticky honey. The bees seal each cell with a wax cap to keep the honey fresh.\n\n**Why Bees Dance**\n\nWhen a forager bee finds a good source of flowers, it returns to the hive and performs a special dance. The waggle dance tells other bees the direction and distance of the flowers. The bee waggles its body and moves in a figure-eight pattern. The angle of the dance shows the direction relative to the sun, and the length of the waggle tells how far away the flowers are. Other bees watch the dance carefully and then fly out to find the flowers.\n\n**Bees and Our Food**\n\nHoneybees are essential for growing food. When bees visit flowers to collect nectar, pollen sticks to their fuzzy bodies. As they move from flower to flower, they spread the pollen, which helps plants produce fruits, vegetables, and seeds. About one out of every three bites of food we eat depends on pollination by bees.\n\nIn recent years, bee populations have been declining due to pesticides, habitat loss, and disease. Scientists and farmers are working to protect bees by planting more wildflowers, using fewer chemicals, and building bee-friendly habitats.\n\n**Fun Bee Facts**\n\nA honeybee can fly about 15 miles per hour. In its lifetime, a single worker bee produces only about 1/12 of a teaspoon of honey. Bees have five eyes—two large compound eyes and three smaller eyes on top of their head. A beehive in summer can contain 60,000 to 80,000 bees.",
     "passageTitle": "The Surprise Garden / The Busy World of Honeybees",
     "passageAuthor": "David Park",
     "studentDirections": "**Your Assignment**\n\nYou will read the story \"The Surprise Garden\" and the article \"The Busy World of Honeybees.\" Then you will answer questions and write an essay about how plants and insects depend on each other.\n\n**Steps:**\n1. Read both sources carefully.\n2. Answer the research questions.\n3. Plan and write your essay.",
-    "questionText": "Based on 'The Surprise Garden,' what helped the garden grow successfully?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Ava watered the garden once and forgot about it."
-      },
-      {
-        "label": "B",
-        "text": "Grandpa and Ava worked together with patience and regular care."
-      },
-      {
-        "label": "C",
-        "text": "The garden grew by itself without any help."
-      },
-      {
-        "label": "D",
-        "text": "Dad planted all the seeds by himself."
-      }
+    "questionText": "Match each detail to the source where it belongs.",
+    "gridRows": [
+      "Grandpa showed Ava how to pull weeds carefully.",
+      "Worker bees spread pollen from flower to flower.",
+      "Ava picked the first ripe tomato for dinner.",
+      "The waggle dance helps other bees find flowers."
     ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies what made the garden successful.",
+    "gridColumns": [
+      "The Surprise Garden",
+      "The Busy World of Honeybees"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:1",
+      "2:0",
+      "3:1"
+    ],
+    "rubric": "The student correctly matches each detail to the source where it appears.",
     "points": 1,
-    "explanation": "The story shows Grandpa and Ava working together daily—planting seeds, pulling weeds, and checking on the garden every morning. Their patience and consistent care made it succeed."
+    "explanation": "The story includes details about caring for the garden, while the article explains how bees pollinate flowers and communicate about food sources."
   },
   {
     "id": 2151,
@@ -2306,35 +2303,17 @@ export const practiceTest3Questions: Question[] = [
     "subject": "ela",
     "grade": 3,
     "claim": 4,
-    "target": "2",
-    "dok": 2,
+    "target": "3",
+    "dok": 3,
     "standard": "W.2",
-    "type": "multiple-choice",
+    "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The Surprise Garden**\n*by David Park*\n\nWhen Grandpa moved in with Ava's family, he brought three things: a worn leather suitcase, a rocking chair, and a bag of seeds.\n\n\"What are those for?\" Ava asked, eyeing the small paper packets.\n\n\"For the garden,\" Grandpa said with a wink.\n\n\"We don't have a garden,\" Ava replied.\n\n\"Not yet,\" said Grandpa.\n\nThe next morning, Ava found Grandpa in the backyard with a shovel. He had marked out a rectangle in the grass with string and wooden stakes.\n\n\"This will be our garden,\" he announced. \"But I need a helper.\"\n\nAva wasn't sure. Digging in the dirt didn't sound like fun. But Grandpa looked so excited that she picked up a small trowel and knelt beside him.\n\nTogether they turned the soil. Grandpa showed Ava how to make rows with her finger and drop tiny seeds into the ground. He taught her to cover them gently and sprinkle water from a can.\n\n\"Now we wait,\" Grandpa said.\n\nEvery morning, Ava checked the garden before school. For days, nothing happened. She was ready to give up.\n\n\"Patience,\" Grandpa reminded her. \"Good things take time.\"\n\nThen one Tuesday, Ava spotted something—a tiny green sprout pushing through the dark soil. She ran inside shouting, \"Grandpa! Something's growing!\"\n\nSoon there were sprouts everywhere. Grandpa taught Ava the names: tomatoes, cucumbers, sunflowers, and herbs like basil and mint. He showed her how to pull weeds carefully so she wouldn't disturb the baby plants.\n\nAs the weeks passed, the garden transformed. The tomato plants climbed up wooden stakes. The sunflowers stretched taller than Ava. The cucumber vines spread across the ground like green rivers.\n\nOne evening, Ava picked the first ripe tomato. It was warm from the sun and bright red. She washed it and sliced it for dinner.\n\n\"This is the best tomato I've ever tasted,\" said Dad, surprised.\n\nGrandpa smiled at Ava. \"That's because it was grown with patience and care.\"\n\nAva smiled back. She used to think gardening sounded boring. Now it was her favorite thing to do with Grandpa. And she was already planning what to plant next spring.\n\n---\n\nRead the passage and answer the questions.\n\n**The Busy World of Honeybees**\n*adapted from Smithsonian Education*\n\nA honeybee hive is one of nature's most organized communities. Inside a single hive, tens of thousands of bees work together to keep the colony alive. Each bee has a specific job based on its age and the needs of the hive.\n\n**Types of Bees**\n\nThere are three types of honeybees in a hive. The queen is the only bee that lays eggs. She can lay up to 2,000 eggs per day! Worker bees are all female. They do everything from building the honeycomb to collecting nectar to guarding the hive. Drones are male bees whose only job is to mate with a queen from another hive.\n\n**How Bees Make Honey**\n\nHoneybees visit flowers to collect nectar, a sweet liquid inside blossoms. A single bee might visit 50 to 100 flowers on one trip. The bee stores the nectar in a special stomach called a honey stomach. Back at the hive, the bee passes the nectar to other worker bees, who chew it and spread it into honeycomb cells. Then bees fan the nectar with their wings to remove water. When most of the water is gone, the nectar becomes thick, sticky honey. The bees seal each cell with a wax cap to keep the honey fresh.\n\n**Why Bees Dance**\n\nWhen a forager bee finds a good source of flowers, it returns to the hive and performs a special dance. The waggle dance tells other bees the direction and distance of the flowers. The bee waggles its body and moves in a figure-eight pattern. The angle of the dance shows the direction relative to the sun, and the length of the waggle tells how far away the flowers are. Other bees watch the dance carefully and then fly out to find the flowers.\n\n**Bees and Our Food**\n\nHoneybees are essential for growing food. When bees visit flowers to collect nectar, pollen sticks to their fuzzy bodies. As they move from flower to flower, they spread the pollen, which helps plants produce fruits, vegetables, and seeds. About one out of every three bites of food we eat depends on pollination by bees.\n\nIn recent years, bee populations have been declining due to pesticides, habitat loss, and disease. Scientists and farmers are working to protect bees by planting more wildflowers, using fewer chemicals, and building bee-friendly habitats.\n\n**Fun Bee Facts**\n\nA honeybee can fly about 15 miles per hour. In its lifetime, a single worker bee produces only about 1/12 of a teaspoon of honey. Bees have five eyes—two large compound eyes and three smaller eyes on top of their head. A beehive in summer can contain 60,000 to 80,000 bees.",
     "passageTitle": "The Surprise Garden / The Busy World of Honeybees",
-    "questionText": "According to 'The Busy World of Honeybees,' how do bees help gardens grow?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Bees water the plants."
-      },
-      {
-        "label": "B",
-        "text": "Bees eat the weeds."
-      },
-      {
-        "label": "C",
-        "text": "Bees spread pollen from flower to flower, helping plants produce fruit."
-      },
-      {
-        "label": "D",
-        "text": "Bees build nests near gardens to protect them."
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the role of bees in gardens.",
-    "points": 1,
-    "explanation": "The passage explains that bees spread pollen as they move between flowers, which 'helps plants produce fruits, vegetables, and seeds.'",
+    "questionText": "How does each source show that plants and insects help living things grow? Use one detail from each source in your answer.",
+    "correctAnswer": "In The Surprise Garden, Grandpa and Ava help plants grow by watering, weeding, and caring for the garden. In The Busy World of Honeybees, bees spread pollen from flower to flower, which helps plants produce fruits, vegetables, and seeds.",
+    "rubric": "2 points: The student explains how each source shows plants or insects helping growth and includes one accurate detail from each source. 1 point: The student uses one source clearly or gives a partial answer about both. 0 points: All other responses.",
+    "points": 2,
+    "explanation": "A strong response connects human care in the garden story with bee pollination in the article to show how growth happens.",
     "studentDirections": "**Your Assignment**\n\nYou will read the story \"The Surprise Garden\" and the article \"The Busy World of Honeybees.\" Then you will answer questions and write an essay about how plants and insects depend on each other.\n\n**Steps:**\n1. Read both sources carefully.\n2. Answer the research questions.\n3. Plan and write your essay.",
     "passageAuthor": "David Park"
   },

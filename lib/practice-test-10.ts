@@ -2366,36 +2366,33 @@ export const practiceTest10Questions: Question[] = [
     "practiceTest": 10,
     "testType": "pt",
     "subject": "ela",
-    "claim": 1,
+    "claim": 4,
     "target": "1",
     "dok": 3,
     "standard": "RL.3.1",
-    "type": "multiple-choice",
+    "type": "grid-match",
     "passage": "Read the passage and answer the questions.\n\n**The River Race**\n*by Maria Santos*\n\nThe Clearwater River Race was held every August. Twelve-year-old Nadia had trained for months, but standing at the water's edge that morning, her legs felt heavy.\n\n\"You've practiced this course a hundred times,\" said her coach, Mr. Alvarez.\n\n\"Practicing in a pool is different,\" Nadia said.\n\nThe river did look different than usual. Heavy rains the week before had raised the water level and darkened the color. Boulders that usually jutted above the surface were now submerged. The current seemed faster.\n\nNadia looked down the lineup of competitors. Several of them looked calm and focused. One girl, wearing number seven, was stretching her arms and nodding to herself as if she had already decided she would win.\n\nThe starting horn blasted. Nadia dove.\n\nThe cold water hit her like a wall. For a moment, her breathing stopped and her thoughts scattered. Then her training took over — arms pulling, legs kicking, eyes finding the rhythm of the current instead of fighting it. She had learned this: the river was not her enemy. It had its own direction, and the fastest swimmers learned to borrow that direction.\n\nMidway through the course, a cramp tightened in her left calf. She slowed, adjusted her kick, breathed through it. The girl in number seven passed her on the right. Nadia gritted her teeth. She thought about all the early mornings and cold practices. She thought about her grandfather, who had once told her that rivers teach patience — you cannot rush a river, but you can learn to move with it.\n\nShe pushed on.\n\nWhen her hand touched the finish dock, she did not know where she had placed. She pulled herself out of the water and looked at the board.\n\nSecond place.\n\nIt was not the gold medal she had imagined. But as she caught her breath, she thought about the cramp, the raised water, the cold — and how she had moved through all of it. She turned to the girl in number seven, who had won.\n\n\"Great race,\" Nadia said.\n\nThe girl looked surprised. Then she smiled. \"You too. That last stretch — I really had to push.\"\n\nNadia nodded. Second place, she decided, was not the end of something. It was a beginning.\n\n---\n\nRead the passage and answer the questions.\n\n**The Long Journey of the Monarch Butterfly**\n\nEvery fall, hundreds of millions of monarch butterflies begin one of the most remarkable migrations in the natural world. These orange-and-black insects travel up to 3,000 miles from their summer homes in Canada and the northern United States to their winter grounds in the oyamel fir forests of central Mexico. What makes this journey astonishing is that no single butterfly has made the trip before.\n\n**Navigation Without a Map**\n\nScientists are still working to fully understand how monarchs navigate. Research suggests they use a combination of the sun's position and an internal clock — called a circadian rhythm — to determine direction. On cloudy days, they may rely on Earth's magnetic field. This biological navigation system allows them to travel to forests their ancestors visited but that they themselves have never seen.\n\n**The Overwintering Forests**\n\nWhen monarchs arrive in Mexico, they cluster by the millions on oyamel fir trees. The cool mountain air slows their metabolism, allowing them to survive the winter on stored fat. On warm days, they flutter through the forest in shimmering clouds. In early spring, they begin the journey north, stopping to lay eggs on milkweed plants along the way. The butterflies that complete the return trip are actually the great-great-grandchildren of the ones that flew south.\n\n**A Species Under Threat**\n\nMonarch populations have declined sharply over the past several decades. Loss of milkweed habitat — caused by pesticide use and land development — threatens caterpillars, which can only feed on milkweed. Logging in Mexican forests reduces the overwintering habitat. Climate change disrupts the timing of migration and the availability of food sources.\n\nConservation efforts include replanting milkweed, protecting Mexican forests, and creating certified monarch waystation gardens. Scientists continue to monitor populations and study migration patterns to better protect this extraordinary insect.",
     "passageTitle": "The River Race / The Long Journey of the Monarch Butterfly",
-    "questionText": "Which detail from each passage best shows that preparing for challenges can lead to success?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Nadia's training took over automatically; monarchs use a combination of the sun and magnetic field to navigate"
-      },
-      {
-        "label": "B",
-        "text": "Nadia wore a swimsuit; monarchs have orange and black wings"
-      },
-      {
-        "label": "C",
-        "text": "Nadia came in second; monarchs cluster in trees"
-      },
-      {
-        "label": "D",
-        "text": "Nadia trained in a pool; monarchs travel in fall"
-      }
+    "questionText": "Match each detail to the source where it belongs.",
+    "gridRows": [
+      "Nadia learns to find the rhythm of the current instead of fighting it.",
+      "Monarchs may use Earth's magnetic field on cloudy days.",
+      "A cramp tightens in Nadia's left calf during the race.",
+      "The butterflies that return north are later generations, not the same ones that flew south."
     ],
-    "correctAnswer": "A",
-    "rubric": "The student connects evidence about preparation from both texts.",
+    "gridColumns": [
+      "Source 1",
+      "Source 2"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:1",
+      "2:0",
+      "3:1"
+    ],
+    "rubric": "The student correctly matches each detail to the source where it belongs.",
     "points": 1,
-    "explanation": "Nadia's training took over automatically (months of preparation), while monarchs have biological navigational tools (nature's own 'preparation'). Both details show that built-in or trained skills lead to success.",
+    "explanation": "Rows 1 and 3 come from the river race story. Rows 2 and 4 come from the monarch migration article.",
     "studentDirections": "You have read 'The River Race' and 'The Long Journey of the Monarch Butterfly.' Both passages feature a long, challenging journey.\n\nWrite an informational response that explains what both passages teach us about facing long, difficult challenges.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from each passage\n- Explain how your details support your main idea\n- Organize your writing clearly\n- Use complete sentences and correct conventions"
   },
   {
@@ -2408,32 +2405,14 @@ export const practiceTest10Questions: Question[] = [
     "target": "2",
     "dok": 4,
     "standard": "RI.3.9",
-    "type": "multiple-choice",
+    "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The River Race**\n*by Maria Santos*\n\nThe Clearwater River Race was held every August. Twelve-year-old Nadia had trained for months, but standing at the water's edge that morning, her legs felt heavy.\n\n\"You've practiced this course a hundred times,\" said her coach, Mr. Alvarez.\n\n\"Practicing in a pool is different,\" Nadia said.\n\nThe river did look different than usual. Heavy rains the week before had raised the water level and darkened the color. Boulders that usually jutted above the surface were now submerged. The current seemed faster.\n\nNadia looked down the lineup of competitors. Several of them looked calm and focused. One girl, wearing number seven, was stretching her arms and nodding to herself as if she had already decided she would win.\n\nThe starting horn blasted. Nadia dove.\n\nThe cold water hit her like a wall. For a moment, her breathing stopped and her thoughts scattered. Then her training took over — arms pulling, legs kicking, eyes finding the rhythm of the current instead of fighting it. She had learned this: the river was not her enemy. It had its own direction, and the fastest swimmers learned to borrow that direction.\n\nMidway through the course, a cramp tightened in her left calf. She slowed, adjusted her kick, breathed through it. The girl in number seven passed her on the right. Nadia gritted her teeth. She thought about all the early mornings and cold practices. She thought about her grandfather, who had once told her that rivers teach patience — you cannot rush a river, but you can learn to move with it.\n\nShe pushed on.\n\nWhen her hand touched the finish dock, she did not know where she had placed. She pulled herself out of the water and looked at the board.\n\nSecond place.\n\nIt was not the gold medal she had imagined. But as she caught her breath, she thought about the cramp, the raised water, the cold — and how she had moved through all of it. She turned to the girl in number seven, who had won.\n\n\"Great race,\" Nadia said.\n\nThe girl looked surprised. Then she smiled. \"You too. That last stretch — I really had to push.\"\n\nNadia nodded. Second place, she decided, was not the end of something. It was a beginning.\n\n---\n\nRead the passage and answer the questions.\n\n**The Long Journey of the Monarch Butterfly**\n\nEvery fall, hundreds of millions of monarch butterflies begin one of the most remarkable migrations in the natural world. These orange-and-black insects travel up to 3,000 miles from their summer homes in Canada and the northern United States to their winter grounds in the oyamel fir forests of central Mexico. What makes this journey astonishing is that no single butterfly has made the trip before.\n\n**Navigation Without a Map**\n\nScientists are still working to fully understand how monarchs navigate. Research suggests they use a combination of the sun's position and an internal clock — called a circadian rhythm — to determine direction. On cloudy days, they may rely on Earth's magnetic field. This biological navigation system allows them to travel to forests their ancestors visited but that they themselves have never seen.\n\n**The Overwintering Forests**\n\nWhen monarchs arrive in Mexico, they cluster by the millions on oyamel fir trees. The cool mountain air slows their metabolism, allowing them to survive the winter on stored fat. On warm days, they flutter through the forest in shimmering clouds. In early spring, they begin the journey north, stopping to lay eggs on milkweed plants along the way. The butterflies that complete the return trip are actually the great-great-grandchildren of the ones that flew south.\n\n**A Species Under Threat**\n\nMonarch populations have declined sharply over the past several decades. Loss of milkweed habitat — caused by pesticide use and land development — threatens caterpillars, which can only feed on milkweed. Logging in Mexican forests reduces the overwintering habitat. Climate change disrupts the timing of migration and the availability of food sources.\n\nConservation efforts include replanting milkweed, protecting Mexican forests, and creating certified monarch waystation gardens. Scientists continue to monitor populations and study migration patterns to better protect this extraordinary insect.",
     "passageTitle": "The River Race / The Long Journey of the Monarch Butterfly",
-    "questionText": "What idea is supported by both passages?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Only humans are capable of impressive journeys"
-      },
-      {
-        "label": "B",
-        "text": "Difficult journeys can be completed by relying on both instinct and learned skills"
-      },
-      {
-        "label": "C",
-        "text": "The longest journey always ends in victory"
-      },
-      {
-        "label": "D",
-        "text": "Nature should not be disturbed"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a shared idea across texts.",
-    "points": 1,
-    "explanation": "Nadia uses training (learned) and athletic instinct, while monarchs use biology (instinct) and navigation systems. Both passages show that journeys are completed through a combination of instinct and developed skill.",
+    "questionText": "Explain one way the story and the article both show that long challenges can be completed. Use one detail from each text.",
+    "correctAnswer": "In the story, Nadia finishes the river race by using her training and adjusting to the current even after a cramp. In the article, monarch butterflies complete migration by using navigation clues such as the sun and Earth's magnetic field. Both texts show that difficult journeys can be completed with skill and persistence.",
+    "rubric": "2 points: clear explanation with one accurate detail from each text. 1 point: partial response or clear use of only one text.",
+    "points": 2,
+    "explanation": "A strong answer connects Nadia's race skills with the monarchs' migration abilities.",
     "studentDirections": "You have read 'The River Race' and 'The Long Journey of the Monarch Butterfly.' Both passages feature a long, challenging journey.\n\nWrite an informational response that explains what both passages teach us about facing long, difficult challenges.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from each passage\n- Explain how your details support your main idea\n- Organize your writing clearly\n- Use complete sentences and correct conventions"
   },
   {
@@ -2446,14 +2425,14 @@ export const practiceTest10Questions: Question[] = [
     "target": "3",
     "dok": 4,
     "standard": "W.3.9",
-    "type": "short-answer",
+    "type": "extended-writing",
     "passage": "Read the passage and answer the questions.\n\n**The River Race**\n*by Maria Santos*\n\nThe Clearwater River Race was held every August. Twelve-year-old Nadia had trained for months, but standing at the water's edge that morning, her legs felt heavy.\n\n\"You've practiced this course a hundred times,\" said her coach, Mr. Alvarez.\n\n\"Practicing in a pool is different,\" Nadia said.\n\nThe river did look different than usual. Heavy rains the week before had raised the water level and darkened the color. Boulders that usually jutted above the surface were now submerged. The current seemed faster.\n\nNadia looked down the lineup of competitors. Several of them looked calm and focused. One girl, wearing number seven, was stretching her arms and nodding to herself as if she had already decided she would win.\n\nThe starting horn blasted. Nadia dove.\n\nThe cold water hit her like a wall. For a moment, her breathing stopped and her thoughts scattered. Then her training took over — arms pulling, legs kicking, eyes finding the rhythm of the current instead of fighting it. She had learned this: the river was not her enemy. It had its own direction, and the fastest swimmers learned to borrow that direction.\n\nMidway through the course, a cramp tightened in her left calf. She slowed, adjusted her kick, breathed through it. The girl in number seven passed her on the right. Nadia gritted her teeth. She thought about all the early mornings and cold practices. She thought about her grandfather, who had once told her that rivers teach patience — you cannot rush a river, but you can learn to move with it.\n\nShe pushed on.\n\nWhen her hand touched the finish dock, she did not know where she had placed. She pulled herself out of the water and looked at the board.\n\nSecond place.\n\nIt was not the gold medal she had imagined. But as she caught her breath, she thought about the cramp, the raised water, the cold — and how she had moved through all of it. She turned to the girl in number seven, who had won.\n\n\"Great race,\" Nadia said.\n\nThe girl looked surprised. Then she smiled. \"You too. That last stretch — I really had to push.\"\n\nNadia nodded. Second place, she decided, was not the end of something. It was a beginning.\n\n---\n\nRead the passage and answer the questions.\n\n**The Long Journey of the Monarch Butterfly**\n\nEvery fall, hundreds of millions of monarch butterflies begin one of the most remarkable migrations in the natural world. These orange-and-black insects travel up to 3,000 miles from their summer homes in Canada and the northern United States to their winter grounds in the oyamel fir forests of central Mexico. What makes this journey astonishing is that no single butterfly has made the trip before.\n\n**Navigation Without a Map**\n\nScientists are still working to fully understand how monarchs navigate. Research suggests they use a combination of the sun's position and an internal clock — called a circadian rhythm — to determine direction. On cloudy days, they may rely on Earth's magnetic field. This biological navigation system allows them to travel to forests their ancestors visited but that they themselves have never seen.\n\n**The Overwintering Forests**\n\nWhen monarchs arrive in Mexico, they cluster by the millions on oyamel fir trees. The cool mountain air slows their metabolism, allowing them to survive the winter on stored fat. On warm days, they flutter through the forest in shimmering clouds. In early spring, they begin the journey north, stopping to lay eggs on milkweed plants along the way. The butterflies that complete the return trip are actually the great-great-grandchildren of the ones that flew south.\n\n**A Species Under Threat**\n\nMonarch populations have declined sharply over the past several decades. Loss of milkweed habitat — caused by pesticide use and land development — threatens caterpillars, which can only feed on milkweed. Logging in Mexican forests reduces the overwintering habitat. Climate change disrupts the timing of migration and the availability of food sources.\n\nConservation efforts include replanting milkweed, protecting Mexican forests, and creating certified monarch waystation gardens. Scientists continue to monitor populations and study migration patterns to better protect this extraordinary insect.",
     "passageTitle": "The River Race / The Long Journey of the Monarch Butterfly",
-    "questionText": "Both the river and the monarch's migration route are described as something that must be understood and worked with rather than fought against. Using one specific detail from each passage, explain how this idea appears in both texts.",
-    "correctAnswer": "In The River Race, Nadia learns that the river 'had its own direction' and the fastest swimmers borrow that direction rather than fighting it. In The Long Journey of the Monarch Butterfly, monarchs navigate using the sun and Earth's magnetic field, working with natural forces rather than against them.",
-    "rubric": "2 points: specific detail from each text and a clear explanation of how each illustrates working with natural forces. 1 point: one relevant detail with explanation, or two details without explanation.",
-    "points": 2,
-    "explanation": "Both texts show that success comes from understanding and working with nature — Nadia learns from the river, and monarchs evolved to use Earth's natural systems.",
+    "questionText": "Write an informational response explaining what both passages teach us about facing long, difficult challenges. Use details from both texts.",
+    "correctAnswer": "Responses will vary. See rubric.",
+    "rubric": "4 points: clear main idea, organized explanation, relevant details from both passages, and grade-appropriate conventions. 3 points: adequate explanation using both passages with some development. 2 points: partial explanation with uneven source use. 1 point: minimal response. 0 points: off-topic or blank.",
+    "points": 4,
+    "explanation": "A strong response explains how both Nadia and the monarch butterflies complete difficult journeys through preparation, skill, and persistence.",
     "studentDirections": "You have read 'The River Race' and 'The Long Journey of the Monarch Butterfly.' Both passages feature a long, challenging journey.\n\nWrite an informational response that explains what both passages teach us about facing long, difficult challenges.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from each passage\n- Explain how your details support your main idea\n- Organize your writing clearly\n- Use complete sentences and correct conventions"
   }
 ];

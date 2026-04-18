@@ -2330,36 +2330,33 @@ export const practiceTest6Questions: Question[] = [
     "testType": "pt",
     "subject": "ela",
     "grade": 3,
-    "claim": 1,
-    "target": "1",
+    "claim": 4,
+    "target": "2",
     "dok": 2,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
+    "standard": "RI.3.9",
+    "type": "grid-match",
     "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.\n\n---\n\nRead the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
     "passageTitle": "The Lantern Bridge / How Rivers Shape the Land",
-    "questionText": "Which detail from BOTH passages shows that water can influence a community?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Pine Creek changed the lantern walk, and rivers provide water and habitats that communities depend on"
-      },
-      {
-        "label": "B",
-        "text": "Maya painted fish, and rivers always flow straight"
-      },
-      {
-        "label": "C",
-        "text": "The bakery sent rolls, and fish lay eggs"
-      },
-      {
-        "label": "D",
-        "text": "The bridge was wooden, and sediment can build up"
-      }
+    "questionText": "Match each detail to the source that best includes it.",
+    "gridRows": [
+      "Families move the lantern walk to Maple Park.",
+      "Flowing water can cause erosion.",
+      "Mr. Vega repairs boards on the bridge.",
+      "Sediment can build up along riverbanks."
     ],
-    "correctAnswer": "A",
-    "rubric": "The student connects evidence across both sources.",
+    "gridColumns": [
+      "The Lantern Bridge",
+      "How Rivers Shape the Land"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:1",
+      "2:0",
+      "3:1"
+    ],
+    "rubric": "The student correctly matches each detail to the source where it belongs.",
     "points": 1,
-    "explanation": "In the story, the creek and bridge affect the town's tradition. In the article, rivers affect communities by supplying water and habitats.",
+    "explanation": "The story includes the moved lantern walk and bridge repairs, while the article explains erosion and sediment.",
     "studentDirections": "You have read 'The Lantern Bridge' and 'How Rivers Shape the Land.' Now write an informational paragraph or short essay explaining why waterways matter to communities.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from 'The Lantern Bridge'\n- Use at least one detail from 'How Rivers Shape the Land'\n- Explain how the details support your main idea\n- Use complete sentences and correct punctuation"
   },
   {
@@ -2372,32 +2369,14 @@ export const practiceTest6Questions: Question[] = [
     "target": "2",
     "dok": 3,
     "standard": "RI.3.9",
-    "type": "multiple-choice",
+    "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.\n\n---\n\nRead the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
     "passageTitle": "The Lantern Bridge / How Rivers Shape the Land",
-    "questionText": "How are the two passages mostly different?",
-    "options": [
-      {
-        "label": "A",
-        "text": "One is about a community event, and the other explains science ideas about rivers"
-      },
-      {
-        "label": "B",
-        "text": "Both are only about animals"
-      },
-      {
-        "label": "C",
-        "text": "One gives directions, and the other is a poem"
-      },
-      {
-        "label": "D",
-        "text": "Both are personal letters"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student compares the focus of two texts.",
-    "points": 1,
-    "explanation": "The first text is a narrative about a town tradition, while the second text is an informational article about rivers.",
+    "questionText": "How does each source show that waterways affect people? Use one detail from each source in your answer.",
+    "correctAnswer": "The Lantern Bridge shows that Pine Creek affects the town because the closed bridge changes the lantern walk tradition. How Rivers Shape the Land shows that waterways affect people by providing water, transportation, and habitats communities depend on.",
+    "rubric": "2 points: The response explains how each source shows waterways affecting people and includes one accurate detail from each source. 1 point: The response uses only one source or gives a partial explanation.",
+    "points": 2,
+    "explanation": "A strong response uses one example from the story and one from the article to explain how waterways matter to people.",
     "studentDirections": "You have read 'The Lantern Bridge' and 'How Rivers Shape the Land.' Now write an informational paragraph or short essay explaining why waterways matter to communities.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from 'The Lantern Bridge'\n- Use at least one detail from 'How Rivers Shape the Land'\n- Explain how the details support your main idea\n- Use complete sentences and correct punctuation"
   },
   {
@@ -2407,17 +2386,17 @@ export const practiceTest6Questions: Question[] = [
     "subject": "ela",
     "grade": 3,
     "claim": 2,
-    "target": "3",
-    "dok": 3,
-    "standard": "W.3.9",
-    "type": "short-answer",
+    "target": "E",
+    "dok": 4,
+    "standard": "W.3.2",
+    "type": "extended-writing",
     "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.\n\n---\n\nRead the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
     "passageTitle": "The Lantern Bridge / How Rivers Shape the Land",
-    "questionText": "Both passages show that people are connected to waterways. Explain one way the town in 'The Lantern Bridge' is connected to Pine Creek and one way people are connected to rivers in the article. Write 2-3 sentences.",
-    "correctAnswer": "The town in The Lantern Bridge is connected to Pine Creek because the bridge and creek are part of the lantern walk tradition. In the article, people are connected to rivers because rivers provide water, transportation, and places for recreation.",
-    "rubric": "2 points: response includes one clear example from each text. 1 point: response includes only one text or is partly correct.",
-    "points": 2,
-    "explanation": "A strong answer gives one example from the story and one from the article to show how people depend on waterways.",
+    "questionText": "Write an essay explaining why waterways matter to communities. Use details from both sources.",
+    "correctAnswer": "Responses will vary. See rubric.",
+    "rubric": "4 points: The response clearly explains why waterways matter to communities, uses accurate details from both sources, is organized, and shows grade-appropriate conventions. 3 points: The response uses both sources but may be less developed. 2 points: The response uses limited evidence or depends mostly on one source. 1 point: Minimal response. 0 points: Off-topic or blank.",
+    "points": 4,
+    "explanation": "A strong essay explains how waterways shape community life and supports the explanation with details from both sources.",
     "studentDirections": "You have read 'The Lantern Bridge' and 'How Rivers Shape the Land.' Now write an informational paragraph or short essay explaining why waterways matter to communities.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from 'The Lantern Bridge'\n- Use at least one detail from 'How Rivers Shape the Land'\n- Explain how the details support your main idea\n- Use complete sentences and correct punctuation"
   }
 ];

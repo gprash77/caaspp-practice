@@ -2273,37 +2273,34 @@ export const practiceTest5Questions: Question[] = [
     "testType": "pt",
     "subject": "ela",
     "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
+    "claim": 4,
+    "domain": "RI",
+    "target": "D",
+    "dok": 2,
+    "standard": "RI.3.9",
+    "type": "grid-match",
     "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"\n\n---\n\nRead the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
     "passageTitle": "The Lemonade Stand / Amazing Animal Homes",
-    "questionText": "In 'The Lemonade Stand,' Lily and Jake work together to sell lemonade. In 'Amazing Animal Homes,' which animals also work together?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Rabbits"
-      },
-      {
-        "label": "B",
-        "text": "Eagles"
-      },
-      {
-        "label": "C",
-        "text": "Honeybees"
-      },
-      {
-        "label": "D",
-        "text": "Groundhogs"
-      }
+    "questionText": "Match each detail to the source that best includes it.",
+    "gridRows": [
+      "Jake makes a cardboard sign for the stand.",
+      "The entrance to a beaver lodge is underwater.",
+      "Lily and Jake sell all of their lemonade by the end of the day.",
+      "Honeycomb is made of wax."
     ],
-    "correctAnswer": "C",
-    "rubric": "The student connects information across two texts.",
+    "gridColumns": [
+      "The Lemonade Stand",
+      "Amazing Animal Homes"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:1",
+      "2:0",
+      "3:1"
+    ],
+    "rubric": "The student correctly matches each detail to the source where it belongs.",
     "points": 1,
-    "explanation": "The passage about animal homes describes how honeybees work together in a hive, similar to how Lily and Jake worked as a team.",
+    "explanation": "The story includes Jake's sign and the sold-out stand, while the article includes the beaver lodge and honeycomb details.",
     "studentDirections": "You have read 'The Lemonade Stand' and 'Amazing Animal Homes.' Now you will write a paragraph about working together.\n\nIn your paragraph:\n- Explain how teamwork is shown in BOTH passages\n- Give at least one example from 'The Lemonade Stand'\n- Give at least one example from 'Amazing Animal Homes'\n- Tell why working together is important\n- Use complete sentences with correct spelling and punctuation"
   },
   {
@@ -2317,32 +2314,14 @@ export const practiceTest5Questions: Question[] = [
     "target": "D",
     "dok": 2,
     "standard": "RI.3.9",
-    "type": "multiple-choice",
+    "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"\n\n---\n\nRead the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
     "passageTitle": "The Lemonade Stand / Amazing Animal Homes",
-    "questionText": "How are the two passages different?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Both are fiction stories"
-      },
-      {
-        "label": "B",
-        "text": "'The Lemonade Stand' is a story, and 'Amazing Animal Homes' gives facts"
-      },
-      {
-        "label": "C",
-        "text": "'Amazing Animal Homes' is a story, and 'The Lemonade Stand' gives facts"
-      },
-      {
-        "label": "D",
-        "text": "Both give facts about nature"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student distinguishes between fiction and informational text.",
-    "points": 1,
-    "explanation": "'The Lemonade Stand' is a made-up fiction story. 'Amazing Animal Homes' is an informational text with real facts.",
+    "questionText": "How does each source show that building something takes planning? Use one detail from each source in your answer.",
+    "correctAnswer": "The Lemonade Stand shows planning because Lily and Jake gather supplies, mix the lemonade, and make a sign before selling. Amazing Animal Homes shows planning because animals build nests, lodges, or hives from materials that help protect them.",
+    "rubric": "2 points: The response explains how each source shows planning and includes one accurate detail from each source. 1 point: The response uses only one source or gives a partial explanation.",
+    "points": 2,
+    "explanation": "A strong response uses one example of planning from the story and one example of purposeful building from the article.",
     "studentDirections": "You have read 'The Lemonade Stand' and 'Amazing Animal Homes.' Now you will write a paragraph about working together.\n\nIn your paragraph:\n- Explain how teamwork is shown in BOTH passages\n- Give at least one example from 'The Lemonade Stand'\n- Give at least one example from 'Amazing Animal Homes'\n- Tell why working together is important\n- Use complete sentences with correct spelling and punctuation"
   },
   {
@@ -2352,18 +2331,18 @@ export const practiceTest5Questions: Question[] = [
     "subject": "ela",
     "grade": 3,
     "claim": 2,
-    "domain": "RL",
-    "target": "B",
-    "dok": 2,
-    "standard": "RL.3.9",
-    "type": "short-answer",
+    "domain": "W",
+    "target": "E",
+    "dok": 4,
+    "standard": "W.3.2",
+    "type": "extended-writing",
     "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"\n\n---\n\nRead the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
     "passageTitle": "The Lemonade Stand / Amazing Animal Homes",
-    "questionText": "Both passages show examples of building something. What did Lily and Jake build? What do beavers build? Write 1-2 sentences comparing them.",
-    "correctAnswer": "Lily and Jake built a lemonade stand using cardboard and markers. Beavers build lodges using sticks, mud, and rocks. Both used materials they could find to create something they needed.",
-    "rubric": "The student compares building across texts. 2 points for identifying what both built and making a comparison; 1 point for partial response.",
-    "points": 2,
-    "explanation": "Lily and Jake built a lemonade stand (with a cardboard sign). Beavers build lodges from sticks and mud. Both built something useful from available materials!",
+    "questionText": "Write an essay explaining how both sources show teamwork or cooperation. Use details from both sources.",
+    "correctAnswer": "Responses will vary. See rubric.",
+    "rubric": "4 points: The response clearly explains how teamwork or cooperation is shown, uses accurate details from both sources, is organized, and shows grade-appropriate conventions. 3 points: The response uses both sources but may be less developed. 2 points: The response uses limited evidence or depends mostly on one source. 1 point: Minimal response. 0 points: Off-topic or blank.",
+    "points": 4,
+    "explanation": "A strong essay explains how people or animals work together and supports the ideas with details from both sources.",
     "studentDirections": "You have read 'The Lemonade Stand' and 'Amazing Animal Homes.' Now you will write a paragraph about working together.\n\nIn your paragraph:\n- Explain how teamwork is shown in BOTH passages\n- Give at least one example from 'The Lemonade Stand'\n- Give at least one example from 'Amazing Animal Homes'\n- Tell why working together is important\n- Use complete sentences with correct spelling and punctuation"
   }
 ];

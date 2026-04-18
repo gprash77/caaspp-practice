@@ -2252,34 +2252,31 @@ export const practiceTest2Questions: Question[] = [
     "target": "1",
     "dok": 2,
     "standard": "W.2",
-    "type": "multiple-choice",
+    "type": "grid-match",
     "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.\n\n---\n\nRead the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
     "passageTitle": "The Storm Dog / The Amazing Ocean",
     "passageAuthor": "Clara Mitchell",
     "studentDirections": "**Your Assignment**\n\nYou will read the story \"The Storm Dog\" and the article \"The Amazing Ocean.\" Then you will answer questions and write an essay about how people can help animals.\n\n**Steps:**\n1. Read both sources carefully.\n2. Answer the research questions.\n3. Plan and write your essay.",
-    "questionText": "Based on the story 'The Storm Dog,' which of these is the best example of how one person can help an animal?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Maya drew pictures of the dog at school."
-      },
-      {
-        "label": "B",
-        "text": "Maya and her Mama drove through the rain to rescue the dog."
-      },
-      {
-        "label": "C",
-        "text": "Ms. Rivera told Maya that animals find their way."
-      },
-      {
-        "label": "D",
-        "text": "Maya told her Mama about the dog."
-      }
+    "questionText": "Match each detail to the source where it belongs.",
+    "gridRows": [
+      "Maya wrapped a towel around the trembling dog.",
+      "Plastic waste can make sea animals sick.",
+      "A shelter checked the dog for a microchip.",
+      "People can reduce plastic use to help the ocean."
     ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the strongest example of helping an animal.",
+    "gridColumns": [
+      "The Storm Dog",
+      "The Amazing Ocean"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:1",
+      "2:0",
+      "3:1"
+    ],
+    "rubric": "The student correctly matches each detail to the source where it appears.",
     "points": 1,
-    "explanation": "Actually going out in the storm to rescue the dog was a direct action that helped the animal, making it the strongest example."
+    "explanation": "The story includes details about rescuing and caring for Storm, while the article explains how pollution harms ocean animals and how people can help."
   },
   {
     "id": 1151,
@@ -2288,35 +2285,17 @@ export const practiceTest2Questions: Question[] = [
     "subject": "ela",
     "grade": 3,
     "claim": 4,
-    "target": "2",
-    "dok": 2,
+    "target": "3",
+    "dok": 3,
     "standard": "W.2",
-    "type": "multiple-choice",
+    "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.\n\n---\n\nRead the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
     "passageTitle": "The Storm Dog / The Amazing Ocean",
-    "questionText": "According to 'The Amazing Ocean,' which of these is a way people are working to help ocean animals?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Building more boats"
-      },
-      {
-        "label": "B",
-        "text": "Collecting floating plastic from the ocean"
-      },
-      {
-        "label": "C",
-        "text": "Adding more fish to the ocean"
-      },
-      {
-        "label": "D",
-        "text": "Making the ocean warmer"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a way people help ocean animals.",
-    "points": 1,
-    "explanation": "The passage mentions that 'some inventors have even created machines that collect floating plastic from the ocean surface' as a way to help.",
+    "questionText": "How does each source show that people can help animals? Use one detail from each source in your answer.",
+    "correctAnswer": "In The Storm Dog, Maya and her mother rescue the dog from the storm and care for it. In The Amazing Ocean, people help animals by cleaning beaches, limiting pollution, or collecting plastic from the ocean.",
+    "rubric": "2 points: The student explains how each source shows people helping animals and includes one accurate detail from each source. 1 point: The student uses one source clearly or gives a partial answer about both. 0 points: All other responses.",
+    "points": 2,
+    "explanation": "A complete response uses the rescue in the story and an action from the article, such as removing plastic or reducing pollution, to show how people help animals.",
     "studentDirections": "**Your Assignment**\n\nYou will read the story \"The Storm Dog\" and the article \"The Amazing Ocean.\" Then you will answer questions and write an essay about how people can help animals.\n\n**Steps:**\n1. Read both sources carefully.\n2. Answer the research questions.\n3. Plan and write your essay.",
     "passageAuthor": "Clara Mitchell"
   },
