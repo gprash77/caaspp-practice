@@ -3,79 +3,40 @@ import type { Question } from "./questions";
 export const practiceTest9Questions: Question[] = [
   {
     "id": 9001,
-    "practiceTest": 9,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "A",
-    "dok": 1,
-    "standard": "3.OA.A.1",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.8",
     "type": "text-input",
-    "questionText": "There are 4 bags. Each bag holds 3 oranges. How many oranges are there in all?",
-    "correctAnswer": "12",
-    "rubric": "The student enters the correct product.",
+    "questionText": "Maria baked 76 cookies. She gave 24 cookies to her friends. How many cookies does Maria have now?",
+    "correctAnswer": "52",
+    "rubric": "The student enters the correct number of cookies.",
     "points": 1,
-    "explanation": "Multiply: 4 bags × 3 oranges = 12 oranges."
+    "practiceTest": 9
   },
   {
     "id": 9002,
-    "practiceTest": 9,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "OA",
-    "target": "A",
+    "domain": "NBT",
+    "target": "E",
     "dok": 1,
-    "standard": "3.OA.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which picture shows 3 × 4?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4 groups of 3 stars"
-      },
-      {
-        "label": "B",
-        "text": "3 groups of 3 stars"
-      },
-      {
-        "label": "C",
-        "text": "3 groups of 4 stars"
-      },
-      {
-        "label": "D",
-        "text": "4 groups of 4 stars"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the correct equal-groups picture.",
+    "standard": "3.NBT.A.2",
+    "type": "text-input",
+    "questionText": "What is 356 + 453?",
+    "correctAnswer": "809",
+    "rubric": "The student enters the correct number.",
     "points": 1,
-    "explanation": "3 × 4 means 3 groups of 4. Choice C shows 3 groups of 4 stars."
+    "practiceTest": 9
   },
   {
     "id": 9003,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "A",
-    "dok": 1,
-    "standard": "3.OA.A.2",
-    "type": "text-input",
-    "questionText": "16 strawberries are shared equally among 4 friends. How many strawberries does each friend get?",
-    "correctAnswer": "4",
-    "rubric": "The student enters the correct quotient.",
-    "points": 1,
-    "explanation": "Divide: 16 ÷ 4 = 4 strawberries each."
-  },
-  {
-    "id": 9004,
-    "practiceTest": 9,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -85,573 +46,66 @@ export const practiceTest9Questions: Question[] = [
     "dok": 1,
     "standard": "3.OA.A.3",
     "type": "text-input",
-    "questionText": "There are 5 rows of seats. Each row has 4 seats. How many seats are there in all?",
-    "correctAnswer": "20",
-    "rubric": "The student enters the correct product.",
+    "questionText": "Jake has 3 packs of trading cards. Each pack has 5 cards. How many trading cards does Jake have in all?",
+    "correctAnswer": "15",
+    "rubric": "The student enters the correct number of trading cards.",
     "points": 1,
-    "explanation": "Multiply: 5 rows × 4 seats = 20 seats."
+    "practiceTest": 9
+  },
+  {
+    "id": 9004,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B",
+    "type": "multiple-choice",
+    "questionText": "A store has 24 apples arranged equally in 4 rows. Which expression can be used to find the number of apples in each row, and why?",
+    "options": [
+      {
+        "label": "A",
+        "text": "4 × 24, because you multiply the number of rows by the total"
+      },
+      {
+        "label": "B",
+        "text": "24 + 4, because you add the total to the number of rows"
+      },
+      {
+        "label": "C",
+        "text": "24 − 4, because you subtract the number of rows from the total"
+      },
+      {
+        "label": "D",
+        "text": "24 ÷ 4, because you divide the total equally among the rows"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student identifies the correct expression and reason.",
+    "points": 1,
+    "practiceTest": 9
   },
   {
     "id": 9005,
-    "practiceTest": 9,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "B",
+    "target": "A",
     "dok": 1,
-    "standard": "3.OA.A.4",
-    "type": "multiple-choice",
-    "questionText": "What number goes in the box?\n\n3 × ☐ = 15",
-    "options": [
-      {
-        "label": "A",
-        "text": "3"
-      },
-      {
-        "label": "B",
-        "text": "5"
-      },
-      {
-        "label": "C",
-        "text": "6"
-      },
-      {
-        "label": "D",
-        "text": "45"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student finds the unknown factor.",
+    "standard": "3.OA.A.3",
+    "type": "text-input",
+    "questionText": "A fish tank has 2 rows of fish. Each row has 3 fish. How many fish are in the tank?",
+    "correctAnswer": "6",
+    "rubric": "The student enters the correct number of fish.",
     "points": 1,
-    "explanation": "3 × 5 = 15, so the missing number is 5."
+    "practiceTest": 9
   },
   {
     "id": 9006,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 6 × 4?",
-    "correctAnswer": "24",
-    "rubric": "The student enters the correct product.",
-    "points": 1,
-    "explanation": "6 × 4 = 24."
-  },
-  {
-    "id": 9007,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 20 ÷ 5?",
-    "correctAnswer": "4",
-    "rubric": "The student enters the correct quotient.",
-    "points": 1,
-    "explanation": "20 ÷ 5 = 4."
-  },
-  {
-    "id": 9008,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 8 × 3?",
-    "correctAnswer": "24",
-    "rubric": "The student enters the correct product.",
-    "points": 1,
-    "explanation": "8 × 3 = 24."
-  },
-  {
-    "id": 9009,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
-    "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A store has 3 boxes with 6 apples each. They sell 8 apples. How many apples are left?",
-    "options": [
-      {
-        "label": "A",
-        "text": "8"
-      },
-      {
-        "label": "B",
-        "text": "10"
-      },
-      {
-        "label": "C",
-        "text": "11"
-      },
-      {
-        "label": "D",
-        "text": "15"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student solves a two-step problem.",
-    "points": 1,
-    "explanation": "3 × 6 = 18 apples. Then 18 − 8 = 10 apples left."
-  },
-  {
-    "id": 9010,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "D",
-    "dok": 1,
-    "standard": "3.OA.D.9",
-    "type": "text-input",
-    "questionText": "What is the next number in the pattern?\n\n5, 10, 15, 20, __",
-    "correctAnswer": "25",
-    "rubric": "The student continues the pattern.",
-    "points": 1,
-    "explanation": "The pattern adds 5 each time. 20 + 5 = 25."
-  },
-  {
-    "id": 9011,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "multiple-choice",
-    "questionText": "What is 7 × 2?",
-    "options": [
-      {
-        "label": "A",
-        "text": "9"
-      },
-      {
-        "label": "B",
-        "text": "12"
-      },
-      {
-        "label": "C",
-        "text": "14"
-      },
-      {
-        "label": "D",
-        "text": "16"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student multiplies within 10.",
-    "points": 1,
-    "explanation": "7 × 2 = 14."
-  },
-  {
-    "id": 9012,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "B",
-    "dok": 2,
-    "standard": "3.OA.B.5",
-    "type": "multiple-choice",
-    "questionText": "Which expression equals 3 × 6?",
-    "options": [
-      {
-        "label": "A",
-        "text": "(3 × 3) + (3 × 3)"
-      },
-      {
-        "label": "B",
-        "text": "(3 × 2) + (3 × 2)"
-      },
-      {
-        "label": "C",
-        "text": "3 + 6"
-      },
-      {
-        "label": "D",
-        "text": "(3 × 4) + (3 × 3)"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student applies the distributive property.",
-    "points": 1,
-    "explanation": "(3 × 3) + (3 × 3) = 9 + 9 = 18, and 3 × 6 = 18."
-  },
-  {
-    "id": 9013,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.1",
-    "type": "multiple-choice",
-    "questionText": "What is 43 rounded to the nearest ten?",
-    "options": [
-      {
-        "label": "A",
-        "text": "30"
-      },
-      {
-        "label": "B",
-        "text": "40"
-      },
-      {
-        "label": "C",
-        "text": "50"
-      },
-      {
-        "label": "D",
-        "text": "44"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student rounds to the nearest ten.",
-    "points": 1,
-    "explanation": "43 is between 40 and 50. Since 3 < 5, round down to 40."
-  },
-  {
-    "id": 9014,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 213 + 145?",
-    "correctAnswer": "358",
-    "rubric": "The student adds within 1,000.",
-    "points": 1,
-    "explanation": "213 + 145 = 358."
-  },
-  {
-    "id": 9015,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 600 − 300?",
-    "correctAnswer": "300",
-    "rubric": "The student subtracts within 1,000.",
-    "points": 1,
-    "explanation": "600 − 300 = 300."
-  },
-  {
-    "id": 9016,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.3",
-    "type": "multiple-choice",
-    "questionText": "What is 30 × 3?",
-    "options": [
-      {
-        "label": "A",
-        "text": "33"
-      },
-      {
-        "label": "B",
-        "text": "60"
-      },
-      {
-        "label": "C",
-        "text": "90"
-      },
-      {
-        "label": "D",
-        "text": "300"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student multiplies by a multiple of ten.",
-    "points": 1,
-    "explanation": "3 tens × 3 = 9 tens = 90."
-  },
-  {
-    "id": 9017,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which number rounds to 200?",
-    "options": [
-      {
-        "label": "A",
-        "text": "149"
-      },
-      {
-        "label": "B",
-        "text": "198"
-      },
-      {
-        "label": "C",
-        "text": "253"
-      },
-      {
-        "label": "D",
-        "text": "310"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student rounds to the nearest hundred.",
-    "points": 1,
-    "explanation": "198 is between 100 and 200. Since 9 ≥ 5, round up to 200."
-  },
-  {
-    "id": 9018,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 425 + 163?",
-    "correctAnswer": "588",
-    "rubric": "The student adds within 1,000.",
-    "points": 1,
-    "explanation": "425 + 163 = 588."
-  },
-  {
-    "id": 9019,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A sandwich was cut into 4 equal pieces. Emma ate 1 piece. What fraction of the sandwich did she eat?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/4"
-      },
-      {
-        "label": "B",
-        "text": "1/3"
-      },
-      {
-        "label": "C",
-        "text": "3/4"
-      },
-      {
-        "label": "D",
-        "text": "4/1"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the fraction eaten.",
-    "points": 1,
-    "explanation": "Emma ate 1 out of 4 equal pieces, which is 1/4."
-  },
-  {
-    "id": 9020,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A circle was divided into 3 equal parts. Two parts are shaded. What fraction is shaded?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/3"
-      },
-      {
-        "label": "B",
-        "text": "2/3"
-      },
-      {
-        "label": "C",
-        "text": "3/2"
-      },
-      {
-        "label": "D",
-        "text": "1/2"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the shaded fraction.",
-    "points": 1,
-    "explanation": "2 out of 3 equal parts are shaded, which is 2/3."
-  },
-  {
-    "id": 9021,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.2",
-    "type": "text-input",
-    "questionText": "A number line from 0 to 1 is divided into 4 equal parts. What fraction is at the third mark after 0?",
-    "correctAnswer": "3/4",
-    "rubric": "The student identifies the fraction on the number line.",
-    "points": 1,
-    "explanation": "The third mark in fourths is 3/4."
-  },
-  {
-    "id": 9022,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which fraction is equal to 1/2?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/3"
-      },
-      {
-        "label": "B",
-        "text": "3/4"
-      },
-      {
-        "label": "C",
-        "text": "2/4"
-      },
-      {
-        "label": "D",
-        "text": "2/6"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies an equivalent fraction.",
-    "points": 1,
-    "explanation": "2/4 = 1/2 because both the numerator and denominator were multiplied by 2."
-  },
-  {
-    "id": 9023,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which fraction is greater: 3/4 or 1/4?",
-    "options": [
-      {
-        "label": "A",
-        "text": "3/4"
-      },
-      {
-        "label": "B",
-        "text": "1/4"
-      },
-      {
-        "label": "C",
-        "text": "They are equal"
-      },
-      {
-        "label": "D",
-        "text": "Cannot be determined"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student compares fractions with the same denominator.",
-    "points": 1,
-    "explanation": "When the denominators are the same, the fraction with the larger numerator is greater. 3 > 1, so 3/4 > 1/4."
-  },
-  {
-    "id": 9024,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.1",
-    "type": "text-input",
-    "questionText": "A shape is divided into 6 equal parts. 4 parts are shaded. What fraction is shaded?",
-    "correctAnswer": "4/6",
-    "rubric": "The student writes the fraction. Accept 2/3.",
-    "points": 1,
-    "explanation": "4 out of 6 equal parts are shaded, which is 4/6 (or 2/3)."
-  },
-  {
-    "id": 9025,
-    "practiceTest": 9,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -661,123 +115,67 @@ export const practiceTest9Questions: Question[] = [
     "dok": 1,
     "standard": "3.MD.A.1",
     "type": "multiple-choice",
-    "questionText": "A clock shows 2:00. What time is it 15 minutes later?",
+    "questionText": "The clock shows that school starts at 8:15 a.m. Lunch is 3 hours and 45 minutes later. What time is lunch?",
     "options": [
       {
         "label": "A",
-        "text": "1:45"
+        "text": "11:00 a.m."
       },
       {
         "label": "B",
-        "text": "2:05"
+        "text": "11:45 a.m."
       },
       {
         "label": "C",
-        "text": "2:15"
+        "text": "12:15 p.m."
       },
       {
         "label": "D",
-        "text": "2:30"
+        "text": "12:00 p.m."
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student adds minutes to a given time.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct time.",
     "points": 1,
-    "explanation": "2:00 plus 15 minutes is 2:15."
+    "practiceTest": 9
   },
   {
-    "id": 9026,
-    "practiceTest": 9,
+    "id": 9007,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.A.2",
+    "claim": 2,
+    "domain": "NBT",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.NBT.A.2",
     "type": "multiple-choice",
-    "questionText": "A water bottle holds 1 liter. How many milliliters is that?",
+    "questionText": "Ms. Adams collected 347 cans. Mr. Baker collected 289 cans. Ms. Clark collected 312 cans. Which teacher collected the most cans?",
     "options": [
       {
         "label": "A",
-        "text": "10"
+        "text": "Ms. Adams"
       },
       {
         "label": "B",
-        "text": "100"
+        "text": "Mr. Baker"
       },
       {
         "label": "C",
-        "text": "1,000"
+        "text": "Ms. Clark"
       },
       {
         "label": "D",
-        "text": "10,000"
+        "text": "Ms. Adams and Ms. Clark collected the same amount"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student converts liters to milliliters.",
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct teacher.",
     "points": 1,
-    "explanation": "1 liter = 1,000 milliliters."
+    "practiceTest": 9
   },
   {
-    "id": 9027,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 4,
-    "domain": "MD",
-    "target": "H",
-    "dok": 1,
-    "standard": "3.MD.B.3",
-    "type": "multiple-choice",
-    "questionText": "A class counted fruit in a basket: 5 apples, 3 bananas, 6 oranges, and 2 grapes. How many pieces of fruit are there in all?",
-    "options": [
-      {
-        "label": "A",
-        "text": "14"
-      },
-      {
-        "label": "B",
-        "text": "15"
-      },
-      {
-        "label": "C",
-        "text": "16"
-      },
-      {
-        "label": "D",
-        "text": "18"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student totals all categories.",
-    "points": 1,
-    "explanation": "5 + 3 + 6 + 2 = 16 pieces of fruit."
-  },
-  {
-    "id": 9028,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "I",
-    "dok": 1,
-    "standard": "3.MD.C.7",
-    "type": "text-input",
-    "questionText": "A rectangle is 5 units long and 3 units wide. What is its area?",
-    "correctAnswer": "15",
-    "rubric": "The student enters the correct area.",
-    "points": 1,
-    "explanation": "Area = length × width = 5 × 3 = 15 square units."
-  },
-  {
-    "id": 9029,
-    "practiceTest": 9,
+    "id": 9008,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -787,1582 +185,2334 @@ export const practiceTest9Questions: Question[] = [
     "dok": 1,
     "standard": "3.MD.D.8",
     "type": "text-input",
-    "questionText": "A rectangle is 6 feet long and 2 feet wide. What is its perimeter?",
-    "correctAnswer": "16",
-    "rubric": "The student enters the correct perimeter.",
+    "questionText": "A rectangle has a length of 20 inches and a width of 10 inches. What is the perimeter of the rectangle in inches?",
+    "correctAnswer": "60",
+    "rubric": "The student enters the correct perimeter of the shape.",
     "points": 1,
-    "explanation": "Perimeter = 2 × (6 + 2) = 2 × 8 = 16 feet."
+    "practiceTest": 9
   },
   {
-    "id": 9030,
-    "practiceTest": 9,
+    "id": 9009,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NF",
+    "target": "F",
+    "dok": 1,
+    "standard": "3.NF.A.3",
+    "type": "text-input",
+    "questionText": "Look at the number line below. It is divided into 8 equal parts from 0 to 1. Point A is at the 5th mark. What number does Point A represent? Write your answer as a whole number if the fraction equals a whole number, or as a fraction.",
+    "correctAnswer": "5",
+    "rubric": "The student enters a correct number.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9010,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.1",
+    "type": "multiple-choice",
+    "questionText": "Which statement about fractions is true?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1/2 is always greater than 1/3"
+      },
+      {
+        "label": "B",
+        "text": "2/4 is greater than 3/4"
+      },
+      {
+        "label": "C",
+        "text": "3/8 is less than 6/8"
+      },
+      {
+        "label": "D",
+        "text": "1/4 is equal to 1/8"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct statement.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9011,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "A",
+    "dok": 1,
+    "standard": "3.OA.A.4",
+    "type": "text-input",
+    "questionText": "What number makes this equation true?\n\n6 × ? = 48",
+    "correctAnswer": "8",
+    "rubric": "The student enters the correct number.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9012,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
+    "dok": 1,
+    "standard": "3.OA.B.6",
+    "type": "multiple-choice",
+    "questionText": "Which equation is related to 7 × 8 = 56?",
+    "options": [
+      {
+        "label": "A",
+        "text": "56 + 8 = 64"
+      },
+      {
+        "label": "B",
+        "text": "56 − 7 = 49"
+      },
+      {
+        "label": "C",
+        "text": "56 ÷ 8 = 7"
+      },
+      {
+        "label": "D",
+        "text": "7 + 8 = 15"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct equation.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9013,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.9",
+    "type": "text-input",
+    "questionText": "Look at the pattern: 5, 10, 15, ?, ?\n\nWhat are the next two numbers in the pattern? Enter them separated by a comma.",
+    "correctAnswer": "20, 25",
+    "rubric": "The student enters the correct numbers.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9014,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "multi-select",
+    "questionText": "Decide whether each equation is true or false.\n\nSelect all of the equations that are true.",
+    "options": [
+      {
+        "label": "A",
+        "text": "8 × 2 = 4 × 6"
+      },
+      {
+        "label": "B",
+        "text": "7 × 3 = 3 × 7"
+      },
+      {
+        "label": "C",
+        "text": "5 × 6 = 3 × 10"
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "C"
+    ],
+    "rubric": "The student correctly identifies the true equations.",
+    "points": 1,
+    "explanation": "8 × 2 = 16 and 4 × 6 = 24, so A is false. 7 × 3 and 3 × 7 are both 21, so B is true. 5 × 6 and 3 × 10 are both 30, so C is true.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9015,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "Enter the unknown numbers that make each equation true.\n\nEnter the first unknown number in the first box.\nEnter the second unknown number in the second box.\n\n5 × 8 = □\n\n8 × 7 = □",
+    "correctAnswer": "40,56",
+    "rubric": "The student enters the correct products.",
+    "points": 1,
+    "explanation": "5 × 8 = 40 and 8 × 7 = 56, so the two answers are 40 and 56 in that order.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9016,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "MD",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "Four number lines are described below. Each one starts at 0 minutes.\n\nWhich number line places point P at 45 minutes?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The line is marked every 20 minutes, and P is at the third mark after 0."
+      },
+      {
+        "label": "B",
+        "text": "The line is marked every 15 minutes, and P is at the third mark after 0."
+      },
+      {
+        "label": "C",
+        "text": "The line is marked every 10 minutes, and P is at the fourth mark after 0."
+      },
+      {
+        "label": "D",
+        "text": "The line is marked every 30 minutes, and P is halfway between 0 and 60."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies the correct number line.",
+    "points": 1,
+    "explanation": "If the marks are every 15 minutes, the first three marks after 0 are 15, 30, and 45, so choice B is correct.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9017,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.A.1",
-    "type": "text-input",
-    "questionText": "School starts at 8:30. What time was it 1 hour before school started?",
-    "correctAnswer": "7:30",
-    "rubric": "The student subtracts an hour from a given time.",
-    "points": 1,
-    "explanation": "8:30 minus 1 hour is 7:30."
-  },
-  {
-    "id": 9031,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 4,
-    "domain": "MD",
-    "target": "H",
-    "dok": 1,
-    "standard": "3.MD.B.3",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
     "type": "multiple-choice",
-    "questionText": "Three students read 8, 5, and 7 books. What is the total number of books read?",
+    "questionText": "A rectangular room is covered with 4 rows of 5 square-foot tiles. Which number shows the area of the room in square feet?",
     "options": [
       {
         "label": "A",
-        "text": "13"
-      },
-      {
-        "label": "B",
         "text": "20"
       },
       {
+        "label": "B",
+        "text": "9"
+      },
+      {
         "label": "C",
-        "text": "22"
+        "text": "18"
       },
       {
         "label": "D",
         "text": "25"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student finds the total.",
-    "points": 1,
-    "explanation": "8 + 5 + 7 = 20 books."
-  },
-  {
-    "id": 9032,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.A.2",
-    "type": "multiple-choice",
-    "questionText": "A bag of potatoes weighs 3 kilograms. How many grams is that?",
-    "options": [
-      {
-        "label": "A",
-        "text": "30"
-      },
-      {
-        "label": "B",
-        "text": "300"
-      },
-      {
-        "label": "C",
-        "text": "3,000"
-      },
-      {
-        "label": "D",
-        "text": "30,000"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student converts kilograms to grams.",
-    "points": 1,
-    "explanation": "1 kilogram = 1,000 grams. 3 kilograms = 3,000 grams."
-  },
-  {
-    "id": 9033,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "K",
-    "dok": 1,
-    "standard": "3.G.A.1",
-    "type": "multiple-choice",
-    "questionText": "How many sides does a hexagon have?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4"
-      },
-      {
-        "label": "B",
-        "text": "5"
-      },
-      {
-        "label": "C",
-        "text": "6"
-      },
-      {
-        "label": "D",
-        "text": "8"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the number of sides of a hexagon.",
-    "points": 1,
-    "explanation": "A hexagon has 6 sides."
-  },
-  {
-    "id": 9034,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "K",
-    "dok": 1,
-    "standard": "3.G.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which shape has 4 equal sides and 4 right angles?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Square"
-      },
-      {
-        "label": "B",
-        "text": "Triangle"
-      },
-      {
-        "label": "C",
-        "text": "Trapezoid"
-      },
-      {
-        "label": "D",
-        "text": "Hexagon"
-      }
-    ],
     "correctAnswer": "A",
-    "rubric": "The student identifies a square by its properties.",
+    "rubric": "The student selects the correct number of square feet.",
     "points": 1,
-    "explanation": "A square has 4 equal sides and 4 right angles."
+    "explanation": "Area is found by multiplying rows by columns: 4 × 5 = 20 square feet.",
+    "practiceTest": 9
   },
   {
-    "id": 9035,
-    "practiceTest": 9,
+    "id": 9018,
     "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "K",
-    "dok": 1,
-    "standard": "3.G.A.2",
-    "type": "multiple-choice",
-    "questionText": "A rectangle is divided into 4 equal parts. What fraction does each part represent?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/2"
-      },
-      {
-        "label": "B",
-        "text": "1/4"
-      },
-      {
-        "label": "C",
-        "text": "4/1"
-      },
-      {
-        "label": "D",
-        "text": "2/4"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the unit fraction.",
-    "points": 1,
-    "explanation": "If the rectangle is divided into 4 equal parts, each part is 1/4 of the whole."
-  },
-  {
-    "id": 9036,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "K",
-    "dok": 1,
-    "standard": "3.G.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which shape has exactly 3 sides?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Triangle"
-      },
-      {
-        "label": "B",
-        "text": "Square"
-      },
-      {
-        "label": "C",
-        "text": "Pentagon"
-      },
-      {
-        "label": "D",
-        "text": "Hexagon"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a triangle.",
-    "points": 1,
-    "explanation": "A triangle has exactly 3 sides."
-  },
-  {
-    "id": 9040,
-    "practiceTest": 9,
-    "testType": "pt",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
-    "domain": "MD",
-    "target": "I",
-    "dok": 2,
-    "standard": "3.MD.C.7",
-    "type": "multiple-choice",
-    "questionText": "A garden plot is 8 feet long and 3 feet wide. What is the area of the garden?",
-    "options": [
-      {
-        "label": "A",
-        "text": "11 square feet"
-      },
-      {
-        "label": "B",
-        "text": "22 square feet"
-      },
-      {
-        "label": "C",
-        "text": "24 square feet"
-      },
-      {
-        "label": "D",
-        "text": "32 square feet"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student finds the area of a rectangle.",
-    "points": 1,
-    "explanation": "Area = 8 × 3 = 24 square feet."
-  },
-  {
-    "id": 9041,
-    "practiceTest": 9,
-    "testType": "pt",
     "subject": "math",
     "grade": 3,
     "claim": 2,
     "domain": "OA",
-    "target": "D",
+    "target": "A",
     "dok": 2,
     "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "There are 9 cherry trees.\n\n• Kim picks 8 cherries from each tree.\n• Kim eats 14 of the cherries she picked.\n\nEnter the number of cherries Kim has left.",
+    "correctAnswer": "58",
+    "rubric": "The student enters the correct number of cherries.",
+    "points": 1,
+    "explanation": "Kim picks 9 × 8 = 72 cherries and then eats 14. That leaves 72 − 14 = 58 cherries.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9019,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "E",
+    "dok": 2,
+    "standard": "3.OA.B.5",
     "type": "multiple-choice",
-    "questionText": "Mia has 4 bags with 5 apples in each bag. She gives away 7 apples. How many apples does she have left?",
+    "questionText": "Libby said the answer to the problem 5 × 2 × 3 is 25. Her work is shown.\n\n• Step 1: 5 × 2 = 10\n• Step 2: 5 × 3 = 15\n• Step 3: 10 + 15 = 25\n\nWhich is true?",
     "options": [
       {
         "label": "A",
-        "text": "7"
+        "text": "Libby's answer is correct because 10 + 15 = 25."
       },
       {
         "label": "B",
-        "text": "12"
+        "text": "Libby's answer is correct because 2 + 3 = 5 and 5 × 5 = 25."
       },
       {
         "label": "C",
-        "text": "13"
+        "text": "Libby's answer is not correct because she multiplied 5 × 3 and 5 × 2."
       },
       {
         "label": "D",
-        "text": "16"
+        "text": "Libby's answer is not correct because she should have multiplied 10 × 15."
       }
     ],
     "correctAnswer": "C",
-    "rubric": "The student solves a two-step problem.",
+    "rubric": "The student identifies the correct statement.",
     "points": 1,
-    "explanation": "4 × 5 = 20 apples. Then 20 − 7 = 13 apples left."
+    "explanation": "Libby treated 5 × 2 × 3 like 5 × 2 plus 5 × 3, which is not the right way to solve the expression. That makes choice C correct.",
+    "practiceTest": 9
   },
   {
-    "id": 9042,
-    "practiceTest": 9,
-    "testType": "pt",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
-    "domain": "NF",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A pizza is cut into 8 equal slices. The family ate 3 slices. What fraction of the pizza is left?",
-    "options": [
-      {
-        "label": "A",
-        "text": "3/8"
-      },
-      {
-        "label": "B",
-        "text": "5/8"
-      },
-      {
-        "label": "C",
-        "text": "8/3"
-      },
-      {
-        "label": "D",
-        "text": "1/2"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student finds the remaining fraction.",
-    "points": 1,
-    "explanation": "8 − 3 = 5 slices left. That is 5/8 of the pizza."
-  },
-  {
-    "id": 9043,
-    "practiceTest": 9,
-    "testType": "pt",
+    "id": 9020,
+    "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 4,
-    "domain": "MD",
-    "target": "H",
+    "domain": "OA",
+    "target": "C",
     "dok": 2,
-    "standard": "3.MD.B.3",
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "Jamal's mother plans a trip for the baseball team.\n\n• There are 14 players on the team.\n• There are 5 parents going on the trip.\n• The players and parents will all travel together in cars.\n• Each car can hold a total of 5 people.\n• There must be at least 1 parent in each car.\n\nWhat is the fewest number of cars they will need?",
+    "correctAnswer": "4",
+    "rubric": "The student enters the fewest number of cars needed.",
+    "points": 1,
+    "explanation": "There are 14 + 5 = 19 people total. Four cars can hold 20 people, and with 5 parents available it is possible to put at least 1 parent in each car.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9021,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.3",
     "type": "multiple-choice",
-    "questionText": "Four students scored 18, 22, 16, and 24 points in a game. How much higher is the highest score than the lowest score?",
+    "questionText": "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1\n- greater than 1",
     "options": [
       {
         "label": "A",
-        "text": "6"
+        "text": "2/2, 3/4, 3/2"
       },
       {
         "label": "B",
-        "text": "8"
+        "text": "2/3, 3/3, 2/4"
       },
       {
         "label": "C",
-        "text": "10"
+        "text": "4/3, 2/2, 4/4"
       },
       {
         "label": "D",
-        "text": "12"
+        "text": "3/4, 3/2, 2/2"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student finds the difference between the highest and lowest values.",
+    "correctAnswer": "A",
+    "rubric": "The student identifies one valid set of fractions.",
     "points": 1,
-    "explanation": "The highest score is 24 and the lowest is 16. 24 − 16 = 8."
+    "explanation": "2/2 equals 1, 3/4 is less than 1, and 3/2 is greater than 1, so choice A is correct.",
+    "practiceTest": 9
   },
   {
-    "id": 9044,
-    "practiceTest": 9,
-    "testType": "pt",
+    "id": 9022,
+    "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 2,
-    "domain": "MD",
-    "target": "G",
-    "dok": 2,
-    "standard": "3.MD.A.2",
-    "type": "multiple-choice",
-    "questionText": "A piece of ribbon is 30 centimeters long. It is cut into 5 equal pieces. How long is each piece?",
-    "options": [
-      {
-        "label": "A",
-        "text": "5 cm"
-      },
-      {
-        "label": "B",
-        "text": "6 cm"
-      },
-      {
-        "label": "C",
-        "text": "25 cm"
-      },
-      {
-        "label": "D",
-        "text": "150 cm"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student divides a measurement into equal parts.",
-    "points": 1,
-    "explanation": "30 ÷ 5 = 6 centimeters per piece."
-  },
-  {
-    "id": 9101,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "Why couldn't Maya and Eli go outside at the start of the story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "They didn't have a soccer ball"
-      },
-      {
-        "label": "B",
-        "text": "It was raining"
-      },
-      {
-        "label": "C",
-        "text": "The park was closed"
-      },
-      {
-        "label": "D",
-        "text": "They were sick"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail from the passage.",
-    "points": 1,
-    "explanation": "The passage says rain drummed against the windows, so they couldn't go outside to play."
-  },
-  {
-    "id": 9102,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "What was the first thing Maya and Eli did inside?",
-    "options": [
-      {
-        "label": "A",
-        "text": "They played a card game"
-      },
-      {
-        "label": "B",
-        "text": "They made a collage"
-      },
-      {
-        "label": "C",
-        "text": "They built a fort"
-      },
-      {
-        "label": "D",
-        "text": "They ate lunch"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the sequence of events.",
-    "points": 1,
-    "explanation": "The passage says first they built a fort using couch cushions and bedsheets."
-  },
-  {
-    "id": 9103,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "What did Maya and Eli make at the kitchen table?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A card game"
-      },
-      {
-        "label": "B",
-        "text": "A fort"
-      },
-      {
-        "label": "C",
-        "text": "A collage"
-      },
-      {
-        "label": "D",
-        "text": "A snack"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "They cut out pictures from magazines and made a giant collage on the kitchen table."
-  },
-  {
-    "id": 9104,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "Who taught Maya and Eli the card game?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Mom"
-      },
-      {
-        "label": "B",
-        "text": "Grandpa"
-      },
-      {
-        "label": "C",
-        "text": "Dad"
-      },
-      {
-        "label": "D",
-        "text": "A neighbor"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies a character detail.",
-    "points": 1,
-    "explanation": "After lunch, Dad taught them a card game called Rummy."
-  },
-  {
-    "id": 9105,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "B",
-    "dok": 2,
-    "standard": "RL.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "What is the main message of this story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Rainy days are always boring"
-      },
-      {
-        "label": "B",
-        "text": "Card games are better than soccer"
-      },
-      {
-        "label": "C",
-        "text": "You can have fun with your family even when plans change"
-      },
-      {
-        "label": "D",
-        "text": "Playing outside is always better than staying inside"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the central message of the story.",
-    "points": 1,
-    "explanation": "Maya and Eli found ways to have fun inside with their family even though they couldn't play outside. The message is that you can enjoy time with family even when plans change."
-  },
-  {
-    "id": 9106,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
+    "domain": "OA",
     "target": "C",
     "dok": 2,
-    "standard": "RL.3.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "How did Eli feel at the beginning of the story?",
+    "standard": "3.OA.A.3",
+    "type": "multi-select",
+    "questionText": "A teacher has 12 pens. Select all of the groups that can be formed using all 12 pens with no pens left over.",
     "options": [
       {
         "label": "A",
-        "text": "Excited"
+        "text": "2 groups of 6"
       },
       {
         "label": "B",
-        "text": "Disappointed"
+        "text": "3 groups of 4"
       },
       {
         "label": "C",
-        "text": "Angry"
+        "text": "5 groups of 2"
       },
       {
         "label": "D",
-        "text": "Tired"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a character's feelings.",
-    "points": 1,
-    "explanation": "The story says Eli 'looked so disappointed' when he found out they couldn't go outside."
-  },
-  {
-    "id": 9107,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "C",
-    "dok": 2,
-    "standard": "RL.3.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "What word best describes Maya in this story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Lazy"
-      },
-      {
-        "label": "B",
-        "text": "Creative"
-      },
-      {
-        "label": "C",
-        "text": "Sad"
-      },
-      {
-        "label": "D",
-        "text": "Shy"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student describes a character trait based on evidence.",
-    "points": 1,
-    "explanation": "Maya kept thinking of new fun ideas (fort, collage) to keep them both entertained, showing she is creative."
-  },
-  {
-    "id": 9108,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 2,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "Why did Maya and Eli stay inside even after the rain stopped?",
-    "options": [
-      {
-        "label": "A",
-        "text": "They were tired from building the fort"
-      },
-      {
-        "label": "B",
-        "text": "They wanted to finish their card game"
-      },
-      {
-        "label": "C",
-        "text": "Mom said they couldn't go out"
-      },
-      {
-        "label": "D",
-        "text": "The puddles were too deep"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "The passage says they were finishing their card game and did not want to quit."
-  },
-  {
-    "id": 9109,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "RL",
-    "target": "G",
-    "dok": 1,
-    "standard": "L.3.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "In the story, the fort felt 'cozy and hidden, like a secret cave.' What does the word 'cozy' most likely mean?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Cold and wet"
-      },
-      {
-        "label": "B",
-        "text": "Warm and comfortable"
-      },
-      {
-        "label": "C",
-        "text": "Loud and exciting"
-      },
-      {
-        "label": "D",
-        "text": "Dark and scary"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student uses context clues to determine word meaning.",
-    "points": 1,
-    "explanation": "A fort made of soft cushions and sheets that feels like a secret cave would feel warm and comfortable, which is what 'cozy' means."
-  },
-  {
-    "id": 9110,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "D",
-    "dok": 2,
-    "standard": "RL.3.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "In the passage, what does the word 'collage' mean?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A type of card game"
-      },
-      {
-        "label": "B",
-        "text": "A picture made from cut-out pieces glued together"
-      },
-      {
-        "label": "C",
-        "text": "A kind of fort made from sheets"
-      },
-      {
-        "label": "D",
-        "text": "A book of pictures"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student determines the meaning of an unknown word using context.",
-    "points": 1,
-    "explanation": "The passage describes them cutting out pictures and gluing them down on cardboard, which is how a collage is made."
-  },
-  {
-    "id": 9111,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "E",
-    "dok": 2,
-    "standard": "RL.3.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "How is the ending of the story different from the beginning?",
-    "options": [
-      {
-        "label": "A",
-        "text": "It was still raining at the end"
-      },
-      {
-        "label": "B",
-        "text": "Eli was still disappointed at the end"
-      },
-      {
-        "label": "C",
-        "text": "The children were happy and had fun by the end"
-      },
-      {
-        "label": "D",
-        "text": "They never got to go outside"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student compares how a story changes from beginning to end.",
-    "points": 1,
-    "explanation": "At the beginning, Eli was disappointed and they couldn't go outside. By the end, they had a wonderful day and Eli said it was the 'best rainy day ever.'"
-  },
-  {
-    "id": 9112,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "What did Eli do with the puddles when they finally went outside?",
-    "options": [
-      {
-        "label": "A",
-        "text": "He stepped over them carefully"
-      },
-      {
-        "label": "B",
-        "text": "He jumped in every single one"
-      },
-      {
-        "label": "C",
-        "text": "He ignored them"
-      },
-      {
-        "label": "D",
-        "text": "He tried to measure them"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "The passage says Eli jumped in every single puddle when they went outside."
-  },
-  {
-    "id": 9113,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "domain": "RL",
-    "target": "F",
-    "dok": 3,
-    "standard": "RL.3.1",
-    "type": "short-answer",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "How did Maya help Eli feel better on the rainy day? Use two details from the story to support your answer.",
-    "correctAnswer": "Maya helped Eli by coming up with fun indoor activities. First, she suggested building a fort out of cushions and sheets so they had a cozy place to play. Then she found old magazines and made a collage with Eli, and their dad joined them for a card game. By the end, Eli called it the best rainy day ever.",
-    "rubric": "2 points: identifies two specific activities Maya suggested with evidence from the text. 1 point: identifies one activity with evidence or two activities without evidence.",
-    "points": 2,
-    "explanation": "Maya helped by thinking of creative indoor activities: the fort, the collage, and the card game all made Eli forget about missing soccer."
-  },
-  {
-    "id": 9114,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "B",
-    "dok": 2,
-    "standard": "RL.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "What lesson does Maya show in the story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Always play soccer in the rain"
-      },
-      {
-        "label": "B",
-        "text": "Younger siblings should play alone"
-      },
-      {
-        "label": "C",
-        "text": "You can make the best of a bad situation"
-      },
-      {
-        "label": "D",
-        "text": "Card games are too hard to learn"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies a theme through a character's actions.",
-    "points": 1,
-    "explanation": "Maya did not complain about the rain. She immediately found ways to have fun, showing that you can make the best of a situation."
-  },
-  {
-    "id": 9115,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "C",
-    "dok": 2,
-    "standard": "RL.3.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "Why did Dad smile when Maya said 'maybe after one more round'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "He was happy they chose to stay inside and play together"
-      },
-      {
-        "label": "B",
-        "text": "He didn't want to go to the park"
-      },
-      {
-        "label": "C",
-        "text": "He was glad the rain started again"
-      },
-      {
-        "label": "D",
-        "text": "He had never seen anyone play Rummy before"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student infers a character's motivation.",
-    "points": 1,
-    "explanation": "Dad smiled because the children were having so much fun together that they wanted to keep playing, which meant the rainy day was a success."
-  },
-  {
-    "id": 9116,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "RL",
-    "target": "H",
-    "dok": 2,
-    "standard": "L.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "Which sentence from the story is punctuated correctly?",
-    "options": [
-      {
-        "label": "A",
-        "text": "\"This is actually great\" Eli said from under the sheet."
-      },
-      {
-        "label": "B",
-        "text": "\"This is actually great,\" Eli said from under the sheet."
-      },
-      {
-        "label": "C",
-        "text": "\"This is actually great\" eli said from under the sheet."
-      },
-      {
-        "label": "D",
-        "text": "This is actually great, Eli said from under the sheet."
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies correct dialogue punctuation.",
-    "points": 1,
-    "explanation": "Dialogue ends with a comma (or period) before the closing quotation mark when followed by a dialogue tag."
-  },
-  {
-    "id": 9117,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "RL",
-    "target": "H",
-    "dok": 1,
-    "standard": "L.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Rainy Day Plan**\n*by Sara Liu*\n\nIt was Saturday morning, and rain drummed against the windows. Maya and her little brother Eli stood at the door with their soccer ball.\n\n\"We can't play outside,\" said Eli. He looked so disappointed that Maya felt sorry for him.\n\n\"We'll make our own fun in here,\" Maya said.\n\nFirst, they built a fort using couch cushions and bedsheets. They draped a big blue sheet over two chairs and tucked the edges under the pillows. Inside felt cozy and hidden, like a secret cave.\n\n\"This is actually great,\" Eli said from under the sheet.\n\nNext, Maya had another idea. She found a box of old magazines in the closet. They cut out pictures of animals, cars, and food and made a giant collage on the kitchen table. Mom helped them glue everything down on a piece of cardboard.\n\n\"That rabbit looks like Grandpa's rabbit,\" said Eli, pointing at a fluffy white picture.\n\nMaya laughed. \"It really does!\"\n\nAfter lunch, Dad taught them a card game called Rummy. It was tricky at first, but Maya started to understand the rules after two rounds. Eli kept drawing the wrong cards and giggling.\n\nBy afternoon, the rain had stopped, but Maya and Eli were still inside. They were finishing their card game and did not want to quit.\n\n\"Do you still want to go to the park?\" Dad asked.\n\nMaya looked at Eli. Eli looked at Maya.\n\n\"Maybe after one more round,\" Maya said.\n\nDad smiled and sat back down.\n\nWhen they finally went outside, the air smelled fresh and clean. Puddles shimmered on the sidewalk. Eli jumped in every single one.\n\n\"Best rainy day ever,\" Eli said.\n\nMaya grinned. She had to agree.",
-    "passageTitle": "The Rainy Day Plan",
-    "passageAuthor": "Sara Liu",
-    "questionText": "In the sentence 'They draped a big blue sheet over two chairs,' what part of speech is the word 'draped'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Noun"
-      },
-      {
-        "label": "B",
-        "text": "Adjective"
-      },
-      {
-        "label": "C",
-        "text": "Verb"
-      },
-      {
-        "label": "D",
-        "text": "Adverb"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies a verb.",
-    "points": 1,
-    "explanation": "'Draped' tells what they did (the action), so it is a verb."
-  },
-  {
-    "id": 9118,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 1,
-    "standard": "RI.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
-    "passageTitle": "Clouds in the Sky",
-    "questionText": "What are clouds made of?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Smoke and dust"
-      },
-      {
-        "label": "B",
-        "text": "Tiny water droplets or ice crystals"
-      },
-      {
-        "label": "C",
-        "text": "Cotton and air"
-      },
-      {
-        "label": "D",
-        "text": "Water vapor only"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail from the passage.",
-    "points": 1,
-    "explanation": "The passage states that clouds are made of tiny water droplets or ice crystals that float in the air."
-  },
-  {
-    "id": 9119,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 1,
-    "standard": "RI.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
-    "passageTitle": "Clouds in the Sky",
-    "questionText": "What do cumulus clouds look like?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Thin and wispy streaks"
-      },
-      {
-        "label": "B",
-        "text": "A gray blanket across the sky"
-      },
-      {
-        "label": "C",
-        "text": "Big, fluffy, white clouds like cotton balls"
-      },
-      {
-        "label": "D",
-        "text": "Small and dark rain clouds"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls a detail about cloud types.",
-    "points": 1,
-    "explanation": "The article describes cumulus clouds as big, fluffy, white clouds that look like cotton balls."
-  },
-  {
-    "id": 9120,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 1,
-    "standard": "RI.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
-    "passageTitle": "Clouds in the Sky",
-    "questionText": "What kind of weather do stratus clouds often bring?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Thunderstorms"
-      },
-      {
-        "label": "B",
-        "text": "Heavy snow"
-      },
-      {
-        "label": "C",
-        "text": "Drizzle or light rain"
-      },
-      {
-        "label": "D",
-        "text": "Strong winds"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "The passage says stratus clouds often bring drizzle or light rain."
-  },
-  {
-    "id": 9121,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 1,
-    "standard": "RI.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
-    "passageTitle": "Clouds in the Sky",
-    "questionText": "Where do cirrus clouds form?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Close to the ground"
-      },
-      {
-        "label": "B",
-        "text": "In the middle of the sky"
-      },
-      {
-        "label": "C",
-        "text": "Very high in the sky where the air is cold"
-      },
-      {
-        "label": "D",
-        "text": "Over the ocean only"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "The passage says cirrus clouds form very high in the sky, where the air is cold."
-  },
-  {
-    "id": 9122,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "B",
-    "dok": 2,
-    "standard": "RI.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
-    "passageTitle": "Clouds in the Sky",
-    "questionText": "What is the main idea of this article?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Rain is important for plants and animals"
-      },
-      {
-        "label": "B",
-        "text": "The sky is always changing color"
-      },
-      {
-        "label": "C",
-        "text": "There are different types of clouds and they each play a role in weather and Earth's temperature"
-      },
-      {
-        "label": "D",
-        "text": "Cumulus clouds are the prettiest type of cloud"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the main idea of the passage.",
-    "points": 1,
-    "explanation": "The article describes different cloud types (cumulus, stratus, cirrus) and explains why clouds matter for weather and temperature."
-  },
-  {
-    "id": 9123,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 2,
-    "standard": "RI.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
-    "passageTitle": "Clouds in the Sky",
-    "questionText": "According to the article, what happens when water droplets in a cloud get bigger and heavier?",
-    "options": [
-      {
-        "label": "A",
-        "text": "They turn into ice"
-      },
-      {
-        "label": "B",
-        "text": "They fall as rain or snow"
-      },
-      {
-        "label": "C",
-        "text": "They blow away in the wind"
-      },
-      {
-        "label": "D",
-        "text": "They make the cloud turn gray"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail about how rain forms.",
-    "points": 1,
-    "explanation": "The passage states that as water droplets inside a cloud get bigger and heavier, they fall as rain or snow."
-  },
-  {
-    "id": 9124,
-    "practiceTest": 9,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "RI",
-    "target": "G",
-    "dok": 1,
-    "standard": "L.3.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Clouds in the Sky**\n\nHave you ever looked up and noticed how many different shapes clouds can make? Clouds are made of tiny water droplets or ice crystals that float in the air. Scientists have given different clouds different names based on what they look like and how high they are.\n\n**Cumulus Clouds**\n\nCumulus clouds are the big, fluffy, white clouds that look like cotton balls. They are usually found low in the sky. Cumulus clouds often appear on sunny days. When you see puffy white clouds drifting by, those are probably cumulus clouds.\n\n**Stratus Clouds**\n\nStratus clouds look like a gray blanket stretched across the sky. They cover a large area and sit low to the ground. Stratus clouds often bring drizzle or light rain.\n\n**Cirrus Clouds**\n\nCirrus clouds are thin and wispy, like streaks drawn with a white pencil. They form very high in the sky, where the air is cold. Cirrus clouds are made of tiny ice crystals. They often appear before a change in the weather.\n\n**Why Clouds Matter**\n\nClouds do more than decorate the sky. They help control the temperature on Earth. On a sunny day, clouds can block some of the sun's heat and keep us cooler. Clouds also help make rain and snow. As water droplets inside a cloud get bigger and heavier, they fall as rain or snow.\n\nThe next time you step outside, look up. The clouds in the sky are always changing.",
-    "passageTitle": "Clouds in the Sky",
-    "questionText": "In the article, cirrus clouds are described as 'thin and wispy.' What does 'wispy' most likely mean?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Thick and heavy"
-      },
-      {
-        "label": "B",
-        "text": "Light, thin, and delicate"
-      },
-      {
-        "label": "C",
-        "text": "Dark and stormy"
-      },
-      {
-        "label": "D",
-        "text": "Bright and colorful"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student uses context to determine word meaning.",
-    "points": 1,
-    "explanation": "Cirrus clouds are described like streaks drawn with a pencil, suggesting they are light, thin, and delicate."
-  },
-  {
-    "id": 9125,
-    "grade": 3,
-    "practiceTest": 9,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
-    "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Making the Best Rainy Day Plan**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains how the children turned a rainy problem into a good day.\n\nSpeaker 2: At first, they were disappointed because outdoor plans had to change.\n\nSpeaker 1: Instead of giving up, they looked for indoor choices that would still be fun for the whole group.\n\nSpeaker 2: By trying a new plan, they discovered that the day could still be successful even though the weather changed.\n\nSpeaker 1: The report shows that flexible thinking can improve a difficult situation.",
-    "passageTitle": "Making the Best Rainy Day Plan",
-    "questionText": "What is the main idea of the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Changing a plan can still lead to a good result"
-      },
-      {
-        "label": "B",
-        "text": "Rain always ruins a day"
-      },
-      {
-        "label": "C",
-        "text": "Indoor games are better than outdoor games"
-      },
-      {
-        "label": "D",
-        "text": "Weather forecasts are never correct"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the main idea of the presentation.",
-    "points": 1,
-    "explanation": "The speakers focus on flexible thinking helping the children enjoy the day despite the rain."
-  },
-  {
-    "id": 9126,
-    "grade": 3,
-    "practiceTest": 9,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
-    "dok": 3,
-    "standard": "SL.3.2",
-    "type": "two-part",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Making the Best Rainy Day Plan**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains how the children turned a rainy problem into a good day.\n\nSpeaker 2: At first, they were disappointed because outdoor plans had to change.\n\nSpeaker 1: Instead of giving up, they looked for indoor choices that would still be fun for the whole group.\n\nSpeaker 2: By trying a new plan, they discovered that the day could still be successful even though the weather changed.\n\nSpeaker 1: The report shows that flexible thinking can improve a difficult situation.",
-    "passageTitle": "Making the Best Rainy Day Plan",
-    "questionText": "Answer both parts of the question.",
-    "partAPrompt": "Part A: Why do the speakers mention the children's disappointment at first?",
-    "partAOptions": [
-      {
-        "label": "A",
-        "text": "to show how much the situation improved after they changed plans"
-      },
-      {
-        "label": "B",
-        "text": "to explain what clouds are made of"
-      },
-      {
-        "label": "C",
-        "text": "to prove they disliked one another"
-      },
-      {
-        "label": "D",
-        "text": "to compare indoor games with science reports"
-      }
-    ],
-    "partBPrompt": "Part B: Which detail best supports your answer?",
-    "partBOptions": [
-      {
-        "label": "A",
-        "text": "At first, they were disappointed because outdoor plans had to change."
-      },
-      {
-        "label": "B",
-        "text": "By trying a new plan, they discovered that the day could still be successful."
-      },
-      {
-        "label": "C",
-        "text": "They looked for indoor choices."
-      },
-      {
-        "label": "D",
-        "text": "This presentation explains how the children turned a rainy problem into a good day."
+        "text": "4 groups of 3"
       }
     ],
     "correctAnswer": [
       "A",
-      "B"
+      "B",
+      "D"
     ],
-    "rubric": "The student identifies the purpose of the detail and the best support.",
+    "rubric": "The student identifies all groups that can be formed using all the pens.",
     "points": 1,
-    "explanation": "The disappointment detail helps highlight how much better the day became after the new plan."
+    "explanation": "2 × 6 = 12, 3 × 4 = 12, and 4 × 3 = 12, so those work. But 5 × 2 = 10, so choice C does not use all 12 pens.",
+    "practiceTest": 9
   },
   {
-    "id": 9127,
-    "grade": 3,
-    "practiceTest": 9,
-    "subject": "ela",
+    "id": 9023,
     "testType": "cat",
-    "claim": 3,
-    "target": "19",
-    "dok": 3,
-    "standard": "SL.3.2",
-    "type": "grid-match",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**What Clouds Tell Us**\n*presentation transcript for classroom use*\n\nSpeaker 1: Different clouds can help people predict weather.\n\nSpeaker 2: Stratus clouds often spread across the sky and may bring light rain or drizzle. Puffy cumulus clouds are more common on fair days.\n\nSpeaker 1: High, thin cirrus clouds can show that weather is changing. By watching clouds, people can learn clues about what might happen next.\n\nSpeaker 2: Clouds also help Earth by affecting temperature and bringing water.\n\nSpeaker 1: The main idea is that clouds give useful information about weather and the environment.",
-    "passageTitle": "What Clouds Tell Us",
-    "questionText": "Complete the chart to show which cloud clue matches each cloud type.",
-    "gridRows": [
-      "Stratus",
-      "Cumulus",
-      "Cirrus"
-    ],
-    "gridColumns": [
-      "Often linked to light rain",
-      "Often seen on fair days",
-      "Can show weather is changing"
-    ],
-    "correctAnswer": [
-      "0:0",
-      "1:1",
-      "2:2"
-    ],
-    "rubric": "The student matches each cloud type to its clue.",
-    "points": 1,
-    "explanation": "Stratus is tied to drizzle, cumulus to fair weather, and cirrus to changing weather."
-  },
-  {
-    "id": 9128,
+    "subject": "math",
     "grade": 3,
-    "practiceTest": 9,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "19",
-    "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**What Clouds Tell Us**\n*presentation transcript for classroom use*\n\nSpeaker 1: Different clouds can help people predict weather.\n\nSpeaker 2: Stratus clouds often spread across the sky and may bring light rain or drizzle. Puffy cumulus clouds are more common on fair days.\n\nSpeaker 1: High, thin cirrus clouds can show that weather is changing. By watching clouds, people can learn clues about what might happen next.\n\nSpeaker 2: Clouds also help Earth by affecting temperature and bringing water.\n\nSpeaker 1: The main idea is that clouds give useful information about weather and the environment.",
-    "passageTitle": "What Clouds Tell Us",
-    "questionText": "Which idea is explained in the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Clouds can give clues about weather and also help Earth"
-      },
-      {
-        "label": "B",
-        "text": "Only one kind of cloud matters"
-      },
-      {
-        "label": "C",
-        "text": "Rain can happen without clouds"
-      },
-      {
-        "label": "D",
-        "text": "People should never study the sky"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a main idea from the presentation.",
-    "points": 1,
-    "explanation": "The speakers explain cloud clues, temperature effects, and water in the environment."
-  },
-  {
-    "id": 9129,
-    "grade": 3,
-    "practiceTest": 9,
-    "subject": "ela",
-    "testType": "cat",
     "claim": 4,
-    "target": "20",
+    "domain": "MD",
+    "target": "D",
     "dok": 3,
-    "standard": "W.3.8",
+    "standard": "3.MD.B.3",
+    "type": "text-input",
+    "questionText": "Jenna made a picture graph in which each star represents some number of students. She forgot to complete the key.\n\nFavorite Color\nRed: **\nBlue: ****\nYellow: ****\nGreen: ****\n\nThe difference between the number of students who voted for blue and the number of students who voted for red is greater than 5 but less than 9.\n\nEnter a possible number of students that each star could represent.",
+    "correctAnswer": "3",
+    "acceptedAnswers": [
+      "3",
+      "4"
+    ],
+    "rubric": "The student enters a possible number of students each star could represent.",
+    "points": 1,
+    "explanation": "Blue has 4 stars and red has 2 stars, so the difference is 2 stars. If each star represents 3 students, the difference is 6. If each star represents 4 students, the difference is 8. Both are greater than 5 but less than 9.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9024,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "H",
+    "dok": 2,
+    "standard": "3.MD.B.4",
+    "type": "line-plot",
+    "questionText": "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 1/4, 2/4, 3/4",
+    "linePlotLabels": [
+      "1/4",
+      "2/4",
+      "3/4",
+      "4/4"
+    ],
+    "linePlotMaxDots": 4,
+    "correctAnswer": [
+      "0:2",
+      "0:1",
+      "1:1",
+      "2:1"
+    ],
+    "rubric": "The student correctly completes the line plot.",
+    "points": 1,
+    "explanation": "The line plot should show two X marks above 1/4, one X above 2/4, one X above 3/4, and none above 4/4.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9025,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "E",
+    "dok": 2,
+    "standard": "3.OA.D.8",
     "type": "multi-select",
-    "questionText": "A student is researching weather and planning ahead. Which two sources would be most helpful?",
+    "questionText": "Kaden has 7 bags of animal toys. Each bag has these animal toys in it.\n\n- 1 whale toy\n- 5 dolphin toys\n- 2 turtle toys\n\nHow many animal toys does Kaden have altogether?\n\nSelect all of the equations that show how to find the total number, t, of animal toys.",
     "options": [
       {
         "label": "A",
-        "text": "A science article about cloud types and weather clues"
+        "text": "7 × 8 = t"
       },
       {
         "label": "B",
-        "text": "A comic about a talking umbrella"
+        "text": "7 + 1 + 5 + 2 = t"
       },
       {
         "label": "C",
-        "text": "A story about changing plans when weather shifts"
+        "text": "7 × (1 + 5 + 2) = t"
       },
       {
         "label": "D",
-        "text": "A menu of soup flavors"
-      },
-      {
-        "label": "E",
-        "text": "A list of favorite playground games only"
+        "text": "7 + (1 × 5 × 2) = t"
       }
     ],
     "correctAnswer": [
       "A",
       "C"
     ],
-    "rubric": "The student selects the strongest research sources.",
+    "rubric": "The student identifies the correct equations.",
     "points": 1,
-    "explanation": "The cloud article and the story about changing plans both support the topic directly."
+    "explanation": "Each bag has 1 + 5 + 2 = 8 toys, so 7 × 8 = t works. The equivalent grouped expression is 7 × (1 + 5 + 2) = t.",
+    "practiceTest": 9
   },
   {
-    "id": 9130,
-    "grade": 3,
-    "practiceTest": 9,
-    "subject": "ela",
+    "id": 9026,
     "testType": "cat",
-    "claim": 4,
-    "target": "21",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "B",
     "dok": 3,
-    "standard": "RI.3.9",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Making the Best Rainy Day Plan**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains how the children turned a rainy problem into a good day.\n\nSpeaker 2: At first, they were disappointed because outdoor plans had to change.\n\nSpeaker 1: Instead of giving up, they looked for indoor choices that would still be fun for the whole group.\n\nSpeaker 2: By trying a new plan, they discovered that the day could still be successful even though the weather changed.\n\nSpeaker 1: The report shows that flexible thinking can improve a difficult situation.\n\n---\n\nListen to the presentation. Then answer the questions.\n\n**What Clouds Tell Us**\n*presentation transcript for classroom use*\n\nSpeaker 1: Different clouds can help people predict weather.\n\nSpeaker 2: Stratus clouds often spread across the sky and may bring light rain or drizzle. Puffy cumulus clouds are more common on fair days.\n\nSpeaker 1: High, thin cirrus clouds can show that weather is changing. By watching clouds, people can learn clues about what might happen next.\n\nSpeaker 2: Clouds also help Earth by affecting temperature and bringing water.\n\nSpeaker 1: The main idea is that clouds give useful information about weather and the environment.",
-    "passageTitle": "The Rainy Day Plan / Clouds in the Sky",
-    "questionText": "Which idea is supported by both texts?",
+    "standard": "3.NF.A.3",
+    "type": "text-input",
+    "questionText": "Two comparisons are shown.\n\n□/□ < 2/3\n□/□ > 2/6\n\nEnter one fraction that makes both comparisons true.",
+    "correctAnswer": "2/4",
+    "fractionRange": {
+      "greaterThan": "2/6",
+      "lessThan": "2/3"
+    },
+    "rubric": "The student enters an acceptable fraction or decimal.",
+    "points": 1,
+    "explanation": "Any value strictly between 2/6 and 2/3 is correct. For example, 2/4 equals 1/2, and 1/2 is greater than 2/6 but less than 2/3.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9027,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "Jana has 107 wooden beads and 68 glass beads. How many more wooden beads than glass beads does Jana have?\n\nEnter your answer in the response box.",
+    "correctAnswer": "39",
+    "rubric": "The student enters the correct number of beads.",
+    "points": 1,
+    "explanation": "Subtract the number of glass beads from the number of wooden beads: 107 − 68 = 39.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9028,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NF",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.NF.A.2",
+    "type": "text-input",
+    "questionText": "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the seventh mark after 0.\n\nEnter the fraction represented by Point A.",
+    "correctAnswer": "7/8",
+    "rubric": "The student enters a correct fraction represented by Point A.",
+    "points": 1,
+    "explanation": "If the number line is divided into 8 equal parts, each mark is one eighth. The seventh mark after 0 is 7/8.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9029,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.NF.A.3",
+    "type": "fraction-model",
+    "questionText": "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model equal amounts.\n\nPart B: Decide whether the number of 1/3 pieces is greater than the number of 1/4 pieces, and choose the correct comparison symbol.",
+    "fractionModel": {
+      "thirdsMax": 4,
+      "fourthsMax": 4
+    },
+    "correctAnswer": [
+      "3",
+      "4",
+      "yes",
+      ">"
+    ],
+    "rubric": "The student correctly models the equal amounts and identifies the correct comparison.",
+    "points": 2,
+    "explanation": "Three pieces of 1/3 and four pieces of 1/4 both make 1 whole. Since 3 is less than 4, the fractions represented are equal in size, but the number of 1/3 pieces compared to 1/4 pieces in this model is 3 versus 4. This adapted item uses the equal-whole model from the official interaction.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9030,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "G",
+    "target": "K",
+    "dok": 2,
+    "standard": "3.G.A.2",
+    "type": "shade-grid",
+    "questionText": "Shade 1/4 of the rectangle.",
+    "shadeGrid": {
+      "rows": 1,
+      "cols": 4,
+      "requiredCount": 1
+    },
+    "correctAnswer": [
+      "0:0"
+    ],
+    "rubric": "The student correctly shades 1/4 of the rectangle.",
+    "points": 1,
+    "explanation": "The rectangle is divided into 4 equal parts, so shading any 1 of the 4 parts shows 1/4.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9031,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
+    "dok": 1,
+    "standard": "3.OA.B.5",
+    "type": "multi-select",
+    "questionText": "Select all of the expressions that are equal to 4 × 12.",
     "options": [
       {
         "label": "A",
-        "text": "Weather affects what people do, so understanding it can be useful"
+        "text": "4 × (10 + 2)"
       },
       {
         "label": "B",
-        "text": "Rain should always stop activities completely"
+        "text": "(4 × 10) + 2"
       },
       {
         "label": "C",
-        "text": "Only scientists can learn from clouds"
+        "text": "4 + (10 × 2)"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "rubric": "The student identifies the equal expressions.",
+    "points": 1,
+    "explanation": "4 × (10 + 2) equals 4 × 12, so A is correct. (4 × 10) + 2 = 42 and 4 + (10 × 2) = 24, so B and C are not equal to 48.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9032,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "text-input",
+    "questionText": "A garden is 9 feet long and 4 feet wide. What is the area of the garden in square feet?",
+    "correctAnswer": "36",
+    "rubric": "The student enters the correct area.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9033,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "MD",
+    "target": "J",
+    "dok": 2,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A square has sides that are each 8 inches long. What is the perimeter of the square in inches?",
+    "correctAnswer": "32",
+    "rubric": "The student enters the correct perimeter.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9034,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B.5",
+    "type": "multiple-choice",
+    "questionText": "Which property of multiplication does this equation show?\n\n3 × (2 + 4) = (3 × 2) + (3 × 4)",
+    "options": [
+      {
+        "label": "A",
+        "text": "Commutative property"
+      },
+      {
+        "label": "B",
+        "text": "Associative property"
+      },
+      {
+        "label": "C",
+        "text": "Distributive property"
       },
       {
         "label": "D",
-        "text": "All clouds bring the same kind of weather"
+        "text": "Identity property"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct property.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9035,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "What is 72 ÷ 9?",
+    "correctAnswer": "8",
+    "rubric": "The student enters the correct quotient.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9036,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "G",
+    "dok": 2,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "A movie starts at 7:15 p.m. and ends at 9:00 p.m. How long is the movie?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 hour 15 minutes"
+      },
+      {
+        "label": "B",
+        "text": "1 hour 30 minutes"
+      },
+      {
+        "label": "C",
+        "text": "1 hour 45 minutes"
+      },
+      {
+        "label": "D",
+        "text": "2 hours 15 minutes"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct elapsed time.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9040,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
+    "type": "multi-select",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.\n\nThe items that can be recycled are:\n\n- Plastic bottles\n- Aluminum cans\n- Glass bottles\n\nStudents from the 3rd grade, 4th grade, and 5th grade classes collected bottles and cans and brought them to school.\n\nTable 1 shows how many bottles and cans each grade collected on each day of the week.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn which days did the 3rd grade class collect more cans and bottles than the other two grades? Select all that apply.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Monday"
+      },
+      {
+        "label": "B",
+        "text": "Tuesday"
+      },
+      {
+        "label": "C",
+        "text": "Wednesday"
+      },
+      {
+        "label": "D",
+        "text": "Thursday"
+      },
+      {
+        "label": "E",
+        "text": "Friday"
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "E"
+    ],
+    "rubric": "The student selects both Thursday and Friday.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9041,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
+    "type": "text-input",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn Tuesday, how many more bottles and cans did the 4th grade class collect than the 3rd grade class?",
+    "correctAnswer": "30",
+    "rubric": "The student enters 30.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9042,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NBT",
+    "target": "F",
+    "dok": 3,
+    "standard": "2.NBT.B",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "You are the contest judge. You need to figure out who won the contest.\n\nDid 3rd grade, 4th grade, or 5th grade win the “Go Green” contest?\n\nUse words and numbers to clearly explain:\n• which grade won the contest, and\n• how you know they collected the most cans and bottles.",
+    "correctAnswer": "3rd grade won because they collected the most bottles and cans for the week. Their total was 50 + 60 + 90 + 120 + 90 = 410, which is more than 4th grade's 390 and 5th grade's 400.",
+    "rubric": "2 points: The student develops an approach to determine the winner and gives a justification. 1 point: The student correctly states that 3rd grade won but gives incomplete reasoning. 0 points: All other responses.",
+    "points": 2,
+    "practiceTest": 9
+  },
+  {
+    "id": 9043,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A.1",
+    "type": "table-input",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "The 2nd grade class got excited about the “Go Green” contest and wanted to join in. They started collecting bottles and cans on Wednesday, even though they missed the first two days.\n\nComplete the table to show a way for the 2nd grade class to still win the contest.",
+    "tableColumns": [
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "tableRowLabel": "2nd Grade",
+    "tableMinSumExclusive": 410,
+    "correctAnswer": [
+      "150",
+      "150",
+      "150"
+    ],
+    "rubric": "1 point: The student enters any numbers for Wednesday, Thursday, and Friday that add up to more than 410. 0 points: All other responses.",
+    "points": 1,
+    "practiceTest": 9
+  },
+  {
+    "id": 9044,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use your answers from questions 3 and 4 to explain how the 2nd grade class could have won the “Go Green” contest.",
+    "correctAnswer": "The 2nd grade class could have won by collecting more than 410 bottles and cans total on Wednesday, Thursday, and Friday. That is more than the 3rd grade total, so the 2nd grade class would win.",
+    "rubric": "2 points: The student uses the numbers from Questions 3 and 4 and explains that the 2nd grade total is more than the winning total. 1 point: The student gives part of the idea without clearly connecting the totals. 0 points: All other responses.",
+    "points": 2,
+    "practiceTest": 9
+  },
+  {
+    "id": 9101,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "1",
+    "dok": 2,
+    "standard": "RL.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Which detail from the story best supports the idea that the father was patient with his sons?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The father had to tend the field by himself."
+      },
+      {
+        "label": "B",
+        "text": "The sons promised to share the treasure equally."
+      },
+      {
+        "label": "C",
+        "text": "The neighbor asked if the sons were helping."
+      },
+      {
+        "label": "D",
+        "text": "\"Oh, they would,\" the father answered, \"but they are young.\""
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference based on the text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9102,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "3",
+    "dok": 2,
+    "standard": "RL.4",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What does the word \"tended\" mean as used in the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Sold"
+      },
+      {
+        "label": "B",
+        "text": "Planted"
+      },
+      {
+        "label": "C",
+        "text": "Watched over"
+      },
+      {
+        "label": "D",
+        "text": "Took care of"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9103,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "4",
+    "dok": 3,
+    "standard": "RL.3",
+    "type": "two-part",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Part A: What is the main lesson the father wanted his sons to learn?\n\nPart B: Which detail from the story best supports your answer to Part A?",
+    "partAPrompt": "What is the main lesson the father wanted his sons to learn?",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "That treasure is always buried underground"
+      },
+      {
+        "label": "B",
+        "text": "That brothers should always share equally"
+      },
+      {
+        "label": "C",
+        "text": "That neighbors are important to have"
+      },
+      {
+        "label": "D",
+        "text": "That hard work is its own reward"
+      }
+    ],
+    "partBPrompt": "Which detail from the story best supports your answer to Part A?",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "The neighbor asked if the sons were helping."
+      },
+      {
+        "label": "B",
+        "text": "The sons planted rice, tended the field, and earned money from the harvest."
+      },
+      {
+        "label": "C",
+        "text": "The father said the boys were still young."
+      },
+      {
+        "label": "D",
+        "text": "The sons promised to share the treasure equally."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option for Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will form a conclusion about a literary text and identify details within the text that support that conclusion.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9104,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "1",
+    "dok": 1,
+    "standard": "RL.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What did the father mean when he told his sons there was \"treasure buried in the field\"?",
+    "options": [
+      {
+        "label": "A",
+        "text": "There were gold coins buried under the soil."
+      },
+      {
+        "label": "B",
+        "text": "The field had valuable minerals in the ground."
+      },
+      {
+        "label": "C",
+        "text": "The reward of hard work would come from farming the field."
+      },
+      {
+        "label": "D",
+        "text": "A neighbor had hidden something in the field."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9105,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "6",
+    "dok": 3,
+    "standard": "RL.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Select TWO details that show how the sons changed during the story.",
+    "options": [
+      {
+        "label": "A",
+        "text": "They dug the entire field looking for treasure."
+      },
+      {
+        "label": "B",
+        "text": "They asked their father for the secret."
+      },
+      {
+        "label": "C",
+        "text": "They made excuses to go home early."
+      },
+      {
+        "label": "D",
+        "text": "They talked to the neighbor about farming."
+      },
+      {
+        "label": "E",
+        "text": "They tended the field \"just as Father did.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the two correct options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text in a certain manner and the impact of that structure on meaning.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9106,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "5",
+    "dok": 3,
+    "standard": "RL.3",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "How did the father's trick affect the sons?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It made them angry at their father."
+      },
+      {
+        "label": "B",
+        "text": "It made them want to find real treasure."
+      },
+      {
+        "label": "C",
+        "text": "It taught them the value of hard work through their own experience."
+      },
+      {
+        "label": "D",
+        "text": "It made them leave the farm."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze the relationship among character actions/interactions within one text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9107,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "6",
+    "dok": 2,
+    "standard": "RL.5",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Why did the author include the neighbor character in the story?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To show that the neighbor wanted to help farm the field"
+      },
+      {
+        "label": "B",
+        "text": "To show that the father was a bad parent"
+      },
+      {
+        "label": "C",
+        "text": "To show how much time passed and that others noticed the sons were not helping"
+      },
+      {
+        "label": "D",
+        "text": "To explain how farming works in Vietnam"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9108,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "7",
+    "dok": 2,
+    "standard": "RL.4",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Read this sentence from the story: \"The brothers moped around with their heads down.\" What does the word \"moped\" tell the reader about the brothers?",
+    "options": [
+      {
+        "label": "A",
+        "text": "They were excited about planting."
+      },
+      {
+        "label": "B",
+        "text": "They were sad and disappointed."
+      },
+      {
+        "label": "C",
+        "text": "They were tired from digging."
+      },
+      {
+        "label": "D",
+        "text": "They were angry at each other."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9109,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "8",
+    "dok": 2,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "According to the passage, why do the Coleman brothers collect sap in the spring?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Because the trees only grow in spring"
+      },
+      {
+        "label": "B",
+        "text": "Because they need water for their farm"
+      },
+      {
+        "label": "C",
+        "text": "Because sap flows in the spring when frost melts inside the trees"
+      },
+      {
+        "label": "D",
+        "text": "Because the University of Vermont told them to"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9110,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "11",
+    "dok": 3,
+    "standard": "RI.3",
+    "type": "two-part",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "Click on the sentence that gives the best conclusion about sugar-maple trees.",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "Sugar maple trees grow best in cold weather."
+      },
+      {
+        "label": "B",
+        "text": "Most sugar maple trees are about 50 feet tall."
+      },
+      {
+        "label": "C",
+        "text": "The sap in sugar maple trees begins flowing in early spring."
+      },
+      {
+        "label": "D",
+        "text": "Vermont has the best weather for growing sugar maple trees."
+      }
+    ],
+    "partBPrompt": "Click on the sentence from the passage that best supports your answer in Part A. Choose one answer.",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "A 50-foot-high sugar maple has nearly two hundred thousand leaves."
+      },
+      {
+        "label": "B",
+        "text": "The Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont."
+      },
+      {
+        "label": "C",
+        "text": "Scientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true."
+      },
+      {
+        "label": "D",
+        "text": "Every spring, the Colemans tap holes into the sugar-maple trees, then hang a bucket under each hole to catch the sap."
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will form a conclusion about an informational text and identify details that support it.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9111,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "What is the author's main purpose for writing this passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To persuade readers to buy maple syrup"
+      },
+      {
+        "label": "B",
+        "text": "To tell an entertaining story about trees"
+      },
+      {
+        "label": "C",
+        "text": "To inform readers about how maple syrup is made and how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To compare different types of trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish the author's point of view within a text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9112,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Why did the author include the legend of Woksis in the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To prove that maple syrup is healthy"
+      },
+      {
+        "label": "B",
+        "text": "To compare modern and ancient methods of making syrup"
+      },
+      {
+        "label": "C",
+        "text": "To show that people have been making maple syrup for a very long time"
+      },
+      {
+        "label": "D",
+        "text": "To explain why the Iroquois planted maple trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze the interaction between elements of a text within a text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9113,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "13",
+    "dok": 2,
+    "standard": "RI.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Select TWO reasons the author organized the passage with the section \"What Makes Sap Run?\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "To tell a funny story about trees"
+      },
+      {
+        "label": "B",
+        "text": "To make the passage more entertaining"
+      },
+      {
+        "label": "C",
+        "text": "To explain the science behind how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To answer a question readers might have after reading about the Colemans"
+      },
+      {
+        "label": "E",
+        "text": "To compare maple trees to other types of trees"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze why the author structured elements within the texts in a certain manner.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9114,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read this sentence: \"sap flow was a 'most mysterious subject.'\" What does the word \"mysterious\" mean?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Easy to understand"
+      },
+      {
+        "label": "B",
+        "text": "Very interesting"
+      },
+      {
+        "label": "C",
+        "text": "Not well known"
+      },
+      {
+        "label": "D",
+        "text": "Hard to explain or understand"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context in an informational text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9115,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read the sentence from the passage.\n\nAll these leaves drink in summer sunshine and make sugar.\n\nWhich statement best describes what this sentence means?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Leaves grow larger in the summer."
+      },
+      {
+        "label": "B",
+        "text": "Leaves use sunlight to make sugar."
+      },
+      {
+        "label": "C",
+        "text": "Summer is the best time to collect sugar."
+      },
+      {
+        "label": "D",
+        "text": "Trees with many leaves make more sugar."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context and analyze its use in the text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9116,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1bE",
+    "dok": 2,
+    "standard": "W.3b, W.5",
+    "type": "multi-select",
+    "questionText": "Ellen is writing a story for her class about a day at the beach. She wants to revise her story to use more descriptive words. Read the draft and complete the task that follows.\n\nIt was Ellen's last day of summer vacation. She raced into the garage and announced, \"Dad, we have to go to the beach today! It's our last chance this summer to go swimming and build sandcastles together!\"\n\nDad smiled happily and, together, Ellen and Dad drove 45 minutes to the beach. Once there, they set up their chairs near the water. Dad read and Ellen played.\n\nEllen worked for about an hour on her sandcastle. Then, she noticed that her dad had spent that entire time just reading a book. She felt annoyed. She looked at him.\n\nDad grinned and set his book aside. Together, the two raced into the warm, bubbly waves. They laughed with excitement.\n\nSelect two of the choices that have the best descriptive sentences to replace \"Dad read and Ellen played\" and \"She looked at him.\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "Dad enjoyed relaxing with his new book while Ellen built a sandcastle. / She gave him a look that said, \"I want you to spend time with me.\""
+      },
+      {
+        "label": "B",
+        "text": "Dad helped Ellen build a sandcastle. / She gave him a look that said, \"I'm glad you like your book.\""
+      },
+      {
+        "label": "C",
+        "text": "Dad read a book to Ellen and then they swam. / She looked at the pictures in the book."
+      },
+      {
+        "label": "D",
+        "text": "Dad read for a while and then built a sandcastle. / She looked at the warm, bubbly waves."
+      },
+      {
+        "label": "E",
+        "text": "Dad had a wonderful time reading while Ellen worked on her giant sandcastle. / She gave him a look that said, \"It's time to have some fun, now!\""
+      },
+      {
+        "label": "F",
+        "text": "Dad decided that he did not like his book. / She gave him a look that said, \"You are the best dad.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise narrative text by identifying descriptive details that convey events or experiences.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9117,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "3bE",
+    "dok": 2,
+    "standard": "W.2b, W.5",
+    "type": "multi-select",
+    "questionText": "A student is writing a report for social studies class about the state of Alaska. The student wants to revise the draft to make sure it has enough details. Read this portion of the report and complete the task that follows.\n\nAlaska is a very big state. It is bigger than Texas, California, and Montana put together! Even though it is a big state, only about 730,000 people live there. Alaska has 39 mountain ranges and two rain forests. A lot of different animals live in Alaska. In Barrow, the town located farthest north in the state, the sun doesn't set between May 10 and August 2, but between November 18 and January 23, the sun doesn't rise. Alaska is a very interesting and unusual place.\n\nMy notes on Alaska:\n• Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home.\n• The capital of Alaska is Juneau.\n• There are 70,000 sea otters living in the waters of Alaska.\n• Alaska did not become a state until 1959.\n• The mountains in Alaska have the coldest temperatures in the United States.\n• Alaska is only 55 miles away from Russia.\n\nChoose the two sentences from the student's notes that add more facts to the underlined sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The capital of Alaska is Juneau."
+      },
+      {
+        "label": "B",
+        "text": "Alaska did not become a state until 1959."
+      },
+      {
+        "label": "C",
+        "text": "Alaska is only 55 miles away from Russia."
+      },
+      {
+        "label": "D",
+        "text": "There are 70,000 sea otters living in the waters of Alaska."
+      },
+      {
+        "label": "E",
+        "text": "The mountains in Alaska have the coldest temperatures in the United States."
+      },
+      {
+        "label": "F",
+        "text": "Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise informational or explanatory text by identifying the best use of elaboration techniques such as supporting details.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9118,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "6b",
+    "dok": 2,
+    "standard": "W.1d",
+    "type": "multiple-choice",
+    "questionText": "A student is writing an opinion article for her teacher about her favorite field trip. The student wants to revise the draft so that it has a logical conclusion. Read the draft of the opinion article and complete the task that follows.\n\nMy favorite third-grade field trip is the trip to the zoo. There are many reasons that the zoo is the best field trip. First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms. As you can see, the best third-grade trip by far is the zoo field trip. Second, we get to eat lunch at a really great rest area with picnic tables. Also, we get to spend the whole day walking around looking at interesting animals.\n\nClick on the sentence in the draft that is in the wrong place.",
+    "options": [
+      {
+        "label": "A",
+        "text": "My favorite third-grade field trip is the trip to the zoo."
+      },
+      {
+        "label": "B",
+        "text": "There are many reasons that the zoo is the best field trip."
+      },
+      {
+        "label": "C",
+        "text": "First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms."
+      },
+      {
+        "label": "D",
+        "text": "As you can see, the best third-grade trip by far is the zoo field trip."
+      },
+      {
+        "label": "E",
+        "text": "Second, we get to eat lunch at a really great rest area with picnic tables."
+      },
+      {
+        "label": "F",
+        "text": "Also, we get to spend the whole day walking around looking at interesting animals."
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will revise opinion text by identifying improved organizational elements such as organizing.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9119,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "8",
+    "dok": 2,
+    "standard": "L.3a",
+    "type": "multi-select",
+    "questionText": "A student is writing an opinion paper for her teacher about dogs. Read this paragraph from the paper and the directions that follow.\n\nDogs are described as “people's best friend” because they make people happy. The fur on a dog can be long or short, or curly or straight, but most of the time it is soft. When people pet dogs, it makes them feel happy. There are community groups that bring dogs to nursing homes for the patients. Being able to play with the dogs makes the patients feel good. This is one reason why I think dogs are wonderful animals.\n\nSelect the best two words from the choices to replace the underlined words in the paragraph.",
+    "options": [
+      {
+        "label": "A",
+        "text": "beautiful"
+      },
+      {
+        "label": "B",
+        "text": "fierce"
+      },
+      {
+        "label": "C",
+        "text": "healthier"
+      },
+      {
+        "label": "D",
+        "text": "lucky"
+      },
+      {
+        "label": "E",
+        "text": "polite"
+      },
+      {
+        "label": "F",
+        "text": "relaxed"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will choose the correct words or phrases for audience or purpose.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9120,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.2c",
+    "type": "multi-select",
+    "questionText": "Click on two sentences that have mistakes in punctuation.\n\nTim and I sat in the front row at the circus, and the clowns tumbled and danced in front of us. They pretended to throw water on us, but their buckets just had shiny bits of paper. Then, one clown really did spray water on me from a flower on his jacket.",
+    "options": [
+      {
+        "label": "A",
+        "text": "“Oh, he got me! I said to Tim.”"
+      },
+      {
+        "label": "B",
+        "text": "“Yes” he laughed “he tricked you twice!”"
+      },
+      {
+        "label": "C",
+        "text": "After that, the elephants came out. The elephants did tricks like stand on their front legs."
+      },
+      {
+        "label": "D",
+        "text": "“How can those huge animals do that?” I asked Tim."
+      },
+      {
+        "label": "E",
+        "text": "“I don't know, but it's amazing,” Tim answered."
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "B"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will apply or edit the use of commas and quotation marks in dialogue.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9121,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.1e",
+    "type": "multi-select",
+    "questionText": "Click on the sentences that use the incorrect verb tenses.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Standing on the stage, I could feel my heart beating in my chest."
+      },
+      {
+        "label": "B",
+        "text": "I sings my song on the stage with my friends."
+      },
+      {
+        "label": "C",
+        "text": "The audience clapped loudly."
+      },
+      {
+        "label": "D",
+        "text": "I take a bow and walked off the stage with a smile on my face."
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will apply or edit the use of simple verb tenses in a text.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9122,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 3,
+    "standard": "SL.2",
+    "type": "two-part",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "What is the most likely reason the author made the presentation?",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "to explain how a hot air balloon works"
+      },
+      {
+        "label": "B",
+        "text": "to show the advantages of being small"
+      },
+      {
+        "label": "C",
+        "text": "to tell how Americans feel about new experiences"
+      },
+      {
+        "label": "D",
+        "text": "to describe an important event in American history"
+      }
+    ],
+    "partBPrompt": "Which sentence from the presentation best supports your answer in part A?",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "\"Smoky hot air swelled the balloon and sent it up.\""
+      },
+      {
+        "label": "B",
+        "text": "\"He was the first American to develop a method to lift a balloon using hot air.\""
+      },
+      {
+        "label": "C",
+        "text": "\"The crowd yelled and clapped as Carnes sent the balloon up, time and again.\""
+      },
+      {
+        "label": "D",
+        "text": "\"He was the first American to see such views.\""
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a speaker's purpose and identify details that support it.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9123,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Which question can a listener answer after hearing the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "In what year did the balloon ride take place?"
+      },
+      {
+        "label": "B",
+        "text": "What happened during the first hot air balloon ride?"
+      },
+      {
+        "label": "C",
+        "text": "How did Edward feel after he took his ride in the balloon?"
+      },
+      {
+        "label": "D",
+        "text": "How did Edward become the first American to ride in a balloon?"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify information that can be determined from an oral presentation.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9124,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Complete the chart to show which events were planned.\n\nClick in the boxes next to the events that match if they were planned or unplanned.",
+    "gridRows": [
+      "Edward Warren Jr. rode in a balloon.",
+      "The balloon filled with smoke from a fire.",
+      "A crowd in Baltimore saw how a balloon could fly.",
+      "Peter Carnes used a stove to make the balloon rise."
+    ],
+    "gridColumns": [
+      "Planned",
+      "Unplanned"
+    ],
+    "correctAnswer": [
+      "0:1",
+      "1:0",
+      "2:0",
+      "3:0"
+    ],
+    "rubric": "The student correctly identifies which events were planned and which were unplanned.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish among ideas and events presented orally.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9125,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Which conclusion is supported by the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Americans eat pizza every day."
+      },
+      {
+        "label": "B",
+        "text": "Pizza is usually eaten at lunchtime."
+      },
+      {
+        "label": "C",
+        "text": "Almost anything can go on a pizza."
+      },
+      {
+        "label": "D",
+        "text": "Lobster pizza is most popular in Maine."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a supported conclusion from an oral presentation.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9126,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Complete the chart to show which countries are known for which pizza toppings.\n\nClick in the boxes next to the countries that match the toppings.",
+    "gridRows": [
+      "United States",
+      "India",
+      "Japan"
+    ],
+    "gridColumns": [
+      "eel",
+      "pepperoni",
+      "ginger"
+    ],
+    "correctAnswer": [
+      "2:0",
+      "0:1",
+      "1:2"
+    ],
+    "rubric": "The student correctly matches each topping to the country from the presentation.",
+    "points": 1,
+    "evidenceStatement": "The student will organize information presented orally into a chart.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9127,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.3",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "What is the most likely reason the author made the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "to suggest another way of looking at pizza"
+      },
+      {
+        "label": "B",
+        "text": "to change what people think is good pizza"
+      },
+      {
+        "label": "C",
+        "text": "to show why pepperoni pizza is the best kind"
+      },
+      {
+        "label": "D",
+        "text": "to explain why pizza is different in other places"
       }
     ],
     "correctAnswer": "A",
-    "rubric": "The student identifies a shared idea across the texts.",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "The story shows plans changing because of rain, and the article shows how cloud knowledge helps people understand weather."
+    "evidenceStatement": "The student will determine a speaker's likely purpose for a presentation.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9128,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
+    "dok": 2,
+    "standard": "W.8",
+    "type": "multi-select",
+    "questionText": "A student is writing a research report about the human eye. Read the sentences from her report and the directions that follow.\n\nOur eyes are wonderful body parts. They help us see the beauty of the world. In the center of the eye is a black spot. Have you ever wondered why that spot gets bigger and smaller?\n\nChoose two of the sources that would most likely give the student more information about the ideas she has written.",
+    "options": [
+      {
+        "label": "A",
+        "text": "www.eye.color.com, a website that tells about the colors of people's eyes"
+      },
+      {
+        "label": "B",
+        "text": "www.eyequestion.com, a website that explains the job of each part of the eye"
+      },
+      {
+        "label": "C",
+        "text": "Eyes and How They Work, a book that tells about the way that the eye parts work"
+      },
+      {
+        "label": "D",
+        "text": "www.eye.food.com, a website that tells what we should eat to help our eyes stay healthy"
+      },
+      {
+        "label": "E",
+        "text": "My Job as an Eye Doctor, a book that tells about being a doctor who takes care of people's eyes"
+      },
+      {
+        "label": "F",
+        "text": "You Can Find It, a children's magazine that has many puzzles and games where you look for the hidden things"
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "C"
+    ],
+    "rubric": "The student selects the two sources that best support the student's research focus.",
+    "points": 1,
+    "evidenceStatement": "The student will evaluate sources for relevance to a research topic.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9129,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "8",
+    "dok": 2,
+    "standard": "W.8",
+    "type": "multiple-choice",
+    "questionText": "A student is writing a report about red foxes. She is looking for information about the body of the red fox. Which sentence has information that the student can use?",
+    "options": [
+      {
+        "label": "A",
+        "text": "There are over twenty different kinds of foxes."
+      },
+      {
+        "label": "B",
+        "text": "Red foxes can live in hot deserts and snowy forests."
+      },
+      {
+        "label": "C",
+        "text": "The red fox wraps its fluffy tail around itself like a blanket."
+      },
+      {
+        "label": "D",
+        "text": "Red foxes are often clever characters in children's stories."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the sentence that gives the relevant body detail.",
+    "points": 1,
+    "evidenceStatement": "The student will identify relevant source information for research.",
+    "practiceTest": 9
+  },
+  {
+    "id": 9130,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
+    "dok": 2,
+    "standard": "W.8",
+    "type": "multiple-choice",
+    "questionText": "A student is writing a research report about different kinds of fruit. He wrote an opinion in the report. Read the sentences from the student's report and the directions that follow.\n\nMany Kinds of Fruit\n\nA fruit is the part of the plant that has the plant's seeds. There are many kinds of fruits. Some that are popular with kids are apples, bananas, grapes, oranges, and strawberries. Sometimes it is confusing to tell if a food is a fruit.\n\nThe student found another source about different kinds of fruit. Which sentence best supports the student's opinion?",
+    "options": [
+      {
+        "label": "A",
+        "text": "For example, it is hard to tell what some foods are when they are cut up in pieces."
+      },
+      {
+        "label": "B",
+        "text": "For example, a tomato is not sweet, but it is a fruit because it has the seeds."
+      },
+      {
+        "label": "C",
+        "text": "For example, some kids don't like some of the fruits on that list."
+      },
+      {
+        "label": "D",
+        "text": "For example, fruits can be many different shapes and colors."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the sentence that best supports the opinion in the report.",
+    "points": 1,
+    "evidenceStatement": "The student will identify evidence that supports an opinion in a research report.",
+    "practiceTest": 9
   },
   {
     "id": 9150,

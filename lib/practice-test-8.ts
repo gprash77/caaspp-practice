@@ -3,773 +3,998 @@ import type { Question } from "./questions";
 export const practiceTest8Questions: Question[] = [
   {
     "id": 8001,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
+    "grade": 3,
+    "claim": 1,
     "domain": "OA",
     "target": "D",
-    "dok": 3,
+    "dok": 2,
     "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A campsite stores 8 bundles of wood with 9 logs in each bundle. Campers use 17 logs on Friday and 22 on Saturday. How many logs are left?",
-    "options": [
-      {
-        "label": "A",
-        "text": "27"
-      },
-      {
-        "label": "B",
-        "text": "33"
-      },
-      {
-        "label": "C",
-        "text": "35"
-      },
-      {
-        "label": "D",
-        "text": "39"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student solves a three-step problem.",
+    "type": "text-input",
+    "questionText": "Maria baked 76 cookies. She gave 24 cookies to her friends. How many cookies does Maria have now?",
+    "correctAnswer": "52",
+    "rubric": "The student enters the correct number of cookies.",
     "points": 1,
-    "explanation": "8 × 9 = 72. Then 72 − 17 − 22 = 33."
+    "practiceTest": 8
   },
   {
     "id": 8002,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 3,
-    "standard": "3.OA.B.5",
-    "type": "multiple-choice",
-    "questionText": "Which equation could be used to find 6 × 14 using the distributive property?",
-    "options": [
-      {
-        "label": "A",
-        "text": "(6 × 10) + (6 × 4)"
-      },
-      {
-        "label": "B",
-        "text": "(6 + 10) × 4"
-      },
-      {
-        "label": "C",
-        "text": "6 × (14 + 14)"
-      },
-      {
-        "label": "D",
-        "text": "(6 × 14) + 14"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a correct distributive form.",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NBT",
+    "target": "E",
+    "dok": 1,
+    "standard": "3.NBT.A.2",
+    "type": "text-input",
+    "questionText": "What is 356 + 453?",
+    "correctAnswer": "809",
+    "rubric": "The student enters the correct number.",
     "points": 1,
-    "explanation": "14 can be broken into 10 + 4, so use (6 × 10) + (6 × 4)."
+    "practiceTest": 8
   },
   {
     "id": 8003,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
+    "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "B",
-    "dok": 2,
-    "standard": "3.OA.A.4",
+    "target": "A",
+    "dok": 1,
+    "standard": "3.OA.A.3",
     "type": "text-input",
-    "questionText": "What number makes this equation true?\n\n? × 12 = 96",
-    "correctAnswer": "8",
-    "rubric": "The student enters the correct factor.",
+    "questionText": "Jake has 3 packs of trading cards. Each pack has 5 cards. How many trading cards does Jake have in all?",
+    "correctAnswer": "15",
+    "rubric": "The student enters the correct number of trading cards.",
     "points": 1,
-    "explanation": "8 × 12 = 96."
+    "practiceTest": 8
   },
   {
     "id": 8004,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 4,
+    "grade": 3,
+    "claim": 3,
     "domain": "OA",
-    "target": "E",
-    "dok": 3,
-    "standard": "3.OA.A.3",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B",
     "type": "multiple-choice",
-    "questionText": "A market sells 5 crates with 12 melons in each crate and 3 crates with 8 melons in each crate. How many melons are there in all?",
+    "questionText": "A store has 24 apples arranged equally in 4 rows. Which expression can be used to find the number of apples in each row, and why?",
     "options": [
       {
         "label": "A",
-        "text": "72"
+        "text": "4 × 24, because you multiply the number of rows by the total"
       },
       {
         "label": "B",
-        "text": "78"
+        "text": "24 + 4, because you add the total to the number of rows"
       },
       {
         "label": "C",
-        "text": "84"
+        "text": "24 − 4, because you subtract the number of rows from the total"
       },
       {
         "label": "D",
-        "text": "96"
+        "text": "24 ÷ 4, because you divide the total equally among the rows"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student combines two products.",
+    "correctAnswer": "D",
+    "rubric": "The student identifies the correct expression and reason.",
     "points": 1,
-    "explanation": "5 × 12 = 60 and 3 × 8 = 24, so the total is 84."
+    "practiceTest": 8
   },
   {
     "id": 8005,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 3,
-    "standard": "3.NBT.A.2",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "A",
+    "dok": 1,
+    "standard": "3.OA.A.3",
     "type": "text-input",
-    "questionText": "What is 688 + 497?",
-    "correctAnswer": "1185",
-    "rubric": "The student enters the correct sum.",
+    "questionText": "A fish tank has 2 rows of fish. Each row has 3 fish. How many fish are in the tank?",
+    "correctAnswer": "6",
+    "rubric": "The student enters the correct number of fish.",
     "points": 1,
-    "explanation": "688 + 497 = 1,185."
+    "practiceTest": 8
   },
   {
     "id": 8006,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 3,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 1,002 − 587?",
-    "correctAnswer": "415",
-    "rubric": "The student enters the correct difference.",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "G",
+    "dok": 1,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "The clock shows that school starts at 8:15 a.m. Lunch is 3 hours and 45 minutes later. What time is lunch?",
+    "options": [
+      {
+        "label": "A",
+        "text": "11:00 a.m."
+      },
+      {
+        "label": "B",
+        "text": "11:45 a.m."
+      },
+      {
+        "label": "C",
+        "text": "12:15 p.m."
+      },
+      {
+        "label": "D",
+        "text": "12:00 p.m."
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct time.",
     "points": 1,
-    "explanation": "1,002 − 587 = 415."
+    "practiceTest": 8
   },
   {
     "id": 8007,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 1,
+    "grade": 3,
+    "claim": 2,
     "domain": "NBT",
-    "target": "E",
+    "target": "C",
     "dok": 2,
-    "standard": "3.NBT.A.1",
+    "standard": "3.NBT.A.2",
     "type": "multiple-choice",
-    "questionText": "Which number rounds to 900 when rounded to the nearest hundred?",
+    "questionText": "Ms. Adams collected 347 cans. Mr. Baker collected 289 cans. Ms. Clark collected 312 cans. Which teacher collected the most cans?",
     "options": [
       {
         "label": "A",
-        "text": "849"
+        "text": "Ms. Adams"
       },
       {
         "label": "B",
-        "text": "851"
+        "text": "Mr. Baker"
       },
       {
         "label": "C",
-        "text": "949"
+        "text": "Ms. Clark"
       },
       {
         "label": "D",
-        "text": "950"
+        "text": "Ms. Adams and Ms. Clark collected the same amount"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student selects the correct number.",
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct teacher.",
     "points": 1,
-    "explanation": "851 rounds to 900."
+    "practiceTest": 8
   },
   {
     "id": 8008,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
+    "grade": 3,
     "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 3,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which pair of fractions is equivalent?",
-    "options": [
-      {
-        "label": "A",
-        "text": "3/4 and 6/8"
-      },
-      {
-        "label": "B",
-        "text": "2/3 and 5/6"
-      },
-      {
-        "label": "C",
-        "text": "1/2 and 3/5"
-      },
-      {
-        "label": "D",
-        "text": "4/5 and 5/4"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies equivalent fractions.",
+    "domain": "MD",
+    "target": "J",
+    "dok": 1,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A rectangle has a length of 20 inches and a width of 10 inches. What is the perimeter of the rectangle in inches?",
+    "correctAnswer": "60",
+    "rubric": "The student enters the correct perimeter of the shape.",
     "points": 1,
-    "explanation": "6/8 names the same amount as 3/4."
+    "practiceTest": 8
   },
   {
     "id": 8009,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 3,
+    "grade": 3,
+    "claim": 1,
     "domain": "NF",
     "target": "F",
-    "dok": 3,
+    "dok": 1,
     "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which statement is true?",
-    "options": [
-      {
-        "label": "A",
-        "text": "5/8 is less than 1/2"
-      },
-      {
-        "label": "B",
-        "text": "4/6 is greater than 1/2"
-      },
-      {
-        "label": "C",
-        "text": "2/10 is greater than 1/5"
-      },
-      {
-        "label": "D",
-        "text": "3/3 is less than 1"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student compares fractions.",
+    "type": "text-input",
+    "questionText": "Look at the number line below. It is divided into 8 equal parts from 0 to 1. Point A is at the 5th mark. What number does Point A represent? Write your answer as a whole number if the fraction equals a whole number, or as a fraction.",
+    "correctAnswer": "5",
+    "rubric": "The student enters a correct number.",
     "points": 1,
-    "explanation": "4/6 is equal to 2/3, which is greater than 1/2."
+    "practiceTest": 8
   },
   {
     "id": 8010,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
+    "grade": 3,
+    "claim": 3,
     "domain": "NF",
-    "target": "F",
-    "dok": 3,
-    "standard": "3.NF.A.2",
-    "type": "text-input",
-    "questionText": "A number line from 0 to 1 is divided into 10 equal parts. What fraction is at the seventh mark after 0?",
-    "correctAnswer": "7/10",
-    "rubric": "The student enters the correct fraction.",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.1",
+    "type": "multiple-choice",
+    "questionText": "Which statement about fractions is true?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1/2 is always greater than 1/3"
+      },
+      {
+        "label": "B",
+        "text": "2/4 is greater than 3/4"
+      },
+      {
+        "label": "C",
+        "text": "3/8 is less than 6/8"
+      },
+      {
+        "label": "D",
+        "text": "1/4 is equal to 1/8"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct statement.",
     "points": 1,
-    "explanation": "The seventh mark in tenths is 7/10."
+    "practiceTest": 8
   },
   {
     "id": 8011,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "MD",
-    "target": "G",
-    "dok": 3,
-    "standard": "3.MD.A.1",
-    "type": "multiple-choice",
-    "questionText": "A ferry leaves at 11:35 a.m. and arrives at 1:20 p.m. How long is the trip?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1 hour 35 minutes"
-      },
-      {
-        "label": "B",
-        "text": "1 hour 45 minutes"
-      },
-      {
-        "label": "C",
-        "text": "1 hour 55 minutes"
-      },
-      {
-        "label": "D",
-        "text": "2 hours 5 minutes"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student calculates elapsed time.",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "A",
+    "dok": 1,
+    "standard": "3.OA.A.4",
+    "type": "text-input",
+    "questionText": "What number makes this equation true?\n\n6 × ? = 48",
+    "correctAnswer": "8",
+    "rubric": "The student enters the correct number.",
     "points": 1,
-    "explanation": "From 11:35 to 12:35 is 1 hour, then 45 minutes more to 1:20."
+    "practiceTest": 8
   },
   {
     "id": 8012,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 4,
-    "domain": "MD",
-    "target": "H",
-    "dok": 3,
-    "standard": "3.MD.B.3",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
+    "dok": 1,
+    "standard": "3.OA.B.6",
     "type": "multiple-choice",
-    "questionText": "A chart shows rainfall in inches: April 12, May 18, June 15, July 21. What is the total rainfall?",
+    "questionText": "Which equation is related to 7 × 8 = 56?",
     "options": [
       {
         "label": "A",
-        "text": "56"
+        "text": "56 + 8 = 64"
       },
       {
         "label": "B",
-        "text": "60"
+        "text": "56 − 7 = 49"
       },
       {
         "label": "C",
-        "text": "66"
+        "text": "56 ÷ 8 = 7"
       },
       {
         "label": "D",
-        "text": "72"
+        "text": "7 + 8 = 15"
       }
     ],
     "correctAnswer": "C",
-    "rubric": "The student totals all data values.",
+    "rubric": "The student selects the correct equation.",
     "points": 1,
-    "explanation": "12 + 18 + 15 + 21 = 66."
+    "practiceTest": 8
   },
   {
     "id": 8013,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "MD",
-    "target": "I",
-    "dok": 3,
-    "standard": "3.MD.C.7",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.9",
     "type": "text-input",
-    "questionText": "A rectangle is 14 meters long and 6 meters wide. What is the area?",
-    "correctAnswer": "84",
-    "rubric": "The student enters the correct area.",
+    "questionText": "Look at the pattern: 5, 10, 15, ?, ?\n\nWhat are the next two numbers in the pattern? Enter them separated by a comma.",
+    "correctAnswer": "20, 25",
+    "rubric": "The student enters the correct numbers.",
     "points": 1,
-    "explanation": "14 × 6 = 84."
+    "practiceTest": 8
   },
   {
     "id": 8014,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "MD",
-    "target": "J",
-    "dok": 3,
-    "standard": "3.MD.D.8",
-    "type": "text-input",
-    "questionText": "A rectangle is 14 meters long and 6 meters wide. What is the perimeter?",
-    "correctAnswer": "40",
-    "rubric": "The student enters the correct perimeter.",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "multi-select",
+    "questionText": "Decide whether each equation is true or false.\n\nSelect all of the equations that are true.",
+    "options": [
+      {
+        "label": "A",
+        "text": "8 × 2 = 4 × 6"
+      },
+      {
+        "label": "B",
+        "text": "7 × 3 = 3 × 7"
+      },
+      {
+        "label": "C",
+        "text": "5 × 6 = 3 × 10"
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "C"
+    ],
+    "rubric": "The student correctly identifies the true equations.",
     "points": 1,
-    "explanation": "2 × 14 + 2 × 6 = 40."
+    "explanation": "8 × 2 = 16 and 4 × 6 = 24, so A is false. 7 × 3 and 3 × 7 are both 21, so B is true. 5 × 6 and 3 × 10 are both 30, so C is true.",
+    "practiceTest": 8
   },
   {
     "id": 8015,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 4,
-    "domain": "MD",
-    "target": "I",
-    "dok": 4,
-    "standard": "3.MD.C.7",
-    "type": "multiple-choice",
-    "questionText": "A shape is made from a 7-by-4 rectangle and a 5-by-3 rectangle. What is the total area?",
-    "options": [
-      {
-        "label": "A",
-        "text": "35"
-      },
-      {
-        "label": "B",
-        "text": "38"
-      },
-      {
-        "label": "C",
-        "text": "43"
-      },
-      {
-        "label": "D",
-        "text": "49"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student combines areas of two rectangles.",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "Enter the unknown numbers that make each equation true.\n\nEnter the first unknown number in the first box.\nEnter the second unknown number in the second box.\n\n5 × 8 = □\n\n8 × 7 = □",
+    "correctAnswer": "40,56",
+    "rubric": "The student enters the correct products.",
     "points": 1,
-    "explanation": "7 × 4 = 28 and 5 × 3 = 15. Total = 43."
+    "explanation": "5 × 8 = 40 and 8 × 7 = 56, so the two answers are 40 and 56 in that order.",
+    "practiceTest": 8
   },
   {
     "id": 8016,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
+    "grade": 3,
     "claim": 3,
-    "domain": "G",
-    "target": "K",
-    "dok": 3,
-    "standard": "3.G.A.1",
+    "domain": "MD",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.MD.A.1",
     "type": "multiple-choice",
-    "questionText": "Which statement is always true?",
+    "questionText": "Four number lines are described below. Each one starts at 0 minutes.\n\nWhich number line places point P at 45 minutes?",
     "options": [
       {
         "label": "A",
-        "text": "Every quadrilateral is a rectangle"
+        "text": "The line is marked every 20 minutes, and P is at the third mark after 0."
       },
       {
         "label": "B",
-        "text": "Every rectangle is a quadrilateral"
+        "text": "The line is marked every 15 minutes, and P is at the third mark after 0."
       },
       {
         "label": "C",
-        "text": "Every triangle has parallel sides"
+        "text": "The line is marked every 10 minutes, and P is at the fourth mark after 0."
       },
       {
         "label": "D",
-        "text": "Every pentagon has 4 sides"
+        "text": "The line is marked every 30 minutes, and P is halfway between 0 and 60."
       }
     ],
     "correctAnswer": "B",
-    "rubric": "The student identifies the always-true statement.",
+    "rubric": "The student identifies the correct number line.",
     "points": 1,
-    "explanation": "All rectangles have 4 sides, so they are quadrilaterals."
+    "explanation": "If the marks are every 15 minutes, the first three marks after 0 are 15, 30, and 45, so choice B is correct.",
+    "practiceTest": 8
   },
   {
     "id": 8017,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "G",
-    "target": "K",
-    "dok": 3,
-    "standard": "3.G.A.2",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
     "type": "multiple-choice",
-    "questionText": "A rectangle is divided into 12 equal parts. 5 parts are shaded. Which fraction is not shaded?",
+    "questionText": "A rectangular room is covered with 4 rows of 5 square-foot tiles. Which number shows the area of the room in square feet?",
     "options": [
       {
         "label": "A",
-        "text": "5/12"
+        "text": "20"
       },
       {
         "label": "B",
-        "text": "7/12"
+        "text": "9"
       },
       {
         "label": "C",
-        "text": "12/7"
+        "text": "18"
       },
       {
         "label": "D",
-        "text": "1/7"
+        "text": "25"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student finds the unshaded fraction.",
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct number of square feet.",
     "points": 1,
-    "explanation": "12 total minus 5 shaded leaves 7 unshaded parts."
+    "explanation": "Area is found by multiplying rows by columns: 4 × 5 = 20 square feet.",
+    "practiceTest": 8
   },
   {
     "id": 8018,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 4,
-    "domain": "OA",
-    "target": "E",
-    "dok": 4,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A zoo buys 4 boxes of 18 tickets and 3 boxes of 12 tickets. How many tickets are bought in all?",
-    "options": [
-      {
-        "label": "A",
-        "text": "96"
-      },
-      {
-        "label": "B",
-        "text": "102"
-      },
-      {
-        "label": "C",
-        "text": "108"
-      },
-      {
-        "label": "D",
-        "text": "120"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student combines two products.",
-    "points": 1,
-    "explanation": "4 × 18 = 72 and 3 × 12 = 36. Total = 108."
-  },
-  {
-    "id": 8019,
     "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 2,
-    "domain": "OA",
-    "target": "D",
-    "dok": 3,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A baker makes 6 trays of muffins with 11 muffins on each tray. She sells 28 muffins in the morning and 17 in the afternoon. How many muffins are left?",
-    "options": [
-      {
-        "label": "A",
-        "text": "19"
-      },
-      {
-        "label": "B",
-        "text": "21"
-      },
-      {
-        "label": "C",
-        "text": "26"
-      },
-      {
-        "label": "D",
-        "text": "31"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student solves a multi-step problem.",
-    "points": 1,
-    "explanation": "6 × 11 = 66. Then 66 − 28 − 17 = 21."
-  },
-  {
-    "id": 8020,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.NBT.A.3",
-    "type": "multiple-choice",
-    "questionText": "What is 400 × 2?",
-    "options": [
-      {
-        "label": "A",
-        "text": "80"
-      },
-      {
-        "label": "B",
-        "text": "800"
-      },
-      {
-        "label": "C",
-        "text": "8,000"
-      },
-      {
-        "label": "D",
-        "text": "402"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student selects the correct product.",
-    "points": 1,
-    "explanation": "4 hundreds × 2 = 8 hundreds = 800."
-  },
-  {
-    "id": 8021,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
     "claim": 2,
     "domain": "OA",
     "target": "A",
-    "dok": 3,
-    "standard": "3.OA.A.3",
+    "dok": 2,
+    "standard": "3.OA.D.8",
     "type": "text-input",
-    "questionText": "An orchestra has 12 rows with 8 chairs in each row. How many chairs are there in all?",
-    "correctAnswer": "96",
-    "rubric": "The student enters the correct total.",
+    "questionText": "There are 9 cherry trees.\n\n• Kim picks 8 cherries from each tree.\n• Kim eats 14 of the cherries she picked.\n\nEnter the number of cherries Kim has left.",
+    "correctAnswer": "58",
+    "rubric": "The student enters the correct number of cherries.",
     "points": 1,
-    "explanation": "12 × 8 = 96."
+    "explanation": "Kim picks 9 × 8 = 72 cherries and then eats 14. That leaves 72 − 14 = 58 cherries.",
+    "practiceTest": 8
   },
   {
-    "id": 8022,
-    "grade": 3,
-    "practiceTest": 8,
+    "id": 8019,
     "testType": "cat",
     "subject": "math",
+    "grade": 3,
     "claim": 3,
     "domain": "OA",
     "target": "E",
-    "dok": 4,
-    "standard": "3.OA.A.3",
+    "dok": 2,
+    "standard": "3.OA.B.5",
     "type": "multiple-choice",
-    "questionText": "Which expression shows 4 shelves with 12 books each and 5 shelves with 12 books each?",
+    "questionText": "Libby said the answer to the problem 5 × 2 × 3 is 25. Her work is shown.\n\n• Step 1: 5 × 2 = 10\n• Step 2: 5 × 3 = 15\n• Step 3: 10 + 15 = 25\n\nWhich is true?",
     "options": [
       {
         "label": "A",
-        "text": "(4 + 5) × 12"
+        "text": "Libby's answer is correct because 10 + 15 = 25."
       },
       {
         "label": "B",
-        "text": "4 + 5 + 12"
+        "text": "Libby's answer is correct because 2 + 3 = 5 and 5 × 5 = 25."
       },
       {
         "label": "C",
-        "text": "(12 + 12) × 5"
+        "text": "Libby's answer is not correct because she multiplied 5 × 3 and 5 × 2."
       },
       {
         "label": "D",
-        "text": "4 × 5 × 12"
+        "text": "Libby's answer is not correct because she should have multiplied 10 × 15."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student identifies the correct statement.",
+    "points": 1,
+    "explanation": "Libby treated 5 × 2 × 3 like 5 × 2 plus 5 × 3, which is not the right way to solve the expression. That makes choice C correct.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8020,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "Jamal's mother plans a trip for the baseball team.\n\n• There are 14 players on the team.\n• There are 5 parents going on the trip.\n• The players and parents will all travel together in cars.\n• Each car can hold a total of 5 people.\n• There must be at least 1 parent in each car.\n\nWhat is the fewest number of cars they will need?",
+    "correctAnswer": "4",
+    "rubric": "The student enters the fewest number of cars needed.",
+    "points": 1,
+    "explanation": "There are 14 + 5 = 19 people total. Four cars can hold 20 people, and with 5 parents available it is possible to put at least 1 parent in each car.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8021,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.3",
+    "type": "multiple-choice",
+    "questionText": "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1\n- greater than 1",
+    "options": [
+      {
+        "label": "A",
+        "text": "2/2, 3/4, 3/2"
+      },
+      {
+        "label": "B",
+        "text": "2/3, 3/3, 2/4"
+      },
+      {
+        "label": "C",
+        "text": "4/3, 2/2, 4/4"
+      },
+      {
+        "label": "D",
+        "text": "3/4, 3/2, 2/2"
       }
     ],
     "correctAnswer": "A",
-    "rubric": "The student matches an expression to a situation.",
+    "rubric": "The student identifies one valid set of fractions.",
     "points": 1,
-    "explanation": "There are 9 shelves total with 12 books on each."
+    "explanation": "2/2 equals 1, 3/4 is less than 1, and 3/2 is greater than 1, so choice A is correct.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8022,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "OA",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.A.3",
+    "type": "multi-select",
+    "questionText": "A teacher has 12 pens. Select all of the groups that can be formed using all 12 pens with no pens left over.",
+    "options": [
+      {
+        "label": "A",
+        "text": "2 groups of 6"
+      },
+      {
+        "label": "B",
+        "text": "3 groups of 4"
+      },
+      {
+        "label": "C",
+        "text": "5 groups of 2"
+      },
+      {
+        "label": "D",
+        "text": "4 groups of 3"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "rubric": "The student identifies all groups that can be formed using all the pens.",
+    "points": 1,
+    "explanation": "2 × 6 = 12, 3 × 4 = 12, and 4 × 3 = 12, so those work. But 5 × 2 = 10, so choice C does not use all 12 pens.",
+    "practiceTest": 8
   },
   {
     "id": 8023,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "NF",
-    "target": "F",
+    "grade": 3,
+    "claim": 4,
+    "domain": "MD",
+    "target": "D",
     "dok": 3,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A class finished 9 of 15 pages in a booklet. What fraction of the booklet is finished?",
-    "options": [
-      {
-        "label": "A",
-        "text": "9/15"
-      },
-      {
-        "label": "B",
-        "text": "6/15"
-      },
-      {
-        "label": "C",
-        "text": "15/9"
-      },
-      {
-        "label": "D",
-        "text": "1/9"
-      }
+    "standard": "3.MD.B.3",
+    "type": "text-input",
+    "questionText": "Jenna made a picture graph in which each star represents some number of students. She forgot to complete the key.\n\nFavorite Color\nRed: **\nBlue: ****\nYellow: ****\nGreen: ****\n\nThe difference between the number of students who voted for blue and the number of students who voted for red is greater than 5 but less than 9.\n\nEnter a possible number of students that each star could represent.",
+    "correctAnswer": "3",
+    "acceptedAnswers": [
+      "3",
+      "4"
     ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the correct fraction.",
+    "rubric": "The student enters a possible number of students each star could represent.",
     "points": 1,
-    "explanation": "9 of the 15 equal pages are finished."
+    "explanation": "Blue has 4 stars and red has 2 stars, so the difference is 2 stars. If each star represents 3 students, the difference is 6. If each star represents 4 students, the difference is 8. Both are greater than 5 but less than 9.",
+    "practiceTest": 8
   },
   {
     "id": 8024,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 3,
-    "domain": "NF",
-    "target": "F",
-    "dok": 4,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which statement is correct?",
-    "options": [
-      {
-        "label": "A",
-        "text": "6/10 is less than 1/2"
-      },
-      {
-        "label": "B",
-        "text": "5/10 equals 1/2"
-      },
-      {
-        "label": "C",
-        "text": "7/8 is less than 3/4"
-      },
-      {
-        "label": "D",
-        "text": "2/6 equals 1/2"
-      }
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "H",
+    "dok": 2,
+    "standard": "3.MD.B.4",
+    "type": "line-plot",
+    "questionText": "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 1/4, 2/4, 3/4",
+    "linePlotLabels": [
+      "1/4",
+      "2/4",
+      "3/4",
+      "4/4"
     ],
-    "correctAnswer": "B",
-    "rubric": "The student compares fractions and equivalence.",
+    "linePlotMaxDots": 4,
+    "correctAnswer": [
+      "0:2",
+      "0:1",
+      "1:1",
+      "2:1"
+    ],
+    "rubric": "The student correctly completes the line plot.",
     "points": 1,
-    "explanation": "5/10 and 1/2 are equivalent."
+    "explanation": "The line plot should show two X marks above 1/4, one X above 2/4, one X above 3/4, and none above 4/4.",
+    "practiceTest": 8
   },
   {
     "id": 8025,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 2,
-    "domain": "MD",
-    "target": "G",
-    "dok": 3,
-    "standard": "3.MD.A.1",
-    "type": "text-input",
-    "questionText": "A train leaves at 8:55 a.m. and arrives at 11:10 a.m. How long is the trip? Enter your answer in minutes.",
-    "correctAnswer": "135",
-    "rubric": "The student enters the correct number of minutes.",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "E",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "multi-select",
+    "questionText": "Kaden has 7 bags of animal toys. Each bag has these animal toys in it.\n\n- 1 whale toy\n- 5 dolphin toys\n- 2 turtle toys\n\nHow many animal toys does Kaden have altogether?\n\nSelect all of the equations that show how to find the total number, t, of animal toys.",
+    "options": [
+      {
+        "label": "A",
+        "text": "7 × 8 = t"
+      },
+      {
+        "label": "B",
+        "text": "7 + 1 + 5 + 2 = t"
+      },
+      {
+        "label": "C",
+        "text": "7 × (1 + 5 + 2) = t"
+      },
+      {
+        "label": "D",
+        "text": "7 + (1 × 5 × 2) = t"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "C"
+    ],
+    "rubric": "The student identifies the correct equations.",
     "points": 1,
-    "explanation": "The trip lasts 2 hours 15 minutes, which is 135 minutes."
+    "explanation": "Each bag has 1 + 5 + 2 = 8 toys, so 7 × 8 = t works. The equivalent grouped expression is 7 × (1 + 5 + 2) = t.",
+    "practiceTest": 8
   },
   {
     "id": 8026,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "math",
-    "claim": 4,
-    "domain": "MD",
-    "target": "H",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "B",
     "dok": 3,
-    "standard": "3.MD.B.3",
+    "standard": "3.NF.A.3",
+    "type": "text-input",
+    "questionText": "Two comparisons are shown.\n\n□/□ < 2/3\n□/□ > 2/6\n\nEnter one fraction that makes both comparisons true.",
+    "correctAnswer": "2/4",
+    "fractionRange": {
+      "greaterThan": "2/6",
+      "lessThan": "2/3"
+    },
+    "rubric": "The student enters an acceptable fraction or decimal.",
+    "points": 1,
+    "explanation": "Any value strictly between 2/6 and 2/3 is correct. For example, 2/4 equals 1/2, and 1/2 is greater than 2/6 but less than 2/3.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8027,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "Jana has 107 wooden beads and 68 glass beads. How many more wooden beads than glass beads does Jana have?\n\nEnter your answer in the response box.",
+    "correctAnswer": "39",
+    "rubric": "The student enters the correct number of beads.",
+    "points": 1,
+    "explanation": "Subtract the number of glass beads from the number of wooden beads: 107 − 68 = 39.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8028,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NF",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.NF.A.2",
+    "type": "text-input",
+    "questionText": "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the seventh mark after 0.\n\nEnter the fraction represented by Point A.",
+    "correctAnswer": "7/8",
+    "rubric": "The student enters a correct fraction represented by Point A.",
+    "points": 1,
+    "explanation": "If the number line is divided into 8 equal parts, each mark is one eighth. The seventh mark after 0 is 7/8.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8029,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.NF.A.3",
+    "type": "fraction-model",
+    "questionText": "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model equal amounts.\n\nPart B: Decide whether the number of 1/3 pieces is greater than the number of 1/4 pieces, and choose the correct comparison symbol.",
+    "fractionModel": {
+      "thirdsMax": 4,
+      "fourthsMax": 4
+    },
+    "correctAnswer": [
+      "3",
+      "4",
+      "yes",
+      ">"
+    ],
+    "rubric": "The student correctly models the equal amounts and identifies the correct comparison.",
+    "points": 2,
+    "explanation": "Three pieces of 1/3 and four pieces of 1/4 both make 1 whole. Since 3 is less than 4, the fractions represented are equal in size, but the number of 1/3 pieces compared to 1/4 pieces in this model is 3 versus 4. This adapted item uses the equal-whole model from the official interaction.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8030,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "G",
+    "target": "K",
+    "dok": 2,
+    "standard": "3.G.A.2",
+    "type": "shade-grid",
+    "questionText": "Shade 1/4 of the rectangle.",
+    "shadeGrid": {
+      "rows": 1,
+      "cols": 4,
+      "requiredCount": 1
+    },
+    "correctAnswer": [
+      "0:0"
+    ],
+    "rubric": "The student correctly shades 1/4 of the rectangle.",
+    "points": 1,
+    "explanation": "The rectangle is divided into 4 equal parts, so shading any 1 of the 4 parts shows 1/4.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8031,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
+    "dok": 1,
+    "standard": "3.OA.B.5",
+    "type": "multi-select",
+    "questionText": "Select all of the expressions that are equal to 4 × 12.",
+    "options": [
+      {
+        "label": "A",
+        "text": "4 × (10 + 2)"
+      },
+      {
+        "label": "B",
+        "text": "(4 × 10) + 2"
+      },
+      {
+        "label": "C",
+        "text": "4 + (10 × 2)"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "rubric": "The student identifies the equal expressions.",
+    "points": 1,
+    "explanation": "4 × (10 + 2) equals 4 × 12, so A is correct. (4 × 10) + 2 = 42 and 4 + (10 × 2) = 24, so B and C are not equal to 48.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8032,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "text-input",
+    "questionText": "A garden is 9 feet long and 4 feet wide. What is the area of the garden in square feet?",
+    "correctAnswer": "36",
+    "rubric": "The student enters the correct area.",
+    "points": 1,
+    "practiceTest": 8
+  },
+  {
+    "id": 8033,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "MD",
+    "target": "J",
+    "dok": 2,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A square has sides that are each 8 inches long. What is the perimeter of the square in inches?",
+    "correctAnswer": "32",
+    "rubric": "The student enters the correct perimeter.",
+    "points": 1,
+    "practiceTest": 8
+  },
+  {
+    "id": 8034,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B.5",
     "type": "multiple-choice",
-    "questionText": "A graph shows ticket sales: Monday 24, Tuesday 31, Wednesday 29, Thursday 26. On which day were the most tickets sold?",
+    "questionText": "Which property of multiplication does this equation show?\n\n3 × (2 + 4) = (3 × 2) + (3 × 4)",
+    "options": [
+      {
+        "label": "A",
+        "text": "Commutative property"
+      },
+      {
+        "label": "B",
+        "text": "Associative property"
+      },
+      {
+        "label": "C",
+        "text": "Distributive property"
+      },
+      {
+        "label": "D",
+        "text": "Identity property"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct property.",
+    "points": 1,
+    "practiceTest": 8
+  },
+  {
+    "id": 8035,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "What is 72 ÷ 9?",
+    "correctAnswer": "8",
+    "rubric": "The student enters the correct quotient.",
+    "points": 1,
+    "practiceTest": 8
+  },
+  {
+    "id": 8036,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "G",
+    "dok": 2,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "A movie starts at 7:15 p.m. and ends at 9:00 p.m. How long is the movie?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 hour 15 minutes"
+      },
+      {
+        "label": "B",
+        "text": "1 hour 30 minutes"
+      },
+      {
+        "label": "C",
+        "text": "1 hour 45 minutes"
+      },
+      {
+        "label": "D",
+        "text": "2 hours 15 minutes"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct elapsed time.",
+    "points": 1,
+    "practiceTest": 8
+  },
+  {
+    "id": 8040,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
+    "type": "multi-select",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.\n\nThe items that can be recycled are:\n\n- Plastic bottles\n- Aluminum cans\n- Glass bottles\n\nStudents from the 3rd grade, 4th grade, and 5th grade classes collected bottles and cans and brought them to school.\n\nTable 1 shows how many bottles and cans each grade collected on each day of the week.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn which days did the 3rd grade class collect more cans and bottles than the other two grades? Select all that apply.",
     "options": [
       {
         "label": "A",
@@ -786,1599 +1011,1508 @@ export const practiceTest8Questions: Question[] = [
       {
         "label": "D",
         "text": "Thursday"
+      },
+      {
+        "label": "E",
+        "text": "Friday"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the greatest value.",
-    "points": 1,
-    "explanation": "31 is the greatest value."
-  },
-  {
-    "id": 8027,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 4,
-    "domain": "MD",
-    "target": "H",
-    "dok": 4,
-    "standard": "3.MD.B.3",
-    "type": "multiple-choice",
-    "questionText": "A graph shows scores of 18, 24, 27, and 31. How many more is the highest score than the lowest score?",
-    "options": [
-      {
-        "label": "A",
-        "text": "11"
-      },
-      {
-        "label": "B",
-        "text": "13"
-      },
-      {
-        "label": "C",
-        "text": "14"
-      },
-      {
-        "label": "D",
-        "text": "49"
-      }
+    "correctAnswer": [
+      "D",
+      "E"
     ],
-    "correctAnswer": "B",
-    "rubric": "The student finds the difference in the data.",
+    "rubric": "The student selects both Thursday and Friday.",
     "points": 1,
-    "explanation": "31 − 18 = 13."
-  },
-  {
-    "id": 8028,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 2,
-    "domain": "MD",
-    "target": "I",
-    "dok": 3,
-    "standard": "3.MD.C.7",
-    "type": "text-input",
-    "questionText": "A rectangle is 15 inches long and 9 inches wide. What is the area?",
-    "correctAnswer": "135",
-    "rubric": "The student enters the correct area.",
-    "points": 1,
-    "explanation": "15 × 9 = 135."
-  },
-  {
-    "id": 8029,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 2,
-    "domain": "MD",
-    "target": "J",
-    "dok": 3,
-    "standard": "3.MD.D.8",
-    "type": "text-input",
-    "questionText": "A rectangle is 15 inches long and 9 inches wide. What is the perimeter?",
-    "correctAnswer": "48",
-    "rubric": "The student enters the correct perimeter.",
-    "points": 1,
-    "explanation": "2 × 15 + 2 × 9 = 48."
-  },
-  {
-    "id": 8030,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 4,
-    "domain": "MD",
-    "target": "I",
-    "dok": 4,
-    "standard": "3.MD.C.7",
-    "type": "multiple-choice",
-    "questionText": "A design uses a 6-by-8 rectangle and a 4-by-7 rectangle. What is the combined area?",
-    "options": [
-      {
-        "label": "A",
-        "text": "68"
-      },
-      {
-        "label": "B",
-        "text": "72"
-      },
-      {
-        "label": "C",
-        "text": "76"
-      },
-      {
-        "label": "D",
-        "text": "80"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student combines the areas.",
-    "points": 1,
-    "explanation": "6 × 8 = 48 and 4 × 7 = 28. Total = 76."
-  },
-  {
-    "id": 8031,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 3,
-    "domain": "G",
-    "target": "K",
-    "dok": 3,
-    "standard": "3.G.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which statement best describes a hexagon?",
-    "options": [
-      {
-        "label": "A",
-        "text": "It has 5 sides"
-      },
-      {
-        "label": "B",
-        "text": "It has 6 sides"
-      },
-      {
-        "label": "C",
-        "text": "It always has 4 right angles"
-      },
-      {
-        "label": "D",
-        "text": "It has no angles"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a shape property.",
-    "points": 1,
-    "explanation": "Hexagons have 6 sides."
-  },
-  {
-    "id": 8032,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 2,
-    "domain": "OA",
-    "target": "D",
-    "dok": 4,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A club buys 9 boxes with 12 markers each. They use 37 markers for signs and 29 markers for maps. How many markers are left?",
-    "options": [
-      {
-        "label": "A",
-        "text": "32"
-      },
-      {
-        "label": "B",
-        "text": "38"
-      },
-      {
-        "label": "C",
-        "text": "42"
-      },
-      {
-        "label": "D",
-        "text": "46"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student solves a multi-step problem.",
-    "points": 1,
-    "explanation": "9 × 12 = 108. Then 108 − 37 − 29 = 42."
-  },
-  {
-    "id": 8033,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 3,
-    "standard": "3.OA.B.5",
-    "type": "multiple-choice",
-    "questionText": "Which statement is true?",
-    "options": [
-      {
-        "label": "A",
-        "text": "7 × 13 = (7 × 10) + (7 × 3)"
-      },
-      {
-        "label": "B",
-        "text": "7 × 13 = 7 + 13"
-      },
-      {
-        "label": "C",
-        "text": "7 × 13 = 13 + 13 + 13"
-      },
-      {
-        "label": "D",
-        "text": "7 × 13 = (7 × 13) + 3"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the true distributive statement.",
-    "points": 1,
-    "explanation": "Breaking 13 into 10 + 3 gives (7 × 10) + (7 × 3)."
-  },
-  {
-    "id": 8034,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.NBT.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which number rounds to 1,000 when rounded to the nearest hundred?",
-    "options": [
-      {
-        "label": "A",
-        "text": "949"
-      },
-      {
-        "label": "B",
-        "text": "951"
-      },
-      {
-        "label": "C",
-        "text": "899"
-      },
-      {
-        "label": "D",
-        "text": "849"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student rounds to the nearest hundred.",
-    "points": 1,
-    "explanation": "951 rounds to 1,000."
-  },
-  {
-    "id": 8035,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 1,
-    "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.9",
-    "type": "text-input",
-    "questionText": "Complete the pattern: 12, 24, 36, 48, __, __",
-    "correctAnswer": "60, 72",
-    "rubric": "The student completes the pattern.",
-    "points": 1,
-    "explanation": "The pattern adds 12 each time."
-  },
-  {
-    "id": 8036,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "math",
-    "claim": 4,
-    "domain": "OA",
-    "target": "E",
-    "dok": 4,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A school orders 7 boxes with 15 pencils each and 4 boxes with 9 pencils each. How many pencils are ordered in all?",
-    "options": [
-      {
-        "label": "A",
-        "text": "129"
-      },
-      {
-        "label": "B",
-        "text": "135"
-      },
-      {
-        "label": "C",
-        "text": "141"
-      },
-      {
-        "label": "D",
-        "text": "147"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student combines two products.",
-    "points": 1,
-    "explanation": "7 × 15 = 105 and 4 × 9 = 36. Total = 141."
-  },
-  {
-    "id": 8040,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "pt",
-    "subject": "math",
-    "claim": 2,
-    "domain": "MD",
-    "target": "I",
-    "dok": 4,
-    "standard": "3.MD.C.7",
-    "type": "multiple-choice",
-    "questionText": "A museum exhibit floor is 13 feet long and 8 feet wide. What is its area?",
-    "options": [
-      {
-        "label": "A",
-        "text": "92 square feet"
-      },
-      {
-        "label": "B",
-        "text": "96 square feet"
-      },
-      {
-        "label": "C",
-        "text": "104 square feet"
-      },
-      {
-        "label": "D",
-        "text": "112 square feet"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student finds the area.",
-    "points": 1,
-    "explanation": "13 × 8 = 104."
+    "practiceTest": 8
   },
   {
     "id": 8041,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "pt",
     "subject": "math",
+    "grade": 3,
     "claim": 2,
-    "domain": "MD",
-    "target": "J",
-    "dok": 4,
-    "standard": "3.MD.D.8",
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
     "type": "text-input",
-    "questionText": "The same exhibit floor is 13 feet long and 8 feet wide. How many feet of border are needed to go around it?",
-    "correctAnswer": "42",
-    "rubric": "The student enters the perimeter.",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn Tuesday, how many more bottles and cans did the 4th grade class collect than the 3rd grade class?",
+    "correctAnswer": "30",
+    "rubric": "The student enters 30.",
     "points": 1,
-    "explanation": "2 × 13 + 2 × 8 = 42."
+    "practiceTest": 8
   },
   {
     "id": 8042,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "pt",
     "subject": "math",
-    "claim": 4,
-    "domain": "OA",
-    "target": "D",
-    "dok": 4,
-    "standard": "3.OA.D.8",
-    "type": "text-input",
-    "questionText": "A club prints 8 sheets of badges with 14 badges on each sheet. They cut 23 badges incorrectly and throw them away. How many good badges remain?",
-    "correctAnswer": "89",
-    "rubric": "The student solves the problem correctly.",
-    "points": 1,
-    "explanation": "8 × 14 = 112, then 112 − 23 = 89."
+    "grade": 3,
+    "claim": 3,
+    "domain": "NBT",
+    "target": "F",
+    "dok": 3,
+    "standard": "2.NBT.B",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "You are the contest judge. You need to figure out who won the contest.\n\nDid 3rd grade, 4th grade, or 5th grade win the “Go Green” contest?\n\nUse words and numbers to clearly explain:\n• which grade won the contest, and\n• how you know they collected the most cans and bottles.",
+    "correctAnswer": "3rd grade won because they collected the most bottles and cans for the week. Their total was 50 + 60 + 90 + 120 + 90 = 410, which is more than 4th grade's 390 and 5th grade's 400.",
+    "rubric": "2 points: The student develops an approach to determine the winner and gives a justification. 1 point: The student correctly states that 3rd grade won but gives incomplete reasoning. 0 points: All other responses.",
+    "points": 2,
+    "practiceTest": 8
   },
   {
     "id": 8043,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "pt",
     "subject": "math",
-    "claim": 3,
+    "grade": 3,
+    "claim": 4,
     "domain": "OA",
-    "target": "E",
-    "dok": 4,
-    "standard": "3.OA.A.3",
-    "type": "multiple-choice",
-    "questionText": "A team builds 6 rows of 11 chairs and 4 more rows of 11 chairs. Which expression gives the total number of chairs?",
-    "options": [
-      {
-        "label": "A",
-        "text": "(6 + 4) × 11"
-      },
-      {
-        "label": "B",
-        "text": "6 × 4 × 11"
-      },
-      {
-        "label": "C",
-        "text": "(11 + 11) × 4"
-      },
-      {
-        "label": "D",
-        "text": "6 + 4 + 11"
-      }
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A.1",
+    "type": "table-input",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "The 2nd grade class got excited about the “Go Green” contest and wanted to join in. They started collecting bottles and cans on Wednesday, even though they missed the first two days.\n\nComplete the table to show a way for the 2nd grade class to still win the contest.",
+    "tableColumns": [
+      "Wednesday",
+      "Thursday",
+      "Friday"
     ],
-    "correctAnswer": "A",
-    "rubric": "The student chooses the correct expression.",
+    "tableRowLabel": "2nd Grade",
+    "tableMinSumExclusive": 410,
+    "correctAnswer": [
+      "150",
+      "150",
+      "150"
+    ],
+    "rubric": "1 point: The student enters any numbers for Wednesday, Thursday, and Friday that add up to more than 410. 0 points: All other responses.",
     "points": 1,
-    "explanation": "There are 10 rows total with 11 chairs each."
+    "practiceTest": 8
   },
   {
     "id": 8044,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "pt",
     "subject": "math",
-    "claim": 2,
-    "domain": "NF",
-    "target": "F",
-    "dok": 4,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A display wall is split into 16 equal panels. 11 panels are filled with artwork. What fraction of the wall is filled?",
-    "options": [
-      {
-        "label": "A",
-        "text": "11/16"
-      },
-      {
-        "label": "B",
-        "text": "5/16"
-      },
-      {
-        "label": "C",
-        "text": "16/11"
-      },
-      {
-        "label": "D",
-        "text": "1/11"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the fraction.",
-    "points": 1,
-    "explanation": "11 of the 16 equal panels are filled."
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use your answers from questions 3 and 4 to explain how the 2nd grade class could have won the “Go Green” contest.",
+    "correctAnswer": "The 2nd grade class could have won by collecting more than 410 bottles and cans total on Wednesday, Thursday, and Friday. That is more than the 3rd grade total, so the 2nd grade class would win.",
+    "rubric": "2 points: The student uses the numbers from Questions 3 and 4 and explains that the 2nd grade total is more than the winning total. 1 point: The student gives part of the idea without clearly connecting the totals. 0 points: All other responses.",
+    "points": 2,
+    "practiceTest": 8
   },
   {
     "id": 8101,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "ela",
+    "grade": 3,
     "claim": 1,
     "target": "1",
     "dok": 2,
     "standard": "RL.1",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "Where does Leah find the folded paper?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Which detail from the story best supports the idea that the father was patient with his sons?",
     "options": [
       {
         "label": "A",
-        "text": "Inside a drawer in the workshop"
+        "text": "The father had to tend the field by himself."
       },
       {
         "label": "B",
-        "text": "Under a loose board in a chest"
+        "text": "The sons promised to share the treasure equally."
       },
       {
         "label": "C",
-        "text": "Behind a clock on the wall"
+        "text": "The neighbor asked if the sons were helping."
       },
       {
         "label": "D",
-        "text": "In a book at the library"
+        "text": "\"Oh, they would,\" the father answered, \"but they are young.\""
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "Leah finds the paper under a loose board in the chest."
+    "evidenceStatement": "The student will identify textual evidence to support a given inference based on the text.",
+    "practiceTest": 8
   },
   {
     "id": 8102,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "ela",
+    "grade": 3,
     "claim": 1,
-    "target": "2",
-    "dok": 3,
-    "standard": "RL.2",
+    "target": "3",
+    "dok": 2,
+    "standard": "RL.4",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "What is one theme of the story?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What does the word \"tended\" mean as used in the passage?",
     "options": [
       {
         "label": "A",
-        "text": "Old objects have no use today"
+        "text": "Sold"
       },
       {
         "label": "B",
-        "text": "Studying the past can help people understand and value their community"
+        "text": "Planted"
       },
       {
         "label": "C",
-        "text": "Only museums should keep maps"
+        "text": "Watched over"
       },
       {
         "label": "D",
-        "text": "Harbors are dangerous places"
+        "text": "Took care of"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies theme.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "Leah's discovery helps the town appreciate its history and restore the bell tower."
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context.",
+    "practiceTest": 8
   },
   {
     "id": 8103,
-    "grade": 3,
-    "practiceTest": 8,
     "testType": "cat",
     "subject": "ela",
-    "claim": 1,
-    "target": "3",
-    "dok": 3,
-    "standard": "RL.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "How does Leah change during the story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "She stops exploring old buildings"
-      },
-      {
-        "label": "B",
-        "text": "She becomes more curious and confident about historical research"
-      },
-      {
-        "label": "C",
-        "text": "She decides maps are unimportant"
-      },
-      {
-        "label": "D",
-        "text": "She becomes afraid of the harbor"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student tracks character change.",
-    "points": 1,
-    "explanation": "Leah moves from exploring casually to carefully researching and presenting her discovery."
-  },
-  {
-    "id": 8104,
     "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
     "claim": 1,
     "target": "4",
     "dok": 3,
-    "standard": "RL.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "What does the sentence \"the whole town seemed to be listening backward in time\" suggest?",
-    "options": [
-      {
-        "label": "A",
-        "text": "People forgot what year it was"
-      },
-      {
-        "label": "B",
-        "text": "The bell made people imagine and remember the town's past"
-      },
-      {
-        "label": "C",
-        "text": "The bell sounded different from normal bells"
-      },
-      {
-        "label": "D",
-        "text": "The harbor echoed in reverse"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student interprets figurative language.",
-    "points": 1,
-    "explanation": "The line suggests the sound helped people feel connected to earlier times."
-  },
-  {
-    "id": 8105,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "5",
-    "dok": 2,
-    "standard": "RL.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "Which event happens first?",
-    "options": [
-      {
-        "label": "A",
-        "text": "The museum director suggests restoring the bell tower"
-      },
-      {
-        "label": "B",
-        "text": "Leah compares the old map with modern harbor charts"
-      },
-      {
-        "label": "C",
-        "text": "Leah notices one hinge on the chest looks newer"
-      },
-      {
-        "label": "D",
-        "text": "The mayor rings the bell at the reopening ceremony"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies sequence.",
-    "points": 1,
-    "explanation": "Leah first notices the unusual hinge while exploring the bell tower."
-  },
-  {
-    "id": 8106,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "6",
-    "dok": 3,
-    "standard": "RL.6",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "What is Grandfather's point of view about the map?",
-    "options": [
-      {
-        "label": "A",
-        "text": "It is just an old decoration"
-      },
-      {
-        "label": "B",
-        "text": "It may contain important information and deserves careful study"
-      },
-      {
-        "label": "C",
-        "text": "It should be hidden again"
-      },
-      {
-        "label": "D",
-        "text": "It proves the harbor is unsafe today"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a character's perspective.",
-    "points": 1,
-    "explanation": "Grandfather takes the map seriously and wants to understand it before sharing it."
-  },
-  {
-    "id": 8107,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "1",
-    "dok": 2,
-    "standard": "RL.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "What sentence is written on the map?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Stay away from the rocks at low tide"
-      },
-      {
-        "label": "B",
-        "text": "Follow the lighthouse to the harbor"
-      },
-      {
-        "label": "C",
-        "text": "For the safest return, follow the bell in fog"
-      },
-      {
-        "label": "D",
-        "text": "Beware of storms in winter"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "That sentence is quoted directly in the story."
-  },
-  {
-    "id": 8108,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "3",
-    "dok": 3,
     "standard": "RL.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "Why does Leah compare the old map to modern harbor charts?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To prove the map is fake"
-      },
-      {
-        "label": "B",
-        "text": "To understand what the symbols and route on the old map mean"
-      },
-      {
-        "label": "C",
-        "text": "To learn how to draw better maps"
-      },
-      {
-        "label": "D",
-        "text": "To find a hidden treasure"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a character's purpose.",
-    "points": 1,
-    "explanation": "Leah uses the modern charts to understand the old map more clearly."
-  },
-  {
-    "id": 8109,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "2",
-    "dok": 3,
-    "standard": "RL.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "Which detail best supports the idea that the map mattered to the town's history?",
-    "options": [
-      {
-        "label": "A",
-        "text": "The chest had a brass hinge"
-      },
-      {
-        "label": "B",
-        "text": "The pencil line matched the safest route on the modern chart"
-      },
-      {
-        "label": "C",
-        "text": "Pigeons fluttered from a beam"
-      },
-      {
-        "label": "D",
-        "text": "The workshop smelled like wood dust"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student selects the best supporting evidence.",
-    "points": 1,
-    "explanation": "That detail shows the map recorded important real information used in the harbor."
-  },
-  {
-    "id": 8110,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "4",
-    "dok": 2,
-    "standard": "RL.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "What does \"strained to hear the bell\" mean?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Sailors ignored the sound"
-      },
-      {
-        "label": "B",
-        "text": "Sailors listened very carefully"
-      },
-      {
-        "label": "C",
-        "text": "The bell stopped working"
-      },
-      {
-        "label": "D",
-        "text": "The sound was cheerful"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student uses context clues.",
-    "points": 1,
-    "explanation": "Strained to hear means they were listening very carefully in difficult conditions."
-  },
-  {
-    "id": 8111,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "7",
-    "dok": 2,
-    "standard": "RI.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "What is magma called after it reaches Earth's surface?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Soil"
-      },
-      {
-        "label": "B",
-        "text": "Lava"
-      },
-      {
-        "label": "C",
-        "text": "Ash"
-      },
-      {
-        "label": "D",
-        "text": "Steam"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a detail.",
-    "points": 1,
-    "explanation": "Magma that reaches the surface is called lava."
-  },
-  {
-    "id": 8112,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "8",
-    "dok": 3,
-    "standard": "RI.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "What is the main idea of the passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Volcanoes only destroy"
-      },
-      {
-        "label": "B",
-        "text": "Volcanoes can be dangerous, but they can also create new land"
-      },
-      {
-        "label": "C",
-        "text": "All volcanoes are under the ocean"
-      },
-      {
-        "label": "D",
-        "text": "People should move away from all volcanoes"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the main idea.",
-    "points": 1,
-    "explanation": "The passage explains that volcanoes can destroy but also build land over time."
-  },
-  {
-    "id": 8113,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "9",
-    "dok": 3,
-    "standard": "RI.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "How do volcanic islands form?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Wind piles sand into mountains"
-      },
-      {
-        "label": "B",
-        "text": "Layer after layer of cooled lava builds upward from the ocean floor"
-      },
-      {
-        "label": "C",
-        "text": "Rivers cut deep channels into land"
-      },
-      {
-        "label": "D",
-        "text": "Plants grow thick enough to make land"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student explains a process from the text.",
-    "points": 1,
-    "explanation": "The passage says volcanic islands build upward as layers of lava cool over time."
-  },
-  {
-    "id": 8114,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "10",
-    "dok": 2,
-    "standard": "RI.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "What does the word \"geothermal\" most likely refer to?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Heat that comes from inside Earth"
-      },
-      {
-        "label": "B",
-        "text": "Energy from sunlight"
-      },
-      {
-        "label": "C",
-        "text": "Frozen ground near mountains"
-      },
-      {
-        "label": "D",
-        "text": "Water flowing through rivers"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student determines word meaning from context.",
-    "points": 1,
-    "explanation": "The word appears in the context of volcanic regions providing geothermal energy, which comes from Earth's heat."
-  },
-  {
-    "id": 8115,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "11",
-    "dok": 2,
-    "standard": "RI.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "Why does the author use section headings such as 'Magma and Lava' and 'From Rock to Soil'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To divide the explanation into clear topics"
-      },
-      {
-        "label": "B",
-        "text": "To make the passage rhyme"
-      },
-      {
-        "label": "C",
-        "text": "To tell a fictional story"
-      },
-      {
-        "label": "D",
-        "text": "To show dialogue between scientists"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student understands text structure.",
-    "points": 1,
-    "explanation": "The headings organize the information for the reader."
-  },
-  {
-    "id": 8116,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "12",
-    "dok": 3,
-    "standard": "RI.6",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "What is the author's purpose?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To tell an adventure story about volcanoes"
-      },
-      {
-        "label": "B",
-        "text": "To inform readers about how volcanoes can build new land"
-      },
-      {
-        "label": "C",
-        "text": "To persuade readers to climb volcanoes"
-      },
-      {
-        "label": "D",
-        "text": "To compare volcanoes and wetlands"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the author's purpose.",
-    "points": 1,
-    "explanation": "The passage explains a science process and gives information."
-  },
-  {
-    "id": 8117,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "7",
-    "dok": 2,
-    "standard": "RI.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "According to the passage, what can eventually grow on new volcanic rock?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Only moss"
-      },
-      {
-        "label": "B",
-        "text": "Nothing at all"
-      },
-      {
-        "label": "C",
-        "text": "Grasses, shrubs, and trees"
-      },
-      {
-        "label": "D",
-        "text": "Only underwater plants"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls supporting details.",
-    "points": 1,
-    "explanation": "The passage says soil forms slowly, allowing grasses, shrubs, and trees to grow."
-  },
-  {
-    "id": 8118,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "8",
-    "dok": 3,
-    "standard": "RI.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "What is the main idea of the section 'From Rock to Soil'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Soil forms slowly as volcanic rock breaks down over time"
-      },
-      {
-        "label": "B",
-        "text": "Volcanic rock never changes"
-      },
-      {
-        "label": "C",
-        "text": "Only scientists can study soil"
-      },
-      {
-        "label": "D",
-        "text": "Plants can grow on fresh lava immediately"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the main idea of a section.",
-    "points": 1,
-    "explanation": "That section explains how rock weathers and slowly becomes soil."
-  },
-  {
-    "id": 8119,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "9",
-    "dok": 3,
-    "standard": "RI.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "Why do scientists study volcanoes carefully?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To make eruptions happen faster"
-      },
-      {
-        "label": "B",
-        "text": "To warn communities when volcanic activity changes"
-      },
-      {
-        "label": "C",
-        "text": "To turn lava into roads"
-      },
-      {
-        "label": "D",
-        "text": "To stop all mountains from forming"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a cause-and-effect relationship.",
-    "points": 1,
-    "explanation": "The passage says scientists study volcanoes so they can warn communities."
-  },
-  {
-    "id": 8120,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 1,
-    "target": "10",
-    "dok": 2,
-    "standard": "RI.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "What does the word \"reshaped\" most nearly mean in the final paragraph?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Moved by people"
-      },
-      {
-        "label": "B",
-        "text": "Changed in form"
-      },
-      {
-        "label": "C",
-        "text": "Colored brightly"
-      },
-      {
-        "label": "D",
-        "text": "Stored underground"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student uses context to determine word meaning.",
-    "points": 1,
-    "explanation": "Reshaped means changed in form or shape."
-  },
-  {
-    "id": 8121,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 2,
-    "target": "13",
-    "dok": 2,
-    "standard": "L.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "Which sentence uses commas correctly?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Leah copied symbols notes and markings."
-      },
-      {
-        "label": "B",
-        "text": "Leah copied symbols, notes, and markings."
-      },
-      {
-        "label": "C",
-        "text": "Leah copied, symbols notes and markings."
-      },
-      {
-        "label": "D",
-        "text": "Leah, copied symbols, notes and markings."
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies correct comma use.",
-    "points": 1,
-    "explanation": "Items in a series should be separated by commas."
-  },
-  {
-    "id": 8122,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 2,
-    "target": "14",
-    "dok": 2,
-    "standard": "L.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "Which sentence is punctuated correctly?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Volcanoes can build islands, mountains and new rock."
-      },
-      {
-        "label": "B",
-        "text": "Volcanoes can build islands mountains, and new rock."
-      },
-      {
-        "label": "C",
-        "text": "Volcanoes can build islands, mountains, and new rock."
-      },
-      {
-        "label": "D",
-        "text": "Volcanoes, can build islands, mountains and new rock."
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies correct punctuation.",
-    "points": 1,
-    "explanation": "Choice C correctly punctuates the series."
-  },
-  {
-    "id": 8123,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 2,
-    "target": "15",
-    "dok": 2,
-    "standard": "L.3.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Map in the Bell Tower**\n*by James Holloway*\n\nThe old meeting hall stood at the top of Maple Street, where the road bent toward the harbor. Its clock had stopped years ago, and no one in town could remember the last time the bell rang. On rainy days, the building smelled like wood dust and salt.\n\nLeah had visited the hall many times with her grandfather, who repaired broken furniture in the workshop downstairs. While he sanded chair legs and glued drawers, Leah explored the corners of the building. She liked the narrow staircases, the dusty framed photographs, and the high windows that looked out toward the water.\n\nOne Saturday, Grandfather handed her a feather duster. \"If you're going to explore,\" he said, \"you can at least make yourself useful.\"\n\nLeah laughed and climbed the stairs to the bell tower.\n\nAt the top, sunlight came through the slats and striped the floorboards. Pigeons fluttered from a beam when she opened the hatch. Leah sneezed, wiped dust from a wooden chest, and noticed that one of its brass hinges looked newer than the others.\n\nThat was odd.\n\nThe chest was empty except for a cracked lantern, a length of rope, and a loose board resting flat against the bottom. When Leah lifted the board, she found a folded sheet of thick paper tucked beneath it.\n\nShe carried it downstairs.\n\n\"Grandfather,\" she said, \"look at this.\"\n\nHe set down his glue brush and unfolded the paper with careful hands. It was a map of the harbor from long ago. Small notes crowded the edges in faded ink. One sentence, written darker than the rest, caught Leah's eye:\n\n**For the safest return, follow the bell in fog.**\n\n\"What does that mean?\" Leah asked.\n\nGrandfather leaned closer. \"This hall used to ring the harbor bell during storms,\" he said. \"Before the modern lighthouse was built, ships listened for it when they could not see the shore.\"\n\nLeah imagined boats moving through gray water while sailors strained to hear the bell. \"So the map was helping them?\"\n\n\"Maybe,\" Grandfather said. \"Or maybe it reminded the bell ringer where danger was.\"\n\nThe two of them studied the markings. Some showed shallow sandbars. Others pointed to jagged rocks near the point. Along one edge, a narrow pencil line curved through the channel like a trail.\n\n\"Could we show this to the history museum?\" Leah asked.\n\nGrandfather nodded. \"We should. But first, let's make sure we understand what we found.\"\n\nOver the next week, Leah returned after school. She copied symbols from the map into a notebook and compared them with modern harbor charts in the library. She learned that some rocks had been blasted away many years earlier and that the shoreline had shifted after a major storm. But the main channel was still there.\n\nOn Thursday, she noticed that the pencil line on the old map matched almost exactly with the safest route marked on the modern chart.\n\n\"It wasn't just decoration,\" Leah said that evening. \"The line was real.\"\n\nGrandfather smiled. \"Someone drew it because it mattered.\"\n\nThe museum director invited Leah and her grandfather to bring the map to a community history night. People crowded around the display table as Leah explained what the notes meant. Several fishermen pointed at the sandbar markings and said their grandparents used the same names.\n\nNear the end of the evening, the museum director cleared her throat. \"We have been trying to convince the town council to restore the bell tower,\" she said. \"I think this map gives us a new reason.\"\n\nA week later, workers oiled the bell wheel and replaced a cracked beam. The town did not plan to use the bell during storms anymore, but they wanted visitors to hear what sailors once depended on.\n\nAt the reopening ceremony, Leah stood beside her grandfather in the crowd. When the mayor pulled the rope, the bell gave a deep bronze note that rolled over the harbor and out across the water.\n\nLeah felt the sound in her chest before it faded into the wind. For a moment, the whole town seemed to be listening backward in time.",
-    "passageTitle": "The Map in the Bell Tower",
-    "questionText": "What does the word \"harbor\" mean in the story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A place where ships can stay near shore"
-      },
-      {
-        "label": "B",
-        "text": "A bell inside a tower"
-      },
-      {
-        "label": "C",
-        "text": "A room in a museum"
-      },
-      {
-        "label": "D",
-        "text": "A kind of paper map"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student determines word meaning from context.",
-    "points": 1,
-    "explanation": "The harbor is the water area near shore where boats travel and stay."
-  },
-  {
-    "id": 8124,
-    "grade": 3,
-    "practiceTest": 8,
-    "testType": "cat",
-    "subject": "ela",
-    "claim": 2,
-    "target": "16",
-    "dok": 2,
-    "standard": "L.3.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Volcanoes Build New Land**\n*adapted from earth science sources*\n\nWhen people hear the word volcano, they often think first of explosions, smoke, and danger. Volcanoes can certainly be destructive. But volcanoes can also create. Over long periods of time, volcanic activity can build mountains, islands, and fresh rock that becomes new land.\n\n**Magma and Lava**\n\nDeep inside Earth, melted rock is called magma. When magma rises through cracks and reaches the surface, it is called lava. As lava cools, it hardens into rock. One eruption may add only a small amount of new material, but many eruptions over hundreds or thousands of years can change the shape of an entire region.\n\n**Building Islands**\n\nSome volcanic islands rise from the ocean floor. Layer by layer, cooled lava builds upward until the volcano reaches the water's surface. If eruptions continue, the island grows larger. The Hawaiian Islands formed this way over a very long time.\n\n**Changing the Landscape**\n\nVolcanoes do not always build land in the same way. Some produce broad, gently sloping mountains because their lava spreads easily. Others form steep cones from thicker lava, ash, and rock. After eruptions, wind and rain begin wearing the new rock down. Plants may take root in cracks. Eventually, animals and people may live on land that did not exist before.\n\n**From Rock to Soil**\n\nFresh volcanic rock is hard and rough. At first, very little can grow on it. Over time, weathering breaks the rock into smaller pieces. Dead plants and tiny living things add more material. Slowly, soil forms. This process can take many years, but it allows grasses, shrubs, and trees to grow.\n\n**Living Near Volcanoes**\n\nMillions of people live near volcanoes around the world. Volcanic areas can be risky, but they also offer benefits. Ash and broken volcanic rock can create rich soil for farming. Some volcanic regions provide hot springs or geothermal energy. Scientists study volcanoes carefully so they can warn communities when activity changes.\n\nVolcanoes remind us that Earth is always being reshaped. The same forces that can destroy homes in one moment can, over time, build entirely new landscapes.",
-    "passageTitle": "How Volcanoes Build New Land",
-    "questionText": "Which word is an antonym for 'fresh' in 'fresh rock'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "new"
-      },
-      {
-        "label": "B",
-        "text": "old"
-      },
-      {
-        "label": "C",
-        "text": "rough"
-      },
-      {
-        "label": "D",
-        "text": "hot"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies an antonym.",
-    "points": 1,
-    "explanation": "Old is the opposite of fresh in this context."
-  },
-  {
-    "id": 8125,
-    "grade": 3,
-    "practiceTest": 8,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
-    "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**The Story Inside the Bell Tower**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains how Leah's discovery in the bell tower helped the town understand its past.\n\nSpeaker 2: Leah found an old map and realized it matched the harbor route that people once used.\n\nSpeaker 1: The discovery helped the town see why the bell and tower had mattered so much. They were part of guiding sailors safely home.\n\nSpeaker 2: Instead of staying hidden under dust, the map became a clue that connected the present town to earlier generations.\n\nSpeaker 1: The report shows that old objects can still teach important lessons.",
-    "passageTitle": "The Story Inside the Bell Tower",
-    "questionText": "What is the main idea of the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Leah's discovery helped the town understand an important part of its history"
-      },
-      {
-        "label": "B",
-        "text": "Bell towers should be cleaned every day"
-      },
-      {
-        "label": "C",
-        "text": "Maps are only useful to sailors"
-      },
-      {
-        "label": "D",
-        "text": "Dust always ruins old objects"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the main idea of the presentation.",
-    "points": 1,
-    "explanation": "The speakers explain that the map helped the town reconnect with its harbor history."
-  },
-  {
-    "id": 8126,
-    "grade": 3,
-    "practiceTest": 8,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
-    "dok": 3,
-    "standard": "SL.3.2",
     "type": "two-part",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**The Story Inside the Bell Tower**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains how Leah's discovery in the bell tower helped the town understand its past.\n\nSpeaker 2: Leah found an old map and realized it matched the harbor route that people once used.\n\nSpeaker 1: The discovery helped the town see why the bell and tower had mattered so much. They were part of guiding sailors safely home.\n\nSpeaker 2: Instead of staying hidden under dust, the map became a clue that connected the present town to earlier generations.\n\nSpeaker 1: The report shows that old objects can still teach important lessons.",
-    "passageTitle": "The Story Inside the Bell Tower",
-    "questionText": "Answer both parts of the question.",
-    "partAPrompt": "Part A: Why do the speakers mention that the map was hidden under dust?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Part A: What is the main lesson the father wanted his sons to learn?\n\nPart B: Which detail from the story best supports your answer to Part A?",
+    "partAPrompt": "What is the main lesson the father wanted his sons to learn?",
     "partAOptions": [
       {
         "label": "A",
-        "text": "to show that something forgotten can still be meaningful"
+        "text": "That treasure is always buried underground"
       },
       {
         "label": "B",
-        "text": "to prove the tower was dangerous"
+        "text": "That brothers should always share equally"
       },
       {
         "label": "C",
-        "text": "to explain why volcanoes erupt"
+        "text": "That neighbors are important to have"
       },
       {
         "label": "D",
-        "text": "to compare maps and bells"
+        "text": "That hard work is its own reward"
       }
     ],
-    "partBPrompt": "Part B: Which detail best supports your answer?",
+    "partBPrompt": "Which detail from the story best supports your answer to Part A?",
     "partBOptions": [
       {
         "label": "A",
-        "text": "Leah found an old map and realized it matched the harbor route."
+        "text": "The neighbor asked if the sons were helping."
       },
       {
         "label": "B",
-        "text": "Instead of staying hidden under dust, the map became a clue that connected the present town to earlier generations."
+        "text": "The sons planted rice, tended the field, and earned money from the harvest."
       },
       {
         "label": "C",
-        "text": "The tower had mattered so much."
+        "text": "The father said the boys were still young."
       },
       {
         "label": "D",
-        "text": "The report shows that old objects can still teach important lessons."
+        "text": "The sons promised to share the treasure equally."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option for Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will form a conclusion about a literary text and identify details within the text that support that conclusion.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8104,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "1",
+    "dok": 1,
+    "standard": "RL.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What did the father mean when he told his sons there was \"treasure buried in the field\"?",
+    "options": [
+      {
+        "label": "A",
+        "text": "There were gold coins buried under the soil."
+      },
+      {
+        "label": "B",
+        "text": "The field had valuable minerals in the ground."
+      },
+      {
+        "label": "C",
+        "text": "The reward of hard work would come from farming the field."
+      },
+      {
+        "label": "D",
+        "text": "A neighbor had hidden something in the field."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8105,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "6",
+    "dok": 3,
+    "standard": "RL.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Select TWO details that show how the sons changed during the story.",
+    "options": [
+      {
+        "label": "A",
+        "text": "They dug the entire field looking for treasure."
+      },
+      {
+        "label": "B",
+        "text": "They asked their father for the secret."
+      },
+      {
+        "label": "C",
+        "text": "They made excuses to go home early."
+      },
+      {
+        "label": "D",
+        "text": "They talked to the neighbor about farming."
+      },
+      {
+        "label": "E",
+        "text": "They tended the field \"just as Father did.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the two correct options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text in a certain manner and the impact of that structure on meaning.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8106,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "5",
+    "dok": 3,
+    "standard": "RL.3",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "How did the father's trick affect the sons?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It made them angry at their father."
+      },
+      {
+        "label": "B",
+        "text": "It made them want to find real treasure."
+      },
+      {
+        "label": "C",
+        "text": "It taught them the value of hard work through their own experience."
+      },
+      {
+        "label": "D",
+        "text": "It made them leave the farm."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze the relationship among character actions/interactions within one text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8107,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "6",
+    "dok": 2,
+    "standard": "RL.5",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Why did the author include the neighbor character in the story?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To show that the neighbor wanted to help farm the field"
+      },
+      {
+        "label": "B",
+        "text": "To show that the father was a bad parent"
+      },
+      {
+        "label": "C",
+        "text": "To show how much time passed and that others noticed the sons were not helping"
+      },
+      {
+        "label": "D",
+        "text": "To explain how farming works in Vietnam"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8108,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "7",
+    "dok": 2,
+    "standard": "RL.4",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Read this sentence from the story: \"The brothers moped around with their heads down.\" What does the word \"moped\" tell the reader about the brothers?",
+    "options": [
+      {
+        "label": "A",
+        "text": "They were excited about planting."
+      },
+      {
+        "label": "B",
+        "text": "They were sad and disappointed."
+      },
+      {
+        "label": "C",
+        "text": "They were tired from digging."
+      },
+      {
+        "label": "D",
+        "text": "They were angry at each other."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8109,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "8",
+    "dok": 2,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "According to the passage, why do the Coleman brothers collect sap in the spring?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Because the trees only grow in spring"
+      },
+      {
+        "label": "B",
+        "text": "Because they need water for their farm"
+      },
+      {
+        "label": "C",
+        "text": "Because sap flows in the spring when frost melts inside the trees"
+      },
+      {
+        "label": "D",
+        "text": "Because the University of Vermont told them to"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8110,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "11",
+    "dok": 3,
+    "standard": "RI.3",
+    "type": "two-part",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "Click on the sentence that gives the best conclusion about sugar-maple trees.",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "Sugar maple trees grow best in cold weather."
+      },
+      {
+        "label": "B",
+        "text": "Most sugar maple trees are about 50 feet tall."
+      },
+      {
+        "label": "C",
+        "text": "The sap in sugar maple trees begins flowing in early spring."
+      },
+      {
+        "label": "D",
+        "text": "Vermont has the best weather for growing sugar maple trees."
+      }
+    ],
+    "partBPrompt": "Click on the sentence from the passage that best supports your answer in Part A. Choose one answer.",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "A 50-foot-high sugar maple has nearly two hundred thousand leaves."
+      },
+      {
+        "label": "B",
+        "text": "The Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont."
+      },
+      {
+        "label": "C",
+        "text": "Scientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true."
+      },
+      {
+        "label": "D",
+        "text": "Every spring, the Colemans tap holes into the sugar-maple trees, then hang a bucket under each hole to catch the sap."
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will form a conclusion about an informational text and identify details that support it.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8111,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "What is the author's main purpose for writing this passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To persuade readers to buy maple syrup"
+      },
+      {
+        "label": "B",
+        "text": "To tell an entertaining story about trees"
+      },
+      {
+        "label": "C",
+        "text": "To inform readers about how maple syrup is made and how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To compare different types of trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish the author's point of view within a text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8112,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Why did the author include the legend of Woksis in the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To prove that maple syrup is healthy"
+      },
+      {
+        "label": "B",
+        "text": "To compare modern and ancient methods of making syrup"
+      },
+      {
+        "label": "C",
+        "text": "To show that people have been making maple syrup for a very long time"
+      },
+      {
+        "label": "D",
+        "text": "To explain why the Iroquois planted maple trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze the interaction between elements of a text within a text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8113,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "13",
+    "dok": 2,
+    "standard": "RI.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Select TWO reasons the author organized the passage with the section \"What Makes Sap Run?\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "To tell a funny story about trees"
+      },
+      {
+        "label": "B",
+        "text": "To make the passage more entertaining"
+      },
+      {
+        "label": "C",
+        "text": "To explain the science behind how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To answer a question readers might have after reading about the Colemans"
+      },
+      {
+        "label": "E",
+        "text": "To compare maple trees to other types of trees"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze why the author structured elements within the texts in a certain manner.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8114,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read this sentence: \"sap flow was a 'most mysterious subject.'\" What does the word \"mysterious\" mean?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Easy to understand"
+      },
+      {
+        "label": "B",
+        "text": "Very interesting"
+      },
+      {
+        "label": "C",
+        "text": "Not well known"
+      },
+      {
+        "label": "D",
+        "text": "Hard to explain or understand"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context in an informational text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8115,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read the sentence from the passage.\n\nAll these leaves drink in summer sunshine and make sugar.\n\nWhich statement best describes what this sentence means?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Leaves grow larger in the summer."
+      },
+      {
+        "label": "B",
+        "text": "Leaves use sunlight to make sugar."
+      },
+      {
+        "label": "C",
+        "text": "Summer is the best time to collect sugar."
+      },
+      {
+        "label": "D",
+        "text": "Trees with many leaves make more sugar."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context and analyze its use in the text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8116,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1bE",
+    "dok": 2,
+    "standard": "W.3b, W.5",
+    "type": "multi-select",
+    "questionText": "Ellen is writing a story for her class about a day at the beach. She wants to revise her story to use more descriptive words. Read the draft and complete the task that follows.\n\nIt was Ellen's last day of summer vacation. She raced into the garage and announced, \"Dad, we have to go to the beach today! It's our last chance this summer to go swimming and build sandcastles together!\"\n\nDad smiled happily and, together, Ellen and Dad drove 45 minutes to the beach. Once there, they set up their chairs near the water. Dad read and Ellen played.\n\nEllen worked for about an hour on her sandcastle. Then, she noticed that her dad had spent that entire time just reading a book. She felt annoyed. She looked at him.\n\nDad grinned and set his book aside. Together, the two raced into the warm, bubbly waves. They laughed with excitement.\n\nSelect two of the choices that have the best descriptive sentences to replace \"Dad read and Ellen played\" and \"She looked at him.\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "Dad enjoyed relaxing with his new book while Ellen built a sandcastle. / She gave him a look that said, \"I want you to spend time with me.\""
+      },
+      {
+        "label": "B",
+        "text": "Dad helped Ellen build a sandcastle. / She gave him a look that said, \"I'm glad you like your book.\""
+      },
+      {
+        "label": "C",
+        "text": "Dad read a book to Ellen and then they swam. / She looked at the pictures in the book."
+      },
+      {
+        "label": "D",
+        "text": "Dad read for a while and then built a sandcastle. / She looked at the warm, bubbly waves."
+      },
+      {
+        "label": "E",
+        "text": "Dad had a wonderful time reading while Ellen worked on her giant sandcastle. / She gave him a look that said, \"It's time to have some fun, now!\""
+      },
+      {
+        "label": "F",
+        "text": "Dad decided that he did not like his book. / She gave him a look that said, \"You are the best dad.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise narrative text by identifying descriptive details that convey events or experiences.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8117,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "3bE",
+    "dok": 2,
+    "standard": "W.2b, W.5",
+    "type": "multi-select",
+    "questionText": "A student is writing a report for social studies class about the state of Alaska. The student wants to revise the draft to make sure it has enough details. Read this portion of the report and complete the task that follows.\n\nAlaska is a very big state. It is bigger than Texas, California, and Montana put together! Even though it is a big state, only about 730,000 people live there. Alaska has 39 mountain ranges and two rain forests. A lot of different animals live in Alaska. In Barrow, the town located farthest north in the state, the sun doesn't set between May 10 and August 2, but between November 18 and January 23, the sun doesn't rise. Alaska is a very interesting and unusual place.\n\nMy notes on Alaska:\n• Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home.\n• The capital of Alaska is Juneau.\n• There are 70,000 sea otters living in the waters of Alaska.\n• Alaska did not become a state until 1959.\n• The mountains in Alaska have the coldest temperatures in the United States.\n• Alaska is only 55 miles away from Russia.\n\nChoose the two sentences from the student's notes that add more facts to the underlined sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The capital of Alaska is Juneau."
+      },
+      {
+        "label": "B",
+        "text": "Alaska did not become a state until 1959."
+      },
+      {
+        "label": "C",
+        "text": "Alaska is only 55 miles away from Russia."
+      },
+      {
+        "label": "D",
+        "text": "There are 70,000 sea otters living in the waters of Alaska."
+      },
+      {
+        "label": "E",
+        "text": "The mountains in Alaska have the coldest temperatures in the United States."
+      },
+      {
+        "label": "F",
+        "text": "Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise informational or explanatory text by identifying the best use of elaboration techniques such as supporting details.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8118,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "6b",
+    "dok": 2,
+    "standard": "W.1d",
+    "type": "multiple-choice",
+    "questionText": "A student is writing an opinion article for her teacher about her favorite field trip. The student wants to revise the draft so that it has a logical conclusion. Read the draft of the opinion article and complete the task that follows.\n\nMy favorite third-grade field trip is the trip to the zoo. There are many reasons that the zoo is the best field trip. First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms. As you can see, the best third-grade trip by far is the zoo field trip. Second, we get to eat lunch at a really great rest area with picnic tables. Also, we get to spend the whole day walking around looking at interesting animals.\n\nClick on the sentence in the draft that is in the wrong place.",
+    "options": [
+      {
+        "label": "A",
+        "text": "My favorite third-grade field trip is the trip to the zoo."
+      },
+      {
+        "label": "B",
+        "text": "There are many reasons that the zoo is the best field trip."
+      },
+      {
+        "label": "C",
+        "text": "First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms."
+      },
+      {
+        "label": "D",
+        "text": "As you can see, the best third-grade trip by far is the zoo field trip."
+      },
+      {
+        "label": "E",
+        "text": "Second, we get to eat lunch at a really great rest area with picnic tables."
+      },
+      {
+        "label": "F",
+        "text": "Also, we get to spend the whole day walking around looking at interesting animals."
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will revise opinion text by identifying improved organizational elements such as organizing.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8119,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "8",
+    "dok": 2,
+    "standard": "L.3a",
+    "type": "multi-select",
+    "questionText": "A student is writing an opinion paper for her teacher about dogs. Read this paragraph from the paper and the directions that follow.\n\nDogs are described as “people's best friend” because they make people happy. The fur on a dog can be long or short, or curly or straight, but most of the time it is soft. When people pet dogs, it makes them feel happy. There are community groups that bring dogs to nursing homes for the patients. Being able to play with the dogs makes the patients feel good. This is one reason why I think dogs are wonderful animals.\n\nSelect the best two words from the choices to replace the underlined words in the paragraph.",
+    "options": [
+      {
+        "label": "A",
+        "text": "beautiful"
+      },
+      {
+        "label": "B",
+        "text": "fierce"
+      },
+      {
+        "label": "C",
+        "text": "healthier"
+      },
+      {
+        "label": "D",
+        "text": "lucky"
+      },
+      {
+        "label": "E",
+        "text": "polite"
+      },
+      {
+        "label": "F",
+        "text": "relaxed"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will choose the correct words or phrases for audience or purpose.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8120,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.2c",
+    "type": "multi-select",
+    "questionText": "Click on two sentences that have mistakes in punctuation.\n\nTim and I sat in the front row at the circus, and the clowns tumbled and danced in front of us. They pretended to throw water on us, but their buckets just had shiny bits of paper. Then, one clown really did spray water on me from a flower on his jacket.",
+    "options": [
+      {
+        "label": "A",
+        "text": "“Oh, he got me! I said to Tim.”"
+      },
+      {
+        "label": "B",
+        "text": "“Yes” he laughed “he tricked you twice!”"
+      },
+      {
+        "label": "C",
+        "text": "After that, the elephants came out. The elephants did tricks like stand on their front legs."
+      },
+      {
+        "label": "D",
+        "text": "“How can those huge animals do that?” I asked Tim."
+      },
+      {
+        "label": "E",
+        "text": "“I don't know, but it's amazing,” Tim answered."
       }
     ],
     "correctAnswer": [
       "A",
       "B"
     ],
-    "rubric": "The student identifies the purpose of the detail and the best support.",
+    "rubric": "The student selects the correct two options.",
     "points": 1,
-    "explanation": "The dust detail helps show that something forgotten still had important meaning."
+    "evidenceStatement": "The student will apply or edit the use of commas and quotation marks in dialogue.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8121,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.1e",
+    "type": "multi-select",
+    "questionText": "Click on the sentences that use the incorrect verb tenses.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Standing on the stage, I could feel my heart beating in my chest."
+      },
+      {
+        "label": "B",
+        "text": "I sings my song on the stage with my friends."
+      },
+      {
+        "label": "C",
+        "text": "The audience clapped loudly."
+      },
+      {
+        "label": "D",
+        "text": "I take a bow and walked off the stage with a smile on my face."
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will apply or edit the use of simple verb tenses in a text.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8122,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 3,
+    "standard": "SL.2",
+    "type": "two-part",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "What is the most likely reason the author made the presentation?",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "to explain how a hot air balloon works"
+      },
+      {
+        "label": "B",
+        "text": "to show the advantages of being small"
+      },
+      {
+        "label": "C",
+        "text": "to tell how Americans feel about new experiences"
+      },
+      {
+        "label": "D",
+        "text": "to describe an important event in American history"
+      }
+    ],
+    "partBPrompt": "Which sentence from the presentation best supports your answer in part A?",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "\"Smoky hot air swelled the balloon and sent it up.\""
+      },
+      {
+        "label": "B",
+        "text": "\"He was the first American to develop a method to lift a balloon using hot air.\""
+      },
+      {
+        "label": "C",
+        "text": "\"The crowd yelled and clapped as Carnes sent the balloon up, time and again.\""
+      },
+      {
+        "label": "D",
+        "text": "\"He was the first American to see such views.\""
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a speaker's purpose and identify details that support it.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8123,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Which question can a listener answer after hearing the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "In what year did the balloon ride take place?"
+      },
+      {
+        "label": "B",
+        "text": "What happened during the first hot air balloon ride?"
+      },
+      {
+        "label": "C",
+        "text": "How did Edward feel after he took his ride in the balloon?"
+      },
+      {
+        "label": "D",
+        "text": "How did Edward become the first American to ride in a balloon?"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify information that can be determined from an oral presentation.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8124,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Complete the chart to show which events were planned.\n\nClick in the boxes next to the events that match if they were planned or unplanned.",
+    "gridRows": [
+      "Edward Warren Jr. rode in a balloon.",
+      "The balloon filled with smoke from a fire.",
+      "A crowd in Baltimore saw how a balloon could fly.",
+      "Peter Carnes used a stove to make the balloon rise."
+    ],
+    "gridColumns": [
+      "Planned",
+      "Unplanned"
+    ],
+    "correctAnswer": [
+      "0:1",
+      "1:0",
+      "2:0",
+      "3:0"
+    ],
+    "rubric": "The student correctly identifies which events were planned and which were unplanned.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish among ideas and events presented orally.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8125,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Which conclusion is supported by the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Americans eat pizza every day."
+      },
+      {
+        "label": "B",
+        "text": "Pizza is usually eaten at lunchtime."
+      },
+      {
+        "label": "C",
+        "text": "Almost anything can go on a pizza."
+      },
+      {
+        "label": "D",
+        "text": "Lobster pizza is most popular in Maine."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a supported conclusion from an oral presentation.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8126,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Complete the chart to show which countries are known for which pizza toppings.\n\nClick in the boxes next to the countries that match the toppings.",
+    "gridRows": [
+      "United States",
+      "India",
+      "Japan"
+    ],
+    "gridColumns": [
+      "eel",
+      "pepperoni",
+      "ginger"
+    ],
+    "correctAnswer": [
+      "2:0",
+      "0:1",
+      "1:2"
+    ],
+    "rubric": "The student correctly matches each topping to the country from the presentation.",
+    "points": 1,
+    "evidenceStatement": "The student will organize information presented orally into a chart.",
+    "practiceTest": 8
   },
   {
     "id": 8127,
-    "grade": 3,
-    "practiceTest": 8,
-    "subject": "ela",
     "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
     "claim": 3,
-    "target": "19",
-    "dok": 3,
-    "standard": "SL.3.2",
-    "type": "grid-match",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**How New Land Forms**\n*presentation transcript for classroom use*\n\nSpeaker 1: Volcanoes can change Earth's surface over time.\n\nSpeaker 2: Melted rock called magma rises, erupts, and cools into solid rock. After many eruptions, new land can build up.\n\nSpeaker 1: Some islands and mountains form from these repeated changes. What begins as hot rock can later become part of a landscape people use and study.\n\nSpeaker 2: The process may be slow, but it can create something new and valuable.\n\nSpeaker 1: The main idea is that change over time can build land rather than only destroy it.",
-    "passageTitle": "How New Land Forms",
-    "questionText": "Complete the chart to show the order of the land-building process.",
-    "gridRows": [
-      "Magma rises",
-      "Rock erupts",
-      "Rock cools",
-      "Land builds up over time"
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.3",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "What is the most likely reason the author made the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "to suggest another way of looking at pizza"
+      },
+      {
+        "label": "B",
+        "text": "to change what people think is good pizza"
+      },
+      {
+        "label": "C",
+        "text": "to show why pepperoni pizza is the best kind"
+      },
+      {
+        "label": "D",
+        "text": "to explain why pizza is different in other places"
+      }
     ],
-    "gridColumns": [
-      "First",
-      "Second",
-      "Third",
-      "Fourth"
-    ],
-    "correctAnswer": [
-      "0:0",
-      "1:1",
-      "2:2",
-      "3:3"
-    ],
-    "rubric": "The student matches each stage to the correct order.",
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "The process begins with rising magma and ends with land building over time."
+    "evidenceStatement": "The student will determine a speaker's likely purpose for a presentation.",
+    "practiceTest": 8
   },
   {
     "id": 8128,
-    "grade": 3,
-    "practiceTest": 8,
-    "subject": "ela",
     "testType": "cat",
-    "claim": 3,
-    "target": "19",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
     "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**How New Land Forms**\n*presentation transcript for classroom use*\n\nSpeaker 1: Volcanoes can change Earth's surface over time.\n\nSpeaker 2: Melted rock called magma rises, erupts, and cools into solid rock. After many eruptions, new land can build up.\n\nSpeaker 1: Some islands and mountains form from these repeated changes. What begins as hot rock can later become part of a landscape people use and study.\n\nSpeaker 2: The process may be slow, but it can create something new and valuable.\n\nSpeaker 1: The main idea is that change over time can build land rather than only destroy it.",
-    "passageTitle": "How New Land Forms",
-    "questionText": "Which idea is explained in the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Change over time can create new land"
-      },
-      {
-        "label": "B",
-        "text": "Volcanoes never help people"
-      },
-      {
-        "label": "C",
-        "text": "All islands are made in one day"
-      },
-      {
-        "label": "D",
-        "text": "Only scientists can see cooled rock"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a main idea from the presentation.",
-    "points": 1,
-    "explanation": "The speakers explain that repeated eruptions and cooling can build something new over time."
-  },
-  {
-    "id": 8129,
-    "grade": 3,
-    "practiceTest": 8,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 4,
-    "target": "20",
-    "dok": 3,
-    "standard": "W.3.8",
+    "standard": "W.8",
     "type": "multi-select",
-    "questionText": "A student is researching how places change over time. Which two sources would be most helpful?",
+    "questionText": "A student is writing a research report about the human eye. Read the sentences from her report and the directions that follow.\n\nOur eyes are wonderful body parts. They help us see the beauty of the world. In the center of the eye is a black spot. Have you ever wondered why that spot gets bigger and smaller?\n\nChoose two of the sources that would most likely give the student more information about the ideas she has written.",
     "options": [
       {
         "label": "A",
-        "text": "A history article about old landmarks and town records"
+        "text": "www.eye.color.com, a website that tells about the colors of people's eyes"
       },
       {
         "label": "B",
-        "text": "A recipe for soup"
+        "text": "www.eyequestion.com, a website that explains the job of each part of the eye"
       },
       {
         "label": "C",
-        "text": "A science article about volcanic eruptions and landforms"
+        "text": "Eyes and How They Work, a book that tells about the way that the eye parts work"
       },
       {
         "label": "D",
-        "text": "A comic about a lost shoe"
+        "text": "www.eye.food.com, a website that tells what we should eat to help our eyes stay healthy"
       },
       {
         "label": "E",
-        "text": "A list of bell sounds"
+        "text": "My Job as an Eye Doctor, a book that tells about being a doctor who takes care of people's eyes"
+      },
+      {
+        "label": "F",
+        "text": "You Can Find It, a children's magazine that has many puzzles and games where you look for the hidden things"
       }
     ],
     "correctAnswer": [
-      "A",
+      "B",
       "C"
     ],
-    "rubric": "The student selects the most useful research sources.",
+    "rubric": "The student selects the two sources that best support the student's research focus.",
     "points": 1,
-    "explanation": "The history and science articles both relate directly to changes in important places over time."
+    "evidenceStatement": "The student will evaluate sources for relevance to a research topic.",
+    "practiceTest": 8
   },
   {
-    "id": 8130,
-    "grade": 3,
-    "practiceTest": 8,
-    "subject": "ela",
+    "id": 8129,
     "testType": "cat",
-    "claim": 4,
-    "target": "21",
-    "dok": 3,
-    "standard": "RI.3.9",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "8",
+    "dok": 2,
+    "standard": "W.8",
     "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**The Story Inside the Bell Tower**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains how Leah's discovery in the bell tower helped the town understand its past.\n\nSpeaker 2: Leah found an old map and realized it matched the harbor route that people once used.\n\nSpeaker 1: The discovery helped the town see why the bell and tower had mattered so much. They were part of guiding sailors safely home.\n\nSpeaker 2: Instead of staying hidden under dust, the map became a clue that connected the present town to earlier generations.\n\nSpeaker 1: The report shows that old objects can still teach important lessons.\n\n---\n\nListen to the presentation. Then answer the questions.\n\n**How New Land Forms**\n*presentation transcript for classroom use*\n\nSpeaker 1: Volcanoes can change Earth's surface over time.\n\nSpeaker 2: Melted rock called magma rises, erupts, and cools into solid rock. After many eruptions, new land can build up.\n\nSpeaker 1: Some islands and mountains form from these repeated changes. What begins as hot rock can later become part of a landscape people use and study.\n\nSpeaker 2: The process may be slow, but it can create something new and valuable.\n\nSpeaker 1: The main idea is that change over time can build land rather than only destroy it.",
-    "passageTitle": "The Map in the Bell Tower / How Volcanoes Build New Land",
-    "questionText": "Which idea is supported by both texts?",
+    "questionText": "A student is writing a report about red foxes. She is looking for information about the body of the red fox. Which sentence has information that the student can use?",
     "options": [
       {
         "label": "A",
-        "text": "Changes over time can create something people later value"
+        "text": "There are over twenty different kinds of foxes."
       },
       {
         "label": "B",
-        "text": "Old objects should always stay hidden"
+        "text": "Red foxes can live in hot deserts and snowy forests."
       },
       {
         "label": "C",
-        "text": "Natural forces only destroy places"
+        "text": "The red fox wraps its fluffy tail around itself like a blanket."
       },
       {
         "label": "D",
-        "text": "History and science have nothing in common"
+        "text": "Red foxes are often clever characters in children's stories."
       }
     ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a shared idea across the texts.",
+    "correctAnswer": "C",
+    "rubric": "The student selects the sentence that gives the relevant body detail.",
     "points": 1,
-    "explanation": "Both texts show time and change creating something meaningful or useful."
+    "evidenceStatement": "The student will identify relevant source information for research.",
+    "practiceTest": 8
+  },
+  {
+    "id": 8130,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
+    "dok": 2,
+    "standard": "W.8",
+    "type": "multiple-choice",
+    "questionText": "A student is writing a research report about different kinds of fruit. He wrote an opinion in the report. Read the sentences from the student's report and the directions that follow.\n\nMany Kinds of Fruit\n\nA fruit is the part of the plant that has the plant's seeds. There are many kinds of fruits. Some that are popular with kids are apples, bananas, grapes, oranges, and strawberries. Sometimes it is confusing to tell if a food is a fruit.\n\nThe student found another source about different kinds of fruit. Which sentence best supports the student's opinion?",
+    "options": [
+      {
+        "label": "A",
+        "text": "For example, it is hard to tell what some foods are when they are cut up in pieces."
+      },
+      {
+        "label": "B",
+        "text": "For example, a tomato is not sweet, but it is a fruit because it has the seeds."
+      },
+      {
+        "label": "C",
+        "text": "For example, some kids don't like some of the fruits on that list."
+      },
+      {
+        "label": "D",
+        "text": "For example, fruits can be many different shapes and colors."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the sentence that best supports the opinion in the report.",
+    "points": 1,
+    "evidenceStatement": "The student will identify evidence that supports an opinion in a research report.",
+    "practiceTest": 8
   },
   {
     "id": 8150,

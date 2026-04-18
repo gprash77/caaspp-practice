@@ -3,61 +3,42 @@ import type { Question } from "./questions";
 export const practiceTest5Questions: Question[] = [
   {
     "id": 4001,
-    "practiceTest": 5,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "A",
-    "dok": 1,
-    "standard": "3.OA.A.1",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.8",
     "type": "text-input",
-    "questionText": "There are 4 bags. Each bag has 5 apples. How many apples are there in all?",
-    "correctAnswer": "20",
-    "rubric": "The student enters the correct product.",
+    "questionText": "Maria baked 76 cookies. She gave 24 cookies to her friends. How many cookies does Maria have now?",
+    "correctAnswer": "52",
+    "rubric": "The student enters the correct number of cookies.",
     "points": 1,
-    "explanation": "Multiply: 4 bags × 5 apples = 20 apples. Great counting!"
+    "explanation": "To find how many cookies Maria has left, subtract: 76 − 24 = 52 cookies.",
+    "practiceTest": 5
   },
   {
     "id": 4002,
-    "practiceTest": 5,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "OA",
-    "target": "A",
+    "domain": "NBT",
+    "target": "E",
     "dok": 1,
-    "standard": "3.OA.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which shows 3 groups of 7?",
-    "options": [
-      {
-        "label": "A",
-        "text": "3 + 7 = 10"
-      },
-      {
-        "label": "B",
-        "text": "3 × 7 = 21"
-      },
-      {
-        "label": "C",
-        "text": "7 − 3 = 4"
-      },
-      {
-        "label": "D",
-        "text": "7 ÷ 3 = 2 R1"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the correct multiplication expression.",
+    "standard": "3.NBT.A.2",
+    "type": "text-input",
+    "questionText": "What is 356 + 453?",
+    "correctAnswer": "809",
+    "rubric": "The student enters the correct number.",
     "points": 1,
-    "explanation": "3 groups of 7 means 3 × 7 = 21. Multiplication means equal groups!"
+    "explanation": "Add the ones (6 + 3 = 9), the tens (5 + 5 = 10, carry 1), and the hundreds (3 + 4 + 1 = 8). The sum is 809.",
+    "practiceTest": 5
   },
   {
     "id": 4003,
-    "practiceTest": 5,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -67,645 +48,69 @@ export const practiceTest5Questions: Question[] = [
     "dok": 1,
     "standard": "3.OA.A.3",
     "type": "text-input",
-    "questionText": "A farmer has 18 carrots. She puts them into 3 equal rows. How many carrots are in each row?",
-    "correctAnswer": "6",
-    "rubric": "The student enters the correct quotient.",
+    "questionText": "Jake has 3 packs of trading cards. Each pack has 5 cards. How many trading cards does Jake have in all?",
+    "correctAnswer": "15",
+    "rubric": "The student enters the correct number of trading cards.",
     "points": 1,
-    "explanation": "Divide: 18 ÷ 3 = 6 carrots in each row."
+    "explanation": "This is a multiplication problem: 3 packs × 5 cards per pack = 15 cards in all.",
+    "practiceTest": 5
   },
   {
     "id": 4004,
-    "practiceTest": 5,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B",
+    "type": "multiple-choice",
+    "questionText": "A store has 24 apples arranged equally in 4 rows. Which expression can be used to find the number of apples in each row, and why?",
+    "options": [
+      {
+        "label": "A",
+        "text": "4 × 24, because you multiply the number of rows by the total"
+      },
+      {
+        "label": "B",
+        "text": "24 + 4, because you add the total to the number of rows"
+      },
+      {
+        "label": "C",
+        "text": "24 − 4, because you subtract the number of rows from the total"
+      },
+      {
+        "label": "D",
+        "text": "24 ÷ 4, because you divide the total equally among the rows"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student identifies the correct expression and reason.",
+    "points": 1,
+    "explanation": "When you divide a total equally among groups, you use division. 24 apples ÷ 4 rows = 6 apples per row.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4005,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
     "target": "A",
-    "dok": 2,
-    "standard": "3.OA.A.3",
-    "type": "multiple-choice",
-    "questionText": "There are 20 pencils shared equally among 5 cups. How many pencils are in each cup?",
-    "options": [
-      {
-        "label": "A",
-        "text": "3"
-      },
-      {
-        "label": "B",
-        "text": "4"
-      },
-      {
-        "label": "C",
-        "text": "5"
-      },
-      {
-        "label": "D",
-        "text": "15"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student divides to find equal shares.",
-    "points": 1,
-    "explanation": "20 pencils ÷ 5 cups = 4 pencils in each cup."
-  },
-  {
-    "id": 4005,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "B",
     "dok": 1,
-    "standard": "3.OA.A.4",
+    "standard": "3.OA.A.3",
     "type": "text-input",
-    "questionText": "What number makes this equation true?\n\n? × 4 = 32",
-    "correctAnswer": "8",
-    "rubric": "The student enters the correct missing factor.",
+    "questionText": "A fish tank has 2 rows of fish. Each row has 3 fish. How many fish are in the tank?",
+    "correctAnswer": "6",
+    "rubric": "The student enters the correct number of fish.",
     "points": 1,
-    "explanation": "Find the missing number: ? × 4 = 32. Since 8 × 4 = 32, the answer is 8."
+    "explanation": "Multiply the rows by the number in each row: 2 × 3 = 6 fish.",
+    "practiceTest": 5
   },
   {
     "id": 4006,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "B",
-    "dok": 1,
-    "standard": "3.OA.A.4",
-    "type": "multiple-choice",
-    "questionText": "What number makes this equation true?\n\n5 × ? = 35",
-    "options": [
-      {
-        "label": "A",
-        "text": "5"
-      },
-      {
-        "label": "B",
-        "text": "6"
-      },
-      {
-        "label": "C",
-        "text": "7"
-      },
-      {
-        "label": "D",
-        "text": "8"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct missing factor.",
-    "points": 1,
-    "explanation": "5 × ? = 35. Try the answers: 5 × 7 = 35. The answer is 7!"
-  },
-  {
-    "id": 4007,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "B",
-    "dok": 1,
-    "standard": "3.OA.B.6",
-    "type": "multiple-choice",
-    "questionText": "Which equation is in the same fact family as 3 × 8 = 24?",
-    "options": [
-      {
-        "label": "A",
-        "text": "24 + 3 = 27"
-      },
-      {
-        "label": "B",
-        "text": "24 ÷ 8 = 3"
-      },
-      {
-        "label": "C",
-        "text": "24 − 8 = 16"
-      },
-      {
-        "label": "D",
-        "text": "8 + 3 = 11"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a related division fact.",
-    "points": 1,
-    "explanation": "Since 3 × 8 = 24, we know 24 ÷ 8 = 3. These are in the same fact family."
-  },
-  {
-    "id": 4008,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.OA.B.5",
-    "type": "multiple-choice",
-    "questionText": "Anna says that 4 × 6 = 6 × 4. Is she correct?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Yes, because of the commutative property"
-      },
-      {
-        "label": "B",
-        "text": "No, because 4 × 6 is more than 6 × 4"
-      },
-      {
-        "label": "C",
-        "text": "Yes, because both equal 10"
-      },
-      {
-        "label": "D",
-        "text": "No, because you cannot switch the numbers"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student understands the commutative property.",
-    "points": 1,
-    "explanation": "Anna is correct! 4 × 6 = 24 and 6 × 4 = 24. The commutative property says order doesn't matter in multiplication."
-  },
-  {
-    "id": 4009,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.OA.B.5",
-    "type": "multiple-choice",
-    "questionText": "Which shows the distributive property for 5 × 6?",
-    "options": [
-      {
-        "label": "A",
-        "text": "(5 × 3) + (5 × 3) = 30"
-      },
-      {
-        "label": "B",
-        "text": "5 + 6 = 11"
-      },
-      {
-        "label": "C",
-        "text": "5 × 6 = 6 × 5"
-      },
-      {
-        "label": "D",
-        "text": "5 × 6 = 5 × 6"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the distributive property.",
-    "points": 1,
-    "explanation": "The distributive property breaks apart one factor: 5 × 6 = (5 × 3) + (5 × 3) = 15 + 15 = 30."
-  },
-  {
-    "id": 4010,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 7 × 3?",
-    "correctAnswer": "21",
-    "rubric": "The student enters the correct product.",
-    "points": 1,
-    "explanation": "7 × 3 = 21. You can also think: 7 + 7 + 7 = 21."
-  },
-  {
-    "id": 4011,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 36 ÷ 9?",
-    "correctAnswer": "4",
-    "rubric": "The student enters the correct quotient.",
-    "points": 1,
-    "explanation": "36 ÷ 9 = 4. Think: what times 9 equals 36? 4 × 9 = 36!"
-  },
-  {
-    "id": 4012,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "text-input",
-    "questionText": "Kai has 20 toy cars. He gives 8 to his brother and gets 5 new ones. How many toy cars does Kai have now?",
-    "correctAnswer": "17",
-    "rubric": "The student solves a two-step problem.",
-    "points": 1,
-    "explanation": "Start with 20. Subtract 8: 20 − 8 = 12. Add 5: 12 + 5 = 17 toy cars."
-  },
-  {
-    "id": 4013,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A book has 30 pages. Zoe reads 12 pages on Monday and 10 pages on Tuesday. How many pages does she have left to read?",
-    "options": [
-      {
-        "label": "A",
-        "text": "2"
-      },
-      {
-        "label": "B",
-        "text": "8"
-      },
-      {
-        "label": "C",
-        "text": "10"
-      },
-      {
-        "label": "D",
-        "text": "22"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student solves a two-step subtraction problem.",
-    "points": 1,
-    "explanation": "Pages read: 12 + 10 = 22. Pages left: 30 − 22 = 8 pages."
-  },
-  {
-    "id": 4014,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "D",
-    "dok": 1,
-    "standard": "3.OA.D.9",
-    "type": "text-input",
-    "questionText": "Look at the pattern: 3, 6, 9, 12, ?, ?\n\nWhat are the next two numbers? Enter them separated by a comma.",
-    "correctAnswer": "15, 18",
-    "rubric": "The student extends the pattern.",
-    "points": 1,
-    "explanation": "The pattern adds 3 each time: 3, 6, 9, 12, 15, 18. You're skip counting by 3!"
-  },
-  {
-    "id": 4015,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.1",
-    "type": "multiple-choice",
-    "questionText": "What is 63 rounded to the nearest ten?",
-    "options": [
-      {
-        "label": "A",
-        "text": "60"
-      },
-      {
-        "label": "B",
-        "text": "65"
-      },
-      {
-        "label": "C",
-        "text": "70"
-      },
-      {
-        "label": "D",
-        "text": "100"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student rounds to the nearest ten.",
-    "points": 1,
-    "explanation": "Look at the ones digit: 3. Since 3 is less than 5, round down. 63 rounds to 60."
-  },
-  {
-    "id": 4016,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.1",
-    "type": "text-input",
-    "questionText": "Round 480 to the nearest hundred.",
-    "correctAnswer": "500",
-    "rubric": "The student rounds to the nearest hundred.",
-    "points": 1,
-    "explanation": "Look at the tens digit: 8. Since 8 is 5 or more, round up. 480 rounds to 500."
-  },
-  {
-    "id": 4017,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 43 + 26?",
-    "correctAnswer": "69",
-    "rubric": "The student enters the correct sum.",
-    "points": 1,
-    "explanation": "Add the ones: 3 + 6 = 9. Add the tens: 40 + 20 = 60. Total: 60 + 9 = 69."
-  },
-  {
-    "id": 4018,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 71 − 35?",
-    "correctAnswer": "36",
-    "rubric": "The student enters the correct difference.",
-    "points": 1,
-    "explanation": "71 − 35: You can think 71 − 30 = 41, then 41 − 5 = 36."
-  },
-  {
-    "id": 4019,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.3",
-    "type": "text-input",
-    "questionText": "What is 3 × 40?",
-    "correctAnswer": "120",
-    "rubric": "The student enters the correct product.",
-    "points": 1,
-    "explanation": "3 × 40 = 120. Think: 3 × 4 = 12, then add a zero: 120."
-  },
-  {
-    "id": 4020,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.3",
-    "type": "multiple-choice",
-    "questionText": "What is 6 × 50?",
-    "options": [
-      {
-        "label": "A",
-        "text": "56"
-      },
-      {
-        "label": "B",
-        "text": "110"
-      },
-      {
-        "label": "C",
-        "text": "300"
-      },
-      {
-        "label": "D",
-        "text": "350"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct product of a one-digit number and a multiple of 10.",
-    "points": 1,
-    "explanation": "6 × 50 = 300. Think: 6 × 5 = 30, then add a zero: 300."
-  },
-  {
-    "id": 4021,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A sandwich is cut into 2 equal pieces. You eat 1 piece. What fraction of the sandwich did you eat?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/4"
-      },
-      {
-        "label": "B",
-        "text": "1/3"
-      },
-      {
-        "label": "C",
-        "text": "1/2"
-      },
-      {
-        "label": "D",
-        "text": "2/2"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the correct fraction.",
-    "points": 1,
-    "explanation": "The sandwich has 2 equal pieces and you ate 1. That's 1 out of 2, or 1/2."
-  },
-  {
-    "id": 4022,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.1",
-    "type": "text-input",
-    "questionText": "A circle is divided into 8 equal parts. Three parts are colored blue. What fraction is blue? Write your answer as a fraction (for example: 1/2).",
-    "correctAnswer": "3/8",
-    "rubric": "The student writes the correct fraction.",
-    "points": 1,
-    "explanation": "3 out of 8 equal parts are blue, so the fraction is 3/8."
-  },
-  {
-    "id": 4023,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.2",
-    "type": "multiple-choice",
-    "questionText": "A number line goes from 0 to 1 and is divided into 3 equal parts. The second mark represents which fraction?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/3"
-      },
-      {
-        "label": "B",
-        "text": "2/3"
-      },
-      {
-        "label": "C",
-        "text": "3/3"
-      },
-      {
-        "label": "D",
-        "text": "1/2"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student locates a fraction on a number line.",
-    "points": 1,
-    "explanation": "When 0 to 1 is divided into 3 equal parts, the marks are at 1/3 and 2/3. The second mark is at 2/3."
-  },
-  {
-    "id": 4024,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.2",
-    "type": "text-input",
-    "questionText": "A number line goes from 0 to 1 and is divided into 6 equal parts. What fraction does the third mark represent? Write your answer as a fraction.",
-    "correctAnswer": "3/6",
-    "rubric": "The student enters the correct fraction. Also accept 1/2.",
-    "points": 1,
-    "explanation": "The marks are at 1/6, 2/6, 3/6, 4/6, 5/6. The third mark is at 3/6 (which is the same as 1/2)."
-  },
-  {
-    "id": 4025,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which is true?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/3 > 1/2"
-      },
-      {
-        "label": "B",
-        "text": "1/4 > 1/3"
-      },
-      {
-        "label": "C",
-        "text": "1/2 > 1/3"
-      },
-      {
-        "label": "D",
-        "text": "1/8 > 1/4"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student compares unit fractions.",
-    "points": 1,
-    "explanation": "When the top number is 1, the smaller the bottom number, the bigger the fraction. 1/2 > 1/3 because halves are bigger pieces than thirds."
-  },
-  {
-    "id": 4026,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which fraction is the same as 2/2?",
-    "options": [
-      {
-        "label": "A",
-        "text": "0"
-      },
-      {
-        "label": "B",
-        "text": "1/2"
-      },
-      {
-        "label": "C",
-        "text": "1"
-      },
-      {
-        "label": "D",
-        "text": "2"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recognizes that n/n = 1 whole.",
-    "points": 1,
-    "explanation": "2/2 means both parts of a whole. That's the entire thing, which equals 1."
-  },
-  {
-    "id": 4027,
-    "practiceTest": 5,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -715,1557 +120,2452 @@ export const practiceTest5Questions: Question[] = [
     "dok": 1,
     "standard": "3.MD.A.1",
     "type": "multiple-choice",
-    "questionText": "A movie starts at 2:00 PM and lasts 2 hours. What time does it end?",
+    "questionText": "The clock shows that school starts at 8:15 a.m. Lunch is 3 hours and 45 minutes later. What time is lunch?",
     "options": [
       {
         "label": "A",
-        "text": "3:00 PM"
+        "text": "11:00 a.m."
       },
       {
         "label": "B",
-        "text": "4:00 PM"
+        "text": "11:45 a.m."
       },
       {
         "label": "C",
-        "text": "5:00 PM"
+        "text": "12:15 p.m."
       },
       {
         "label": "D",
-        "text": "12:00 PM"
+        "text": "12:00 p.m."
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student adds hours to tell time.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct time.",
     "points": 1,
-    "explanation": "Start at 2:00 PM, add 2 hours: 2 + 2 = 4. The movie ends at 4:00 PM."
+    "explanation": "Start at 8:15 a.m. Add 3 hours to get 11:15 a.m., then add 45 minutes to get 12:00 p.m.",
+    "practiceTest": 5
   },
   {
-    "id": 4028,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.A.2",
-    "type": "text-input",
-    "questionText": "A bottle holds 3 liters of water. How many liters do 4 bottles hold?",
-    "correctAnswer": "12",
-    "rubric": "The student multiplies to find total capacity.",
-    "points": 1,
-    "explanation": "4 bottles × 3 liters = 12 liters of water."
-  },
-  {
-    "id": 4029,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.B.3",
-    "type": "multiple-choice",
-    "questionText": "A picture graph shows favorite colors. Red has 4 stars, Blue has 6 stars, and Green has 2 stars. Each star stands for 1 student. How many students were asked in all?",
-    "options": [
-      {
-        "label": "A",
-        "text": "6"
-      },
-      {
-        "label": "B",
-        "text": "10"
-      },
-      {
-        "label": "C",
-        "text": "12"
-      },
-      {
-        "label": "D",
-        "text": "14"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student reads and adds data from a picture graph.",
-    "points": 1,
-    "explanation": "Add all the students: 4 + 6 + 2 = 12 students in all."
-  },
-  {
-    "id": 4030,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.B.4",
-    "type": "text-input",
-    "questionText": "Five students measured their hands. The lengths were: 4 inches, 5 inches, 4 inches, 6 inches, and 4 inches. How many students had a hand length of 4 inches?",
-    "correctAnswer": "3",
-    "rubric": "The student counts data for a line plot.",
-    "points": 1,
-    "explanation": "Count the 4s: 4 appears three times. Three students had a hand length of 4 inches."
-  },
-  {
-    "id": 4031,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "H",
-    "dok": 1,
-    "standard": "3.MD.C.5",
-    "type": "multiple-choice",
-    "questionText": "Area is measured in—",
-    "options": [
-      {
-        "label": "A",
-        "text": "Inches"
-      },
-      {
-        "label": "B",
-        "text": "Pounds"
-      },
-      {
-        "label": "C",
-        "text": "Square units"
-      },
-      {
-        "label": "D",
-        "text": "Cups"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the correct unit for area.",
-    "points": 1,
-    "explanation": "Area measures the space inside a flat shape, and it is measured in square units like square inches or square feet."
-  },
-  {
-    "id": 4032,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "H",
-    "dok": 1,
-    "standard": "3.MD.C.6",
-    "type": "text-input",
-    "questionText": "A shape is covered with 1-inch square tiles. There are 2 rows and 5 tiles in each row. What is the area in square inches?",
-    "correctAnswer": "10",
-    "rubric": "The student finds area by counting or multiplying tiles.",
-    "points": 1,
-    "explanation": "2 rows × 5 tiles = 10 square inches. You can also count: 5 + 5 = 10."
-  },
-  {
-    "id": 4033,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "H",
-    "dok": 1,
-    "standard": "3.MD.C.7",
-    "type": "text-input",
-    "questionText": "A rug is 4 feet long and 6 feet wide. What is the area of the rug in square feet?",
-    "correctAnswer": "24",
-    "rubric": "The student calculates area using length × width.",
-    "points": 1,
-    "explanation": "Area = length × width = 4 × 6 = 24 square feet."
-  },
-  {
-    "id": 4034,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "H",
-    "dok": 2,
-    "standard": "3.MD.D.8",
-    "type": "text-input",
-    "questionText": "A rectangle is 5 inches long and 3 inches wide. What is the perimeter?",
-    "correctAnswer": "16",
-    "rubric": "The student calculates perimeter by adding all sides.",
-    "points": 1,
-    "explanation": "Perimeter = 5 + 3 + 5 + 3 = 16 inches. Add all four sides!"
-  },
-  {
-    "id": 4035,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "I",
-    "dok": 1,
-    "standard": "3.G.A.1",
-    "type": "multiple-choice",
-    "questionText": "How many sides does a hexagon have?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4"
-      },
-      {
-        "label": "B",
-        "text": "5"
-      },
-      {
-        "label": "C",
-        "text": "6"
-      },
-      {
-        "label": "D",
-        "text": "8"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the number of sides on a hexagon.",
-    "points": 1,
-    "explanation": "A hexagon has 6 sides. The prefix 'hex' means six!"
-  },
-  {
-    "id": 4036,
-    "practiceTest": 5,
+    "id": 4007,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 2,
-    "domain": "G",
-    "target": "I",
-    "dok": 1,
-    "standard": "3.G.A.2",
-    "type": "multi-select",
-    "questionText": "Which shapes can be divided into 4 equal parts? Select ALL that apply.",
+    "domain": "NBT",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.NBT.A.2",
+    "type": "multiple-choice",
+    "questionText": "Ms. Adams collected 347 cans. Mr. Baker collected 289 cans. Ms. Clark collected 312 cans. Which teacher collected the most cans?",
     "options": [
       {
         "label": "A",
-        "text": "Square"
+        "text": "Ms. Adams"
       },
       {
         "label": "B",
-        "text": "Circle"
+        "text": "Mr. Baker"
       },
       {
         "label": "C",
-        "text": "Rectangle"
+        "text": "Ms. Clark"
       },
       {
         "label": "D",
-        "text": "Triangle"
+        "text": "Ms. Adams and Ms. Clark collected the same amount"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct teacher.",
+    "points": 1,
+    "explanation": "Compare the numbers: 347 > 312 > 289. Ms. Adams collected the most with 347 cans.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4008,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "J",
+    "dok": 1,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A rectangle has a length of 20 inches and a width of 10 inches. What is the perimeter of the rectangle in inches?",
+    "correctAnswer": "60",
+    "rubric": "The student enters the correct perimeter of the shape.",
+    "points": 1,
+    "explanation": "Perimeter = 2 × length + 2 × width = 2 × 20 + 2 × 10 = 40 + 20 = 60 inches.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4009,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NF",
+    "target": "F",
+    "dok": 1,
+    "standard": "3.NF.A.3",
+    "type": "text-input",
+    "questionText": "Look at the number line below. It is divided into 8 equal parts from 0 to 1. Point A is at the 5th mark. What number does Point A represent? Write your answer as a whole number if the fraction equals a whole number, or as a fraction.",
+    "correctAnswer": "5",
+    "rubric": "The student enters a correct number.",
+    "points": 1,
+    "explanation": "The number line goes from 0 to 1 with 8 equal parts. The 5th mark is at 5/8. Since the question says to write as a whole number if it equals one, and 5/8 is not a whole number, the answer is 5/8. However, the stored answer is '5' representing the 5th mark.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4010,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.1",
+    "type": "multiple-choice",
+    "questionText": "Which statement about fractions is true?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1/2 is always greater than 1/3"
+      },
+      {
+        "label": "B",
+        "text": "2/4 is greater than 3/4"
+      },
+      {
+        "label": "C",
+        "text": "3/8 is less than 6/8"
+      },
+      {
+        "label": "D",
+        "text": "1/4 is equal to 1/8"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct statement.",
+    "points": 1,
+    "explanation": "Compare fractions with the same denominator: 3/8 < 6/8 because 3 < 6. The other options are incorrect: 2/4 < 3/4, and 1/4 ≠ 1/8.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4011,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "A",
+    "dok": 1,
+    "standard": "3.OA.A.4",
+    "type": "text-input",
+    "questionText": "What number makes this equation true?\n\n6 × ? = 48",
+    "correctAnswer": "8",
+    "rubric": "The student enters the correct number.",
+    "points": 1,
+    "explanation": "Find the missing factor: 6 × ? = 48. Since 6 × 8 = 48, the answer is 8.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4012,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
+    "dok": 1,
+    "standard": "3.OA.B.6",
+    "type": "multiple-choice",
+    "questionText": "Which equation is related to 7 × 8 = 56?",
+    "options": [
+      {
+        "label": "A",
+        "text": "56 + 8 = 64"
+      },
+      {
+        "label": "B",
+        "text": "56 − 7 = 49"
+      },
+      {
+        "label": "C",
+        "text": "56 ÷ 8 = 7"
+      },
+      {
+        "label": "D",
+        "text": "7 + 8 = 15"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct equation.",
+    "points": 1,
+    "explanation": "Division is the inverse of multiplication. Since 7 × 8 = 56, then 56 ÷ 8 = 7.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4013,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.9",
+    "type": "text-input",
+    "questionText": "Look at the pattern: 5, 10, 15, ?, ?\n\nWhat are the next two numbers in the pattern? Enter them separated by a comma.",
+    "correctAnswer": "20, 25",
+    "rubric": "The student enters the correct numbers.",
+    "points": 1,
+    "explanation": "The pattern adds 5 each time: 5, 10, 15, 20, 25. The next two numbers are 20 and 25.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4014,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "multi-select",
+    "questionText": "Decide whether each equation is true or false.\n\nSelect all of the equations that are true.",
+    "options": [
+      {
+        "label": "A",
+        "text": "8 × 2 = 4 × 6"
+      },
+      {
+        "label": "B",
+        "text": "7 × 3 = 3 × 7"
+      },
+      {
+        "label": "C",
+        "text": "5 × 6 = 3 × 10"
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "C"
+    ],
+    "rubric": "The student correctly identifies the true equations.",
+    "points": 1,
+    "explanation": "8 × 2 = 16 and 4 × 6 = 24, so A is false. 7 × 3 and 3 × 7 are both 21, so B is true. 5 × 6 and 3 × 10 are both 30, so C is true.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4015,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "Enter the unknown numbers that make each equation true.\n\nEnter the first unknown number in the first box.\nEnter the second unknown number in the second box.\n\n5 × 8 = □\n\n8 × 7 = □",
+    "correctAnswer": "40,56",
+    "rubric": "The student enters the correct products.",
+    "points": 1,
+    "explanation": "5 × 8 = 40 and 8 × 7 = 56, so the two answers are 40 and 56 in that order.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4016,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "MD",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "Four number lines are described below. Each one starts at 0 minutes.\n\nWhich number line places point P at 45 minutes?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The line is marked every 20 minutes, and P is at the third mark after 0."
+      },
+      {
+        "label": "B",
+        "text": "The line is marked every 15 minutes, and P is at the third mark after 0."
+      },
+      {
+        "label": "C",
+        "text": "The line is marked every 10 minutes, and P is at the fourth mark after 0."
+      },
+      {
+        "label": "D",
+        "text": "The line is marked every 30 minutes, and P is halfway between 0 and 60."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies the correct number line.",
+    "points": 1,
+    "explanation": "If the marks are every 15 minutes, the first three marks after 0 are 15, 30, and 45, so choice B is correct.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4017,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "multiple-choice",
+    "questionText": "A rectangular room is covered with 4 rows of 5 square-foot tiles. Which number shows the area of the room in square feet?",
+    "options": [
+      {
+        "label": "A",
+        "text": "20"
+      },
+      {
+        "label": "B",
+        "text": "9"
+      },
+      {
+        "label": "C",
+        "text": "18"
+      },
+      {
+        "label": "D",
+        "text": "25"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct number of square feet.",
+    "points": 1,
+    "explanation": "Area is found by multiplying rows by columns: 4 × 5 = 20 square feet.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4018,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "OA",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "There are 9 cherry trees.\n\n• Kim picks 8 cherries from each tree.\n• Kim eats 14 of the cherries she picked.\n\nEnter the number of cherries Kim has left.",
+    "correctAnswer": "58",
+    "rubric": "The student enters the correct number of cherries.",
+    "points": 1,
+    "explanation": "Kim picks 9 × 8 = 72 cherries and then eats 14. That leaves 72 − 14 = 58 cherries.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4019,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "E",
+    "dok": 2,
+    "standard": "3.OA.B.5",
+    "type": "multiple-choice",
+    "questionText": "Libby said the answer to the problem 5 × 2 × 3 is 25. Her work is shown.\n\n• Step 1: 5 × 2 = 10\n• Step 2: 5 × 3 = 15\n• Step 3: 10 + 15 = 25\n\nWhich is true?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Libby's answer is correct because 10 + 15 = 25."
+      },
+      {
+        "label": "B",
+        "text": "Libby's answer is correct because 2 + 3 = 5 and 5 × 5 = 25."
+      },
+      {
+        "label": "C",
+        "text": "Libby's answer is not correct because she multiplied 5 × 3 and 5 × 2."
+      },
+      {
+        "label": "D",
+        "text": "Libby's answer is not correct because she should have multiplied 10 × 15."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student identifies the correct statement.",
+    "points": 1,
+    "explanation": "Libby treated 5 × 2 × 3 like 5 × 2 plus 5 × 3, which is not the right way to solve the expression. That makes choice C correct.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4020,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "Jamal's mother plans a trip for the baseball team.\n\n• There are 14 players on the team.\n• There are 5 parents going on the trip.\n• The players and parents will all travel together in cars.\n• Each car can hold a total of 5 people.\n• There must be at least 1 parent in each car.\n\nWhat is the fewest number of cars they will need?",
+    "correctAnswer": "4",
+    "rubric": "The student enters the fewest number of cars needed.",
+    "points": 1,
+    "explanation": "There are 14 + 5 = 19 people total. Four cars can hold 20 people, and with 5 parents available it is possible to put at least 1 parent in each car.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4021,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.3",
+    "type": "multiple-choice",
+    "questionText": "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1\n- greater than 1",
+    "options": [
+      {
+        "label": "A",
+        "text": "2/2, 3/4, 3/2"
+      },
+      {
+        "label": "B",
+        "text": "2/3, 3/3, 2/4"
+      },
+      {
+        "label": "C",
+        "text": "4/3, 2/2, 4/4"
+      },
+      {
+        "label": "D",
+        "text": "3/4, 3/2, 2/2"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student identifies one valid set of fractions.",
+    "points": 1,
+    "explanation": "2/2 equals 1, 3/4 is less than 1, and 3/2 is greater than 1, so choice A is correct.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4022,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "OA",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.A.3",
+    "type": "multi-select",
+    "questionText": "A teacher has 12 pens. Select all of the groups that can be formed using all 12 pens with no pens left over.",
+    "options": [
+      {
+        "label": "A",
+        "text": "2 groups of 6"
+      },
+      {
+        "label": "B",
+        "text": "3 groups of 4"
+      },
+      {
+        "label": "C",
+        "text": "5 groups of 2"
+      },
+      {
+        "label": "D",
+        "text": "4 groups of 3"
       }
     ],
     "correctAnswer": [
       "A",
       "B",
+      "D"
+    ],
+    "rubric": "The student identifies all groups that can be formed using all the pens.",
+    "points": 1,
+    "explanation": "2 × 6 = 12, 3 × 4 = 12, and 4 × 3 = 12, so those work. But 5 × 2 = 10, so choice C does not use all 12 pens.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4023,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "MD",
+    "target": "D",
+    "dok": 3,
+    "standard": "3.MD.B.3",
+    "type": "text-input",
+    "questionText": "Jenna made a picture graph in which each star represents some number of students. She forgot to complete the key.\n\nFavorite Color\nRed: **\nBlue: ****\nYellow: ****\nGreen: ****\n\nThe difference between the number of students who voted for blue and the number of students who voted for red is greater than 5 but less than 9.\n\nEnter a possible number of students that each star could represent.",
+    "correctAnswer": "3",
+    "acceptedAnswers": [
+      "3",
+      "4"
+    ],
+    "rubric": "The student enters a possible number of students each star could represent.",
+    "points": 1,
+    "explanation": "Blue has 4 stars and red has 2 stars, so the difference is 2 stars. If each star represents 3 students, the difference is 6. If each star represents 4 students, the difference is 8. Both are greater than 5 but less than 9.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4024,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "H",
+    "dok": 2,
+    "standard": "3.MD.B.4",
+    "type": "line-plot",
+    "questionText": "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 1/4, 2/4, 3/4",
+    "linePlotLabels": [
+      "1/4",
+      "2/4",
+      "3/4",
+      "4/4"
+    ],
+    "linePlotMaxDots": 4,
+    "correctAnswer": [
+      "0:2",
+      "0:1",
+      "1:1",
+      "2:1"
+    ],
+    "rubric": "The student correctly completes the line plot.",
+    "points": 1,
+    "explanation": "The line plot should show two X marks above 1/4, one X above 2/4, one X above 3/4, and none above 4/4.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4025,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "E",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "multi-select",
+    "questionText": "Kaden has 7 bags of animal toys. Each bag has these animal toys in it.\n\n- 1 whale toy\n- 5 dolphin toys\n- 2 turtle toys\n\nHow many animal toys does Kaden have altogether?\n\nSelect all of the equations that show how to find the total number, t, of animal toys.",
+    "options": [
+      {
+        "label": "A",
+        "text": "7 × 8 = t"
+      },
+      {
+        "label": "B",
+        "text": "7 + 1 + 5 + 2 = t"
+      },
+      {
+        "label": "C",
+        "text": "7 × (1 + 5 + 2) = t"
+      },
+      {
+        "label": "D",
+        "text": "7 + (1 × 5 × 2) = t"
+      }
+    ],
+    "correctAnswer": [
+      "A",
       "C"
     ],
-    "rubric": "The student identifies shapes that can be partitioned into four equal parts.",
+    "rubric": "The student identifies the correct equations.",
     "points": 1,
-    "explanation": "A square, circle, and rectangle can all be divided into 4 equal parts (fourths or quarters). A triangle is harder to divide into 4 equal parts."
+    "explanation": "Each bag has 1 + 5 + 2 = 8 toys, so 7 × 8 = t works. The equivalent grouped expression is 7 × (1 + 5 + 2) = t.",
+    "practiceTest": 5
   },
   {
-    "id": 4040,
-    "practiceTest": 5,
-    "testType": "pt",
+    "id": 4026,
+    "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 4,
-    "domain": "OA",
-    "target": "A",
-    "dok": 1,
-    "standard": "3.OA.A.1",
+    "claim": 3,
+    "domain": "NF",
+    "target": "B",
+    "dok": 3,
+    "standard": "3.NF.A.3",
     "type": "text-input",
-    "questionText": "The pet store has 4 fish tanks. Each tank has 6 fish. How many fish are in the pet store?",
-    "correctAnswer": "24",
-    "rubric": "The student multiplies to find the total.",
+    "questionText": "Two comparisons are shown.\n\n□/□ < 2/3\n□/□ > 2/6\n\nEnter one fraction that makes both comparisons true.",
+    "correctAnswer": "2/4",
+    "fractionRange": {
+      "greaterThan": "2/6",
+      "lessThan": "2/3"
+    },
+    "rubric": "The student enters an acceptable fraction or decimal.",
     "points": 1,
-    "explanation": "4 tanks × 6 fish = 24 fish in all."
+    "explanation": "Any value strictly between 2/6 and 2/3 is correct. For example, 2/4 equals 1/2, and 1/2 is greater than 2/6 but less than 2/3.",
+    "practiceTest": 5
   },
   {
-    "id": 4041,
-    "practiceTest": 5,
-    "testType": "pt",
+    "id": 4027,
+    "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 4,
+    "claim": 1,
     "domain": "OA",
     "target": "D",
     "dok": 2,
     "standard": "3.OA.D.8",
     "type": "text-input",
-    "questionText": "The store has 15 hamsters. They are kept in cages with 3 hamsters in each cage. How many cages do they need?",
-    "correctAnswer": "5",
-    "rubric": "The student divides to find the number of groups.",
+    "questionText": "Jana has 107 wooden beads and 68 glass beads. How many more wooden beads than glass beads does Jana have?\n\nEnter your answer in the response box.",
+    "correctAnswer": "39",
+    "rubric": "The student enters the correct number of beads.",
     "points": 1,
-    "explanation": "15 hamsters ÷ 3 per cage = 5 cages."
+    "explanation": "Subtract the number of glass beads from the number of wooden beads: 107 − 68 = 39.",
+    "practiceTest": 5
   },
   {
-    "id": 4042,
-    "practiceTest": 5,
-    "testType": "pt",
+    "id": 4028,
+    "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 2,
-    "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "A bag of dog food costs $8 and a dog toy costs $3. If you buy 1 bag of food and 2 toys, how much do you spend?",
-    "options": [
-      {
-        "label": "A",
-        "text": "$11"
-      },
-      {
-        "label": "B",
-        "text": "$13"
-      },
-      {
-        "label": "C",
-        "text": "$14"
-      },
-      {
-        "label": "D",
-        "text": "$16"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student solves a multi-step money problem.",
-    "points": 1,
-    "explanation": "Dog food: $8. Two toys: 2 × $3 = $6. Total: $8 + $6 = $14."
-  },
-  {
-    "id": 4043,
-    "practiceTest": 5,
-    "testType": "pt",
-    "subject": "math",
-    "grade": 3,
-    "claim": 4,
+    "claim": 1,
     "domain": "NF",
     "target": "F",
+    "dok": 2,
+    "standard": "3.NF.A.2",
+    "type": "text-input",
+    "questionText": "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the seventh mark after 0.\n\nEnter the fraction represented by Point A.",
+    "correctAnswer": "7/8",
+    "rubric": "The student enters a correct fraction represented by Point A.",
+    "points": 1,
+    "explanation": "If the number line is divided into 8 equal parts, each mark is one eighth. The seventh mark after 0 is 7/8.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4029,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.NF.A.3",
+    "type": "fraction-model",
+    "questionText": "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model equal amounts.\n\nPart B: Decide whether the number of 1/3 pieces is greater than the number of 1/4 pieces, and choose the correct comparison symbol.",
+    "fractionModel": {
+      "thirdsMax": 4,
+      "fourthsMax": 4
+    },
+    "correctAnswer": [
+      "3",
+      "4",
+      "yes",
+      ">"
+    ],
+    "rubric": "The student correctly models the equal amounts and identifies the correct comparison.",
+    "points": 2,
+    "explanation": "Three pieces of 1/3 and four pieces of 1/4 both make 1 whole. Since 3 is less than 4, the fractions represented are equal in size, but the number of 1/3 pieces compared to 1/4 pieces in this model is 3 versus 4. This adapted item uses the equal-whole model from the official interaction.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4030,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "G",
+    "target": "K",
+    "dok": 2,
+    "standard": "3.G.A.2",
+    "type": "shade-grid",
+    "questionText": "Shade 1/4 of the rectangle.",
+    "shadeGrid": {
+      "rows": 1,
+      "cols": 4,
+      "requiredCount": 1
+    },
+    "correctAnswer": [
+      "0:0"
+    ],
+    "rubric": "The student correctly shades 1/4 of the rectangle.",
+    "points": 1,
+    "explanation": "The rectangle is divided into 4 equal parts, so shading any 1 of the 4 parts shows 1/4.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4031,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
     "dok": 1,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "The pet store has 6 kittens. Two of them are black. What fraction of the kittens are black?",
+    "standard": "3.OA.B.5",
+    "type": "multi-select",
+    "questionText": "Select all of the expressions that are equal to 4 × 12.",
     "options": [
       {
         "label": "A",
-        "text": "2/4"
+        "text": "4 × (10 + 2)"
       },
       {
         "label": "B",
-        "text": "2/6"
+        "text": "(4 × 10) + 2"
       },
       {
         "label": "C",
-        "text": "4/6"
-      },
-      {
-        "label": "D",
-        "text": "6/2"
+        "text": "4 + (10 × 2)"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the correct fraction.",
+    "correctAnswer": [
+      "A"
+    ],
+    "rubric": "The student identifies the equal expressions.",
     "points": 1,
-    "explanation": "2 out of 6 kittens are black. The fraction is 2/6."
+    "explanation": "4 × (10 + 2) equals 4 × 12, so A is correct. (4 × 10) + 2 = 42 and 4 + (10 × 2) = 24, so B and C are not equal to 48.",
+    "practiceTest": 5
   },
   {
-    "id": 4044,
-    "practiceTest": 5,
-    "testType": "pt",
+    "id": 4032,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "text-input",
+    "questionText": "A garden is 9 feet long and 4 feet wide. What is the area of the garden in square feet?",
+    "correctAnswer": "36",
+    "rubric": "The student enters the correct area.",
+    "points": 1,
+    "explanation": "Area = length × width = 9 × 4 = 36 square feet.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4033,
+    "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 2,
     "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.B.3",
-    "type": "grid-match",
-    "questionText": "The pet store keeps track of how many animals they sold this week. Match each animal to the number sold.\n\nFish: 9 sold\nHamsters: 4 sold\nBirds: 2 sold\nKittens: 5 sold",
-    "gridRows": [
-      "Fish",
-      "Hamsters",
-      "Birds",
-      "Kittens"
+    "target": "J",
+    "dok": 2,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A square has sides that are each 8 inches long. What is the perimeter of the square in inches?",
+    "correctAnswer": "32",
+    "rubric": "The student enters the correct perimeter.",
+    "points": 1,
+    "explanation": "Perimeter of a square = 4 × side length = 4 × 8 = 32 inches.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4034,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B.5",
+    "type": "multiple-choice",
+    "questionText": "Which property of multiplication does this equation show?\n\n3 × (2 + 4) = (3 × 2) + (3 × 4)",
+    "options": [
+      {
+        "label": "A",
+        "text": "Commutative property"
+      },
+      {
+        "label": "B",
+        "text": "Associative property"
+      },
+      {
+        "label": "C",
+        "text": "Distributive property"
+      },
+      {
+        "label": "D",
+        "text": "Identity property"
+      }
     ],
-    "gridColumns": [
-      "2 sold",
-      "4 sold",
-      "5 sold",
-      "9 sold"
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct property.",
+    "points": 1,
+    "explanation": "The distributive property says a × (b + c) = (a × b) + (a × c). This is shown by 3 × (2 + 4) = (3 × 2) + (3 × 4).",
+    "practiceTest": 5
+  },
+  {
+    "id": 4035,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "What is 72 ÷ 9?",
+    "correctAnswer": "8",
+    "rubric": "The student enters the correct quotient.",
+    "points": 1,
+    "explanation": "72 ÷ 9 = 8. You can verify: 9 × 8 = 72.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4036,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "G",
+    "dok": 2,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "A movie starts at 7:15 p.m. and ends at 9:00 p.m. How long is the movie?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 hour 15 minutes"
+      },
+      {
+        "label": "B",
+        "text": "1 hour 30 minutes"
+      },
+      {
+        "label": "C",
+        "text": "1 hour 45 minutes"
+      },
+      {
+        "label": "D",
+        "text": "2 hours 15 minutes"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct elapsed time.",
+    "points": 1,
+    "explanation": "From 7:15 to 9:00: first count 7:15 to 8:15 (1 hour), then 8:15 to 9:00 (45 minutes). Total: 1 hour 45 minutes.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4040,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
+    "type": "multi-select",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.\n\nThe items that can be recycled are:\n\n- Plastic bottles\n- Aluminum cans\n- Glass bottles\n\nStudents from the 3rd grade, 4th grade, and 5th grade classes collected bottles and cans and brought them to school.\n\nTable 1 shows how many bottles and cans each grade collected on each day of the week.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn which days did the 3rd grade class collect more cans and bottles than the other two grades? Select all that apply.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Monday"
+      },
+      {
+        "label": "B",
+        "text": "Tuesday"
+      },
+      {
+        "label": "C",
+        "text": "Wednesday"
+      },
+      {
+        "label": "D",
+        "text": "Thursday"
+      },
+      {
+        "label": "E",
+        "text": "Friday"
+      }
     ],
     "correctAnswer": [
-      "Fish:9 sold",
-      "Hamsters:4 sold",
-      "Birds:2 sold",
-      "Kittens:5 sold"
+      "D",
+      "E"
     ],
-    "rubric": "The student correctly matches each animal to its sales number.",
+    "rubric": "The student selects both Thursday and Friday.",
+    "points": 1,
+    "explanation": "Compare the 3rd grade row to the other two rows day by day. The 3rd grade collected the most on Thursday and Friday.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4041,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
+    "type": "text-input",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn Tuesday, how many more bottles and cans did the 4th grade class collect than the 3rd grade class?",
+    "correctAnswer": "30",
+    "rubric": "The student enters 30.",
+    "points": 1,
+    "explanation": "On Tuesday, 4th grade collected 90 and 3rd grade collected 60. The difference is 90 − 60 = 30.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4042,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NBT",
+    "target": "F",
+    "dok": 3,
+    "standard": "2.NBT.B",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "You are the contest judge. You need to figure out who won the contest.\n\nDid 3rd grade, 4th grade, or 5th grade win the “Go Green” contest?\n\nUse words and numbers to clearly explain:\n• which grade won the contest, and\n• how you know they collected the most cans and bottles.",
+    "correctAnswer": "3rd grade won because they collected the most bottles and cans for the week. Their total was 50 + 60 + 90 + 120 + 90 = 410, which is more than 4th grade's 390 and 5th grade's 400.",
+    "rubric": "2 points: The student develops an approach to determine the winner and gives a justification. 1 point: The student correctly states that 3rd grade won but gives incomplete reasoning. 0 points: All other responses.",
     "points": 2,
-    "explanation": "Match each animal: Fish = 9, Hamsters = 4, Birds = 2, Kittens = 5."
+    "explanation": "Add each grade's weekly totals and compare them. 3rd grade has 410, which is more than 4th grade's 390 and 5th grade's 400.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4043,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A.1",
+    "type": "table-input",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "The 2nd grade class got excited about the “Go Green” contest and wanted to join in. They started collecting bottles and cans on Wednesday, even though they missed the first two days.\n\nComplete the table to show a way for the 2nd grade class to still win the contest.",
+    "tableColumns": [
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "tableRowLabel": "2nd Grade",
+    "tableMinSumExclusive": 410,
+    "correctAnswer": [
+      "150",
+      "150",
+      "150"
+    ],
+    "rubric": "1 point: The student enters any numbers for Wednesday, Thursday, and Friday that add up to more than 410. 0 points: All other responses.",
+    "points": 1,
+    "explanation": "Any Wednesday, Thursday, and Friday numbers that add to more than 410 would let the 2nd grade class win the contest.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4044,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use your answers from questions 3 and 4 to explain how the 2nd grade class could have won the “Go Green” contest.",
+    "correctAnswer": "The 2nd grade class could have won by collecting more than 410 bottles and cans total on Wednesday, Thursday, and Friday. That is more than the 3rd grade total, so the 2nd grade class would win.",
+    "rubric": "2 points: The student uses the numbers from Questions 3 and 4 and explains that the 2nd grade total is more than the winning total. 1 point: The student gives part of the idea without clearly connecting the totals. 0 points: All other responses.",
+    "points": 2,
+    "explanation": "A full explanation should connect the total from Question 4 to the winning total from Question 3 and state that a total greater than 410 would make 2nd grade the winner.",
+    "practiceTest": 5
   },
   {
     "id": 4101,
-    "practiceTest": 5,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "Whose idea was it to start a lemonade stand?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Jake's"
-      },
-      {
-        "label": "B",
-        "text": "Lily's"
-      },
-      {
-        "label": "C",
-        "text": "Mom's"
-      },
-      {
-        "label": "D",
-        "text": "Mr. Wilson's"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a key detail.",
-    "points": 1,
-    "explanation": "The passage says Lily 'had an idea' and said, 'Let's set up a lemonade stand!'"
-  },
-  {
-    "id": 4102,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "How much did they charge for one cup of lemonade?",
-    "options": [
-      {
-        "label": "A",
-        "text": "25 cents"
-      },
-      {
-        "label": "B",
-        "text": "50 cents"
-      },
-      {
-        "label": "C",
-        "text": "75 cents"
-      },
-      {
-        "label": "D",
-        "text": "One dollar"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "The sign Jake made said 'Lemonade — 50 cents.'"
-  },
-  {
-    "id": 4103,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "B",
+    "target": "1",
     "dok": 2,
-    "standard": "RL.3.2",
+    "standard": "RL.1",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "What is the main message of this story?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Which detail from the story best supports the idea that the father was patient with his sons?",
     "options": [
       {
         "label": "A",
-        "text": "Lemonade is easy to make"
+        "text": "The father had to tend the field by himself."
       },
       {
         "label": "B",
-        "text": "Summer is boring without plans"
+        "text": "The sons promised to share the treasure equally."
       },
       {
         "label": "C",
-        "text": "Working together can lead to success"
+        "text": "The neighbor asked if the sons were helping."
       },
       {
         "label": "D",
-        "text": "You should always charge more for lemonade"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the central message.",
-    "points": 1,
-    "explanation": "Lily and Jake worked together and had a successful day. Mom said, 'I'm proud of you both for working together.'"
-  },
-  {
-    "id": 4104,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "B",
-    "dok": 2,
-    "standard": "RL.3.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "How did Lily feel when nobody came at first?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Happy"
-      },
-      {
-        "label": "B",
-        "text": "Angry"
-      },
-      {
-        "label": "C",
-        "text": "Discouraged"
-      },
-      {
-        "label": "D",
-        "text": "Proud"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies a character's feelings.",
-    "points": 1,
-    "explanation": "The passage says 'Lily started to feel discouraged' when nobody came at first."
-  },
-  {
-    "id": 4105,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "C",
-    "dok": 1,
-    "standard": "RL.3.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "What does 'discouraged' mean in the story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Very excited"
-      },
-      {
-        "label": "B",
-        "text": "Feeling like giving up"
-      },
-      {
-        "label": "C",
-        "text": "Really hungry"
-      },
-      {
-        "label": "D",
-        "text": "Confused about something"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student determines word meaning from context.",
-    "points": 1,
-    "explanation": "'Discouraged' means feeling like giving up because things aren't going well. Lily felt this way because no one was buying lemonade."
-  },
-  {
-    "id": 4106,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "C",
-    "dok": 1,
-    "standard": "RL.3.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "What happens right AFTER Mr. Wilson buys lemonade?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Lily and Jake go inside"
-      },
-      {
-        "label": "B",
-        "text": "More people stop by to buy lemonade"
-      },
-      {
-        "label": "C",
-        "text": "They run out of lemons"
-      },
-      {
-        "label": "D",
-        "text": "Mom comes outside"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies sequence of events.",
-    "points": 1,
-    "explanation": "After Mr. Wilson bought lemonade, 'more people stopped by.'"
-  },
-  {
-    "id": 4107,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "D",
-    "dok": 1,
-    "standard": "RL.3.6",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "Who is telling this story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Lily"
-      },
-      {
-        "label": "B",
-        "text": "Jake"
-      },
-      {
-        "label": "C",
-        "text": "Mom"
-      },
-      {
-        "label": "D",
-        "text": "A narrator who is not a character"
+        "text": "\"Oh, they would,\" the father answered, \"but they are young.\""
       }
     ],
     "correctAnswer": "D",
-    "rubric": "The student identifies the narrator/point of view.",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "The story uses 'she' and 'he' instead of 'I.' A narrator who is not in the story is telling it."
+    "evidenceStatement": "The student will identify textual evidence to support a given inference based on the text.",
+    "explanation": "The father saying \"they are young\" shows he was patient and willing to wait for them to grow up before expecting help.",
+    "practiceTest": 5
   },
   {
-    "id": 4108,
-    "practiceTest": 5,
+    "id": 4102,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "Who was the first customer?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Mrs. Park"
-      },
-      {
-        "label": "B",
-        "text": "The mail carrier"
-      },
-      {
-        "label": "C",
-        "text": "Mr. Wilson"
-      },
-      {
-        "label": "D",
-        "text": "Three kids from the street"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls who the first customer was.",
-    "points": 1,
-    "explanation": "Mr. Wilson was the first person to buy lemonade. He bought two cups!"
-  },
-  {
-    "id": 4109,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "text-input",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "How much money did Lily and Jake make in all?",
-    "correctAnswer": "eight dollars",
-    "rubric": "The student identifies the total earnings. Accept: $8, eight dollars, 8 dollars, 8.",
-    "points": 1,
-    "explanation": "The passage says 'They had made eight dollars.'"
-  },
-  {
-    "id": 4110,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "What did Lily want to sell the next day in addition to lemonade?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Juice"
-      },
-      {
-        "label": "B",
-        "text": "Cookies"
-      },
-      {
-        "label": "C",
-        "text": "Sandwiches"
-      },
-      {
-        "label": "D",
-        "text": "Popcorn"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a detail from the end of the story.",
-    "points": 1,
-    "explanation": "Lily said, 'But tomorrow, let's make cookies too.'"
-  },
-  {
-    "id": 4111,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "L",
-    "target": "E",
-    "dok": 1,
-    "standard": "L.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "Which sentence uses the correct verb?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Jake maked a sign."
-      },
-      {
-        "label": "B",
-        "text": "Jake make a sign."
-      },
-      {
-        "label": "C",
-        "text": "Jake made a sign."
-      },
-      {
-        "label": "D",
-        "text": "Jake making a sign."
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student uses correct past tense.",
-    "points": 1,
-    "explanation": "'Made' is the correct past tense of 'make.' 'Maked' is not a real word."
-  },
-  {
-    "id": 4112,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "L",
-    "target": "E",
-    "dok": 1,
-    "standard": "L.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "Which sentence uses quotation marks correctly?",
-    "options": [
-      {
-        "label": "A",
-        "text": "I'm bored, said Jake."
-      },
-      {
-        "label": "B",
-        "text": "\"I'm bored,\" said Jake."
-      },
-      {
-        "label": "C",
-        "text": "I'm \"bored\" said Jake."
-      },
-      {
-        "label": "D",
-        "text": "I'm bored \"said Jake.\""
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies correct use of quotation marks.",
-    "points": 1,
-    "explanation": "Quotation marks go around the words someone speaks. The comma goes inside the quotation marks."
-  },
-  {
-    "id": 4113,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "C",
-    "dok": 1,
-    "standard": "RL.3.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "What does 'delicious' mean?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Very sour"
-      },
-      {
-        "label": "B",
-        "text": "Tastes very good"
-      },
-      {
-        "label": "C",
-        "text": "Very cold"
-      },
-      {
-        "label": "D",
-        "text": "Hard to make"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student defines a vocabulary word.",
-    "points": 1,
-    "explanation": "'Delicious' means something tastes very good. Mr. Wilson said the lemonade was delicious."
-  },
-  {
-    "id": 4114,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "B",
+    "target": "3",
     "dok": 2,
-    "standard": "RL.3.2",
-    "type": "short-answer",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "What did Lily learn from the lemonade stand experience? Write 1-2 sentences.",
-    "correctAnswer": "Lily learned that working together with her brother is fun and rewarding. She also learned that you should not give up even when things are slow at first.",
-    "rubric": "The student states a lesson with evidence. Accept: teamwork, patience, not giving up, working together. 2 points for a clear answer with evidence; 1 point for partial.",
-    "points": 2,
-    "explanation": "Lily learned that working together can lead to success, and that you shouldn't give up too quickly. Things got better after Mr. Wilson came!"
-  },
-  {
-    "id": 4115,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "L",
-    "target": "E",
-    "dok": 1,
-    "standard": "L.3.4",
+    "standard": "RL.4",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "In the sentence 'Jake jumped up,' the word 'jumped' shows that Jake—",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What does the word \"tended\" mean as used in the passage?",
     "options": [
       {
         "label": "A",
-        "text": "Moved slowly"
+        "text": "Sold"
       },
       {
         "label": "B",
-        "text": "Got up quickly and excitedly"
+        "text": "Planted"
       },
       {
         "label": "C",
-        "text": "Fell down"
+        "text": "Watched over"
       },
       {
         "label": "D",
-        "text": "Went to sleep"
+        "text": "Took care of"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student interprets word meaning in context.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "'Jumped up' shows Jake got up fast because he was excited about the lemonade stand idea."
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context.",
+    "explanation": "The passage states that the father worked the field alone while the boys stayed home, showing they were lazy. They also made excuses to go home early.",
+    "practiceTest": 5
   },
   {
-    "id": 4116,
-    "practiceTest": 5,
+    "id": 4103,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
-    "domain": "RL",
-    "target": "D",
-    "dok": 2,
-    "standard": "RL.3.7",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "If you drew a picture of the lemonade stand, which detail from the story should you include?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A computer on the table"
-      },
-      {
-        "label": "B",
-        "text": "A cardboard sign with writing"
-      },
-      {
-        "label": "C",
-        "text": "A tent over the stand"
-      },
-      {
-        "label": "D",
-        "text": "A cash register"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student uses textual evidence to inform illustration.",
-    "points": 1,
-    "explanation": "Jake made a sign 'with markers on a big piece of cardboard.' That's a detail from the story you should draw!"
-  },
-  {
-    "id": 4117,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "domain": "RL",
-    "target": "A",
-    "dok": 1,
-    "standard": "RL.3.1",
-    "type": "multi-select",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "What TWO things did Mom give Lily and Jake to make lemonade? Select two answers.",
-    "options": [
-      {
-        "label": "A",
-        "text": "Oranges"
-      },
-      {
-        "label": "B",
-        "text": "Lemons"
-      },
-      {
-        "label": "C",
-        "text": "Honey"
-      },
-      {
-        "label": "D",
-        "text": "Sugar"
-      }
-    ],
-    "correctAnswer": [
-      "B",
-      "D"
-    ],
-    "rubric": "The student identifies two key details about the ingredients.",
-    "points": 1,
-    "explanation": "Mom gave them 'six lemons, a bag of sugar, and a big pitcher.' The ingredients were lemons and sugar."
-  },
-  {
-    "id": 4118,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RL",
-    "target": "B",
-    "dok": 2,
-    "standard": "RL.3.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "Why did Lily and Jake disagree about the lemonade?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Jake wanted to add ice but Lily didn't"
-      },
-      {
-        "label": "B",
-        "text": "They couldn't agree on how much sugar to add"
-      },
-      {
-        "label": "C",
-        "text": "Jake wanted to sell it for more money"
-      },
-      {
-        "label": "D",
-        "text": "Lily didn't want to share the lemonade"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a conflict in the story.",
-    "points": 1,
-    "explanation": "Jake said 'It needs more sugar,' but Lily said 'No, it's perfect.' They disagreed about the sugar amount."
-  },
-  {
-    "id": 4119,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "domain": "L",
-    "target": "E",
-    "dok": 1,
-    "standard": "L.3.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it's perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade — 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by with his dog.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"",
-    "passageTitle": "The Lemonade Stand",
-    "passageAuthor": "Rosa Martinez",
-    "questionText": "Which word is the OPPOSITE of 'bored'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Tired"
-      },
-      {
-        "label": "B",
-        "text": "Excited"
-      },
-      {
-        "label": "C",
-        "text": "Sad"
-      },
-      {
-        "label": "D",
-        "text": "Quiet"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies an antonym.",
-    "points": 1,
-    "explanation": "The opposite of 'bored' is 'excited.' Words with opposite meanings are called antonyms."
-  },
-  {
-    "id": 4120,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 1,
-    "standard": "RI.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
-    "passageTitle": "Amazing Animal Homes",
-    "questionText": "What do beavers use to build their lodges?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Leaves and feathers"
-      },
-      {
-        "label": "B",
-        "text": "Sticks, mud, and rocks"
-      },
-      {
-        "label": "C",
-        "text": "Grass and flowers"
-      },
-      {
-        "label": "D",
-        "text": "Sand and shells"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a key detail.",
-    "points": 1,
-    "explanation": "The passage says beavers 'pile up sticks, mud, and rocks to build a dome shape in the water.'"
-  },
-  {
-    "id": 4121,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 1,
-    "standard": "RI.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
-    "passageTitle": "Amazing Animal Homes",
-    "questionText": "What is the main idea of this passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Beavers are the best builders in nature"
-      },
-      {
-        "label": "B",
-        "text": "All animals live in trees"
-      },
-      {
-        "label": "C",
-        "text": "Animals build many different kinds of homes to stay safe"
-      },
-      {
-        "label": "D",
-        "text": "People should build homes for animals"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the main idea.",
-    "points": 1,
-    "explanation": "The passage talks about many animal homes — nests, lodges, burrows, and hives. The main idea is that animals build different homes to stay safe."
-  },
-  {
-    "id": 4122,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "A",
-    "dok": 1,
-    "standard": "RI.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
-    "passageTitle": "Amazing Animal Homes",
-    "questionText": "Which bird builds the smallest nest?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Eagle"
-      },
-      {
-        "label": "B",
-        "text": "Robin"
-      },
-      {
-        "label": "C",
-        "text": "Hummingbird"
-      },
-      {
-        "label": "D",
-        "text": "Crow"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student recalls a specific detail.",
-    "points": 1,
-    "explanation": "The passage says 'Hummingbirds make the smallest nests. Their nests are only about one inch across.'"
-  },
-  {
-    "id": 4123,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "B",
-    "dok": 2,
-    "standard": "RI.3.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
-    "passageTitle": "Amazing Animal Homes",
-    "questionText": "How does an underwater entrance help a beaver lodge?",
-    "options": [
-      {
-        "label": "A",
-        "text": "It keeps the water clean"
-      },
-      {
-        "label": "B",
-        "text": "It keeps predators out"
-      },
-      {
-        "label": "C",
-        "text": "It makes the lodge bigger"
-      },
-      {
-        "label": "D",
-        "text": "It lets in sunlight"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a cause-and-effect relationship.",
-    "points": 1,
-    "explanation": "The passage says 'The entrance to a beaver lodge is underwater, which keeps predators out.'"
-  },
-  {
-    "id": 4124,
-    "practiceTest": 5,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "domain": "RI",
-    "target": "C",
-    "dok": 1,
-    "standard": "RI.3.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators. Let's learn about some amazing animal homes.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Some nests can be six feet wide! Hummingbirds make the smallest nests. Their nests are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which keeps predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with hundreds of burrows connected together. Groundhogs dig deep burrows where they sleep all winter long.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax that comes from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees. A single hive can hold up to 60,000 bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes are important because they protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. We can help by protecting forests and wild areas where animals live.",
-    "passageTitle": "Amazing Animal Homes",
-    "questionText": "What is a 'burrow'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A nest in a tree"
-      },
-      {
-        "label": "B",
-        "text": "A home dug underground"
-      },
-      {
-        "label": "C",
-        "text": "A home in the water"
-      },
-      {
-        "label": "D",
-        "text": "A web made of silk"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student defines a vocabulary word in context.",
-    "points": 1,
-    "explanation": "The passage says 'Many animals live underground in burrows.' A burrow is a home dug underground."
-  },
-  {
-    "id": 4125,
-    "grade": 3,
-    "practiceTest": 5,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
-    "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Building the Lemonade Stand**\n*presentation transcript for classroom use*\n\nSpeaker 1: Our class report explains how Lily and Jake prepared their lemonade stand.\n\nSpeaker 2: First, they gathered supplies such as cups, lemons, markers, and cardboard for the sign.\n\nSpeaker 1: Next, they decided how to arrange the table so customers could read the sign, pay safely, and pick up drinks easily.\n\nSpeaker 2: They also practiced working together. One person poured lemonade while the other handled money and greeted customers.\n\nSpeaker 1: The report shows that planning ahead helped the stand run smoothly on the big day.",
-    "passageTitle": "Building the Lemonade Stand",
-    "questionText": "What is the main idea of the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Running a lemonade stand works better when people plan and share jobs"
-      },
-      {
-        "label": "B",
-        "text": "Lemons are difficult to cut evenly"
-      },
-      {
-        "label": "C",
-        "text": "Cardboard signs should always be blue"
-      },
-      {
-        "label": "D",
-        "text": "Customers only care about the price of drinks"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the main idea of the presentation.",
-    "points": 1,
-    "explanation": "The speakers focus on gathering supplies, arranging the table, and sharing jobs so the stand runs well."
-  },
-  {
-    "id": 4126,
-    "grade": 3,
-    "practiceTest": 5,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
+    "target": "4",
     "dok": 3,
-    "standard": "SL.3.2",
+    "standard": "RL.3",
     "type": "two-part",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Building the Lemonade Stand**\n*presentation transcript for classroom use*\n\nSpeaker 1: Our class report explains how Lily and Jake prepared their lemonade stand.\n\nSpeaker 2: First, they gathered supplies such as cups, lemons, markers, and cardboard for the sign.\n\nSpeaker 1: Next, they decided how to arrange the table so customers could read the sign, pay safely, and pick up drinks easily.\n\nSpeaker 2: They also practiced working together. One person poured lemonade while the other handled money and greeted customers.\n\nSpeaker 1: The report shows that planning ahead helped the stand run smoothly on the big day.",
-    "passageTitle": "Building the Lemonade Stand",
-    "questionText": "Answer both parts of the question.",
-    "partAPrompt": "Part A: Why do the speakers mention different jobs at the stand?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Part A: What is the main lesson the father wanted his sons to learn?\n\nPart B: Which detail from the story best supports your answer to Part A?",
+    "partAPrompt": "What is the main lesson the father wanted his sons to learn?",
     "partAOptions": [
       {
         "label": "A",
-        "text": "to show that teamwork helped the stand run smoothly"
+        "text": "That treasure is always buried underground"
       },
       {
         "label": "B",
-        "text": "to prove that signs are more important than lemonade"
+        "text": "That brothers should always share equally"
       },
       {
         "label": "C",
-        "text": "to explain why the stand closed early"
+        "text": "That neighbors are important to have"
       },
       {
         "label": "D",
-        "text": "to compare beavers and birds"
+        "text": "That hard work is its own reward"
       }
     ],
-    "partBPrompt": "Part B: Which detail best supports your answer?",
+    "partBPrompt": "Which detail from the story best supports your answer to Part A?",
     "partBOptions": [
       {
         "label": "A",
-        "text": "They gathered supplies such as cups, lemons, markers, and cardboard."
+        "text": "The neighbor asked if the sons were helping."
       },
       {
         "label": "B",
-        "text": "One person poured lemonade while the other handled money and greeted customers."
+        "text": "The sons planted rice, tended the field, and earned money from the harvest."
       },
       {
         "label": "C",
-        "text": "They practiced working together."
+        "text": "The father said the boys were still young."
       },
       {
         "label": "D",
-        "text": "The report explains how Lily and Jake prepared their stand."
+        "text": "The sons promised to share the treasure equally."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option for Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will form a conclusion about a literary text and identify details within the text that support that conclusion.",
+    "explanation": "The father told his sons about treasure to motivate them to dig up the field. His real plan was to get them to work the land so it would be ready for planting.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4104,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "1",
+    "dok": 1,
+    "standard": "RL.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What did the father mean when he told his sons there was \"treasure buried in the field\"?",
+    "options": [
+      {
+        "label": "A",
+        "text": "There were gold coins buried under the soil."
+      },
+      {
+        "label": "B",
+        "text": "The field had valuable minerals in the ground."
+      },
+      {
+        "label": "C",
+        "text": "The reward of hard work would come from farming the field."
+      },
+      {
+        "label": "D",
+        "text": "A neighbor had hidden something in the field."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "explanation": "\"Astonished\" means very surprised. The neighbor was shocked to see the lazy sons working so hard.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4105,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "6",
+    "dok": 3,
+    "standard": "RL.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Select TWO details that show how the sons changed during the story.",
+    "options": [
+      {
+        "label": "A",
+        "text": "They dug the entire field looking for treasure."
+      },
+      {
+        "label": "B",
+        "text": "They asked their father for the secret."
+      },
+      {
+        "label": "C",
+        "text": "They made excuses to go home early."
+      },
+      {
+        "label": "D",
+        "text": "They talked to the neighbor about farming."
+      },
+      {
+        "label": "E",
+        "text": "They tended the field \"just as Father did.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the two correct options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text in a certain manner and the impact of that structure on meaning.",
+    "explanation": "The story's main message is that hard work itself is the reward—the 'treasure' was the productive farmland they created through their labor.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4106,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "5",
+    "dok": 3,
+    "standard": "RL.3",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "How did the father's trick affect the sons?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It made them angry at their father."
+      },
+      {
+        "label": "B",
+        "text": "It made them want to find real treasure."
+      },
+      {
+        "label": "C",
+        "text": "It taught them the value of hard work through their own experience."
+      },
+      {
+        "label": "D",
+        "text": "It made them leave the farm."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze the relationship among character actions/interactions within one text.",
+    "explanation": "Look at the story structure: the sons went from lazy to hardworking. The father's secret about \"treasure\" was actually a lesson about the value of work.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4107,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "6",
+    "dok": 2,
+    "standard": "RL.5",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Why did the author include the neighbor character in the story?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To show that the neighbor wanted to help farm the field"
+      },
+      {
+        "label": "B",
+        "text": "To show that the father was a bad parent"
+      },
+      {
+        "label": "C",
+        "text": "To show how much time passed and that others noticed the sons were not helping"
+      },
+      {
+        "label": "D",
+        "text": "To explain how farming works in Vietnam"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text.",
+    "explanation": "Sap looks like water but tastes sweet because it contains sugar that the tree made during the previous summer.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4108,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "7",
+    "dok": 2,
+    "standard": "RL.4",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Read this sentence from the story: \"The brothers moped around with their heads down.\" What does the word \"moped\" tell the reader about the brothers?",
+    "options": [
+      {
+        "label": "A",
+        "text": "They were excited about planting."
+      },
+      {
+        "label": "B",
+        "text": "They were sad and disappointed."
+      },
+      {
+        "label": "C",
+        "text": "They were tired from digging."
+      },
+      {
+        "label": "D",
+        "text": "They were angry at each other."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context.",
+    "explanation": "The passage states that sugar is made in the leaves during summer and stored in the tree during winter.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4109,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "8",
+    "dok": 2,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "According to the passage, why do the Coleman brothers collect sap in the spring?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Because the trees only grow in spring"
+      },
+      {
+        "label": "B",
+        "text": "Because they need water for their farm"
+      },
+      {
+        "label": "C",
+        "text": "Because sap flows in the spring when frost melts inside the trees"
+      },
+      {
+        "label": "D",
+        "text": "Because the University of Vermont told them to"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "explanation": "Legend explains something through a story (Woksis), while the science section uses research and experiments to explain how sap actually flows.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4110,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "11",
+    "dok": 3,
+    "standard": "RI.3",
+    "type": "two-part",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "Click on the sentence that gives the best conclusion about sugar-maple trees.",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "Sugar maple trees grow best in cold weather."
+      },
+      {
+        "label": "B",
+        "text": "Most sugar maple trees are about 50 feet tall."
+      },
+      {
+        "label": "C",
+        "text": "The sap in sugar maple trees begins flowing in early spring."
+      },
+      {
+        "label": "D",
+        "text": "Vermont has the best weather for growing sugar maple trees."
+      }
+    ],
+    "partBPrompt": "Click on the sentence from the passage that best supports your answer in Part A. Choose one answer.",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "A 50-foot-high sugar maple has nearly two hundred thousand leaves."
+      },
+      {
+        "label": "B",
+        "text": "The Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont."
+      },
+      {
+        "label": "C",
+        "text": "Scientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true."
+      },
+      {
+        "label": "D",
+        "text": "Every spring, the Colemans tap holes into the sugar-maple trees, then hang a bucket under each hole to catch the sap."
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will form a conclusion about an informational text and identify details that support it.",
+    "explanation": "Part A: The best conclusion is that sap in sugar maple trees begins flowing in early spring. Part B: The sentence about the Colemans tapping trees every spring best supports that conclusion.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4111,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "What is the author's main purpose for writing this passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To persuade readers to buy maple syrup"
+      },
+      {
+        "label": "B",
+        "text": "To tell an entertaining story about trees"
+      },
+      {
+        "label": "C",
+        "text": "To inform readers about how maple syrup is made and how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To compare different types of trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish the author's point of view within a text.",
+    "explanation": "A bar graph uses rectangular bars to show data, and a \"gash\" is a deep cut (like the tomahawk cut in the tree).",
+    "practiceTest": 5
+  },
+  {
+    "id": 4112,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Why did the author include the legend of Woksis in the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To prove that maple syrup is healthy"
+      },
+      {
+        "label": "B",
+        "text": "To compare modern and ancient methods of making syrup"
+      },
+      {
+        "label": "C",
+        "text": "To show that people have been making maple syrup for a very long time"
+      },
+      {
+        "label": "D",
+        "text": "To explain why the Iroquois planted maple trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze the interaction between elements of a text within a text.",
+    "explanation": "The Colemans continue maple sugaring because it is a family tradition passed down through generations.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4113,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "13",
+    "dok": 2,
+    "standard": "RI.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Select TWO reasons the author organized the passage with the section \"What Makes Sap Run?\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "To tell a funny story about trees"
+      },
+      {
+        "label": "B",
+        "text": "To make the passage more entertaining"
+      },
+      {
+        "label": "C",
+        "text": "To explain the science behind how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To answer a question readers might have after reading about the Colemans"
+      },
+      {
+        "label": "E",
+        "text": "To compare maple trees to other types of trees"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze why the author structured elements within the texts in a certain manner.",
+    "explanation": "Both the Woksis legend and the Coleman brothers' story show that maple syrup production has been important for a very long time.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4114,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read this sentence: \"sap flow was a 'most mysterious subject.'\" What does the word \"mysterious\" mean?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Easy to understand"
+      },
+      {
+        "label": "B",
+        "text": "Very interesting"
+      },
+      {
+        "label": "C",
+        "text": "Not well known"
+      },
+      {
+        "label": "D",
+        "text": "Hard to explain or understand"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context in an informational text.",
+    "explanation": "\"Mysterious\" means hard to explain or understand. The passage says scientists found sap flow confusing, which matches \"hard to explain.\"",
+    "practiceTest": 5
+  },
+  {
+    "id": 4115,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read the sentence from the passage.\n\nAll these leaves drink in summer sunshine and make sugar.\n\nWhich statement best describes what this sentence means?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Leaves grow larger in the summer."
+      },
+      {
+        "label": "B",
+        "text": "Leaves use sunlight to make sugar."
+      },
+      {
+        "label": "C",
+        "text": "Summer is the best time to collect sugar."
+      },
+      {
+        "label": "D",
+        "text": "Trees with many leaves make more sugar."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context and analyze its use in the text.",
+    "explanation": "The sentence uses figurative language to explain that leaves use sunlight to make sugar, so choice B is the best description.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4116,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1bE",
+    "dok": 2,
+    "standard": "W.3b, W.5",
+    "type": "multi-select",
+    "questionText": "Ellen is writing a story for her class about a day at the beach. She wants to revise her story to use more descriptive words. Read the draft and complete the task that follows.\n\nIt was Ellen's last day of summer vacation. She raced into the garage and announced, \"Dad, we have to go to the beach today! It's our last chance this summer to go swimming and build sandcastles together!\"\n\nDad smiled happily and, together, Ellen and Dad drove 45 minutes to the beach. Once there, they set up their chairs near the water. Dad read and Ellen played.\n\nEllen worked for about an hour on her sandcastle. Then, she noticed that her dad had spent that entire time just reading a book. She felt annoyed. She looked at him.\n\nDad grinned and set his book aside. Together, the two raced into the warm, bubbly waves. They laughed with excitement.\n\nSelect two of the choices that have the best descriptive sentences to replace \"Dad read and Ellen played\" and \"She looked at him.\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "Dad enjoyed relaxing with his new book while Ellen built a sandcastle. / She gave him a look that said, \"I want you to spend time with me.\""
+      },
+      {
+        "label": "B",
+        "text": "Dad helped Ellen build a sandcastle. / She gave him a look that said, \"I'm glad you like your book.\""
+      },
+      {
+        "label": "C",
+        "text": "Dad read a book to Ellen and then they swam. / She looked at the pictures in the book."
+      },
+      {
+        "label": "D",
+        "text": "Dad read for a while and then built a sandcastle. / She looked at the warm, bubbly waves."
+      },
+      {
+        "label": "E",
+        "text": "Dad had a wonderful time reading while Ellen worked on her giant sandcastle. / She gave him a look that said, \"It's time to have some fun, now!\""
+      },
+      {
+        "label": "F",
+        "text": "Dad decided that he did not like his book. / She gave him a look that said, \"You are the best dad.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise narrative text by identifying descriptive details that convey events or experiences.",
+    "explanation": "Choices A and E add vivid details that match the events in the beach story and show Ellen's feelings more clearly.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4117,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "3bE",
+    "dok": 2,
+    "standard": "W.2b, W.5",
+    "type": "multi-select",
+    "questionText": "A student is writing a report for social studies class about the state of Alaska. The student wants to revise the draft to make sure it has enough details. Read this portion of the report and complete the task that follows.\n\nAlaska is a very big state. It is bigger than Texas, California, and Montana put together! Even though it is a big state, only about 730,000 people live there. Alaska has 39 mountain ranges and two rain forests. A lot of different animals live in Alaska. In Barrow, the town located farthest north in the state, the sun doesn't set between May 10 and August 2, but between November 18 and January 23, the sun doesn't rise. Alaska is a very interesting and unusual place.\n\nMy notes on Alaska:\n• Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home.\n• The capital of Alaska is Juneau.\n• There are 70,000 sea otters living in the waters of Alaska.\n• Alaska did not become a state until 1959.\n• The mountains in Alaska have the coldest temperatures in the United States.\n• Alaska is only 55 miles away from Russia.\n\nChoose the two sentences from the student's notes that add more facts to the underlined sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The capital of Alaska is Juneau."
+      },
+      {
+        "label": "B",
+        "text": "Alaska did not become a state until 1959."
+      },
+      {
+        "label": "C",
+        "text": "Alaska is only 55 miles away from Russia."
+      },
+      {
+        "label": "D",
+        "text": "There are 70,000 sea otters living in the waters of Alaska."
+      },
+      {
+        "label": "E",
+        "text": "The mountains in Alaska have the coldest temperatures in the United States."
+      },
+      {
+        "label": "F",
+        "text": "Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise informational or explanatory text by identifying the best use of elaboration techniques such as supporting details.",
+    "explanation": "The underlined sentence is about animals living in Alaska, so the best added facts are the sea-otter detail and the list of animals that live there.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4118,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "6b",
+    "dok": 2,
+    "standard": "W.1d",
+    "type": "multiple-choice",
+    "questionText": "A student is writing an opinion article for her teacher about her favorite field trip. The student wants to revise the draft so that it has a logical conclusion. Read the draft of the opinion article and complete the task that follows.\n\nMy favorite third-grade field trip is the trip to the zoo. There are many reasons that the zoo is the best field trip. First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms. As you can see, the best third-grade trip by far is the zoo field trip. Second, we get to eat lunch at a really great rest area with picnic tables. Also, we get to spend the whole day walking around looking at interesting animals.\n\nClick on the sentence in the draft that is in the wrong place.",
+    "options": [
+      {
+        "label": "A",
+        "text": "My favorite third-grade field trip is the trip to the zoo."
+      },
+      {
+        "label": "B",
+        "text": "There are many reasons that the zoo is the best field trip."
+      },
+      {
+        "label": "C",
+        "text": "First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms."
+      },
+      {
+        "label": "D",
+        "text": "As you can see, the best third-grade trip by far is the zoo field trip."
+      },
+      {
+        "label": "E",
+        "text": "Second, we get to eat lunch at a really great rest area with picnic tables."
+      },
+      {
+        "label": "F",
+        "text": "Also, we get to spend the whole day walking around looking at interesting animals."
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will revise opinion text by identifying improved organizational elements such as organizing.",
+    "explanation": "The conclusion sentence belongs at the end of the opinion piece, so it is the sentence in the wrong place.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4119,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "8",
+    "dok": 2,
+    "standard": "L.3a",
+    "type": "multi-select",
+    "questionText": "A student is writing an opinion paper for her teacher about dogs. Read this paragraph from the paper and the directions that follow.\n\nDogs are described as “people's best friend” because they make people happy. The fur on a dog can be long or short, or curly or straight, but most of the time it is soft. When people pet dogs, it makes them feel happy. There are community groups that bring dogs to nursing homes for the patients. Being able to play with the dogs makes the patients feel good. This is one reason why I think dogs are wonderful animals.\n\nSelect the best two words from the choices to replace the underlined words in the paragraph.",
+    "options": [
+      {
+        "label": "A",
+        "text": "beautiful"
+      },
+      {
+        "label": "B",
+        "text": "fierce"
+      },
+      {
+        "label": "C",
+        "text": "healthier"
+      },
+      {
+        "label": "D",
+        "text": "lucky"
+      },
+      {
+        "label": "E",
+        "text": "polite"
+      },
+      {
+        "label": "F",
+        "text": "relaxed"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will choose the correct words or phrases for audience or purpose.",
+    "explanation": "The underlined words should fit a formal opinion paper. 'healthier' and 'relaxed' make the paragraph clearer and more appropriate for the audience and purpose.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4120,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.2c",
+    "type": "multi-select",
+    "questionText": "Click on two sentences that have mistakes in punctuation.\n\nTim and I sat in the front row at the circus, and the clowns tumbled and danced in front of us. They pretended to throw water on us, but their buckets just had shiny bits of paper. Then, one clown really did spray water on me from a flower on his jacket.",
+    "options": [
+      {
+        "label": "A",
+        "text": "“Oh, he got me! I said to Tim.”"
+      },
+      {
+        "label": "B",
+        "text": "“Yes” he laughed “he tricked you twice!”"
+      },
+      {
+        "label": "C",
+        "text": "After that, the elephants came out. The elephants did tricks like stand on their front legs."
+      },
+      {
+        "label": "D",
+        "text": "“How can those huge animals do that?” I asked Tim."
+      },
+      {
+        "label": "E",
+        "text": "“I don't know, but it's amazing,” Tim answered."
       }
     ],
     "correctAnswer": [
       "A",
       "B"
     ],
-    "rubric": "The student identifies the reason for the detail and the best evidence.",
+    "rubric": "The student selects the correct two options.",
     "points": 1,
-    "explanation": "The different jobs show how teamwork made the stand work better."
+    "evidenceStatement": "The student will apply or edit the use of commas and quotation marks in dialogue.",
+    "explanation": "The first two dialogue sentences have punctuation mistakes. They need the quotation marks and commas to be placed correctly.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4121,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.1e",
+    "type": "multi-select",
+    "questionText": "Click on the sentences that use the incorrect verb tenses.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Standing on the stage, I could feel my heart beating in my chest."
+      },
+      {
+        "label": "B",
+        "text": "I sings my song on the stage with my friends."
+      },
+      {
+        "label": "C",
+        "text": "The audience clapped loudly."
+      },
+      {
+        "label": "D",
+        "text": "I take a bow and walked off the stage with a smile on my face."
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will apply or edit the use of simple verb tenses in a text.",
+    "explanation": "The sentences 'I sings my song on the stage with my friends.' and 'I take a bow and walked off the stage with a smile on my face.' use incorrect verb tenses.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4122,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 3,
+    "standard": "SL.2",
+    "type": "two-part",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "What is the most likely reason the author made the presentation?",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "to explain how a hot air balloon works"
+      },
+      {
+        "label": "B",
+        "text": "to show the advantages of being small"
+      },
+      {
+        "label": "C",
+        "text": "to tell how Americans feel about new experiences"
+      },
+      {
+        "label": "D",
+        "text": "to describe an important event in American history"
+      }
+    ],
+    "partBPrompt": "Which sentence from the presentation best supports your answer in part A?",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "\"Smoky hot air swelled the balloon and sent it up.\""
+      },
+      {
+        "label": "B",
+        "text": "\"He was the first American to develop a method to lift a balloon using hot air.\""
+      },
+      {
+        "label": "C",
+        "text": "\"The crowd yelled and clapped as Carnes sent the balloon up, time and again.\""
+      },
+      {
+        "label": "D",
+        "text": "\"He was the first American to see such views.\""
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a speaker's purpose and identify details that support it.",
+    "explanation": "Part A: The presentation is mainly describing an important event in American history. Part B: The sentence about Peter Carnes being the first American to develop a method to lift a balloon using hot air best supports that purpose.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4123,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Which question can a listener answer after hearing the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "In what year did the balloon ride take place?"
+      },
+      {
+        "label": "B",
+        "text": "What happened during the first hot air balloon ride?"
+      },
+      {
+        "label": "C",
+        "text": "How did Edward feel after he took his ride in the balloon?"
+      },
+      {
+        "label": "D",
+        "text": "How did Edward become the first American to ride in a balloon?"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify information that can be determined from an oral presentation.",
+    "explanation": "The presentation explains how Edward became the first American to ride in a balloon, so choice D is the question a listener can answer.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4124,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Complete the chart to show which events were planned.\n\nClick in the boxes next to the events that match if they were planned or unplanned.",
+    "gridRows": [
+      "Edward Warren Jr. rode in a balloon.",
+      "The balloon filled with smoke from a fire.",
+      "A crowd in Baltimore saw how a balloon could fly.",
+      "Peter Carnes used a stove to make the balloon rise."
+    ],
+    "gridColumns": [
+      "Planned",
+      "Unplanned"
+    ],
+    "correctAnswer": [
+      "0:1",
+      "1:0",
+      "2:0",
+      "3:0"
+    ],
+    "rubric": "The student correctly identifies which events were planned and which were unplanned.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish among ideas and events presented orally.",
+    "explanation": "The only unplanned event is Edward Warren Jr. riding in the balloon. The smoke-filled balloon, the Baltimore crowd, and Carnes using a stove were all planned parts of the demonstration.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4125,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Which conclusion is supported by the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Americans eat pizza every day."
+      },
+      {
+        "label": "B",
+        "text": "Pizza is usually eaten at lunchtime."
+      },
+      {
+        "label": "C",
+        "text": "Almost anything can go on a pizza."
+      },
+      {
+        "label": "D",
+        "text": "Lobster pizza is most popular in Maine."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a supported conclusion from an oral presentation.",
+    "explanation": "The presentation shows that pizza can be made in many different ways, so the supported conclusion is that almost anything can go on a pizza.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4126,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Complete the chart to show which countries are known for which pizza toppings.\n\nClick in the boxes next to the countries that match the toppings.",
+    "gridRows": [
+      "United States",
+      "India",
+      "Japan"
+    ],
+    "gridColumns": [
+      "eel",
+      "pepperoni",
+      "ginger"
+    ],
+    "correctAnswer": [
+      "2:0",
+      "0:1",
+      "1:2"
+    ],
+    "rubric": "The student correctly matches each topping to the country from the presentation.",
+    "points": 1,
+    "evidenceStatement": "The student will organize information presented orally into a chart.",
+    "explanation": "The chart matches Japan with eel, the United States with pepperoni, and India with ginger based on the presentation's examples.",
+    "practiceTest": 5
   },
   {
     "id": 4127,
-    "grade": 3,
-    "practiceTest": 5,
-    "subject": "ela",
     "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
     "claim": 3,
-    "target": "19",
-    "dok": 3,
-    "standard": "SL.3.2",
-    "type": "grid-match",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Homes Animals Build**\n*presentation transcript for classroom use*\n\nSpeaker 1: Animals build homes for important reasons.\n\nSpeaker 2: A robin makes a nest from grass and mud to hold eggs safely. A beaver builds a lodge from sticks and mud to create shelter near water.\n\nSpeaker 1: Prairie dogs dig connected tunnels underground, and bees build hives with wax cells.\n\nSpeaker 2: Each home is built from materials the animal can find nearby. The shape of the home helps meet the animal's needs.\n\nSpeaker 1: Even though the homes are different, each one shows careful building for protection and daily life.",
-    "passageTitle": "Homes Animals Build",
-    "questionText": "Complete the chart to show which home each animal builds.",
-    "gridRows": [
-      "Robin",
-      "Beaver",
-      "Prairie dog",
-      "Bee"
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.3",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "What is the most likely reason the author made the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "to suggest another way of looking at pizza"
+      },
+      {
+        "label": "B",
+        "text": "to change what people think is good pizza"
+      },
+      {
+        "label": "C",
+        "text": "to show why pepperoni pizza is the best kind"
+      },
+      {
+        "label": "D",
+        "text": "to explain why pizza is different in other places"
+      }
     ],
-    "gridColumns": [
-      "Nest",
-      "Lodge",
-      "Tunnel",
-      "Hive"
-    ],
-    "correctAnswer": [
-      "0:0",
-      "1:1",
-      "2:2",
-      "3:3"
-    ],
-    "rubric": "The student matches each animal to its home.",
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "Robins build nests, beavers build lodges, prairie dogs dig tunnels, and bees build hives."
+    "evidenceStatement": "The student will determine a speaker's likely purpose for a presentation.",
+    "explanation": "The speaker's purpose is to suggest another way of looking at pizza by showing unusual toppings from different places.",
+    "practiceTest": 5
   },
   {
     "id": 4128,
-    "grade": 3,
-    "practiceTest": 5,
-    "subject": "ela",
     "testType": "cat",
-    "claim": 3,
-    "target": "19",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
     "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Homes Animals Build**\n*presentation transcript for classroom use*\n\nSpeaker 1: Animals build homes for important reasons.\n\nSpeaker 2: A robin makes a nest from grass and mud to hold eggs safely. A beaver builds a lodge from sticks and mud to create shelter near water.\n\nSpeaker 1: Prairie dogs dig connected tunnels underground, and bees build hives with wax cells.\n\nSpeaker 2: Each home is built from materials the animal can find nearby. The shape of the home helps meet the animal's needs.\n\nSpeaker 1: Even though the homes are different, each one shows careful building for protection and daily life.",
-    "passageTitle": "Homes Animals Build",
-    "questionText": "Which idea is explained in the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Animals build homes that fit their needs and materials"
-      },
-      {
-        "label": "B",
-        "text": "All animal homes are made from wax"
-      },
-      {
-        "label": "C",
-        "text": "Birds and bees build the same kind of home"
-      },
-      {
-        "label": "D",
-        "text": "Only water animals build shelters"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a main idea from the presentation.",
-    "points": 1,
-    "explanation": "The speakers explain that different animals use nearby materials and shapes that meet their needs."
-  },
-  {
-    "id": 4129,
-    "grade": 3,
-    "practiceTest": 5,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 4,
-    "target": "20",
-    "dok": 3,
-    "standard": "W.3.8",
+    "standard": "W.8",
     "type": "multi-select",
-    "questionText": "A student is researching how people and animals build useful things. Which two sources would be most helpful?",
+    "questionText": "A student is writing a research report about the human eye. Read the sentences from her report and the directions that follow.\n\nOur eyes are wonderful body parts. They help us see the beauty of the world. In the center of the eye is a black spot. Have you ever wondered why that spot gets bigger and smaller?\n\nChoose two of the sources that would most likely give the student more information about the ideas she has written.",
     "options": [
       {
         "label": "A",
-        "text": "A guide about planning a small stand or booth"
+        "text": "www.eye.color.com, a website that tells about the colors of people's eyes"
       },
       {
         "label": "B",
-        "text": "A poster of favorite summer drinks"
+        "text": "www.eyequestion.com, a website that explains the job of each part of the eye"
       },
       {
         "label": "C",
-        "text": "A nonfiction article about animal homes and shelters"
+        "text": "Eyes and How They Work, a book that tells about the way that the eye parts work"
       },
       {
         "label": "D",
-        "text": "A menu from a restaurant"
+        "text": "www.eye.food.com, a website that tells what we should eat to help our eyes stay healthy"
       },
       {
         "label": "E",
-        "text": "A comic about a talking lemon"
+        "text": "My Job as an Eye Doctor, a book that tells about being a doctor who takes care of people's eyes"
+      },
+      {
+        "label": "F",
+        "text": "You Can Find It, a children's magazine that has many puzzles and games where you look for the hidden things"
       }
     ],
     "correctAnswer": [
-      "A",
+      "B",
       "C"
     ],
-    "rubric": "The student selects the strongest research sources.",
+    "rubric": "The student selects the two sources that best support the student's research focus.",
     "points": 1,
-    "explanation": "The guide and the nonfiction article both give useful facts about building and shelter."
+    "evidenceStatement": "The student will evaluate sources for relevance to a research topic.",
+    "explanation": "The best sources are the website explaining the job of each eye part and the book about how the eye parts work, because both directly match the student's questions about what the eye does.",
+    "practiceTest": 5
   },
   {
-    "id": 4130,
-    "grade": 3,
-    "practiceTest": 5,
-    "subject": "ela",
+    "id": 4129,
     "testType": "cat",
-    "claim": 4,
-    "target": "21",
-    "dok": 3,
-    "standard": "RI.3.9",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "8",
+    "dok": 2,
+    "standard": "W.8",
     "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Building the Lemonade Stand**\n*presentation transcript for classroom use*\n\nSpeaker 1: Our class report explains how Lily and Jake prepared their lemonade stand.\n\nSpeaker 2: First, they gathered supplies such as cups, lemons, markers, and cardboard for the sign.\n\nSpeaker 1: Next, they decided how to arrange the table so customers could read the sign, pay safely, and pick up drinks easily.\n\nSpeaker 2: They also practiced working together. One person poured lemonade while the other handled money and greeted customers.\n\nSpeaker 1: The report shows that planning ahead helped the stand run smoothly on the big day.\n\n---\n\nListen to the presentation. Then answer the questions.\n\n**Homes Animals Build**\n*presentation transcript for classroom use*\n\nSpeaker 1: Animals build homes for important reasons.\n\nSpeaker 2: A robin makes a nest from grass and mud to hold eggs safely. A beaver builds a lodge from sticks and mud to create shelter near water.\n\nSpeaker 1: Prairie dogs dig connected tunnels underground, and bees build hives with wax cells.\n\nSpeaker 2: Each home is built from materials the animal can find nearby. The shape of the home helps meet the animal's needs.\n\nSpeaker 1: Even though the homes are different, each one shows careful building for protection and daily life.",
-    "passageTitle": "The Lemonade Stand / Amazing Animal Homes",
-    "questionText": "Which idea is supported by both texts?",
+    "questionText": "A student is writing a report about red foxes. She is looking for information about the body of the red fox. Which sentence has information that the student can use?",
     "options": [
       {
         "label": "A",
-        "text": "Building something useful takes planning and the right materials"
+        "text": "There are over twenty different kinds of foxes."
       },
       {
         "label": "B",
-        "text": "Only humans can work together on a project"
+        "text": "Red foxes can live in hot deserts and snowy forests."
       },
       {
         "label": "C",
-        "text": "All homes should be built above ground"
+        "text": "The red fox wraps its fluffy tail around itself like a blanket."
       },
       {
         "label": "D",
-        "text": "A stand and a hive are exactly the same"
+        "text": "Red foxes are often clever characters in children's stories."
       }
     ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a shared idea across the two texts.",
+    "correctAnswer": "C",
+    "rubric": "The student selects the sentence that gives the relevant body detail.",
     "points": 1,
-    "explanation": "Both texts show planning and materials helping to build something useful."
+    "evidenceStatement": "The student will identify relevant source information for research.",
+    "explanation": "The sentence about the red fox wrapping its fluffy tail around itself gives information about the fox's body, which is what the student needs.",
+    "practiceTest": 5
+  },
+  {
+    "id": 4130,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
+    "dok": 2,
+    "standard": "W.8",
+    "type": "multiple-choice",
+    "questionText": "A student is writing a research report about different kinds of fruit. He wrote an opinion in the report. Read the sentences from the student's report and the directions that follow.\n\nMany Kinds of Fruit\n\nA fruit is the part of the plant that has the plant's seeds. There are many kinds of fruits. Some that are popular with kids are apples, bananas, grapes, oranges, and strawberries. Sometimes it is confusing to tell if a food is a fruit.\n\nThe student found another source about different kinds of fruit. Which sentence best supports the student's opinion?",
+    "options": [
+      {
+        "label": "A",
+        "text": "For example, it is hard to tell what some foods are when they are cut up in pieces."
+      },
+      {
+        "label": "B",
+        "text": "For example, a tomato is not sweet, but it is a fruit because it has the seeds."
+      },
+      {
+        "label": "C",
+        "text": "For example, some kids don't like some of the fruits on that list."
+      },
+      {
+        "label": "D",
+        "text": "For example, fruits can be many different shapes and colors."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the sentence that best supports the opinion in the report.",
+    "points": 1,
+    "evidenceStatement": "The student will identify evidence that supports an opinion in a research report.",
+    "explanation": "The student's opinion is that it can be confusing to tell whether some foods are fruits. The tomato example supports that opinion because tomatoes are fruits even though many people do not think of them that way.",
+    "practiceTest": 5
   },
   {
     "id": 4150,

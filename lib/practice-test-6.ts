@@ -3,79 +3,276 @@ import type { Question } from "./questions";
 export const practiceTest6Questions: Question[] = [
   {
     "id": 5001,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "A",
+    "target": "D",
     "dok": 2,
-    "standard": "3.OA.A.1",
+    "standard": "3.OA.D.8",
     "type": "text-input",
-    "questionText": "A school buys 7 boxes of markers. Each box has 8 markers. How many markers did the school buy?",
-    "correctAnswer": "56",
-    "rubric": "The student enters the correct product.",
+    "questionText": "Maria baked 76 cookies. She gave 24 cookies to her friends. How many cookies does Maria have now?",
+    "correctAnswer": "52",
+    "rubric": "The student enters the correct number of cookies.",
     "points": 1,
-    "explanation": "Multiply the number of boxes by the markers in each box: 7 × 8 = 56 markers."
+    "explanation": "To find how many cookies Maria has left, subtract: 76 − 24 = 52 cookies.",
+    "practiceTest": 6
   },
   {
     "id": 5002,
-    "practiceTest": 6,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NBT",
+    "target": "E",
+    "dok": 1,
+    "standard": "3.NBT.A.2",
+    "type": "text-input",
+    "questionText": "What is 356 + 453?",
+    "correctAnswer": "809",
+    "rubric": "The student enters the correct number.",
+    "points": 1,
+    "explanation": "Add the ones (6 + 3 = 9), the tens (5 + 5 = 10, carry 1), and the hundreds (3 + 4 + 1 = 8). The sum is 809.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5003,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
     "target": "A",
-    "dok": 2,
+    "dok": 1,
     "standard": "3.OA.A.3",
+    "type": "text-input",
+    "questionText": "Jake has 3 packs of trading cards. Each pack has 5 cards. How many trading cards does Jake have in all?",
+    "correctAnswer": "15",
+    "rubric": "The student enters the correct number of trading cards.",
+    "points": 1,
+    "explanation": "This is a multiplication problem: 3 packs × 5 cards per pack = 15 cards in all.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5004,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B",
     "type": "multiple-choice",
-    "questionText": "There are 45 students going on a trip. They ride in vans that hold 5 students each. How many vans are needed?",
+    "questionText": "A store has 24 apples arranged equally in 4 rows. Which expression can be used to find the number of apples in each row, and why?",
     "options": [
       {
         "label": "A",
-        "text": "8"
+        "text": "4 × 24, because you multiply the number of rows by the total"
       },
       {
         "label": "B",
-        "text": "9"
+        "text": "24 + 4, because you add the total to the number of rows"
       },
       {
         "label": "C",
-        "text": "10"
+        "text": "24 − 4, because you subtract the number of rows from the total"
       },
       {
         "label": "D",
-        "text": "40"
+        "text": "24 ÷ 4, because you divide the total equally among the rows"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student selects the correct quotient.",
+    "correctAnswer": "D",
+    "rubric": "The student identifies the correct expression and reason.",
     "points": 1,
-    "explanation": "Divide 45 by 5. Since 45 ÷ 5 = 9, they need 9 vans."
+    "explanation": "When you divide a total equally among groups, you use division. 24 apples ÷ 4 rows = 6 apples per row.",
+    "practiceTest": 6
   },
   {
-    "id": 5003,
-    "practiceTest": 6,
+    "id": 5005,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "B",
+    "target": "A",
+    "dok": 1,
+    "standard": "3.OA.A.3",
+    "type": "text-input",
+    "questionText": "A fish tank has 2 rows of fish. Each row has 3 fish. How many fish are in the tank?",
+    "correctAnswer": "6",
+    "rubric": "The student enters the correct number of fish.",
+    "points": 1,
+    "explanation": "Multiply the rows by the number in each row: 2 × 3 = 6 fish.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5006,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "G",
+    "dok": 1,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "The clock shows that school starts at 8:15 a.m. Lunch is 3 hours and 45 minutes later. What time is lunch?",
+    "options": [
+      {
+        "label": "A",
+        "text": "11:00 a.m."
+      },
+      {
+        "label": "B",
+        "text": "11:45 a.m."
+      },
+      {
+        "label": "C",
+        "text": "12:15 p.m."
+      },
+      {
+        "label": "D",
+        "text": "12:00 p.m."
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct time.",
+    "points": 1,
+    "explanation": "Start at 8:15 a.m. Add 3 hours to get 11:15 a.m., then add 45 minutes to get 12:00 p.m.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5007,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.NBT.A.2",
+    "type": "multiple-choice",
+    "questionText": "Ms. Adams collected 347 cans. Mr. Baker collected 289 cans. Ms. Clark collected 312 cans. Which teacher collected the most cans?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Ms. Adams"
+      },
+      {
+        "label": "B",
+        "text": "Mr. Baker"
+      },
+      {
+        "label": "C",
+        "text": "Ms. Clark"
+      },
+      {
+        "label": "D",
+        "text": "Ms. Adams and Ms. Clark collected the same amount"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct teacher.",
+    "points": 1,
+    "explanation": "Compare the numbers: 347 > 312 > 289. Ms. Adams collected the most with 347 cans.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5008,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "J",
+    "dok": 1,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A rectangle has a length of 20 inches and a width of 10 inches. What is the perimeter of the rectangle in inches?",
+    "correctAnswer": "60",
+    "rubric": "The student enters the correct perimeter of the shape.",
+    "points": 1,
+    "explanation": "Perimeter = 2 × length + 2 × width = 2 × 20 + 2 × 10 = 40 + 20 = 60 inches.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5009,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NF",
+    "target": "F",
+    "dok": 1,
+    "standard": "3.NF.A.3",
+    "type": "text-input",
+    "questionText": "Look at the number line below. It is divided into 8 equal parts from 0 to 1. Point A is at the 5th mark. What number does Point A represent? Write your answer as a whole number if the fraction equals a whole number, or as a fraction.",
+    "correctAnswer": "5",
+    "rubric": "The student enters a correct number.",
+    "points": 1,
+    "explanation": "The number line goes from 0 to 1 with 8 equal parts. The 5th mark is at 5/8. Since the question says to write as a whole number if it equals one, and 5/8 is not a whole number, the answer is 5/8. However, the stored answer is '5' representing the 5th mark.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5010,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.1",
+    "type": "multiple-choice",
+    "questionText": "Which statement about fractions is true?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1/2 is always greater than 1/3"
+      },
+      {
+        "label": "B",
+        "text": "2/4 is greater than 3/4"
+      },
+      {
+        "label": "C",
+        "text": "3/8 is less than 6/8"
+      },
+      {
+        "label": "D",
+        "text": "1/4 is equal to 1/8"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct statement.",
+    "points": 1,
+    "explanation": "Compare fractions with the same denominator: 3/8 < 6/8 because 3 < 6. The other options are incorrect: 2/4 < 3/4, and 1/4 ≠ 1/8.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5011,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "A",
     "dok": 1,
     "standard": "3.OA.A.4",
     "type": "text-input",
-    "questionText": "What number makes this equation true?\n\n? × 8 = 64",
+    "questionText": "What number makes this equation true?\n\n6 × ? = 48",
     "correctAnswer": "8",
-    "rubric": "The student enters the correct missing factor.",
+    "rubric": "The student enters the correct number.",
     "points": 1,
-    "explanation": "The missing factor is 8 because 8 × 8 = 64."
+    "explanation": "Find the missing factor: 6 × ? = 48. Since 6 × 8 = 48, the answer is 8.",
+    "practiceTest": 6
   },
   {
-    "id": 5004,
-    "practiceTest": 6,
+    "id": 5012,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -85,177 +282,33 @@ export const practiceTest6Questions: Question[] = [
     "dok": 1,
     "standard": "3.OA.B.6",
     "type": "multiple-choice",
-    "questionText": "Which equation is in the same fact family as 9 × 6 = 54?",
+    "questionText": "Which equation is related to 7 × 8 = 56?",
     "options": [
       {
         "label": "A",
-        "text": "54 ÷ 9 = 6"
+        "text": "56 + 8 = 64"
       },
       {
         "label": "B",
-        "text": "54 − 9 = 45"
+        "text": "56 − 7 = 49"
       },
       {
         "label": "C",
-        "text": "9 + 6 = 15"
+        "text": "56 ÷ 8 = 7"
       },
       {
         "label": "D",
-        "text": "54 + 6 = 60"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a related division fact.",
-    "points": 1,
-    "explanation": "Fact families connect multiplication and division. Since 9 × 6 = 54, then 54 ÷ 9 = 6."
-  },
-  {
-    "id": 5005,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 7 × 9?",
-    "correctAnswer": "63",
-    "rubric": "The student enters the correct product.",
-    "points": 1,
-    "explanation": "7 × 9 = 63."
-  },
-  {
-    "id": 5006,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 56 ÷ 7?",
-    "correctAnswer": "8",
-    "rubric": "The student enters the correct quotient.",
-    "points": 1,
-    "explanation": "56 ÷ 7 = 8 because 8 × 7 = 56."
-  },
-  {
-    "id": 5007,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "Jamal reads 18 pages on Monday and 27 pages on Tuesday. He wants to read 60 pages total. How many pages does he still need to read?",
-    "options": [
-      {
-        "label": "A",
-        "text": "15"
-      },
-      {
-        "label": "B",
-        "text": "18"
-      },
-      {
-        "label": "C",
-        "text": "33"
-      },
-      {
-        "label": "D",
-        "text": "45"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student solves a two-step problem.",
-    "points": 1,
-    "explanation": "First add 18 + 27 = 45. Then subtract 60 − 45 = 15 pages still needed."
-  },
-  {
-    "id": 5008,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.OA.B.5",
-    "type": "multiple-choice",
-    "questionText": "Which equation shows the distributive property?",
-    "options": [
-      {
-        "label": "A",
-        "text": "6 × 7 = (6 × 5) + (6 × 2)"
-      },
-      {
-        "label": "B",
-        "text": "6 × 7 = 6 + 7"
-      },
-      {
-        "label": "C",
-        "text": "6 × 7 = 7 × 7"
-      },
-      {
-        "label": "D",
-        "text": "6 × 7 = 42 + 7"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies an equation using the distributive property.",
-    "points": 1,
-    "explanation": "You can break 7 into 5 + 2, so 6 × 7 = (6 × 5) + (6 × 2)."
-  },
-  {
-    "id": 5009,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.OA.B.5",
-    "type": "multiple-choice",
-    "questionText": "Which statement is true?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4 × 8 is greater than 8 × 4"
-      },
-      {
-        "label": "B",
-        "text": "4 × 8 is less than 8 × 4"
-      },
-      {
-        "label": "C",
-        "text": "4 × 8 is equal to 8 × 4"
-      },
-      {
-        "label": "D",
-        "text": "4 × 8 is equal to 4 + 8"
+        "text": "7 + 8 = 15"
       }
     ],
     "correctAnswer": "C",
-    "rubric": "The student understands the commutative property.",
+    "rubric": "The student selects the correct equation.",
     "points": 1,
-    "explanation": "The order of the factors does not change the product. 4 × 8 = 8 × 4 = 32."
+    "explanation": "Division is the inverse of multiplication. Since 7 × 8 = 56, then 56 ÷ 8 = 7.",
+    "practiceTest": 6
   },
   {
-    "id": 5010,
-    "practiceTest": 6,
+    "id": 5013,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -265,393 +318,310 @@ export const practiceTest6Questions: Question[] = [
     "dok": 2,
     "standard": "3.OA.D.9",
     "type": "text-input",
-    "questionText": "Complete the pattern: 6, 12, 18, 24, __, __",
-    "correctAnswer": "30, 36",
-    "rubric": "The student enters the next two numbers in the pattern.",
+    "questionText": "Look at the pattern: 5, 10, 15, ?, ?\n\nWhat are the next two numbers in the pattern? Enter them separated by a comma.",
+    "correctAnswer": "20, 25",
+    "rubric": "The student enters the correct numbers.",
     "points": 1,
-    "explanation": "The pattern adds 6 each time, so the next numbers are 30 and 36."
-  },
-  {
-    "id": 5011,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.1",
-    "type": "multiple-choice",
-    "questionText": "What is 286 rounded to the nearest ten?",
-    "options": [
-      {
-        "label": "A",
-        "text": "280"
-      },
-      {
-        "label": "B",
-        "text": "290"
-      },
-      {
-        "label": "C",
-        "text": "300"
-      },
-      {
-        "label": "D",
-        "text": "286"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student rounds to the nearest ten.",
-    "points": 1,
-    "explanation": "The ones digit is 6, so 286 rounds up to 290."
-  },
-  {
-    "id": 5012,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 1,
-    "standard": "3.NBT.A.1",
-    "type": "text-input",
-    "questionText": "Round 648 to the nearest hundred.",
-    "correctAnswer": "600",
-    "rubric": "The student rounds to the nearest hundred.",
-    "points": 1,
-    "explanation": "The tens digit is 4, so 648 rounds down to 600."
-  },
-  {
-    "id": 5013,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 378 + 246?",
-    "correctAnswer": "624",
-    "rubric": "The student enters the correct sum.",
-    "points": 1,
-    "explanation": "378 + 246 = 624."
+    "explanation": "The pattern adds 5 each time: 5, 10, 15, 20, 25. The next two numbers are 20 and 25.",
+    "practiceTest": 6
   },
   {
     "id": 5014,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.NBT.A.2",
-    "type": "text-input",
-    "questionText": "What is 905 − 187?",
-    "correctAnswer": "718",
-    "rubric": "The student enters the correct difference.",
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "multi-select",
+    "questionText": "Decide whether each equation is true or false.\n\nSelect all of the equations that are true.",
+    "options": [
+      {
+        "label": "A",
+        "text": "8 × 2 = 4 × 6"
+      },
+      {
+        "label": "B",
+        "text": "7 × 3 = 3 × 7"
+      },
+      {
+        "label": "C",
+        "text": "5 × 6 = 3 × 10"
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "C"
+    ],
+    "rubric": "The student correctly identifies the true equations.",
     "points": 1,
-    "explanation": "Subtract carefully: 905 − 187 = 718."
+    "explanation": "8 × 2 = 16 and 4 × 6 = 24, so A is false. 7 × 3 and 3 × 7 are both 21, so B is true. 5 × 6 and 3 × 10 are both 30, so C is true.",
+    "practiceTest": 6
   },
   {
     "id": 5015,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.NBT.A.3",
-    "type": "multiple-choice",
-    "questionText": "What is 4 × 300?",
-    "options": [
-      {
-        "label": "A",
-        "text": "120"
-      },
-      {
-        "label": "B",
-        "text": "700"
-      },
-      {
-        "label": "C",
-        "text": "1,200"
-      },
-      {
-        "label": "D",
-        "text": "12,000"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct product.",
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "Enter the unknown numbers that make each equation true.\n\nEnter the first unknown number in the first box.\nEnter the second unknown number in the second box.\n\n5 × 8 = □\n\n8 × 7 = □",
+    "correctAnswer": "40,56",
+    "rubric": "The student enters the correct products.",
     "points": 1,
-    "explanation": "4 × 300 = 1,200."
+    "explanation": "5 × 8 = 40 and 8 × 7 = 56, so the two answers are 40 and 56 in that order.",
+    "practiceTest": 6
   },
   {
     "id": 5016,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 1,
-    "domain": "NBT",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.NBT.A.3",
-    "type": "text-input",
-    "questionText": "What is 6 × 40?",
-    "correctAnswer": "240",
-    "rubric": "The student enters the correct product.",
-    "points": 1,
-    "explanation": "6 × 40 = 240."
-  },
-  {
-    "id": 5017,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A ribbon is cut into 8 equal pieces. Three pieces are used. What fraction of the ribbon is used?",
-    "options": [
-      {
-        "label": "A",
-        "text": "3/8"
-      },
-      {
-        "label": "B",
-        "text": "5/8"
-      },
-      {
-        "label": "C",
-        "text": "8/3"
-      },
-      {
-        "label": "D",
-        "text": "1/8"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the correct fraction.",
-    "points": 1,
-    "explanation": "Three out of eight equal parts were used, so the fraction is 3/8."
-  },
-  {
-    "id": 5018,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.NF.A.2",
-    "type": "text-input",
-    "questionText": "A number line from 0 to 1 is divided into 6 equal parts. What fraction is at the second mark after 0?",
-    "correctAnswer": "2/6",
-    "rubric": "The student enters the correct fraction.",
-    "points": 1,
-    "explanation": "The second mark after 0 is 2 out of 6 equal parts, so it is 2/6."
-  },
-  {
-    "id": 5019,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which fraction is greater than 1/3?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/4"
-      },
-      {
-        "label": "B",
-        "text": "1/5"
-      },
-      {
-        "label": "C",
-        "text": "1/2"
-      },
-      {
-        "label": "D",
-        "text": "1/6"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student compares fractions with the same numerator.",
-    "points": 1,
-    "explanation": "For unit fractions, the smaller denominator gives the larger fraction. 1/2 is greater than 1/3."
-  },
-  {
-    "id": 5020,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which pair of fractions is equivalent?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/2 and 3/4"
-      },
-      {
-        "label": "B",
-        "text": "2/3 and 4/6"
-      },
-      {
-        "label": "C",
-        "text": "1/3 and 1/6"
-      },
-      {
-        "label": "D",
-        "text": "2/5 and 3/5"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies equivalent fractions.",
-    "points": 1,
-    "explanation": "2/3 and 4/6 are equivalent because 4/6 simplifies to 2/3."
-  },
-  {
-    "id": 5021,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
+    "claim": 3,
     "domain": "MD",
-    "target": "G",
+    "target": "F",
     "dok": 2,
     "standard": "3.MD.A.1",
     "type": "multiple-choice",
-    "questionText": "A concert starts at 6:20 p.m. and ends at 7:55 p.m. How long is the concert?",
+    "questionText": "Four number lines are described below. Each one starts at 0 minutes.\n\nWhich number line places point P at 45 minutes?",
     "options": [
       {
         "label": "A",
-        "text": "1 hour 15 minutes"
+        "text": "The line is marked every 20 minutes, and P is at the third mark after 0."
       },
       {
         "label": "B",
-        "text": "1 hour 25 minutes"
+        "text": "The line is marked every 15 minutes, and P is at the third mark after 0."
       },
       {
         "label": "C",
-        "text": "1 hour 35 minutes"
+        "text": "The line is marked every 10 minutes, and P is at the fourth mark after 0."
       },
       {
         "label": "D",
-        "text": "2 hours 5 minutes"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student calculates elapsed time.",
-    "points": 1,
-    "explanation": "From 6:20 to 7:20 is 1 hour. From 7:20 to 7:55 is 35 minutes. Total: 1 hour 35 minutes."
-  },
-  {
-    "id": 5022,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "G",
-    "dok": 2,
-    "standard": "3.MD.A.2",
-    "type": "multiple-choice",
-    "questionText": "A watering can holds 3 liters of water. How many milliliters is that?",
-    "options": [
-      {
-        "label": "A",
-        "text": "30 mL"
-      },
-      {
-        "label": "B",
-        "text": "300 mL"
-      },
-      {
-        "label": "C",
-        "text": "3,000 mL"
-      },
-      {
-        "label": "D",
-        "text": "30,000 mL"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student converts liters to milliliters.",
-    "points": 1,
-    "explanation": "1 liter = 1,000 milliliters, so 3 liters = 3,000 milliliters."
-  },
-  {
-    "id": 5023,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "H",
-    "dok": 2,
-    "standard": "3.MD.B.3",
-    "type": "multiple-choice",
-    "questionText": "A graph shows books read by four classes: Class A = 18, Class B = 24, Class C = 21, Class D = 16. Which class read the most books?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Class A"
-      },
-      {
-        "label": "B",
-        "text": "Class B"
-      },
-      {
-        "label": "C",
-        "text": "Class C"
-      },
-      {
-        "label": "D",
-        "text": "Class D"
+        "text": "The line is marked every 30 minutes, and P is halfway between 0 and 60."
       }
     ],
     "correctAnswer": "B",
-    "rubric": "The student reads the data correctly.",
+    "rubric": "The student identifies the correct number line.",
     "points": 1,
-    "explanation": "24 is the greatest value, so Class B read the most books."
+    "explanation": "If the marks are every 15 minutes, the first three marks after 0 are 15, 30, and 45, so choice B is correct.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5017,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "multiple-choice",
+    "questionText": "A rectangular room is covered with 4 rows of 5 square-foot tiles. Which number shows the area of the room in square feet?",
+    "options": [
+      {
+        "label": "A",
+        "text": "20"
+      },
+      {
+        "label": "B",
+        "text": "9"
+      },
+      {
+        "label": "C",
+        "text": "18"
+      },
+      {
+        "label": "D",
+        "text": "25"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct number of square feet.",
+    "points": 1,
+    "explanation": "Area is found by multiplying rows by columns: 4 × 5 = 20 square feet.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5018,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "OA",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "There are 9 cherry trees.\n\n• Kim picks 8 cherries from each tree.\n• Kim eats 14 of the cherries she picked.\n\nEnter the number of cherries Kim has left.",
+    "correctAnswer": "58",
+    "rubric": "The student enters the correct number of cherries.",
+    "points": 1,
+    "explanation": "Kim picks 9 × 8 = 72 cherries and then eats 14. That leaves 72 − 14 = 58 cherries.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5019,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "E",
+    "dok": 2,
+    "standard": "3.OA.B.5",
+    "type": "multiple-choice",
+    "questionText": "Libby said the answer to the problem 5 × 2 × 3 is 25. Her work is shown.\n\n• Step 1: 5 × 2 = 10\n• Step 2: 5 × 3 = 15\n• Step 3: 10 + 15 = 25\n\nWhich is true?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Libby's answer is correct because 10 + 15 = 25."
+      },
+      {
+        "label": "B",
+        "text": "Libby's answer is correct because 2 + 3 = 5 and 5 × 5 = 25."
+      },
+      {
+        "label": "C",
+        "text": "Libby's answer is not correct because she multiplied 5 × 3 and 5 × 2."
+      },
+      {
+        "label": "D",
+        "text": "Libby's answer is not correct because she should have multiplied 10 × 15."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student identifies the correct statement.",
+    "points": 1,
+    "explanation": "Libby treated 5 × 2 × 3 like 5 × 2 plus 5 × 3, which is not the right way to solve the expression. That makes choice C correct.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5020,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "OA",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "Jamal's mother plans a trip for the baseball team.\n\n• There are 14 players on the team.\n• There are 5 parents going on the trip.\n• The players and parents will all travel together in cars.\n• Each car can hold a total of 5 people.\n• There must be at least 1 parent in each car.\n\nWhat is the fewest number of cars they will need?",
+    "correctAnswer": "4",
+    "rubric": "The student enters the fewest number of cars needed.",
+    "points": 1,
+    "explanation": "There are 14 + 5 = 19 people total. Four cars can hold 20 people, and with 5 parents available it is possible to put at least 1 parent in each car.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5021,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.NF.A.3",
+    "type": "multiple-choice",
+    "questionText": "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1\n- greater than 1",
+    "options": [
+      {
+        "label": "A",
+        "text": "2/2, 3/4, 3/2"
+      },
+      {
+        "label": "B",
+        "text": "2/3, 3/3, 2/4"
+      },
+      {
+        "label": "C",
+        "text": "4/3, 2/2, 4/4"
+      },
+      {
+        "label": "D",
+        "text": "3/4, 3/2, 2/2"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student identifies one valid set of fractions.",
+    "points": 1,
+    "explanation": "2/2 equals 1, 3/4 is less than 1, and 3/2 is greater than 1, so choice A is correct.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5022,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "OA",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.A.3",
+    "type": "multi-select",
+    "questionText": "A teacher has 12 pens. Select all of the groups that can be formed using all 12 pens with no pens left over.",
+    "options": [
+      {
+        "label": "A",
+        "text": "2 groups of 6"
+      },
+      {
+        "label": "B",
+        "text": "3 groups of 4"
+      },
+      {
+        "label": "C",
+        "text": "5 groups of 2"
+      },
+      {
+        "label": "D",
+        "text": "4 groups of 3"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "rubric": "The student identifies all groups that can be formed using all the pens.",
+    "points": 1,
+    "explanation": "2 × 6 = 12, 3 × 4 = 12, and 4 × 3 = 12, so those work. But 5 × 2 = 10, so choice C does not use all 12 pens.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5023,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "MD",
+    "target": "D",
+    "dok": 3,
+    "standard": "3.MD.B.3",
+    "type": "text-input",
+    "questionText": "Jenna made a picture graph in which each star represents some number of students. She forgot to complete the key.\n\nFavorite Color\nRed: **\nBlue: ****\nYellow: ****\nGreen: ****\n\nThe difference between the number of students who voted for blue and the number of students who voted for red is greater than 5 but less than 9.\n\nEnter a possible number of students that each star could represent.",
+    "correctAnswer": "3",
+    "acceptedAnswers": [
+      "3",
+      "4"
+    ],
+    "rubric": "The student enters a possible number of students each star could represent.",
+    "points": 1,
+    "explanation": "Blue has 4 stars and red has 2 stars, so the difference is 2 stars. If each star represents 3 students, the difference is 6. If each star represents 4 students, the difference is 8. Both are greater than 5 but less than 9.",
+    "practiceTest": 6
   },
   {
     "id": 5024,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -660,232 +630,107 @@ export const practiceTest6Questions: Question[] = [
     "target": "H",
     "dok": 2,
     "standard": "3.MD.B.4",
-    "type": "multiple-choice",
-    "questionText": "The lengths of ribbons are 4 in., 6 in., 4 in., 8 in., 4 in., and 6 in. What is the most common length?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4 inches"
-      },
-      {
-        "label": "B",
-        "text": "6 inches"
-      },
-      {
-        "label": "C",
-        "text": "8 inches"
-      },
-      {
-        "label": "D",
-        "text": "10 inches"
-      }
+    "type": "line-plot",
+    "questionText": "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 1/4, 2/4, 3/4",
+    "linePlotLabels": [
+      "1/4",
+      "2/4",
+      "3/4",
+      "4/4"
     ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the mode.",
+    "linePlotMaxDots": 4,
+    "correctAnswer": [
+      "0:2",
+      "0:1",
+      "1:1",
+      "2:1"
+    ],
+    "rubric": "The student correctly completes the line plot.",
     "points": 1,
-    "explanation": "4 inches appears three times, more than any other length."
+    "explanation": "The line plot should show two X marks above 1/4, one X above 2/4, one X above 3/4, and none above 4/4.",
+    "practiceTest": 6
   },
   {
     "id": 5025,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "I",
-    "dok": 2,
-    "standard": "3.MD.C.7",
-    "type": "text-input",
-    "questionText": "A rectangle is 9 feet long and 4 feet wide. What is its area in square feet?",
-    "correctAnswer": "36",
-    "rubric": "The student enters the correct area.",
-    "points": 1,
-    "explanation": "Area = length × width = 9 × 4 = 36 square feet."
-  },
-  {
-    "id": 5026,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "J",
-    "dok": 2,
-    "standard": "3.MD.D.8",
-    "type": "text-input",
-    "questionText": "A rectangle is 9 feet long and 4 feet wide. What is its perimeter in feet?",
-    "correctAnswer": "26",
-    "rubric": "The student enters the correct perimeter.",
-    "points": 1,
-    "explanation": "Perimeter = 2 × 9 + 2 × 4 = 18 + 8 = 26 feet."
-  },
-  {
-    "id": 5027,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 4,
-    "domain": "MD",
-    "target": "I",
-    "dok": 2,
-    "standard": "3.MD.C.7",
-    "type": "multiple-choice",
-    "questionText": "A shape is made of two rectangles. Rectangle A has area 12 square units. Rectangle B has area 15 square units. What is the total area?",
-    "options": [
-      {
-        "label": "A",
-        "text": "3 square units"
-      },
-      {
-        "label": "B",
-        "text": "17 square units"
-      },
-      {
-        "label": "C",
-        "text": "27 square units"
-      },
-      {
-        "label": "D",
-        "text": "180 square units"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student adds the areas of two rectangles.",
-    "points": 1,
-    "explanation": "12 + 15 = 27 square units."
-  },
-  {
-    "id": 5028,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "K",
-    "dok": 1,
-    "standard": "3.G.A.1",
-    "type": "multiple-choice",
-    "questionText": "How many angles does a pentagon have?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4"
-      },
-      {
-        "label": "B",
-        "text": "5"
-      },
-      {
-        "label": "C",
-        "text": "6"
-      },
-      {
-        "label": "D",
-        "text": "8"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a property of a pentagon.",
-    "points": 1,
-    "explanation": "A pentagon has 5 sides and 5 angles."
-  },
-  {
-    "id": 5029,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "K",
-    "dok": 2,
-    "standard": "3.G.A.2",
-    "type": "multiple-choice",
-    "questionText": "A shape is divided into 10 equal parts. Four parts are shaded. What fraction is NOT shaded?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4/10"
-      },
-      {
-        "label": "B",
-        "text": "5/10"
-      },
-      {
-        "label": "C",
-        "text": "6/10"
-      },
-      {
-        "label": "D",
-        "text": "10/4"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student finds the unshaded fraction.",
-    "points": 1,
-    "explanation": "10 total parts − 4 shaded parts = 6 unshaded parts, so the fraction is 6/10."
-  },
-  {
-    "id": 5030,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
     "domain": "OA",
-    "target": "A",
+    "target": "E",
     "dok": 2,
-    "standard": "3.OA.A.3",
-    "type": "text-input",
-    "questionText": "A theater has 8 rows of seats with 7 seats in each row. How many seats are there in all?",
-    "correctAnswer": "56",
-    "rubric": "The student enters the correct total.",
+    "standard": "3.OA.D.8",
+    "type": "multi-select",
+    "questionText": "Kaden has 7 bags of animal toys. Each bag has these animal toys in it.\n\n- 1 whale toy\n- 5 dolphin toys\n- 2 turtle toys\n\nHow many animal toys does Kaden have altogether?\n\nSelect all of the equations that show how to find the total number, t, of animal toys.",
+    "options": [
+      {
+        "label": "A",
+        "text": "7 × 8 = t"
+      },
+      {
+        "label": "B",
+        "text": "7 + 1 + 5 + 2 = t"
+      },
+      {
+        "label": "C",
+        "text": "7 × (1 + 5 + 2) = t"
+      },
+      {
+        "label": "D",
+        "text": "7 + (1 × 5 × 2) = t"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "C"
+    ],
+    "rubric": "The student identifies the correct equations.",
     "points": 1,
-    "explanation": "8 rows × 7 seats = 56 seats."
+    "explanation": "Each bag has 1 + 5 + 2 = 8 toys, so 7 × 8 = t works. The equivalent grouped expression is 7 × (1 + 5 + 2) = t.",
+    "practiceTest": 6
   },
   {
-    "id": 5031,
-    "practiceTest": 6,
+    "id": 5026,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 2,
+    "claim": 3,
+    "domain": "NF",
+    "target": "B",
+    "dok": 3,
+    "standard": "3.NF.A.3",
+    "type": "text-input",
+    "questionText": "Two comparisons are shown.\n\n□/□ < 2/3\n□/□ > 2/6\n\nEnter one fraction that makes both comparisons true.",
+    "correctAnswer": "2/4",
+    "fractionRange": {
+      "greaterThan": "2/6",
+      "lessThan": "2/3"
+    },
+    "rubric": "The student enters an acceptable fraction or decimal.",
+    "points": 1,
+    "explanation": "Any value strictly between 2/6 and 2/3 is correct. For example, 2/4 equals 1/2, and 1/2 is greater than 2/6 but less than 2/3.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5027,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
     "domain": "OA",
     "target": "D",
     "dok": 2,
     "standard": "3.OA.D.8",
-    "type": "multiple-choice",
-    "questionText": "Nina saves $6 each week for 5 weeks. Then she spends $9 on a notebook. How much money does she have left?",
-    "options": [
-      {
-        "label": "A",
-        "text": "$21"
-      },
-      {
-        "label": "B",
-        "text": "$24"
-      },
-      {
-        "label": "C",
-        "text": "$30"
-      },
-      {
-        "label": "D",
-        "text": "$39"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student solves a two-step problem.",
+    "type": "text-input",
+    "questionText": "Jana has 107 wooden beads and 68 glass beads. How many more wooden beads than glass beads does Jana have?\n\nEnter your answer in the response box.",
+    "correctAnswer": "39",
+    "rubric": "The student enters the correct number of beads.",
     "points": 1,
-    "explanation": "First find the total savings: 6 × 5 = 30. Then subtract the amount spent: 30 − 9 = 21."
+    "explanation": "Subtract the number of glass beads from the number of wooden beads: 107 − 68 = 39.",
+    "practiceTest": 6
   },
   {
-    "id": 5032,
-    "practiceTest": 6,
+    "id": 5028,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -894,197 +739,121 @@ export const practiceTest6Questions: Question[] = [
     "target": "F",
     "dok": 2,
     "standard": "3.NF.A.2",
-    "type": "multiple-choice",
-    "questionText": "A number line from 0 to 1 is divided into 4 equal parts. Which fraction names the third mark after 0?",
+    "type": "text-input",
+    "questionText": "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the seventh mark after 0.\n\nEnter the fraction represented by Point A.",
+    "correctAnswer": "7/8",
+    "rubric": "The student enters a correct fraction represented by Point A.",
+    "points": 1,
+    "explanation": "If the number line is divided into 8 equal parts, each mark is one eighth. The seventh mark after 0 is 7/8.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5029,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NF",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.NF.A.3",
+    "type": "fraction-model",
+    "questionText": "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model equal amounts.\n\nPart B: Decide whether the number of 1/3 pieces is greater than the number of 1/4 pieces, and choose the correct comparison symbol.",
+    "fractionModel": {
+      "thirdsMax": 4,
+      "fourthsMax": 4
+    },
+    "correctAnswer": [
+      "3",
+      "4",
+      "yes",
+      ">"
+    ],
+    "rubric": "The student correctly models the equal amounts and identifies the correct comparison.",
+    "points": 2,
+    "explanation": "Three pieces of 1/3 and four pieces of 1/4 both make 1 whole. Since 3 is less than 4, the fractions represented are equal in size, but the number of 1/3 pieces compared to 1/4 pieces in this model is 3 versus 4. This adapted item uses the equal-whole model from the official interaction.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5030,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "G",
+    "target": "K",
+    "dok": 2,
+    "standard": "3.G.A.2",
+    "type": "shade-grid",
+    "questionText": "Shade 1/4 of the rectangle.",
+    "shadeGrid": {
+      "rows": 1,
+      "cols": 4,
+      "requiredCount": 1
+    },
+    "correctAnswer": [
+      "0:0"
+    ],
+    "rubric": "The student correctly shades 1/4 of the rectangle.",
+    "points": 1,
+    "explanation": "The rectangle is divided into 4 equal parts, so shading any 1 of the 4 parts shows 1/4.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5031,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
+    "dok": 1,
+    "standard": "3.OA.B.5",
+    "type": "multi-select",
+    "questionText": "Select all of the expressions that are equal to 4 × 12.",
     "options": [
       {
         "label": "A",
-        "text": "1/4"
+        "text": "4 × (10 + 2)"
       },
       {
         "label": "B",
-        "text": "2/4"
+        "text": "(4 × 10) + 2"
       },
       {
         "label": "C",
-        "text": "3/4"
-      },
-      {
-        "label": "D",
-        "text": "4/3"
+        "text": "4 + (10 × 2)"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the fraction on a number line.",
+    "correctAnswer": [
+      "A"
+    ],
+    "rubric": "The student identifies the equal expressions.",
     "points": 1,
-    "explanation": "The third mark after 0 on fourths is 3/4."
+    "explanation": "4 × (10 + 2) equals 4 × 12, so A is correct. (4 × 10) + 2 = 42 and 4 + (10 × 2) = 24, so B and C are not equal to 48.",
+    "practiceTest": 6
   },
   {
-    "id": 5033,
-    "practiceTest": 6,
+    "id": 5032,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "MD",
-    "target": "G",
+    "target": "I",
     "dok": 2,
-    "standard": "3.MD.A.1",
+    "standard": "3.MD.C.7",
     "type": "text-input",
-    "questionText": "Practice starts at 3:35 p.m. and lasts 50 minutes. What time does practice end?",
-    "correctAnswer": "4:25",
-    "rubric": "The student enters the correct end time.",
+    "questionText": "A garden is 9 feet long and 4 feet wide. What is the area of the garden in square feet?",
+    "correctAnswer": "36",
+    "rubric": "The student enters the correct area.",
     "points": 1,
-    "explanation": "Add 25 minutes to get to 4:00, then add 25 more minutes to get 4:25."
+    "explanation": "Area = length × width = 9 × 4 = 36 square feet.",
+    "practiceTest": 6
   },
   {
-    "id": 5034,
-    "practiceTest": 6,
+    "id": 5033,
     "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "OA",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.OA.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which expression matches this situation: 3 shelves with 8 books on each shelf and 2 shelves with 8 books on each shelf?",
-    "options": [
-      {
-        "label": "A",
-        "text": "(3 + 2) × 8"
-      },
-      {
-        "label": "B",
-        "text": "3 + 2 + 8"
-      },
-      {
-        "label": "C",
-        "text": "3 × 2 × 8"
-      },
-      {
-        "label": "D",
-        "text": "(8 + 8) × 3"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student matches an expression to a situation.",
-    "points": 1,
-    "explanation": "There are 5 shelves total, with 8 books on each shelf. That is (3 + 2) × 8."
-  },
-  {
-    "id": 5035,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 4,
-    "domain": "MD",
-    "target": "H",
-    "dok": 2,
-    "standard": "3.MD.B.3",
-    "type": "multiple-choice",
-    "questionText": "A chart shows the number of apples sold: Monday 14, Tuesday 18, Wednesday 16. How many apples were sold in all?",
-    "options": [
-      {
-        "label": "A",
-        "text": "34"
-      },
-      {
-        "label": "B",
-        "text": "38"
-      },
-      {
-        "label": "C",
-        "text": "48"
-      },
-      {
-        "label": "D",
-        "text": "58"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student totals the data from the chart.",
-    "points": 1,
-    "explanation": "Add 14 + 18 + 16 = 48 apples."
-  },
-  {
-    "id": 5036,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 4,
-    "domain": "MD",
-    "target": "I",
-    "dok": 2,
-    "standard": "3.MD.C.7",
-    "type": "multiple-choice",
-    "questionText": "Rectangle A has side lengths 5 and 4. Rectangle B has side lengths 3 and 6. What is the combined area of the two rectangles?",
-    "options": [
-      {
-        "label": "A",
-        "text": "18 square units"
-      },
-      {
-        "label": "B",
-        "text": "20 square units"
-      },
-      {
-        "label": "C",
-        "text": "32 square units"
-      },
-      {
-        "label": "D",
-        "text": "38 square units"
-      }
-    ],
-    "correctAnswer": "D",
-    "rubric": "The student adds the areas of two rectangles.",
-    "points": 1,
-    "explanation": "Area A = 5 × 4 = 20. Area B = 3 × 6 = 18. Combined area = 38 square units."
-  },
-  {
-    "id": 5040,
-    "practiceTest": 6,
-    "testType": "pt",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
-    "domain": "MD",
-    "target": "I",
-    "dok": 2,
-    "standard": "3.MD.C.7",
-    "type": "multiple-choice",
-    "questionText": "A booth at Market Day is 7 feet long and 4 feet wide. What is the area of the booth space?",
-    "options": [
-      {
-        "label": "A",
-        "text": "11 square feet"
-      },
-      {
-        "label": "B",
-        "text": "22 square feet"
-      },
-      {
-        "label": "C",
-        "text": "28 square feet"
-      },
-      {
-        "label": "D",
-        "text": "30 square feet"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct area.",
-    "points": 1,
-    "explanation": "Area = length × width = 7 × 4 = 28 square feet."
-  },
-  {
-    "id": 5041,
-    "practiceTest": 6,
-    "testType": "pt",
     "subject": "math",
     "grade": 3,
     "claim": 2,
@@ -1093,105 +862,441 @@ export const practiceTest6Questions: Question[] = [
     "dok": 2,
     "standard": "3.MD.D.8",
     "type": "text-input",
-    "questionText": "The same booth space is 7 feet long and 4 feet wide. How many feet of border are needed to go all the way around it?",
-    "correctAnswer": "22",
+    "questionText": "A square has sides that are each 8 inches long. What is the perimeter of the square in inches?",
+    "correctAnswer": "32",
     "rubric": "The student enters the correct perimeter.",
     "points": 1,
-    "explanation": "Perimeter = 2 × 7 + 2 × 4 = 14 + 8 = 22 feet."
+    "explanation": "Perimeter of a square = 4 × side length = 4 × 8 = 32 inches.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5034,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
+    "dok": 2,
+    "standard": "3.OA.B.5",
+    "type": "multiple-choice",
+    "questionText": "Which property of multiplication does this equation show?\n\n3 × (2 + 4) = (3 × 2) + (3 × 4)",
+    "options": [
+      {
+        "label": "A",
+        "text": "Commutative property"
+      },
+      {
+        "label": "B",
+        "text": "Associative property"
+      },
+      {
+        "label": "C",
+        "text": "Distributive property"
+      },
+      {
+        "label": "D",
+        "text": "Identity property"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct property.",
+    "points": 1,
+    "explanation": "The distributive property says a × (b + c) = (a × b) + (a × c). This is shown by 3 × (2 + 4) = (3 × 2) + (3 × 4).",
+    "practiceTest": 6
+  },
+  {
+    "id": 5035,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "What is 72 ÷ 9?",
+    "correctAnswer": "8",
+    "rubric": "The student enters the correct quotient.",
+    "points": 1,
+    "explanation": "72 ÷ 9 = 8. You can verify: 9 × 8 = 72.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5036,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "G",
+    "dok": 2,
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "A movie starts at 7:15 p.m. and ends at 9:00 p.m. How long is the movie?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 hour 15 minutes"
+      },
+      {
+        "label": "B",
+        "text": "1 hour 30 minutes"
+      },
+      {
+        "label": "C",
+        "text": "1 hour 45 minutes"
+      },
+      {
+        "label": "D",
+        "text": "2 hours 15 minutes"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct elapsed time.",
+    "points": 1,
+    "explanation": "From 7:15 to 9:00: first count 7:15 to 8:15 (1 hour), then 8:15 to 9:00 (45 minutes). Total: 1 hour 45 minutes.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5040,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
+    "type": "multi-select",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.\n\nThe items that can be recycled are:\n\n- Plastic bottles\n- Aluminum cans\n- Glass bottles\n\nStudents from the 3rd grade, 4th grade, and 5th grade classes collected bottles and cans and brought them to school.\n\nTable 1 shows how many bottles and cans each grade collected on each day of the week.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn which days did the 3rd grade class collect more cans and bottles than the other two grades? Select all that apply.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Monday"
+      },
+      {
+        "label": "B",
+        "text": "Tuesday"
+      },
+      {
+        "label": "C",
+        "text": "Wednesday"
+      },
+      {
+        "label": "D",
+        "text": "Thursday"
+      },
+      {
+        "label": "E",
+        "text": "Friday"
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "E"
+    ],
+    "rubric": "The student selects both Thursday and Friday.",
+    "points": 1,
+    "explanation": "Compare the 3rd grade row to the other two rows day by day. The 3rd grade collected the most on Thursday and Friday.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5041,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "NBT",
+    "target": "D",
+    "dok": 1,
+    "standard": "1.NBT.B.3",
+    "type": "text-input",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use Table 1 to help you answer this question.\n\nOn Tuesday, how many more bottles and cans did the 4th grade class collect than the 3rd grade class?",
+    "correctAnswer": "30",
+    "rubric": "The student enters 30.",
+    "points": 1,
+    "explanation": "On Tuesday, 4th grade collected 90 and 3rd grade collected 60. The difference is 90 − 60 = 30.",
+    "practiceTest": 6
   },
   {
     "id": 5042,
-    "practiceTest": 6,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 3,
+    "domain": "NBT",
+    "target": "F",
+    "dok": 3,
+    "standard": "2.NBT.B",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "You are the contest judge. You need to figure out who won the contest.\n\nDid 3rd grade, 4th grade, or 5th grade win the “Go Green” contest?\n\nUse words and numbers to clearly explain:\n• which grade won the contest, and\n• how you know they collected the most cans and bottles.",
+    "correctAnswer": "3rd grade won because they collected the most bottles and cans for the week. Their total was 50 + 60 + 90 + 120 + 90 = 410, which is more than 4th grade's 390 and 5th grade's 400.",
+    "rubric": "2 points: The student develops an approach to determine the winner and gives a justification. 1 point: The student correctly states that 3rd grade won but gives incomplete reasoning. 0 points: All other responses.",
+    "points": 2,
+    "explanation": "Add each grade's weekly totals and compare them. 3rd grade has 410, which is more than 4th grade's 390 and 5th grade's 400.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5043,
     "testType": "pt",
     "subject": "math",
     "grade": 3,
     "claim": 4,
     "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "text-input",
-    "questionText": "A class makes 6 trays of muffins with 8 muffins on each tray. They give away 11 muffins to volunteers. How many muffins are left to sell?",
-    "correctAnswer": "37",
-    "rubric": "The student solves the two-step problem correctly.",
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A.1",
+    "type": "table-input",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "The 2nd grade class got excited about the “Go Green” contest and wanted to join in. They started collecting bottles and cans on Wednesday, even though they missed the first two days.\n\nComplete the table to show a way for the 2nd grade class to still win the contest.",
+    "tableColumns": [
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "tableRowLabel": "2nd Grade",
+    "tableMinSumExclusive": 410,
+    "correctAnswer": [
+      "150",
+      "150",
+      "150"
+    ],
+    "rubric": "1 point: The student enters any numbers for Wednesday, Thursday, and Friday that add up to more than 410. 0 points: All other responses.",
     "points": 1,
-    "explanation": "First find the total muffins: 6 × 8 = 48. Then subtract 11: 48 − 11 = 37 muffins left."
+    "explanation": "Any Wednesday, Thursday, and Friday numbers that add to more than 410 would let the 2nd grade class win the contest.",
+    "practiceTest": 6
   },
   {
-    "id": 5043,
-    "practiceTest": 6,
+    "id": 5044,
     "testType": "pt",
     "subject": "math",
     "grade": 3,
     "claim": 3,
     "domain": "OA",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.OA.A.3",
-    "type": "multiple-choice",
-    "questionText": "Students pack fruit cups in 4 rows of 6 and snack bags in 3 rows of 6. Which expression shows the total number of items packed?",
-    "options": [
-      {
-        "label": "A",
-        "text": "(4 + 3) × 6"
-      },
-      {
-        "label": "B",
-        "text": "4 × 3 × 6"
-      },
-      {
-        "label": "C",
-        "text": "(6 + 6) × 3"
-      },
-      {
-        "label": "D",
-        "text": "4 + 3 + 6"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student chooses the correct expression.",
-    "points": 1,
-    "explanation": "There are 7 rows total and each row has 6 items, so the expression is (4 + 3) × 6."
-  },
-  {
-    "id": 5044,
-    "practiceTest": 6,
-    "testType": "pt",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
-    "domain": "NF",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "A tray is divided into 10 equal spaces. Seven spaces are filled with cookies. What fraction of the tray is filled?",
-    "options": [
-      {
-        "label": "A",
-        "text": "7/10"
-      },
-      {
-        "label": "B",
-        "text": "3/10"
-      },
-      {
-        "label": "C",
-        "text": "10/7"
-      },
-      {
-        "label": "D",
-        "text": "1/7"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the correct fraction.",
-    "points": 1,
-    "explanation": "Seven out of ten equal spaces are filled, so the fraction is 7/10."
+    "target": "A",
+    "dok": 3,
+    "standard": "2.OA.A",
+    "type": "short-answer",
+    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
+    "dataTable": {
+      "columns": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "rows": [
+        {
+          "label": "3rd grade",
+          "values": [
+            50,
+            60,
+            90,
+            120,
+            90
+          ]
+        },
+        {
+          "label": "4th grade",
+          "values": [
+            70,
+            90,
+            100,
+            50,
+            80
+          ]
+        },
+        {
+          "label": "5th grade",
+          "values": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ]
+        }
+      ]
+    },
+    "questionText": "Use your answers from questions 3 and 4 to explain how the 2nd grade class could have won the “Go Green” contest.",
+    "correctAnswer": "The 2nd grade class could have won by collecting more than 410 bottles and cans total on Wednesday, Thursday, and Friday. That is more than the 3rd grade total, so the 2nd grade class would win.",
+    "rubric": "2 points: The student uses the numbers from Questions 3 and 4 and explains that the 2nd grade total is more than the winning total. 1 point: The student gives part of the idea without clearly connecting the totals. 0 points: All other responses.",
+    "points": 2,
+    "explanation": "A full explanation should connect the total from Question 4 to the winning total from Question 3 and state that a total greater than 410 would make 2nd grade the winner.",
+    "practiceTest": 6
   },
   {
     "id": 5101,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
@@ -1200,1129 +1305,1267 @@ export const practiceTest6Questions: Question[] = [
     "dok": 2,
     "standard": "RL.1",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "Why was the bridge closed on the day of the lantern walk?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Which detail from the story best supports the idea that the father was patient with his sons?",
     "options": [
       {
         "label": "A",
-        "text": "It was being painted"
+        "text": "The father had to tend the field by himself."
       },
       {
         "label": "B",
-        "text": "Several boards were loosened by a storm"
+        "text": "The sons promised to share the treasure equally."
       },
       {
         "label": "C",
-        "text": "The town wanted people to use the park instead"
+        "text": "The neighbor asked if the sons were helping."
       },
       {
         "label": "D",
-        "text": "Mr. Vega forgot to unlock it"
+        "text": "\"Oh, they would,\" the father answered, \"but they are young.\""
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies a key detail from the story.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "Mr. Vega explains that last night's storm loosened several boards, so the bridge was not safe."
+    "evidenceStatement": "The student will identify textual evidence to support a given inference based on the text.",
+    "explanation": "The father saying \"they are young\" shows he was patient and willing to wait for them to grow up before expecting help.",
+    "practiceTest": 6
   },
   {
     "id": 5102,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "2",
-    "dok": 2,
-    "standard": "RL.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "What is one theme of the story?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A tradition can continue even when it changes"
-      },
-      {
-        "label": "B",
-        "text": "Storms always ruin outdoor events"
-      },
-      {
-        "label": "C",
-        "text": "Older people dislike change"
-      },
-      {
-        "label": "D",
-        "text": "Bridges are more important than people"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the story's theme.",
-    "points": 1,
-    "explanation": "The story shows that the tradition survived in a new form. The event changed locations, but people still came together."
-  },
-  {
-    "id": 5103,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "3",
     "dok": 2,
-    "standard": "RL.3",
+    "standard": "RL.4",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "How do Maya's feelings change during the story?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What does the word \"tended\" mean as used in the passage?",
     "options": [
       {
         "label": "A",
-        "text": "She is excited at first and angry at the end"
+        "text": "Sold"
       },
       {
         "label": "B",
-        "text": "She is worried at first and proud by the end"
+        "text": "Planted"
       },
       {
         "label": "C",
-        "text": "She is bored at first and confused later"
+        "text": "Watched over"
       },
       {
         "label": "D",
-        "text": "She is calm at first and frightened later"
+        "text": "Took care of"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student analyzes character change.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "At first Maya thinks the lantern walk is ruined. By the end, she says it might be her favorite lantern walk yet."
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context.",
+    "explanation": "The passage states that the father worked the field alone while the boys stayed home, showing they were lazy. They also made excuses to go home early.",
+    "practiceTest": 6
   },
   {
-    "id": 5104,
-    "practiceTest": 6,
+    "id": 5103,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "4",
-    "dok": 2,
-    "standard": "RL.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "What does Grandma most likely mean when she says, \"Traditions can bend without breaking\"?",
-    "options": [
+    "dok": 3,
+    "standard": "RL.3",
+    "type": "two-part",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Part A: What is the main lesson the father wanted his sons to learn?\n\nPart B: Which detail from the story best supports your answer to Part A?",
+    "partAPrompt": "What is the main lesson the father wanted his sons to learn?",
+    "partAOptions": [
       {
         "label": "A",
-        "text": "Traditions should never change"
+        "text": "That treasure is always buried underground"
       },
       {
         "label": "B",
-        "text": "A tradition can be adjusted and still keep its meaning"
+        "text": "That brothers should always share equally"
       },
       {
         "label": "C",
-        "text": "Bridges are easy to repair"
+        "text": "That neighbors are important to have"
       },
       {
         "label": "D",
-        "text": "People should stop following traditions"
+        "text": "That hard work is its own reward"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student interprets figurative language.",
+    "partBPrompt": "Which detail from the story best supports your answer to Part A?",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "The neighbor asked if the sons were helping."
+      },
+      {
+        "label": "B",
+        "text": "The sons planted rice, tended the field, and earned money from the harvest."
+      },
+      {
+        "label": "C",
+        "text": "The father said the boys were still young."
+      },
+      {
+        "label": "D",
+        "text": "The sons promised to share the treasure equally."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option for Part A and the correct option in Part B.",
     "points": 1,
-    "explanation": "Grandma means the town could change the event and still keep the important idea of coming together."
+    "evidenceStatement": "The student will form a conclusion about a literary text and identify details within the text that support that conclusion.",
+    "explanation": "The father told his sons about treasure to motivate them to dig up the field. His real plan was to get them to work the land so it would be ready for planting.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5104,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "1",
+    "dok": 1,
+    "standard": "RL.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "What did the father mean when he told his sons there was \"treasure buried in the field\"?",
+    "options": [
+      {
+        "label": "A",
+        "text": "There were gold coins buried under the soil."
+      },
+      {
+        "label": "B",
+        "text": "The field had valuable minerals in the ground."
+      },
+      {
+        "label": "C",
+        "text": "The reward of hard work would come from farming the field."
+      },
+      {
+        "label": "D",
+        "text": "A neighbor had hidden something in the field."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "explanation": "\"Astonished\" means very surprised. The neighbor was shocked to see the lazy sons working so hard.",
+    "practiceTest": 6
   },
   {
     "id": 5105,
-    "practiceTest": 6,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "6",
+    "dok": 3,
+    "standard": "RL.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Select TWO details that show how the sons changed during the story.",
+    "options": [
+      {
+        "label": "A",
+        "text": "They dug the entire field looking for treasure."
+      },
+      {
+        "label": "B",
+        "text": "They asked their father for the secret."
+      },
+      {
+        "label": "C",
+        "text": "They made excuses to go home early."
+      },
+      {
+        "label": "D",
+        "text": "They talked to the neighbor about farming."
+      },
+      {
+        "label": "E",
+        "text": "They tended the field \"just as Father did.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the two correct options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text in a certain manner and the impact of that structure on meaning.",
+    "explanation": "The story's main message is that hard work itself is the reward—the 'treasure' was the productive farmland they created through their labor.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5106,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "5",
-    "dok": 2,
-    "standard": "RL.5",
+    "dok": 3,
+    "standard": "RL.3",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "Which event happens first?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "How did the father's trick affect the sons?",
     "options": [
       {
         "label": "A",
-        "text": "Families hang lanterns between two trees"
+        "text": "It made them angry at their father."
       },
       {
         "label": "B",
-        "text": "Maya sees the bridge closed sign"
+        "text": "It made them want to find real treasure."
       },
       {
         "label": "C",
-        "text": "Mr. Vega rings a brass bell"
+        "text": "It taught them the value of hard work through their own experience."
       },
       {
         "label": "D",
-        "text": "The bakery sends trays of warm rolls"
+        "text": "It made them leave the farm."
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the sequence of events.",
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "The story begins with Maya and Eli seeing the sign that says the bridge is closed."
+    "evidenceStatement": "The student will analyze the relationship among character actions/interactions within one text.",
+    "explanation": "Look at the story structure: the sons went from lazy to hardworking. The father's secret about \"treasure\" was actually a lesson about the value of work.",
+    "practiceTest": 6
   },
   {
-    "id": 5106,
-    "practiceTest": 6,
+    "id": 5107,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "6",
     "dok": 2,
-    "standard": "RL.6",
+    "standard": "RL.5",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "Which statement best describes Grandma's point of view?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Why did the author include the neighbor character in the story?",
     "options": [
       {
         "label": "A",
-        "text": "She believes the tradition should be canceled"
+        "text": "To show that the neighbor wanted to help farm the field"
       },
       {
         "label": "B",
-        "text": "She believes the bridge matters more than the people"
+        "text": "To show that the father was a bad parent"
       },
       {
         "label": "C",
-        "text": "She believes the purpose of the tradition is more important than the location"
+        "text": "To show how much time passed and that others noticed the sons were not helping"
       },
       {
         "label": "D",
-        "text": "She thinks children should not help plan events"
+        "text": "To explain how farming works in Vietnam"
       }
     ],
     "correctAnswer": "C",
-    "rubric": "The student identifies a character's point of view.",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "Grandma says the lantern walk was never only about the bridge. She values the meaning behind the tradition."
-  },
-  {
-    "id": 5107,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "1",
-    "dok": 2,
-    "standard": "RL.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "What did Maya paint on her lantern this year?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A fox and red leaves"
-      },
-      {
-        "label": "B",
-        "text": "Silver fish and tiny blue waves"
-      },
-      {
-        "label": "C",
-        "text": "A moon and yellow stars"
-      },
-      {
-        "label": "D",
-        "text": "A bridge and a bell"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a detail from the text.",
-    "points": 1,
-    "explanation": "The passage says Maya painted her lantern with silver fish and tiny blue waves."
+    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text.",
+    "explanation": "Sap looks like water but tastes sweet because it contains sugar that the tree made during the previous summer.",
+    "practiceTest": 6
   },
   {
     "id": 5108,
-    "practiceTest": 6,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
-    "target": "3",
-    "dok": 2,
-    "standard": "RL.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "Why does Eli say, 'Not ruined. Just changed'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "He thinks someone else will repair the bridge in time"
-      },
-      {
-        "label": "B",
-        "text": "He believes the event can still happen in a different way"
-      },
-      {
-        "label": "C",
-        "text": "He wants to stay home instead"
-      },
-      {
-        "label": "D",
-        "text": "He does not care about the lantern walk"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student interprets a character's words.",
-    "points": 1,
-    "explanation": "Eli is saying the tradition can continue even if it does not happen on the bridge."
-  },
-  {
-    "id": 5109,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "2",
-    "dok": 2,
-    "standard": "RL.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "Which detail best supports the idea that the whole town helped save the event?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Maya rode her bike to the creek"
-      },
-      {
-        "label": "B",
-        "text": "Strings of white lights hung between the trees, and families stood together in the park"
-      },
-      {
-        "label": "C",
-        "text": "The water moved below the bridge"
-      },
-      {
-        "label": "D",
-        "text": "Maya remembered last year's lantern"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student selects supporting evidence for a theme or idea.",
-    "points": 1,
-    "explanation": "Those details show many people worked together to create the new celebration."
-  },
-  {
-    "id": 5110,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "4",
+    "target": "7",
     "dok": 2,
     "standard": "RL.4",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "What does the word \"shimmered\" help the reader picture?",
+    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
+    "passageTitle": "Treasure in the Field",
+    "questionText": "Read this sentence from the story: \"The brothers moped around with their heads down.\" What does the word \"moped\" tell the reader about the brothers?",
     "options": [
       {
         "label": "A",
-        "text": "The lights moved and sparkled on the water"
+        "text": "They were excited about planting."
       },
       {
         "label": "B",
-        "text": "The pond turned dark black"
+        "text": "They were sad and disappointed."
       },
       {
         "label": "C",
-        "text": "The lanterns sank into the pond"
+        "text": "They were tired from digging."
       },
       {
         "label": "D",
-        "text": "The park became noisy"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student determines meaning from context.",
-    "points": 1,
-    "explanation": "Shimmered suggests the reflections were shining with a soft, moving sparkle."
-  },
-  {
-    "id": 5111,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "7",
-    "dok": 2,
-    "standard": "RI.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "What is a river's beginning called?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Its valley"
-      },
-      {
-        "label": "B",
-        "text": "Its source"
-      },
-      {
-        "label": "C",
-        "text": "Its sediment"
-      },
-      {
-        "label": "D",
-        "text": "Its mouth wall"
+        "text": "They were angry at each other."
       }
     ],
     "correctAnswer": "B",
-    "rubric": "The student identifies a key detail from the informational text.",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "The passage states that a river's beginning is called its source."
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context.",
+    "explanation": "The passage states that sugar is made in the leaves during summer and stored in the tree during winter.",
+    "practiceTest": 6
   },
   {
-    "id": 5112,
-    "practiceTest": 6,
+    "id": 5109,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "8",
     "dok": 2,
-    "standard": "RI.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "What is the main idea of the passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Rivers only help fish survive"
-      },
-      {
-        "label": "B",
-        "text": "Rivers can change land and are important to life"
-      },
-      {
-        "label": "C",
-        "text": "Rivers always flow in straight lines"
-      },
-      {
-        "label": "D",
-        "text": "Only large rivers matter"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the main idea.",
-    "points": 1,
-    "explanation": "The passage explains both how rivers shape land and why they matter to people, animals, and the environment."
-  },
-  {
-    "id": 5113,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "9",
-    "dok": 2,
-    "standard": "RI.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "How does flowing water help erosion happen?",
-    "options": [
-      {
-        "label": "A",
-        "text": "It paints the riverbanks"
-      },
-      {
-        "label": "B",
-        "text": "It carries sand, soil, and rocks that scrape the land"
-      },
-      {
-        "label": "C",
-        "text": "It makes the river warmer"
-      },
-      {
-        "label": "D",
-        "text": "It stops weathering from happening"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student explains a cause-and-effect relationship.",
-    "points": 1,
-    "explanation": "The passage says the materials carried by water bump and scrape along the bottom, helping wear the land away."
-  },
-  {
-    "id": 5114,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "10",
-    "dok": 2,
-    "standard": "RI.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "What does the word \"meanders\" mean in the passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Fast waterfalls"
-      },
-      {
-        "label": "B",
-        "text": "Curves or bends in a river"
-      },
-      {
-        "label": "C",
-        "text": "Large river mouths"
-      },
-      {
-        "label": "D",
-        "text": "Pieces of broken rock"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student determines word meaning from context.",
-    "points": 1,
-    "explanation": "The sentence explains that rivers often curve and bend, and then names those bends meanders."
-  },
-  {
-    "id": 5115,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "11",
-    "dok": 2,
-    "standard": "RI.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "Why does the author use bold section headings?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To separate the passage into topics"
-      },
-      {
-        "label": "B",
-        "text": "To show which words rhyme"
-      },
-      {
-        "label": "C",
-        "text": "To tell a story in order"
-      },
-      {
-        "label": "D",
-        "text": "To make the text shorter"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student understands a text feature.",
-    "points": 1,
-    "explanation": "The headings organize the information into clear sections so readers can follow different ideas."
-  },
-  {
-    "id": 5116,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "12",
-    "dok": 2,
-    "standard": "RI.6",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "What is the author's main purpose in writing this passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To entertain readers with a river story"
-      },
-      {
-        "label": "B",
-        "text": "To persuade readers to build a dam"
-      },
-      {
-        "label": "C",
-        "text": "To inform readers about how rivers change land and why they matter"
-      },
-      {
-        "label": "D",
-        "text": "To compare rivers and oceans"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the author's purpose.",
-    "points": 1,
-    "explanation": "The passage gives facts and explanations about rivers, so its purpose is to inform."
-  },
-  {
-    "id": 5117,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "7",
-    "dok": 2,
     "standard": "RI.1",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "According to the passage, where can sediment build up?",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "According to the passage, why do the Coleman brothers collect sap in the spring?",
     "options": [
       {
         "label": "A",
-        "text": "Only at the source of a river"
+        "text": "Because the trees only grow in spring"
       },
       {
         "label": "B",
-        "text": "Along riverbanks or near the river's mouth"
+        "text": "Because they need water for their farm"
       },
       {
         "label": "C",
-        "text": "Only in deep canyons"
+        "text": "Because sap flows in the spring when frost melts inside the trees"
       },
       {
         "label": "D",
-        "text": "Only under bridges"
+        "text": "Because the University of Vermont told them to"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student recalls a supporting detail.",
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "The passage says sediment can build up along riverbanks or near the mouth of a river."
+    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
+    "explanation": "Legend explains something through a story (Woksis), while the science section uses research and experiments to explain how sap actually flows.",
+    "practiceTest": 6
   },
   {
-    "id": 5118,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "8",
-    "dok": 2,
-    "standard": "RI.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "What is the main idea of the section called 'Why Rivers Matter'?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Rivers are important because they support people, animals, and ecosystems"
-      },
-      {
-        "label": "B",
-        "text": "Rivers are too dangerous to use"
-      },
-      {
-        "label": "C",
-        "text": "Only birds need rivers"
-      },
-      {
-        "label": "D",
-        "text": "Rivers do not need protection"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the main idea of a section.",
-    "points": 1,
-    "explanation": "That section explains how rivers provide water, habitats, transportation, and recreation."
-  },
-  {
-    "id": 5119,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "9",
-    "dok": 2,
-    "standard": "RI.3",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "What happens as tiny streams join together?",
-    "options": [
-      {
-        "label": "A",
-        "text": "They form larger creeks and rivers"
-      },
-      {
-        "label": "B",
-        "text": "They disappear into the ground"
-      },
-      {
-        "label": "C",
-        "text": "They freeze permanently"
-      },
-      {
-        "label": "D",
-        "text": "They stop moving downhill"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies how ideas are connected in the text.",
-    "points": 1,
-    "explanation": "The passage states that as tiny streams join together, they form larger creeks and rivers."
-  },
-  {
-    "id": 5120,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "10",
-    "dok": 2,
-    "standard": "RI.4",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "What does the word \"sediment\" mean in the passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Dropped sand, soil, and rock"
-      },
-      {
-        "label": "B",
-        "text": "A river's source"
-      },
-      {
-        "label": "C",
-        "text": "A type of fish habitat"
-      },
-      {
-        "label": "D",
-        "text": "A deep canyon wall"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student determines the meaning of a science term.",
-    "points": 1,
-    "explanation": "The passage directly explains that sediment is the material rivers drop when they slow down."
-  },
-  {
-    "id": 5121,
-    "practiceTest": 6,
+    "id": 5110,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "11",
-    "dok": 2,
-    "standard": "RI.5",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "Which section mostly explains how rivers wear away land?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Where Rivers Begin"
-      },
-      {
-        "label": "B",
-        "text": "Erosion and Weathering"
-      },
-      {
-        "label": "C",
-        "text": "Why Rivers Matter"
-      },
-      {
-        "label": "D",
-        "text": "Dropping Sediment"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student uses text structure to locate information.",
-    "points": 1,
-    "explanation": "The section titled 'Erosion and Weathering' explains how rivers wear away land."
-  },
-  {
-    "id": 5122,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "12",
-    "dok": 2,
-    "standard": "RI.6",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "Which sentence best shows the author thinks rivers should be protected?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Many rivers begin in mountains or hills"
-      },
-      {
-        "label": "B",
-        "text": "Because rivers are so important, many communities work to protect them"
-      },
-      {
-        "label": "C",
-        "text": "Rivers do not always flow in straight lines"
-      },
-      {
-        "label": "D",
-        "text": "Fish lay eggs in riverbeds"
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies the author's viewpoint from the text.",
-    "points": 1,
-    "explanation": "That sentence directly states that communities work to protect rivers because they are important."
-  },
-  {
-    "id": 5123,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "13",
-    "dok": 2,
-    "standard": "L.3.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**The Lantern Bridge**\n*by Naomi Reed*\n\nEvery autumn, the town of Pine Creek held a lantern walk. Families gathered at sunset beside the old wooden bridge, carrying paper lanterns painted with stars, leaves, and moons. Then they crossed the bridge together and hung the lanterns in the town square.\n\nThis year, however, the bridge was closed.\n\nOn the morning of the lantern walk, Maya and her older brother Eli rode their bikes to the creek and saw a bright orange sign. It said:\n\n**BRIDGE CLOSED FOR REPAIRS**\n\n\"But the lantern walk is tonight!\" Maya said.\n\nMr. Vega, who was standing nearby with a toolbox, nodded. \"Last night's storm loosened several boards. It isn't safe for people to cross yet.\"\n\nMaya stared at the dark water moving below the bridge. \"Then the lantern walk is ruined.\"\n\n\"Not ruined,\" Eli said. \"Just changed.\"\n\nMaya wasn't so sure. The bridge was the heart of the tradition. Their grandmother had crossed it when she was a child. Last year, Maya had carried a lantern painted with a fox. This year, she had painted one with silver fish and tiny blue waves.\n\nAt lunch, Maya, Eli, and their grandmother sat at the kitchen table. Grandma listened carefully, then folded her hands.\n\n\"Traditions matter,\" she said, \"but the reason behind a tradition matters even more.\"\n\n\"What does that mean?\" Maya asked.\n\n\"The lantern walk was never only about the bridge,\" Grandma replied. \"It was about bringing people together.\"\n\nEli looked up. \"Then we need another way to bring everyone together.\"\n\nThat afternoon, the three of them made calls. Eli spoke with the librarian. Grandma called the bakery. Maya went door to door on their street with a marker and a stack of bright yellow paper.\n\nBy evening, new signs were taped all over town:\n\n**LANTERN WALK MOVED TO MAPLE PARK**\n**MEET BY THE BIG OAK TREE AT 6:30**\n\nWhen Maya arrived at the park, she gasped. Strings of white lights hung between the trees. The bakery had sent trays of warm rolls. The librarian had brought a wagon full of books about fall festivals from around the world. Families stood in groups, laughing as they lit their lanterns.\n\n\"You did all this so quickly,\" Maya told Grandma.\n\nGrandma smiled. \"Many hands make light work.\"\n\nAt 6:30, Mr. Vega rang a little brass bell. \"Welcome, everyone!\" he called. \"The bridge may be closed, but Pine Creek is still open for celebration.\"\n\nPeople cheered. Then the lantern walk began. Instead of crossing the creek, everyone followed a path around the park. The lanterns glowed red, gold, and blue in the deepening twilight. Reflections of the lights shimmered in the pond.\n\nMaya walked beside Eli and Grandma, holding her lantern carefully. Around her, she heard babies babbling, dogs barking, and neighbors greeting one another. The night felt different from past years, but not smaller. In some ways, it felt bigger.\n\nAt the end of the path, families hung their lanterns on ropes stretched between two trees. Soon the park was shining.\n\nMaya stepped back and looked at the glowing row of lanterns. \"I think this might be my favorite lantern walk yet,\" she said.\n\nGrandma squeezed her shoulder. \"Traditions can bend without breaking,\" she said.\n\nAcross the park, Mr. Vega lifted a repaired board from the bridge onto his truck. He waved, and Maya waved back. She realized the town had not lost its tradition at all. It had carried it somewhere new.",
-    "passageTitle": "The Lantern Bridge",
-    "questionText": "Which sentence uses commas correctly?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Maya Eli and Grandma made calls all afternoon."
-      },
-      {
-        "label": "B",
-        "text": "Maya, Eli, and Grandma made calls all afternoon."
-      },
-      {
-        "label": "C",
-        "text": "Maya Eli, and Grandma made calls all afternoon."
-      },
-      {
-        "label": "D",
-        "text": "Maya, Eli and, Grandma made calls all afternoon."
-      }
-    ],
-    "correctAnswer": "B",
-    "rubric": "The student identifies correct comma use in a series.",
-    "points": 1,
-    "explanation": "Items in a series should be separated with commas: Maya, Eli, and Grandma."
-  },
-  {
-    "id": 5124,
-    "practiceTest": 6,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "14",
-    "dok": 2,
-    "standard": "L.3.2",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**How Rivers Shape the Land**\n*adapted from educational science sources*\n\nRivers do much more than carry water from one place to another. Over time, rivers can change the shape of land, move rocks and soil, and create habitats for plants and animals. Even a small stream can slowly carve a path through earth and stone.\n\n**Where Rivers Begin**\n\nMany rivers begin in mountains or hills where rainwater collects or snow melts. Gravity pulls the water downhill. As tiny streams join together, they form larger creeks and rivers. A river's beginning is called its source.\n\n**Erosion and Weathering**\n\nFlowing water wears away land in a process called erosion. A river can carry bits of sand, soil, and rock. As these materials bump and scrape along the bottom of the river, they help wear the land away even more. Weathering also helps. Weathering happens when wind, water, ice, and temperature changes break rocks into smaller pieces.\n\n**Curves, Valleys, and Canyons**\n\nRivers do not always flow in straight lines. Over time, they often curve and bend. These bends are called meanders. A river may also cut down into the ground and form a valley. In some places, rivers have carved deep canyons with steep walls. The Grand Canyon in Arizona was shaped over a very long time by the Colorado River and other natural forces.\n\n**Dropping Sediment**\n\nAs rivers slow down, they may drop some of the sand, soil, and rock they were carrying. These dropped materials are called sediment. Sediment can build up along riverbanks or near the mouth of a river, where it flows into a lake or ocean. Over time, this can create new landforms.\n\n**Why Rivers Matter**\n\nRivers provide water for people, farms, and wildlife. Many animals depend on river habitats for food and shelter. Fish lay eggs in riverbeds. Birds nest in trees along the banks. People also use rivers for transportation, fishing, and recreation.\n\nBecause rivers are so important, many communities work to protect them. Planting trees near riverbanks, reducing pollution, and keeping trash out of streams all help keep rivers healthy. A healthy river can continue shaping the land and supporting life for many years.",
-    "passageTitle": "How Rivers Shape the Land",
-    "questionText": "Which sentence is punctuated correctly?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Rivers are important because they provide water food and habitats."
-      },
-      {
-        "label": "B",
-        "text": "Rivers are important, because they provide water, food, and habitats."
-      },
-      {
-        "label": "C",
-        "text": "Rivers are important because they provide water, food, and habitats."
-      },
-      {
-        "label": "D",
-        "text": "Rivers are important because, they provide water food and habitats."
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies correct punctuation.",
-    "points": 1,
-    "explanation": "The list water, food, and habitats is correctly punctuated in choice C."
-  },
-  {
-    "id": 5125,
-    "grade": 3,
-    "practiceTest": 6,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
-    "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Planning the Lantern Walk**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation tells how the town kept its lantern walk tradition after the bridge changed.\n\nSpeaker 2: People first noticed that the old route would not work safely anymore. Instead of canceling the event, they met to think of new ideas.\n\nSpeaker 1: Bakers, artists, and families all helped. Some prepared food, some built lanterns, and others suggested a new path through town.\n\nSpeaker 2: By sharing ideas, the town protected the tradition while also adjusting to a changed place.\n\nSpeaker 1: The report shows that a community can solve a problem when many people contribute.",
-    "passageTitle": "Planning the Lantern Walk",
-    "questionText": "What is the main idea of the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "A community can keep a tradition by solving problems together"
-      },
-      {
-        "label": "B",
-        "text": "Bakeries are the most important part of a town festival"
-      },
-      {
-        "label": "C",
-        "text": "Lanterns should only be used on bridges"
-      },
-      {
-        "label": "D",
-        "text": "Traditions should never change"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies the main idea of the presentation.",
-    "points": 1,
-    "explanation": "The speakers explain that the town worked together to protect the lantern walk after the route changed."
-  },
-  {
-    "id": 5126,
-    "grade": 3,
-    "practiceTest": 6,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 3,
-    "target": "18",
     "dok": 3,
-    "standard": "SL.3.2",
+    "standard": "RI.3",
     "type": "two-part",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Planning the Lantern Walk**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation tells how the town kept its lantern walk tradition after the bridge changed.\n\nSpeaker 2: People first noticed that the old route would not work safely anymore. Instead of canceling the event, they met to think of new ideas.\n\nSpeaker 1: Bakers, artists, and families all helped. Some prepared food, some built lanterns, and others suggested a new path through town.\n\nSpeaker 2: By sharing ideas, the town protected the tradition while also adjusting to a changed place.\n\nSpeaker 1: The report shows that a community can solve a problem when many people contribute.",
-    "passageTitle": "Planning the Lantern Walk",
-    "questionText": "Answer both parts of the question.",
-    "partAPrompt": "Part A: Why do the speakers name bakers, artists, and families?",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "Click on the sentence that gives the best conclusion about sugar-maple trees.",
     "partAOptions": [
       {
         "label": "A",
-        "text": "to show that many different people helped solve the problem"
+        "text": "Sugar maple trees grow best in cold weather."
       },
       {
         "label": "B",
-        "text": "to explain why the event moved to another town"
+        "text": "Most sugar maple trees are about 50 feet tall."
       },
       {
         "label": "C",
-        "text": "to compare food with lanterns"
+        "text": "The sap in sugar maple trees begins flowing in early spring."
       },
       {
         "label": "D",
-        "text": "to describe the weather during the event"
+        "text": "Vermont has the best weather for growing sugar maple trees."
       }
     ],
-    "partBPrompt": "Part B: Which detail best supports your answer?",
+    "partBPrompt": "Click on the sentence from the passage that best supports your answer in Part A. Choose one answer.",
     "partBOptions": [
       {
         "label": "A",
-        "text": "People first noticed that the old route would not work safely anymore."
+        "text": "A 50-foot-high sugar maple has nearly two hundred thousand leaves."
       },
       {
         "label": "B",
-        "text": "Some prepared food, some built lanterns, and others suggested a new path through town."
+        "text": "The Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont."
       },
       {
         "label": "C",
-        "text": "This presentation tells how the town kept its lantern walk tradition."
+        "text": "Scientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true."
       },
       {
         "label": "D",
-        "text": "The report shows that a community can solve a problem."
+        "text": "Every spring, the Colemans tap holes into the sugar-maple trees, then hang a bucket under each hole to catch the sap."
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will form a conclusion about an informational text and identify details that support it.",
+    "explanation": "Part A: The best conclusion is that sap in sugar maple trees begins flowing in early spring. Part B: The sentence about the Colemans tapping trees every spring best supports that conclusion.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5111,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "What is the author's main purpose for writing this passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To persuade readers to buy maple syrup"
+      },
+      {
+        "label": "B",
+        "text": "To tell an entertaining story about trees"
+      },
+      {
+        "label": "C",
+        "text": "To inform readers about how maple syrup is made and how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To compare different types of trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish the author's point of view within a text.",
+    "explanation": "A bar graph uses rectangular bars to show data, and a \"gash\" is a deep cut (like the tomahawk cut in the tree).",
+    "practiceTest": 6
+  },
+  {
+    "id": 5112,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "12",
+    "dok": 3,
+    "standard": "RI.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Why did the author include the legend of Woksis in the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To prove that maple syrup is healthy"
+      },
+      {
+        "label": "B",
+        "text": "To compare modern and ancient methods of making syrup"
+      },
+      {
+        "label": "C",
+        "text": "To show that people have been making maple syrup for a very long time"
+      },
+      {
+        "label": "D",
+        "text": "To explain why the Iroquois planted maple trees"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze the interaction between elements of a text within a text.",
+    "explanation": "The Colemans continue maple sugaring because it is a family tradition passed down through generations.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5113,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "13",
+    "dok": 2,
+    "standard": "RI.5",
+    "type": "multi-select",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Select TWO reasons the author organized the passage with the section \"What Makes Sap Run?\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "To tell a funny story about trees"
+      },
+      {
+        "label": "B",
+        "text": "To make the passage more entertaining"
+      },
+      {
+        "label": "C",
+        "text": "To explain the science behind how sap flows"
+      },
+      {
+        "label": "D",
+        "text": "To answer a question readers might have after reading about the Colemans"
+      },
+      {
+        "label": "E",
+        "text": "To compare maple trees to other types of trees"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will analyze why the author structured elements within the texts in a certain manner.",
+    "explanation": "Both the Woksis legend and the Coleman brothers' story show that maple syrup production has been important for a very long time.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5114,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read this sentence: \"sap flow was a 'most mysterious subject.'\" What does the word \"mysterious\" mean?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Easy to understand"
+      },
+      {
+        "label": "B",
+        "text": "Very interesting"
+      },
+      {
+        "label": "C",
+        "text": "Not well known"
+      },
+      {
+        "label": "D",
+        "text": "Hard to explain or understand"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context in an informational text.",
+    "explanation": "\"Mysterious\" means hard to explain or understand. The passage says scientists found sap flow confusing, which matches \"hard to explain.\"",
+    "practiceTest": 6
+  },
+  {
+    "id": 5115,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "14",
+    "dok": 2,
+    "standard": "L.5a",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
+    "passageTitle": "Sap's Running",
+    "questionText": "Read the sentence from the passage.\n\nAll these leaves drink in summer sunshine and make sugar.\n\nWhich statement best describes what this sentence means?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Leaves grow larger in the summer."
+      },
+      {
+        "label": "B",
+        "text": "Leaves use sunlight to make sugar."
+      },
+      {
+        "label": "C",
+        "text": "Summer is the best time to collect sugar."
+      },
+      {
+        "label": "D",
+        "text": "Trees with many leaves make more sugar."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context and analyze its use in the text.",
+    "explanation": "The sentence uses figurative language to explain that leaves use sunlight to make sugar, so choice B is the best description.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5116,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1bE",
+    "dok": 2,
+    "standard": "W.3b, W.5",
+    "type": "multi-select",
+    "questionText": "Ellen is writing a story for her class about a day at the beach. She wants to revise her story to use more descriptive words. Read the draft and complete the task that follows.\n\nIt was Ellen's last day of summer vacation. She raced into the garage and announced, \"Dad, we have to go to the beach today! It's our last chance this summer to go swimming and build sandcastles together!\"\n\nDad smiled happily and, together, Ellen and Dad drove 45 minutes to the beach. Once there, they set up their chairs near the water. Dad read and Ellen played.\n\nEllen worked for about an hour on her sandcastle. Then, she noticed that her dad had spent that entire time just reading a book. She felt annoyed. She looked at him.\n\nDad grinned and set his book aside. Together, the two raced into the warm, bubbly waves. They laughed with excitement.\n\nSelect two of the choices that have the best descriptive sentences to replace \"Dad read and Ellen played\" and \"She looked at him.\"",
+    "options": [
+      {
+        "label": "A",
+        "text": "Dad enjoyed relaxing with his new book while Ellen built a sandcastle. / She gave him a look that said, \"I want you to spend time with me.\""
+      },
+      {
+        "label": "B",
+        "text": "Dad helped Ellen build a sandcastle. / She gave him a look that said, \"I'm glad you like your book.\""
+      },
+      {
+        "label": "C",
+        "text": "Dad read a book to Ellen and then they swam. / She looked at the pictures in the book."
+      },
+      {
+        "label": "D",
+        "text": "Dad read for a while and then built a sandcastle. / She looked at the warm, bubbly waves."
+      },
+      {
+        "label": "E",
+        "text": "Dad had a wonderful time reading while Ellen worked on her giant sandcastle. / She gave him a look that said, \"It's time to have some fun, now!\""
+      },
+      {
+        "label": "F",
+        "text": "Dad decided that he did not like his book. / She gave him a look that said, \"You are the best dad.\""
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "E"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise narrative text by identifying descriptive details that convey events or experiences.",
+    "explanation": "Choices A and E add vivid details that match the events in the beach story and show Ellen's feelings more clearly.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5117,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "3bE",
+    "dok": 2,
+    "standard": "W.2b, W.5",
+    "type": "multi-select",
+    "questionText": "A student is writing a report for social studies class about the state of Alaska. The student wants to revise the draft to make sure it has enough details. Read this portion of the report and complete the task that follows.\n\nAlaska is a very big state. It is bigger than Texas, California, and Montana put together! Even though it is a big state, only about 730,000 people live there. Alaska has 39 mountain ranges and two rain forests. A lot of different animals live in Alaska. In Barrow, the town located farthest north in the state, the sun doesn't set between May 10 and August 2, but between November 18 and January 23, the sun doesn't rise. Alaska is a very interesting and unusual place.\n\nMy notes on Alaska:\n• Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home.\n• The capital of Alaska is Juneau.\n• There are 70,000 sea otters living in the waters of Alaska.\n• Alaska did not become a state until 1959.\n• The mountains in Alaska have the coldest temperatures in the United States.\n• Alaska is only 55 miles away from Russia.\n\nChoose the two sentences from the student's notes that add more facts to the underlined sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The capital of Alaska is Juneau."
+      },
+      {
+        "label": "B",
+        "text": "Alaska did not become a state until 1959."
+      },
+      {
+        "label": "C",
+        "text": "Alaska is only 55 miles away from Russia."
+      },
+      {
+        "label": "D",
+        "text": "There are 70,000 sea otters living in the waters of Alaska."
+      },
+      {
+        "label": "E",
+        "text": "The mountains in Alaska have the coldest temperatures in the United States."
+      },
+      {
+        "label": "F",
+        "text": "Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home."
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will revise informational or explanatory text by identifying the best use of elaboration techniques such as supporting details.",
+    "explanation": "The underlined sentence is about animals living in Alaska, so the best added facts are the sea-otter detail and the list of animals that live there.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5118,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "6b",
+    "dok": 2,
+    "standard": "W.1d",
+    "type": "multiple-choice",
+    "questionText": "A student is writing an opinion article for her teacher about her favorite field trip. The student wants to revise the draft so that it has a logical conclusion. Read the draft of the opinion article and complete the task that follows.\n\nMy favorite third-grade field trip is the trip to the zoo. There are many reasons that the zoo is the best field trip. First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms. As you can see, the best third-grade trip by far is the zoo field trip. Second, we get to eat lunch at a really great rest area with picnic tables. Also, we get to spend the whole day walking around looking at interesting animals.\n\nClick on the sentence in the draft that is in the wrong place.",
+    "options": [
+      {
+        "label": "A",
+        "text": "My favorite third-grade field trip is the trip to the zoo."
+      },
+      {
+        "label": "B",
+        "text": "There are many reasons that the zoo is the best field trip."
+      },
+      {
+        "label": "C",
+        "text": "First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms."
+      },
+      {
+        "label": "D",
+        "text": "As you can see, the best third-grade trip by far is the zoo field trip."
+      },
+      {
+        "label": "E",
+        "text": "Second, we get to eat lunch at a really great rest area with picnic tables."
+      },
+      {
+        "label": "F",
+        "text": "Also, we get to spend the whole day walking around looking at interesting animals."
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will revise opinion text by identifying improved organizational elements such as organizing.",
+    "explanation": "The conclusion sentence belongs at the end of the opinion piece, so it is the sentence in the wrong place.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5119,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "8",
+    "dok": 2,
+    "standard": "L.3a",
+    "type": "multi-select",
+    "questionText": "A student is writing an opinion paper for her teacher about dogs. Read this paragraph from the paper and the directions that follow.\n\nDogs are described as “people's best friend” because they make people happy. The fur on a dog can be long or short, or curly or straight, but most of the time it is soft. When people pet dogs, it makes them feel happy. There are community groups that bring dogs to nursing homes for the patients. Being able to play with the dogs makes the patients feel good. This is one reason why I think dogs are wonderful animals.\n\nSelect the best two words from the choices to replace the underlined words in the paragraph.",
+    "options": [
+      {
+        "label": "A",
+        "text": "beautiful"
+      },
+      {
+        "label": "B",
+        "text": "fierce"
+      },
+      {
+        "label": "C",
+        "text": "healthier"
+      },
+      {
+        "label": "D",
+        "text": "lucky"
+      },
+      {
+        "label": "E",
+        "text": "polite"
+      },
+      {
+        "label": "F",
+        "text": "relaxed"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "F"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will choose the correct words or phrases for audience or purpose.",
+    "explanation": "The underlined words should fit a formal opinion paper. 'healthier' and 'relaxed' make the paragraph clearer and more appropriate for the audience and purpose.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5120,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.2c",
+    "type": "multi-select",
+    "questionText": "Click on two sentences that have mistakes in punctuation.\n\nTim and I sat in the front row at the circus, and the clowns tumbled and danced in front of us. They pretended to throw water on us, but their buckets just had shiny bits of paper. Then, one clown really did spray water on me from a flower on his jacket.",
+    "options": [
+      {
+        "label": "A",
+        "text": "“Oh, he got me! I said to Tim.”"
+      },
+      {
+        "label": "B",
+        "text": "“Yes” he laughed “he tricked you twice!”"
+      },
+      {
+        "label": "C",
+        "text": "After that, the elephants came out. The elephants did tricks like stand on their front legs."
+      },
+      {
+        "label": "D",
+        "text": "“How can those huge animals do that?” I asked Tim."
+      },
+      {
+        "label": "E",
+        "text": "“I don't know, but it's amazing,” Tim answered."
       }
     ],
     "correctAnswer": [
       "A",
       "B"
     ],
-    "rubric": "The student identifies the purpose of the detail and the best support.",
+    "rubric": "The student selects the correct two options.",
     "points": 1,
-    "explanation": "The list of helpers shows how many people contributed to the solution."
+    "evidenceStatement": "The student will apply or edit the use of commas and quotation marks in dialogue.",
+    "explanation": "The first two dialogue sentences have punctuation mistakes. They need the quotation marks and commas to be placed correctly.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5121,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "9",
+    "dok": 1,
+    "standard": "L.1e",
+    "type": "multi-select",
+    "questionText": "Click on the sentences that use the incorrect verb tenses.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Standing on the stage, I could feel my heart beating in my chest."
+      },
+      {
+        "label": "B",
+        "text": "I sings my song on the stage with my friends."
+      },
+      {
+        "label": "C",
+        "text": "The audience clapped loudly."
+      },
+      {
+        "label": "D",
+        "text": "I take a bow and walked off the stage with a smile on my face."
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "D"
+    ],
+    "rubric": "The student selects the correct two options.",
+    "points": 1,
+    "evidenceStatement": "The student will apply or edit the use of simple verb tenses in a text.",
+    "explanation": "The sentences 'I sings my song on the stage with my friends.' and 'I take a bow and walked off the stage with a smile on my face.' use incorrect verb tenses.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5122,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 3,
+    "standard": "SL.2",
+    "type": "two-part",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
+    "partAPrompt": "What is the most likely reason the author made the presentation?",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "to explain how a hot air balloon works"
+      },
+      {
+        "label": "B",
+        "text": "to show the advantages of being small"
+      },
+      {
+        "label": "C",
+        "text": "to tell how Americans feel about new experiences"
+      },
+      {
+        "label": "D",
+        "text": "to describe an important event in American history"
+      }
+    ],
+    "partBPrompt": "Which sentence from the presentation best supports your answer in part A?",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "\"Smoky hot air swelled the balloon and sent it up.\""
+      },
+      {
+        "label": "B",
+        "text": "\"He was the first American to develop a method to lift a balloon using hot air.\""
+      },
+      {
+        "label": "C",
+        "text": "\"The crowd yelled and clapped as Carnes sent the balloon up, time and again.\""
+      },
+      {
+        "label": "D",
+        "text": "\"He was the first American to see such views.\""
+      }
+    ],
+    "correctAnswer": [
+      "D",
+      "B"
+    ],
+    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a speaker's purpose and identify details that support it.",
+    "explanation": "Part A: The presentation is mainly describing an important event in American history. Part B: The sentence about Peter Carnes being the first American to develop a method to lift a balloon using hot air best supports that purpose.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5123,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Which question can a listener answer after hearing the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "In what year did the balloon ride take place?"
+      },
+      {
+        "label": "B",
+        "text": "What happened during the first hot air balloon ride?"
+      },
+      {
+        "label": "C",
+        "text": "How did Edward feel after he took his ride in the balloon?"
+      },
+      {
+        "label": "D",
+        "text": "How did Edward become the first American to ride in a balloon?"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will identify information that can be determined from an oral presentation.",
+    "explanation": "The presentation explains how Edward became the first American to ride in a balloon, so choice D is the question a listener can answer.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5124,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
+    "passageTitle": "Soaring on the Wings of the Wind",
+    "passageAuthor": "Lois Miner Huey",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
+    "questionText": "Complete the chart to show which events were planned.\n\nClick in the boxes next to the events that match if they were planned or unplanned.",
+    "gridRows": [
+      "Edward Warren Jr. rode in a balloon.",
+      "The balloon filled with smoke from a fire.",
+      "A crowd in Baltimore saw how a balloon could fly.",
+      "Peter Carnes used a stove to make the balloon rise."
+    ],
+    "gridColumns": [
+      "Planned",
+      "Unplanned"
+    ],
+    "correctAnswer": [
+      "0:1",
+      "1:0",
+      "2:0",
+      "3:0"
+    ],
+    "rubric": "The student correctly identifies which events were planned and which were unplanned.",
+    "points": 1,
+    "evidenceStatement": "The student will distinguish among ideas and events presented orally.",
+    "explanation": "The only unplanned event is Edward Warren Jr. riding in the balloon. The smoke-filled balloon, the Baltimore crowd, and Carnes using a stove were all planned parts of the demonstration.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5125,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Which conclusion is supported by the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Americans eat pizza every day."
+      },
+      {
+        "label": "B",
+        "text": "Pizza is usually eaten at lunchtime."
+      },
+      {
+        "label": "C",
+        "text": "Almost anything can go on a pizza."
+      },
+      {
+        "label": "D",
+        "text": "Lobster pizza is most popular in Maine."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct option.",
+    "points": 1,
+    "evidenceStatement": "The student will determine a supported conclusion from an oral presentation.",
+    "explanation": "The presentation shows that pizza can be made in many different ways, so the supported conclusion is that almost anything can go on a pizza.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5126,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 3,
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.2",
+    "type": "grid-match",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "Complete the chart to show which countries are known for which pizza toppings.\n\nClick in the boxes next to the countries that match the toppings.",
+    "gridRows": [
+      "United States",
+      "India",
+      "Japan"
+    ],
+    "gridColumns": [
+      "eel",
+      "pepperoni",
+      "ginger"
+    ],
+    "correctAnswer": [
+      "2:0",
+      "0:1",
+      "1:2"
+    ],
+    "rubric": "The student correctly matches each topping to the country from the presentation.",
+    "points": 1,
+    "evidenceStatement": "The student will organize information presented orally into a chart.",
+    "explanation": "The chart matches Japan with eel, the United States with pepperoni, and India with ginger based on the presentation's examples.",
+    "practiceTest": 6
   },
   {
     "id": 5127,
-    "grade": 3,
-    "practiceTest": 6,
-    "subject": "ela",
     "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
     "claim": 3,
-    "target": "19",
-    "dok": 3,
-    "standard": "SL.3.2",
-    "type": "grid-match",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**What Rivers Change**\n*presentation transcript for classroom use*\n\nSpeaker 1: Rivers do more than carry water.\n\nSpeaker 2: Over time, moving water can wear away rock and soil. This process is called erosion.\n\nSpeaker 1: Rivers can also carry soil to new places and build up banks or deltas. At the same time, rivers provide water and habitats for living things.\n\nSpeaker 2: Because rivers shape both land and life, people often depend on them in many ways.\n\nSpeaker 1: The main idea is that rivers are always affecting the places around them.",
-    "passageTitle": "What Rivers Change",
-    "questionText": "Complete the chart to show whether each detail tells how rivers shape land or support life.",
-    "gridRows": [
-      "Wear away rock and soil",
-      "Build up banks or deltas",
-      "Provide habitats",
-      "Supply water to living things"
+    "target": "4",
+    "dok": 2,
+    "standard": "SL.3",
+    "type": "multiple-choice",
+    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
+    "passageTitle": "All About Pizza",
+    "passageAuthor": "Marcia Amidon Lusted",
+    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
+    "questionText": "What is the most likely reason the author made the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "to suggest another way of looking at pizza"
+      },
+      {
+        "label": "B",
+        "text": "to change what people think is good pizza"
+      },
+      {
+        "label": "C",
+        "text": "to show why pepperoni pizza is the best kind"
+      },
+      {
+        "label": "D",
+        "text": "to explain why pizza is different in other places"
+      }
     ],
-    "gridColumns": [
-      "Shape land",
-      "Support life"
-    ],
-    "correctAnswer": [
-      "0:0",
-      "1:0",
-      "2:1",
-      "3:1"
-    ],
-    "rubric": "The student sorts river effects correctly.",
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct option.",
     "points": 1,
-    "explanation": "Erosion and build-up shape land, while habitats and water support life."
+    "evidenceStatement": "The student will determine a speaker's likely purpose for a presentation.",
+    "explanation": "The speaker's purpose is to suggest another way of looking at pizza by showing unusual toppings from different places.",
+    "practiceTest": 6
   },
   {
     "id": 5128,
-    "grade": 3,
-    "practiceTest": 6,
-    "subject": "ela",
     "testType": "cat",
-    "claim": 3,
-    "target": "19",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
     "dok": 2,
-    "standard": "SL.3.2",
-    "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**What Rivers Change**\n*presentation transcript for classroom use*\n\nSpeaker 1: Rivers do more than carry water.\n\nSpeaker 2: Over time, moving water can wear away rock and soil. This process is called erosion.\n\nSpeaker 1: Rivers can also carry soil to new places and build up banks or deltas. At the same time, rivers provide water and habitats for living things.\n\nSpeaker 2: Because rivers shape both land and life, people often depend on them in many ways.\n\nSpeaker 1: The main idea is that rivers are always affecting the places around them.",
-    "passageTitle": "What Rivers Change",
-    "questionText": "Which idea is explained in the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Rivers affect both land and living things over time"
-      },
-      {
-        "label": "B",
-        "text": "Rivers only matter to fish"
-      },
-      {
-        "label": "C",
-        "text": "Erosion stops all plants from growing"
-      },
-      {
-        "label": "D",
-        "text": "Every river makes the same kinds of landforms"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a main idea from the presentation.",
-    "points": 1,
-    "explanation": "The speakers explain erosion, land build-up, habitats, and water supply as effects of rivers."
-  },
-  {
-    "id": 5129,
-    "grade": 3,
-    "practiceTest": 6,
-    "subject": "ela",
-    "testType": "cat",
-    "claim": 4,
-    "target": "20",
-    "dok": 3,
-    "standard": "W.3.8",
+    "standard": "W.8",
     "type": "multi-select",
-    "questionText": "A student is researching how communities and rivers affect places. Which two sources would be most helpful?",
+    "questionText": "A student is writing a research report about the human eye. Read the sentences from her report and the directions that follow.\n\nOur eyes are wonderful body parts. They help us see the beauty of the world. In the center of the eye is a black spot. Have you ever wondered why that spot gets bigger and smaller?\n\nChoose two of the sources that would most likely give the student more information about the ideas she has written.",
     "options": [
       {
         "label": "A",
-        "text": "An article about river erosion and habitats"
+        "text": "www.eye.color.com, a website that tells about the colors of people's eyes"
       },
       {
         "label": "B",
-        "text": "A poster advertising a bakery sale"
+        "text": "www.eyequestion.com, a website that explains the job of each part of the eye"
       },
       {
         "label": "C",
-        "text": "A local history report about a town tradition"
+        "text": "Eyes and How They Work, a book that tells about the way that the eye parts work"
       },
       {
         "label": "D",
-        "text": "A joke book about bridges"
+        "text": "www.eye.food.com, a website that tells what we should eat to help our eyes stay healthy"
       },
       {
         "label": "E",
-        "text": "A blank map with no labels"
+        "text": "My Job as an Eye Doctor, a book that tells about being a doctor who takes care of people's eyes"
+      },
+      {
+        "label": "F",
+        "text": "You Can Find It, a children's magazine that has many puzzles and games where you look for the hidden things"
       }
     ],
     "correctAnswer": [
-      "A",
+      "B",
       "C"
     ],
-    "rubric": "The student selects the best research sources.",
+    "rubric": "The student selects the two sources that best support the student's research focus.",
     "points": 1,
-    "explanation": "The river article and local history report both support the research topic directly."
+    "evidenceStatement": "The student will evaluate sources for relevance to a research topic.",
+    "explanation": "The best sources are the website explaining the job of each eye part and the book about how the eye parts work, because both directly match the student's questions about what the eye does.",
+    "practiceTest": 6
   },
   {
-    "id": 5130,
-    "grade": 3,
-    "practiceTest": 6,
-    "subject": "ela",
+    "id": 5129,
     "testType": "cat",
-    "claim": 4,
-    "target": "21",
-    "dok": 3,
-    "standard": "RI.3.9",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "8",
+    "dok": 2,
+    "standard": "W.8",
     "type": "multiple-choice",
-    "passage": "Listen to the presentation. Then answer the questions.\n\n**Planning the Lantern Walk**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation tells how the town kept its lantern walk tradition after the bridge changed.\n\nSpeaker 2: People first noticed that the old route would not work safely anymore. Instead of canceling the event, they met to think of new ideas.\n\nSpeaker 1: Bakers, artists, and families all helped. Some prepared food, some built lanterns, and others suggested a new path through town.\n\nSpeaker 2: By sharing ideas, the town protected the tradition while also adjusting to a changed place.\n\nSpeaker 1: The report shows that a community can solve a problem when many people contribute.\n\n---\n\nListen to the presentation. Then answer the questions.\n\n**What Rivers Change**\n*presentation transcript for classroom use*\n\nSpeaker 1: Rivers do more than carry water.\n\nSpeaker 2: Over time, moving water can wear away rock and soil. This process is called erosion.\n\nSpeaker 1: Rivers can also carry soil to new places and build up banks or deltas. At the same time, rivers provide water and habitats for living things.\n\nSpeaker 2: Because rivers shape both land and life, people often depend on them in many ways.\n\nSpeaker 1: The main idea is that rivers are always affecting the places around them.",
-    "passageTitle": "The Lantern Bridge / How Rivers Shape the Land",
-    "questionText": "Which idea is supported by both texts?",
+    "questionText": "A student is writing a report about red foxes. She is looking for information about the body of the red fox. Which sentence has information that the student can use?",
     "options": [
       {
         "label": "A",
-        "text": "Water and the places around it can affect a whole community"
+        "text": "There are over twenty different kinds of foxes."
       },
       {
         "label": "B",
-        "text": "Rivers always make towns smaller"
+        "text": "Red foxes can live in hot deserts and snowy forests."
       },
       {
         "label": "C",
-        "text": "Traditions cannot survive change"
+        "text": "The red fox wraps its fluffy tail around itself like a blanket."
       },
       {
         "label": "D",
-        "text": "Only scientists understand rivers"
+        "text": "Red foxes are often clever characters in children's stories."
       }
     ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies a shared idea across the texts.",
+    "correctAnswer": "C",
+    "rubric": "The student selects the sentence that gives the relevant body detail.",
     "points": 1,
-    "explanation": "Both texts show waterways affecting people, land, and community life."
+    "evidenceStatement": "The student will identify relevant source information for research.",
+    "explanation": "The sentence about the red fox wrapping its fluffy tail around itself gives information about the fox's body, which is what the student needs.",
+    "practiceTest": 6
+  },
+  {
+    "id": 5130,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "1",
+    "dok": 2,
+    "standard": "W.8",
+    "type": "multiple-choice",
+    "questionText": "A student is writing a research report about different kinds of fruit. He wrote an opinion in the report. Read the sentences from the student's report and the directions that follow.\n\nMany Kinds of Fruit\n\nA fruit is the part of the plant that has the plant's seeds. There are many kinds of fruits. Some that are popular with kids are apples, bananas, grapes, oranges, and strawberries. Sometimes it is confusing to tell if a food is a fruit.\n\nThe student found another source about different kinds of fruit. Which sentence best supports the student's opinion?",
+    "options": [
+      {
+        "label": "A",
+        "text": "For example, it is hard to tell what some foods are when they are cut up in pieces."
+      },
+      {
+        "label": "B",
+        "text": "For example, a tomato is not sweet, but it is a fruit because it has the seeds."
+      },
+      {
+        "label": "C",
+        "text": "For example, some kids don't like some of the fruits on that list."
+      },
+      {
+        "label": "D",
+        "text": "For example, fruits can be many different shapes and colors."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the sentence that best supports the opinion in the report.",
+    "points": 1,
+    "evidenceStatement": "The student will identify evidence that supports an opinion in a research report.",
+    "explanation": "The student's opinion is that it can be confusing to tell whether some foods are fruits. The tomato example supports that opinion because tomatoes are fruits even though many people do not think of them that way.",
+    "practiceTest": 6
   },
   {
     "id": 5150,
