@@ -946,6 +946,7 @@ const test13MathCAT: Question[] = [
     correctAnswer: "Area is 36 square units because 9 × 4 = 36. Perimeter is 26 units because 9 + 4 + 9 + 4 = 26.",
     rubric: "2 points: The response correctly explains how to find both area and perimeter. 1 point: The response correctly explains only one measure or has minor errors. 0 points: All other responses.",
     points: 2,
+    explanation: "Area is found by multiplying length by width, so 9 × 4 = 36 square units. Perimeter is found by adding all four sides, so 9 + 4 + 9 + 4 = 26 units.",
   },
 ];
 
@@ -1050,6 +1051,7 @@ Use the table to answer the questions about the Fossil Hall exhibit.`,
     correctAnswer: "The museum should place the Shell Display at the entrance because it had the most visitors. Its total was 155 visitors, which is greater than the Fern Display's 132 and the Footprint Display's 100.",
     rubric: "2 points: The response names the correct display and uses numbers from the table to justify the choice. 1 point: The response names the correct display with incomplete support. 0 points: All other responses.",
     points: 2,
+    explanation: "The Shell Display should go at the entrance because it has the highest weekly total. A complete answer compares 155 visitors to 132 for the Fern Display and 100 for the Footprint Display.",
   },
   {
     id: 13044,
@@ -1073,6 +1075,7 @@ Use the table to answer the questions about the Fossil Hall exhibit.`,
     correctAnswer: "The area is 24 square units because 8 × 3 = 24. This means the front of the sign covers 24 square units of space.",
     rubric: "2 points: The response gives the correct area and explains what the area means. 1 point: The response gives the correct area but weak explanation, or explains with a minor error. 0 points: All other responses.",
     points: 2,
+    explanation: "Multiply the length and width to find area: 8 × 3 = 24 square units. The area tells how much surface the rectangular sign covers.",
   },
 ];
 
@@ -1871,6 +1874,7 @@ const test13ELAPT: Question[] = [
     correctAnswer: "The fern print from Juniper Ridge helped people learn that the area may once have been wetter and greener. Source 2 explains that plant fossils help scientists think about climate and land conditions from long ago, so the discovery gave evidence about the ridge's ancient environment.",
     rubric: "2 points: The response uses accurate information from both sources to explain what the fossil revealed. 1 point: The response uses one source well or gives only partial support. 0 points: All other responses.",
     points: 2,
+    explanation: "A strong answer explains that the fern fossil gave evidence about what Juniper Ridge was like long ago. The discovery source describes the fern print, and the second source explains that plant fossils help scientists infer past climate and land conditions.",
   },
   {
     id: 13152,
@@ -1890,6 +1894,7 @@ const test13ELAPT: Question[] = [
     correctAnswer: "Responses will vary. See rubric.",
     rubric: "4 points: The response clearly explains the topic, uses relevant details from both sources, and is well organized. 3 points: The response uses both sources with some development. 2 points: The response uses limited source support or uneven development. 1 point: Minimal response. 0 points: Off-topic or blank.",
     points: 4,
+    explanation: "A strong response explains that fossil discoveries help scientists and communities learn about past plants, animals, and environments, using details from both the Juniper Ridge discovery and the informational source about fossils.",
   },
 ];
 

@@ -825,6 +825,8 @@ const mathCat: Question[] = [
     rubric:
       "2 points: explains a correct method and gives 36 inches; 1 point: correct answer with partial explanation or a correct method without the final total.",
     points: 2,
+    explanation:
+      "Perimeter means the total distance around the rectangle. Add all four side lengths, or double the length and width: 11 + 11 + 7 + 7 = 36 inches.",
   }),
   makeQuestion(15035, {
     testType: "cat",
@@ -952,6 +954,8 @@ const mathPt: Question[] = [
     rubric:
       "2 points: explains a correct method and gives 20 feet; 1 point: correct answer with partial explanation or correct method without final total.",
     points: 2,
+    explanation:
+      "Perimeter is the total around the mat, so add both lengths and both widths: 6 + 6 + 4 + 4 = 20 feet.",
   }),
   makeQuestion(15041, {
     testType: "pt",
@@ -972,6 +976,8 @@ const mathPt: Question[] = [
     rubric:
       "2 points: totals all cabin differences and gives 11; 1 point: partial but correct work on some cabins or a minor addition error after correct setup.",
     points: 2,
+    explanation:
+      "Compare each cabin's students to its red flashlights, find how many more each cabin needs, and add the differences: 2 + 3 + 3 + 3 = 11 more flashlights.",
   }),
 ];
 
@@ -1688,6 +1694,8 @@ const elaPt: Question[] = [
     rubric:
       "2 points: explains how the sources connect and uses details from both; 1 point: partial explanation or details from only one source.",
     points: 2,
+    explanation:
+      "A strong answer explains that the first source shows dark skies helping scientists observe the sky, while the second source explains why reducing light pollution matters for seeing stars and protecting the night sky.",
   }),
   makeQuestion(15074, {
     testType: "pt",
@@ -1708,6 +1716,8 @@ const elaPt: Question[] = [
     rubric:
       "4 points: clear opinion, organized writing, evidence from both sources, and effective conclusion; 3 points: mostly complete with sufficient evidence; 2 points: partial opinion writing with limited support; 1 point: minimal response.",
     points: 4,
+    explanation:
+      "A strong response clearly argues that communities should protect dark skies and supports that opinion with evidence from both sources, such as helping observatories do their work, reducing light pollution, saving energy, and letting people enjoy the night sky.",
   }),
 ];
 

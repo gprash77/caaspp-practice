@@ -1141,6 +1141,7 @@ export const practiceTest9Questions: Question[] = [
     "correctAnswer": "3rd grade won because they collected the most bottles and cans for the week. Their total was 50 + 60 + 90 + 120 + 90 = 410, which is more than 4th grade's 390 and 5th grade's 400.",
     "rubric": "2 points: The student develops an approach to determine the winner and gives a justification. 1 point: The student correctly states that 3rd grade won but gives incomplete reasoning. 0 points: All other responses.",
     "points": 2,
+    "explanation": "A complete answer adds each grade's weekly amounts and compares the totals. Third grade has 410, which is greater than fourth grade's 390 and fifth grade's 400, so third grade wins.",
     "practiceTest": 9
   },
   {
@@ -1270,6 +1271,7 @@ export const practiceTest9Questions: Question[] = [
     "correctAnswer": "The 2nd grade class could have won by collecting more than 410 bottles and cans total on Wednesday, Thursday, and Friday. That is more than the 3rd grade total, so the 2nd grade class would win.",
     "rubric": "2 points: The student uses the numbers from Questions 3 and 4 and explains that the 2nd grade total is more than the winning total. 1 point: The student gives part of the idea without clearly connecting the totals. 0 points: All other responses.",
     "points": 2,
+    "explanation": "The winning total is 410 from third grade. If the second grade entries for Wednesday through Friday add to more than 410, then second grade would pass the highest total and win the contest.",
     "practiceTest": 9
   },
   {

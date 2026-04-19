@@ -644,6 +644,7 @@ const test11MathPT: Question[] = [
     correctAnswer: "Tomato seedlings were planted the most. The total for tomato seedlings is 12 + 15 + 18 + 20 + 16 = 81, which is more than 70 flower seedlings and 50 herb seedlings.",
     rubric: "2 points: The student identifies tomato seedlings and uses totals or clear comparisons to justify the answer. 1 point: The student gives the correct kind with incomplete reasoning. 0 points: All other responses.",
     points: 2,
+    explanation: "A complete answer adds each seedling type for the week and compares the totals. Tomato seedlings total 81, which is greater than 70 flower seedlings and 50 herb seedlings.",
   },
   {
     id: 11043, practiceTest: 11, testType: "pt", subject: "math", grade: 3,
@@ -669,6 +670,7 @@ const test11MathPT: Question[] = [
     correctAnswer: "The flower seedlings row total is 70. If the helper group's Wednesday, Thursday, and Friday numbers add to more than 70, then the helper group would have more flower seedlings than the weekly flower row total.",
     rubric: "2 points: The student explains that the helper group must have a total greater than 70 and connects that to the numbers entered in Question 4. 1 point: The student gives part of the idea without clearly comparing totals. 0 points: All other responses.",
     points: 2,
+    explanation: "The weekly flower row total is 70. Any helper-group numbers from Question 4 that add to more than 70 would make the helper group finish with more flower seedlings than the flower row.",
   },
 ];
 
@@ -1241,6 +1243,7 @@ const test11ELAPT: Question[] = [
     correctAnswer: "Source 1 shows that the mural helped the class and families work together to paint a wall that looked like their neighborhood. Source 2 explains that public art can make places welcoming, teach people, and help communities share ideas.",
     rubric: "2 points: The student explains how each source shows community benefit and includes one accurate detail from each source. 1 point: The student uses one source clearly or gives a partial answer about both. 0 points: All other responses.",
     points: 2,
+    explanation: "A strong answer uses one detail from each source: Source 1 shows people working together on the mural, and Source 2 explains that public art can welcome people, teach them, and build community.",
   },
   {
     id: 11152, practiceTest: 11, testType: "pt", subject: "ela", grade: 3,
@@ -1253,6 +1256,7 @@ const test11ELAPT: Question[] = [
     correctAnswer: "Responses will vary. See rubric.",
     rubric: "4 points: The response clearly explains how public art helps a community, uses accurate details from both sources, is organized, and shows grade-appropriate conventions. 3 points: The response uses both sources but may be less developed. 2 points: The response uses limited evidence or depends mostly on one source. 1 point: Minimal response. 0 points: Off-topic or blank.",
     points: 4,
+    explanation: "A strong essay explains that public art helps communities by bringing people together, making places more welcoming, and sharing ideas or local stories, with support from both sources.",
   },
 ];
 

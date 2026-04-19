@@ -645,6 +645,7 @@ const practiceTest12MathPT: Question[] = [
     correctAnswer: "The dog group should get the largest table because 8 dogs entered, which is more than 6 cats and 4 rabbits.",
     rubric: "2 points: The student names the dog group and supports the answer with numbers from the table. 1 point: The student names the dog group with incomplete support. 0 points: All other responses.",
     points: 2,
+    explanation: "The dog group has the most pets entered. A complete answer compares the table values and notes that 8 dogs is more than 6 cats and 4 rabbits.",
   },
   {
     id: 12044, practiceTest: 12, testType: "pt", subject: "math", grade: 3,
@@ -656,6 +657,7 @@ const practiceTest12MathPT: Question[] = [
     correctAnswer: "There are 10 + 8 + 5 = 23 treat bags now. There are 3 pet groups, so 3 more treat bags are needed. The new total is 26 treat bags.",
     rubric: "2 points: The student finds 23 current treat bags, adds 3 more, and explains the new total of 26. 1 point: The student shows part of the reasoning. 0 points: All other responses.",
     points: 2,
+    explanation: "First add the current treat bags across the three groups: 10 + 8 + 5 = 23. Then add one extra bag for each of the 3 groups, giving 26 total treat bags.",
   },
 ];
 
@@ -1243,6 +1245,7 @@ Read the two sources. Then answer the questions about how machines help people s
     correctAnswer: "People solve problems with machines by understanding how the machine works and checking it carefully. In Source 1, the students found a ribbon around the axle. In Source 2, people choose the right tool, like a ramp or pulley, to make work easier.",
     rubric: "2 points: The student uses a relevant detail from both sources to explain how machines help solve problems. 1 point: The student uses a detail from one source or gives partial explanation. 0 points: All other responses.",
     points: 2,
+    explanation: "A strong answer connects both sources by showing that machines help when people understand how they work. One source shows students fixing a robot by checking its parts, and the other explains how tools like ramps or pulleys make work easier.",
   },
   {
     id: 12152, practiceTest: 12, testType: "pt", subject: "ela", grade: 3,
@@ -1262,6 +1265,7 @@ Be sure to:
     correctAnswer: "Responses should explain that machines help people solve problems by making work easier and by helping them complete tasks. Strong responses use examples from both sources, such as fixing the parade robot and using tools like ramps, pulleys, or wheels and axles.",
     rubric: "4 points: The response clearly explains how machines help people solve problems, uses details from both sources, and is well organized. 3 points: The response is adequate with support from both sources. 2 points: The response has partial development or weak support. 1 point: The response is minimal. 0 points: Off topic, blank, or insufficient.",
     points: 4,
+    explanation: "A strong essay explains that machines help solve problems by making tasks easier or possible to complete, using examples from both the robot repair source and the informational source about simple machines.",
   },
 ];
 
