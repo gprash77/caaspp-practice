@@ -1232,6 +1232,7 @@ const test11ELAPT: Question[] = [
     correctAnswer: ["0:0", "1:1", "2:0", "3:1"],
     rubric: "The student correctly matches each detail to the source where it belongs.",
     points: 1,
+    explanation: "Source 1 includes the class and families working together on the mural and painting a wall that looked like their neighborhood. Source 2 explains how public art can make places welcoming, teach people, and help communities share ideas.",
   },
   {
     id: 11151, practiceTest: 11, testType: "pt", subject: "ela", grade: 3,
@@ -1253,7 +1254,7 @@ const test11ELAPT: Question[] = [
     passageTitle: "A Wall for Everyone / Why Public Art Matters",
     studentDirections: "You have read two sources about murals and public art. Now write an essay that explains how public art can help a community.\n\nIn your essay:\n- introduce your topic\n- use details from Source 1 and Source 2\n- explain how the details support your ideas\n- write in complete sentences",
     questionText: "Write an essay explaining how public art can help a community. Use details from both sources.",
-    correctAnswer: "Responses will vary. See rubric.",
+    correctAnswer: "A strong response explains that public art can help a community by bringing people together, making shared spaces more welcoming, and expressing local ideas. It should use details from Source 1, such as families and students working together on the mural, and from Source 2, such as public art helping communities share stories, teach people, and improve public spaces.",
     rubric: "4 points: The response clearly explains how public art helps a community, uses accurate details from both sources, is organized, and shows grade-appropriate conventions. 3 points: The response uses both sources but may be less developed. 2 points: The response uses limited evidence or depends mostly on one source. 1 point: Minimal response. 0 points: Off-topic or blank.",
     points: 4,
     explanation: "A strong essay explains that public art helps communities by bringing people together, making places more welcoming, and sharing ideas or local stories, with support from both sources.",

@@ -47,6 +47,67 @@ function getManualAnswerKey(question: Question): string | null {
   return answer;
 }
 
+function isPlaceholderExplanation(explanation?: string): boolean {
+  if (!explanation) return true;
+  return explanation.trim().toLowerCase() === "see the rubric for scoring guidance.";
+}
+
+function labelToText(
+  label: string,
+  options?: { label: string; text: string }[]
+): string {
+  const option = options?.find((entry) => entry.label === label);
+  return option ? `${label}: ${option.text}` : label;
+}
+
+function getAutoScoredFallbackExplanation(question: Question): string | null {
+  if (question.type === "multiple-choice" && typeof question.correctAnswer === "string") {
+    return `The correct answer is ${labelToText(question.correctAnswer, question.options)}.`;
+  }
+
+  if (question.type === "multi-select" && Array.isArray(question.correctAnswer)) {
+    const answers = question.correctAnswer.map((label) => labelToText(label, question.options));
+    return `The correct answers are ${answers.join("; ")}.`;
+  }
+
+  if (question.type === "two-part" && Array.isArray(question.correctAnswer)) {
+    const [partA, partB] = question.correctAnswer;
+    return `Part A: ${labelToText(partA, question.partAOptions)}. Part B: ${labelToText(partB, question.partBOptions)}.`;
+  }
+
+  if (question.type === "grid-match" && Array.isArray(question.correctAnswer) && question.gridRows && question.gridColumns) {
+    const mappings = question.correctAnswer.map((entry) => {
+      const [rowIndex, colIndex] = entry.split(":").map(Number);
+      const row = question.gridRows?.[rowIndex] ?? `Row ${rowIndex + 1}`;
+      const column = question.gridColumns?.[colIndex] ?? `Column ${colIndex + 1}`;
+      return `${row} -> ${column}`;
+    });
+    return `The correct matches are: ${mappings.join("; ")}.`;
+  }
+
+  if (question.type === "text-input" && typeof question.correctAnswer === "string") {
+    return `The correct answer is ${question.correctAnswer}.`;
+  }
+
+  if (question.type === "table-input" && Array.isArray(question.correctAnswer)) {
+    return `One valid response is ${question.correctAnswer.join(", ")}.`;
+  }
+
+  if (question.type === "fraction-model" && Array.isArray(question.correctAnswer)) {
+    return `The correct model response is ${question.correctAnswer.join(", ")}.`;
+  }
+
+  if (question.type === "shade-grid" && Array.isArray(question.correctAnswer)) {
+    return `One valid shaded pattern is ${question.correctAnswer.join(", ")}.`;
+  }
+
+  if (question.type === "line-plot" && Array.isArray(question.correctAnswer)) {
+    return `One valid line plot is ${question.correctAnswer.join(", ")}.`;
+  }
+
+  return null;
+}
+
 function getPerformanceLevel(pct: number): { label: string; color: string; className: string } {
   if (pct >= 80) return { label: "Above Standard", color: "#2e7d32", className: "good" };
   if (pct >= 50) return { label: "Near Standard", color: "#f57c00", className: "needs-work" };
@@ -144,6 +205,14 @@ export default function ResultsPage() {
 
   const subjectLabel =
     testData.subject === "math" ? "Mathematics" : "English Language Arts";
+
+  const getQuestionExplanation = (question: Question): string | null => {
+    if (!isPlaceholderExplanation(question.explanation)) {
+      return question.explanation ?? null;
+    }
+
+    return getAutoScoredFallbackExplanation(question);
+  };
 
   const toggleQuestion = (id: number) => {
     const next = new Set(expandedQ);
@@ -338,7 +407,7 @@ export default function ResultsPage() {
                       </span>
                     </p>
                   )}
-                  {!manual && r.question.explanation && (
+                  {!manual && getQuestionExplanation(r.question) && (
                     <div style={{
                       background: r.isCorrect ? "#e8f5e9" : "#fff3e0",
                       border: `1px solid ${r.isCorrect ? "#a5d6a7" : "#ffcc80"}`,
@@ -348,7 +417,7 @@ export default function ResultsPage() {
                       marginBottom: 8,
                     }}>
                       <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: "#333" }}>
-                        <strong>Explanation:</strong> {r.question.explanation}
+                        <strong>Explanation:</strong> {getQuestionExplanation(r.question)}
                       </p>
                     </div>
                   )}

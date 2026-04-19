@@ -1674,6 +1674,7 @@ const elaPt: Question[] = [
     correctAnswer: ["0:0", "1:1", "2:0", "3:1"],
     rubric: "The student matches each detail to the correct source.",
     points: 2,
+    explanation: "Source 1 includes the red flashlights and telescope schedule at Mesa Station. Source 2 explains how pointing lights downward and reducing wasted light can protect dark skies and save energy.",
   }),
   makeQuestion(15073, {
     testType: "pt",

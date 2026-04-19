@@ -1856,6 +1856,7 @@ const test13ELAPT: Question[] = [
     correctAnswer: ["0:1", "1:0", "2:2"],
     rubric: "The student correctly identifies where each detail appears across the two sources.",
     points: 1,
+    explanation: "The library poster detail belongs to Source 1, the rock-layer detail belongs to Source 2, and the idea that fossils give clues about ancient environments is supported by both sources.",
   },
   {
     id: 13151,
@@ -1891,7 +1892,7 @@ const test13ELAPT: Question[] = [
     passageTitle: "The Ridge Discovery / Why Fossils Help Scientists",
     studentDirections: "You have read 'The Ridge Discovery' and 'Why Fossils Help Scientists.' Now write an informational response explaining how fossil discoveries help scientists and communities learn about the past.\n\nIn your response:\n- Introduce the topic clearly\n- Use at least one detail from 'The Ridge Discovery'\n- Use at least one detail from 'Why Fossils Help Scientists'\n- Explain how the details support your ideas\n- Use complete sentences and correct punctuation",
     questionText: "Write an informational response explaining how fossil discoveries help scientists and communities learn about the past. Use details from both sources.",
-    correctAnswer: "Responses will vary. See rubric.",
+    correctAnswer: "A strong response explains that fossil discoveries help scientists and communities learn about the past by giving evidence about ancient plants, animals, and environments. It should use details from 'The Ridge Discovery,' such as the fern print found on Juniper Ridge, and from 'Why Fossils Help Scientists,' such as fossils helping scientists infer climate, land conditions, and life from long ago.",
     rubric: "4 points: The response clearly explains the topic, uses relevant details from both sources, and is well organized. 3 points: The response uses both sources with some development. 2 points: The response uses limited source support or uneven development. 1 point: Minimal response. 0 points: Off-topic or blank.",
     points: 4,
     explanation: "A strong response explains that fossil discoveries help scientists and communities learn about past plants, animals, and environments, using details from both the Juniper Ridge discovery and the informational source about fossils.",

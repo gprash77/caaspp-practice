@@ -1231,6 +1231,7 @@ Read the two sources. Then answer the questions about how machines help people s
     correctAnswer: ["0:0", "1:1", "2:0", "3:1"],
     rubric: "The student matches each detail to the correct source.",
     points: 1,
+    explanation: "Source 1 includes the parade robot problem and the ribbon around the axle. Source 2 explains how simple machines such as ramps, pulleys, and wheels and axles help people solve everyday problems.",
   },
   {
     id: 12151, practiceTest: 12, testType: "pt", subject: "ela", grade: 3,
