@@ -338,6 +338,24 @@ function ShadeGrid({
   );
 }
 
+function PresentationAudioPlayer({ audio }: { audio: NonNullable<Question["audio"]> }) {
+  return (
+    <div className="tds-audio-card">
+      <div className="tds-audio-label">Presentation Audio</div>
+      <audio
+        key={audio.src}
+        controls
+        preload="none"
+        className="tds-audio-player"
+        aria-label={audio.title}
+      >
+        <source src={audio.src} />
+      </audio>
+      <p className="tds-audio-note">The transcript stays visible below for accessibility support.</p>
+    </div>
+  );
+}
+
 function TableInput({
   columns,
   rowLabel,
@@ -769,6 +787,7 @@ function TestContent() {
                       <ReactMarkdown>{current.studentDirections}</ReactMarkdown>
                     </div>
                   )}
+                  {current.audio && <PresentationAudioPlayer audio={current.audio} />}
                   {(current.passageTitle || current.passageAuthor) && (
                     <div className="tds-passage-meta">
                       {current.passageTitle && (

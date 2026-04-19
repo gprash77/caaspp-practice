@@ -82,7 +82,149 @@ export interface Question {
   evidenceStatement?: string;
   explanation?: string;
   practiceTest?: number;
+  audio?: {
+    src: string;
+    title: string;
+    transcript?: string;
+  };
 }
+
+const presentationAudioRollout: Record<number, Record<string, Question["audio"]>> = {
+  2: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-2-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-2-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  3: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-3-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-3-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  4: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-4-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-4-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  5: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-5-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-5-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  6: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-6-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-6-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  7: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-7-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-7-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  8: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-8-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-8-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  9: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-9-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-9-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  10: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-10-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-10-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
+  11: {
+    "A Chalk Picture for the Whole Block": {
+      src: "/audio/presentations/grade-3/test-11-a-chalk-picture-for-the-whole-block.m4a",
+      title: "A Chalk Picture for the Whole Block narration",
+    },
+    "Colors on a City Wall": {
+      src: "/audio/presentations/grade-3/test-11-colors-on-a-city-wall.m4a",
+      title: "Colors on a City Wall narration",
+    },
+    "A Chalk Picture for the Whole Block / Colors on a City Wall": {
+      src: "/audio/presentations/grade-3/test-11-a-chalk-picture-for-the-whole-block-and-colors-on-a-city-wall.m4a",
+      title: "Combined mural presentations narration",
+    },
+  },
+  12: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-12-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "Pizza Around the World": {
+      src: "/audio/presentations/grade-3/test-12-pizza-around-the-world.m4a",
+      title: "Pizza Around the World narration",
+    },
+  },
+  13: {
+    "A Day at Ridge Museum": {
+      src: "/audio/presentations/grade-3/test-13-a-day-at-ridge-museum.m4a",
+      title: "A Day at Ridge Museum narration",
+    },
+    "Clues in Stone": {
+      src: "/audio/presentations/grade-3/test-13-clues-in-stone.m4a",
+      title: "Clues in Stone narration",
+    },
+  },
+  15: {
+    "Seeing the Sky From Above": {
+      src: "/audio/presentations/grade-3/test-15-seeing-the-sky-from-above.m4a",
+      title: "Seeing the Sky From Above narration",
+    },
+    "Pizza Travels the World": {
+      src: "/audio/presentations/grade-3/test-15-pizza-travels-the-world.m4a",
+      title: "Pizza Travels the World narration",
+    },
+  },
+};
 
 // ──────────────────────────────────────────
 // GRADE 3 MATH QUESTIONS
@@ -2102,6 +2244,11 @@ function mergeExplanations(questions: Question[]): Question[] {
   return questions.map((q) => ({
     ...q,
     explanation: q.explanation || explanations[q.id] || "See the rubric for scoring guidance.",
+    audio:
+      q.audio ||
+      (q.practiceTest && q.passageTitle
+        ? presentationAudioRollout[q.practiceTest]?.[q.passageTitle]
+        : undefined),
   }));
 }
 
@@ -2222,6 +2369,14 @@ export async function fetchQuestions(
     rubric: row.rubric,
     points: row.points,
     evidenceStatement: row.evidence_statement || undefined,
+    practiceTest: row.practice_test || undefined,
+    audio: row.audio_src
+      ? {
+          src: row.audio_src,
+          title: row.audio_title || row.passage_title || "Presentation audio",
+          transcript: row.audio_transcript || row.passage || undefined,
+        }
+      : undefined,
   })));
 }
 

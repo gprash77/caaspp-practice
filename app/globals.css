@@ -236,6 +236,34 @@ body {
   line-height: 1.8;
 }
 
+.tds-audio-card {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1px solid #c9d8e8;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f7fbff 0%, #edf5fc 100%);
+}
+
+.tds-audio-label {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1a4f7a;
+}
+
+.tds-audio-player {
+  width: 100%;
+}
+
+.tds-audio-note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #465a6d;
+}
+
 .tds-passage-meta {
   margin-bottom: 16px;
 }

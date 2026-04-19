@@ -39,6 +39,7 @@ function expectedCount(testNum: number, subject: "math" | "ela", testType: "cat"
   return EXPECTED_COUNTS[subject][testType];
 }
 
+
 describe("Question data integrity", () => {
   for (const testNum of TESTS) {
     for (const subject of SUBJECTS) {
@@ -273,6 +274,35 @@ describe("Question data integrity", () => {
       }
     }
   }
+
+  it("adds audio metadata to the rollout presentation clusters across the full presentation bank", () => {
+    const rolloutChecks = [
+      { testNum: 2, ids: [1122, 1123, 1124, 1125, 1126, 1127] },
+      { testNum: 3, ids: [2122, 2123, 2124, 2125, 2126, 2127] },
+      { testNum: 4, ids: [3122, 3123, 3124, 3125, 3126, 3127] },
+      { testNum: 5, ids: [4122, 4123, 4124, 4125, 4126, 4127] },
+      { testNum: 6, ids: [5122, 5123, 5124, 5125, 5126, 5127] },
+      { testNum: 7, ids: [7122, 7123, 7124, 7125, 7126, 7127] },
+      { testNum: 8, ids: [8122, 8123, 8124, 8125, 8126, 8127] },
+      { testNum: 9, ids: [9122, 9123, 9124, 9125, 9126, 9127] },
+      { testNum: 10, ids: [10122, 10123, 10124, 10125, 10126, 10127] },
+      { testNum: 11, ids: [11125, 11126, 11127, 11129, 11130] },
+      { testNum: 12, ids: [12126, 12127, 12128, 12129] },
+      { testNum: 13, ids: [13122, 13123, 13124, 13125, 13126, 13127, 13128, 13129, 13130] },
+      { testNum: 15, ids: [15066, 15067, 15068, 15069, 15070, 15071] },
+    ];
+
+    rolloutChecks.forEach(({ testNum, ids }) => {
+      const questions = getQuestions(3, "ela", "cat", testNum);
+
+      ids.forEach((id) => {
+        const question = questions.find((q) => q.id === id);
+        expect(question).toBeDefined();
+        expect(question?.audio?.src).toBeTruthy();
+        expect(question?.audio?.title).toBeTruthy();
+      });
+    });
+  });
 });
 
 describe("Cross-test ID uniqueness", () => {
