@@ -18,6 +18,9 @@ import { practiceTest12Questions } from "./practice-test-12";
 import { practiceTest13Questions } from "./practice-test-13";
 import { practiceTest14Questions } from "./practice-test-14";
 import { practiceTest15Questions } from "./practice-test-15";
+import { practiceTest16Questions } from "./practice-test-16";
+import { practiceTest17Questions } from "./practice-test-17";
+import { practiceTest18Questions } from "./practice-test-18";
 
 export interface Question {
   id: number;
@@ -2274,6 +2277,9 @@ export function getQuestions(
       13: practiceTest13Questions,
       14: practiceTest14Questions,
       15: practiceTest15Questions,
+      16: practiceTest16Questions,
+      17: practiceTest17Questions,
+      18: practiceTest18Questions,
     };
 
     const dedicatedQuestions = dedicatedPracticeTests[practiceTest];
@@ -2381,7 +2387,7 @@ export async function fetchQuestions(
 }
 
 // Total number of available practice tests
-export const TOTAL_PRACTICE_TESTS = 15;
+export const TOTAL_PRACTICE_TESTS = 18;
 
 // Claim descriptions for reporting
 export const mathClaims: Record<number, string> = {
