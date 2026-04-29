@@ -227,8 +227,9 @@ const elaBase: Array<[Question["type"], string, string | string[], string, strin
 
 const elaCat: Question[] = elaBase.map((item, index) => {
   const [type, questionText, correctAnswer, explanation, optionTexts] = item;
-  const passage = index < 6 ? tidePoolStory : index < 12 ? oceanArticle : index < 18 ? undefined : index < 20 ? presentationOne : index < 22 ? presentationTwo : sourceSet;
-  const passageTitle = index < 6 ? "The Tide Pool Notebook" : index < 12 ? "Life in a Tide Pool" : index < 18 ? undefined : index < 20 ? "Taking Notes at the Shore" : index < 22 ? "Protecting Tide Pools" : "A Shoreline Cleanup / Why Clean Shores Matter";
+  const isProtectingTidePoolsPresentation = index >= 20 && index < 22 || index === 29;
+  const passage = index < 6 ? tidePoolStory : index < 12 ? oceanArticle : index < 18 ? undefined : index < 20 ? presentationOne : isProtectingTidePoolsPresentation ? presentationTwo : sourceSet;
+  const passageTitle = index < 6 ? "The Tide Pool Notebook" : index < 12 ? "Life in a Tide Pool" : index < 18 ? undefined : index < 20 ? "Taking Notes at the Shore" : isProtectingTidePoolsPresentation ? "Protecting Tide Pools" : "A Shoreline Cleanup / Why Clean Shores Matter";
   const base = q(18101 + index, {
     testType: "cat",
     subject: "ela",

@@ -227,6 +227,36 @@ const presentationAudioRollout: Record<number, Record<string, Question["audio"]>
       title: "Pizza Travels the World narration",
     },
   },
+  16: {
+    "Planning a School Garden": {
+      src: "/audio/presentations/grade-3/test-16-planning-a-school-garden.m4a",
+      title: "Planning a School Garden narration",
+    },
+    "Caring for Young Plants": {
+      src: "/audio/presentations/grade-3/test-16-caring-for-young-plants.m4a",
+      title: "Caring for Young Plants narration",
+    },
+  },
+  17: {
+    "Reading Museum Clues": {
+      src: "/audio/presentations/grade-3/test-17-reading-museum-clues.m4a",
+      title: "Reading Museum Clues narration",
+    },
+    "Protecting Old Photographs": {
+      src: "/audio/presentations/grade-3/test-17-protecting-old-photographs.m4a",
+      title: "Protecting Old Photographs narration",
+    },
+  },
+  18: {
+    "Taking Notes at the Shore": {
+      src: "/audio/presentations/grade-3/test-18-taking-notes-at-the-shore.m4a",
+      title: "Taking Notes at the Shore narration",
+    },
+    "Protecting Tide Pools": {
+      src: "/audio/presentations/grade-3/test-18-protecting-tide-pools.m4a",
+      title: "Protecting Tide Pools narration",
+    },
+  },
 };
 
 // ──────────────────────────────────────────

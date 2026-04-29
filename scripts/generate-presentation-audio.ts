@@ -148,6 +148,36 @@ const audioTargets: AudioTarget[] = [
     title: "Pizza Travels the World",
     output: "public/audio/presentations/grade-3/test-15-pizza-travels-the-world.m4a",
   },
+  {
+    testNum: 16,
+    title: "Planning a School Garden",
+    output: "public/audio/presentations/grade-3/test-16-planning-a-school-garden.m4a",
+  },
+  {
+    testNum: 16,
+    title: "Caring for Young Plants",
+    output: "public/audio/presentations/grade-3/test-16-caring-for-young-plants.m4a",
+  },
+  {
+    testNum: 17,
+    title: "Reading Museum Clues",
+    output: "public/audio/presentations/grade-3/test-17-reading-museum-clues.m4a",
+  },
+  {
+    testNum: 17,
+    title: "Protecting Old Photographs",
+    output: "public/audio/presentations/grade-3/test-17-protecting-old-photographs.m4a",
+  },
+  {
+    testNum: 18,
+    title: "Taking Notes at the Shore",
+    output: "public/audio/presentations/grade-3/test-18-taking-notes-at-the-shore.m4a",
+  },
+  {
+    testNum: 18,
+    title: "Protecting Tide Pools",
+    output: "public/audio/presentations/grade-3/test-18-protecting-tide-pools.m4a",
+  },
 ];
 
 function cleanTranscript(source: string): string {
@@ -189,7 +219,13 @@ function generateAudioFile(transcript: string, outputPath: string) {
   fs.rmSync(tempAiff, { force: true });
 }
 
+const requestedTests = new Set(process.argv.slice(2).map((value) => Number(value)).filter(Number.isInteger));
+
 for (const target of audioTargets) {
+  if (requestedTests.size > 0 && !requestedTests.has(target.testNum)) {
+    continue;
+  }
+
   const transcript = findTranscript(target.testNum, target.title);
   generateAudioFile(transcript, target.output);
   console.log(`Generated ${target.output}`);
