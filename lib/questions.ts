@@ -93,6 +93,16 @@ export interface Question {
 }
 
 const presentationAudioRollout: Record<number, Record<string, Question["audio"]>> = {
+  1: {
+    "Soaring on the Wings of the Wind": {
+      src: "/audio/presentations/grade-3/test-1-soaring-on-the-wings-of-the-wind.m4a",
+      title: "Soaring on the Wings of the Wind narration",
+    },
+    "All About Pizza": {
+      src: "/audio/presentations/grade-3/test-1-all-about-pizza.m4a",
+      title: "All About Pizza narration",
+    },
+  },
   2: {
     "Soaring on the Wings of the Wind": {
       src: "/audio/presentations/grade-3/test-2-soaring-on-the-wings-of-the-wind.m4a",
@@ -284,7 +294,7 @@ export const grade3Math: Question[] = [
     standard: "3.OA.D.8",
     type: "text-input",
     questionText:
-      "Maria baked 76 cookies. She gave 24 cookies to her friends. How many cookies does Maria have now?",
+      "Megan baked 28 sugar cookies and 24 chocolate chip cookies. Enter the total number of cookies Megan baked in all.",
     correctAnswer: "52",
     rubric: "The student enters the correct number of cookies.",
     points: 1,
@@ -300,7 +310,7 @@ export const grade3Math: Question[] = [
     dok: 1,
     standard: "3.NBT.A.2",
     type: "text-input",
-    questionText: "What is 356 + 453?",
+    questionText: "What unknown number makes this equation true?\n\n□ = 881 - 72",
     correctAnswer: "809",
     rubric: "The student enters the correct number.",
     points: 1,
@@ -317,7 +327,7 @@ export const grade3Math: Question[] = [
     standard: "3.OA.A.3",
     type: "text-input",
     questionText:
-      "Jake has 3 packs of trading cards. Each pack has 5 cards. How many trading cards does Jake have in all?",
+      "There are 5 rows of trading cards with 3 trading cards in each row. How many trading cards are there?",
     correctAnswer: "15",
     rubric: "The student enters the correct number of trading cards.",
     points: 1,
@@ -334,12 +344,12 @@ export const grade3Math: Question[] = [
     standard: "3.OA.B",
     type: "multiple-choice",
     questionText:
-      'A store has 24 apples arranged equally in 4 rows. Which expression can be used to find the number of apples in each row, and why?',
+      "Which expression is equal to 6 × 3, and why?",
     options: [
-      { label: "A", text: "4 × 24, because you multiply the number of rows by the total" },
-      { label: "B", text: "24 + 4, because you add the total to the number of rows" },
-      { label: "C", text: "24 − 4, because you subtract the number of rows from the total" },
-      { label: "D", text: "24 ÷ 4, because you divide the total equally among the rows" },
+      { label: "A", text: "6 + 3, because the numbers are in the same order" },
+      { label: "B", text: "6 ÷ 3, because division and multiplication are inverse operations" },
+      { label: "C", text: "3 + 6, because the order of the numbers does not matter in addition" },
+      { label: "D", text: "3 × 6, because the order of the numbers does not matter in multiplication" },
     ],
     correctAnswer: "D",
     rubric: "The student identifies the correct expression and reason.",
@@ -357,7 +367,7 @@ export const grade3Math: Question[] = [
     standard: "3.OA.A.3",
     type: "text-input",
     questionText:
-      "A fish tank has 2 rows of fish. Each row has 3 fish. How many fish are in the tank?",
+      "Jack has 24 fish. He puts them into 4 bowls. Each bowl has an equal number of fish.\n\nHow many fish are in each bowl?",
     correctAnswer: "6",
     rubric: "The student enters the correct number of fish.",
     points: 1,
@@ -374,12 +384,12 @@ export const grade3Math: Question[] = [
     standard: "3.MD.A.1",
     type: "multiple-choice",
     questionText:
-      "The clock shows that school starts at 8:15 a.m. Lunch is 3 hours and 45 minutes later. What time is lunch?",
+      "Look at the time on this clock.\n\nThe clock shows 7:42.\n\nSelect the time, to the nearest minute, shown on the clock.",
     options: [
-      { label: "A", text: "11:00 a.m." },
-      { label: "B", text: "11:45 a.m." },
-      { label: "C", text: "12:15 p.m." },
-      { label: "D", text: "12:00 p.m." },
+      { label: "A", text: "7:42" },
+      { label: "B", text: "8:33" },
+      { label: "C", text: "9:33" },
+      { label: "D", text: "6:42" },
     ],
     correctAnswer: "D",
     rubric: "The student selects the correct time.",
@@ -396,15 +406,24 @@ export const grade3Math: Question[] = [
     dok: 2,
     standard: "3.NBT.A.2",
     type: "multiple-choice",
+    dataTable: {
+      columns: ["Number of Books"],
+      rows: [
+        { label: "Mr. Smith", values: [136] },
+        { label: "Ms. Rose", values: [148] },
+        { label: "Mr. Brown", values: [172] },
+        { label: "Mrs. Lee", values: [122] },
+      ],
+    },
     questionText:
-      "Ms. Adams collected 347 cans. Mr. Baker collected 289 cans. Ms. Clark collected 312 cans. Which teacher collected the most cans?",
+      "The table shows the number of books in four third-grade classrooms. One of the teachers is Tim's teacher, and one of the teachers is Sue's teacher.\n\nTim's teacher has 26 more books than Sue's teacher.\n\nWho is Tim's teacher?",
     options: [
-      { label: "A", text: "Ms. Adams" },
-      { label: "B", text: "Mr. Baker" },
-      { label: "C", text: "Ms. Clark" },
-      { label: "D", text: "Ms. Adams and Ms. Clark collected the same amount" },
+      { label: "A", text: "Mr. Smith" },
+      { label: "B", text: "Ms. Rose" },
+      { label: "C", text: "Mr. Brown" },
+      { label: "D", text: "Mrs. Lee" },
     ],
-    correctAnswer: "A",
+    correctAnswer: "B",
     rubric: "The student selects the correct teacher.",
     points: 1,
   },
@@ -420,7 +439,7 @@ export const grade3Math: Question[] = [
     standard: "3.MD.D.8",
     type: "text-input",
     questionText:
-      "A rectangle has a length of 20 inches and a width of 10 inches. What is the perimeter of the rectangle in inches?",
+      "The side lengths of a shape are shown.\n\nSide lengths: 2 ft, 20 ft, 10 ft, 8 ft, 8 ft, and 12 ft.\n\nEnter the perimeter, in feet, of the shape.",
     correctAnswer: "60",
     rubric: "The student enters the correct perimeter of the shape.",
     points: 1,
@@ -437,7 +456,7 @@ export const grade3Math: Question[] = [
     standard: "3.NF.A.3",
     type: "text-input",
     questionText:
-      "Look at the number line below. It is divided into 8 equal parts from 0 to 1. Point A is at the 5th mark. What number does Point A represent? Write your answer as a whole number if the fraction equals a whole number, or as a fraction.",
+      "What number goes in the box to make the equation true?\n\n□/1 = 5",
     correctAnswer: "5",
     rubric: "The student enters a correct number.",
     points: 1,
@@ -454,12 +473,12 @@ export const grade3Math: Question[] = [
     standard: "3.NF.A.1",
     type: "multiple-choice",
     questionText:
-      "Which statement about fractions is true?",
+      "Jamie drew this shape.\n\nShe says, \"I divided the shape into 8 parts. I shaded 1 part. So 1/8 of the shape is shaded.\"\n\nIs Jamie correct? Select the statement that explains why.",
     options: [
-      { label: "A", text: "1/2 is always greater than 1/3" },
-      { label: "B", text: "2/4 is greater than 3/4" },
-      { label: "C", text: "3/8 is less than 6/8" },
-      { label: "D", text: "1/4 is equal to 1/8" },
+      { label: "A", text: "Yes, because there is 1 large piece shaded." },
+      { label: "B", text: "Yes, because the shape is divided into 8 parts." },
+      { label: "C", text: "No, because the 8 parts should be the same size." },
+      { label: "D", text: "No, because there should be 1 medium piece shaded." },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct statement.",
@@ -476,8 +495,8 @@ export const grade3Math: Question[] = [
     dok: 1,
     standard: "3.OA.A.4",
     type: "text-input",
-    questionText: "What number makes this equation true?\n\n6 × ? = 48",
-    correctAnswer: "8",
+    questionText: "What unknown number makes this equation true?\n\n6 × 8 = □",
+    correctAnswer: "48",
     rubric: "The student enters the correct number.",
     points: 1,
   },
@@ -492,12 +511,12 @@ export const grade3Math: Question[] = [
     dok: 1,
     standard: "3.OA.B.6",
     type: "multiple-choice",
-    questionText: "Which equation is related to 7 × 8 = 56?",
+    questionText: "Which equation has the same unknown value as 30 ÷ □ = 6?",
     options: [
-      { label: "A", text: "56 + 8 = 64" },
-      { label: "B", text: "56 − 7 = 49" },
-      { label: "C", text: "56 ÷ 8 = 7" },
-      { label: "D", text: "7 + 8 = 15" },
+      { label: "A", text: "6 × 30 = □" },
+      { label: "B", text: "6 ÷ 30 = □" },
+      { label: "C", text: "6 × □ = 30" },
+      { label: "D", text: "6 ÷ □ = 30" },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct equation.",
@@ -515,7 +534,7 @@ export const grade3Math: Question[] = [
     standard: "3.OA.D.9",
     type: "text-input",
     questionText:
-      "Look at the pattern: 5, 10, 15, ?, ?\n\nWhat are the next two numbers in the pattern? Enter them separated by a comma.",
+      "Part of a multiplication table is shown.\n\nTop row: 12, 15, 18, 21. The first column values are 16, 20, 24. The missing entries are in the 15 column for the 16 and 20 rows.\n\nWhat two numbers correctly complete the pattern in the table? Enter your answers in order, separated by a comma.",
     correctAnswer: "20, 25",
     rubric: "The student enters the correct numbers.",
     points: 1,
@@ -530,15 +549,12 @@ export const grade3Math: Question[] = [
     target: "C",
     dok: 1,
     standard: "3.OA.C.7",
-    type: "multi-select",
+    type: "grid-match",
     questionText:
-      "Decide whether each equation is true or false.\n\nSelect all of the equations that are true.",
-    options: [
-      { label: "A", text: "8 × 2 = 4 × 6" },
-      { label: "B", text: "7 × 3 = 3 × 7" },
-      { label: "C", text: "5 × 6 = 3 × 10" },
-    ],
-    correctAnswer: ["B", "C"],
+      "Decide whether each equation is true or false.\n\nClick True or False for each equation.",
+    gridRows: ["8 × 2 = 4 × 6", "7 × 3 = 3 × 7", "5 × 6 = 3 × 10"],
+    gridColumns: ["True", "False"],
+    correctAnswer: ["0:1", "1:0", "2:0"],
     rubric: "The student correctly identifies the true equations.",
     points: 1,
     explanation: "8 × 2 = 16 and 4 × 6 = 24, so A is false. 7 × 3 and 3 × 7 are both 21, so B is true. 5 × 6 and 3 × 10 are both 30, so C is true.",
@@ -554,18 +570,18 @@ export const grade3Math: Question[] = [
     target: "D",
     dok: 2,
     standard: "3.NF.A.3",
-    type: "multiple-choice",
+    type: "text-input",
     questionText:
-      "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1\n- greater than 1",
-    options: [
-      { label: "A", text: "2/2, 3/4, 3/2" },
-      { label: "B", text: "2/3, 3/3, 2/4" },
-      { label: "C", text: "4/3, 2/2, 4/4" },
-      { label: "D", text: "3/4, 3/2, 2/2" },
+      "Use the numbers 2, 3, 4, 6, and 8 to complete three fractions.\n\nEnter three fractions, separated by commas, in this order:\n- a fraction equal to 1\n- a fraction less than 1\n- a fraction greater than 1",
+    correctAnswer: [
+      "2/2,2/3,3/2",
+      "3/3,2/4,4/3",
+      "4/4,3/4,6/4",
+      "6/6,4/8,8/6",
+      "8/8,6/8,8/3",
     ],
-    correctAnswer: "A",
-    rubric: "The student identifies one valid set of fractions.",
-    points: 1,
+    rubric: "2 points: The student completes all three comparisons correctly. 1 point: The student completes only two comparisons correctly.",
+    points: 2,
     explanation: "2/2 equals 1, 3/4 is less than 1, and 3/2 is greater than 1, so choice A is correct.",
   },
   {
@@ -578,16 +594,18 @@ export const grade3Math: Question[] = [
     target: "C",
     dok: 2,
     standard: "3.OA.A.3",
-    type: "multi-select",
+    type: "grid-match",
     questionText:
-      "A teacher has 12 pens. Select all of the groups that can be formed using all 12 pens with no pens left over.",
-    options: [
-      { label: "A", text: "2 groups of 6" },
-      { label: "B", text: "3 groups of 4" },
-      { label: "C", text: "5 groups of 2" },
-      { label: "D", text: "4 groups of 3" },
+      "Jan divides 36 pens into groups.\n\n- Each group has the same number of pens.\n- Jan uses all of the pens.\n\nFor each number of pens in a group, click Yes or No to show if Jan can create groups that each have that number of pens.",
+    gridRows: [
+      "2 pens in each group",
+      "3 pens in each group",
+      "5 pens in each group",
+      "6 pens in each group",
+      "10 pens in each group",
     ],
-    correctAnswer: ["A", "B", "D"],
+    gridColumns: ["Yes", "No"],
+    correctAnswer: ["0:0", "1:0", "2:1", "3:0", "4:1"],
     rubric: "The student identifies all groups that can be formed using all the pens.",
     points: 1,
     explanation: "2 × 6 = 12, 3 × 4 = 12, and 4 × 3 = 12, so those work. But 5 × 2 = 10, so choice C does not use all 12 pens.",
@@ -623,10 +641,10 @@ export const grade3Math: Question[] = [
     standard: "3.MD.B.4",
     type: "line-plot",
     questionText:
-      "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 1/4, 2/4, 3/4",
-    linePlotLabels: ["1/4", "2/4", "3/4", "4/4"],
-    linePlotMaxDots: 4,
-    correctAnswer: ["0:2", "0:1", "1:1", "2:1"],
+      "Students pulled classroom objects from a bag and measured them in inches. They used this data to make a line plot.\n\nObjects and lengths:\nPen: 5 1/2 inches\nScissors: 7 3/4 inches\nStapler: 7 1/4 inches\nCalculator: 6 1/2 inches\nNotepad: 8 1/4 inches\n\nClick above the tick marks to complete the line plot that displays the data.",
+    linePlotLabels: ["5", "5 1/4", "5 1/2", "5 3/4", "6", "6 1/4", "6 1/2", "6 3/4", "7", "7 1/4", "7 1/2", "7 3/4", "8", "8 1/4", "8 1/2", "8 3/4", "9"],
+    linePlotMaxDots: 2,
+    correctAnswer: ["2:1", "6:1", "9:1", "11:1", "13:1"],
     rubric: "The student correctly completes the line plot.",
     points: 1,
     explanation: "The line plot should show two X marks above 1/4, one X above 2/4, one X above 3/4, and none above 4/4.",
@@ -707,7 +725,7 @@ export const grade3Math: Question[] = [
     standard: "3.NF.A.2",
     type: "text-input",
     questionText:
-      "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the seventh mark after 0.\n\nEnter the fraction represented by Point A.",
+      "Enter the fraction located at Point A on the number line.\n\nPoint A is at the seventh tick mark between 0 and 1 on a number line divided into 8 equal parts.",
     correctAnswer: "7/8",
     rubric: "The student enters a correct fraction represented by Point A.",
     points: 1,
@@ -725,12 +743,12 @@ export const grade3Math: Question[] = [
     standard: "3.NF.A.3",
     type: "fraction-model",
     questionText:
-      "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model equal amounts.\n\nPart B: Decide whether the number of 1/3 pieces is greater than the number of 1/4 pieces, and choose the correct comparison symbol.",
+      "Nicki is comparing fractions.\n\nShe states, \"2/3 is greater than 2/4 because each 1/3 piece is larger than each 1/4 piece.\"\n\nPart A: Click on the fraction bars to show 2/3 and 2/4.\n\nPart B: Is Nicki correct? Click Yes or No. Drag the correct symbol to compare the fractions.",
     fractionModel: {
       thirdsMax: 4,
       fourthsMax: 4,
     },
-    correctAnswer: ["3", "4", "yes", ">"],
+    correctAnswer: ["2", "2", "yes", ">"],
     rubric: "The student correctly models the equal amounts and identifies the correct comparison.",
     points: 2,
     explanation: "Three pieces of 1/3 and four pieces of 1/4 both make 1 whole. Since 3 is less than 4, the fractions represented are equal in size, but the number of 1/3 pieces compared to 1/4 pieces in this model is 3 versus 4. This adapted item uses the equal-whole model from the official interaction.",
@@ -768,116 +786,17 @@ export const grade3Math: Question[] = [
     target: "B",
     dok: 1,
     standard: "3.OA.B.5",
-    type: "multi-select",
+    type: "grid-match",
     questionText:
-      "Select all of the expressions that are equal to 4 × 12.",
-    options: [
-      { label: "A", text: "4 × (10 + 2)" },
-      { label: "B", text: "(4 × 10) + 2" },
-      { label: "C", text: "4 + (10 × 2)" },
-    ],
-    correctAnswer: ["A"],
+      "Decide whether each expression is equal to 4 × 12.\n\nSelect Yes or No for each expression.",
+    gridRows: ["4 × (10 + 2)", "(4 × 10) + 2", "4 + (10 × 2)"],
+    gridColumns: ["Yes", "No"],
+    correctAnswer: ["0:0", "1:1", "2:1"],
     rubric: "The student identifies the equal expressions.",
     points: 1,
     explanation: "4 × (10 + 2) equals 4 × 12, so A is correct. (4 × 10) + 2 = 42 and 4 + (10 × 2) = 24, so B and C are not equal to 48.",
   },
-  {
-    id: 32,
-    testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 1,
-    domain: "MD",
-    target: "I",
-    dok: 2,
-    standard: "3.MD.C.7",
-    type: "text-input",
-    questionText:
-      "A garden is 9 feet long and 4 feet wide. What is the area of the garden in square feet?",
-    correctAnswer: "36",
-    rubric: "The student enters the correct area.",
-    points: 1,
-  },
-  {
-    id: 33,
-    testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 2,
-    domain: "MD",
-    target: "J",
-    dok: 2,
-    standard: "3.MD.D.8",
-    type: "text-input",
-    questionText:
-      "A square has sides that are each 8 inches long. What is the perimeter of the square in inches?",
-    correctAnswer: "32",
-    rubric: "The student enters the correct perimeter.",
-    points: 1,
-  },
-  {
-    id: 34,
-    testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 3,
-    domain: "OA",
-    target: "F",
-    dok: 2,
-    standard: "3.OA.B.5",
-    type: "multiple-choice",
-    questionText:
-      "Which property of multiplication does this equation show?\n\n3 × (2 + 4) = (3 × 2) + (3 × 4)",
-    options: [
-      { label: "A", text: "Commutative property" },
-      { label: "B", text: "Associative property" },
-      { label: "C", text: "Distributive property" },
-      { label: "D", text: "Identity property" },
-    ],
-    correctAnswer: "C",
-    rubric: "The student selects the correct property.",
-    points: 1,
-  },
-  {
-    id: 35,
-    testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 1,
-    domain: "OA",
-    target: "C",
-    dok: 1,
-    standard: "3.OA.C.7",
-    type: "text-input",
-    questionText: "What is 72 ÷ 9?",
-    correctAnswer: "8",
-    rubric: "The student enters the correct quotient.",
-    points: 1,
-  },
-  {
-    id: 36,
-    testType: "cat",
-    subject: "math",
-    grade: 3,
-    claim: 1,
-    domain: "MD",
-    target: "G",
-    dok: 2,
-    standard: "3.MD.A.1",
-    type: "multiple-choice",
-    questionText:
-      "A movie starts at 7:15 p.m. and ends at 9:00 p.m. How long is the movie?",
-    options: [
-      { label: "A", text: "1 hour 15 minutes" },
-      { label: "B", text: "1 hour 30 minutes" },
-      { label: "C", text: "1 hour 45 minutes" },
-      { label: "D", text: "2 hours 15 minutes" },
-    ],
-    correctAnswer: "C",
-    rubric: "The student selects the correct elapsed time.",
-    points: 1,
-  },
-  // ── Additional Math CAT questions to match real CAASPP count ──
+  // ── Additional Math CAT questions to match the official public Grade 3 CAT baseline ──
   {
     id: 15,
     testType: "cat",
@@ -908,12 +827,12 @@ export const grade3Math: Question[] = [
     standard: "3.MD.A.1",
     type: "multiple-choice",
     questionText:
-      "Four number lines are described below. Each one starts at 0 minutes.\n\nWhich number line places point P at 45 minutes?",
+      "Paul made a number line to show the times he started reading and finished reading.\n\nPaul read for 45 minutes. He started at 3:30 p.m. and finished at 4:15 p.m.\n\nWhich number line shows 4:00 p.m. in the correct place on Paul's number line?",
     options: [
-      { label: "A", text: "The line is marked every 20 minutes, and P is at the third mark after 0." },
-      { label: "B", text: "The line is marked every 15 minutes, and P is at the third mark after 0." },
-      { label: "C", text: "The line is marked every 10 minutes, and P is at the fourth mark after 0." },
-      { label: "D", text: "The line is marked every 30 minutes, and P is halfway between 0 and 60." },
+      { label: "A", text: "4:00 p.m. at the first tick mark after 3:30 p.m." },
+      { label: "B", text: "4:00 p.m. at the second tick mark after 3:30 p.m." },
+      { label: "C", text: "4:00 p.m. at the fourth tick mark after 3:30 p.m." },
+      { label: "D", text: "4:00 p.m. at the last tick mark on the number line." },
     ],
     correctAnswer: "B",
     rubric: "The student identifies the correct number line.",
@@ -932,14 +851,14 @@ export const grade3Math: Question[] = [
     standard: "3.MD.C.7",
     type: "multiple-choice",
     questionText:
-      "A rectangular room is covered with 4 rows of 5 square-foot tiles. Which number shows the area of the room in square feet?",
+      "The diagram shows two spaces on a grid. Each small square represents 1 square foot. Space A has 60 square feet and Space B has 30 square feet.\n\nHow much more area does space A have than space B?",
     options: [
-      { label: "A", text: "20" },
-      { label: "B", text: "9" },
-      { label: "C", text: "18" },
-      { label: "D", text: "25" },
+      { label: "A", text: "5 square feet" },
+      { label: "B", text: "25 square feet" },
+      { label: "C", text: "30 square feet" },
+      { label: "D", text: "60 square feet" },
     ],
-    correctAnswer: "A",
+    correctAnswer: "C",
     rubric: "The student selects the correct number of square feet.",
     points: 1,
     explanation: "Area is found by multiplying rows by columns: 4 × 5 = 20 square feet.",
@@ -1228,27 +1147,29 @@ Scientists say that anyone who cuts down a sugar-maple tree in freezing weather 
 
 const soaringPresentationSummary = `Presentation transcript-style version:
 
-Today I am going to tell you about an event from long ago that became an important part of American history. It is called "Soaring on the Wings of the Wind," and it is about Peter Carnes and a young boy named Edward Warren Jr.
+In the following presentation, you will hear about 13-year-old Edward Warren Jr., the first American to go up in a hot-air balloon. Listen to the presentation and then answer the questions that follow.
 
-Peter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.
+Peter Carnes placed a small iron stove in a balloon one fine June day in Bladensburg, Maryland. He then set fire to the straw and wood inside the stove. Smoky hot air swelled the balloon and sent it up. Carnes had done it. He was the first American to develop a method to lift a balloon using hot air.
 
-Later, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.
+Carnes decided to try it again in nearby Baltimore. A huge crowd gathered as he launched a tethered balloon, 35 feet wide and 30 feet tall, 200 feet into the air. The crowd yelled and clapped as Carnes sent the balloon up time and again. By late day, the people shouted to send a person into the air.
 
-One part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.
+Carnes weighed more than 200 pounds--too heavy for the balloon. Luckily, 13-year-old Edward Warren Jr. stepped forward and exclaimed that he'd go up. The crowd roared as Carnes helped Edward climb into the basket. Hot air from the stove burst upward. The balloon slowly rose.
 
-This event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.`;
+Newspaper reporters described Edward as having the courage of "an old Voyager." Edward stared at the top of the city and out at the bay in the distance. He was the first American to see such views. By flying "on the wings of the wind," Edward Warren Jr. had played a big part in the history of flight.`;
 
 const pizzaPresentationSummary = `Presentation transcript-style version:
 
-Today I am giving a presentation called "All About Pizza." Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.
+In the following presentation, you will hear a speaker talk about pizza around the world. Listen to the presentation and then answer the questions that follow.
 
-In the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.
+It's lunchtime, and your stomach is growling. The line through the cafeteria moves s-o-o-o slowly. But today it's worth the wait because today they're serving your favorite food. What is it? If you're like almost every other kid, it's pizza!
 
-In other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.
+Pizza is one of America's favorite foods. In fact, Americans eat 350 slices of it every second! One of the reasons we love pizza is that we can have it just the way we like it. The most popular topping for pizza is pepperoni, but depending on where you live, you might prefer something else.
 
-When we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.
+Are you on the coast of Maine? You might eat lobster on your pizza. Down South? Try crayfish, oysters, or Cajun shrimp. In the mood for something a little different? How about a peanut butter and jelly pizza, or one with dandelions?
 
-So the next time you think about pizza, remember that it may be better to look at it in a new way.`;
+Americans aren't the only ones who love pizza. If you visit Japan, you might try pizza with eel or squid. If you find yourself in India, you could go for pickled ginger, minced mutton, and tofu. But no matter what you put on it, almost everyone loves pizza.
+
+Now, what will you ask for on your next slice? Eggplant? Tuna? Mashed potatoes? Or will you stick with good ol' pepperoni?`;
 
 const astronautPtDirectionsPart1 = `**Student Directions**
 
@@ -1364,15 +1285,12 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      "Which detail from the story best supports the idea that the father was patient with his sons?",
+      "Which detail from the passage best explains why the father must stop working in the field?",
     options: [
-      { label: "A", text: "The father had to tend the field by himself." },
-      { label: "B", text: "The sons promised to share the treasure equally." },
-      { label: "C", text: "The neighbor asked if the sons were helping." },
-      {
-        label: "D",
-        text: '"Oh, they would," the father answered, "but they are young."',
-      },
+      { label: "A", text: "The father needs to return home to cook the dinner." },
+      { label: "B", text: "The father asks the neighbor to do the work in the fields for him." },
+      { label: "C", text: "The father's sons depend on him to stay home and care for them." },
+      { label: "D", text: "The father's age makes it too difficult to do farm work any longer." },
     ],
     correctAnswer: "D",
     rubric: "The student selects the correct option.",
@@ -1393,12 +1311,12 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      'What does the word "tended" mean as used in the passage?',
+      'Read the sentences from the passage.\n\nDay after day they dug. Their neighbor was astonished to see how long and hard the young men worked.\n\nWhat does the word astonished most likely mean?',
     options: [
-      { label: "A", text: "Sold" },
-      { label: "B", text: "Planted" },
-      { label: "C", text: "Watched over" },
-      { label: "D", text: "Took care of" },
+      { label: "A", text: "disappointed" },
+      { label: "B", text: "discovered" },
+      { label: "C", text: "satisfied" },
+      { label: "D", text: "surprised" },
     ],
     correctAnswer: "D",
     rubric: "The student selects the correct option.",
@@ -1419,20 +1337,20 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      "Part A: What is the main lesson the father wanted his sons to learn?\n\nPart B: Which detail from the story best supports your answer to Part A?",
-    partAPrompt: "What is the main lesson the father wanted his sons to learn?",
+      "This question has two parts. First, answer part A. Then, answer part B.",
+    partAPrompt: "Which statement about the boys is supported by the passage?",
     partAOptions: [
-      { label: "A", text: "That treasure is always buried underground" },
-      { label: "B", text: "That brothers should always share equally" },
-      { label: "C", text: "That neighbors are important to have" },
-      { label: "D", text: "That hard work is its own reward" },
+      { label: "A", text: "The boys did not share the work equally." },
+      { label: "B", text: "The boys did not know how to plant a field of rice." },
+      { label: "C", text: "The young boys wished to surprise their father with a special dinner." },
+      { label: "D", text: "The young boys preferred to sit in the house instead of working outside." },
     ],
-    partBPrompt: "Which detail from the story best supports your answer to Part A?",
+    partBPrompt: "Which sentence from the passage best supports your answer in part A.",
     partBOptions: [
-      { label: "A", text: "The neighbor asked if the sons were helping." },
-      { label: "B", text: "The sons planted rice, tended the field, and earned money from the harvest." },
-      { label: "C", text: "The father said the boys were still young." },
-      { label: "D", text: "The sons promised to share the treasure equally." },
+      { label: "A", text: "The sons promised and hurried out to begin." },
+      { label: "B", text: "As the years went by, it became clear even to their father that the boys were lazy." },
+      { label: "C", text: "At last, the entire field had been dug, but no treasure had been found." },
+      { label: "D", text: "The brothers moped around with their heads down." },
     ],
     correctAnswer: ["D", "B"],
     rubric:
@@ -1454,15 +1372,12 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      'What did the father mean when he told his sons there was "treasure buried in the field"?',
+      "Which detail from the passage best shows that the old man's sons are lazy?",
     options: [
-      { label: "A", text: "There were gold coins buried under the soil." },
-      { label: "B", text: "The field had valuable minerals in the ground." },
-      {
-        label: "C",
-        text: "The reward of hard work would come from farming the field.",
-      },
-      { label: "D", text: "A neighbor had hidden something in the field." },
+      { label: "A", text: "Since the man had to tend the field, the boys took care of the house." },
+      { label: "B", text: '"Oh, they would," the father replied again, "but they are still young."' },
+      { label: "C", text: "Though they sometimes tended the field with him, they always made excuses to go home early." },
+      { label: "D", text: "The sons were sad, for they not only depended on their father, but they also loved him." },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct option.",
@@ -1483,19 +1398,14 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      "Select TWO details that show how the sons changed during the story.",
+      "What is the most likely reason the author included the final sentence in the passage? Pick two choices.",
     options: [
-      {
-        label: "A",
-        text: "They dug the entire field looking for treasure.",
-      },
-      { label: "B", text: "They asked their father for the secret." },
-      { label: "C", text: "They made excuses to go home early." },
-      { label: "D", text: "They talked to the neighbor about farming." },
-      {
-        label: "E",
-        text: 'They tended the field "just as Father did."',
-      },
+      { label: "A", text: "to show that the old man's plan had worked" },
+      { label: "B", text: "to show that the boys are mad about being tricked" },
+      { label: "C", text: "to show that the boys are happy about earning money" },
+      { label: "D", text: "to show that the old man does not want the boys to know the secret" },
+      { label: "E", text: "to show that the old man wants his sons to look at something in a new way" },
+      { label: "F", text: "to show that the old man is mad at his boys for not helping him for years" },
     ],
     correctAnswer: ["A", "E"],
     rubric: "The student selects the two correct options.",
@@ -1516,15 +1426,12 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      "How did the father's trick affect the sons?",
+      "Which sentence is most likely true about both sons in the passage?",
     options: [
-      { label: "A", text: "It made them angry at their father." },
-      { label: "B", text: "It made them want to find real treasure." },
-      {
-        label: "C",
-        text: "It taught them the value of hard work through their own experience.",
-      },
-      { label: "D", text: "It made them leave the farm." },
+      { label: "A", text: "Both wish that they will always live on the farm." },
+      { label: "B", text: "Both wish to have more treasure than anyone else." },
+      { label: "C", text: "Both learn that treasure can have more than one meaning." },
+      { label: "D", text: "Both want to teach their father how to grow rice in the field." },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct option.",
@@ -1545,15 +1452,12 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      "Why did the author include the neighbor character in the story?",
+      "Which of these best describes why the author used dialogue in the passage?",
     options: [
-      { label: "A", text: "To show that the neighbor wanted to help farm the field" },
-      { label: "B", text: "To show that the father was a bad parent" },
-      {
-        label: "C",
-        text: "To show how much time passed and that others noticed the sons were not helping",
-      },
-      { label: "D", text: "To explain how farming works in Vietnam" },
+      { label: "A", text: "to describe how the sons and the old man work together" },
+      { label: "B", text: "to describe how the old man shares his secret with his sons" },
+      { label: "C", text: "to explain why the characters behave the way they do" },
+      { label: "D", text: "to explain why the neighbor was interested in the father's fields" },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct option.",
@@ -1574,12 +1478,12 @@ export const grade3ELA: Question[] = [
     passage: treasurePassage,
     passageTitle: "Treasure in the Field",
     questionText:
-      'Read this sentence from the story: "The brothers moped around with their heads down." What does the word "moped" tell the reader about the brothers?',
+      "Read the sentence from the passage.\n\nIt became clear, even to their father, that the boys were lazy.\n\nWhat does the phrase even to their father tell the reader about the story?",
     options: [
-      { label: "A", text: "They were excited about planting." },
-      { label: "B", text: "They were sad and disappointed." },
-      { label: "C", text: "They were tired from digging." },
-      { label: "D", text: "They were angry at each other." },
+      { label: "A", text: "It took the father a long time to teach the boys a new kind of work." },
+      { label: "B", text: "It took the father longer than others to understand his sons were lazy." },
+      { label: "C", text: "The father knew all along that his boys did not like to work on the family farm." },
+      { label: "D", text: "The father knew many other people who could be trained to help him on the farm." },
     ],
     correctAnswer: "B",
     rubric: "The student selects the correct option.",
@@ -1601,15 +1505,12 @@ export const grade3ELA: Question[] = [
     passage: sapPassage,
     passageTitle: "Sap's Running",
     questionText:
-      "According to the passage, why do the Coleman brothers collect sap in the spring?",
+      "Which sentence from the passage supports the idea that the Coleman brothers have experience with making maple syrup?",
     options: [
-      { label: "A", text: "Because the trees only grow in spring" },
-      { label: "B", text: "Because they need water for their farm" },
-      {
-        label: "C",
-        text: "Because sap flows in the spring when frost melts inside the trees",
-      },
-      { label: "D", text: "Because the University of Vermont told them to" },
+      { label: "A", text: '"The Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont."' },
+      { label: "B", text: '"As they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets."' },
+      { label: "C", text: '"Every spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap."' },
+      { label: "D", text: '"They don\'t worry too much about why the sap is running in their trees this morning."' },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct option.",
@@ -1664,15 +1565,12 @@ export const grade3ELA: Question[] = [
     passage: sapPassage,
     passageTitle: "Sap's Running",
     questionText:
-      "What is the author's main purpose for writing this passage?",
+      'The author states that many years ago, sap flow was a "most mysterious subject." How does the author explain that this is no longer true?',
     options: [
-      { label: "A", text: "To persuade readers to buy maple syrup" },
-      { label: "B", text: "To tell an entertaining story about trees" },
-      {
-        label: "C",
-        text: "To inform readers about how maple syrup is made and how sap flows",
-      },
-      { label: "D", text: "To compare different types of trees" },
+      { label: "A", text: "by describing syrup-making as a family tradition" },
+      { label: "B", text: "by providing details about how sap becomes syrup" },
+      { label: "C", text: "by stating that sap has been studied for many years" },
+      { label: "D", text: "by mentioning that sap contains sugar and other minerals" },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct option.",
@@ -1692,15 +1590,12 @@ export const grade3ELA: Question[] = [
     passage: sapPassage,
     passageTitle: "Sap's Running",
     questionText:
-      "Why did the author include the legend of Woksis in the passage?",
+      "Read the sentences from the passage.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nWhat does this paragraph show about the author's point of view?",
     options: [
-      { label: "A", text: "To prove that maple syrup is healthy" },
-      { label: "B", text: "To compare modern and ancient methods of making syrup" },
-      {
-        label: "C",
-        text: "To show that people have been making maple syrup for a very long time",
-      },
-      { label: "D", text: "To explain why the Iroquois planted maple trees" },
+      { label: "A", text: "He believes that no one will ever be able to solve the mystery of how sap flows." },
+      { label: "B", text: "He believes the way sap is turned into syrup is difficult to understand and the University helps." },
+      { label: "C", text: "He believes the way sap is formed and how it runs is still being studied at the University of Vermont." },
+      { label: "D", text: "He believes that Charles Darwin would have been able to help the University in figuring out how sap runs." },
     ],
     correctAnswer: "C",
     rubric: "The student selects the correct option.",
@@ -1721,19 +1616,14 @@ export const grade3ELA: Question[] = [
     passage: sapPassage,
     passageTitle: "Sap's Running",
     questionText:
-      'Select TWO reasons the author organized the passage with the section "What Makes Sap Run?"',
+      "What is the most likely reason the author included the legend in the passage? Pick two choices.",
     options: [
-      { label: "A", text: "To tell a funny story about trees" },
-      { label: "B", text: "To make the passage more entertaining" },
-      {
-        label: "C",
-        text: "To explain the science behind how sap flows",
-      },
-      {
-        label: "D",
-        text: "To answer a question readers might have after reading about the Colemans",
-      },
-      { label: "E", text: "To compare maple trees to other types of trees" },
+      { label: "A", text: "to make the idea of tasting sap seem fun" },
+      { label: "B", text: "to provide details about the Iroquois way of life" },
+      { label: "C", text: "to explain how people discovered how to make syrup" },
+      { label: "D", text: "to show sap has been used to make syrup for many years" },
+      { label: "E", text: "to provide information that shows that sap is a good sweetener for food" },
+      { label: "F", text: "to show how the Iroquois used to make syrup and how syrup is made today" },
     ],
     correctAnswer: ["C", "D"],
     rubric: "The student selects the correct two options.",
@@ -1754,12 +1644,12 @@ export const grade3ELA: Question[] = [
     passage: sapPassage,
     passageTitle: "Sap's Running",
     questionText:
-      'Read this sentence: "sap flow was a \'most mysterious subject.\'" What does the word "mysterious" mean?',
+      "Read the sentences from the passage.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition.\n\nWhat is a family tradition?",
     options: [
-      { label: "A", text: "Easy to understand" },
-      { label: "B", text: "Very interesting" },
-      { label: "C", text: "Not well known" },
-      { label: "D", text: "Hard to explain or understand" },
+      { label: "A", text: "the way that some families act" },
+      { label: "B", text: "a breakfast food that a family eats" },
+      { label: "C", text: "a place where a family likes to go together" },
+      { label: "D", text: "something that a family does year after year" },
     ],
     correctAnswer: "D",
     rubric: "The student selects the correct option.",
@@ -2279,8 +2169,8 @@ function mergeExplanations(questions: Question[]): Question[] {
     explanation: q.explanation || explanations[q.id] || "See the rubric for scoring guidance.",
     audio:
       q.audio ||
-      (q.practiceTest && q.passageTitle
-        ? presentationAudioRollout[q.practiceTest]?.[q.passageTitle]
+      (q.passageTitle
+        ? presentationAudioRollout[q.practiceTest ?? 1]?.[q.passageTitle]
         : undefined),
   }));
 }

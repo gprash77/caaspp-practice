@@ -13,6 +13,16 @@ type AudioTarget = {
 
 const audioTargets: AudioTarget[] = [
   {
+    testNum: 1,
+    title: "Soaring on the Wings of the Wind",
+    output: "public/audio/presentations/grade-3/test-1-soaring-on-the-wings-of-the-wind.m4a",
+  },
+  {
+    testNum: 1,
+    title: "All About Pizza",
+    output: "public/audio/presentations/grade-3/test-1-all-about-pizza.m4a",
+  },
+  {
     testNum: 2,
     title: "Soaring on the Wings of the Wind",
     output: "public/audio/presentations/grade-3/test-2-soaring-on-the-wings-of-the-wind.m4a",

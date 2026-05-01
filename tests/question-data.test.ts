@@ -12,6 +12,10 @@ const EXPECTED_COUNTS: Record<string, Record<string, number>> = {
 };
 
 function expectedCount(testNum: number, subject: "math" | "ela", testType: "cat" | "pt"): number {
+  if (testNum === 1 && subject === "math" && testType === "cat") {
+    return 31;
+  }
+
   if (testNum === 1 && subject === "math" && testType === "pt") {
     return 5;
   }

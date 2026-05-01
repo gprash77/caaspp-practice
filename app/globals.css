@@ -413,6 +413,7 @@ body {
   line-height: 1.6;
   margin-bottom: 24px;
   color: #222;
+  white-space: pre-wrap;
 }
 
 /* Answer options - radio/checkbox style like real CAASPP */

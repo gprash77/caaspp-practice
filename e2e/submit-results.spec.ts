@@ -90,7 +90,7 @@ test.describe("Submit test and view results", () => {
         testType: "cat",
         practiceTest: 1,
         answers: { 1: "52", 2: "999" },
-        questionIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+        questionIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
       };
       sessionStorage.setItem("testResults", JSON.stringify(data));
     });
@@ -99,9 +99,9 @@ test.describe("Submit test and view results", () => {
     // Question review section
     await expect(page.getByText("Question Review")).toBeVisible();
 
-    // Should show all 36 question review items
+    // Should show all official Test 1 Math CAT question review items
     const reviews = page.locator(".question-review");
-    await expect(reviews).toHaveCount(36);
+    await expect(reviews).toHaveCount(31);
 
     // Q1 should be correct (52 is right)
     await expect(page.locator(".correct-badge").first()).toBeVisible();
@@ -109,12 +109,10 @@ test.describe("Submit test and view results", () => {
     // Q2 should be incorrect (999 is wrong for 356+453=809)
     await expect(page.locator(".incorrect-badge").first()).toBeVisible();
 
-    // Click Q2 to expand it
-    await reviews.nth(1).locator(".question-review-header").click();
-
-    // Should show the correct answer and explanation
-    await expect(page.getByText("Correct answer:")).toBeVisible();
-    await expect(page.getByText("Explanation:")).toBeVisible();
+    // Q2 is incorrect, so it should open with the correct answer and explanation.
+    const q2Body = reviews.nth(1).locator(".question-review-body");
+    await expect(q2Body.getByText("Correct answer:")).toBeVisible();
+    await expect(q2Body.getByText("Explanation:")).toBeVisible();
   });
 
   test("results page shows correct answer in green for wrong answers", async ({ page }) => {
@@ -126,16 +124,13 @@ test.describe("Submit test and view results", () => {
         testType: "cat",
         practiceTest: 1,
         answers: { 1: "99" }, // wrong answer for Q1 (correct is 52)
-        questionIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+        questionIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
       };
       sessionStorage.setItem("testResults", JSON.stringify(data));
     });
     await page.goto("/results");
 
-    // Expand Q1 (first question)
-    await page.locator(".question-review").first().locator(".question-review-header").click();
-
-    // Your answer should be shown
+    // Q1 is incorrect, so it opens with the user's answer and correct answer visible.
     const reviewBody = page.locator(".question-review-body").first();
     await expect(reviewBody.getByText("99")).toBeVisible();
 

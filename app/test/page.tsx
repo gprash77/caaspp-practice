@@ -850,6 +850,13 @@ function TestContent() {
           </div>
           <div className="tds-guest-label">GUEST</div>
 
+          {!hasPassage && current.dataTable && (
+            <StimulusTable
+              columns={current.dataTable.columns}
+              rows={current.dataTable.rows}
+            />
+          )}
+
           {/* Question text */}
           <div className="tds-question-text">
             {current.questionText}
