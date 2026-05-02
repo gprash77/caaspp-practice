@@ -1,5 +1,110 @@
 # CODEX HANDOFF
 
+## May 2, 2026 End-of-Day Handoff
+
+### Current State
+
+- Repo: `/Users/gprash77/projects/caaspp-practice`
+- Branch: `main`
+- Latest pushed app/content commit: `e288c71` `Rebaseline Tests 2 and 3`
+- Production URL checked: `https://caaspp-practice.vercel.app`
+- Production is serving the Test `2` / Test `3` batch changes.
+- Worktree state after this handoff update: clean after the handoff docs commit.
+
+### Completed Today
+
+- Continued the Tests `2-10` rebaseline rollout in two-test batches.
+- Completed the first easy batch: Tests `2` and `3`.
+- Rebuilt Test `2` around the approved companion-test source family:
+  - `The Storm Dog`
+  - `The Amazing Ocean`
+  - themed transcript-style CAT items for helping animals
+- Rebuilt Test `3` around the approved companion-test source family:
+  - `The Surprise Garden`
+  - `The Busy World of Honeybees`
+  - themed transcript-style CAT items for gardens and bees
+- Fixed a serious pre-existing issue where Tests `2` and `3` had too much duplicated runtime content and did not consistently reflect their approved source families.
+- Added shared Math PT setup/stimulus tables for:
+  - Test `2` bake-sale / field-trip context
+  - Test `3` school-garden context
+- Strengthened ELA PT scaffolds for Tests `2` and `3` so each now uses:
+  - source-matching `grid-match`
+  - source-based `short-answer`
+  - `extended-writing`
+- Revised Test `3` ELA PT writing prompt from an overbroad plant/insect dependency claim to the better-supported prompt: how people and bees can help plants grow.
+- Revised themed presentation wording for Tests `2` and `3` to say students read presentation transcripts, rather than implying unavailable generated audio.
+- Updated the data-integrity guard so Tests `2` and `3` validate transcript sufficiency for their themed presentation clusters, while later tests with generated audio still require audio metadata.
+
+### Validation Completed Today
+
+- CAASPP eval / content gate for Tests `2` and `3`:
+  - compared runtime section counts against the corrected Test `1` baseline expectations
+  - reviewed stimulus sufficiency for Math PT shared tables
+  - reviewed ELA CAT presentation transcript fairness
+  - reviewed ELA PT source visibility and prompt support
+  - confirmed Tests `2` and `3` are CAASPP-similar companion tests, not exact official CAASPP copies
+- `npm test -- --run tests/question-data.test.ts` passed: `1646` tests.
+- `npm test -- --run tests/scoring.test.ts` passed: `49` tests.
+- `npm run build` passed:
+  - full Vitest suite passed: `1700` tests
+  - Next production build passed
+- `npm run test:e2e` passed: `40/40`.
+- Targeted local browser verification passed for:
+  - Test `2` Math PT shared bake-sale table
+  - Test `3` Math PT shared garden table
+  - Test `2` ELA PT source-match first item
+  - Test `3` ELA PT source-match first item
+  - Test `2` ELA CAT source family
+  - Test `3` ELA CAT source family
+- Production browser verification passed for:
+  - Test `2` Math PT
+  - Test `3` Math PT
+  - Test `2` ELA PT
+  - Test `3` ELA PT
+
+### Important Product Intent
+
+- Test `1` remains the corrected official baseline reference.
+- Tests `2-10` should **not** be exact copies of official CAASPP tests.
+- Tests `2-10` should be CAASPP-similar companion tests:
+  - similar structure and grade-level rigor
+  - similar CAT / PT feel
+  - source-based ELA with fair visible stimuli
+  - math items answerable from prompt/table/stimulus
+  - new content families, not reused official public-test content
+- Continue to be honest about exactness: Test `1` is the official-alignment target; Tests `2-10` are similarity and quality targets.
+
+### Known Caveats
+
+- Tests `2` and `3` are now much more coherent and source-family aligned, but their Math CATs still have fewer custom interaction types than corrected Test `1`.
+- Math PTs for Tests `2` and `3` now have shared setup tables and coherent context, but they are still simpler companion PTs than the official Test `1` `Going Green` PT.
+- The themed Test `2` / Test `3` presentation clusters are transcript-based. They do not have generated audio files.
+- This batch did not touch Tests `4-10`; leave those for their own two-test passes.
+
+### Recommended Next Work
+
+1. Start the next easy batch: Tests `4` and `5`.
+2. Use the same workflow:
+   - audit runtime bank against corrected Test `1`
+   - preserve approved source families
+   - improve Math PT shared stimulus / table sufficiency
+   - strengthen ELA PT prewriting shape where needed
+   - verify answer keys and prompt fairness
+   - run data/scoring/build/e2e/browser checks
+   - commit and push `main`
+   - verify production
+3. After Tests `4` and `5`, continue:
+   - Medium batch: Tests `6` and `7`
+   - Hard batch: Tests `8` and `9`
+   - Final hard batch: Test `10` alone with extra review
+
+### Git Notes
+
+- `main` was pushed with:
+  - `e288c71` `Rebaseline Tests 2 and 3`
+- Production was verified after the push.
+- Handoff update was committed separately as docs-only work.
+
 ## May 1, 2026 End-of-Day Handoff
 
 ### Current State
