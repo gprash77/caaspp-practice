@@ -1,278 +1,80 @@
 import type { Question } from "./questions";
 
+const bakeSaleMathPtDirections =
+  "The third-grade class is holding a bake sale to raise money for a field trip. Use the bake-sale information to answer the questions.";
+
+const bakeSaleMathPtTable = {
+  columns: ["Amount"],
+  rows: [
+    { label: "Cupcake trays", values: [8] },
+    { label: "Cupcakes on each tray", values: [6] },
+    { label: "Cupcake price", values: ["$2"] },
+    { label: "Brownies sold", values: [24] },
+    { label: "Brownie price", values: ["$3"] },
+    { label: "Bus cost", values: ["$125"] },
+    { label: "Museum-ticket cost", values: ["$75"] },
+    { label: "Money already saved", values: ["$32"] },
+  ],
+};
+
 export const practiceTest2Questions: Question[] = [
   {
     "id": 1001,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.OA.D.8",
+    "target": "A",
+    "dok": 1,
+    "standard": "3.OA.A.1",
     "type": "text-input",
-    "questionText": "Maria baked 76 cookies. She gave 24 cookies to her friends. How many cookies does Maria have now?",
-    "correctAnswer": "52",
-    "rubric": "The student enters the correct number of cookies.",
+    "questionText": "There are 5 bags of marbles. Each bag has 9 marbles. How many marbles are there in all?",
+    "correctAnswer": "45",
+    "rubric": "The student enters the correct product.",
     "points": 1,
-    "explanation": "To find how many cookies Maria has left, subtract: 76 − 24 = 52 cookies.",
-    "practiceTest": 2
+    "explanation": "Multiply the number of bags by marbles per bag: 5 × 9 = 45 marbles."
   },
   {
     "id": 1002,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "NBT",
-    "target": "E",
+    "domain": "OA",
+    "target": "A",
     "dok": 1,
-    "standard": "3.NBT.A.2",
+    "standard": "3.OA.A.3",
     "type": "text-input",
-    "questionText": "What is 356 + 453?",
-    "correctAnswer": "809",
+    "questionText": "A classroom has 4 tables. Each table seats 6 students. How many students can sit at all the tables?",
+    "correctAnswer": "24",
     "rubric": "The student enters the correct number.",
     "points": 1,
-    "explanation": "Add the ones (6 + 3 = 9), the tens (5 + 5 = 10, carry 1), and the hundreds (3 + 4 + 1 = 8). The sum is 809.",
-    "practiceTest": 2
+    "explanation": "This is an equal-groups multiplication problem: 4 tables × 6 students = 24 students."
   },
   {
     "id": 1003,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
     "domain": "OA",
-    "target": "A",
-    "dok": 1,
-    "standard": "3.OA.A.3",
-    "type": "text-input",
-    "questionText": "Jake has 3 packs of trading cards. Each pack has 5 cards. How many trading cards does Jake have in all?",
-    "correctAnswer": "15",
-    "rubric": "The student enters the correct number of trading cards.",
-    "points": 1,
-    "explanation": "This is a multiplication problem: 3 packs × 5 cards per pack = 15 cards in all.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1004,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.OA.B",
-    "type": "multiple-choice",
-    "questionText": "A store has 24 apples arranged equally in 4 rows. Which expression can be used to find the number of apples in each row, and why?",
-    "options": [
-      {
-        "label": "A",
-        "text": "4 × 24, because you multiply the number of rows by the total"
-      },
-      {
-        "label": "B",
-        "text": "24 + 4, because you add the total to the number of rows"
-      },
-      {
-        "label": "C",
-        "text": "24 − 4, because you subtract the number of rows from the total"
-      },
-      {
-        "label": "D",
-        "text": "24 ÷ 4, because you divide the total equally among the rows"
-      }
-    ],
-    "correctAnswer": "D",
-    "rubric": "The student identifies the correct expression and reason.",
-    "points": 1,
-    "explanation": "When you divide a total equally among groups, you use division. 24 apples ÷ 4 rows = 6 apples per row.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1005,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "A",
-    "dok": 1,
-    "standard": "3.OA.A.3",
-    "type": "text-input",
-    "questionText": "A fish tank has 2 rows of fish. Each row has 3 fish. How many fish are in the tank?",
-    "correctAnswer": "6",
-    "rubric": "The student enters the correct number of fish.",
-    "points": 1,
-    "explanation": "Multiply the rows by the number in each row: 2 × 3 = 6 fish.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1006,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "G",
-    "dok": 1,
-    "standard": "3.MD.A.1",
-    "type": "multiple-choice",
-    "questionText": "The clock shows that school starts at 8:15 a.m. Lunch is 3 hours and 45 minutes later. What time is lunch?",
-    "options": [
-      {
-        "label": "A",
-        "text": "11:00 a.m."
-      },
-      {
-        "label": "B",
-        "text": "11:45 a.m."
-      },
-      {
-        "label": "C",
-        "text": "12:15 p.m."
-      },
-      {
-        "label": "D",
-        "text": "12:00 p.m."
-      }
-    ],
-    "correctAnswer": "D",
-    "rubric": "The student selects the correct time.",
-    "points": 1,
-    "explanation": "Start at 8:15 a.m. Add 3 hours to get 11:15 a.m., then add 45 minutes to get 12:00 p.m.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1007,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
-    "domain": "NBT",
-    "target": "C",
-    "dok": 2,
-    "standard": "3.NBT.A.2",
-    "type": "multiple-choice",
-    "questionText": "Ms. Adams collected 347 cans. Mr. Baker collected 289 cans. Ms. Clark collected 312 cans. Which teacher collected the most cans?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Ms. Adams"
-      },
-      {
-        "label": "B",
-        "text": "Mr. Baker"
-      },
-      {
-        "label": "C",
-        "text": "Ms. Clark"
-      },
-      {
-        "label": "D",
-        "text": "Ms. Adams and Ms. Clark collected the same amount"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student selects the correct teacher.",
-    "points": 1,
-    "explanation": "Compare the numbers: 347 > 312 > 289. Ms. Adams collected the most with 347 cans.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1008,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "J",
-    "dok": 1,
-    "standard": "3.MD.D.8",
-    "type": "text-input",
-    "questionText": "A rectangle has a length of 20 inches and a width of 10 inches. What is the perimeter of the rectangle in inches?",
-    "correctAnswer": "60",
-    "rubric": "The student enters the correct perimeter of the shape.",
-    "points": 1,
-    "explanation": "Perimeter = 2 × length + 2 × width = 2 × 20 + 2 × 10 = 40 + 20 = 60 inches.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1009,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "NF",
-    "target": "F",
-    "dok": 1,
-    "standard": "3.NF.A.3",
-    "type": "text-input",
-    "questionText": "Look at the number line below. It is divided into 8 equal parts from 0 to 1. Point A is at the 5th mark. What number does Point A represent? Write your answer as a whole number if the fraction equals a whole number, or as a fraction.",
-    "correctAnswer": "5",
-    "rubric": "The student enters a correct number.",
-    "points": 1,
-    "explanation": "The number line goes from 0 to 1 with 8 equal parts. The 5th mark is at 5/8. Since the question says to write as a whole number if it equals one, and 5/8 is not a whole number, the answer is 5/8. However, the stored answer is '5' representing the 5th mark.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1010,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "NF",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.NF.A.1",
-    "type": "multiple-choice",
-    "questionText": "Which statement about fractions is true?",
-    "options": [
-      {
-        "label": "A",
-        "text": "1/2 is always greater than 1/3"
-      },
-      {
-        "label": "B",
-        "text": "2/4 is greater than 3/4"
-      },
-      {
-        "label": "C",
-        "text": "3/8 is less than 6/8"
-      },
-      {
-        "label": "D",
-        "text": "1/4 is equal to 1/8"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct statement.",
-    "points": 1,
-    "explanation": "Compare fractions with the same denominator: 3/8 < 6/8 because 3 < 6. The other options are incorrect: 2/4 < 3/4, and 1/4 ≠ 1/8.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1011,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "A",
+    "target": "B",
     "dok": 1,
     "standard": "3.OA.A.4",
     "type": "text-input",
-    "questionText": "What number makes this equation true?\n\n6 × ? = 48",
-    "correctAnswer": "8",
-    "rubric": "The student enters the correct number.",
+    "questionText": "What number makes this equation true?\n\n? × 7 = 63",
+    "correctAnswer": "9",
+    "rubric": "The student enters the correct missing factor.",
     "points": 1,
-    "explanation": "Find the missing factor: 6 × ? = 48. Since 6 × 8 = 48, the answer is 8.",
-    "practiceTest": 2
+    "explanation": "Find the missing factor: ? × 7 = 63. Since 9 × 7 = 63, the answer is 9."
   },
   {
-    "id": 1012,
+    "id": 1004,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -282,33 +84,87 @@ export const practiceTest2Questions: Question[] = [
     "dok": 1,
     "standard": "3.OA.B.6",
     "type": "multiple-choice",
-    "questionText": "Which equation is related to 7 × 8 = 56?",
+    "questionText": "Which equation is in the same fact family as 6 × 9 = 54?",
     "options": [
       {
         "label": "A",
-        "text": "56 + 8 = 64"
+        "text": "54 − 9 = 45"
       },
       {
         "label": "B",
-        "text": "56 − 7 = 49"
+        "text": "54 ÷ 6 = 9"
       },
       {
         "label": "C",
-        "text": "56 ÷ 8 = 7"
+        "text": "54 + 6 = 60"
       },
       {
         "label": "D",
-        "text": "7 + 8 = 15"
+        "text": "9 + 6 = 15"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct equation.",
+    "correctAnswer": "B",
+    "rubric": "The student selects the related division fact.",
     "points": 1,
-    "explanation": "Division is the inverse of multiplication. Since 7 × 8 = 56, then 56 ÷ 8 = 7.",
-    "practiceTest": 2
+    "explanation": "Fact families link multiplication and division. Since 6 × 9 = 54, then 54 ÷ 6 = 9 is in the same fact family."
   },
   {
-    "id": 1013,
+    "id": 1005,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "What is 8 × 7?",
+    "correctAnswer": "56",
+    "rubric": "The student enters the correct product.",
+    "points": 1,
+    "explanation": "8 × 7 = 56. You can think of it as 8 × 5 = 40 plus 8 × 2 = 16, so 40 + 16 = 56."
+  },
+  {
+    "id": 1006,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "C",
+    "dok": 1,
+    "standard": "3.OA.C.7",
+    "type": "text-input",
+    "questionText": "What is 42 ÷ 6?",
+    "correctAnswer": "7",
+    "rubric": "The student enters the correct quotient.",
+    "points": 1,
+    "explanation": "42 ÷ 6 = 7. You can verify: 6 × 7 = 42."
+  },
+  {
+    "id": 1007,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "D",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "questionText": "Leo had 85 stickers. He gave 37 to his sister and then bought 12 more. How many stickers does Leo have now?",
+    "correctAnswer": "60",
+    "rubric": "The student enters the correct number of stickers.",
+    "points": 1,
+    "explanation": "First subtract: 85 − 37 = 48. Then add: 48 + 12 = 60 stickers."
+  },
+  {
+    "id": 1008,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -318,140 +174,87 @@ export const practiceTest2Questions: Question[] = [
     "dok": 2,
     "standard": "3.OA.D.9",
     "type": "text-input",
-    "questionText": "Look at the pattern: 5, 10, 15, ?, ?\n\nWhat are the next two numbers in the pattern? Enter them separated by a comma.",
-    "correctAnswer": "20, 25",
-    "rubric": "The student enters the correct numbers.",
+    "questionText": "Look at the pattern: 4, 8, 12, 16, ?, ?\n\nWhat are the next two numbers? Enter them separated by a comma.",
+    "correctAnswer": "20, 24",
+    "rubric": "The student enters the correct numbers in the pattern.",
     "points": 1,
-    "explanation": "The pattern adds 5 each time: 5, 10, 15, 20, 25. The next two numbers are 20 and 25.",
-    "practiceTest": 2
+    "explanation": "The pattern adds 4 each time: 4, 8, 12, 16, 20, 24."
   },
   {
-    "id": 1014,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "multi-select",
-    "questionText": "Decide whether each equation is true or false.\n\nSelect all of the equations that are true.",
-    "options": [
-      {
-        "label": "A",
-        "text": "8 × 2 = 4 × 6"
-      },
-      {
-        "label": "B",
-        "text": "7 × 3 = 3 × 7"
-      },
-      {
-        "label": "C",
-        "text": "5 × 6 = 3 × 10"
-      }
-    ],
-    "correctAnswer": [
-      "B",
-      "C"
-    ],
-    "rubric": "The student correctly identifies the true equations.",
-    "points": 1,
-    "explanation": "8 × 2 = 16 and 4 × 6 = 24, so A is false. 7 × 3 and 3 × 7 are both 21, so B is true. 5 × 6 and 3 × 10 are both 30, so C is true.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1015,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "C",
-    "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "Enter the unknown numbers that make each equation true.\n\nEnter the first unknown number in the first box.\nEnter the second unknown number in the second box.\n\n5 × 8 = □\n\n8 × 7 = □",
-    "correctAnswer": "40,56",
-    "rubric": "The student enters the correct products.",
-    "points": 1,
-    "explanation": "5 × 8 = 40 and 8 × 7 = 56, so the two answers are 40 and 56 in that order.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1016,
+    "id": 1009,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 3,
-    "domain": "MD",
+    "domain": "OA",
     "target": "F",
     "dok": 2,
-    "standard": "3.MD.A.1",
+    "standard": "3.OA.B.5",
     "type": "multiple-choice",
-    "questionText": "Four number lines are described below. Each one starts at 0 minutes.\n\nWhich number line places point P at 45 minutes?",
+    "questionText": "Which equation shows that multiplication is commutative (order doesn't matter)?",
     "options": [
       {
         "label": "A",
-        "text": "The line is marked every 20 minutes, and P is at the third mark after 0."
+        "text": "3 × (4 + 2) = (3 × 4) + (3 × 2)"
       },
       {
         "label": "B",
-        "text": "The line is marked every 15 minutes, and P is at the third mark after 0."
+        "text": "5 × 8 = 8 × 5"
       },
       {
         "label": "C",
-        "text": "The line is marked every 10 minutes, and P is at the fourth mark after 0."
+        "text": "6 × 1 = 6"
       },
       {
         "label": "D",
-        "text": "The line is marked every 30 minutes, and P is halfway between 0 and 60."
+        "text": "4 × 0 = 0"
       }
     ],
     "correctAnswer": "B",
-    "rubric": "The student identifies the correct number line.",
+    "rubric": "The student identifies the commutative property.",
     "points": 1,
-    "explanation": "If the marks are every 15 minutes, the first three marks after 0 are 15, 30, and 45, so choice B is correct.",
-    "practiceTest": 2
+    "explanation": "The commutative property says you can multiply numbers in any order: 5 × 8 = 8 × 5 = 40."
   },
   {
-    "id": 1017,
+    "id": 1010,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "I",
+    "claim": 3,
+    "domain": "OA",
+    "target": "F",
     "dok": 2,
-    "standard": "3.MD.C.7",
+    "standard": "3.OA.B.5",
     "type": "multiple-choice",
-    "questionText": "A rectangular room is covered with 4 rows of 5 square-foot tiles. Which number shows the area of the room in square feet?",
+    "questionText": "Which shows the distributive property applied to 6 × 8?",
     "options": [
       {
         "label": "A",
-        "text": "20"
+        "text": "6 × 8 = 8 × 6"
       },
       {
         "label": "B",
-        "text": "9"
+        "text": "(6 × 5) + (6 × 3) = 48"
       },
       {
         "label": "C",
-        "text": "18"
+        "text": "6 × 8 = 6 × 8"
       },
       {
         "label": "D",
-        "text": "25"
+        "text": "(6 + 5) × (6 + 3) = 99"
       }
     ],
-    "correctAnswer": "A",
-    "rubric": "The student selects the correct number of square feet.",
+    "correctAnswer": "B",
+    "rubric": "The student identifies the distributive property.",
     "points": 1,
-    "explanation": "Area is found by multiplying rows by columns: 4 × 5 = 20 square feet.",
-    "practiceTest": 2
+    "explanation": "The distributive property breaks a factor apart: 6 × 8 = 6 × (5 + 3) = (6 × 5) + (6 × 3) = 30 + 18 = 48."
   },
   {
-    "id": 1018,
+    "id": 1011,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -459,278 +262,269 @@ export const practiceTest2Questions: Question[] = [
     "domain": "OA",
     "target": "A",
     "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "text-input",
-    "questionText": "There are 9 cherry trees.\n\n• Kim picks 8 cherries from each tree.\n• Kim eats 14 of the cherries she picked.\n\nEnter the number of cherries Kim has left.",
-    "correctAnswer": "58",
-    "rubric": "The student enters the correct number of cherries.",
+    "standard": "3.OA.A.3",
+    "type": "multiple-choice",
+    "questionText": "Sam has 24 baseball cards. He wants to put the same number of cards on each page of his album. Which shows a way Sam could arrange his cards?",
+    "options": [
+      {
+        "label": "A",
+        "text": "5 pages with 5 cards on each page"
+      },
+      {
+        "label": "B",
+        "text": "3 pages with 8 cards on each page"
+      },
+      {
+        "label": "C",
+        "text": "4 pages with 7 cards on each page"
+      },
+      {
+        "label": "D",
+        "text": "6 pages with 5 cards on each page"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student selects the correct equal grouping.",
     "points": 1,
-    "explanation": "Kim picks 9 × 8 = 72 cherries and then eats 14. That leaves 72 − 14 = 58 cherries.",
-    "practiceTest": 2
+    "explanation": "Check each: 5×5=25 (no), 3×8=24 (yes!), 4×7=28 (no), 6×5=30 (no). Only 3 pages with 8 cards equals 24."
   },
   {
-    "id": 1019,
+    "id": 1012,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 3,
-    "domain": "OA",
+    "claim": 1,
+    "domain": "NBT",
     "target": "E",
-    "dok": 2,
-    "standard": "3.OA.B.5",
+    "dok": 1,
+    "standard": "3.NBT.A.1",
     "type": "multiple-choice",
-    "questionText": "Libby said the answer to the problem 5 × 2 × 3 is 25. Her work is shown.\n\n• Step 1: 5 × 2 = 10\n• Step 2: 5 × 3 = 15\n• Step 3: 10 + 15 = 25\n\nWhich is true?",
+    "questionText": "What is 657 rounded to the nearest hundred?",
     "options": [
       {
         "label": "A",
-        "text": "Libby's answer is correct because 10 + 15 = 25."
+        "text": "600"
       },
       {
         "label": "B",
-        "text": "Libby's answer is correct because 2 + 3 = 5 and 5 × 5 = 25."
+        "text": "650"
       },
       {
         "label": "C",
-        "text": "Libby's answer is not correct because she multiplied 5 × 3 and 5 × 2."
+        "text": "660"
       },
       {
         "label": "D",
-        "text": "Libby's answer is not correct because she should have multiplied 10 × 15."
+        "text": "700"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student identifies the correct statement.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct rounded number.",
     "points": 1,
-    "explanation": "Libby treated 5 × 2 × 3 like 5 × 2 plus 5 × 3, which is not the right way to solve the expression. That makes choice C correct.",
-    "practiceTest": 2
+    "explanation": "To round to the nearest hundred, look at the tens digit (5). Since 5 ≥ 5, round up: 657 rounds to 700."
   },
   {
-    "id": 1020,
+    "id": 1013,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 4,
-    "domain": "OA",
-    "target": "C",
-    "dok": 2,
-    "standard": "3.OA.D.8",
+    "claim": 1,
+    "domain": "NBT",
+    "target": "E",
+    "dok": 1,
+    "standard": "3.NBT.A.1",
+    "type": "multiple-choice",
+    "questionText": "What is 345 rounded to the nearest ten?",
+    "options": [
+      {
+        "label": "A",
+        "text": "340"
+      },
+      {
+        "label": "B",
+        "text": "350"
+      },
+      {
+        "label": "C",
+        "text": "300"
+      },
+      {
+        "label": "D",
+        "text": "400"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student rounds correctly.",
+    "points": 1,
+    "explanation": "To round 345 to the nearest ten, look at the ones digit (5). Since 5 ≥ 5, round up to 350."
+  },
+  {
+    "id": 1014,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NBT",
+    "target": "E",
+    "dok": 1,
+    "standard": "3.NBT.A.2",
     "type": "text-input",
-    "questionText": "Jamal's mother plans a trip for the baseball team.\n\n• There are 14 players on the team.\n• There are 5 parents going on the trip.\n• The players and parents will all travel together in cars.\n• Each car can hold a total of 5 people.\n• There must be at least 1 parent in each car.\n\nWhat is the fewest number of cars they will need?",
-    "correctAnswer": "4",
-    "rubric": "The student enters the fewest number of cars needed.",
+    "questionText": "What is 284 + 539?",
+    "correctAnswer": "823",
+    "rubric": "The student enters the correct sum.",
     "points": 1,
-    "explanation": "There are 14 + 5 = 19 people total. Four cars can hold 20 people, and with 5 parents available it is possible to put at least 1 parent in each car.",
-    "practiceTest": 2
+    "explanation": "Add column by column: ones: 4+9=13 (write 3, carry 1), tens: 8+3+1=12 (write 2, carry 1), hundreds: 2+5+1=8. Answer: 823."
   },
   {
-    "id": 1021,
+    "id": 1015,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 3,
-    "domain": "NF",
-    "target": "D",
-    "dok": 2,
-    "standard": "3.NF.A.3",
-    "type": "multiple-choice",
-    "questionText": "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1\n- greater than 1",
-    "options": [
-      {
-        "label": "A",
-        "text": "2/2, 3/4, 3/2"
-      },
-      {
-        "label": "B",
-        "text": "2/3, 3/3, 2/4"
-      },
-      {
-        "label": "C",
-        "text": "4/3, 2/2, 4/4"
-      },
-      {
-        "label": "D",
-        "text": "3/4, 3/2, 2/2"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student identifies one valid set of fractions.",
+    "claim": 1,
+    "domain": "NBT",
+    "target": "E",
+    "dok": 1,
+    "standard": "3.NBT.A.2",
+    "type": "text-input",
+    "questionText": "What is 600 − 347?",
+    "correctAnswer": "253",
+    "rubric": "The student enters the correct difference.",
     "points": 1,
-    "explanation": "2/2 equals 1, 3/4 is less than 1, and 3/2 is greater than 1, so choice A is correct.",
-    "practiceTest": 2
+    "explanation": "Subtract using regrouping: 600 − 347 = 253. You can check: 253 + 347 = 600."
   },
   {
-    "id": 1022,
+    "id": 1016,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "NBT",
+    "target": "E",
+    "dok": 1,
+    "standard": "3.NBT.A.3",
+    "type": "text-input",
+    "questionText": "What is 7 × 80?",
+    "correctAnswer": "560",
+    "rubric": "The student enters the correct product.",
+    "points": 1,
+    "explanation": "Multiply: 7 × 80 = 7 × 8 × 10 = 56 × 10 = 560."
+  },
+  {
+    "id": 1017,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 2,
-    "domain": "OA",
+    "domain": "NBT",
     "target": "C",
     "dok": 2,
-    "standard": "3.OA.A.3",
-    "type": "multi-select",
-    "questionText": "A teacher has 12 pens. Select all of the groups that can be formed using all 12 pens with no pens left over.",
+    "standard": "3.NBT.A.2",
+    "type": "multiple-choice",
+    "questionText": "A school collected cans for recycling. Room A collected 278 cans, Room B collected 312 cans, and Room C collected 195 cans. Which room collected the fewest cans?",
     "options": [
       {
         "label": "A",
-        "text": "2 groups of 6"
+        "text": "Room A"
       },
       {
         "label": "B",
-        "text": "3 groups of 4"
+        "text": "Room B"
       },
       {
         "label": "C",
-        "text": "5 groups of 2"
+        "text": "Room C"
       },
       {
         "label": "D",
-        "text": "4 groups of 3"
+        "text": "Rooms A and C collected the same amount"
       }
     ],
-    "correctAnswer": [
-      "A",
-      "B",
-      "D"
-    ],
-    "rubric": "The student identifies all groups that can be formed using all the pens.",
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct room.",
     "points": 1,
-    "explanation": "2 × 6 = 12, 3 × 4 = 12, and 4 × 3 = 12, so those work. But 5 × 2 = 10, so choice C does not use all 12 pens.",
-    "practiceTest": 2
+    "explanation": "Compare: 195 < 278 < 312. Room C collected the fewest cans with 195."
   },
   {
-    "id": 1023,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 4,
-    "domain": "MD",
-    "target": "D",
-    "dok": 3,
-    "standard": "3.MD.B.3",
-    "type": "text-input",
-    "questionText": "Jenna made a picture graph in which each star represents some number of students. She forgot to complete the key.\n\nFavorite Color\nRed: **\nBlue: ****\nYellow: ****\nGreen: ****\n\nThe difference between the number of students who voted for blue and the number of students who voted for red is greater than 5 but less than 9.\n\nEnter a possible number of students that each star could represent.",
-    "correctAnswer": "3",
-    "acceptedAnswers": [
-      "3",
-      "4"
-    ],
-    "rubric": "The student enters a possible number of students each star could represent.",
-    "points": 1,
-    "explanation": "Blue has 4 stars and red has 2 stars, so the difference is 2 stars. If each star represents 3 students, the difference is 6. If each star represents 4 students, the difference is 8. Both are greater than 5 but less than 9.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1024,
+    "id": 1018,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "MD",
-    "target": "H",
-    "dok": 2,
-    "standard": "3.MD.B.4",
-    "type": "line-plot",
-    "questionText": "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 1/4, 2/4, 3/4",
-    "linePlotLabels": [
-      "1/4",
-      "2/4",
-      "3/4",
-      "4/4"
-    ],
-    "linePlotMaxDots": 4,
-    "correctAnswer": [
-      "0:2",
-      "0:1",
-      "1:1",
-      "2:1"
-    ],
-    "rubric": "The student correctly completes the line plot.",
-    "points": 1,
-    "explanation": "The line plot should show two X marks above 1/4, one X above 2/4, one X above 3/4, and none above 4/4.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1025,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 4,
-    "domain": "OA",
-    "target": "E",
-    "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "multi-select",
-    "questionText": "Kaden has 7 bags of animal toys. Each bag has these animal toys in it.\n\n- 1 whale toy\n- 5 dolphin toys\n- 2 turtle toys\n\nHow many animal toys does Kaden have altogether?\n\nSelect all of the equations that show how to find the total number, t, of animal toys.",
-    "options": [
-      {
-        "label": "A",
-        "text": "7 × 8 = t"
-      },
-      {
-        "label": "B",
-        "text": "7 + 1 + 5 + 2 = t"
-      },
-      {
-        "label": "C",
-        "text": "7 × (1 + 5 + 2) = t"
-      },
-      {
-        "label": "D",
-        "text": "7 + (1 × 5 × 2) = t"
-      }
-    ],
-    "correctAnswer": [
-      "A",
-      "C"
-    ],
-    "rubric": "The student identifies the correct equations.",
-    "points": 1,
-    "explanation": "Each bag has 1 + 5 + 2 = 8 toys, so 7 × 8 = t works. The equivalent grouped expression is 7 × (1 + 5 + 2) = t.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1026,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
     "domain": "NF",
-    "target": "B",
-    "dok": 3,
-    "standard": "3.NF.A.3",
-    "type": "text-input",
-    "questionText": "Two comparisons are shown.\n\n□/□ < 2/3\n□/□ > 2/6\n\nEnter one fraction that makes both comparisons true.",
-    "correctAnswer": "2/4",
-    "fractionRange": {
-      "greaterThan": "2/6",
-      "lessThan": "2/3"
-    },
-    "rubric": "The student enters an acceptable fraction or decimal.",
+    "target": "F",
+    "dok": 1,
+    "standard": "3.NF.A.1",
+    "type": "multiple-choice",
+    "questionText": "A chocolate bar is divided into 6 equal pieces. Tom eats 2 pieces. What fraction of the chocolate bar did Tom eat?",
+    "options": [
+      {
+        "label": "A",
+        "text": "2/6"
+      },
+      {
+        "label": "B",
+        "text": "6/2"
+      },
+      {
+        "label": "C",
+        "text": "2/4"
+      },
+      {
+        "label": "D",
+        "text": "4/6"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student selects the correct fraction.",
     "points": 1,
-    "explanation": "Any value strictly between 2/6 and 2/3 is correct. For example, 2/4 equals 1/2, and 1/2 is greater than 2/6 but less than 2/3.",
-    "practiceTest": 2
+    "explanation": "Tom ate 2 pieces out of 6 total pieces, which is the fraction 2/6."
   },
   {
-    "id": 1027,
+    "id": 1019,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "OA",
-    "target": "D",
+    "domain": "NF",
+    "target": "F",
     "dok": 2,
-    "standard": "3.OA.D.8",
-    "type": "text-input",
-    "questionText": "Jana has 107 wooden beads and 68 glass beads. How many more wooden beads than glass beads does Jana have?\n\nEnter your answer in the response box.",
-    "correctAnswer": "39",
-    "rubric": "The student enters the correct number of beads.",
+    "standard": "3.NF.A.3",
+    "type": "multiple-choice",
+    "questionText": "Which fraction is equivalent to 2/6?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1/2"
+      },
+      {
+        "label": "B",
+        "text": "1/3"
+      },
+      {
+        "label": "C",
+        "text": "2/3"
+      },
+      {
+        "label": "D",
+        "text": "3/6"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies the equivalent fraction.",
     "points": 1,
-    "explanation": "Subtract the number of glass beads from the number of wooden beads: 107 − 68 = 39.",
-    "practiceTest": 2
+    "explanation": "Simplify 2/6 by dividing numerator and denominator by 2: 2÷2 = 1, 6÷2 = 3. So 2/6 = 1/3."
   },
   {
-    "id": 1028,
+    "id": 1020,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -739,192 +533,106 @@ export const practiceTest2Questions: Question[] = [
     "target": "F",
     "dok": 2,
     "standard": "3.NF.A.2",
-    "type": "text-input",
-    "questionText": "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the seventh mark after 0.\n\nEnter the fraction represented by Point A.",
-    "correctAnswer": "7/8",
-    "rubric": "The student enters a correct fraction represented by Point A.",
+    "type": "multiple-choice",
+    "questionText": "A number line goes from 0 to 1 and is divided into 4 equal parts. Which fraction is located at the second mark?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1/4"
+      },
+      {
+        "label": "B",
+        "text": "2/4"
+      },
+      {
+        "label": "C",
+        "text": "3/4"
+      },
+      {
+        "label": "D",
+        "text": "4/4"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies the correct fraction on the number line.",
     "points": 1,
-    "explanation": "If the number line is divided into 8 equal parts, each mark is one eighth. The seventh mark after 0 is 7/8.",
-    "practiceTest": 2
+    "explanation": "On a number line divided into 4 equal parts, the 1st mark is 1/4, the 2nd mark is 2/4 (or 1/2), the 3rd is 3/4, and the 4th is 4/4 (or 1)."
   },
   {
-    "id": 1029,
+    "id": 1021,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 3,
     "domain": "NF",
-    "target": "A",
+    "target": "D",
     "dok": 2,
     "standard": "3.NF.A.3",
-    "type": "fraction-model",
-    "questionText": "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model equal amounts.\n\nPart B: Decide whether the number of 1/3 pieces is greater than the number of 1/4 pieces, and choose the correct comparison symbol.",
-    "fractionModel": {
-      "thirdsMax": 4,
-      "fourthsMax": 4
-    },
-    "correctAnswer": [
-      "3",
-      "4",
-      "yes",
-      ">"
-    ],
-    "rubric": "The student correctly models the equal amounts and identifies the correct comparison.",
-    "points": 2,
-    "explanation": "Three pieces of 1/3 and four pieces of 1/4 both make 1 whole. Since 3 is less than 4, the fractions represented are equal in size, but the number of 1/3 pieces compared to 1/4 pieces in this model is 3 versus 4. This adapted item uses the equal-whole model from the official interaction.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1030,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "G",
-    "target": "K",
-    "dok": 2,
-    "standard": "3.G.A.2",
-    "type": "shade-grid",
-    "questionText": "Shade 1/4 of the rectangle.",
-    "shadeGrid": {
-      "rows": 1,
-      "cols": 4,
-      "requiredCount": 1
-    },
-    "correctAnswer": [
-      "0:0"
-    ],
-    "rubric": "The student correctly shades 1/4 of the rectangle.",
-    "points": 1,
-    "explanation": "The rectangle is divided into 4 equal parts, so shading any 1 of the 4 parts shows 1/4.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1031,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "OA",
-    "target": "B",
-    "dok": 1,
-    "standard": "3.OA.B.5",
-    "type": "multi-select",
-    "questionText": "Select all of the expressions that are equal to 4 × 12.",
-    "options": [
-      {
-        "label": "A",
-        "text": "4 × (10 + 2)"
-      },
-      {
-        "label": "B",
-        "text": "(4 × 10) + 2"
-      },
-      {
-        "label": "C",
-        "text": "4 + (10 × 2)"
-      }
-    ],
-    "correctAnswer": [
-      "A"
-    ],
-    "rubric": "The student identifies the equal expressions.",
-    "points": 1,
-    "explanation": "4 × (10 + 2) equals 4 × 12, so A is correct. (4 × 10) + 2 = 42 and 4 + (10 × 2) = 24, so B and C are not equal to 48.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1032,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 1,
-    "domain": "MD",
-    "target": "I",
-    "dok": 2,
-    "standard": "3.MD.C.7",
-    "type": "text-input",
-    "questionText": "A garden is 9 feet long and 4 feet wide. What is the area of the garden in square feet?",
-    "correctAnswer": "36",
-    "rubric": "The student enters the correct area.",
-    "points": 1,
-    "explanation": "Area = length × width = 9 × 4 = 36 square feet.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1033,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 2,
-    "domain": "MD",
-    "target": "J",
-    "dok": 2,
-    "standard": "3.MD.D.8",
-    "type": "text-input",
-    "questionText": "A square has sides that are each 8 inches long. What is the perimeter of the square in inches?",
-    "correctAnswer": "32",
-    "rubric": "The student enters the correct perimeter.",
-    "points": 1,
-    "explanation": "Perimeter of a square = 4 × side length = 4 × 8 = 32 inches.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1034,
-    "testType": "cat",
-    "subject": "math",
-    "grade": 3,
-    "claim": 3,
-    "domain": "OA",
-    "target": "F",
-    "dok": 2,
-    "standard": "3.OA.B.5",
     "type": "multiple-choice",
-    "questionText": "Which property of multiplication does this equation show?\n\n3 × (2 + 4) = (3 × 2) + (3 × 4)",
+    "questionText": "Which comparison is correct?",
     "options": [
       {
         "label": "A",
-        "text": "Commutative property"
+        "text": "1/4 > 1/2"
       },
       {
         "label": "B",
-        "text": "Associative property"
+        "text": "3/8 > 7/8"
       },
       {
         "label": "C",
-        "text": "Distributive property"
+        "text": "2/3 < 1/3"
       },
       {
         "label": "D",
-        "text": "Identity property"
+        "text": "5/6 > 2/6"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct property.",
+    "correctAnswer": "D",
+    "rubric": "The student selects the correct comparison.",
     "points": 1,
-    "explanation": "The distributive property says a × (b + c) = (a × b) + (a × c). This is shown by 3 × (2 + 4) = (3 × 2) + (3 × 4).",
-    "practiceTest": 2
+    "explanation": "When fractions have the same denominator, compare the numerators: 5/6 > 2/6 because 5 > 2."
   },
   {
-    "id": 1035,
+    "id": 1022,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
     "claim": 1,
-    "domain": "OA",
-    "target": "C",
+    "domain": "MD",
+    "target": "G",
     "dok": 1,
-    "standard": "3.OA.C.7",
-    "type": "text-input",
-    "questionText": "What is 72 ÷ 9?",
-    "correctAnswer": "8",
-    "rubric": "The student enters the correct quotient.",
+    "standard": "3.MD.A.1",
+    "type": "multiple-choice",
+    "questionText": "Sara starts reading at 3:30 p.m. She reads for 1 hour and 15 minutes. What time does she finish reading?",
+    "options": [
+      {
+        "label": "A",
+        "text": "4:15 p.m."
+      },
+      {
+        "label": "B",
+        "text": "4:30 p.m."
+      },
+      {
+        "label": "C",
+        "text": "4:45 p.m."
+      },
+      {
+        "label": "D",
+        "text": "5:00 p.m."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct time.",
     "points": 1,
-    "explanation": "72 ÷ 9 = 8. You can verify: 9 × 8 = 72.",
-    "practiceTest": 2
+    "explanation": "Start at 3:30. Add 1 hour → 4:30. Add 15 minutes → 4:45 p.m."
   },
   {
-    "id": 1036,
+    "id": 1023,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "math",
     "grade": 3,
@@ -934,369 +642,511 @@ export const practiceTest2Questions: Question[] = [
     "dok": 2,
     "standard": "3.MD.A.1",
     "type": "multiple-choice",
-    "questionText": "A movie starts at 7:15 p.m. and ends at 9:00 p.m. How long is the movie?",
+    "questionText": "Recess starts at 11:45 a.m. and ends at 12:15 p.m. How long is recess?",
     "options": [
       {
         "label": "A",
-        "text": "1 hour 15 minutes"
+        "text": "15 minutes"
       },
       {
         "label": "B",
-        "text": "1 hour 30 minutes"
+        "text": "25 minutes"
       },
       {
         "label": "C",
-        "text": "1 hour 45 minutes"
+        "text": "30 minutes"
       },
       {
         "label": "D",
-        "text": "2 hours 15 minutes"
+        "text": "45 minutes"
       }
     ],
     "correctAnswer": "C",
-    "rubric": "The student selects the correct elapsed time.",
+    "rubric": "The student calculates elapsed time correctly.",
     "points": 1,
-    "explanation": "From 7:15 to 9:00: first count 7:15 to 8:15 (1 hour), then 8:15 to 9:00 (45 minutes). Total: 1 hour 45 minutes.",
-    "practiceTest": 2
+    "explanation": "From 11:45 to 12:00 is 15 minutes. From 12:00 to 12:15 is 15 minutes. Total: 15 + 15 = 30 minutes."
   },
   {
-    "id": 1040,
-    "testType": "pt",
+    "id": 1024,
+    "practiceTest": 2,
+    "testType": "cat",
     "subject": "math",
     "grade": 3,
-    "claim": 2,
-    "domain": "NBT",
-    "target": "D",
-    "dok": 1,
-    "standard": "1.NBT.B.3",
-    "type": "multi-select",
-    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.\n\nThe items that can be recycled are:\n\n- Plastic bottles\n- Aluminum cans\n- Glass bottles\n\nStudents from the 3rd grade, 4th grade, and 5th grade classes collected bottles and cans and brought them to school.\n\nTable 1 shows how many bottles and cans each grade collected on each day of the week.",
-    "dataTable": {
-      "columns": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "rows": [
-        {
-          "label": "3rd grade",
-          "values": [
-            50,
-            60,
-            90,
-            120,
-            90
-          ]
-        },
-        {
-          "label": "4th grade",
-          "values": [
-            70,
-            90,
-            100,
-            50,
-            80
-          ]
-        },
-        {
-          "label": "5th grade",
-          "values": [
-            80,
-            80,
-            80,
-            80,
-            80
-          ]
-        }
-      ]
-    },
-    "questionText": "Use Table 1 to help you answer this question.\n\nOn which days did the 3rd grade class collect more cans and bottles than the other two grades? Select all that apply.",
+    "claim": 1,
+    "domain": "MD",
+    "target": "G",
+    "dok": 2,
+    "standard": "3.MD.A.2",
+    "type": "multiple-choice",
+    "questionText": "A jug holds 2 liters of juice. Marcus pours out 750 milliliters. How many milliliters of juice are left?",
     "options": [
       {
         "label": "A",
-        "text": "Monday"
+        "text": "1,000 milliliters"
       },
       {
         "label": "B",
-        "text": "Tuesday"
+        "text": "1,250 milliliters"
       },
       {
         "label": "C",
-        "text": "Wednesday"
+        "text": "1,350 milliliters"
       },
       {
         "label": "D",
-        "text": "Thursday"
-      },
-      {
-        "label": "E",
-        "text": "Friday"
+        "text": "1,750 milliliters"
       }
     ],
-    "correctAnswer": [
-      "D",
-      "E"
-    ],
-    "rubric": "The student selects both Thursday and Friday.",
+    "correctAnswer": "B",
+    "rubric": "The student converts and subtracts correctly.",
     "points": 1,
-    "explanation": "Compare the 3rd grade row to the other two rows day by day. The 3rd grade collected the most on Thursday and Friday.",
-    "practiceTest": 2
+    "explanation": "First convert: 2 liters = 2,000 milliliters. Then subtract: 2,000 − 750 = 1,250 milliliters."
   },
   {
-    "id": 1041,
+    "id": 1025,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "H",
+    "dok": 2,
+    "standard": "3.MD.B.3",
+    "type": "multiple-choice",
+    "questionText": "A picture graph shows favorite sports. Each picture stands for 2 students. Soccer has 4 pictures, Basketball has 3 pictures, and Baseball has 5 pictures. How many students chose baseball?",
+    "options": [
+      {
+        "label": "A",
+        "text": "5"
+      },
+      {
+        "label": "B",
+        "text": "7"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "12"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student interprets the picture graph correctly.",
+    "points": 1,
+    "explanation": "Each picture = 2 students. Baseball has 5 pictures, so 5 × 2 = 10 students chose baseball."
+  },
+  {
+    "id": 1026,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "H",
+    "dok": 2,
+    "standard": "3.MD.B.3",
+    "type": "text-input",
+    "questionText": "A bar graph shows how many books students read: Week 1 = 12, Week 2 = 8, Week 3 = 15, Week 4 = 10. How many total books were read in all 4 weeks?",
+    "correctAnswer": "45",
+    "rubric": "The student adds all values correctly.",
+    "points": 1,
+    "explanation": "Add all the values: 12 + 8 + 15 + 10 = 45 books."
+  },
+  {
+    "id": 1027,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "text-input",
+    "questionText": "A rug is 8 feet long and 5 feet wide. What is the area of the rug in square feet?",
+    "correctAnswer": "40",
+    "rubric": "The student enters the correct area.",
+    "points": 1,
+    "explanation": "Area = length × width = 8 × 5 = 40 square feet."
+  },
+  {
+    "id": 1028,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "text-input",
+    "questionText": "A floor tile is a square with sides that are 3 inches long. What is the area of one tile in square inches?",
+    "correctAnswer": "9",
+    "rubric": "The student enters the correct area.",
+    "points": 1,
+    "explanation": "Area of a square = side × side = 3 × 3 = 9 square inches."
+  },
+  {
+    "id": 1029,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "MD",
+    "target": "J",
+    "dok": 2,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A rectangular garden is 12 feet long and 7 feet wide. What is the perimeter of the garden in feet?",
+    "correctAnswer": "38",
+    "rubric": "The student enters the correct perimeter.",
+    "points": 1,
+    "explanation": "Perimeter = 2 × length + 2 × width = 2 × 12 + 2 × 7 = 24 + 14 = 38 feet."
+  },
+  {
+    "id": 1030,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "J",
+    "dok": 2,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "questionText": "A square picture frame has sides that are each 9 inches long. What is the perimeter of the frame in inches?",
+    "correctAnswer": "36",
+    "rubric": "The student enters the correct perimeter.",
+    "points": 1,
+    "explanation": "Perimeter of a square = 4 × side = 4 × 9 = 36 inches."
+  },
+  {
+    "id": 1031,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "MD",
+    "target": "H",
+    "dok": 2,
+    "standard": "3.MD.B.4",
+    "type": "multiple-choice",
+    "questionText": "Five students measured their hand spans. The measurements were: 6 inches, 5 inches, 7 inches, 6 inches, 6 inches. What is the most common measurement?",
+    "options": [
+      {
+        "label": "A",
+        "text": "5 inches"
+      },
+      {
+        "label": "B",
+        "text": "6 inches"
+      },
+      {
+        "label": "C",
+        "text": "7 inches"
+      },
+      {
+        "label": "D",
+        "text": "8 inches"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies the mode.",
+    "points": 1,
+    "explanation": "6 inches appears three times, which is more than any other measurement. The mode (most common value) is 6 inches."
+  },
+  {
+    "id": 1032,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "G",
+    "target": "K",
+    "dok": 1,
+    "standard": "3.G.A.1",
+    "type": "multiple-choice",
+    "questionText": "Which shape is a quadrilateral?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Triangle"
+      },
+      {
+        "label": "B",
+        "text": "Pentagon"
+      },
+      {
+        "label": "C",
+        "text": "Rectangle"
+      },
+      {
+        "label": "D",
+        "text": "Circle"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student identifies the quadrilateral.",
+    "points": 1,
+    "explanation": "A quadrilateral is any shape with exactly 4 sides. A rectangle has 4 sides, so it is a quadrilateral."
+  },
+  {
+    "id": 1033,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "G",
+    "target": "K",
+    "dok": 2,
+    "standard": "3.G.A.2",
+    "type": "multiple-choice",
+    "questionText": "A circle is divided into 8 equal parts. Three parts are shaded. What fraction of the circle is shaded?",
+    "options": [
+      {
+        "label": "A",
+        "text": "3/5"
+      },
+      {
+        "label": "B",
+        "text": "5/8"
+      },
+      {
+        "label": "C",
+        "text": "3/8"
+      },
+      {
+        "label": "D",
+        "text": "8/3"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct fraction.",
+    "points": 1,
+    "explanation": "3 parts shaded out of 8 total equal parts = 3/8."
+  },
+  {
+    "id": 1034,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.OA.A.3",
+    "type": "text-input",
+    "questionText": "A parking lot has 6 rows of cars. Each row has 8 cars. How many cars are in the parking lot?",
+    "correctAnswer": "48",
+    "rubric": "The student enters the correct product.",
+    "points": 1,
+    "explanation": "Multiply rows by cars per row: 6 × 8 = 48 cars."
+  },
+  {
+    "id": 1035,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 1,
+    "domain": "OA",
+    "target": "B",
+    "dok": 2,
+    "standard": "3.OA.A.4",
+    "type": "text-input",
+    "questionText": "A teacher has 45 pencils to share equally among 9 students. How many pencils does each student get?",
+    "correctAnswer": "5",
+    "rubric": "The student enters the correct quotient.",
+    "points": 1,
+    "explanation": "Divide equally: 45 ÷ 9 = 5 pencils each."
+  },
+  {
+    "id": 1036,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "math",
+    "grade": 3,
+    "claim": 4,
+    "domain": "MD",
+    "target": "I",
+    "dok": 2,
+    "standard": "3.MD.C.7",
+    "type": "multiple-choice",
+    "questionText": "Two rectangles are placed side by side to form a larger rectangle. Each small rectangle has an area of 12 square inches. What is the area of the larger rectangle?",
+    "options": [
+      {
+        "label": "A",
+        "text": "12 square inches"
+      },
+      {
+        "label": "B",
+        "text": "18 square inches"
+      },
+      {
+        "label": "C",
+        "text": "24 square inches"
+      },
+      {
+        "label": "D",
+        "text": "36 square inches"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student adds the areas.",
+    "points": 1,
+    "explanation": "When two shapes are placed together without overlap, add the areas: 12 + 12 = 24 square inches."
+  },
+  {
+    "id": 1040,
+    "practiceTest": 2,
     "testType": "pt",
     "subject": "math",
     "grade": 3,
     "claim": 2,
-    "domain": "NBT",
-    "target": "D",
-    "dok": 1,
-    "standard": "1.NBT.B.3",
-    "type": "text-input",
-    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
-    "dataTable": {
-      "columns": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "rows": [
-        {
-          "label": "3rd grade",
-          "values": [
-            50,
-            60,
-            90,
-            120,
-            90
-          ]
-        },
-        {
-          "label": "4th grade",
-          "values": [
-            70,
-            90,
-            100,
-            50,
-            80
-          ]
-        },
-        {
-          "label": "5th grade",
-          "values": [
-            80,
-            80,
-            80,
-            80,
-            80
-          ]
-        }
-      ]
-    },
-    "questionText": "Use Table 1 to help you answer this question.\n\nOn Tuesday, how many more bottles and cans did the 4th grade class collect than the 3rd grade class?",
-    "correctAnswer": "30",
-    "rubric": "The student enters 30.",
+    "domain": "OA",
+    "target": "A",
+    "dok": 2,
+    "standard": "3.OA.A.3",
+    "type": "multiple-choice",
+    "studentDirections": bakeSaleMathPtDirections,
+    "dataTable": bakeSaleMathPtTable,
+    "questionText": "The third-grade class is having a bake sale to raise money for a field trip.\n\nMrs. Johnson's class baked 8 trays of cupcakes. Each tray holds 6 cupcakes. How many cupcakes did they bake in all?",
+    "options": [
+      {
+        "label": "A",
+        "text": "14 cupcakes"
+      },
+      {
+        "label": "B",
+        "text": "42 cupcakes"
+      },
+      {
+        "label": "C",
+        "text": "48 cupcakes"
+      },
+      {
+        "label": "D",
+        "text": "56 cupcakes"
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects the correct product.",
     "points": 1,
-    "explanation": "On Tuesday, 4th grade collected 90 and 3rd grade collected 60. The difference is 90 − 60 = 30.",
-    "practiceTest": 2
+    "explanation": "Multiply trays by cupcakes per tray: 8 × 6 = 48 cupcakes."
   },
   {
-    "id": 1042,
+    "id": 1041,
+    "practiceTest": 2,
     "testType": "pt",
     "subject": "math",
     "grade": 3,
-    "claim": 3,
-    "domain": "NBT",
-    "target": "F",
-    "dok": 3,
-    "standard": "2.NBT.B",
-    "type": "short-answer",
-    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
-    "dataTable": {
-      "columns": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "rows": [
-        {
-          "label": "3rd grade",
-          "values": [
-            50,
-            60,
-            90,
-            120,
-            90
-          ]
-        },
-        {
-          "label": "4th grade",
-          "values": [
-            70,
-            90,
-            100,
-            50,
-            80
-          ]
-        },
-        {
-          "label": "5th grade",
-          "values": [
-            80,
-            80,
-            80,
-            80,
-            80
-          ]
-        }
-      ]
-    },
-    "questionText": "You are the contest judge. You need to figure out who won the contest.\n\nDid 3rd grade, 4th grade, or 5th grade win the “Go Green” contest?\n\nUse words and numbers to clearly explain:\n• which grade won the contest, and\n• how you know they collected the most cans and bottles.",
-    "correctAnswer": "3rd grade won because they collected the most bottles and cans for the week. Their total was 50 + 60 + 90 + 120 + 90 = 410, which is more than 4th grade's 390 and 5th grade's 400.",
-    "rubric": "2 points: The student develops an approach to determine the winner and gives a justification. 1 point: The student correctly states that 3rd grade won but gives incomplete reasoning. 0 points: All other responses.",
-    "points": 2,
-    "explanation": "Add each grade's weekly totals and compare them. 3rd grade has 410, which is more than 4th grade's 390 and 5th grade's 400.",
-    "practiceTest": 2
+    "claim": 2,
+    "domain": "OA",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "studentDirections": bakeSaleMathPtDirections,
+    "dataTable": bakeSaleMathPtTable,
+    "questionText": "Cupcakes sell for $2 each and brownies sell for $3 each. If the class sells 48 cupcakes and 24 brownies, how much money will they make in all?",
+    "correctAnswer": "168",
+    "rubric": "The student enters the correct total.",
+    "points": 1,
+    "explanation": "Cupcakes: 48 × $2 = $96. Brownies: 24 × $3 = $72. Total: $96 + $72 = $168."
   },
   {
-    "id": 1043,
+    "id": 1042,
+    "practiceTest": 2,
     "testType": "pt",
     "subject": "math",
     "grade": 3,
     "claim": 4,
     "domain": "OA",
-    "target": "A",
-    "dok": 3,
-    "standard": "2.OA.A.1",
-    "type": "table-input",
-    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
-    "dataTable": {
-      "columns": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "rows": [
-        {
-          "label": "3rd grade",
-          "values": [
-            50,
-            60,
-            90,
-            120,
-            90
-          ]
-        },
-        {
-          "label": "4th grade",
-          "values": [
-            70,
-            90,
-            100,
-            50,
-            80
-          ]
-        },
-        {
-          "label": "5th grade",
-          "values": [
-            80,
-            80,
-            80,
-            80,
-            80
-          ]
-        }
-      ]
-    },
-    "questionText": "The 2nd grade class got excited about the “Go Green” contest and wanted to join in. They started collecting bottles and cans on Wednesday, even though they missed the first two days.\n\nComplete the table to show a way for the 2nd grade class to still win the contest.",
-    "tableColumns": [
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "tableRowLabel": "2nd Grade",
-    "tableMinSumExclusive": 410,
-    "correctAnswer": [
-      "150",
-      "150",
-      "150"
-    ],
-    "rubric": "1 point: The student enters any numbers for Wednesday, Thursday, and Friday that add up to more than 410. 0 points: All other responses.",
+    "target": "C",
+    "dok": 2,
+    "standard": "3.OA.D.8",
+    "type": "text-input",
+    "studentDirections": bakeSaleMathPtDirections,
+    "dataTable": bakeSaleMathPtTable,
+    "questionText": "The field trip costs $125 for the bus and $75 for museum tickets. The class already has $32 saved. How much more money do they need to raise?",
+    "correctAnswer": "168",
+    "rubric": "The student enters the correct amount.",
     "points": 1,
-    "explanation": "Any Wednesday, Thursday, and Friday numbers that add to more than 410 would let the 2nd grade class win the contest.",
-    "practiceTest": 2
+    "explanation": "Total cost: $125 + $75 = $200. Money still needed: $200 − $32 = $168."
   },
   {
-    "id": 1044,
+    "id": 1043,
+    "practiceTest": 2,
     "testType": "pt",
     "subject": "math",
     "grade": 3,
     "claim": 3,
     "domain": "OA",
-    "target": "A",
-    "dok": 3,
-    "standard": "2.OA.A",
-    "type": "short-answer",
-    "studentDirections": "**Mathematics Performance Task**\n\nThe “Go Green” company held a week-long recycling contest at your school. The grade that collects the most bottles and cans wins the contest.\n\nYour task is to determine which grade won the “Go Green” contest.",
-    "dataTable": {
-      "columns": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "rows": [
-        {
-          "label": "3rd grade",
-          "values": [
-            50,
-            60,
-            90,
-            120,
-            90
-          ]
-        },
-        {
-          "label": "4th grade",
-          "values": [
-            70,
-            90,
-            100,
-            50,
-            80
-          ]
-        },
-        {
-          "label": "5th grade",
-          "values": [
-            80,
-            80,
-            80,
-            80,
-            80
-          ]
-        }
-      ]
-    },
-    "questionText": "Use your answers from questions 3 and 4 to explain how the 2nd grade class could have won the “Go Green” contest.",
-    "correctAnswer": "The 2nd grade class could have won by collecting more than 410 bottles and cans total on Wednesday, Thursday, and Friday. That is more than the 3rd grade total, so the 2nd grade class would win.",
-    "rubric": "2 points: The student uses the numbers from Questions 3 and 4 and explains that the 2nd grade total is more than the winning total. 1 point: The student gives part of the idea without clearly connecting the totals. 0 points: All other responses.",
-    "points": 2,
-    "explanation": "A full explanation should connect the total from Question 4 to the winning total from Question 3 and state that a total greater than 410 would make 2nd grade the winner.",
-    "practiceTest": 2
+    "target": "E",
+    "dok": 2,
+    "standard": "3.OA.A.3",
+    "type": "multiple-choice",
+    "studentDirections": bakeSaleMathPtDirections,
+    "dataTable": bakeSaleMathPtTable,
+    "questionText": "The class wants to package leftover cupcakes in boxes that hold 4 cupcakes each. If there are 20 cupcakes left, which expression shows how to find the number of boxes needed?",
+    "options": [
+      {
+        "label": "A",
+        "text": "20 + 4"
+      },
+      {
+        "label": "B",
+        "text": "20 × 4"
+      },
+      {
+        "label": "C",
+        "text": "20 − 4"
+      },
+      {
+        "label": "D",
+        "text": "20 ÷ 4"
+      }
+    ],
+    "correctAnswer": "D",
+    "rubric": "The student selects the division expression.",
+    "points": 1,
+    "explanation": "To split a total into equal groups, use division: 20 ÷ 4 = 5 boxes."
+  },
+  {
+    "id": 1044,
+    "practiceTest": 2,
+    "testType": "pt",
+    "subject": "math",
+    "grade": 3,
+    "claim": 2,
+    "domain": "MD",
+    "target": "J",
+    "dok": 2,
+    "standard": "3.MD.D.8",
+    "type": "text-input",
+    "studentDirections": bakeSaleMathPtDirections,
+    "dataTable": bakeSaleMathPtTable,
+    "questionText": "The class wants to decorate a rectangular table for the bake sale. The table is 6 feet long and 3 feet wide. They need to tape streamers around the entire edge. How many feet of streamers do they need?",
+    "correctAnswer": "18",
+    "rubric": "The student enters the correct perimeter.",
+    "points": 1,
+    "explanation": "Perimeter = 2 × length + 2 × width = 2 × 6 + 2 × 3 = 12 + 6 = 18 feet."
   },
   {
     "id": 1101,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
@@ -1305,1267 +1155,1119 @@ export const practiceTest2Questions: Question[] = [
     "dok": 2,
     "standard": "RL.1",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "Which detail from the story best supports the idea that the father was patient with his sons?",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "Why was Maya worried during the storm?",
     "options": [
       {
         "label": "A",
-        "text": "The father had to tend the field by himself."
+        "text": "She was afraid the thunder would be loud."
       },
       {
         "label": "B",
-        "text": "The sons promised to share the treasure equally."
+        "text": "She was thinking about the stray dog outside."
       },
       {
         "label": "C",
-        "text": "The neighbor asked if the sons were helping."
+        "text": "She didn't want to go to school the next day."
       },
       {
         "label": "D",
-        "text": "\"Oh, they would,\" the father answered, \"but they are young.\""
+        "text": "She forgot to close the windows."
       }
     ],
-    "correctAnswer": "D",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "B",
+    "rubric": "The student identifies Maya's concern.",
     "points": 1,
-    "evidenceStatement": "The student will identify textual evidence to support a given inference based on the text.",
-    "explanation": "The father saying \"they are young\" shows he was patient and willing to wait for them to grow up before expecting help.",
-    "practiceTest": 2
+    "explanation": "The passage says 'Maya wasn't worried about the storm. She was worried about the dog.' She kept thinking about the stray dog she had seen."
   },
   {
     "id": 1102,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "2",
+    "dok": 2,
+    "standard": "RL.2",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "Which sentence best describes the main message of the story?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Dogs make the best pets for families."
+      },
+      {
+        "label": "B",
+        "text": "Storms can be dangerous for animals."
+      },
+      {
+        "label": "C",
+        "text": "Caring about others can lead to good things."
+      },
+      {
+        "label": "D",
+        "text": "Children should always ask before going outside."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student identifies the theme.",
+    "points": 1,
+    "explanation": "The story shows that Maya's caring and compassion for the stray dog led to her family gaining a new pet. The theme is that caring about others brings good results."
+  },
+  {
+    "id": 1103,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "3",
     "dok": 2,
-    "standard": "RL.4",
+    "standard": "RL.3",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "What does the word \"tended\" mean as used in the passage?",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "How did Mama's feelings about the dog change during the story?",
     "options": [
       {
         "label": "A",
-        "text": "Sold"
+        "text": "She was angry at first but then became happy."
       },
       {
         "label": "B",
-        "text": "Planted"
+        "text": "She was quiet at first but then decided to go look."
       },
       {
         "label": "C",
-        "text": "Watched over"
+        "text": "She was scared of the dog but then liked it."
       },
       {
         "label": "D",
-        "text": "Took care of"
+        "text": "She wanted to keep the dog right away."
       }
     ],
-    "correctAnswer": "D",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "B",
+    "rubric": "The student identifies the character change.",
     "points": 1,
-    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context.",
-    "explanation": "The passage states that the father worked the field alone while the boys stayed home, showing they were lazy. They also made excuses to go home early.",
-    "practiceTest": 2
+    "explanation": "At first Mama told Maya to come away from the window. But when she saw Maya's worry, 'she grabbed two towels and the car keys' and decided to help."
   },
   {
-    "id": 1103,
+    "id": 1104,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "4",
-    "dok": 3,
-    "standard": "RL.3",
-    "type": "two-part",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "Part A: What is the main lesson the father wanted his sons to learn?\n\nPart B: Which detail from the story best supports your answer to Part A?",
-    "partAPrompt": "What is the main lesson the father wanted his sons to learn?",
-    "partAOptions": [
-      {
-        "label": "A",
-        "text": "That treasure is always buried underground"
-      },
-      {
-        "label": "B",
-        "text": "That brothers should always share equally"
-      },
-      {
-        "label": "C",
-        "text": "That neighbors are important to have"
-      },
-      {
-        "label": "D",
-        "text": "That hard work is its own reward"
-      }
-    ],
-    "partBPrompt": "Which detail from the story best supports your answer to Part A?",
-    "partBOptions": [
-      {
-        "label": "A",
-        "text": "The neighbor asked if the sons were helping."
-      },
-      {
-        "label": "B",
-        "text": "The sons planted rice, tended the field, and earned money from the harvest."
-      },
-      {
-        "label": "C",
-        "text": "The father said the boys were still young."
-      },
-      {
-        "label": "D",
-        "text": "The sons promised to share the treasure equally."
-      }
-    ],
-    "correctAnswer": [
-      "D",
-      "B"
-    ],
-    "rubric": "The student selects the correct option for Part A and the correct option in Part B.",
-    "points": 1,
-    "evidenceStatement": "The student will form a conclusion about a literary text and identify details within the text that support that conclusion.",
-    "explanation": "The father told his sons about treasure to motivate them to dig up the field. His real plan was to get them to work the land so it would be ready for planting.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1104,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "1",
-    "dok": 1,
-    "standard": "RL.1",
+    "dok": 2,
+    "standard": "RL.4",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "What did the father mean when he told his sons there was \"treasure buried in the field\"?",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "What does the word \"matted\" mean in the phrase \"its fur was matted\"?",
     "options": [
       {
         "label": "A",
-        "text": "There were gold coins buried under the soil."
+        "text": "Soft and fluffy"
       },
       {
         "label": "B",
-        "text": "The field had valuable minerals in the ground."
+        "text": "Tangled and messy"
       },
       {
         "label": "C",
-        "text": "The reward of hard work would come from farming the field."
+        "text": "Wet and shiny"
       },
       {
         "label": "D",
-        "text": "A neighbor had hidden something in the field."
+        "text": "Short and smooth"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "B",
+    "rubric": "The student determines the meaning from context.",
     "points": 1,
-    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
-    "explanation": "\"Astonished\" means very surprised. The neighbor was shocked to see the lazy sons working so hard.",
-    "practiceTest": 2
+    "explanation": "Context clues tell us the dog was a stray with no collar. 'Matted' fur means tangled, knotted, and messy—a sign the dog hadn't been groomed."
   },
   {
     "id": 1105,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "6",
-    "dok": 3,
-    "standard": "RL.5",
-    "type": "multi-select",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "Select TWO details that show how the sons changed during the story.",
-    "options": [
-      {
-        "label": "A",
-        "text": "They dug the entire field looking for treasure."
-      },
-      {
-        "label": "B",
-        "text": "They asked their father for the secret."
-      },
-      {
-        "label": "C",
-        "text": "They made excuses to go home early."
-      },
-      {
-        "label": "D",
-        "text": "They talked to the neighbor about farming."
-      },
-      {
-        "label": "E",
-        "text": "They tended the field \"just as Father did.\""
-      }
-    ],
-    "correctAnswer": [
-      "A",
-      "E"
-    ],
-    "rubric": "The student selects the two correct options.",
-    "points": 1,
-    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text in a certain manner and the impact of that structure on meaning.",
-    "explanation": "The story's main message is that hard work itself is the reward—the 'treasure' was the productive farmland they created through their labor.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1106,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "5",
-    "dok": 3,
-    "standard": "RL.3",
+    "dok": 2,
+    "standard": "RL.5",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "How did the father's trick affect the sons?",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "Which part of the story is the climax (the most exciting or important moment)?",
     "options": [
       {
         "label": "A",
-        "text": "It made them angry at their father."
+        "text": "When Maya sees the dog at the bus stop in the morning."
       },
       {
         "label": "B",
-        "text": "It made them want to find real treasure."
+        "text": "When Maya draws pictures of the dog in art class."
       },
       {
         "label": "C",
-        "text": "It taught them the value of hard work through their own experience."
+        "text": "When Maya and Mama find the dog huddled under the bench in the rain."
       },
       {
         "label": "D",
-        "text": "It made them leave the farm."
+        "text": "When Mama says the dog can stay."
       }
     ],
     "correctAnswer": "C",
-    "rubric": "The student selects the correct option.",
+    "rubric": "The student identifies the climax.",
     "points": 1,
-    "evidenceStatement": "The student will analyze the relationship among character actions/interactions within one text.",
-    "explanation": "Look at the story structure: the sons went from lazy to hardworking. The father's secret about \"treasure\" was actually a lesson about the value of work.",
-    "practiceTest": 2
+    "explanation": "The climax is the turning point with the most tension. Finding and rescuing the shaking dog in the storm is the most dramatic moment that leads to the resolution."
   },
   {
-    "id": 1107,
+    "id": 1106,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "6",
     "dok": 2,
-    "standard": "RL.5",
+    "standard": "RL.6",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "Why did the author include the neighbor character in the story?",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "From whose point of view is the story told?",
     "options": [
       {
         "label": "A",
-        "text": "To show that the neighbor wanted to help farm the field"
+        "text": "Maya's point of view (first person)"
       },
       {
         "label": "B",
-        "text": "To show that the father was a bad parent"
+        "text": "The dog's point of view"
       },
       {
         "label": "C",
-        "text": "To show how much time passed and that others noticed the sons were not helping"
+        "text": "Mama's point of view"
       },
       {
         "label": "D",
-        "text": "To explain how farming works in Vietnam"
+        "text": "A narrator who is not a character (third person)"
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "D",
+    "rubric": "The student identifies the narrative perspective.",
     "points": 1,
-    "evidenceStatement": "The student will analyze or interpret why the author structured elements within the text.",
-    "explanation": "Sap looks like water but tastes sweet because it contains sugar that the tree made during the previous summer.",
-    "practiceTest": 2
+    "explanation": "The story uses 'Maya,' 'she,' and 'Mama' (not 'I' or 'we'). This is third-person point of view—a narrator tells the story from outside."
+  },
+  {
+    "id": 1107,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "1",
+    "dok": 2,
+    "standard": "RL.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "What did the shelter check for when Maya and Mama brought the dog in?",
+    "options": [
+      {
+        "label": "A",
+        "text": "If the dog was sick"
+      },
+      {
+        "label": "B",
+        "text": "If the dog had a microchip"
+      },
+      {
+        "label": "C",
+        "text": "If the dog was friendly"
+      },
+      {
+        "label": "D",
+        "text": "How old the dog was"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student recalls a detail from the text.",
+    "points": 1,
+    "explanation": "The passage states: 'We'll take it to the shelter tomorrow to check for a microchip.' A microchip would help identify the dog's owner."
   },
   {
     "id": 1108,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "3",
+    "dok": 2,
+    "standard": "RL.3",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "Why did Maya name the dog Storm?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The dog was loud like thunder."
+      },
+      {
+        "label": "B",
+        "text": "Maya found the dog during a storm."
+      },
+      {
+        "label": "C",
+        "text": "The dog's fur was the color of storm clouds."
+      },
+      {
+        "label": "D",
+        "text": "Ms. Rivera suggested the name."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student makes a logical inference.",
+    "points": 1,
+    "explanation": "Maya rescued the dog during a thunderstorm. Naming it 'Storm' connects to how they found each other—during the storm that brought them together."
+  },
+  {
+    "id": 1109,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "2",
+    "dok": 2,
+    "standard": "RL.2",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "Which detail best shows that Maya cared deeply about the dog all day?",
+    "options": [
+      {
+        "label": "A",
+        "text": "She pressed her face against the window."
+      },
+      {
+        "label": "B",
+        "text": "She drew pictures of the dog and wrote about it in her journal."
+      },
+      {
+        "label": "C",
+        "text": "She told her Mama about the dog."
+      },
+      {
+        "label": "D",
+        "text": "She jumped out with a towel."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies supporting evidence.",
+    "points": 1,
+    "explanation": "Drawing pictures in art class AND writing about the dog in her journal shows she was thinking about it all day long—not just briefly."
+  },
+  {
+    "id": 1110,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "7",
     "dok": 2,
-    "standard": "RL.4",
+    "standard": "RI.1",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Treasure in the Field**\n*by Marilyn Bolchunos*\n\nOnce there was a man who lived with his two young sons on a farm in Vietnam. Since the man had to tend the field, the boys took care of the house. That is, they were supposed to take care of the house. Often the father returned home to find that nothing had been done—he even had to cook dinner.\n\n\"What have you been doing all day, Ta?\" he would ask his older son.\n\"Studying, Father, and thinking,\" Ta would reply.\n\"And what have you been doing, Hai, my young son?\" the father would ask.\n\"Watching the house for you,\" Hai would answer.\n\nA neighbor asked the old man, \"Are your sons helping you?\"\n\"Oh, they would,\" the father answered, \"but they are young.\"\n\nSome years later, the neighbor asked, \"Aren't your sons helping you in the field?\"\n\"Oh, they would,\" the father replied again, \"but they are still young. I will let them enjoy life now. They will help me later on.\"\n\nAs the years went by, it became clear even to their father that the boys were lazy. Though they sometimes tended the field with him, they always made excuses to go home early.\n\nFinally the father grew too old to work, and he took to his bed. The sons were sad, for they not only depended on their father, but they also loved him.\n\nOne day the old man called Ta and Hai to his side and said weakly, \"I have a secret to tell you, my sons. Bend close.\"\nHai and Ta leaned over to hear the secret.\n\"A while ago,\" the old man said, \"we learned that there is treasure buried in the field. It's still there, but you must dig for it.\"\n\nThe sons' eyes widened.\n\"Treasure in the field?\" Ta said. \"Where?\" asked Hai.\n\"Dig for it, and you will find it,\" said their father. \"But promise me that you will share it equally.\"\n\nThe sons promised and hurried out to begin. Day after day they dug. Their neighbor was astonished to see how long and hard the young men worked. As for Ta and Hai, they felt stronger and better than ever before.\n\nAt last, the entire field had been dug, but no treasure had been found. The brothers moped around with their heads down.\n\nFinally an idea came to Ta. \"The land is ready for planting,\" he said to his brother. \"And our rice is almost gone. You take one half of the field, and I'll take the other. We'll tend it just as Father did.\"\n\nThe days passed and the seedlings grew. In due time, the field gave an abundant harvest. There was rice to eat and rice to sell.\n\nWhen the sons took the rice to the marketplace, it brought a good price.\nExcited, Ta and Hai ran back to the house and approached their father's bedside. They dropped coins into the old man's hands.\n\"Look, Father,\" said Hai. \"We have sold rice and brought you gold!\"\n\"Yes,\" said Ta. \"Just as you said, the treasure was in the field.\"\n\nThe old man smiled. They had learned his secret.",
-    "passageTitle": "Treasure in the Field",
-    "questionText": "Read this sentence from the story: \"The brothers moped around with their heads down.\" What does the word \"moped\" tell the reader about the brothers?",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "How much of Earth's surface does the ocean cover?",
     "options": [
       {
         "label": "A",
-        "text": "They were excited about planting."
+        "text": "About 50 percent"
       },
       {
         "label": "B",
-        "text": "They were sad and disappointed."
+        "text": "About 60 percent"
       },
       {
         "label": "C",
-        "text": "They were tired from digging."
+        "text": "More than 70 percent"
       },
       {
         "label": "D",
-        "text": "They were angry at each other."
+        "text": "About 90 percent"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "C",
+    "rubric": "The student recalls a key detail.",
     "points": 1,
-    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context.",
-    "explanation": "The passage states that sugar is made in the leaves during summer and stored in the tree during winter.",
-    "practiceTest": 2
+    "explanation": "The first sentence of the passage states: 'The ocean covers more than 70 percent of Earth's surface.'"
   },
   {
-    "id": 1109,
+    "id": 1111,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "8",
     "dok": 2,
-    "standard": "RI.1",
+    "standard": "RI.2",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
-    "passageTitle": "Sap's Running",
-    "questionText": "According to the passage, why do the Coleman brothers collect sap in the spring?",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "What is the main idea of the section called 'Why the Ocean Matters'?",
     "options": [
       {
         "label": "A",
-        "text": "Because the trees only grow in spring"
+        "text": "The ocean is the largest body of water on Earth."
       },
       {
         "label": "B",
-        "text": "Because they need water for their farm"
+        "text": "The ocean is important for weather, climate, and producing oxygen."
       },
       {
         "label": "C",
-        "text": "Because sap flows in the spring when frost melts inside the trees"
+        "text": "Pollution is harming the ocean."
       },
       {
         "label": "D",
-        "text": "Because the University of Vermont told them to"
+        "text": "The ocean has many different zones."
       }
     ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "B",
+    "rubric": "The student identifies the main idea of a section.",
     "points": 1,
-    "evidenceStatement": "The student will identify textual evidence to support a given inference or conclusion based on the text.",
-    "explanation": "Legend explains something through a story (Woksis), while the science section uses research and experiments to explain how sap actually flows.",
-    "practiceTest": 2
+    "explanation": "The 'Why the Ocean Matters' section explains two key roles: affecting weather/climate (through evaporation and rain) and producing oxygen (through phytoplankton)."
   },
   {
-    "id": 1110,
+    "id": 1112,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "9",
+    "dok": 2,
+    "standard": "RI.3",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "What happens to sea animals when they eat plastic?",
+    "options": [
+      {
+        "label": "A",
+        "text": "They grow stronger."
+      },
+      {
+        "label": "B",
+        "text": "They can get sick or die."
+      },
+      {
+        "label": "C",
+        "text": "They swim faster."
+      },
+      {
+        "label": "D",
+        "text": "They learn to avoid it."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies a cause-and-effect relationship.",
+    "points": 1,
+    "explanation": "The passage states that animals 'often mistake plastic for food, which can make them sick or even kill them.'"
+  },
+  {
+    "id": 1113,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "10",
+    "dok": 2,
+    "standard": "RI.4",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "What does the word \"bioluminescence\" mean based on the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The ability to swim in deep water"
+      },
+      {
+        "label": "B",
+        "text": "The process of making their own light"
+      },
+      {
+        "label": "C",
+        "text": "A type of ocean plant"
+      },
+      {
+        "label": "D",
+        "text": "The way water changes color"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student uses context to determine meaning.",
+    "points": 1,
+    "explanation": "The passage defines bioluminescence right in the text: 'some even make their own light through a process called bioluminescence.'"
+  },
+  {
+    "id": 1114,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "11",
-    "dok": 3,
-    "standard": "RI.3",
-    "type": "two-part",
-    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
-    "passageTitle": "Sap's Running",
-    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
-    "partAPrompt": "Click on the sentence that gives the best conclusion about sugar-maple trees.",
-    "partAOptions": [
-      {
-        "label": "A",
-        "text": "Sugar maple trees grow best in cold weather."
-      },
-      {
-        "label": "B",
-        "text": "Most sugar maple trees are about 50 feet tall."
-      },
-      {
-        "label": "C",
-        "text": "The sap in sugar maple trees begins flowing in early spring."
-      },
-      {
-        "label": "D",
-        "text": "Vermont has the best weather for growing sugar maple trees."
-      }
-    ],
-    "partBPrompt": "Click on the sentence from the passage that best supports your answer in Part A. Choose one answer.",
-    "partBOptions": [
-      {
-        "label": "A",
-        "text": "A 50-foot-high sugar maple has nearly two hundred thousand leaves."
-      },
-      {
-        "label": "B",
-        "text": "The Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont."
-      },
-      {
-        "label": "C",
-        "text": "Scientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true."
-      },
-      {
-        "label": "D",
-        "text": "Every spring, the Colemans tap holes into the sugar-maple trees, then hang a bucket under each hole to catch the sap."
-      }
-    ],
-    "correctAnswer": [
-      "C",
-      "D"
-    ],
-    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
-    "points": 1,
-    "evidenceStatement": "The student will form a conclusion about an informational text and identify details that support it.",
-    "explanation": "Part A: The best conclusion is that sap in sugar maple trees begins flowing in early spring. Part B: The sentence about the Colemans tapping trees every spring best supports that conclusion.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1111,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "12",
-    "dok": 3,
-    "standard": "RI.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
-    "passageTitle": "Sap's Running",
-    "questionText": "What is the author's main purpose for writing this passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To persuade readers to buy maple syrup"
-      },
-      {
-        "label": "B",
-        "text": "To tell an entertaining story about trees"
-      },
-      {
-        "label": "C",
-        "text": "To inform readers about how maple syrup is made and how sap flows"
-      },
-      {
-        "label": "D",
-        "text": "To compare different types of trees"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct option.",
-    "points": 1,
-    "evidenceStatement": "The student will distinguish the author's point of view within a text.",
-    "explanation": "A bar graph uses rectangular bars to show data, and a \"gash\" is a deep cut (like the tomahawk cut in the tree).",
-    "practiceTest": 2
-  },
-  {
-    "id": 1112,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "12",
-    "dok": 3,
-    "standard": "RI.1",
-    "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
-    "passageTitle": "Sap's Running",
-    "questionText": "Why did the author include the legend of Woksis in the passage?",
-    "options": [
-      {
-        "label": "A",
-        "text": "To prove that maple syrup is healthy"
-      },
-      {
-        "label": "B",
-        "text": "To compare modern and ancient methods of making syrup"
-      },
-      {
-        "label": "C",
-        "text": "To show that people have been making maple syrup for a very long time"
-      },
-      {
-        "label": "D",
-        "text": "To explain why the Iroquois planted maple trees"
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct option.",
-    "points": 1,
-    "evidenceStatement": "The student will analyze the interaction between elements of a text within a text.",
-    "explanation": "The Colemans continue maple sugaring because it is a family tradition passed down through generations.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1113,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "13",
     "dok": 2,
     "standard": "RI.5",
-    "type": "multi-select",
-    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
-    "passageTitle": "Sap's Running",
-    "questionText": "Select TWO reasons the author organized the passage with the section \"What Makes Sap Run?\"",
-    "options": [
-      {
-        "label": "A",
-        "text": "To tell a funny story about trees"
-      },
-      {
-        "label": "B",
-        "text": "To make the passage more entertaining"
-      },
-      {
-        "label": "C",
-        "text": "To explain the science behind how sap flows"
-      },
-      {
-        "label": "D",
-        "text": "To answer a question readers might have after reading about the Colemans"
-      },
-      {
-        "label": "E",
-        "text": "To compare maple trees to other types of trees"
-      }
-    ],
-    "correctAnswer": [
-      "C",
-      "D"
-    ],
-    "rubric": "The student selects the correct two options.",
-    "points": 1,
-    "evidenceStatement": "The student will analyze why the author structured elements within the texts in a certain manner.",
-    "explanation": "Both the Woksis legend and the Coleman brothers' story show that maple syrup production has been important for a very long time.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1114,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 1,
-    "target": "14",
-    "dok": 2,
-    "standard": "L.5a",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
-    "passageTitle": "Sap's Running",
-    "questionText": "Read this sentence: \"sap flow was a 'most mysterious subject.'\" What does the word \"mysterious\" mean?",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "Why does the author use bold headings in this passage?",
     "options": [
       {
         "label": "A",
-        "text": "Easy to understand"
+        "text": "To make the passage look longer"
       },
       {
         "label": "B",
-        "text": "Very interesting"
+        "text": "To separate the passage into topics so readers can find information"
       },
       {
         "label": "C",
-        "text": "Not well known"
+        "text": "To show which words are the most important"
       },
       {
         "label": "D",
-        "text": "Hard to explain or understand"
+        "text": "To tell readers which part to read first"
       }
     ],
-    "correctAnswer": "D",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "B",
+    "rubric": "The student understands the purpose of text features.",
     "points": 1,
-    "evidenceStatement": "The student will determine the meaning of a word or phrase based on its context in an informational text.",
-    "explanation": "\"Mysterious\" means hard to explain or understand. The passage says scientists found sap flow confusing, which matches \"hard to explain.\"",
-    "practiceTest": 2
+    "explanation": "Bold headings organize information into sections (Ocean Zones, Why the Ocean Matters, etc.) so readers can quickly find the topic they need."
   },
   {
     "id": 1115,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
-    "target": "14",
+    "target": "7",
     "dok": 2,
-    "standard": "L.5a",
+    "standard": "RI.1",
     "type": "multiple-choice",
-    "passage": "Read the passage and answer the questions.\n\n**Sap's Running**\n*by Stephen R. Swinburne*\n\nThe Coleman brothers—Nelson, Ralph, and Harold—step out their front door in Vermont. They feel the wind. They feel the sun on their faces.\n\"Sap could be running this morning,\" says Nelson.\n\nAs they pass 75-year-old sugar-maple trees, sap drips from holes in the trees into metal buckets. They know for sure that today will be a good day for sugaring.\n\nSap from sugar maples looks like water, but tastes sweet. That's because it has sugar in it. It also contains minerals from the soil. A 50-foot-high sugar maple has nearly two hundred thousand leaves. All these leaves drink in summer sunshine and make sugar. During winter, sugar is stored in the tree. Running sap in the spring contains the sugar that was made in the tree the summer before.\n\nEvery spring, the Colemans tap holes into sugar-maple trees, then hang a bucket under each hole to catch the sap. To make syrup, the sap is heated in big open pans so that most of the water will boil away. The Colemans say it takes about thirty-five gallons of sap to make one gallon of maple syrup.\n\nMore than a hundred years ago, scientist Charles Darwin wrote that sap flow was a \"most mysterious subject.\" Since then, many people have studied how sap flows. Much of the research has been done at the University of Vermont, where sap is still being studied.\n\nNelson Coleman and his brothers have made maple syrup all their lives. It is a family tradition. They don't worry too much about why the sap is running in their trees this morning. They're just glad it is.\n\n**The Iroquois Legend of Woksis and Maple Syrup**\n\nAccording to legend, an Iroquois chief named Woksis yanked his tomahawk out of a maple tree one spring day. A bowl sat by the trunk of that tree. As the day warmed, sap dripped from the gash into the bowl. When Woksis's wife saw the sap in the bowl, she thought it was water. She used it to cook their meal. The sap boiled away, leaving maple syrup. When Woksis tasted the sweetened meat, he loved it. So, boiling sap to make maple syrup began.\n\n**What Makes Sap Run?**\n\nFor years, people have thought that sap rises up from the roots of the sugar-maple tree. It doesn't. \"During the time when sap flows from tap holes, the bulk flow of sap is downward,\" says Dr. Tim Perkins. He is a scientist at the University of Vermont.\n\nHow does sap flow? During cold nights, maple trees freeze solid. That's when water rises into the trunk and branches. The water forms frost inside tiny hollow spaces within the tree. In the morning, this frost melts and becomes sap, which flows down the tree.\n\nScientists say that anyone who cuts down a sugar-maple tree in freezing weather can see this is true. When the weather warms up, sap will flow from the cut end of the trunk—not from the stump.",
-    "passageTitle": "Sap's Running",
-    "questionText": "Read the sentence from the passage.\n\nAll these leaves drink in summer sunshine and make sugar.\n\nWhich statement best describes what this sentence means?",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "According to the passage, what produces more oxygen than all the world's forests?",
     "options": [
       {
         "label": "A",
-        "text": "Leaves grow larger in the summer."
+        "text": "Ocean waves"
       },
       {
         "label": "B",
-        "text": "Leaves use sunlight to make sugar."
+        "text": "Coral reefs"
       },
       {
         "label": "C",
-        "text": "Summer is the best time to collect sugar."
+        "text": "Phytoplankton"
       },
       {
         "label": "D",
-        "text": "Trees with many leaves make more sugar."
+        "text": "Seaweed"
       }
     ],
-    "correctAnswer": "B",
-    "rubric": "The student selects the correct option.",
+    "correctAnswer": "C",
+    "rubric": "The student recalls a key detail.",
     "points": 1,
-    "evidenceStatement": "The student will interpret the meaning of figurative words and phrases used in context and analyze its use in the text.",
-    "explanation": "The sentence uses figurative language to explain that leaves use sunlight to make sugar, so choice B is the best description.",
-    "practiceTest": 2
+    "explanation": "The passage states: 'phytoplankton produce more oxygen than all the world's forests combined.'"
   },
   {
     "id": 1116,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "1bE",
-    "dok": 2,
-    "standard": "W.3b, W.5",
-    "type": "multi-select",
-    "questionText": "Ellen is writing a story for her class about a day at the beach. She wants to revise her story to use more descriptive words. Read the draft and complete the task that follows.\n\nIt was Ellen's last day of summer vacation. She raced into the garage and announced, \"Dad, we have to go to the beach today! It's our last chance this summer to go swimming and build sandcastles together!\"\n\nDad smiled happily and, together, Ellen and Dad drove 45 minutes to the beach. Once there, they set up their chairs near the water. Dad read and Ellen played.\n\nEllen worked for about an hour on her sandcastle. Then, she noticed that her dad had spent that entire time just reading a book. She felt annoyed. She looked at him.\n\nDad grinned and set his book aside. Together, the two raced into the warm, bubbly waves. They laughed with excitement.\n\nSelect two of the choices that have the best descriptive sentences to replace \"Dad read and Ellen played\" and \"She looked at him.\"",
-    "options": [
-      {
-        "label": "A",
-        "text": "Dad enjoyed relaxing with his new book while Ellen built a sandcastle. / She gave him a look that said, \"I want you to spend time with me.\""
-      },
-      {
-        "label": "B",
-        "text": "Dad helped Ellen build a sandcastle. / She gave him a look that said, \"I'm glad you like your book.\""
-      },
-      {
-        "label": "C",
-        "text": "Dad read a book to Ellen and then they swam. / She looked at the pictures in the book."
-      },
-      {
-        "label": "D",
-        "text": "Dad read for a while and then built a sandcastle. / She looked at the warm, bubbly waves."
-      },
-      {
-        "label": "E",
-        "text": "Dad had a wonderful time reading while Ellen worked on her giant sandcastle. / She gave him a look that said, \"It's time to have some fun, now!\""
-      },
-      {
-        "label": "F",
-        "text": "Dad decided that he did not like his book. / She gave him a look that said, \"You are the best dad.\""
-      }
-    ],
-    "correctAnswer": [
-      "A",
-      "E"
-    ],
-    "rubric": "The student selects the correct two options.",
-    "points": 1,
-    "evidenceStatement": "The student will revise narrative text by identifying descriptive details that convey events or experiences.",
-    "explanation": "Choices A and E add vivid details that match the events in the beach story and show Ellen's feelings more clearly.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1117,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "3bE",
-    "dok": 2,
-    "standard": "W.2b, W.5",
-    "type": "multi-select",
-    "questionText": "A student is writing a report for social studies class about the state of Alaska. The student wants to revise the draft to make sure it has enough details. Read this portion of the report and complete the task that follows.\n\nAlaska is a very big state. It is bigger than Texas, California, and Montana put together! Even though it is a big state, only about 730,000 people live there. Alaska has 39 mountain ranges and two rain forests. A lot of different animals live in Alaska. In Barrow, the town located farthest north in the state, the sun doesn't set between May 10 and August 2, but between November 18 and January 23, the sun doesn't rise. Alaska is a very interesting and unusual place.\n\nMy notes on Alaska:\n• Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home.\n• The capital of Alaska is Juneau.\n• There are 70,000 sea otters living in the waters of Alaska.\n• Alaska did not become a state until 1959.\n• The mountains in Alaska have the coldest temperatures in the United States.\n• Alaska is only 55 miles away from Russia.\n\nChoose the two sentences from the student's notes that add more facts to the underlined sentence.",
-    "options": [
-      {
-        "label": "A",
-        "text": "The capital of Alaska is Juneau."
-      },
-      {
-        "label": "B",
-        "text": "Alaska did not become a state until 1959."
-      },
-      {
-        "label": "C",
-        "text": "Alaska is only 55 miles away from Russia."
-      },
-      {
-        "label": "D",
-        "text": "There are 70,000 sea otters living in the waters of Alaska."
-      },
-      {
-        "label": "E",
-        "text": "The mountains in Alaska have the coldest temperatures in the United States."
-      },
-      {
-        "label": "F",
-        "text": "Black bears, brown bears, moose, musk ox, and whales are just a few animals that call Alaska home."
-      }
-    ],
-    "correctAnswer": [
-      "D",
-      "F"
-    ],
-    "rubric": "The student selects the correct two options.",
-    "points": 1,
-    "evidenceStatement": "The student will revise informational or explanatory text by identifying the best use of elaboration techniques such as supporting details.",
-    "explanation": "The underlined sentence is about animals living in Alaska, so the best added facts are the sea-otter detail and the list of animals that live there.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1118,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "6b",
-    "dok": 2,
-    "standard": "W.1d",
-    "type": "multiple-choice",
-    "questionText": "A student is writing an opinion article for her teacher about her favorite field trip. The student wants to revise the draft so that it has a logical conclusion. Read the draft of the opinion article and complete the task that follows.\n\nMy favorite third-grade field trip is the trip to the zoo. There are many reasons that the zoo is the best field trip. First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms. As you can see, the best third-grade trip by far is the zoo field trip. Second, we get to eat lunch at a really great rest area with picnic tables. Also, we get to spend the whole day walking around looking at interesting animals.\n\nClick on the sentence in the draft that is in the wrong place.",
-    "options": [
-      {
-        "label": "A",
-        "text": "My favorite third-grade field trip is the trip to the zoo."
-      },
-      {
-        "label": "B",
-        "text": "There are many reasons that the zoo is the best field trip."
-      },
-      {
-        "label": "C",
-        "text": "First, when we go to the zoo, we get to ride on big buses that have televisions and bathrooms."
-      },
-      {
-        "label": "D",
-        "text": "As you can see, the best third-grade trip by far is the zoo field trip."
-      },
-      {
-        "label": "E",
-        "text": "Second, we get to eat lunch at a really great rest area with picnic tables."
-      },
-      {
-        "label": "F",
-        "text": "Also, we get to spend the whole day walking around looking at interesting animals."
-      }
-    ],
-    "correctAnswer": "D",
-    "rubric": "The student selects the correct option.",
-    "points": 1,
-    "evidenceStatement": "The student will revise opinion text by identifying improved organizational elements such as organizing.",
-    "explanation": "The conclusion sentence belongs at the end of the opinion piece, so it is the sentence in the wrong place.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1119,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "8",
-    "dok": 2,
-    "standard": "L.3a",
-    "type": "multi-select",
-    "questionText": "A student is writing an opinion paper for her teacher about dogs. Read this paragraph from the paper and the directions that follow.\n\nDogs are described as “people's best friend” because they make people happy. The fur on a dog can be long or short, or curly or straight, but most of the time it is soft. When people pet dogs, it makes them feel happy. There are community groups that bring dogs to nursing homes for the patients. Being able to play with the dogs makes the patients feel good. This is one reason why I think dogs are wonderful animals.\n\nSelect the best two words from the choices to replace the underlined words in the paragraph.",
-    "options": [
-      {
-        "label": "A",
-        "text": "beautiful"
-      },
-      {
-        "label": "B",
-        "text": "fierce"
-      },
-      {
-        "label": "C",
-        "text": "healthier"
-      },
-      {
-        "label": "D",
-        "text": "lucky"
-      },
-      {
-        "label": "E",
-        "text": "polite"
-      },
-      {
-        "label": "F",
-        "text": "relaxed"
-      }
-    ],
-    "correctAnswer": [
-      "C",
-      "F"
-    ],
-    "rubric": "The student selects the correct two options.",
-    "points": 1,
-    "evidenceStatement": "The student will choose the correct words or phrases for audience or purpose.",
-    "explanation": "The underlined words should fit a formal opinion paper. 'healthier' and 'relaxed' make the paragraph clearer and more appropriate for the audience and purpose.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1120,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "9",
-    "dok": 1,
-    "standard": "L.2c",
-    "type": "multi-select",
-    "questionText": "Click on two sentences that have mistakes in punctuation.\n\nTim and I sat in the front row at the circus, and the clowns tumbled and danced in front of us. They pretended to throw water on us, but their buckets just had shiny bits of paper. Then, one clown really did spray water on me from a flower on his jacket.",
-    "options": [
-      {
-        "label": "A",
-        "text": "“Oh, he got me! I said to Tim.”"
-      },
-      {
-        "label": "B",
-        "text": "“Yes” he laughed “he tricked you twice!”"
-      },
-      {
-        "label": "C",
-        "text": "After that, the elephants came out. The elephants did tricks like stand on their front legs."
-      },
-      {
-        "label": "D",
-        "text": "“How can those huge animals do that?” I asked Tim."
-      },
-      {
-        "label": "E",
-        "text": "“I don't know, but it's amazing,” Tim answered."
-      }
-    ],
-    "correctAnswer": [
-      "A",
-      "B"
-    ],
-    "rubric": "The student selects the correct two options.",
-    "points": 1,
-    "evidenceStatement": "The student will apply or edit the use of commas and quotation marks in dialogue.",
-    "explanation": "The first two dialogue sentences have punctuation mistakes. They need the quotation marks and commas to be placed correctly.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1121,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "9",
-    "dok": 1,
-    "standard": "L.1e",
-    "type": "multi-select",
-    "questionText": "Click on the sentences that use the incorrect verb tenses.",
-    "options": [
-      {
-        "label": "A",
-        "text": "Standing on the stage, I could feel my heart beating in my chest."
-      },
-      {
-        "label": "B",
-        "text": "I sings my song on the stage with my friends."
-      },
-      {
-        "label": "C",
-        "text": "The audience clapped loudly."
-      },
-      {
-        "label": "D",
-        "text": "I take a bow and walked off the stage with a smile on my face."
-      }
-    ],
-    "correctAnswer": [
-      "B",
-      "D"
-    ],
-    "rubric": "The student selects the correct two options.",
-    "points": 1,
-    "evidenceStatement": "The student will apply or edit the use of simple verb tenses in a text.",
-    "explanation": "The sentences 'I sings my song on the stage with my friends.' and 'I take a bow and walked off the stage with a smile on my face.' use incorrect verb tenses.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1122,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "target": "4",
-    "dok": 3,
-    "standard": "SL.2",
-    "type": "two-part",
-    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
-    "passageTitle": "Soaring on the Wings of the Wind",
-    "passageAuthor": "Lois Miner Huey",
-    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
-    "questionText": "This question has two parts. First, answer Part A. Then, answer Part B.",
-    "partAPrompt": "What is the most likely reason the author made the presentation?",
-    "partAOptions": [
-      {
-        "label": "A",
-        "text": "to explain how a hot air balloon works"
-      },
-      {
-        "label": "B",
-        "text": "to show the advantages of being small"
-      },
-      {
-        "label": "C",
-        "text": "to tell how Americans feel about new experiences"
-      },
-      {
-        "label": "D",
-        "text": "to describe an important event in American history"
-      }
-    ],
-    "partBPrompt": "Which sentence from the presentation best supports your answer in part A?",
-    "partBOptions": [
-      {
-        "label": "A",
-        "text": "\"Smoky hot air swelled the balloon and sent it up.\""
-      },
-      {
-        "label": "B",
-        "text": "\"He was the first American to develop a method to lift a balloon using hot air.\""
-      },
-      {
-        "label": "C",
-        "text": "\"The crowd yelled and clapped as Carnes sent the balloon up, time and again.\""
-      },
-      {
-        "label": "D",
-        "text": "\"He was the first American to see such views.\""
-      }
-    ],
-    "correctAnswer": [
-      "D",
-      "B"
-    ],
-    "rubric": "The student selects the correct option in Part A and the correct option in Part B.",
-    "points": 1,
-    "evidenceStatement": "The student will determine a speaker's purpose and identify details that support it.",
-    "explanation": "Part A: The presentation is mainly describing an important event in American history. Part B: The sentence about Peter Carnes being the first American to develop a method to lift a balloon using hot air best supports that purpose.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1123,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "target": "4",
-    "dok": 2,
-    "standard": "SL.2",
-    "type": "multiple-choice",
-    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
-    "passageTitle": "Soaring on the Wings of the Wind",
-    "passageAuthor": "Lois Miner Huey",
-    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
-    "questionText": "Which question can a listener answer after hearing the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "In what year did the balloon ride take place?"
-      },
-      {
-        "label": "B",
-        "text": "What happened during the first hot air balloon ride?"
-      },
-      {
-        "label": "C",
-        "text": "How did Edward feel after he took his ride in the balloon?"
-      },
-      {
-        "label": "D",
-        "text": "How did Edward become the first American to ride in a balloon?"
-      }
-    ],
-    "correctAnswer": "D",
-    "rubric": "The student selects the correct option.",
-    "points": 1,
-    "evidenceStatement": "The student will identify information that can be determined from an oral presentation.",
-    "explanation": "The presentation explains how Edward became the first American to ride in a balloon, so choice D is the question a listener can answer.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1124,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "target": "4",
-    "dok": 2,
-    "standard": "SL.2",
-    "type": "grid-match",
-    "passage": "Presentation transcript-style version:\n\nToday I am going to tell you about an event from long ago that became an important part of American history. It is called \"Soaring on the Wings of the Wind,\" and it is about Peter Carnes and a young boy named Edward Warren Jr.\n\nPeter Carnes wanted to show people in Baltimore that a balloon could rise into the air. During one demonstration, hot smoky air from a fire swelled the balloon and sent it up. The crowd watched closely. They yelled and clapped as Carnes sent the balloon up time and again, because many people had never seen anything like it before.\n\nLater, Carnes developed another way to lift the balloon. He used a stove to make the balloon rise. He was the first American to develop a method to lift a balloon using hot air, and people remembered his work because it helped show that balloon flight was possible.\n\nOne part of the event was not planned. Edward Warren Jr. ended up riding in the balloon. Because of that unexpected ride, he became the first American to go up in a balloon and see those views from above.\n\nThis event mattered because it helped Americans see a new invention in action and showed that balloon flight could really happen.",
-    "passageTitle": "Soaring on the Wings of the Wind",
-    "passageAuthor": "Lois Miner Huey",
-    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"Soaring on the Wings of the Wind\" by Lois Miner Huey.",
-    "questionText": "Complete the chart to show which events were planned.\n\nClick in the boxes next to the events that match if they were planned or unplanned.",
-    "gridRows": [
-      "Edward Warren Jr. rode in a balloon.",
-      "The balloon filled with smoke from a fire.",
-      "A crowd in Baltimore saw how a balloon could fly.",
-      "Peter Carnes used a stove to make the balloon rise."
-    ],
-    "gridColumns": [
-      "Planned",
-      "Unplanned"
-    ],
-    "correctAnswer": [
-      "0:1",
-      "1:0",
-      "2:0",
-      "3:0"
-    ],
-    "rubric": "The student correctly identifies which events were planned and which were unplanned.",
-    "points": 1,
-    "evidenceStatement": "The student will distinguish among ideas and events presented orally.",
-    "explanation": "The only unplanned event is Edward Warren Jr. riding in the balloon. The smoke-filled balloon, the Baltimore crowd, and Carnes using a stove were all planned parts of the demonstration.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1125,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "target": "4",
-    "dok": 2,
-    "standard": "SL.2",
-    "type": "multiple-choice",
-    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
-    "passageTitle": "All About Pizza",
-    "passageAuthor": "Marcia Amidon Lusted",
-    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
-    "questionText": "Which conclusion is supported by the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "Americans eat pizza every day."
-      },
-      {
-        "label": "B",
-        "text": "Pizza is usually eaten at lunchtime."
-      },
-      {
-        "label": "C",
-        "text": "Almost anything can go on a pizza."
-      },
-      {
-        "label": "D",
-        "text": "Lobster pizza is most popular in Maine."
-      }
-    ],
-    "correctAnswer": "C",
-    "rubric": "The student selects the correct option.",
-    "points": 1,
-    "evidenceStatement": "The student will determine a supported conclusion from an oral presentation.",
-    "explanation": "The presentation shows that pizza can be made in many different ways, so the supported conclusion is that almost anything can go on a pizza.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1126,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "target": "4",
-    "dok": 2,
-    "standard": "SL.2",
-    "type": "grid-match",
-    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
-    "passageTitle": "All About Pizza",
-    "passageAuthor": "Marcia Amidon Lusted",
-    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
-    "questionText": "Complete the chart to show which countries are known for which pizza toppings.\n\nClick in the boxes next to the countries that match the toppings.",
-    "gridRows": [
-      "United States",
-      "India",
-      "Japan"
-    ],
-    "gridColumns": [
-      "eel",
-      "pepperoni",
-      "ginger"
-    ],
-    "correctAnswer": [
-      "2:0",
-      "0:1",
-      "1:2"
-    ],
-    "rubric": "The student correctly matches each topping to the country from the presentation.",
-    "points": 1,
-    "evidenceStatement": "The student will organize information presented orally into a chart.",
-    "explanation": "The chart matches Japan with eel, the United States with pepperoni, and India with ginger based on the presentation's examples.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1127,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 3,
-    "target": "4",
-    "dok": 2,
-    "standard": "SL.3",
-    "type": "multiple-choice",
-    "passage": "Presentation transcript-style version:\n\nToday I am giving a presentation called \"All About Pizza.\" Many people think of pizza in only one or two ways, but pizza can be very different depending on where you are. If we look at pizza in different places, we can see that almost anything can go on a pizza.\n\nIn the United States, one of the best-known toppings is pepperoni. Many people are used to seeing pepperoni pizza, so that is a familiar example.\n\nIn other places, pizza can look very different. In India, some pizzas are topped with ginger. In Japan, some pizzas are topped with eel. These examples show that people in different countries enjoy different flavors and choose toppings that match foods they already like.\n\nWhen we compare these pizzas, we can see that there is not just one correct kind of pizza. Pizza can be made in many ways, and unusual toppings can still belong on a pizza.\n\nSo the next time you think about pizza, remember that it may be better to look at it in a new way.",
-    "passageTitle": "All About Pizza",
-    "passageAuthor": "Marcia Amidon Lusted",
-    "studentDirections": "Listen to the presentation. Then answer the questions.\n\n\"All About Pizza\" by Marcia Amidon Lusted.",
-    "questionText": "What is the most likely reason the author made the presentation?",
-    "options": [
-      {
-        "label": "A",
-        "text": "to suggest another way of looking at pizza"
-      },
-      {
-        "label": "B",
-        "text": "to change what people think is good pizza"
-      },
-      {
-        "label": "C",
-        "text": "to show why pepperoni pizza is the best kind"
-      },
-      {
-        "label": "D",
-        "text": "to explain why pizza is different in other places"
-      }
-    ],
-    "correctAnswer": "A",
-    "rubric": "The student selects the correct option.",
-    "points": 1,
-    "evidenceStatement": "The student will determine a speaker's likely purpose for a presentation.",
-    "explanation": "The speaker's purpose is to suggest another way of looking at pizza by showing unusual toppings from different places.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1128,
-    "testType": "cat",
-    "subject": "ela",
-    "grade": 3,
-    "claim": 2,
-    "target": "1",
-    "dok": 2,
-    "standard": "W.8",
-    "type": "multi-select",
-    "questionText": "A student is writing a research report about the human eye. Read the sentences from her report and the directions that follow.\n\nOur eyes are wonderful body parts. They help us see the beauty of the world. In the center of the eye is a black spot. Have you ever wondered why that spot gets bigger and smaller?\n\nChoose two of the sources that would most likely give the student more information about the ideas she has written.",
-    "options": [
-      {
-        "label": "A",
-        "text": "www.eye.color.com, a website that tells about the colors of people's eyes"
-      },
-      {
-        "label": "B",
-        "text": "www.eyequestion.com, a website that explains the job of each part of the eye"
-      },
-      {
-        "label": "C",
-        "text": "Eyes and How They Work, a book that tells about the way that the eye parts work"
-      },
-      {
-        "label": "D",
-        "text": "www.eye.food.com, a website that tells what we should eat to help our eyes stay healthy"
-      },
-      {
-        "label": "E",
-        "text": "My Job as an Eye Doctor, a book that tells about being a doctor who takes care of people's eyes"
-      },
-      {
-        "label": "F",
-        "text": "You Can Find It, a children's magazine that has many puzzles and games where you look for the hidden things"
-      }
-    ],
-    "correctAnswer": [
-      "B",
-      "C"
-    ],
-    "rubric": "The student selects the two sources that best support the student's research focus.",
-    "points": 1,
-    "evidenceStatement": "The student will evaluate sources for relevance to a research topic.",
-    "explanation": "The best sources are the website explaining the job of each eye part and the book about how the eye parts work, because both directly match the student's questions about what the eye does.",
-    "practiceTest": 2
-  },
-  {
-    "id": 1129,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 1,
     "target": "8",
     "dok": 2,
-    "standard": "W.8",
+    "standard": "RI.2",
     "type": "multiple-choice",
-    "questionText": "A student is writing a report about red foxes. She is looking for information about the body of the red fox. Which sentence has information that the student can use?",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "What is the main purpose of the 'What You Can Do' section?",
     "options": [
       {
         "label": "A",
-        "text": "There are over twenty different kinds of foxes."
+        "text": "To explain how the ocean zones work"
       },
       {
         "label": "B",
-        "text": "Red foxes can live in hot deserts and snowy forests."
+        "text": "To describe different ocean animals"
       },
       {
         "label": "C",
-        "text": "The red fox wraps its fluffy tail around itself like a blanket."
+        "text": "To encourage readers to help protect the ocean"
       },
       {
         "label": "D",
-        "text": "Red foxes are often clever characters in children's stories."
+        "text": "To list facts about ocean pollution"
       }
     ],
     "correctAnswer": "C",
-    "rubric": "The student selects the sentence that gives the relevant body detail.",
+    "rubric": "The student identifies the author's purpose.",
     "points": 1,
-    "evidenceStatement": "The student will identify relevant source information for research.",
-    "explanation": "The sentence about the red fox wrapping its fluffy tail around itself gives information about the fox's body, which is what the student needs.",
-    "practiceTest": 2
+    "explanation": "The section gives specific actions readers can take (reduce plastic, recycle, don't litter) to help protect the ocean."
   },
   {
-    "id": 1130,
+    "id": 1117,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "9",
+    "dok": 2,
+    "standard": "RI.3",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "What is the order of ocean zones from top to bottom?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Midnight zone, twilight zone, sunlight zone"
+      },
+      {
+        "label": "B",
+        "text": "Sunlight zone, twilight zone, midnight zone"
+      },
+      {
+        "label": "C",
+        "text": "Twilight zone, sunlight zone, midnight zone"
+      },
+      {
+        "label": "D",
+        "text": "Sunlight zone, midnight zone, twilight zone"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies the correct sequence.",
+    "points": 1,
+    "explanation": "The passage describes the zones from top to bottom: sunlight zone (top), twilight zone (middle), midnight zone (deepest, completely dark)."
+  },
+  {
+    "id": 1118,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "10",
+    "dok": 2,
+    "standard": "RI.4",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
+    "passageTitle": "The Amazing Ocean",
+    "questionText": "In the passage, what does the word \"species\" mean?",
+    "options": [
+      {
+        "label": "A",
+        "text": "A body of water"
+      },
+      {
+        "label": "B",
+        "text": "A type of plant or animal"
+      },
+      {
+        "label": "C",
+        "text": "A special ability"
+      },
+      {
+        "label": "D",
+        "text": "A layer of the ocean"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student determines meaning from context.",
+    "points": 1,
+    "explanation": "The passage says 'millions of species of plants and animals.' Context shows 'species' means a type or kind of living thing."
+  },
+  {
+    "id": 1119,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 1,
+    "target": "1",
+    "dok": 2,
+    "standard": "RL.1",
+    "type": "multiple-choice",
+    "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.",
+    "passageTitle": "The Storm Dog",
+    "questionText": "What did Mama bring when she decided to go look for the dog?",
+    "options": [
+      {
+        "label": "A",
+        "text": "An umbrella and a leash"
+      },
+      {
+        "label": "B",
+        "text": "Two towels and the car keys"
+      },
+      {
+        "label": "C",
+        "text": "Dog food and water"
+      },
+      {
+        "label": "D",
+        "text": "A flashlight and a blanket"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student recalls a specific detail.",
+    "points": 1,
+    "explanation": "The passage states: 'she grabbed two towels and the car keys.' The towels were for drying the wet dog."
+  },
+  {
+    "id": 1120,
+    "practiceTest": 2,
     "testType": "cat",
     "subject": "ela",
     "grade": 3,
     "claim": 2,
     "target": "1",
     "dok": 2,
-    "standard": "W.8",
+    "standard": "W.1",
     "type": "multiple-choice",
-    "questionText": "A student is writing a research report about different kinds of fruit. He wrote an opinion in the report. Read the sentences from the student's report and the directions that follow.\n\nMany Kinds of Fruit\n\nA fruit is the part of the plant that has the plant's seeds. There are many kinds of fruits. Some that are popular with kids are apples, bananas, grapes, oranges, and strawberries. Sometimes it is confusing to tell if a food is a fruit.\n\nThe student found another source about different kinds of fruit. Which sentence best supports the student's opinion?",
+    "questionText": "Which sentence would be the best topic sentence for a paragraph about why dogs make good pets?",
     "options": [
       {
         "label": "A",
-        "text": "For example, it is hard to tell what some foods are when they are cut up in pieces."
+        "text": "My neighbor has a big brown dog."
       },
       {
         "label": "B",
-        "text": "For example, a tomato is not sweet, but it is a fruit because it has the seeds."
+        "text": "Dogs are loyal, fun, and make great companions for families."
       },
       {
         "label": "C",
-        "text": "For example, some kids don't like some of the fruits on that list."
+        "text": "Some dogs like to play fetch."
       },
       {
         "label": "D",
-        "text": "For example, fruits can be many different shapes and colors."
+        "text": "There are many types of animals in the world."
       }
     ],
     "correctAnswer": "B",
-    "rubric": "The student selects the sentence that best supports the opinion in the report.",
+    "rubric": "The student identifies an effective topic sentence.",
     "points": 1,
-    "evidenceStatement": "The student will identify evidence that supports an opinion in a research report.",
-    "explanation": "The student's opinion is that it can be confusing to tell whether some foods are fruits. The tomato example supports that opinion because tomatoes are fruits even though many people do not think of them that way.",
-    "practiceTest": 2
+    "explanation": "A good topic sentence states the main idea of the paragraph clearly. Option B tells the reader what the whole paragraph will be about."
+  },
+  {
+    "id": 1121,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "2",
+    "dok": 2,
+    "standard": "W.2",
+    "type": "multiple-choice",
+    "questionText": "A student is writing a report about ocean pollution. Which sentence would best support the main idea that pollution harms sea life?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The ocean is very big and deep."
+      },
+      {
+        "label": "B",
+        "text": "Many people enjoy going to the beach."
+      },
+      {
+        "label": "C",
+        "text": "Sea turtles often eat plastic bags because they look like jellyfish."
+      },
+      {
+        "label": "D",
+        "text": "The Pacific Ocean is the largest ocean."
+      }
+    ],
+    "correctAnswer": "C",
+    "rubric": "The student selects relevant supporting evidence.",
+    "points": 1,
+    "explanation": "The detail about sea turtles eating plastic directly supports the idea that pollution harms sea life. The other options are off-topic."
+  },
+  {
+    "id": 1122,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "3",
+    "dok": 1,
+    "standard": "L.1",
+    "type": "multiple-choice",
+    "questionText": "Which sentence uses correct punctuation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Maya said, \"Look at the dog!\""
+      },
+      {
+        "label": "B",
+        "text": "Maya said \"Look at the dog!."
+      },
+      {
+        "label": "C",
+        "text": "Maya said, look at the dog!"
+      },
+      {
+        "label": "D",
+        "text": "Maya said \"Look at the dog\"!"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student identifies correct dialogue punctuation.",
+    "points": 1,
+    "explanation": "In dialogue, use a comma after 'said,' open quotes, capitalize the first word, and put the end punctuation inside the closing quotes."
+  },
+  {
+    "id": 1123,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "3",
+    "dok": 1,
+    "standard": "L.1",
+    "type": "multiple-choice",
+    "questionText": "Which sentence is written correctly?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The children plays in the park every day."
+      },
+      {
+        "label": "B",
+        "text": "The children play in the park every day."
+      },
+      {
+        "label": "C",
+        "text": "The children playing in the park every day."
+      },
+      {
+        "label": "D",
+        "text": "The children has played in the park every day."
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies correct subject-verb agreement.",
+    "points": 1,
+    "explanation": "'Children' is a plural noun, so it needs the plural verb 'play' (not 'plays'). Option C is a fragment (no main verb), and D uses incorrect agreement."
+  },
+  {
+    "id": 1124,
+    "practiceTest": 2,
+    "testType": "cat",
+    "subject": "ela",
+    "grade": 3,
+    "claim": 2,
+    "target": "4",
+    "dok": 1,
+    "standard": "L.2",
+    "type": "multiple-choice",
+    "questionText": "Which word correctly completes this sentence?\n\nThe two _____ played together at recess.",
+    "options": [
+      {
+        "label": "A",
+        "text": "girl's"
+      },
+      {
+        "label": "B",
+        "text": "girls"
+      },
+      {
+        "label": "C",
+        "text": "girls'"
+      },
+      {
+        "label": "D",
+        "text": "girles"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student uses the correct plural form.",
+    "points": 1,
+    "explanation": "We need a simple plural noun (more than one girl). 'Girls' is the correct plural. 'Girl's' and 'girls'' are possessive forms."
+  },
+  {
+    "id": 1125,
+    "grade": 3,
+    "practiceTest": 2,
+    "subject": "ela",
+    "testType": "cat",
+    "claim": 3,
+    "target": "18",
+    "dok": 2,
+    "standard": "SL.3.2",
+    "type": "multiple-choice",
+    "passage": "Read the presentation transcript. Then answer the questions.\n\n**Caring for Storm After the Rain**\n*presentation transcript for classroom use*\n\nSpeaker 1: Our class is sharing a report about how Maya helped a lost dog during a storm.\n\nSpeaker 2: Maya first noticed the dog shivering beside the road. She did not walk away. Instead, she told her mother what she saw.\n\nSpeaker 1: Maya and her mother brought a towel, guided the dog into their car, and took it home so it could get warm and dry.\n\nSpeaker 2: After that, Maya helped by giving the dog water and staying calm while her mother made phone calls to find out whether the dog belonged to someone nearby.\n\nSpeaker 1: The report teaches that helping an animal can begin with one small choice. A person must notice the problem, act carefully, and keep trying until the animal is safe.",
+    "passageTitle": "Caring for Storm After the Rain",
+    "questionText": "What is the main idea of the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Storms always scare animals away from towns"
+      },
+      {
+        "label": "B",
+        "text": "People can help a lost animal by noticing the problem and acting carefully"
+      },
+      {
+        "label": "C",
+        "text": "Dogs like riding in cars during storms"
+      },
+      {
+        "label": "D",
+        "text": "Maya wanted to keep every dog she found"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies the main idea of the presentation.",
+    "points": 1,
+    "explanation": "The speakers explain that Maya noticed the dog, acted carefully, and kept helping until it was safe."
+  },
+  {
+    "id": 1126,
+    "grade": 3,
+    "practiceTest": 2,
+    "subject": "ela",
+    "testType": "cat",
+    "claim": 3,
+    "target": "18",
+    "dok": 3,
+    "standard": "SL.3.2",
+    "type": "two-part",
+    "passage": "Read the presentation transcript. Then answer the questions.\n\n**Caring for Storm After the Rain**\n*presentation transcript for classroom use*\n\nSpeaker 1: Our class is sharing a report about how Maya helped a lost dog during a storm.\n\nSpeaker 2: Maya first noticed the dog shivering beside the road. She did not walk away. Instead, she told her mother what she saw.\n\nSpeaker 1: Maya and her mother brought a towel, guided the dog into their car, and took it home so it could get warm and dry.\n\nSpeaker 2: After that, Maya helped by giving the dog water and staying calm while her mother made phone calls to find out whether the dog belonged to someone nearby.\n\nSpeaker 1: The report teaches that helping an animal can begin with one small choice. A person must notice the problem, act carefully, and keep trying until the animal is safe.",
+    "passageTitle": "Caring for Storm After the Rain",
+    "questionText": "Answer both parts of the question.",
+    "partAPrompt": "Part A: Why did the speakers include details about the towel, water, and phone calls?",
+    "partAOptions": [
+      {
+        "label": "A",
+        "text": "to show the order of steps people took to help the dog"
+      },
+      {
+        "label": "B",
+        "text": "to prove storms are worse than snow"
+      },
+      {
+        "label": "C",
+        "text": "to compare dogs with ocean animals"
+      },
+      {
+        "label": "D",
+        "text": "to explain why Maya missed school"
+      }
+    ],
+    "partBPrompt": "Part B: Which detail best supports your answer?",
+    "partBOptions": [
+      {
+        "label": "A",
+        "text": "Maya first noticed the dog shivering beside the road."
+      },
+      {
+        "label": "B",
+        "text": "Maya helped by giving the dog water and staying calm while her mother made phone calls."
+      },
+      {
+        "label": "C",
+        "text": "A person must keep trying until the animal is safe."
+      },
+      {
+        "label": "D",
+        "text": "Our class is sharing a report."
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "B"
+    ],
+    "rubric": "The student identifies the purpose of the details and the best supporting evidence.",
+    "points": 1,
+    "explanation": "The listed details show the careful steps Maya and her mother used to help the dog."
+  },
+  {
+    "id": 1127,
+    "grade": 3,
+    "practiceTest": 2,
+    "subject": "ela",
+    "testType": "cat",
+    "claim": 3,
+    "target": "19",
+    "dok": 3,
+    "standard": "SL.3.2",
+    "type": "grid-match",
+    "passage": "Read the presentation transcript. Then answer the questions.\n\n**Caring for Storm After the Rain**\n*presentation transcript for classroom use*\n\nSpeaker 1: Our class is sharing a report about how Maya helped a lost dog during a storm.\n\nSpeaker 2: Maya first noticed the dog shivering beside the road. She did not walk away. Instead, she told her mother what she saw.\n\nSpeaker 1: Maya and her mother brought a towel, guided the dog into their car, and took it home so it could get warm and dry.\n\nSpeaker 2: After that, Maya helped by giving the dog water and staying calm while her mother made phone calls to find out whether the dog belonged to someone nearby.\n\nSpeaker 1: The report teaches that helping an animal can begin with one small choice. A person must notice the problem, act carefully, and keep trying until the animal is safe.",
+    "passageTitle": "Caring for Storm After the Rain",
+    "questionText": "Complete the chart to show what happened before or after Storm was safe inside the car.",
+    "gridRows": [
+      "Maya noticed the dog shivering.",
+      "Maya and her mother brought a towel.",
+      "The dog received water at home.",
+      "Phone calls were made to find the owner."
+    ],
+    "gridColumns": [
+      "Before Storm was safe in the car",
+      "After Storm was safe in the car"
+    ],
+    "correctAnswer": [
+      "0:0",
+      "1:0",
+      "2:1",
+      "3:1"
+    ],
+    "rubric": "The student correctly sorts events from the presentation.",
+    "points": 1,
+    "explanation": "Maya noticing the dog and bringing the towel happened first; the water and phone calls happened afterward."
+  },
+  {
+    "id": 1128,
+    "grade": 3,
+    "practiceTest": 2,
+    "subject": "ela",
+    "testType": "cat",
+    "claim": 3,
+    "target": "19",
+    "dok": 2,
+    "standard": "SL.3.2",
+    "type": "multiple-choice",
+    "passage": "Read the presentation transcript. Then answer the questions.\n\n**Keeping Ocean Animals Safe**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains two ways people help ocean animals.\n\nSpeaker 2: First, many volunteers collect plastic and trash from beaches before that trash can wash into the ocean.\n\nSpeaker 1: Second, inventors have created machines that gather floating plastic from ocean water. These tools help remove dangerous trash that animals might mistake for food.\n\nSpeaker 2: Scientists and community groups also teach people to use less plastic. When people throw away less trash, fewer harmful materials reach the ocean in the first place.\n\nSpeaker 1: The main message is simple: people can protect ocean animals by cleaning up pollution and by preventing new pollution from spreading.",
+    "passageTitle": "Keeping Ocean Animals Safe",
+    "questionText": "Which idea is explained in the presentation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Ocean animals can solve pollution problems without people"
+      },
+      {
+        "label": "B",
+        "text": "People can protect ocean animals by removing trash and using less plastic"
+      },
+      {
+        "label": "C",
+        "text": "Only scientists should visit beaches"
+      },
+      {
+        "label": "D",
+        "text": "Beach cleanups do not change anything"
+      }
+    ],
+    "correctAnswer": "B",
+    "rubric": "The student identifies a key idea from the presentation.",
+    "points": 1,
+    "explanation": "The speakers describe cleanup work, plastic-collecting machines, and using less plastic to help animals."
+  },
+  {
+    "id": 1129,
+    "grade": 3,
+    "practiceTest": 2,
+    "subject": "ela",
+    "testType": "cat",
+    "claim": 4,
+    "target": "20",
+    "dok": 3,
+    "standard": "W.3.8",
+    "type": "multi-select",
+    "questionText": "A student is researching ways people help animals. Which two sources would give the most useful information?",
+    "options": [
+      {
+        "label": "A",
+        "text": "A fact article about how beach cleanups protect sea life"
+      },
+      {
+        "label": "B",
+        "text": "A comic strip about a talking goldfish"
+      },
+      {
+        "label": "C",
+        "text": "An interview with a veterinarian about rescuing lost pets"
+      },
+      {
+        "label": "D",
+        "text": "A menu from a seafood restaurant"
+      },
+      {
+        "label": "E",
+        "text": "A poster showing favorite dog names"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "C"
+    ],
+    "rubric": "The student selects the two best research sources.",
+    "points": 1,
+    "explanation": "The beach-cleanup article and veterinarian interview both give factual information about helping animals."
+  },
+  {
+    "id": 1130,
+    "grade": 3,
+    "practiceTest": 2,
+    "subject": "ela",
+    "testType": "cat",
+    "claim": 4,
+    "target": "21",
+    "dok": 3,
+    "standard": "RI.3.9",
+    "type": "multiple-choice",
+    "passage": "Read the presentation transcript. Then answer the questions.\n\n**Caring for Storm After the Rain**\n*presentation transcript for classroom use*\n\nSpeaker 1: Our class is sharing a report about how Maya helped a lost dog during a storm.\n\nSpeaker 2: Maya first noticed the dog shivering beside the road. She did not walk away. Instead, she told her mother what she saw.\n\nSpeaker 1: Maya and her mother brought a towel, guided the dog into their car, and took it home so it could get warm and dry.\n\nSpeaker 2: After that, Maya helped by giving the dog water and staying calm while her mother made phone calls to find out whether the dog belonged to someone nearby.\n\nSpeaker 1: The report teaches that helping an animal can begin with one small choice. A person must notice the problem, act carefully, and keep trying until the animal is safe.\n\n---\n\nRead the presentation transcript. Then answer the questions.\n\n**Keeping Ocean Animals Safe**\n*presentation transcript for classroom use*\n\nSpeaker 1: This presentation explains two ways people help ocean animals.\n\nSpeaker 2: First, many volunteers collect plastic and trash from beaches before that trash can wash into the ocean.\n\nSpeaker 1: Second, inventors have created machines that gather floating plastic from ocean water. These tools help remove dangerous trash that animals might mistake for food.\n\nSpeaker 2: Scientists and community groups also teach people to use less plastic. When people throw away less trash, fewer harmful materials reach the ocean in the first place.\n\nSpeaker 1: The main message is simple: people can protect ocean animals by cleaning up pollution and by preventing new pollution from spreading.",
+    "passageTitle": "The Storm Dog / The Amazing Ocean",
+    "questionText": "Which idea is supported by both texts?",
+    "options": [
+      {
+        "label": "A",
+        "text": "People can make a difference when they notice a problem and take action"
+      },
+      {
+        "label": "B",
+        "text": "All animals should live with humans"
+      },
+      {
+        "label": "C",
+        "text": "Storms are the main cause of ocean pollution"
+      },
+      {
+        "label": "D",
+        "text": "Helping animals is always easy"
+      }
+    ],
+    "correctAnswer": "A",
+    "rubric": "The student identifies a shared idea across the two texts.",
+    "points": 1,
+    "explanation": "Maya helps a lost dog directly, and people help ocean animals by cleaning pollution and changing habits."
   },
   {
     "id": 1150,
@@ -2584,14 +2286,32 @@ export const practiceTest2Questions: Question[] = [
     "studentDirections": "**Your Assignment**\n\nYou will read the story \"The Storm Dog\" and the article \"The Amazing Ocean.\" Then you will answer questions and write an essay about how people can help animals.\n\n**Steps:**\n1. Read both sources carefully.\n2. Answer the research questions.\n3. Plan and write your essay.",
     "questionText": "Match each detail to the source where it belongs.",
     "gridRows": [
-      "Maya wrapped a towel around the trembling dog.",
-      "Plastic waste can make sea animals sick.",
-      "A shelter checked the dog for a microchip.",
-      "People can reduce plastic use to help the ocean."
+      "Maya and her Mama drove through the rain to rescue a dog.",
+      "Beach cleanups remove trash from shorelines.",
+      "A shelter checked whether the dog had a microchip.",
+      "Inventors created machines that collect floating plastic."
     ],
     "gridColumns": [
       "The Storm Dog",
       "The Amazing Ocean"
+    ],
+    "options": [
+      {
+        "label": "A",
+        "text": "Maya drew pictures of the dog at school."
+      },
+      {
+        "label": "B",
+        "text": "Maya and her Mama drove through the rain to rescue the dog."
+      },
+      {
+        "label": "C",
+        "text": "Ms. Rivera told Maya that animals find their way."
+      },
+      {
+        "label": "D",
+        "text": "Maya told her Mama about the dog."
+      }
     ],
     "correctAnswer": [
       "0:0",
@@ -2599,9 +2319,9 @@ export const practiceTest2Questions: Question[] = [
       "2:0",
       "3:1"
     ],
-    "rubric": "The student correctly matches each detail to the source where it appears.",
+    "rubric": "The student matches details to the correct source.",
     "points": 1,
-    "explanation": "The story includes details about rescuing and caring for Storm, while the article explains how pollution harms ocean animals and how people can help."
+    "explanation": "The rescue and microchip details come from the story. Beach cleanups and plastic-collecting machines come from the ocean article."
   },
   {
     "id": 1151,
@@ -2610,17 +2330,35 @@ export const practiceTest2Questions: Question[] = [
     "subject": "ela",
     "grade": 3,
     "claim": 4,
-    "target": "3",
-    "dok": 3,
+    "target": "2",
+    "dok": 2,
     "standard": "W.2",
     "type": "short-answer",
     "passage": "Read the passage and answer the questions.\n\n**The Storm Dog**\n*by Clara Mitchell*\n\nMaya pressed her face against the window. The sky was dark gray, and the wind bent the trees sideways. Thunder rumbled in the distance.\n\n\"Come away from the window,\" said Mama. \"The storm will pass.\"\n\nBut Maya wasn't worried about the storm. She was worried about the dog. That morning, on the way to school, she had seen a small brown dog sitting near the bus stop. It had no collar and its fur was matted. It looked at Maya with big, sad eyes.\n\nAll day at school, Maya thought about the dog. She drew pictures of it during art class. She wrote about it in her journal. When her teacher, Ms. Rivera, asked what was on her mind, Maya told her about the stray dog.\n\n\"Sometimes animals find their way,\" Ms. Rivera said kindly. \"But it's good that you care.\"\n\nNow the storm was here, and Maya couldn't stop thinking about the little dog out there alone.\n\n\"Mama, there's a dog outside. I saw it this morning. It doesn't have a home,\" Maya said.\n\nMama looked at her daughter's worried face. \"Where did you see it?\"\n\n\"Near the bus stop on Oak Street.\"\n\nMama was quiet for a moment. Then she grabbed two towels and the car keys. \"Let's go look,\" she said.\n\nThey drove slowly through the rain. At first, Maya couldn't see anything. The rain was too heavy. But then, huddled under a bench near the bus stop, she spotted the brown dog. It was shaking.\n\n\"There!\" Maya pointed.\n\nMama pulled over. Maya jumped out with a towel and wrapped it around the trembling dog. It licked her hand.\n\nThey brought the dog home and dried it off. Mama warmed some leftover chicken and put water in a bowl. The dog ate hungrily.\n\n\"We'll take it to the shelter tomorrow to check for a microchip,\" Mama said. \"Someone might be looking for this little one.\"\n\nMaya nodded, but she already knew what she hoped—that no one would claim the dog, and it could stay with them forever.\n\nThe next day, the shelter found no microchip and no one had reported a missing dog matching its description. After a week of waiting, Mama said the words Maya had been dreaming of: \"I think we have a new family member.\"\n\nMaya named the dog Storm.\n\n---\n\nRead the passage and answer the questions.\n\n**The Amazing Ocean**\n*adapted from National Geographic Kids*\n\nThe ocean covers more than 70 percent of Earth's surface. It is home to millions of species of plants and animals, from tiny plankton to enormous blue whales. Scientists divide the ocean into five main regions: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.\n\n**Ocean Zones**\n\nThe ocean is divided into layers called zones. The sunlight zone is the top layer, reaching about 656 feet deep. Most ocean life lives here because sunlight helps plants grow, which feeds the animals. Below that is the twilight zone, where only a little light reaches. Deeper still is the midnight zone, where it is completely dark. Strange creatures live here, and some even make their own light through a process called bioluminescence.\n\n**Why the Ocean Matters**\n\nThe ocean affects weather and climate all over the world. Water evaporates from the ocean surface, forms clouds, and falls as rain over land. Without the ocean, there would be very little rainfall, and most plants could not survive.\n\nThe ocean also produces more than half of the world's oxygen. Tiny ocean plants called phytoplankton take in carbon dioxide and release oxygen, just like trees and plants on land. In fact, phytoplankton produce more oxygen than all the world's forests combined.\n\n**Ocean Problems**\n\nPollution is one of the biggest threats to the ocean. Plastic waste, oil spills, and chemicals all harm ocean life. Every year, about 8 million tons of plastic end up in the ocean. Sea turtles, fish, and seabirds often mistake plastic for food, which can make them sick or even kill them.\n\nScientists and ordinary people are working to help. Beach cleanups remove trash from shorelines. New laws limit how much pollution factories can release into waterways. Some inventors have even created machines that collect floating plastic from the ocean surface.\n\n**What You Can Do**\n\nEveryone can help protect the ocean. Reducing plastic use, recycling, and never littering are simple steps that make a difference. Learning about the ocean is important too—the more people understand how valuable the ocean is, the more they will want to protect it.",
     "passageTitle": "The Storm Dog / The Amazing Ocean",
     "questionText": "How does each source show that people can help animals? Use one detail from each source in your answer.",
-    "correctAnswer": "In The Storm Dog, Maya and her mother rescue the dog from the storm and care for it. In The Amazing Ocean, people help animals by cleaning beaches, limiting pollution, or collecting plastic from the ocean.",
-    "rubric": "2 points: The student explains how each source shows people helping animals and includes one accurate detail from each source. 1 point: The student uses one source clearly or gives a partial answer about both. 0 points: All other responses.",
-    "points": 2,
-    "explanation": "A complete response uses the rescue in the story and an action from the article, such as removing plastic or reducing pollution, to show how people help animals.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Building more boats"
+      },
+      {
+        "label": "B",
+        "text": "Collecting floating plastic from the ocean"
+      },
+      {
+        "label": "C",
+        "text": "Adding more fish to the ocean"
+      },
+      {
+        "label": "D",
+        "text": "Making the ocean warmer"
+      }
+    ],
+    "correctAnswer": "In The Storm Dog, Maya and her mother help by rescuing the stray dog from the storm and caring for it. In The Amazing Ocean, people help by cleaning beaches, limiting pollution, or collecting floating plastic from the ocean.",
+    "rubric": "The student explains how each source shows people helping animals and uses one relevant detail from each source.",
+    "points": 1,
+    "explanation": "A complete response should include one direct helping action from the story and one pollution-prevention or cleanup action from the article.",
     "studentDirections": "**Your Assignment**\n\nYou will read the story \"The Storm Dog\" and the article \"The Amazing Ocean.\" Then you will answer questions and write an essay about how people can help animals.\n\n**Steps:**\n1. Read both sources carefully.\n2. Answer the research questions.\n3. Plan and write your essay.",
     "passageAuthor": "Clara Mitchell"
   },

@@ -280,9 +280,22 @@ describe("Question data integrity", () => {
   }
 
   it("adds audio metadata to the rollout presentation clusters across the full presentation bank", () => {
+    const transcriptChecks = [
+      { testNum: 2, ids: [1125, 1126, 1127, 1128, 1130] },
+      { testNum: 3, ids: [2125, 2126, 2127, 2128, 2130] },
+    ];
+
+    transcriptChecks.forEach(({ testNum, ids }) => {
+      const questions = getQuestions(3, "ela", "cat", testNum);
+
+      ids.forEach((id) => {
+        const question = questions.find((q) => q.id === id);
+        expect(question).toBeDefined();
+        expect(question?.passage).toContain("Read the presentation transcript.");
+      });
+    });
+
     const rolloutChecks = [
-      { testNum: 2, ids: [1122, 1123, 1124, 1125, 1126, 1127] },
-      { testNum: 3, ids: [2122, 2123, 2124, 2125, 2126, 2127] },
       { testNum: 4, ids: [3122, 3123, 3124, 3125, 3126, 3127] },
       { testNum: 5, ids: [4122, 4123, 4124, 4125, 4126, 4127] },
       { testNum: 6, ids: [5122, 5123, 5124, 5125, 5126, 5127] },
