@@ -1,6 +1,519 @@
 import type { Question } from "./questions";
 
-export const practiceTest5Questions: Question[] = [
+const lemonadeMathPtDirections =
+  "**Mathematics Performance Task**\n\nLily and Jake are planning a lemonade stand. They need to make enough lemonade, count what they sell, and plan for the next day.\n\nUse the lemonade-stand information in the table to answer the questions.";
+
+const lemonadeMathPtTable = {
+  columns: ["Amount"],
+  rows: [
+    { label: "Lemons", values: [18] },
+    { label: "Pitchers of lemonade", values: [3] },
+    { label: "Cups from each pitcher", values: [8] },
+    { label: "Cups sold in the morning", values: [11] },
+    { label: "Cups sold in the afternoon", values: [9] },
+    { label: "Price for each cup", values: ["$1"] },
+    { label: "Bags of cookies", values: [4] },
+    { label: "Cookies in each bag", values: [6] },
+  ],
+};
+
+const lemonadeStandPassage =
+  "Read the passage and answer the questions.\n\n**The Lemonade Stand**\n*by Rosa Martinez*\n\nIt was the first day of summer vacation. Lily and her brother Jake sat on the front porch.\n\n\"I'm bored,\" said Jake.\n\n\"Me too,\" said Lily. Then she had an idea. \"Let's set up a lemonade stand!\"\n\nJake jumped up. \"Great idea! But we need lemons and sugar.\"\n\nThey asked Mom for help. She gave them six lemons, a bag of sugar, and a big pitcher. Lily squeezed the lemons while Jake mixed in sugar and cold water. They tasted it.\n\n\"It needs more sugar,\" said Jake.\n\n\"No, it is perfect,\" said Lily.\n\nThey added just a tiny bit more sugar. Then they carried the pitcher outside. Jake made a sign with markers on a big piece of cardboard. It said, \"Lemonade - 50 cents.\"\n\nAt first, nobody came. They waited and waited. Lily started to feel discouraged.\n\n\"Maybe no one wants lemonade,\" she said.\n\nThen their neighbor, Mr. Wilson, walked by.\n\n\"Is that fresh lemonade?\" he asked. \"I'll take two cups!\"\n\nMr. Wilson paid one dollar. He drank his lemonade and said it was delicious. After that, more people stopped by. Mrs. Park bought a cup. The mail carrier bought two cups. Three kids from down the street each bought one.\n\nBy the end of the afternoon, they had sold all their lemonade. Lily counted the money. They had made eight dollars.\n\n\"That was fun!\" said Jake. \"Can we do it again tomorrow?\"\n\n\"Definitely,\" said Lily. \"But tomorrow, let's make cookies too.\"\n\nThey ran inside to tell Mom about their great day. Mom smiled and said, \"I'm proud of you both for working together.\"";
+
+const animalHomesPassage =
+  "Read the passage and answer the questions.\n\n**Amazing Animal Homes**\n\nAnimals build many different kinds of homes. These homes keep animals safe from bad weather and predators.\n\n**Bird Nests**\n\nBirds build nests to lay their eggs and raise their babies. Different birds make different kinds of nests. Robins make cup-shaped nests out of grass and mud. Eagles build huge nests called eyries at the tops of tall trees. Hummingbirds make very small nests that are only about one inch across.\n\n**Beaver Lodges**\n\nBeavers build homes called lodges in ponds and streams. First, beavers use their strong teeth to cut down trees. Then they pile up sticks, mud, and rocks to build a dome shape in the water. The entrance to a beaver lodge is underwater, which helps keep predators out. Inside, the lodge is warm and dry.\n\n**Underground Burrows**\n\nMany animals live underground in burrows. Rabbits dig burrows with many tunnels and rooms. Prairie dogs build underground towns with many burrows connected together. Groundhogs dig deep burrows where they sleep during winter.\n\n**Beehives**\n\nHoneybees build hives filled with honeycomb. The honeycomb is made of wax from the bees' bodies. It has many small six-sided cells. Bees use the cells to store honey and to raise baby bees.\n\n**Why Animal Homes Matter**\n\nAnimal homes protect animals and their babies. When people cut down trees or build on land, animals can lose their homes. People can help by protecting forests and wild areas where animals live.";
+
+const lemonadePlanningPresentation =
+  "Read the presentation transcript.\n\nToday I am going to explain how students can plan a lemonade stand.\n\nFirst, students need supplies. They should gather lemons, sugar, water, cups, and a pitcher before they begin. In the story, Lily and Jake asked their mom for help and then mixed the lemonade together.\n\nNext, students need a clear sign. A sign tells people what is being sold and how much it costs. Jake made a cardboard sign so customers would know they could buy lemonade.\n\nStudents also need to keep track of money. Lily counted the money at the end of the afternoon and found out how much they made.\n\nFinally, students can use what they learn to plan the next day. Lily and Jake decided they could make cookies too.\n\nPlanning helps a lemonade stand run smoothly from start to finish.";
+
+const animalBuildersPresentation =
+  "Read the presentation transcript.\n\nToday I am giving a presentation about how animal homes are built for safety.\n\nBirds make nests where they can lay eggs and raise their babies. Some nests are made of grass and mud, while others are very large and sit high in trees.\n\nBeavers build lodges from sticks, mud, and rocks. A beaver lodge has an underwater entrance, which helps keep predators away.\n\nAnimals that dig burrows use the ground for protection. Rabbits and prairie dogs make tunnels and rooms underground.\n\nHoneybees build honeycomb inside their hives. The small six-sided cells store honey and hold baby bees.\n\nAnimal homes may look different, but they all help animals stay safe and care for their young.";
+
+const lemonadeElaPtDirections =
+  "You have read 'The Lemonade Stand' and 'Amazing Animal Homes.' Now you will write an essay explaining how both sources show planning and building to meet a need.\n\nIn your essay:\n- explain how planning or building helps people or animals meet a need\n- use details from 'The Lemonade Stand'\n- use details from 'Amazing Animal Homes'\n- organize your ideas clearly\n- use complete sentences with correct spelling and punctuation";
+
+function rebaselinePracticeTest5Question(question: Question): Question {
+  const elaCat = rebaselinePracticeTest5ElaCat(question);
+  if (elaCat) {
+    return elaCat;
+  }
+
+  const mathPt = rebaselinePracticeTest5MathPt(question);
+  if (mathPt) {
+    return mathPt;
+  }
+
+  if (question.id === 4009) {
+    return {
+      ...question,
+      correctAnswer: "5/8",
+      acceptedAnswers: ["5/8"],
+      rubric: "The student enters the fraction represented by the fifth mark.",
+      explanation:
+        "The number line goes from 0 to 1 with 8 equal parts. The fifth mark after 0 represents 5/8.",
+    };
+  }
+
+  if (question.testType === "pt" && question.subject === "ela") {
+    const rebaselinedQuestion = {
+      ...question,
+      studentDirections: lemonadeElaPtDirections,
+    };
+
+    if (question.id === 4152) {
+      return {
+        ...rebaselinedQuestion,
+        questionText:
+          "Write an essay explaining how both sources show planning and building to meet a need. Use details from both sources.",
+        correctAnswer:
+          "A strong response explains how both sources show planning or building to meet a need. It should use details from the story to show Lily and Jake gathering supplies, making lemonade, and creating a sign for customers. It should use details from the article to explain how animals build homes such as nests, lodges, burrows, or hives for safety and raising young.",
+        rubric:
+          "4 points: The response clearly explains how planning or building helps people or animals meet a need, uses accurate details from both sources, is organized, and shows grade-appropriate conventions. 3 points: The response uses both sources but may be less developed. 2 points: The response uses limited evidence or depends mostly on one source. 1 point: Minimal response. 0 points: Off-topic or blank.",
+        explanation:
+          "A strong essay connects planning in the lemonade-stand story with purposeful building in the animal-homes article.",
+      };
+    }
+
+    return rebaselinedQuestion;
+  }
+
+  return question;
+}
+
+function rebaselinePracticeTest5MathPt(question: Question): Question | undefined {
+  if (question.id === 4040) {
+    return {
+      ...question,
+      studentDirections: lemonadeMathPtDirections,
+      dataTable: lemonadeMathPtTable,
+      questionText: "Use the table to decide which statements are true. Select all that apply.",
+      options: [
+        { label: "A", text: "The three pitchers can fill 24 cups in all." },
+        { label: "B", text: "Lily and Jake sold 20 cups of lemonade in all." },
+        { label: "C", text: "They sold more cups in the afternoon than in the morning." },
+        { label: "D", text: "The four bags have 24 cookies in all." },
+        { label: "E", text: "They had 4 cups of lemonade left after the sales." },
+      ],
+      correctAnswer: ["A", "B", "D", "E"],
+      rubric: "The student selects all true statements based on the table.",
+      explanation:
+        "The pitchers make 3 x 8 = 24 cups. They sold 11 + 9 = 20 cups. The cookie bags have 4 x 6 = 24 cookies. They had 24 - 20 = 4 cups left.",
+    };
+  }
+
+  if (question.id === 4041) {
+    return {
+      ...question,
+      studentDirections: lemonadeMathPtDirections,
+      dataTable: lemonadeMathPtTable,
+      questionText: "How many cups of lemonade can the three pitchers fill in all?",
+      correctAnswer: "24",
+      rubric: "The student enters the total number of cups.",
+      explanation: "There are 3 pitchers, and each pitcher fills 8 cups. The total is 3 x 8 = 24 cups.",
+    };
+  }
+
+  if (question.id === 4042) {
+    return {
+      ...question,
+      studentDirections: lemonadeMathPtDirections,
+      dataTable: lemonadeMathPtTable,
+      questionText:
+        "Did Lily and Jake make enough lemonade for the cups they sold? Use words and numbers to explain your answer.",
+      correctAnswer:
+        "Yes. They made 3 x 8 = 24 cups of lemonade. They sold 11 + 9 = 20 cups. Since 24 is more than 20, they made enough and had 4 cups left.",
+      rubric:
+        "2 points: The response correctly compares cups made with cups sold. 1 point: The response gives a correct yes/no answer with incomplete work. 0 points: All other responses.",
+      explanation:
+        "They made 24 cups and sold 20 cups, so they had enough lemonade and 4 cups left.",
+    };
+  }
+
+  if (question.id === 4043) {
+    return {
+      ...question,
+      studentDirections: lemonadeMathPtDirections,
+      dataTable: lemonadeMathPtTable,
+      questionText:
+        "Lily and Jake want to sell more cups tomorrow than they sold today. Complete the table to show a possible number of cups sold in the morning, midday, and afternoon.",
+      tableColumns: ["Morning", "Midday", "Afternoon"],
+      tableRowLabel: "Cups Sold",
+      tableMinSumExclusive: 20,
+      correctAnswer: ["8", "7", "6"],
+      rubric:
+        "1 point: The student enters three numbers with a total greater than 20. 0 points: All other responses.",
+      explanation:
+        "Any three numbers with a total greater than 20 would show more cups than Lily and Jake sold today.",
+    };
+  }
+
+  if (question.id === 4044) {
+    return {
+      ...question,
+      studentDirections: lemonadeMathPtDirections,
+      dataTable: lemonadeMathPtTable,
+      questionText:
+        "Use your answer from the table to explain how Lily and Jake could sell more cups tomorrow than they sold today.",
+      correctAnswer:
+        "Today Lily and Jake sold 20 cups. If the morning, midday, and afternoon numbers for tomorrow add to more than 20, then they will sell more cups tomorrow.",
+      rubric:
+        "2 points: The response uses the table total and explains that it is greater than 20. 1 point: The response gives a partial comparison. 0 points: All other responses.",
+      explanation:
+        "A complete explanation compares tomorrow's total with 20, the number of cups sold today.",
+    };
+  }
+
+  return undefined;
+}
+
+function rebaselinePracticeTest5ElaCat(question: Question): Question | undefined {
+  const storyQuestions: Record<number, Partial<Question>> = {
+    4101: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "Why do Lily and Jake decide to make a lemonade stand?",
+      options: [
+        { label: "A", text: "They are bored on the first day of summer vacation." },
+        { label: "B", text: "They need to finish a school report." },
+        { label: "C", text: "They want to buy a new pitcher." },
+        { label: "D", text: "They are helping the mail carrier." },
+      ],
+      correctAnswer: "A",
+      explanation: "Lily gets the idea after she and Jake say they are bored.",
+    },
+    4102: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "Which sentence best states a lesson of the story?",
+      options: [
+        { label: "A", text: "A good sign is more important than good lemonade." },
+        { label: "B", text: "Working together can help people succeed." },
+        { label: "C", text: "Summer vacation is only fun in the morning." },
+        { label: "D", text: "Neighbors should always buy two cups." },
+      ],
+      correctAnswer: "B",
+      explanation: "Lily and Jake work together and sell all of their lemonade.",
+    },
+    4103: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "How does Lily feel before and after customers come to the stand?",
+      options: [
+        { label: "A", text: "She changes from discouraged to excited." },
+        { label: "B", text: "She changes from angry to sleepy." },
+        { label: "C", text: "She changes from proud to worried." },
+        { label: "D", text: "She changes from confused to bored." },
+      ],
+      correctAnswer: "A",
+      explanation: "Lily feels discouraged when no one comes, then feels successful after they sell the lemonade.",
+    },
+    4104: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "What does the word discouraged mean as it is used in the story?",
+      options: [
+        { label: "A", text: "feeling like something may not work" },
+        { label: "B", text: "moving too quickly" },
+        { label: "C", text: "speaking in a loud voice" },
+        { label: "D", text: "needing something cold to drink" },
+      ],
+      correctAnswer: "A",
+      explanation: "Lily thinks maybe no one wants lemonade, so discouraged means feeling like something may not work.",
+    },
+    4105: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "Which detail shows that Lily and Jake planned before selling?",
+      options: [
+        { label: "A", text: "They sat on the porch." },
+        { label: "B", text: "They gathered supplies, mixed lemonade, and made a sign." },
+        { label: "C", text: "They ran inside at the end of the day." },
+        { label: "D", text: "They asked Mr. Wilson to walk by." },
+      ],
+      correctAnswer: "B",
+      explanation: "Gathering supplies, mixing lemonade, and making a sign are planning steps.",
+    },
+    4106: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "From whose point of view is the story mostly told?",
+      options: [
+        { label: "A", text: "Lily and Jake's" },
+        { label: "B", text: "Mr. Wilson's" },
+        { label: "C", text: "the mail carrier's" },
+        { label: "D", text: "Mrs. Park's" },
+      ],
+      correctAnswer: "A",
+      explanation: "The story mostly follows what Lily and Jake do and feel.",
+    },
+    4107: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "Which event happens after Mr. Wilson buys lemonade?",
+      options: [
+        { label: "A", text: "Lily and Jake ask Mom for help." },
+        { label: "B", text: "Jake makes a cardboard sign." },
+        { label: "C", text: "More people stop by the stand." },
+        { label: "D", text: "Lily says she is bored." },
+      ],
+      correctAnswer: "C",
+      explanation: "After Mr. Wilson buys lemonade, more customers come to the stand.",
+    },
+    4108: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "Why does Mom say she is proud of Lily and Jake?",
+      options: [
+        { label: "A", text: "They worked together to run the stand." },
+        { label: "B", text: "They finished all their summer homework." },
+        { label: "C", text: "They gave away the lemonade for free." },
+        { label: "D", text: "They stayed inside all afternoon." },
+      ],
+      correctAnswer: "A",
+      explanation: "Mom says she is proud because they worked together.",
+    },
+    4109: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "Which detail best supports the idea that the lemonade stand was successful?",
+      options: [
+        { label: "A", text: "Lily and Jake sat on the porch." },
+        { label: "B", text: "They sold all the lemonade and made eight dollars." },
+        { label: "C", text: "Jake wanted more sugar in the lemonade." },
+        { label: "D", text: "Mom gave them a pitcher." },
+      ],
+      correctAnswer: "B",
+      explanation: "Selling all the lemonade and making money shows the stand was successful.",
+    },
+  };
+
+  const articleQuestions: Record<number, Partial<Question>> = {
+    4110: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "What is the main idea of the passage?",
+      options: [
+        { label: "A", text: "Animals build different homes that help keep them safe." },
+        { label: "B", text: "All animals live in trees." },
+        { label: "C", text: "Honeybees are larger than beavers." },
+        { label: "D", text: "People should build homes for every animal." },
+      ],
+      correctAnswer: "A",
+      explanation: "The passage describes several kinds of animal homes and explains how they protect animals.",
+    },
+    4111: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "According to the passage, why is the entrance to a beaver lodge underwater?",
+      options: [
+        { label: "A", text: "It helps keep predators out." },
+        { label: "B", text: "It makes the lodge colder." },
+        { label: "C", text: "It lets birds build nests inside." },
+        { label: "D", text: "It stores honey for winter." },
+      ],
+      correctAnswer: "A",
+      explanation: "The passage says the underwater entrance helps keep predators out.",
+    },
+    4112: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "What are honeycomb cells used for?",
+      options: [
+        { label: "A", text: "to cut down trees" },
+        { label: "B", text: "to store honey and raise baby bees" },
+        { label: "C", text: "to make underground tunnels" },
+        { label: "D", text: "to hold grass and mud nests" },
+      ],
+      correctAnswer: "B",
+      explanation: "The passage says bees use honeycomb cells to store honey and raise baby bees.",
+    },
+    4113: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "Why does the author use headings such as 'Bird Nests' and 'Beaver Lodges'?",
+      options: [
+        { label: "A", text: "to organize information by kind of animal home" },
+        { label: "B", text: "to show which homes are not safe" },
+        { label: "C", text: "to tell events in time order" },
+        { label: "D", text: "to list the author's opinions" },
+      ],
+      correctAnswer: "A",
+      explanation: "The headings organize the passage into different types of animal homes.",
+    },
+    4114: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "What does the word predators mean in the passage?",
+      options: [
+        { label: "A", text: "animals that may hunt other animals" },
+        { label: "B", text: "animals that build honeycomb" },
+        { label: "C", text: "plants that grow near streams" },
+        { label: "D", text: "homes made with sticks and mud" },
+      ],
+      correctAnswer: "A",
+      explanation: "Predators are animals that may hunt other animals, which is why homes help keep animals safe.",
+    },
+    4115: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "Which detail best supports the idea that some animal homes are complex?",
+      options: [
+        { label: "A", text: "Prairie dogs build underground towns with many burrows connected together." },
+        { label: "B", text: "Animals can lose homes when people build on land." },
+        { label: "C", text: "Hummingbirds make very small nests." },
+        { label: "D", text: "Birds lay eggs in nests." },
+      ],
+      correctAnswer: "A",
+      explanation: "Connected underground towns show that some animal homes are complex.",
+    },
+    4116: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "Which sentence gives the best summary of the passage?",
+      options: [
+        { label: "A", text: "Animal homes are built in many ways and help animals survive." },
+        { label: "B", text: "Beavers are the only animals that build homes." },
+        { label: "C", text: "Most animal homes are made by people." },
+        { label: "D", text: "Bird nests are always six feet wide." },
+      ],
+      correctAnswer: "A",
+      explanation: "This summary covers the passage's main idea about different useful animal homes.",
+    },
+    4117: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "Which animal home is built with sticks, mud, and rocks?",
+      options: [
+        { label: "A", text: "a beaver lodge" },
+        { label: "B", text: "a honeybee hive" },
+        { label: "C", text: "a prairie dog burrow" },
+        { label: "D", text: "a hummingbird nest" },
+      ],
+      correctAnswer: "A",
+      explanation: "The passage says beavers use sticks, mud, and rocks to build lodges.",
+    },
+    4118: {
+      passage: animalHomesPassage,
+      passageTitle: "Amazing Animal Homes",
+      questionText: "What can readers infer from the section 'Why Animal Homes Matter'?",
+      options: [
+        { label: "A", text: "Protecting wild areas can help animals keep safe homes." },
+        { label: "B", text: "Animals do not need homes after they grow up." },
+        { label: "C", text: "All animal homes are found underwater." },
+        { label: "D", text: "People should remove forests to make more room." },
+      ],
+      correctAnswer: "A",
+      explanation: "The section says people can help by protecting forests and wild areas where animals live.",
+    },
+    4119: {
+      passage: lemonadeStandPassage,
+      passageTitle: "The Lemonade Stand",
+      questionText: "Which idea is supported by both 'The Lemonade Stand' and 'Amazing Animal Homes'?",
+      options: [
+        { label: "A", text: "Planning and working carefully can help solve needs." },
+        { label: "B", text: "Every home is made of cardboard." },
+        { label: "C", text: "Animals sell food to their neighbors." },
+        { label: "D", text: "People should never work together." },
+      ],
+      correctAnswer: "A",
+      explanation: "The story shows children planning a stand, and the article shows animals building homes for protection.",
+    },
+  };
+
+  const presentationQuestions: Record<number, Partial<Question>> = {
+    4122: {
+      type: "multiple-choice",
+      passage: lemonadePlanningPresentation,
+      passageTitle: "Planning a Lemonade Stand",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "What is the main idea of the presentation?",
+      options: [
+        { label: "A", text: "Planning helps a lemonade stand run smoothly." },
+        { label: "B", text: "Students should never sell lemonade." },
+        { label: "C", text: "A lemonade stand only needs cookies." },
+        { label: "D", text: "Counting money is not part of a stand." },
+      ],
+      correctAnswer: "A",
+      explanation: "The presentation explains several planning steps for a lemonade stand.",
+    },
+    4123: {
+      passage: lemonadePlanningPresentation,
+      passageTitle: "Planning a Lemonade Stand",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Which question can a listener answer after reading the presentation?",
+      options: [
+        { label: "A", text: "Why is a sign useful for a lemonade stand?" },
+        { label: "B", text: "What street does Lily live on?" },
+        { label: "C", text: "How many lemons grow on one tree?" },
+        { label: "D", text: "What kind of cookies did Jake bake?" },
+      ],
+      correctAnswer: "A",
+      explanation: "The presentation says a sign tells people what is being sold and how much it costs.",
+    },
+    4124: {
+      passage: lemonadePlanningPresentation,
+      passageTitle: "Planning a Lemonade Stand",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Complete the chart to show when each action happens in the planning process.",
+      gridRows: ["Gather supplies", "Make a sign", "Count the money"],
+      gridColumns: ["Before selling", "After selling"],
+      correctAnswer: ["0:0", "1:0", "2:1"],
+      explanation: "Students gather supplies and make a sign before selling, then count the money after selling.",
+    },
+    4125: {
+      passage: animalBuildersPresentation,
+      passageTitle: "How Animals Build Safe Homes",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Which idea is explained in the presentation?",
+      options: [
+        { label: "A", text: "Different animal homes help animals stay safe and care for young." },
+        { label: "B", text: "All animals build homes in the same way." },
+        { label: "C", text: "Honeybees build nests from grass and mud." },
+        { label: "D", text: "Beavers do not use water near their homes." },
+      ],
+      correctAnswer: "A",
+      explanation: "The presentation describes different homes and how they protect animals or their young.",
+    },
+    4126: {
+      passage: animalBuildersPresentation,
+      passageTitle: "How Animals Build Safe Homes",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Complete the chart to match each animal home with a feature from the presentation.",
+      gridRows: ["Bird nest", "Beaver lodge", "Honeycomb"],
+      gridColumns: ["eggs and babies", "underwater entrance", "six-sided cells"],
+      correctAnswer: ["0:0", "1:1", "2:2"],
+      explanation: "Bird nests hold eggs and babies, beaver lodges have underwater entrances, and honeycomb has six-sided cells.",
+    },
+    4127: {
+      passage: animalBuildersPresentation,
+      passageTitle: "How Animals Build Safe Homes",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "What is the most likely reason the speaker made this presentation?",
+      options: [
+        { label: "A", text: "to explain how animal homes help animals" },
+        { label: "B", text: "to tell people how to sell lemonade" },
+        { label: "C", text: "to prove that burrows are not useful" },
+        { label: "D", text: "to describe one animal's funny adventure" },
+      ],
+      correctAnswer: "A",
+      explanation: "The speaker gives information about how different homes help animals stay safe.",
+    },
+  };
+
+  const replacement = storyQuestions[question.id] ?? articleQuestions[question.id] ?? presentationQuestions[question.id];
+  if (!replacement) {
+    return undefined;
+  }
+
+  return {
+    ...question,
+    type: replacement.options && !replacement.type ? "multiple-choice" : question.type,
+    audio: undefined,
+    ...replacement,
+  };
+}
+
+export const practiceTest5Questions: Question[] = ([
   {
     "id": 4001,
     "testType": "cat",
@@ -2645,4 +3158,4 @@ export const practiceTest5Questions: Question[] = [
     "explanation": "A strong essay explains how people or animals work together and supports the ideas with details from both sources.",
     "studentDirections": "You have read 'The Lemonade Stand' and 'Amazing Animal Homes.' Now you will write a paragraph about working together.\n\nIn your paragraph:\n- Explain how teamwork is shown in BOTH passages\n- Give at least one example from 'The Lemonade Stand'\n- Give at least one example from 'Amazing Animal Homes'\n- Tell why working together is important\n- Use complete sentences with correct spelling and punctuation"
   }
-];
+] as Question[]).map(rebaselinePracticeTest5Question);

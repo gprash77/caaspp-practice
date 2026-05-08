@@ -283,6 +283,8 @@ describe("Question data integrity", () => {
     const transcriptChecks = [
       { testNum: 2, ids: [1125, 1126, 1127, 1128, 1130] },
       { testNum: 3, ids: [2125, 2126, 2127, 2128, 2130] },
+      { testNum: 4, ids: [3122, 3123, 3124, 3125, 3126, 3127] },
+      { testNum: 5, ids: [4122, 4123, 4124, 4125, 4126, 4127] },
     ];
 
     transcriptChecks.forEach(({ testNum, ids }) => {
@@ -296,8 +298,6 @@ describe("Question data integrity", () => {
     });
 
     const rolloutChecks = [
-      { testNum: 4, ids: [3122, 3123, 3124, 3125, 3126, 3127] },
-      { testNum: 5, ids: [4122, 4123, 4124, 4125, 4126, 4127] },
       { testNum: 6, ids: [5122, 5123, 5124, 5125, 5126, 5127] },
       { testNum: 7, ids: [7122, 7123, 7124, 7125, 7126, 7127] },
       { testNum: 8, ids: [8122, 8123, 8124, 8125, 8126, 8127] },

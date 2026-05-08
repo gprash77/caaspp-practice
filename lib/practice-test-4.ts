@@ -1,6 +1,504 @@
 import type { Question } from "./questions";
 
-export const practiceTest4Questions: Question[] = [
+const kiteFestivalMathPtDirections =
+  "**Mathematics Performance Task**\n\nThe third-grade class is getting ready for a school kite festival. Students will make kites, add ribbon tails, and sell tickets for the festival.\n\nUse the kite-festival information in the table to answer the questions.";
+
+const kiteFestivalMathPtTable = {
+  columns: ["Amount"],
+  rows: [
+    { label: "Small kites", values: [6] },
+    { label: "Ribbon tails for each small kite", values: [3] },
+    { label: "Large kites", values: [4] },
+    { label: "Ribbon tails for each large kite", values: [5] },
+    { label: "Student tickets sold", values: [38] },
+    { label: "Adult tickets sold", values: [27] },
+    { label: "Price for each ticket", values: ["$2"] },
+    { label: "Ribbon tails available", values: [96] },
+  ],
+};
+
+const lostKitePassage =
+  "Read the passage and answer the questions.\n\n**The Lost Kite**\n*by Amy Chen*\n\nIt was a windy Saturday morning. Ben and his mom went to the park. Ben brought his favorite red kite. It had a long yellow tail that danced in the wind.\n\n\"This is perfect kite weather!\" said Mom.\n\nBen held the string tightly and ran across the grass. The kite lifted into the sky. It went higher and higher. Ben smiled as he watched it fly above the trees.\n\nThen a big gust of wind came. The string pulled hard. Ben tried to hold on, but the string slipped through his fingers. The kite flew away over the tall oak trees.\n\n\"Oh no!\" Ben cried. \"My kite is gone!\"\n\nBen sat on a bench and put his head in his hands. He felt so sad. That kite was a birthday gift from his grandma.\n\nHis friend Mia walked over. She was at the park with her dog.\n\n\"What's wrong, Ben?\" Mia asked.\n\n\"I lost my kite,\" Ben said. \"The wind took it.\"\n\n\"Let's go find it!\" said Mia. \"My dog is good at finding things.\"\n\nThey walked past the playground and through the picnic area. They looked up in every tree. Then the dog started barking near the fence at the edge of the park.\n\n\"Look!\" Mia pointed. The red kite was caught in a bush, just on the other side of the fence. The yellow tail was tangled in the branches.\n\nBen carefully reached through the fence and pulled the kite free. The string was a little tangled, but the kite was not broken.\n\n\"Thank you, Mia!\" Ben said happily.\n\n\"That is what friends are for,\" Mia said with a smile.\n\nBen flew his kite for the rest of the morning. This time, he wrapped the string around his wrist so it could not slip away again.";
+
+const butterfliesPassage =
+  "Read the passage and answer the questions.\n\n**All About Butterflies**\n\nButterflies are insects that can be found all over the world. They live on every continent except Antarctica. Butterflies come in many colors, including orange, blue, yellow, and white.\n\n**Life Cycle**\n\nA butterfly goes through four stages in its life. First, a mother butterfly lays tiny eggs on a leaf. Next, a caterpillar hatches from each egg. The caterpillar eats leaves and grows bigger. Then the caterpillar makes a hard shell called a chrysalis around its body. Inside the chrysalis, the caterpillar changes. Finally, a butterfly comes out of the chrysalis and flies away.\n\n**Body Parts**\n\nA butterfly has three main body parts: a head, a thorax, and an abdomen. It has six legs and four wings. Butterfly wings are covered with tiny scales that give them their colors. Butterflies also have two antennae that help them smell flowers.\n\n**What Butterflies Eat**\n\nButterflies drink a sweet liquid called nectar from flowers. They use a long, thin tube called a proboscis to sip nectar. The proboscis works like a drinking straw. When a butterfly is not eating, it curls the proboscis up like a spring.\n\n**Butterflies and Gardens**\n\nButterflies help gardens grow. When a butterfly lands on a flower to drink nectar, pollen sticks to its body. Then the butterfly carries the pollen to other flowers. This is called pollination, and it helps plants make seeds and fruit.";
+
+const kiteSearchPresentation =
+  "Read the presentation transcript.\n\nToday I am going to tell you how students can search carefully for a lost kite on a windy day.\n\nFirst, the students should think about the direction the wind was blowing. A kite usually moves with the wind, so looking beyond the place where it slipped away is a smart first step.\n\nNext, students should check high and low places. A kite can catch in a tree branch, on a fence, or in a bush. In the story, Ben and Mia walked through different parts of the park and looked carefully before they found the red kite near the fence.\n\nStudents should also work together. One person can look up while another looks near the ground. Friends can notice more clues when they share ideas.\n\nFinally, students should be careful when they find the kite. Pulling too hard could rip it. Ben reached carefully and freed the kite without breaking it.\n\nA careful search plan can help students solve a problem and keep the kite safe.";
+
+const butterflyGardenPresentation =
+  "Read the presentation transcript.\n\nToday I am giving a presentation about making a garden that helps butterflies.\n\nButterflies need flowers because they drink nectar. A garden with colorful flowers such as sunflowers and marigolds can give butterflies food.\n\nButterflies also need safe places for their young. A mother butterfly lays tiny eggs on leaves. When caterpillars hatch, they eat leaves and grow before changing inside a chrysalis.\n\nA butterfly garden helps plants too. When butterflies land on flowers, pollen can stick to their bodies. Then they carry the pollen to other flowers. This process is called pollination, and it helps plants make seeds and fruit.\n\nPeople can help by planting flowers and protecting garden spaces. A small garden can become a useful place for butterflies and plants.";
+
+const kiteElaPtDirections =
+  "You have read 'The Lost Kite' and 'All About Butterflies.' Now you will write an essay explaining how the two sources show what people can notice and learn outdoors.\n\nIn your essay:\n- explain what people can notice or learn outdoors\n- use details from 'The Lost Kite'\n- use details from 'All About Butterflies'\n- organize your ideas clearly\n- use complete sentences with correct spelling and punctuation";
+
+function rebaselinePracticeTest4Question(question: Question): Question {
+  const elaCat = rebaselinePracticeTest4ElaCat(question);
+  if (elaCat) {
+    return elaCat;
+  }
+
+  const mathPt = rebaselinePracticeTest4MathPt(question);
+  if (mathPt) {
+    return mathPt;
+  }
+
+  if (question.id === 3009) {
+    return {
+      ...question,
+      correctAnswer: "5/8",
+      acceptedAnswers: ["5/8"],
+      rubric: "The student enters the fraction represented by the fifth mark.",
+      explanation:
+        "The number line goes from 0 to 1 with 8 equal parts. The fifth mark after 0 represents 5/8.",
+    };
+  }
+
+  if (question.testType === "pt" && question.subject === "ela") {
+    return {
+      ...question,
+      studentDirections: kiteElaPtDirections,
+    };
+  }
+
+  return question;
+}
+
+function rebaselinePracticeTest4MathPt(question: Question): Question | undefined {
+  if (question.id === 3040) {
+    return {
+      ...question,
+      studentDirections: kiteFestivalMathPtDirections,
+      dataTable: kiteFestivalMathPtTable,
+      questionText: "Use the table to decide which statements are true. Select all that apply.",
+      options: [
+        { label: "A", text: "The small kites need 18 ribbon tails in all." },
+        { label: "B", text: "The large kites need 20 ribbon tails in all." },
+        { label: "C", text: "The class is making 12 kites in all." },
+        { label: "D", text: "The class sold 65 tickets in all." },
+        { label: "E", text: "The class has enough ribbon tails for all the kites." },
+      ],
+      correctAnswer: ["A", "B", "D", "E"],
+      rubric: "The student selects all true statements based on the table.",
+      explanation:
+        "Small kites need 6 x 3 = 18 tails. Large kites need 4 x 5 = 20 tails. The class sold 38 + 27 = 65 tickets. The kites need 38 tails total, and 96 are available.",
+    };
+  }
+
+  if (question.id === 3041) {
+    return {
+      ...question,
+      studentDirections: kiteFestivalMathPtDirections,
+      dataTable: kiteFestivalMathPtTable,
+      questionText: "How many ribbon tails are needed for all of the small and large kites?",
+      correctAnswer: "38",
+      rubric: "The student enters the total number of ribbon tails needed.",
+      explanation:
+        "The small kites need 6 x 3 = 18 tails, and the large kites need 4 x 5 = 20 tails. The total is 18 + 20 = 38 tails.",
+    };
+  }
+
+  if (question.id === 3042) {
+    return {
+      ...question,
+      studentDirections: kiteFestivalMathPtDirections,
+      dataTable: kiteFestivalMathPtTable,
+      questionText:
+        "The class wants to earn at least $120 from ticket sales. Did the class earn enough money? Use words and numbers to explain your answer.",
+      correctAnswer:
+        "Yes. The class sold 38 + 27 = 65 tickets. Each ticket costs $2, so the class earned 65 x 2 = $130. Since $130 is more than $120, the class earned enough money.",
+      rubric:
+        "2 points: The response correctly finds the total money earned and compares it to $120. 1 point: The response gives a correct yes/no answer with incomplete work. 0 points: All other responses.",
+      explanation:
+        "The class sold 65 tickets. At $2 each, the tickets earned $130, which is more than $120.",
+    };
+  }
+
+  if (question.id === 3043) {
+    return {
+      ...question,
+      studentDirections: kiteFestivalMathPtDirections,
+      dataTable: kiteFestivalMathPtTable,
+      questionText:
+        "Another class wants to sell more tickets than the third-grade class. Complete the table to show a possible number of tickets sold during the morning, midday, and afternoon.",
+      tableColumns: ["Morning", "Midday", "Afternoon"],
+      tableRowLabel: "Tickets Sold",
+      tableMinSumExclusive: 65,
+      correctAnswer: ["25", "22", "20"],
+      rubric:
+        "1 point: The student enters three numbers with a total greater than 65. 0 points: All other responses.",
+      explanation:
+        "Any three numbers with a total greater than 65 would show more tickets than the third-grade class sold.",
+    };
+  }
+
+  if (question.id === 3044) {
+    return {
+      ...question,
+      studentDirections: kiteFestivalMathPtDirections,
+      dataTable: kiteFestivalMathPtTable,
+      questionText:
+        "Use your answer from the table to explain how the other class could sell more tickets than the third-grade class.",
+      correctAnswer:
+        "The third-grade class sold 65 tickets. If the other class sold tickets in the morning, midday, and afternoon for a total greater than 65, then the other class sold more tickets.",
+      rubric:
+        "2 points: The response uses the table total and explains that it is greater than 65. 1 point: The response gives a partial comparison. 0 points: All other responses.",
+      explanation:
+        "A complete explanation compares the other class's ticket total with 65, the number of tickets sold by the third-grade class.",
+    };
+  }
+
+  return undefined;
+}
+
+function rebaselinePracticeTest4ElaCat(question: Question): Question | undefined {
+  const storyQuestions: Record<number, Partial<Question>> = {
+    3101: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "Why is Ben upset after the big gust of wind?",
+      options: [
+        { label: "A", text: "His kite flies away over the trees." },
+        { label: "B", text: "His mom tells him to stop flying the kite." },
+        { label: "C", text: "He cannot find a place to sit in the park." },
+        { label: "D", text: "Mia brings her dog to the park." },
+      ],
+      correctAnswer: "A",
+      explanation: "Ben is upset because the wind pulls the kite string from his hand and the kite flies away.",
+    },
+    3102: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "Which sentence best states a lesson of the story?",
+      options: [
+        { label: "A", text: "It is better to stay inside on windy days." },
+        { label: "B", text: "Friends can help solve a problem." },
+        { label: "C", text: "Kites should never be flown at a park." },
+        { label: "D", text: "Birthday gifts are always easy to replace." },
+      ],
+      correctAnswer: "B",
+      explanation: "Mia helps Ben search for the kite, which shows that friends can help solve problems.",
+    },
+    3103: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "How do Ben's feelings change from the middle to the end of the story?",
+      options: [
+        { label: "A", text: "He changes from bored to angry." },
+        { label: "B", text: "He changes from sad to happy." },
+        { label: "C", text: "He changes from excited to sleepy." },
+        { label: "D", text: "He changes from proud to confused." },
+      ],
+      correctAnswer: "B",
+      explanation: "Ben feels sad when the kite is gone, but he is happy after Mia helps him find it.",
+    },
+    3104: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "What does the word tangled mean as it is used in the story?",
+      options: [
+        { label: "A", text: "tied or twisted together" },
+        { label: "B", text: "painted with bright colors" },
+        { label: "C", text: "held carefully in one hand" },
+        { label: "D", text: "moving quickly through the air" },
+      ],
+      correctAnswer: "A",
+      explanation: "The kite tail is caught in branches, so tangled means tied or twisted together.",
+    },
+    3105: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "Which event happens first in the story?",
+      options: [
+        { label: "A", text: "Mia points to the kite near the fence." },
+        { label: "B", text: "Ben wraps the string around his wrist." },
+        { label: "C", text: "Ben runs across the grass with his kite." },
+        { label: "D", text: "The dog barks near the edge of the park." },
+      ],
+      correctAnswer: "C",
+      explanation: "Ben runs with the kite before it flies away and before Mia helps him search.",
+    },
+    3106: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "From whose point of view is the story mostly told?",
+      options: [
+        { label: "A", text: "Ben's" },
+        { label: "B", text: "Mia's" },
+        { label: "C", text: "Mom's" },
+        { label: "D", text: "the dog's" },
+      ],
+      correctAnswer: "A",
+      explanation: "The story mostly follows what Ben does and feels.",
+    },
+    3107: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "Which detail best shows that Ben learns from what happened?",
+      options: [
+        { label: "A", text: "He brings his favorite red kite to the park." },
+        { label: "B", text: "He sits on a bench after the kite flies away." },
+        { label: "C", text: "He thanks Mia for helping him." },
+        { label: "D", text: "He wraps the string around his wrist before flying again." },
+      ],
+      correctAnswer: "D",
+      explanation: "Ben changes what he does so the kite string will not slip away again.",
+    },
+    3108: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "Why does Mia suggest looking for the kite?",
+      options: [
+        { label: "A", text: "She wants to fly the kite by herself." },
+        { label: "B", text: "She wants to help Ben solve his problem." },
+        { label: "C", text: "She knows the kite is broken." },
+        { label: "D", text: "She wants Ben to go home." },
+      ],
+      correctAnswer: "B",
+      explanation: "Mia sees that Ben is upset and offers to help him find the kite.",
+    },
+    3109: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "Which detail helps the reader understand why the kite matters to Ben?",
+      options: [
+        { label: "A", text: "The kite has a yellow tail." },
+        { label: "B", text: "The kite was a birthday gift from his grandma." },
+        { label: "C", text: "The kite flies above the trees." },
+        { label: "D", text: "The kite string is a little tangled." },
+      ],
+      correctAnswer: "B",
+      explanation: "The birthday gift detail explains why Ben feels especially sad when the kite is lost.",
+    },
+  };
+
+  const articleQuestions: Record<number, Partial<Question>> = {
+    3110: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "What is the main idea of the section called 'Life Cycle'?",
+      options: [
+        { label: "A", text: "Butterflies live in many places around the world." },
+        { label: "B", text: "Butterflies go through four stages as they grow." },
+        { label: "C", text: "Butterflies have scales on their wings." },
+        { label: "D", text: "Butterflies drink nectar from flowers." },
+      ],
+      correctAnswer: "B",
+      explanation: "The section explains the four stages in a butterfly's life.",
+    },
+    3111: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "According to the passage, what is a proboscis used for?",
+      options: [
+        { label: "A", text: "smelling flowers" },
+        { label: "B", text: "sipping nectar" },
+        { label: "C", text: "protecting eggs" },
+        { label: "D", text: "making wing colors" },
+      ],
+      correctAnswer: "B",
+      explanation: "The passage says butterflies use a proboscis like a straw to sip nectar.",
+    },
+    3112: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "What happens inside a chrysalis?",
+      options: [
+        { label: "A", text: "A butterfly drinks nectar." },
+        { label: "B", text: "A caterpillar changes into a butterfly." },
+        { label: "C", text: "A butterfly carries pollen to flowers." },
+        { label: "D", text: "A mother butterfly lays eggs." },
+      ],
+      correctAnswer: "B",
+      explanation: "Inside the chrysalis, the caterpillar changes before a butterfly comes out.",
+    },
+    3113: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "Why does the author use headings in the passage?",
+      options: [
+        { label: "A", text: "to organize information into topics" },
+        { label: "B", text: "to show that the passage is a story" },
+        { label: "C", text: "to list questions for readers to answer" },
+        { label: "D", text: "to describe only one kind of butterfly" },
+      ],
+      correctAnswer: "A",
+      explanation: "The headings separate the passage into clear topics such as life cycle and body parts.",
+    },
+    3114: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "What does the word pollination mean in the passage?",
+      options: [
+        { label: "A", text: "the way butterflies curl their proboscis" },
+        { label: "B", text: "the process of carrying pollen between flowers" },
+        { label: "C", text: "the stage when a caterpillar eats leaves" },
+        { label: "D", text: "the colors made by scales on wings" },
+      ],
+      correctAnswer: "B",
+      explanation: "The passage says butterflies carry pollen to other flowers, and this is called pollination.",
+    },
+    3115: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "Which detail best supports the idea that butterflies help gardens?",
+      options: [
+        { label: "A", text: "Butterflies live on every continent except Antarctica." },
+        { label: "B", text: "Butterfly wings are covered with tiny scales." },
+        { label: "C", text: "Butterflies carry pollen to flowers, helping plants make seeds and fruit." },
+        { label: "D", text: "A butterfly has a head, a thorax, and an abdomen." },
+      ],
+      correctAnswer: "C",
+      explanation: "Carrying pollen helps plants make seeds and fruit, so it supports the idea that butterflies help gardens.",
+    },
+    3116: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "Which sentence gives the best summary of the passage?",
+      options: [
+        { label: "A", text: "Butterflies are insects with interesting body parts, life stages, and helpful roles in gardens." },
+        { label: "B", text: "Butterflies are hard to see because they are very small." },
+        { label: "C", text: "Butterflies only live in gardens with sunflowers." },
+        { label: "D", text: "Butterflies are the only insects that drink nectar." },
+      ],
+      correctAnswer: "A",
+      explanation: "This summary includes the main topics from the whole passage.",
+    },
+    3117: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "Which list shows the life cycle in the correct order?",
+      options: [
+        { label: "A", text: "egg, caterpillar, chrysalis, butterfly" },
+        { label: "B", text: "caterpillar, egg, butterfly, chrysalis" },
+        { label: "C", text: "butterfly, chrysalis, egg, caterpillar" },
+        { label: "D", text: "chrysalis, butterfly, caterpillar, egg" },
+      ],
+      correctAnswer: "A",
+      explanation: "The passage gives the order as egg, caterpillar, chrysalis, and butterfly.",
+    },
+    3118: {
+      passage: butterfliesPassage,
+      passageTitle: "All About Butterflies",
+      questionText: "What can readers infer from the section 'What Butterflies Eat'?",
+      options: [
+        { label: "A", text: "Butterflies need flowers for food." },
+        { label: "B", text: "Butterflies eat only leaves." },
+        { label: "C", text: "Butterflies cannot smell flowers." },
+        { label: "D", text: "Butterflies use their legs to drink." },
+      ],
+      correctAnswer: "A",
+      explanation: "The section explains that butterflies drink nectar from flowers.",
+    },
+    3119: {
+      passage: lostKitePassage,
+      passageTitle: "The Lost Kite",
+      questionText: "Which idea is supported by both 'The Lost Kite' and 'All About Butterflies'?",
+      options: [
+        { label: "A", text: "Careful watching outdoors can help people learn or solve problems." },
+        { label: "B", text: "All outdoor activities require a windy day." },
+        { label: "C", text: "Animals always find lost objects for people." },
+        { label: "D", text: "Gardens are the best places to fly kites." },
+      ],
+      correctAnswer: "A",
+      explanation: "Ben and Mia search carefully outdoors, and the article explains outdoor observations about butterflies.",
+    },
+  };
+
+  const presentationQuestions: Record<number, Partial<Question>> = {
+    3122: {
+      type: "multiple-choice",
+      passage: kiteSearchPresentation,
+      passageTitle: "Finding a Kite in the Wind",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "What is the main idea of the presentation?",
+      options: [
+        { label: "A", text: "A careful search plan can help students find a lost kite." },
+        { label: "B", text: "Students should buy a new kite when one is lost." },
+        { label: "C", text: "Kites should only be flown near fences." },
+        { label: "D", text: "Wind always makes outdoor games unsafe." },
+      ],
+      correctAnswer: "A",
+      explanation: "The presentation explains steps students can use to search carefully for a lost kite.",
+    },
+    3123: {
+      passage: kiteSearchPresentation,
+      passageTitle: "Finding a Kite in the Wind",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Which question can a listener answer after reading the presentation?",
+      options: [
+        { label: "A", text: "What color was Mia's kite?" },
+        { label: "B", text: "Why should students think about the wind direction?" },
+        { label: "C", text: "How many kites did Ben own?" },
+        { label: "D", text: "Where did Ben buy his kite?" },
+      ],
+      correctAnswer: "B",
+      explanation: "The presentation explains that a kite usually moves with the wind.",
+    },
+    3124: {
+      passage: kiteSearchPresentation,
+      passageTitle: "Finding a Kite in the Wind",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Complete the chart to show when each action should happen during a kite search.",
+      gridRows: ["Think about wind direction", "Pull the kite gently", "Share ideas with friends"],
+      gridColumns: ["Before finding the kite", "After finding the kite"],
+      correctAnswer: ["0:0", "1:1", "2:0"],
+      explanation: "Students think about wind and work together while searching, then pull carefully after finding the kite.",
+    },
+    3125: {
+      passage: butterflyGardenPresentation,
+      passageTitle: "Making a Butterfly Garden",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Which idea is explained in the presentation?",
+      options: [
+        { label: "A", text: "Butterflies help plants when they carry pollen." },
+        { label: "B", text: "Butterflies should be kept away from flowers." },
+        { label: "C", text: "Butterflies only live in large forests." },
+        { label: "D", text: "Butterfly gardens cannot have marigolds." },
+      ],
+      correctAnswer: "A",
+      explanation: "The presentation explains how butterflies carry pollen and help plants make seeds and fruit.",
+    },
+    3126: {
+      passage: butterflyGardenPresentation,
+      passageTitle: "Making a Butterfly Garden",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "Complete the chart to show what each garden feature helps butterflies do.",
+      gridRows: ["Colorful flowers", "Leaves for eggs", "Protected garden spaces"],
+      gridColumns: ["Find food", "Raise young", "Stay safe"],
+      correctAnswer: ["0:0", "1:1", "2:2"],
+      explanation: "Flowers provide nectar, leaves hold eggs and feed caterpillars, and protected spaces help butterflies live safely.",
+    },
+    3127: {
+      passage: butterflyGardenPresentation,
+      passageTitle: "Making a Butterfly Garden",
+      studentDirections: "Read the presentation transcript. Then answer the questions.",
+      questionText: "What is the most likely reason the speaker made this presentation?",
+      options: [
+        { label: "A", text: "to explain how people can make gardens useful for butterflies" },
+        { label: "B", text: "to tell a funny story about finding a kite" },
+        { label: "C", text: "to prove that butterflies do not need plants" },
+        { label: "D", text: "to describe every insect that lives in a garden" },
+      ],
+      correctAnswer: "A",
+      explanation: "The speaker gives information about making gardens that help butterflies.",
+    },
+  };
+
+  const replacement = storyQuestions[question.id] ?? articleQuestions[question.id] ?? presentationQuestions[question.id];
+  if (!replacement) {
+    return undefined;
+  }
+
+  return {
+    ...question,
+    type: replacement.options && !replacement.type ? "multiple-choice" : question.type,
+    audio: undefined,
+    ...replacement,
+  };
+}
+
+export const practiceTest4Questions: Question[] = ([
   {
     "id": 3001,
     "testType": "cat",
@@ -2645,4 +3143,4 @@ export const practiceTest4Questions: Question[] = [
     "explanation": "A strong essay explains how the story and article both help readers observe and learn about the outdoors in different ways.",
     "studentDirections": "You have read 'The Lost Kite' and 'All About Butterflies.' Now you will write a paragraph about something special you saw outside. Use details from BOTH passages to help you.\n\nIn your paragraph:\n- Tell about a time you saw something interesting outside (real or made up)\n- Use at least one detail or idea from 'The Lost Kite'\n- Use at least one detail or idea from 'All About Butterflies'\n- Use complete sentences with correct spelling and punctuation"
   }
-];
+] as Question[]).map(rebaselinePracticeTest4Question);
