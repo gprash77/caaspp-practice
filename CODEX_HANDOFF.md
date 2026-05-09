@@ -1,5 +1,139 @@
 # CODEX HANDOFF
 
+## May 8, 2026 End-of-Day Handoff
+
+### Current State
+
+- Repo: `/Users/gprash77/projects/caaspp-practice`
+- Branch: `main`
+- Latest pushed commit: `4e34734` `Make hard Math CAT tests unique`
+- Previous hard-batch commit: `3cc6651` `Rebaseline hard Tests 8 through 10`
+- Tests `4`, `5`, `8`, `9`, and `10` have been rebaselined and pushed.
+- Worktree state at handoff start: clean and aligned with `origin/main`.
+- Vercel should deploy from pushed `main`; production redeploy was not manually rechecked after the final handoff-doc update unless noted in a later section.
+
+### Completed Today
+
+- Completed and pushed the Tests `4` and `5` batch:
+  - Test `4` now uses the kite / butterfly source family:
+    - `The Lost Kite`
+    - `All About Butterflies`
+    - transcript-style presentation clusters about kite searching and butterfly gardens
+  - Test `5` now uses the lemonade / animal-homes source family:
+    - `The Lemonade Stand`
+    - `Amazing Animal Homes`
+    - transcript-style presentation clusters about lemonade planning and animal homes
+  - Added coherent shared Math PT tables for:
+    - Test `4` school kite festival
+    - Test `5` lemonade stand
+  - Fixed Test `5` ELA PT fairness by changing the writing task from unsupported teamwork/cooperation language to the better-supported idea of planning/building to meet a need.
+  - Updated the data-integrity guard so Tests `4` and `5` presentation clusters validate transcript sufficiency instead of requiring audio metadata.
+
+- Completed and pushed the hard-batch Tests `8`, `9`, and `10`:
+  - Added shared helper:
+    - `lib/hard-practice-test-rebaseline.ts`
+  - Replaced repeated Test-1-style ELA CAT source families with unique hard companion content:
+    - Test `8`: `The Case of the Missing Fossil`, `Life in the Desert`, museum/desert transcript clusters
+    - Test `9`: `The Weather Station Problem`, `How Water Changes Land`, weather/erosion transcript clusters
+    - Test `10`: `The Trail Crew`, `The Long Journey of the Monarch Butterfly`, trail/monarch transcript clusters
+  - Replaced repeated `Go Green` Math PT setup with unique harder shared-table Math PTs:
+    - Test `8`: field-study notebooks, pencils, and water bottles
+    - Test `9`: garden-weather observations and seed trays
+    - Test `10`: nature-walk trail markers, maps, and signs
+  - Fixed the Math CAT number-line key in Tests `8-10` from `5` to `5/8`.
+  - After user noticed Test `4` and Test `8` were exactly the same in Math CAT, replaced the hard-batch Math CAT overlays for Tests `8`, `9`, and `10`.
+  - Confirmed Test `4` vs Tests `8`, `9`, and `10` now has `0` exact duplicate Math CAT prompts.
+  - Audited hard-batch math fields carefully, especially:
+    - `correctAnswer`
+    - `acceptedAnswers`
+    - `dataTable`
+    - `tableColumns`
+    - `tableRowLabel`
+    - `tableMinSumExclusive`
+    - text-input answer values
+    - table-input scoring constraints
+  - Fixed time-answer formatting across noon in the hard Math CAT (`a.m.` to `p.m.` transitions).
+
+### Validation Completed Today
+
+- CAASPP eval / content gate for Tests `4`, `5`, `8`, `9`, and `10`:
+  - compared runtime section counts against corrected Test `1` baseline expectations
+  - reviewed Math PT shared table sufficiency and answerability
+  - reviewed ELA CAT source-family uniqueness and transcript fairness
+  - reviewed ELA PT source visibility and prompt support
+  - confirmed Tests `8-10` are harder companion tests, not exact copies of Test `1` or the easier batches
+- `npm test -- --run tests/question-data.test.ts` passed during the Test `4` / `5` batch: `1646` tests.
+- `npm test -- --run tests/scoring.test.ts` passed during the Test `4` / `5` batch: `49` tests.
+- `npm test -- --run tests/question-data.test.ts tests/scoring.test.ts` passed after hard-batch updates: `1695` tests.
+- Hard Math CAT auto-score audit passed:
+  - Test `8`: `0` bad auto-scored answers
+  - Test `9`: `0` bad auto-scored answers
+  - Test `10`: `0` bad auto-scored answers
+- Hard Math PT field audit passed:
+  - text-input answers score correctly
+  - table-input sample answers score correctly
+  - table metadata matches prompt expectations
+- `npm run build` passed after both major batches:
+  - full Vitest suite passed: `1700` tests
+  - Next production build passed
+- `npm run test:e2e` passed after both major batches:
+  - `40/40` tests passed
+- Targeted local browser verification passed for:
+  - Test `4` Math PT shared kite-festival table
+  - Test `5` Math PT shared lemonade table
+  - Test `4` ELA CAT source family and transcript clusters
+  - Test `5` ELA CAT source family and transcript clusters
+  - Test `4` / `5` ELA PT prompts and source visibility
+  - Tests `8`, `9`, and `10` Math PT shared tables
+  - Tests `8`, `9`, and `10` ELA CAT first/second sources
+  - Tests `8`, `9`, and `10` ELA CAT transcript clusters
+
+### Important Product Intent
+
+- Test `1` remains the corrected official baseline reference.
+- Tests `2-10` should be CAASPP-similar companion tests, not exact official CAASPP copies.
+- Difficulty should now vary more meaningfully:
+  - Tests `2-5`: easier companion tests
+  - Tests `8-10`: harder companion tests with more multi-step reasoning and less duplicated content
+- Keep being honest about exactness:
+  - Test `1` is the official-alignment target.
+  - Tests `2-10` are similarity, fairness, structure, and practice-quality targets.
+
+### Known Caveats
+
+- Tests `6` and `7` were not rebaselined today and likely still need their own medium-batch audit.
+- Tests `8-10` now have unique Math CAT, Math PT, and ELA CAT runtime content, but they are still local companion tests rather than exact official CAASPP forms.
+- Tests `4`, `5`, `8`, `9`, and `10` presentation clusters are transcript-based and do not use generated audio.
+- The current integrity tests validate counts, metadata, answer references, auto-scored answers, transcript sufficiency, and passage/source presence; they do not prove full CAASPP pixel parity.
+- A new remote branch seen earlier, `origin/claude/fix-cassp-add-tests-Gs1nV`, looked unsafe to merge as-is because it deleted many current project files/audio and collapsed test-bank structure.
+
+### Recommended Next Work
+
+1. Start the medium batch: Tests `6` and `7`.
+2. Use the same workflow:
+   - audit runtime bank against corrected Test `1`
+   - compare against nearby batches to avoid duplicated Math CAT / ELA CAT / Math PT content
+   - improve Math PT shared stimulus and table sufficiency
+   - review all math text-input and table-input fields for correctness
+   - review ELA CAT source-family uniqueness and transcript fairness
+   - run data/scoring/build/e2e/browser checks
+   - commit and push `main`
+   - let Vercel deploy from GitHub
+3. After Tests `6` and `7`, do a cross-test duplication audit across Tests `2-10`, especially:
+   - exact `questionText` duplicates
+   - repeated Math CAT scaffolds
+   - repeated ELA CAT source families
+   - repeated Math PT shared-stimulus contexts
+4. Consider adding a durable automated duplicate-report script/test so future batches cannot accidentally repeat the Test `4` / Test `8` Math CAT issue.
+
+### Git Notes
+
+- `main` was pushed today with:
+  - `a431d38` `Rebaseline Tests 4 and 5`
+  - `3cc6651` `Rebaseline hard Tests 8 through 10`
+  - `4e34734` `Make hard Math CAT tests unique`
+- At the time this handoff was written, only `CODEX_HANDOFF.md` was being intentionally updated for this docs-only handoff commit.
+
 ## May 2, 2026 End-of-Day Handoff
 
 ### Current State
