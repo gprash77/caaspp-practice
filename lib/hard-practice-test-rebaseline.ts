@@ -639,19 +639,524 @@ function rebaselineMathPt(question: Question, config: HardTestConfig): Question 
   return undefined;
 }
 
-export function rebaselineHardPracticeQuestion(question: Question): Question {
-  const config = configs[question.practiceTest as 8 | 9 | 10];
-  if (!config) return question;
+function textAnswer(question: Question, questionText: string, correctAnswer: string, explanation: string): Question {
+  return {
+    ...question,
+    questionText,
+    correctAnswer,
+    acceptedAnswers: [correctAnswer],
+    explanation,
+  };
+}
 
-  if (question.id === config.base + 9) {
+function formatClockTime(totalMinutes: number): string {
+  const minutesInDay = ((totalMinutes % 1440) + 1440) % 1440;
+  const hour24 = Math.floor(minutesInDay / 60);
+  const minute = minutesInDay % 60;
+  const period = hour24 < 12 ? "a.m." : "p.m.";
+  const hour12 = hour24 % 12 === 0 ? 12 : hour24 % 12;
+  return `${hour12}:${String(minute).padStart(2, "0")} ${period}`;
+}
+
+function rebaselineMathCat(question: Question, config: HardTestConfig): Question | undefined {
+  const item = question.id - config.base;
+  const v = config.test - 7;
+
+  if (item === 1) {
+    const total = 118 + v * 9;
+    const used = 37 + v * 6;
+    const answer = String(total - used);
+    return textAnswer(
+      question,
+      `A robotics club has ${total} small parts. Students use ${used} parts to build practice models. How many small parts are left?`,
+      answer,
+      `${total} - ${used} = ${answer}.`
+    );
+  }
+
+  if (item === 2) {
+    const a = 428 + v * 37;
+    const b = 276 + v * 28;
+    const answer = String(a + b);
+    return textAnswer(question, `What is ${a} + ${b}?`, answer, `${a} + ${b} = ${answer}.`);
+  }
+
+  if (item === 3) {
+    const groups = 5 + v;
+    const each = 6 + v;
+    const answer = String(groups * each);
+    return textAnswer(
+      question,
+      `A library puts new books on ${groups} shelves. Each shelf has ${each} books. How many new books are on the shelves in all?`,
+      answer,
+      `${groups} x ${each} = ${answer}.`
+    );
+  }
+
+  if (item === 4) {
+    const rows = 4 + v;
+    const each = 7 + v;
+    const total = rows * each;
     return {
       ...question,
+      questionText: `A gardener plants ${total} seedlings equally in ${rows} rows. Which expression can be used to find the number of seedlings in each row, and why?`,
+      options: [
+        { label: "A", text: `${rows} x ${total}, because the number of rows is multiplied by the total` },
+        { label: "B", text: `${total} + ${rows}, because the total and rows are added` },
+        { label: "C", text: `${total} - ${rows}, because the rows are subtracted from the total` },
+        { label: "D", text: `${total} ÷ ${rows}, because the total is divided equally among the rows` },
+      ],
+      correctAnswer: "D",
+      explanation: `${total} ÷ ${rows} = ${each}, so division finds the number in each equal row.`,
+    };
+  }
+
+  if (item === 5) {
+    const rows = 4 + v;
+    const each = 3 + v;
+    return textAnswer(
+      question,
+      `A display has ${rows} rows of photo cards. Each row has ${each} cards. How many photo cards are in the display?`,
+      String(rows * each),
+      `${rows} x ${each} = ${rows * each}.`
+    );
+  }
+
+  if (item === 6) {
+    const startHour = 8 + v;
+    const addHours = 2 + v;
+    const startMinutes = startHour * 60 + 20;
+    const endMinutes = startMinutes + addHours * 60 + 40;
+    return {
+      ...question,
+      questionText: `A workshop starts at ${formatClockTime(startMinutes)} It ends ${addHours} hours and 40 minutes later. What time does the workshop end?`,
+      options: [
+        { label: "A", text: formatClockTime(endMinutes - 20) },
+        { label: "B", text: formatClockTime(endMinutes) },
+        { label: "C", text: formatClockTime(endMinutes + 20) },
+        { label: "D", text: formatClockTime(endMinutes + 40) },
+      ],
+      correctAnswer: "B",
+      explanation: `${addHours} hours after ${formatClockTime(startMinutes)} is ${formatClockTime(startMinutes + addHours * 60)}; 40 more minutes makes ${formatClockTime(endMinutes)}.`,
+    };
+  }
+
+  if (item === 7) {
+    const a = 486 + v * 31;
+    const b = 329 + v * 27;
+    const c = 407 + v * 22;
+    return {
+      ...question,
+      questionText: `Three classes collected trail maps. Class A collected ${a}, Class B collected ${b}, and Class C collected ${c}. Which statement is true?`,
+      options: [
+        { label: "A", text: `Class A collected ${a - b} more maps than Class B.` },
+        { label: "B", text: `Class B collected more maps than Class C.` },
+        { label: "C", text: `Class C collected ${c - b + 10} more maps than Class B.` },
+        { label: "D", text: `Class A collected fewer maps than Class C.` },
+      ],
+      correctAnswer: "A",
+      explanation: `${a} - ${b} = ${a - b}, so Class A collected ${a - b} more than Class B.`,
+    };
+  }
+
+  if (item === 8) {
+    const length = 18 + v * 4;
+    const width = 7 + v * 3;
+    const perimeter = 2 * (length + width);
+    return textAnswer(
+      question,
+      `A rectangular garden bed is ${length} feet long and ${width} feet wide. What is the perimeter of the garden bed in feet?`,
+      String(perimeter),
+      `The perimeter is ${length} + ${width} + ${length} + ${width} = ${perimeter} feet.`
+    );
+  }
+
+  if (item === 9) {
+    return {
+      ...question,
+      questionText:
+        "A number line from 0 to 1 is divided into 8 equal parts. Point A is at the fifth mark after 0. What number does Point A represent?",
       correctAnswer: "5/8",
       acceptedAnswers: ["5/8"],
       rubric: "The student enters the fraction represented by the fifth mark.",
       explanation:
         "The number line goes from 0 to 1 with 8 equal parts. The fifth mark after 0 represents 5/8.",
     };
+  }
+
+  if (item === 10) {
+    return {
+      ...question,
+      questionText: "A student is comparing fractions. Which statement is true?",
+      options: [
+        { label: "A", text: "1/6 is greater than 1/3 because 6 is greater than 3." },
+        { label: "B", text: "3/4 is less than 2/4 because 3 is greater than 2." },
+        { label: "C", text: "4/6 is equivalent to 2/3 because both fractions name the same amount." },
+        { label: "D", text: "1/2 is less than 1/4 because 2 is less than 4." },
+      ],
+      correctAnswer: "C",
+      explanation: "Multiplying 2/3 by 2/2 gives 4/6, so 4/6 and 2/3 are equivalent.",
+    };
+  }
+
+  if (item === 11) {
+    const factor = 7 + v;
+    const missing = 6 + v;
+    return textAnswer(
+      question,
+      `What number makes this equation true?\n\n${factor} x ? = ${factor * missing}`,
+      String(missing),
+      `${factor} x ${missing} = ${factor * missing}.`
+    );
+  }
+
+  if (item === 12) {
+    const a = 6 + v;
+    const b = 7 + v;
+    return {
+      ...question,
+      questionText: `Which equation is related to ${a} x ${b} = ${a * b}?`,
+      options: [
+        { label: "A", text: `${a * b} + ${a} = ${b}` },
+        { label: "B", text: `${a * b} - ${b} = ${a}` },
+        { label: "C", text: `${a * b} ÷ ${a} = ${b}` },
+        { label: "D", text: `${a} ÷ ${b} = ${a * b}` },
+      ],
+      correctAnswer: "C",
+      explanation: `Division can undo multiplication: ${a * b} ÷ ${a} = ${b}.`,
+    };
+  }
+
+  if (item === 13) {
+    const start = 4 + v;
+    const step = 6 + v;
+    const first = start + step * 3;
+    const second = start + step * 4;
+    return textAnswer(
+      question,
+      `Look at the pattern: ${start}, ${start + step}, ${start + step * 2}, ?, ?\n\nWhat are the next two numbers in the pattern? Enter both numbers separated by a comma.`,
+      `${first}, ${second}`,
+      `The pattern adds ${step} each time, so the next two numbers are ${first} and ${second}.`
+    );
+  }
+
+  if (item === 14) {
+    const a = 6 + v;
+    const b = 4 + v;
+    return {
+      ...question,
+      questionText: "Select all of the equations that are true.",
+      options: [
+        { label: "A", text: `${a} x ${b} = ${a + b}` },
+        { label: "B", text: `${a} x ${b} = ${b} x ${a}` },
+        { label: "C", text: `${a * b} ÷ ${a} = ${b}` },
+        { label: "D", text: `${a * b} + ${a} = ${b}` },
+      ],
+      correctAnswer: ["B", "C"],
+      explanation: "The commutative property makes B true, and multiplication/division facts make C true.",
+    };
+  }
+
+  if (item === 15) {
+    const first = (5 + v) * (6 + v);
+    const second = (7 + v) * (5 + v);
+    return textAnswer(
+      question,
+      `Enter the unknown numbers that make each equation true.\n\n${5 + v} x ${6 + v} = ?\n${7 + v} x ${5 + v} = ?\n\nEnter the first unknown number and the second unknown number separated by a comma.`,
+      `${first},${second}`,
+      `The products are ${first} and ${second}.`
+    );
+  }
+
+  if (item === 16) {
+    const minutes = 25 + v * 10;
+    return {
+      ...question,
+      questionText: `Four number lines start at 0 minutes. Which number line places a point at ${minutes} minutes?`,
+      options: [
+        { label: "A", text: `A point halfway between ${minutes - 10} and ${minutes}` },
+        { label: "B", text: `A point at ${minutes}` },
+        { label: "C", text: `A point ${10} minutes after ${minutes}` },
+        { label: "D", text: `A point at ${minutes - 15}` },
+      ],
+      correctAnswer: "B",
+      explanation: `The correct number line marks the exact value ${minutes}.`,
+    };
+  }
+
+  if (item === 17) {
+    const rows = 5 + v;
+    const cols = 6 + v;
+    return {
+      ...question,
+      questionText: `A rectangular mural is covered with ${rows} rows of ${cols} square tiles. Which expression shows the area in square tiles?`,
+      options: [
+        { label: "A", text: `${rows} x ${cols}` },
+        { label: "B", text: `${rows} + ${cols}` },
+        { label: "C", text: `${rows} + ${rows} + ${cols}` },
+        { label: "D", text: `${cols} - ${rows}` },
+      ],
+      correctAnswer: "A",
+      explanation: `Area can be found by multiplying rows by columns: ${rows} x ${cols}.`,
+    };
+  }
+
+  if (item === 18) {
+    const groups = 8 + v;
+    const each = 7 + v;
+    const removed = 15 + v * 4;
+    return textAnswer(
+      question,
+      `A teacher has ${groups} boxes of markers. Each box has ${each} markers. She gives away ${removed} markers. How many markers are left?`,
+      String(groups * each - removed),
+      `${groups} x ${each} = ${groups * each}, and ${groups * each} - ${removed} = ${groups * each - removed}.`
+    );
+  }
+
+  if (item === 19) {
+    const a = 4 + v;
+    const b = 3 + v;
+    const c = 2 + v;
+    return {
+      ...question,
+      questionText: `A student says ${a} x ${b} x ${c} = ${a * b + c}. What mistake did the student make?`,
+      options: [
+        { label: "A", text: "The student added the last number instead of multiplying by it." },
+        { label: "B", text: "The student subtracted all three numbers." },
+        { label: "C", text: "The student divided by the first number." },
+        { label: "D", text: "The student rounded every factor." },
+      ],
+      correctAnswer: "A",
+      explanation: `The correct product is ${a} x ${b} x ${c} = ${a * b * c}; the student found ${a * b} + ${c}.`,
+    };
+  }
+
+  if (item === 20) {
+    const students = 34 + v * 5;
+    const seats = 5 + v;
+    const full = Math.floor(students / seats);
+    const rem = students % seats;
+    return textAnswer(
+      question,
+      `${students} students ride vans to a park. Each van holds ${seats} students. After filling as many vans as possible, how many students are in the last partly filled van?`,
+      String(rem),
+      `${students} ÷ ${seats} = ${full} remainder ${rem}, so ${rem} students are in the last partly filled van.`
+    );
+  }
+
+  if (item === 21) {
+    return {
+      ...question,
+      questionText: "Which set of fractions correctly completes these comparisons?\n\n- equal to 1\n- less than 1/2\n- greater than 1/2",
+      options: [
+        { label: "A", text: "4/4, 1/4, 3/4" },
+        { label: "B", text: "3/4, 4/4, 1/4" },
+        { label: "C", text: "1/4, 3/4, 4/4" },
+        { label: "D", text: "2/4, 4/4, 1/4" },
+      ],
+      correctAnswer: "A",
+      explanation: "4/4 equals 1, 1/4 is less than 1/2, and 3/4 is greater than 1/2.",
+    };
+  }
+
+  if (item === 22) {
+    const total = 24 + v * 12;
+    return {
+      ...question,
+      questionText: `A teacher has ${total} counters. Select all of the equal groups that can be formed using all ${total} counters.`,
+      options: [
+        { label: "A", text: `${total / 2} groups of 2` },
+        { label: "B", text: `${total / 3} groups of 3` },
+        { label: "C", text: `${total - 1} groups of 1` },
+        { label: "D", text: `${total / 6} groups of 6` },
+        { label: "E", text: `${total / 4 + 1} groups of 4` },
+      ],
+      correctAnswer: ["A", "B", "D"],
+      explanation: `The choices A, B, and D each multiply to ${total}.`,
+    };
+  }
+
+  if (item === 23) {
+    const each = 4 + v;
+    const total = each * 6;
+    return textAnswer(
+      question,
+      `A picture graph uses one star to show ${each} students. The graph has 6 stars. How many students are shown?`,
+      String(total),
+      `6 stars with ${each} students each show ${total} students.`
+    );
+  }
+
+  if (item === 24) {
+    return {
+      ...question,
+      questionText: "Complete the line plot by placing X marks above the values.\n\nData to plot: 1/4, 2/4, 2/4, 4/4",
+      linePlotLabels: ["1/4", "2/4", "3/4", "4/4"],
+      linePlotMaxDots: 4,
+      correctAnswer: ["0:1", "1:2", "1:1", "3:1"],
+      explanation: "The data show one X above 1/4, two X marks above 2/4, none above 3/4, and one X above 4/4.",
+    };
+  }
+
+  if (item === 25) {
+    const bags = 6 + v;
+    const each = 5 + v;
+    const extra = 9 + v;
+    const total = bags * each + extra;
+    return {
+      ...question,
+      questionText: `A class packs ${bags} bags with ${each} shells in each bag and has ${extra} shells left over. Select TWO equations that can be used to find the total number of shells.`,
+      options: [
+        { label: "A", text: `${bags} x ${each} + ${extra} = ${total}` },
+        { label: "B", text: `${bags} + ${each} + ${extra} = ${bags + each + extra}` },
+        { label: "C", text: `${each} x ${bags} + ${extra} = ${total}` },
+        { label: "D", text: `${bags} x ${extra} + ${each} = ${bags * extra + each}` },
+      ],
+      correctAnswer: ["A", "C"],
+      explanation: `Both multiplication expressions find ${bags * each} shells in bags, then add ${extra}.`,
+    };
+  }
+
+  if (item === 26) {
+    return textAnswer(
+      question,
+      "Enter one fraction that is greater than 2/6 and less than 5/6.",
+      "3/6",
+      "3/6 is greater than 2/6 and less than 5/6."
+    );
+  }
+
+  if (item === 27) {
+    const wood = 146 + v * 18;
+    const glass = 79 + v * 13;
+    return textAnswer(
+      question,
+      `Jana has ${wood} wooden beads and ${glass} glass beads. How many more wooden beads than glass beads does Jana have?`,
+      String(wood - glass),
+      `${wood} - ${glass} = ${wood - glass}.`
+    );
+  }
+
+  if (item === 28) {
+    return textAnswer(
+      question,
+      "A number line from 0 to 1 is divided into 8 equal parts. Point B is at the third mark after 0. What fraction does Point B represent?",
+      "3/8",
+      "The third mark after 0 on a number line divided into eighths is 3/8."
+    );
+  }
+
+  if (item === 29) {
+    return {
+      ...question,
+      questionText:
+        "Part A: Click the correct number of 1/3 pieces and 1/4 pieces to model one whole.\n\nPart B: Compare the number of pieces used in the two models.",
+      fractionModel: { thirdsMax: 4, fourthsMax: 4 },
+      correctAnswer: ["3", "4", "yes", ">"],
+      explanation: "Three 1/3 pieces make one whole, and four 1/4 pieces make one whole. The whole amounts are equal, but the model uses more fourth-size pieces than third-size pieces.",
+    };
+  }
+
+  if (item === 30) {
+    return {
+      ...question,
+      questionText: "Shade 2/6 of the rectangle.",
+      shadeGrid: { rows: 2, cols: 3, requiredCount: 2 },
+      correctAnswer: ["0:0", "0:1"],
+      explanation: "The rectangle has 6 equal parts. Shading any 2 parts shows 2/6.",
+    };
+  }
+
+  if (item === 31) {
+    return {
+      ...question,
+      questionText: `Select all of the expressions that are equal to ${5 + v} x 12.`,
+      options: [
+        { label: "A", text: `12 x ${5 + v}` },
+        { label: "B", text: `${5 + v} x (10 + 2)` },
+        { label: "C", text: `${5 + v} + 12` },
+        { label: "D", text: `(${5 + v} x 10) + (${5 + v} x 2)` },
+      ],
+      correctAnswer: ["A", "B", "D"],
+      explanation: "The commutative and distributive properties show that A, B, and D are equivalent.",
+    };
+  }
+
+  if (item === 32) {
+    const length = 7 + v;
+    const width = 5 + v;
+    return textAnswer(
+      question,
+      `A rectangular garden is ${length} feet long and ${width} feet wide. What is the area of the garden in square feet?`,
+      String(length * width),
+      `${length} x ${width} = ${length * width} square feet.`
+    );
+  }
+
+  if (item === 33) {
+    const side = 9 + v;
+    return textAnswer(
+      question,
+      `A square sign has sides that are each ${side} inches long. What is the perimeter of the sign in inches?`,
+      String(side * 4),
+      `${side} + ${side} + ${side} + ${side} = ${side * 4}.`
+    );
+  }
+
+  if (item === 34) {
+    const a = 4 + v;
+    const b = 3 + v;
+    const c = 5 + v;
+    return {
+      ...question,
+      questionText: `Which property of multiplication does this equation show?\n\n${a} x (${b} + ${c}) = (${a} x ${b}) + (${a} x ${c})`,
+      options: [
+        { label: "A", text: "Commutative property" },
+        { label: "B", text: "Associative property" },
+        { label: "C", text: "Distributive property" },
+        { label: "D", text: "Identity property" },
+      ],
+      correctAnswer: "C",
+      explanation: "The factor is distributed to both addends inside the parentheses.",
+    };
+  }
+
+  if (item === 35) {
+    const divisor = 8 + v;
+    const quotient = 6 + v;
+    return textAnswer(
+      question,
+      `What is ${divisor * quotient} ÷ ${divisor}?`,
+      String(quotient),
+      `${divisor * quotient} ÷ ${divisor} = ${quotient}.`
+    );
+  }
+
+  if (item === 36) {
+    return {
+      ...question,
+      questionText: "A movie starts at 6:35 p.m. and ends at 8:10 p.m. How long is the movie?",
+      options: [
+        { label: "A", text: "1 hour 15 minutes" },
+        { label: "B", text: "1 hour 25 minutes" },
+        { label: "C", text: "1 hour 35 minutes" },
+        { label: "D", text: "2 hours 35 minutes" },
+      ],
+      correctAnswer: "C",
+      explanation: "From 6:35 to 7:35 is 1 hour, and from 7:35 to 8:10 is 35 minutes.",
+    };
+  }
+
+  return undefined;
+}
+
+export function rebaselineHardPracticeQuestion(question: Question): Question {
+  const config = configs[question.practiceTest as 8 | 9 | 10];
+  if (!config) return question;
+
+  if (question.subject === "math" && question.testType === "cat") {
+    const mathCat = rebaselineMathCat(question, config);
+    if (mathCat) return mathCat;
   }
 
   if (question.subject === "math" && question.testType === "pt") {
