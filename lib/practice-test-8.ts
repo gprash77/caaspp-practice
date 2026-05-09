@@ -1,6 +1,7 @@
 import type { Question } from "./questions";
+import { rebaselineHardPracticeQuestion } from "./hard-practice-test-rebaseline";
 
-export const practiceTest8Questions: Question[] = [
+export const practiceTest8Questions: Question[] = ([
   {
     "id": 8001,
     "testType": "cat",
@@ -2591,4 +2592,4 @@ export const practiceTest8Questions: Question[] = [
     "explanation": "A strong response explains how the old harbor site and volcanic landforms both show the effects of change over time.",
     "studentDirections": "You have read 'The Map in the Bell Tower' and 'How Volcanoes Build New Land.' Write an informational response explaining how change over time can affect places and people.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from each passage\n- Explain how the details support your idea\n- Organize your writing clearly\n- Use complete sentences and correct punctuation"
   }
-];
+] as Question[]).map(rebaselineHardPracticeQuestion);

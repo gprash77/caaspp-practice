@@ -1,6 +1,7 @@
 import type { Question } from "./questions";
+import { rebaselineHardPracticeQuestion } from "./hard-practice-test-rebaseline";
 
-export const practiceTest10Questions: Question[] = [
+export const practiceTest10Questions: Question[] = ([
   {
     "id": 10001,
     "testType": "cat",
@@ -2591,4 +2592,4 @@ export const practiceTest10Questions: Question[] = [
     "explanation": "A strong response explains how both Nadia and the monarch butterflies complete difficult journeys through preparation, skill, and persistence.",
     "studentDirections": "You have read 'The River Race' and 'The Long Journey of the Monarch Butterfly.' Both passages feature a long, challenging journey.\n\nWrite an informational response that explains what both passages teach us about facing long, difficult challenges.\n\nIn your response:\n- State your main idea clearly\n- Use at least one detail from each passage\n- Explain how your details support your main idea\n- Organize your writing clearly\n- Use complete sentences and correct conventions"
   }
-];
+] as Question[]).map(rebaselineHardPracticeQuestion);

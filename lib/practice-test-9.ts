@@ -1,6 +1,7 @@
 import type { Question } from "./questions";
+import { rebaselineHardPracticeQuestion } from "./hard-practice-test-rebaseline";
 
-export const practiceTest9Questions: Question[] = [
+export const practiceTest9Questions: Question[] = ([
   {
     "id": 9001,
     "testType": "cat",
@@ -2594,4 +2595,4 @@ export const practiceTest9Questions: Question[] = [
     "explanation": "A strong response explains how the story shows a rainy day experience while the article explains cloud types and how rain forms.",
     "studentDirections": "You have read 'The Rainy Day Plan' and 'Clouds in the Sky.' Now you will write a paragraph that explains what you learned about rain and weather from both passages.\n\nIn your paragraph:\n- State your main idea\n- Use at least one detail from 'The Rainy Day Plan'\n- Use at least one detail from 'Clouds in the Sky'\n- Explain how the details support your main idea\n- Use complete sentences"
   }
-];
+] as Question[]).map(rebaselineHardPracticeQuestion);
