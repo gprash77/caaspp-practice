@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { TOTAL_PRACTICE_TESTS } from "@/lib/questions";
 
 const tests = [
@@ -141,6 +142,27 @@ export default function Home() {
               <li>After you finish, you will get a score report showing what you did well and what to practice more</li>
             </ul>
           </div>
+
+          <Link
+            href="/minemath"
+            style={{
+              display: "block",
+              marginTop: 16,
+              padding: "16px 18px",
+              border: "2px solid #2e7d32",
+              borderRadius: 8,
+              background: "#eff8f1",
+              color: "#173f20",
+              textDecoration: "none",
+            }}
+          >
+            <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 4 }}>
+              Play Minemath
+            </div>
+            <div style={{ fontSize: 13, lineHeight: 1.4, color: "#34513a" }}>
+              Mine blocks by solving math problems, craft stronger tools, and reach the diamond chamber.
+            </div>
+          </Link>
         </div>
       </div>
     </div>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CAASPP Practice Test",
-  description: "Practice test for California state assessments (CAASPP/Smarter Balanced) with scoring and feedback",
+  title: "CAASPP Practice Test + Minemath",
+  description: "Practice test for California state assessments with scoring, feedback, and a Minecraft-inspired math game.",
 };
 
 export default function RootLayout({

@@ -1,0 +1,456 @@
+.shell {
+  min-height: 100vh;
+  padding: 24px;
+  color: #18211c;
+  background:
+    linear-gradient(180deg, rgba(112, 188, 221, 0.9), rgba(209, 232, 226, 0.75) 38%, rgba(39, 47, 52, 0.95) 38%),
+    #d1e8e2;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 90px 1fr 128px;
+  align-items: center;
+  gap: 16px;
+  max-width: 1180px;
+  margin: 0 auto 18px;
+}
+
+.header h1,
+.header p,
+.stageCard h2,
+.inventory h2,
+.crafting h2 {
+  margin: 0;
+}
+
+.header h1 {
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #10251d;
+  text-shadow: 0 3px 0 rgba(255, 255, 255, 0.42);
+}
+
+.kicker {
+  margin: 0 0 6px;
+  color: #285d64;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.backLink,
+.resetButton {
+  min-height: 42px;
+  border: 2px solid #214438;
+  border-radius: 6px;
+  background: #f6fff8;
+  color: #18382c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.resetButton {
+  font: inherit;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.05fr);
+  gap: 18px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.worldPanel,
+.playPanel,
+.stageCard,
+.challengeCard,
+.inventory,
+.crafting {
+  border: 3px solid #1e2f34;
+  border-radius: 8px;
+  box-shadow: 0 8px 0 rgba(16, 23, 25, 0.35);
+}
+
+.worldPanel {
+  min-height: 640px;
+  overflow: hidden;
+  position: relative;
+  background: #7ec7e7;
+}
+
+.sky {
+  height: 29%;
+  position: relative;
+  background: linear-gradient(#74c5ef, #b8e7f0);
+}
+
+.sun {
+  position: absolute;
+  top: 28px;
+  right: 42px;
+  width: 76px;
+  height: 76px;
+  background: #ffd95a;
+  box-shadow: 0 0 0 8px rgba(255, 248, 180, 0.42);
+}
+
+.cloudOne,
+.cloudTwo {
+  position: absolute;
+  height: 28px;
+  background: #f7fffb;
+  box-shadow:
+    28px 0 #f7fffb,
+    56px 0 #f7fffb,
+    28px -22px #f7fffb;
+}
+
+.cloudOne {
+  top: 64px;
+  left: 48px;
+  width: 42px;
+}
+
+.cloudTwo {
+  top: 34px;
+  left: 220px;
+  width: 34px;
+  opacity: 0.86;
+}
+
+.ground {
+  height: 71%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.blockRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  color: #f9fff5;
+  font-size: 19px;
+  font-weight: 900;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.34);
+  background-size: 44px 44px;
+}
+
+.blockRow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.11) 0 2px, transparent 2px 44px),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0 2px, transparent 2px 44px);
+  background-size: 44px 44px;
+}
+
+.activeLayer {
+  outline: 5px solid #ffd95a;
+  outline-offset: -8px;
+}
+
+.wood {
+  background-color: #6f4a2f;
+  background-image: linear-gradient(90deg, #8a5b36 0 18px, #55371f 18px 22px, #795134 22px 44px);
+}
+
+.stone {
+  background-color: #758085;
+  background-image: linear-gradient(135deg, #8c979c 0 25%, #60696e 25% 50%, #7b858a 50% 75%, #535c61 75%);
+}
+
+.iron {
+  background-color: #6b7178;
+  background-image: linear-gradient(135deg, #93979b 0 28%, #d6c099 28% 42%, #596168 42% 74%, #a97d50 74%);
+}
+
+.diamond {
+  background-color: #236d82;
+  background-image: linear-gradient(135deg, #1f5668 0 25%, #4be1dc 25% 42%, #1b778a 42% 72%, #b8fff9 72%);
+}
+
+.miner {
+  position: absolute;
+  left: 50%;
+  top: 22%;
+  width: 94px;
+  height: 150px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.22));
+}
+
+.minerHead {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  background:
+    linear-gradient(90deg, transparent 0 12px, #2f231b 12px 46px, transparent 46px),
+    linear-gradient(#c58a62 0 36px, #7f4b35 36px 58px);
+  border: 4px solid #2c211b;
+}
+
+.minerBody {
+  width: 76px;
+  height: 78px;
+  margin: -2px auto 0;
+  background:
+    linear-gradient(90deg, #1c8e95 0 18px, #34b4bc 18px 58px, #1c8e95 58px),
+    linear-gradient(#2c5fbd 0 100%);
+  border: 4px solid #20292d;
+}
+
+.pickaxe {
+  position: absolute;
+  top: 42px;
+  right: -6px;
+  width: 18px;
+  height: 116px;
+  background: #6a4328;
+  transform: rotate(-34deg);
+}
+
+.pickaxe::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -38px;
+  width: 88px;
+  height: 18px;
+  background: #adb7bb;
+}
+
+.playPanel {
+  padding: 18px;
+  background: rgba(248, 253, 246, 0.95);
+}
+
+.statusBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.statusBar span {
+  min-height: 42px;
+  padding: 10px;
+  border: 2px solid #c6d5d0;
+  border-radius: 6px;
+  background: #ffffff;
+  font-weight: 800;
+  text-align: center;
+}
+
+.difficulty {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.difficulty button {
+  min-height: 38px;
+  border: 2px solid #2b4246;
+  border-radius: 6px;
+  background: #edf7ff;
+  color: #16272d;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+}
+
+.difficulty .selectedDifficulty {
+  background: #ffd95a;
+  box-shadow: inset 0 0 0 3px #fff4bd;
+}
+
+.stageCard,
+.challengeCard,
+.inventory,
+.crafting {
+  background: #ffffff;
+}
+
+.stageCard,
+.challengeCard {
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.stageCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.stageCard h2,
+.inventory h2,
+.crafting h2 {
+  color: #18382c;
+  font-size: 22px;
+}
+
+.progressTrack {
+  height: 22px;
+  border: 2px solid #21343a;
+  background: #dbe6df;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #35ab55 0 18px, #6ed57a 18px 36px);
+  transition: width 180ms ease;
+}
+
+.challengeCard {
+  min-height: 218px;
+}
+
+.message {
+  min-height: 24px;
+  margin: 0 0 14px;
+  color: #315456;
+  font-weight: 800;
+}
+
+.problem {
+  padding: 18px;
+  border: 3px solid #25333a;
+  border-radius: 6px;
+  background: #eef7ff;
+  color: #14242c;
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 900;
+  text-align: center;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.choices button,
+.crafting button {
+  border: 2px solid #233235;
+  border-radius: 6px;
+  background: #fff7d9;
+  color: #172522;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+}
+
+.choices button {
+  min-height: 58px;
+  font-size: 24px;
+}
+
+.choices button:hover,
+.backLink:hover,
+.resetButton:hover,
+.crafting button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 rgba(31, 43, 46, 0.28);
+}
+
+.lowerGrid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 14px;
+}
+
+.inventory,
+.crafting {
+  padding: 16px;
+}
+
+.inventoryRow {
+  display: grid;
+  grid-template-columns: 28px 1fr 32px;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  border-bottom: 1px solid #d9e2de;
+  font-weight: 800;
+}
+
+.resourceChip {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #1e2f34;
+}
+
+.crafting {
+  display: grid;
+  gap: 10px;
+}
+
+.crafting button {
+  min-height: 58px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.crafting button:disabled {
+  cursor: not-allowed;
+  opacity: 0.46;
+}
+
+.crafting span,
+.crafting small {
+  display: block;
+}
+
+.crafting small {
+  margin-top: 3px;
+  color: #40575a;
+  font-weight: 800;
+}
+
+@media (max-width: 920px) {
+  .shell {
+    padding: 14px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .game {
+    grid-template-columns: 1fr;
+  }
+
+  .worldPanel {
+    min-height: 420px;
+  }
+
+  .statusBar,
+  .difficulty,
+  .lowerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .choices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
