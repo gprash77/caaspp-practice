@@ -474,22 +474,40 @@ function MultiInput({
 }
 
 function SymmetryLine({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const selected = value === "vertical";
+  const linePaths: Record<string, string> = {
+    vertical: "M180 20 L180 205",
+    horizontal: "M35 115 L325 115",
+    diagonal: "M75 195 L285 25",
+  };
+  const choices = [
+    { value: "vertical", label: "Vertical line" },
+    { value: "horizontal", label: "Horizontal line" },
+    { value: "diagonal", label: "Diagonal line" },
+    { value: "none", label: "None" },
+  ];
+
   return (
     <div className="symmetry-interaction" role="group" aria-label="Draw the line of symmetry">
-      <button
-        type="button"
-        className={`symmetry-canvas ${selected ? "selected" : ""}`}
-        onClick={() => onChange(selected ? "" : "vertical")}
-        aria-pressed={selected}
-        aria-label="Toggle vertical line of symmetry"
-      >
+      <div className={`symmetry-canvas ${value ? "selected" : ""}`} aria-label="Symmetry line preview">
         <svg viewBox="0 0 360 220" role="img" aria-label="Isosceles trapezoid">
           <path d="M100 55 L260 55 L300 175 L60 175 Z" fill="none" stroke="currentColor" strokeWidth="3" />
-          {selected && <path d="M180 20 L180 205" stroke="#d32f2f" strokeWidth="4" />}
+          {linePaths[value] && <path d={linePaths[value]} stroke="#d32f2f" strokeWidth="4" />}
         </svg>
-      </button>
-      <p>Click the shape to add or remove the line.</p>
+      </div>
+      <p className="interaction-helper">Choose the direction of the line you want to place, or choose None.</p>
+      <div className="symmetry-tools" aria-label="Line choices">
+        {choices.map((choice) => (
+          <button
+            key={choice.value}
+            type="button"
+            className={value === choice.value ? "selected" : ""}
+            onClick={() => onChange(choice.value)}
+            aria-pressed={value === choice.value}
+          >
+            {choice.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
@@ -1119,11 +1137,18 @@ function TestContent() {
           )}
 
           {current.type === "multi-input" && current.responseFields && (
-            <MultiInput
-              fields={current.responseFields}
-              value={(answers[current.id] as string[]) || []}
-              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
-            />
+            <>
+              {current.id === 40030 && (
+                <p className="interaction-helper fruit-count-helper" role="note">
+                  Accessible response: enter the number of fruit pieces for each weight range. You do not need to drag the fruit.
+                </p>
+              )}
+              <MultiInput
+                fields={current.responseFields}
+                value={(answers[current.id] as string[]) || []}
+                onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+              />
+            </>
           )}
 
           {current.type === "symmetry-line" && (
