@@ -1,5 +1,224 @@
 # CODEX HANDOFF
 
+## July 21, 2026 End-of-Day Handoff — Grade 4 Phase 1 Complete / Phase 2 Planned
+
+### Read This First
+
+The user is building a carefully validated Grade 4 CAASPP practice program. Grade 4 Test 1 is the corrected official public-practice baseline. The next work is Phase 2: two new full-length Easy companion forms, Grade 4 Tests 2 and 3.
+
+Before changing code, read:
+
+1. `AGENTS.md`
+2. `reports/grade-4/PHASE2_PLAN.md`
+3. `reports/grade-4/test-1/PHASE1_EVAL_REPORT.md`
+4. `data/official/grade-4/test-1/golden.json`
+5. `data/official/grade-4/test-1/sources.json`
+
+Do not generate Test 2 or Test 3 content until the user approves the revised Phase 2 plan. The plan is intentionally a draft at this handoff.
+
+### Current Repository State
+
+- Repo: `/Users/gprash77/projects/caaspp-practice`
+- Branch: `main`
+- Latest pushed commit: `21aef28` `Show fixed Art Day boundary times`
+- `HEAD` and `origin/main` both resolve to `21aef2809d71985051c2e9815f989a4d9d69fa41` before this documentation-only handoff update.
+- Application/content work is pushed.
+- `tmp/` contains local official-PDF audit materials and must remain untracked.
+- `reports/grade-4/PHASE2_PLAN.md` is the new Phase 2 planning document being added with this handoff.
+- Vercel deploys from pushed `main`. The latest production deployment was triggered by the push, but production was not independently rechecked after every final UI adjustment.
+
+### User Decisions — Treat These as Requirements
+
+- Grade 4 Test 1 must remain the exact public-practice golden baseline for prompts, sources, keys, points, and rubrics.
+- Tests 2 and 3 are original companion forms. Do not label them official or exact CAASPP copies.
+- Tests 2 and 3 must remain **full length**, matching Test 1:
+  - Math CAT: 31 items / 32 points
+  - Math PT: 5 items / 6 points
+  - ELA CAT: 30 items / 30 points
+  - ELA PT: 3 scored tasks / 13 points
+  - Total: 69 items / 81 points
+- Difficulty is assigned to the **whole practice test**, not split into equal easy/medium/hard item quotas inside one form.
+- Grade 4 Test 2: full-length Easy form.
+- Grade 4 Test 3: full-length Easy form.
+- Future Medium and Hard tests must also remain full length; they are outside the immediate Phase 2 scope.
+- An Easy form still needs honest Grade 4 standards and required higher-DOK coverage. Make it easier through language, contexts, scaffolding, and reduced constraint layering—not through missing coverage or weak questions.
+- The user wants reusable data, scoring, rubric, browser, persistence, audio, fairness, and regression evals—not a one-time content dump.
+- Continue using subagents where parallel audits or independent evaluation materially improve accuracy.
+
+### Grade 4 Phase 1 Delivered
+
+Commit `9529402` added the official Grade 4 Test 1 baseline:
+
+- Math CAT: 31 items / 32 points
+- Math PT: 5 items / 6 points
+- ELA CAT: 30 items / 30 points
+- ELA PT: 3 scored tasks / 13 points
+- Total: 69 items / 81 points
+
+Primary implementation files:
+
+- `lib/grade4-test1-math.ts`
+- `lib/grade4-test1-ela.ts`
+- `lib/scoring.ts`
+- `lib/validation/grade4-test1.ts`
+- `tests/grade4-test1-fidelity.test.ts`
+- `e2e/grade4-test1.spec.ts`
+- `scripts/eval-grade4-test1.ts`
+
+The baseline includes locked source PDF hashes, independent key sequences, content hashes, asset hashes, scoring rules, rubrics, mutation tests, point scoring, persistence, and browser coverage.
+
+### Phase 1 Follow-Up Fixes
+
+Commit `6308b25` improved Grade 4 Math interactions:
+
+- Math CAT item 18 now uses large Vertical, Horizontal, Diagonal, and None choices with a visual preview.
+- Math CAT item 30 uses numeric fruit-count fields and explicitly says students do not need to drag fruit.
+- Important Phase 2 requirement: the item 18 component is still a single-selection Test 1 solution. Generalize future symmetry items for zero, one, or multiple lines before reusing it.
+
+Commit `21aef28` fixed Math PT Art Day question 4:
+
+- Painting start is visibly locked at `9:00 a.m.`.
+- Chalk Art end is visibly locked at `2:00 p.m.`.
+- Scoring treats both boundary times as fixed, including older saved attempts.
+
+### User Manual QA Completed
+
+The user manually reviewed the Grade 4 ELA CAT and said it is good.
+
+Recommended high-risk ELA CAT review had included:
+
+- hot-text/selection equivalents
+- ordered two-part items
+- multi-select limits
+- listening items 22–27
+- balloon matching chart
+- passage switching and standalone writing items
+
+Treat this as user acceptance of the current ELA CAT experience, not permission to weaken future automated checks.
+
+### Known ELA Performance Task Flow Defect
+
+The ELA PT content count and scoring are correct, but the current navigation is not an exact match to the official flow.
+
+Correct student-facing structure:
+
+- Part 1: two research questions
+  - evidence-based short response: 2 points
+  - source-matching chart: 1 point
+- Part 2: one separate informational essay: 10 points
+
+Current app behavior:
+
+- All three scored tasks appear as ordinary question tabs in one continuous segment.
+
+Required correction before cloning the PT flow:
+
+- Represent Part 1 and Part 2 explicitly.
+- Add a Part 1 review/submit step and Part 2 transition screen.
+- Preserve sources and notes across both parts.
+- Persist segment state.
+- Do not allow the normal practice flow to return to Part 1 after entering Part 2.
+- Results should report three scored tasks without calling the essay a third Part 1 research question.
+
+### Rubric and Scoring Status
+
+- Objective items auto-score with official keys and supported partial credit.
+- Written short responses and essays correctly return `manual` status rather than pretending to be automatically graded.
+- The current results page displays the rubric and manual-scoring notice.
+- The 10-point ELA essay rubric is correctly structured as:
+  - Organization/Purpose: 0–4
+  - Evidence/Elaboration: 0–4
+  - Conventions: 0–2
+  - NS criteria
+- Phase 2 plan calls for an operational parent/teacher rubric-entry workflow with range validation, trait totals, rubric version, optional comments, scorer role/name, and scoring date.
+- Distinguish an unscored manual response from a response awarded zero points.
+
+### Listening Audio Caveat
+
+- ELA CAT items 22–27 use exact transcripts recovered from the live public CAASPP practice interface.
+- Local M4A narration was generated from those exact transcripts.
+- The local audio is **not** the original session-protected CAASPP audio binary and must remain labeled `equivalent-approved`, not exact.
+- Future Test 2/3 listening scripts and audio must be original, answer-sufficient, provenance-recorded, and browser-tested for metadata, play, pause, replay, and transcript association.
+
+### Latest Validation Evidence
+
+After the Art Day boundary-time fix:
+
+- `npm run eval:grade4-test1`: passed; 69 runtime items reviewed against the locked fixture.
+- `npm test`: passed; 4 files / 1,716 tests.
+- `npm run lint`: passed.
+- `npm run build`: passed, including the 1,716 tests and Next production build.
+- `npm run test:e2e -- e2e/grade4-test1.spec.ts`: 9/9 passed.
+- Visual browser QA confirmed both locked Art Day times.
+
+Earlier, the full repository browser suite passed 49/49 after the initial Phase 1 baseline. The most recent UI fixes were verified with the targeted 9-test Grade 4 browser suite plus unit/build/lint/eval gates; do not misstate that a new full 49-test run occurred after every later UI fix.
+
+### Phase 2 Research Findings
+
+Official current California adjusted blueprints are shorter than the public Practice Test 1, but the user explicitly rejected shortening the companion forms. Use official blueprints as claim/DOK/standards constraints while keeping the longer Test 1 item counts.
+
+Grade 4 subjects:
+
+- ELA CAT
+- ELA PT
+- Math CAT
+- Math PT
+- No Grade 4 CAST; science begins in Grade 5.
+
+Official references are linked in `reports/grade-4/PHASE2_PLAN.md`.
+
+The Grade 3 custom banks are not safe templates for Grade 4 content. Audit findings included shallow rubrics, transcript-only or miswired audio, near-parallel prompt shells, simplified PT scoring, inconsistent difficulty comments, and flat ELA PT navigation. Reuse only broad structural ideas—not passages, questions, counts, keys, or copy-and-substitute patterns.
+
+### Phase 2 Architecture Prerequisites
+
+Complete these before authoring Test 2:
+
+1. Add a grade-aware assessment manifest for test availability, origin, form difficulty, sections, counts, points, and bank version.
+2. Correct ELA PT Part 1/Part 2 segmentation.
+3. Generalize symmetry for zero, one, or multiple lines with None mutually exclusive.
+4. Replace item-number-specific scoring branches with reusable declarative scoring rules.
+5. Add operational manual rubric score entry.
+6. Pin attempts/results to the complete attempted bank hash and response-schema version.
+7. Parameterize the Test 1 evaluator for Tests 2 and 3 with schema-complete canonicalization.
+8. Expand browser contracts for audio playback, all response types, PT transitions, persistence, results, stale-bank handling, desktop, and narrow viewport.
+
+Important registry issue: `getQuestions()` currently handles `practiceTest > 1` through the global Grade 3 dedicated-test map before the Grade 4 Test 1 branch. The current filters avoid returning mismatched Grade 3 items, but Grade 4 Tests 2/3 need a proper grade-aware manifest/registry rather than extending this global switch.
+
+### Exact Next-Agent Instructions
+
+1. Read the five files listed under “Read This First.”
+2. Read the latest user messages in the task and confirm the revised plan reflects:
+   - full-length forms
+   - Test 2 Easy
+   - Test 3 Easy
+   - difficulty at the form level
+3. Ask the user to approve or revise `reports/grade-4/PHASE2_PLAN.md` before implementation.
+4. Once approved, create a focused implementation plan for the architecture prerequisites only.
+5. Implement the grade-aware manifest and ELA PT segmentation first.
+6. Run the complete Test 1 eval/regression/browser gate and fix all regressions before enabling Test 2.
+7. Produce a detailed Test 2 item matrix for user review before writing full item content.
+8. Author and validate Test 2 completely before starting Test 3.
+9. Use independent author/reviewer passes and cross-form duplicate checks.
+10. Follow `AGENTS.md`: evals, tests, build, browser/visual QA, focused commit, push `main`, then let Vercel deploy.
+
+### Do Not Do
+
+- Do not shorten Tests 2 or 3 to current adjusted operational counts.
+- Do not assign equal easy/medium/hard item quotas inside Tests 2 or 3.
+- Do not label original tests or generated audio as official/exact.
+- Do not copy Grade 3 Test 2/3 passages, questions, shallow rubrics, or audio wiring.
+- Do not expose Test 2 before all four of its sections exist and pass validation.
+- Do not silently rescore saved attempts against a changed bank.
+- Do not ask the user to QA before the agent completes local eval, browser, and visual checks.
+- Do not commit `tmp/`, `.playwright-cli/`, or generated test artifacts.
+
+### Handoff Deliverables
+
+- Revised Phase 2 plan: `reports/grade-4/PHASE2_PLAN.md`
+- This handoff: `CODEX_HANDOFF.md`
+- Test 1 Phase 1 report: `reports/grade-4/test-1/PHASE1_EVAL_REPORT.md`
+- Latest application commit before docs: `21aef28`
+
 ## May 8, 2026 End-of-Day Handoff
 
 ### Current State
