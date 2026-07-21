@@ -68,7 +68,10 @@ function parseClockTime(value: string): number | null {
 function validArtDaySchedule(question: Question, userAnswer: string | string[]): boolean {
   if (!Array.isArray(userAnswer) || !question.schedule) return false;
   if (userAnswer.length !== question.schedule.activities.length * 2) return false;
-  const times = userAnswer.map(parseClockTime);
+  const completeAnswer = [...userAnswer];
+  completeAnswer[0] = question.schedule.start;
+  completeAnswer[completeAnswer.length - 1] = question.schedule.end;
+  const times = completeAnswer.map(parseClockTime);
   if (times.some((time) => time === null)) return false;
   const values = times as number[];
   if (values[0] !== 9 * 60 || values.at(-1) !== 14 * 60) return false;

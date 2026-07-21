@@ -513,15 +513,19 @@ function SymmetryLine({ value, onChange }: { value: string; onChange: (value: st
 }
 
 function ScheduleTable({
-  activities,
+  schedule,
   value,
   onChange,
 }: {
-  activities: string[];
+  schedule: NonNullable<Question["schedule"]>;
   value: string[];
   onChange: (value: string[]) => void;
 }) {
+  const { activities } = schedule;
+  const finalIndex = activities.length * 2 - 1;
   const normalized = Array.from({ length: activities.length * 2 }, (_, index) => value[index] ?? "");
+  normalized[0] = schedule.start;
+  normalized[finalIndex] = schedule.end;
   return (
     <table className="schedule-table">
       <thead><tr><th>Activity</th><th>Start Time</th><th>End Time</th></tr></thead>
@@ -531,17 +535,21 @@ function ScheduleTable({
             <th scope="row">{activity}</th>
             {[0, 1].map((offset) => {
               const index = row * 2 + offset;
+              const given = index === 0 || index === finalIndex;
               return (
                 <td key={offset}>
                   <input
                     type="text"
                     value={normalized[index]}
+                    readOnly={given}
+                    className={given ? "given-time" : undefined}
                     onChange={(event) => {
+                      if (given) return;
                       const next = [...normalized];
                       next[index] = event.target.value;
                       onChange(next);
                     }}
-                    aria-label={`${activity} ${offset === 0 ? "start" : "end"} time`}
+                    aria-label={`${activity} ${offset === 0 ? "start" : "end"} time${given ? " (given)" : ""}`}
                     placeholder={offset === 0 ? "9:00" : "9:30"}
                   />
                 </td>
@@ -1160,7 +1168,7 @@ function TestContent() {
 
           {current.type === "schedule-table" && current.schedule && (
             <ScheduleTable
-              activities={current.schedule.activities}
+              schedule={current.schedule}
               value={(answers[current.id] as string[]) || []}
               onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
             />

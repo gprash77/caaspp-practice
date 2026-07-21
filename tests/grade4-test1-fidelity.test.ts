@@ -114,6 +114,7 @@ describe("Grade 4 independent scoring cases", () => {
   it("validates Art Day schedule boundaries and continuity", () => {
     const schedule = mathPt().find((entry) => entry.id === 40104)!;
     expect(scoreResponse(schedule, ["9:00", "10:30", "10:30", "10:45", "10:45", "12:15", "12:15", "1:00", "1:00", "2:00"]).status).toBe("correct");
+    expect(scoreResponse(schedule, ["", "10:30", "10:30", "10:45", "10:45", "12:15", "12:15", "1:00", "1:00", ""]).status).toBe("correct");
     expect(scoreResponse(schedule, ["9:00", "10:30", "10:30", "10:35", "10:35", "12:15", "12:15", "1:00", "1:00", "2:00"]).status).toBe("incorrect");
     expect(scoreResponse(schedule, ["9:00", "10:30", "10:35", "10:50", "10:50", "12:15", "12:15", "1:00", "1:00", "2:00"]).status).toBe("incorrect");
   });

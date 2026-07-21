@@ -46,6 +46,14 @@
   font: inherit;
 }
 
+.schedule-table input.given-time {
+  border-color: #607284;
+  background: #e8edf2;
+  color: #172033;
+  font-weight: 700;
+  cursor: not-allowed;
+}
+
 .symmetry-interaction {
   max-width: 520px;
   margin-top: 18px;

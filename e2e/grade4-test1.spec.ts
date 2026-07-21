@@ -41,6 +41,10 @@ test.describe("Grade 4 Test 1 official baseline", () => {
     await page.locator(".tds-progress-dots .tds-dot").nth(3).click({ force: true });
     await expect(page.locator(".schedule-table tbody tr")).toHaveCount(5);
     await expect(page.locator(".schedule-table tbody tr th")).toHaveText(["Painting", "Break", "Pottery", "Lunch", "Chalk Art"]);
+    await expect(page.getByLabel("Painting start time (given)")).toHaveValue("9:00 a.m.");
+    await expect(page.getByLabel("Painting start time (given)")).toHaveAttribute("readonly", "");
+    await expect(page.getByLabel("Chalk Art end time (given)")).toHaveValue("2:00 p.m.");
+    await expect(page.getByLabel("Chalk Art end time (given)")).toHaveAttribute("readonly", "");
   });
 
   test("renders and navigates all 30 ELA CAT items with exact listening transcripts", async ({ page }) => {
