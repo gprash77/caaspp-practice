@@ -6,12 +6,25 @@ import { execFileSync } from "node:child_process";
 import { getQuestions } from "../lib/questions";
 
 type AudioTarget = {
+  grade?: number;
   testNum: number;
   title: string;
   output: string;
 };
 
 const audioTargets: AudioTarget[] = [
+  {
+    grade: 4,
+    testNum: 1,
+    title: "The Telephone Is Born",
+    output: "public/audio/presentations/grade-4/test-1-the-telephone-is-born.m4a",
+  },
+  {
+    grade: 4,
+    testNum: 1,
+    title: "Balloon Wranglers",
+    output: "public/audio/presentations/grade-4/test-1-balloon-wranglers.m4a",
+  },
   {
     testNum: 1,
     title: "Soaring on the Wings of the Wind",
@@ -201,8 +214,8 @@ function cleanTranscript(source: string): string {
     .trim();
 }
 
-function findTranscript(testNum: number, title: string): string {
-  const questions = getQuestions(3, "ela", "cat", testNum);
+function findTranscript(grade: number, testNum: number, title: string): string {
+  const questions = getQuestions(grade, "ela", "cat", testNum);
   const question = questions.find((item) => item.passageTitle === title && item.passage);
 
   if (!question?.passage) {
@@ -229,14 +242,19 @@ function generateAudioFile(transcript: string, outputPath: string) {
   fs.rmSync(tempAiff, { force: true });
 }
 
-const requestedTests = new Set(process.argv.slice(2).map((value) => Number(value)).filter(Number.isInteger));
+const requestedTests = new Set(process.argv.slice(2));
 
 for (const target of audioTargets) {
-  if (requestedTests.size > 0 && !requestedTests.has(target.testNum)) {
+  const grade = target.grade ?? 3;
+  if (
+    requestedTests.size > 0 &&
+    !requestedTests.has(String(target.testNum)) &&
+    !requestedTests.has(`${grade}:${target.testNum}`)
+  ) {
     continue;
   }
 
-  const transcript = findTranscript(target.testNum, target.title);
+  const transcript = findTranscript(grade, target.testNum, target.title);
   generateAudioFile(transcript, target.output);
   console.log(`Generated ${target.output}`);
 }

@@ -441,6 +441,101 @@ function StimulusTable({
   );
 }
 
+function MultiInput({
+  fields,
+  value,
+  onChange,
+}: {
+  fields: NonNullable<Question["responseFields"]>;
+  value: string[];
+  onChange: (value: string[]) => void;
+}) {
+  const normalized = fields.map((_, index) => value[index] ?? "");
+  return (
+    <div className="multi-input" role="group" aria-label="Multipart response">
+      {fields.map((field, index) => (
+        <label className="multi-input-field" key={`${field.label}-${index}`}>
+          <span>{field.label}</span>
+          <input
+            type="text"
+            inputMode="text"
+            value={normalized[index]}
+            onChange={(event) => {
+              const next = [...normalized];
+              next[index] = event.target.value;
+              onChange(next);
+            }}
+            aria-label={field.label}
+          />
+        </label>
+      ))}
+    </div>
+  );
+}
+
+function SymmetryLine({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  const selected = value === "vertical";
+  return (
+    <div className="symmetry-interaction" role="group" aria-label="Draw the line of symmetry">
+      <button
+        type="button"
+        className={`symmetry-canvas ${selected ? "selected" : ""}`}
+        onClick={() => onChange(selected ? "" : "vertical")}
+        aria-pressed={selected}
+        aria-label="Toggle vertical line of symmetry"
+      >
+        <svg viewBox="0 0 360 220" role="img" aria-label="Isosceles trapezoid">
+          <path d="M100 55 L260 55 L300 175 L60 175 Z" fill="none" stroke="currentColor" strokeWidth="3" />
+          {selected && <path d="M180 20 L180 205" stroke="#d32f2f" strokeWidth="4" />}
+        </svg>
+      </button>
+      <p>Click the shape to add or remove the line.</p>
+    </div>
+  );
+}
+
+function ScheduleTable({
+  activities,
+  value,
+  onChange,
+}: {
+  activities: string[];
+  value: string[];
+  onChange: (value: string[]) => void;
+}) {
+  const normalized = Array.from({ length: activities.length * 2 }, (_, index) => value[index] ?? "");
+  return (
+    <table className="schedule-table">
+      <thead><tr><th>Activity</th><th>Start Time</th><th>End Time</th></tr></thead>
+      <tbody>
+        {activities.map((activity, row) => (
+          <tr key={activity}>
+            <th scope="row">{activity}</th>
+            {[0, 1].map((offset) => {
+              const index = row * 2 + offset;
+              return (
+                <td key={offset}>
+                  <input
+                    type="text"
+                    value={normalized[index]}
+                    onChange={(event) => {
+                      const next = [...normalized];
+                      next[index] = event.target.value;
+                      onChange(next);
+                    }}
+                    aria-label={`${activity} ${offset === 0 ? "start" : "end"} time`}
+                    placeholder={offset === 0 ? "9:00" : "9:30"}
+                  />
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
 function TwoPartQuestion({
   partAPrompt,
   partAOptions,
@@ -514,6 +609,20 @@ function isQuestionAnswered(question: Question, answer: string | string[] | unde
       );
     }
 
+    if (question.type === "multi-input") {
+      return (
+        answer.length === (question.responseFields?.length ?? 0) &&
+        answer.every((entry) => entry.trim() !== "")
+      );
+    }
+
+    if (question.type === "schedule-table") {
+      return (
+        answer.length === (question.schedule?.activities.length ?? 0) * 2 &&
+        answer.every((entry) => entry.trim() !== "")
+      );
+    }
+
     return answer.length > 0;
   }
 
@@ -527,22 +636,61 @@ function TestContent() {
   const subject = (searchParams.get("subject") || "math") as "math" | "ela";
   const testType = (searchParams.get("type") || "cat") as "cat" | "pt";
   const practiceTest = parseInt(searchParams.get("test") || "1");
+  const attemptId = searchParams.get("attempt") || "legacy";
+  const attemptStorageKey = `caaspp-attempt:${attemptId}`;
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string | string[]>>({});
   const [flagged, setFlagged] = useState<Set<number>>(new Set());
-  const [showPassage, setShowPassage] = useState(true);
-  const [lastPassageTitle, setLastPassageTitle] = useState<string | null>(null);
+  const [collapsedPassageKey, setCollapsedPassageKey] = useState<string | null>(null);
   const [showAttentionDialog, setShowAttentionDialog] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [attemptHydrated, setAttemptHydrated] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
     fetchQuestions(grade, subject, testType, practiceTest)
-      .then(setQuestions)
+      .then((loadedQuestions) => {
+        setQuestions(loadedQuestions);
+        const bankVersion = loadedQuestions[0]?.official?.bankVersion ?? "legacy";
+        try {
+          const saved = window.localStorage.getItem(attemptStorageKey);
+          if (saved) {
+            const parsed = JSON.parse(saved);
+            if (
+              parsed.bankVersion === bankVersion &&
+              parsed.grade === grade &&
+              parsed.subject === subject &&
+              parsed.testType === testType &&
+              parsed.practiceTest === practiceTest
+            ) {
+              setAnswers(parsed.answers ?? {});
+              setFlagged(new Set(parsed.flagged ?? []));
+              setCurrentIndex(Math.min(parsed.currentIndex ?? 0, Math.max(loadedQuestions.length - 1, 0)));
+            }
+          }
+        } catch {
+          window.localStorage.removeItem(attemptStorageKey);
+        }
+        setAttemptHydrated(true);
+      })
       .finally(() => setLoading(false));
-  }, [grade, subject, testType, practiceTest]);
+  }, [grade, subject, testType, practiceTest, attemptStorageKey]);
+
+  useEffect(() => {
+    if (!attemptHydrated || questions.length === 0) return;
+    window.localStorage.setItem(attemptStorageKey, JSON.stringify({
+      attemptId,
+      bankVersion: questions[0]?.official?.bankVersion ?? "legacy",
+      grade,
+      subject,
+      testType,
+      practiceTest,
+      answers,
+      flagged: [...flagged],
+      currentIndex,
+    }));
+  }, [answers, flagged, currentIndex, attemptHydrated, questions, attemptId, attemptStorageKey, grade, subject, testType, practiceTest]);
 
   const current = questions[currentIndex];
 
@@ -619,19 +767,16 @@ function TestContent() {
       subject,
       testType,
       practiceTest,
+      attemptId,
+      bankVersion: questions[0]?.official?.bankVersion ?? "legacy",
       answers,
       questionIds: questions.map((q) => q.id),
     };
+    sessionStorage.setItem(`testResults:${attemptId}`, JSON.stringify(data));
     sessionStorage.setItem("testResults", JSON.stringify(data));
+    sessionStorage.removeItem(`caaspp-latest:${grade}:${subject}:${testType}:${practiceTest}`);
     router.push("/results");
-  }, [grade, subject, testType, answers, questions, router]);
-
-  useEffect(() => {
-    if (current?.passageTitle && current.passageTitle !== lastPassageTitle) {
-      setShowPassage(true);
-      setLastPassageTitle(current.passageTitle);
-    }
-  }, [current, lastPassageTitle]);
+  }, [grade, subject, testType, practiceTest, attemptId, answers, questions, router]);
 
   if (loading) {
     return <div style={{ padding: 40, textAlign: "center" }}>Loading...</div>;
@@ -671,6 +816,8 @@ function TestContent() {
   const subjectLabel = subject === "math" ? "MATH" : "ELA";
   const testTypeLabel = testType === "pt" ? "Performance Task" : "Practice Test";
   const hasPassage = Boolean(current.passage || current.studentDirections);
+  const passageKey = current.passageTitle ?? (current.studentDirections ? `${subject}-${testType}-directions` : null);
+  const showPassage = passageKey === null || collapsedPassageKey !== passageKey;
 
   return (
     <div className="tds-wrapper">
@@ -812,7 +959,7 @@ function TestContent() {
             )}
             <button
               className="tds-passage-toggle"
-              onClick={() => setShowPassage(!showPassage)}
+              onClick={() => setCollapsedPassageKey(showPassage ? passageKey : null)}
             >
               {showPassage ? "← →" : "← →"}
             </button>
@@ -859,13 +1006,21 @@ function TestContent() {
 
           {/* Question text */}
           <div className="tds-question-text">
-            {current.questionText}
+            <ReactMarkdown>{current.questionText}</ReactMarkdown>
             {current.type === "multi-select" && (
               <span style={{ color: "#c62828", display: "block", marginTop: 4, fontSize: 14 }}>
                 (Select all that apply)
               </span>
             )}
           </div>
+
+          {current.stimulusImages?.map((asset) => (
+            <figure className="question-stimulus-image" key={asset.src}>
+              {/* Official source crops are local, immutable baseline assets. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={asset.src} alt={asset.alt} />
+            </figure>
+          ))}
 
           {/* Answer options */}
           {(current.type === "multiple-choice" ||
@@ -958,6 +1113,29 @@ function TestContent() {
             <TableInput
               columns={current.tableColumns}
               rowLabel={current.tableRowLabel}
+              value={(answers[current.id] as string[]) || []}
+              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+            />
+          )}
+
+          {current.type === "multi-input" && current.responseFields && (
+            <MultiInput
+              fields={current.responseFields}
+              value={(answers[current.id] as string[]) || []}
+              onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
+            />
+          )}
+
+          {current.type === "symmetry-line" && (
+            <SymmetryLine
+              value={(answers[current.id] as string) || ""}
+              onChange={handleTextInput}
+            />
+          )}
+
+          {current.type === "schedule-table" && current.schedule && (
+            <ScheduleTable
+              activities={current.schedule.activities}
               value={(answers[current.id] as string[]) || []}
               onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
             />

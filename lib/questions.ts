@@ -21,6 +21,8 @@ import { practiceTest15Questions } from "./practice-test-15";
 import { practiceTest16Questions } from "./practice-test-16";
 import { practiceTest17Questions } from "./practice-test-17";
 import { practiceTest18Questions } from "./practice-test-18";
+import { grade4MathCat, grade4MathPt } from "./grade4-test1-math";
+import { grade4ElaCat, grade4ElaPt } from "./grade4-test1-ela";
 
 export interface Question {
   id: number;
@@ -42,7 +44,10 @@ export interface Question {
     | "grid-match"
     | "line-plot"
     | "fraction-model"
-    | "shade-grid";
+    | "shade-grid"
+    | "multi-input"
+    | "symmetry-line"
+    | "schedule-table";
   testType: "cat" | "pt";
   passage?: string;
   passageTitle?: string;
@@ -90,6 +95,43 @@ export interface Question {
     title: string;
     transcript?: string;
   };
+  /** Provenance pinned to the independently reviewed official scoring guide. */
+  official?: {
+    itemNumber: number;
+    sourceId: "g4-math-cat" | "g4-math-pt" | "g4-ela-cat" | "g4-ela-pt";
+    sourcePage: number;
+    bankVersion: string;
+    fidelity: "exact" | "equivalent-approved" | "blocked" | "mismatch";
+  };
+  /** Visual stimulus assets required to answer the item fairly. */
+  stimulusImages?: {
+    src: string;
+    alt: string;
+    sha256: string;
+  }[];
+  /** Ordered response boxes for official multipart numeric/short responses. */
+  responseFields?: {
+    label: string;
+    acceptedAnswers?: string[];
+  }[];
+  schedule?: {
+    start: string;
+    end: string;
+    activities: string[];
+    minimumActivityMinutes: number;
+    minimumBreakMinutes: number;
+    breakAndLunchMinutes: number;
+  };
+  /** Independent scoring cases are stored outside the runtime bank. */
+  scoringRule?:
+    | { kind: "exact" }
+    | { kind: "ordered-fields" }
+    | { kind: "grade4-math-item-10" }
+    | { kind: "grade4-math-item-19" }
+    | { kind: "grade4-math-item-20" }
+    | { kind: "grade4-math-item-29" }
+    | { kind: "grade4-math-item-30" }
+    | { kind: "manual-rubric" };
 }
 
 const presentationAudioRollout: Record<number, Record<string, Question["audio"]>> = {
@@ -2235,6 +2277,12 @@ export function getQuestions(
   let questions: Question[] = [];
   if (grade === 3 && subject === "math") questions = grade3Math;
   if (grade === 3 && subject === "ela") questions = grade3ELA;
+  if (grade === 4 && subject === "math") {
+    questions = testType === "cat" ? grade4MathCat : grade4MathPt;
+  }
+  if (grade === 4 && subject === "ela") {
+    questions = testType === "cat" ? grade4ElaCat : grade4ElaPt;
+  }
   return mergeExplanations(
     questions.filter((q) => q.testType === testType).sort((a, b) => a.id - b.id)
   );

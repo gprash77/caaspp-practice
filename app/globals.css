@@ -10,6 +10,77 @@
   --tds-light-bg: #f0f0f0;
 }
 
+.question-stimulus-image {
+  margin: 18px 0;
+}
+
+.question-stimulus-image img {
+  display: block;
+  max-width: min(100%, 680px);
+  height: auto;
+  border: 1px solid #d7dce2;
+  background: #fff;
+}
+
+.multi-input {
+  display: grid;
+  gap: 14px;
+  max-width: 560px;
+  margin-top: 20px;
+}
+
+.multi-input-field {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(160px, 2fr);
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.multi-input-field input,
+.schedule-table input {
+  width: 100%;
+  border: 2px solid #8a98a8;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.symmetry-interaction {
+  max-width: 520px;
+  margin-top: 18px;
+}
+
+.symmetry-canvas {
+  width: 100%;
+  border: 2px solid #8a98a8;
+  border-radius: 4px;
+  color: #20262d;
+  background: #fff;
+  cursor: crosshair;
+}
+
+.symmetry-canvas.selected {
+  border-color: #00529b;
+}
+
+.schedule-table {
+  width: min(100%, 680px);
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #7b8794;
+  padding: 9px;
+  text-align: left;
+}
+
+.schedule-table thead th {
+  background: #edf3f8;
+}
+
 * {
   box-sizing: border-box;
 }

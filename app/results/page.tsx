@@ -9,7 +9,7 @@ import {
   mathDomains,
   type Question,
 } from "@/lib/questions";
-import { checkAnswer, isManuallyScored } from "@/lib/scoring";
+import { isManuallyScored, scoreResponse, type ScoreResult } from "@/lib/scoring";
 
 interface TestData {
   grade: number;
@@ -24,6 +24,7 @@ interface QuestionResult {
   question: Question;
   userAnswer: string | string[];
   isCorrect: boolean;
+  score: ScoreResult;
 }
 
 function formatAnswer(answer: string | string[]): string {
@@ -136,11 +137,18 @@ export default function ResultsPage() {
       return;
     }
     fetchQuestions(data.grade, data.subject, data.testType || "cat", data.practiceTest || 1).then((questions) => {
-      const qResults: QuestionResult[] = questions.map((q) => ({
-        question: q,
-        userAnswer: data.answers[q.id] || "",
-        isCorrect: checkAnswer(q, data.answers[q.id] || ""),
-      }));
+      const attemptedQuestions = data.questionIds?.length
+        ? questions.filter((question) => data.questionIds.includes(question.id))
+        : questions;
+      const qResults: QuestionResult[] = attemptedQuestions.map((q) => {
+        const score = scoreResponse(q, data.answers[q.id] || "");
+        return {
+          question: q,
+          userAnswer: data.answers[q.id] || "",
+          isCorrect: score.status === "correct",
+          score,
+        };
+      });
       setLoadedResults({
         testData: data,
         results: qResults,
@@ -163,8 +171,8 @@ export default function ResultsPage() {
 
   const autoScoredResults = results.filter((r) => !isManuallyScored(r.question));
   const manualResults = results.filter((r) => isManuallyScored(r.question));
-  const totalCorrect = autoScoredResults.filter((r) => r.isCorrect).length;
-  const totalAutoQuestions = autoScoredResults.length;
+  const totalCorrect = autoScoredResults.reduce((sum, entry) => sum + entry.score.earnedPoints, 0);
+  const totalAutoQuestions = autoScoredResults.reduce((sum, entry) => sum + entry.score.maxPoints, 0);
   const totalPct = totalAutoQuestions > 0 ? Math.round((totalCorrect / totalAutoQuestions) * 100) : 0;
   const overallLevel = getPerformanceLevel(totalPct);
 
@@ -181,8 +189,9 @@ export default function ResultsPage() {
   const weakAreas: string[] = [];
   Object.entries(claimGroups).forEach(([claimStr, qResults]) => {
     const claim = parseInt(claimStr);
-    const correct = qResults.filter((r) => r.isCorrect).length;
-    const pct = Math.round((correct / qResults.length) * 100);
+    const correct = qResults.reduce((sum, entry) => sum + entry.score.earnedPoints, 0);
+    const possible = qResults.reduce((sum, entry) => sum + entry.score.maxPoints, 0);
+    const pct = Math.round((correct / possible) * 100);
     if (pct < 70) {
       weakAreas.push(claimLabels[claim] || `Claim ${claim}`);
     }
@@ -268,8 +277,9 @@ export default function ResultsPage() {
         </h2>
         {Object.entries(claimGroups).map(([claimStr, qResults]) => {
           const claim = parseInt(claimStr);
-          const correct = qResults.filter((r) => r.isCorrect).length;
-          const pct = Math.round((correct / qResults.length) * 100);
+          const correct = qResults.reduce((sum, entry) => sum + entry.score.earnedPoints, 0);
+          const possible = qResults.reduce((sum, entry) => sum + entry.score.maxPoints, 0);
+          const pct = Math.round((correct / possible) * 100);
           const level = getPerformanceLevel(pct);
 
           return (
@@ -361,6 +371,8 @@ export default function ResultsPage() {
                 <span>
                   {manual ? (
                     <span className="manual-badge">Needs Manual Scoring</span>
+                  ) : r.score.status === "partial" ? (
+                    <span className="manual-badge">Partial Credit ({r.score.earnedPoints}/{r.score.maxPoints})</span>
                   ) : r.isCorrect ? (
                     <span className="correct-badge">Correct</span>
                   ) : (

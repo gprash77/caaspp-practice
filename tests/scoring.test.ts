@@ -261,8 +261,8 @@ describe("checkAnswer", () => {
       expect(checkAnswer(q, ["B", "C"])).toBe(true);
     });
 
-    it("order independent", () => {
-      expect(checkAnswer(q, ["C", "B"])).toBe(true);
+    it("preserves Part A / Part B order", () => {
+      expect(checkAnswer(q, ["C", "B"])).toBe(false);
     });
 
     it("wrong answer", () => {

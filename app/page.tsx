@@ -42,7 +42,11 @@ export default function Home() {
   const [practiceTest, setPracticeTest] = useState("1");
 
   const handleStart = (subject: string, type: string) => {
-    router.push(`/test?grade=${grade}&subject=${subject}&type=${type}&test=${practiceTest}`);
+    const sectionKey = `caaspp-latest:${grade}:${subject}:${type}:${practiceTest}`;
+    const existingAttempt = window.sessionStorage.getItem(sectionKey);
+    const attemptId = existingAttempt || window.crypto.randomUUID();
+    window.sessionStorage.setItem(sectionKey, attemptId);
+    router.push(`/test?grade=${grade}&subject=${subject}&type=${type}&test=${practiceTest}&attempt=${attemptId}`);
   };
 
   return (
@@ -59,12 +63,13 @@ export default function Home() {
               <select
                 id="grade"
                 value={grade}
-                onChange={(e) => setGrade(e.target.value)}
+                onChange={(e) => {
+                  setGrade(e.target.value);
+                  if (e.target.value === "4") setPracticeTest("1");
+                }}
               >
                 <option value="3">Grade 3</option>
-                <option value="4" disabled>
-                  Grade 4 (Coming Soon)
-                </option>
+                <option value="4">Grade 4</option>
                 <option value="5" disabled>
                   Grade 5 (Coming Soon)
                 </option>
@@ -77,7 +82,7 @@ export default function Home() {
                 value={practiceTest}
                 onChange={(e) => setPracticeTest(e.target.value)}
               >
-                {Array.from({ length: TOTAL_PRACTICE_TESTS }, (_, i) => (
+                {Array.from({ length: grade === "4" ? 1 : TOTAL_PRACTICE_TESTS }, (_, i) => (
                   <option key={i + 1} value={String(i + 1)}>
                     Test {i + 1}{i === 0 ? " (Original)" : ""}
                   </option>

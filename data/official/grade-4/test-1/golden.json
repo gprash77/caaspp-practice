@@ -1,0 +1,42 @@
+{
+  "bankVersion": "2026-07-20.1",
+  "sections": {
+    "math-cat": {
+      "count": 31,
+      "rawPoints": 32,
+      "canonicalSha256": "bef27dff4d51e4ce1adcbb1ba0537d60f19b13b4c04cc58f9a00c315c348de38",
+      "keys": ["423","B","90","C","D","0:1|1:0|2:0","D","A|C","12","300|210|90|63|663","0:0|1:1|2:0","C","0:1|1:0|2:1","115","0:0|1:0|2:1","B|C","3.75","vertical","4|712","4|3|1 2 4","2.75","17.5","2.6","1500","300","0:0|1:0|2:0|3:0|4:0|5:0","7488","0.06","1|3","2|4","C"]
+    },
+    "math-pt": {
+      "count": 5,
+      "rawPoints": 6,
+      "canonicalSha256": "3c99c7d7c455950e23bfbeefa78fa0dd9f73b511e689e2c1674f47fdd556c2e5",
+      "keys": ["48","72","A 2-point response compares the amount of chalk needed to the amount available, determines whether more chalk is needed, and gives a justification.","9:00|10:30|10:30|10:45|10:45|12:15|12:15|1:00|1:00|2:00","A valid response agrees or disagrees with Katie and supplies a mathematically logical explanation using the diagram."]
+    },
+    "ela-cat": {
+      "count": 30,
+      "rawPoints": 30,
+      "canonicalSha256": "4c88b0e4cf6aafc1a08b829b554cc591b67d30e7411e48212d92308e02945635",
+      "keys": ["B|D","A|E|F","D","D","D|B","A","A","C|D","C","C|D","D","D","A|C|E","D|F","D","B","A|D","D","A|C","A","B","D|D","D","D|E","B|D","C","0:0|1:1|2:0|3:1","D|F","D","D|F"]
+    },
+    "ela-pt": {
+      "count": 3,
+      "rawPoints": 13,
+      "canonicalSha256": "bf826d91df7f9a50e580aec06092ddabf614a06cc5e897a852fa1e83c08261ed",
+      "keys": ["See the two-point evidence-based rubric and key elements from Source #2.","0:0|1:2|2:1","Responses will vary. See rubric."]
+    }
+  },
+  "stimulusSufficiency": [
+    {"items":"Math CAT 4","status":"exact","evidence":"Official four-model number-line crop is present and hashed."},
+    {"items":"Math CAT 8","status":"exact","evidence":"All four fraction relationships and the complete official answer family are present."},
+    {"items":"Math CAT 10","status":"exact","evidence":"All four partial products, sum field, unordered-addend rule, and area-model context are present."},
+    {"items":"Math CAT 14","status":"exact","evidence":"Official angle diagram is present and hashed."},
+    {"items":"Math CAT 18","status":"exact","evidence":"Isosceles trapezoid and vertical-line interaction are present."},
+    {"items":"Math CAT 21-22","status":"exact","evidence":"Butterfly table and official line-plot data are present."},
+    {"items":"Math CAT 26, 30","status":"exact","evidence":"Ten-strip shading model and both fruit grouping ranges are present."},
+    {"items":"Math PT 1-5","status":"exact","evidence":"Full Art Day directions stay visible; schedule restrictions and official tapered paint diagram are present."},
+    {"items":"ELA CAT 1-15","status":"exact","evidence":"Both complete reading passages remain visible for every linked item."},
+    {"items":"ELA CAT 22-27","status":"equivalent-approved","evidence":"Official transcripts are exact; local M4A narration is generated from those transcripts rather than copied from the session-scoped official audio binary."},
+    {"items":"ELA PT 1-3","status":"exact","evidence":"All three complete sources, official source images, directions, prompts, and rubrics remain visible."}
+  ]
+}
