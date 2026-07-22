@@ -44,6 +44,15 @@ const ELA_PT_FLOWS = new Map<string, ElaPtFlowDefinition>([
       part2ItemIds: [47103],
     },
   ],
+  [
+    "4:5",
+    {
+      sourcePackageId: "g4-test5-shielded-streetlights",
+      sourcePackageVersion: "2026-07-22.1",
+      part1ItemIds: [49101, 49102],
+      part2ItemIds: [49103],
+    },
+  ],
 ]);
 
 export function getElaPtFlow(grade: number, testNumber: number): ElaPtFlowDefinition | undefined {

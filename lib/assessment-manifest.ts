@@ -112,7 +112,7 @@ export const assessmentManifests: readonly AssessmentManifest[] = [
   grade4CompanionForm(2, "easy", true),
   grade4CompanionForm(3, "easy", true),
   grade4CompanionForm(4, "medium", true),
-  grade4CompanionForm(5, "hard", false),
+  grade4CompanionForm(5, "hard", true),
 ];
 
 export function assessmentKey(grade: number, testNumber: number): string {

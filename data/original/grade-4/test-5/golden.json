@@ -1,0 +1,17 @@
+{
+  "bankVersion":"2026-07-22.1",
+  "sections":{
+    "math-cat":{"count":31,"rawPoints":32,"canonicalSha256":"10c63db5198cb77a7aa079753c431f5ebb38d4aee39eec836c7a07badc44cb05","keys":["B|A","A","A|C","413525|413525","560|240|3648","B|A","A","0:0|1:1|2:2","0:0|1:1|2:2","B|B","A|B","5 5/4|3 1/2","C|A","0:0|1:1|2:2","B|A","27|324|18","0:0|0:1|1:0|1:2|2:0|2:3","2:20|1:10","8|3/4","560|3108","B|A","A|B","A|A","0:0|0:1|0:2|1:0|1:1|1:3|2:0|2:1","vertical|horizontal","76|58","A","A|B","0:1|0:2|1:1|1:2|1:3|2:1|3:1|3:2|3:3","4|4","1 3/8 + 2 5/8 + 3/4|4 3/4|1/4"]},
+    "math-pt":{"count":5,"rawPoints":6,"canonicalSha256":"e9b02151f668c2833655b551f0150f23c5c5379560df02917ad6f916988ea520","keys":["34","24|7","10:22|10:30","Disagree. The station minimums total 53 liters, and the 5-liter reserve raises the needed load to 58 liters, more than the 48-liter trip limit. Two delivery windows are available.","2|3|1|5"]},
+    "ela-cat":{"count":30,"rawPoints":30,"canonicalSha256":"cf02b26c6941b1e7db7e56a374dfa9f9e388491c06b2cd98c1678052fdfe7bfe","keys":["B","C","D|D","A|A","B|C","0:0|1:1|2:2","D|D","A","B","C","D|D","A|B","0:0|1:1|2:2","C|C","D|A","A","B|B","C","A","A|A","B|C","C","D|A","A|A","B","0:0|1:1|2:2","D|A","A|B","B|B","C|D"]},
+    "ela-pt":{"count":3,"rawPoints":13,"canonicalSha256":"7456394ab65134a8c94f79d0c23f50ecf6c93836b68bf0fcb906be395f151e42","keys":["Source 1 explains how shielding, output, color, and placement affect visibility and glare. Source 3 reports measured and observed pilot results, such as 44% lower electricity use. The twelve-week, four-block pilot cannot prove long-term or townwide results.","0:0|1:1|1:2|2:2","Responses will vary and are scored with the 4-4-2 opinion-writing rubric."]}
+  },
+  "stimulusSufficiency":[
+    {"items":"Math CAT 1-31","status":"exact","evidence":"All values, comparisons, selection counts, plot data, response fields, and Hard-form constraints are visible."},
+    {"items":"Math PT 1-5","status":"exact","evidence":"Container sizes, starting supplies, cup conversion, station minimums, trip windows, cart limits, and reserve are displayed on every linked item."},
+    {"items":"ELA CAT 1-15","status":"exact","evidence":"Both complete original sources contain all literary and informational evidence required by the questions."},
+    {"items":"ELA CAT 16-21, 28-30","status":"exact","evidence":"Each revision and research task supplies its complete sentence, excerpt, or source description."},
+    {"items":"ELA CAT 22-27","status":"exact","evidence":"All controlled-variable, evidence-limit, dune-process, and measurement facts are explicitly spoken."},
+    {"items":"ELA PT 1-3","status":"exact","evidence":"The explanatory, requirements, and pilot sources include all data, limitations, competing evidence, row cardinality, and writing directions."}
+  ]
+}

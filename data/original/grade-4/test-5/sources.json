@@ -1,0 +1,9 @@
+{
+  "bankVersion":"2026-07-22.1","reviewedOn":"2026-07-22","author":"CAASPP Practice Project","license":"Original companion content; all rights reserved for this project.",
+  "sections":[
+    {"id":"g4-t5-math-cat","itemCount":31,"rawPoints":32,"sourcePackages":["original-independent-items"]},
+    {"id":"g4-t5-math-pt","itemCount":5,"rawPoints":6,"sourcePackages":["community-water-station-delivery"]},
+    {"id":"g4-t5-ela-cat","itemCount":30,"rawPoints":30,"sourcePackages":["signals-across-the-cove","room-for-roots","model-building-shaking","sand-dunes","original-writing-and-research-items"]},
+    {"id":"g4-t5-ela-pt","itemCount":3,"rawPoints":13,"sourcePackages":["shielded-led-streetlights"]}
+  ]
+}

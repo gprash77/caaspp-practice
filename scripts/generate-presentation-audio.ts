@@ -63,6 +63,20 @@ const audioTargets: AudioTarget[] = [
   },
   {
     grade: 4,
+    testNum: 5,
+    title: "Testing a Model Building Against Shaking",
+    output: "public/audio/presentations/grade-4/test-5-testing-a-model-building-against-shaking.m4a",
+    rate: 75,
+  },
+  {
+    grade: 4,
+    testNum: 5,
+    title: "How Sand Dunes Move",
+    output: "public/audio/presentations/grade-4/test-5-how-sand-dunes-move.m4a",
+    rate: 75,
+  },
+  {
+    grade: 4,
     testNum: 2,
     title: "Watching the Moon's Appearance",
     output: "public/audio/presentations/grade-4/test-2-watching-the-moons-appearance.m4a",

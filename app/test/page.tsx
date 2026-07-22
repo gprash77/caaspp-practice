@@ -770,6 +770,7 @@ function TestContent() {
     fetchQuestions(grade, subject, testType, practiceTest)
       .then(async (loadedQuestions) => {
         setQuestions(loadedQuestions);
+        setStaleAttempt(false);
         if (!manifest || loadedQuestions.length === 0) {
           setAttemptHydrated(true);
           return;
