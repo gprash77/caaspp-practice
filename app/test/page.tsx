@@ -1161,7 +1161,7 @@ function TestContent() {
           "← Back: Go to the previous question\n" +
           "→ Next: Go to the next question\n" +
           "💾 Save: Save your progress\n" +
-          "⏸ Pause: Take a break\n\n" +
+          "Exit Test: Save your progress and return to test selection\n\n" +
           "Click question numbers to jump to any question.\n" +
           "You must answer each question before moving on."
         )} title="Help">?</button>
@@ -1198,14 +1198,14 @@ function TestContent() {
           <button
             className="tds-nav-icon"
             onClick={() => {
-              if (confirm("Are you sure you want to pause the test?")) {
+              if (confirm("Exit this test and return to test selection? Your progress is saved automatically.")) {
                 router.push("/");
               }
             }}
-            title="Pause"
+            title="Exit Test"
           >
             <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#f57c00"/><rect x="8" y="7" width="3" height="10" rx="1" fill="white"/><rect x="13" y="7" width="3" height="10" rx="1" fill="white"/></svg>
-            <span className="tds-icon-label">Pause</span>
+            <span className="tds-icon-label">Exit Test</span>
           </button>
         </div>
         <div className="tds-toolbar-right">

@@ -26,6 +26,17 @@ async function reviewEveryRenderedItem(page: Page, expectedCount: number) {
 }
 
 test.describe("Grade 4 Test 3 original easy form", () => {
+  test("uses a clear Exit Test action to return to test selection without submitting", async ({ page }) => {
+    await startTest3(page, "Mathematics — Computer Adaptive Test");
+    page.once("dialog", async (dialog) => {
+      expect(dialog.message()).toContain("Your progress is saved automatically");
+      await dialog.accept();
+    });
+    await page.getByTitle("Exit Test").click();
+    await expect(page).toHaveURL(/\/$/);
+    await expect(page.getByRole("heading", { name: "CAASPP Practice Test" })).toBeVisible();
+  });
+
   test("renders all Math CAT items and high-risk interactions", async ({ page }) => {
     await startTest3(page, "Mathematics — Computer Adaptive Test");
     await reviewEveryRenderedItem(page, 31);
