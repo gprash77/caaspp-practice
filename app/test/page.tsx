@@ -3,6 +3,17 @@
 import { useState, useEffect, useCallback, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { fetchQuestions, type Question } from "@/lib/questions";
+import { getAssessmentManifest } from "@/lib/assessment-manifest";
+import { computeQuestionBankHash } from "@/lib/bank-identity";
+import { getElaPtFlow, normalizeElaPtSegment, type ElaPtSegmentId } from "@/lib/assessment-flow";
+import {
+  attemptMatchesBank,
+  attemptStorageKey as getAttemptStorageKey,
+  resultStorageKey,
+  type AttemptRecord,
+  type SubmittedResultRecord,
+} from "@/lib/attempt-records";
+import { isManuallyScored, scoreResponse } from "@/lib/scoring";
 import ReactMarkdown from "react-markdown";
 
 function RichTextEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
@@ -473,36 +484,49 @@ function MultiInput({
   );
 }
 
-function SymmetryLine({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const linePaths: Record<string, string> = {
-    vertical: "M180 20 L180 205",
-    horizontal: "M35 115 L325 115",
-    diagonal: "M75 195 L285 25",
+function SymmetryLine({
+  config,
+  value,
+  onChange,
+}: {
+  config: NonNullable<Question["symmetry"]>;
+  value: string | string[];
+  onChange: (value: string | string[]) => void;
+}) {
+  const selected = Array.isArray(value) ? value : value ? [value] : [];
+  const toggleChoice = (choiceId: string) => {
+    let next: string[];
+    if (choiceId === config.noneChoiceId) {
+      next = selected.includes(choiceId) ? [] : [choiceId];
+    } else {
+      const withoutNone = selected.filter((id) => id !== config.noneChoiceId);
+      next = withoutNone.includes(choiceId)
+        ? withoutNone.filter((id) => id !== choiceId)
+        : [...withoutNone, choiceId];
+      if (config.maxSelections) next = next.slice(-config.maxSelections);
+    }
+    onChange(config.maxSelections === 1 ? (next[0] ?? "") : next);
   };
-  const choices = [
-    { value: "vertical", label: "Vertical line" },
-    { value: "horizontal", label: "Horizontal line" },
-    { value: "diagonal", label: "Diagonal line" },
-    { value: "none", label: "None" },
-  ];
 
   return (
     <div className="symmetry-interaction" role="group" aria-label="Draw the line of symmetry">
-      <div className={`symmetry-canvas ${value ? "selected" : ""}`} aria-label="Symmetry line preview">
-        <svg viewBox="0 0 360 220" role="img" aria-label="Isosceles trapezoid">
-          <path d="M100 55 L260 55 L300 175 L60 175 Z" fill="none" stroke="currentColor" strokeWidth="3" />
-          {linePaths[value] && <path d={linePaths[value]} stroke="#d32f2f" strokeWidth="4" />}
+      <div className={`symmetry-canvas ${selected.length ? "selected" : ""}`} aria-label="Symmetry line preview">
+        <svg viewBox="0 0 360 220" role="img" aria-label={config.shapeAlt}>
+          <path d={config.shapePath} fill="none" stroke="currentColor" strokeWidth="3" />
+          {config.choices.filter((choice) => choice.path && selected.includes(choice.id)).map((choice) => (
+            <path key={choice.id} d={choice.path} stroke="#d32f2f" strokeWidth="4" />
+          ))}
         </svg>
       </div>
       <p className="interaction-helper">Choose the direction of the line you want to place, or choose None.</p>
       <div className="symmetry-tools" aria-label="Line choices">
-        {choices.map((choice) => (
+        {config.choices.map((choice) => (
           <button
-            key={choice.value}
+            key={choice.id}
             type="button"
-            className={value === choice.value ? "selected" : ""}
-            onClick={() => onChange(choice.value)}
-            aria-pressed={value === choice.value}
+            className={selected.includes(choice.id) ? "selected" : ""}
+            onClick={() => toggleChoice(choice.id)}
+            aria-pressed={selected.includes(choice.id)}
           >
             {choice.label}
           </button>
@@ -663,7 +687,11 @@ function TestContent() {
   const testType = (searchParams.get("type") || "cat") as "cat" | "pt";
   const practiceTest = parseInt(searchParams.get("test") || "1");
   const attemptId = searchParams.get("attempt") || "legacy";
-  const attemptStorageKey = `caaspp-attempt:${attemptId}`;
+  const attemptStorageKey = getAttemptStorageKey(attemptId);
+  const manifest = getAssessmentManifest(grade, practiceTest);
+  const elaPtFlow = subject === "ela" && testType === "pt"
+    ? getElaPtFlow(grade, practiceTest)
+    : undefined;
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -673,41 +701,75 @@ function TestContent() {
   const [showAttentionDialog, setShowAttentionDialog] = useState(false);
   const [loading, setLoading] = useState(true);
   const [attemptHydrated, setAttemptHydrated] = useState(false);
+  const [bankHash, setBankHash] = useState("");
+  const [staleAttempt, setStaleAttempt] = useState(false);
+  const [notes, setNotes] = useState("");
+  const [showNotes, setShowNotes] = useState(false);
+  const [segment, setSegment] = useState<ElaPtSegmentId>("part1");
+  const [transitionAccepted, setTransitionAccepted] = useState(false);
+  const startedAtRef = useRef(new Date().toISOString());
 
   useEffect(() => {
     fetchQuestions(grade, subject, testType, practiceTest)
-      .then((loadedQuestions) => {
+      .then(async (loadedQuestions) => {
         setQuestions(loadedQuestions);
-        const bankVersion = loadedQuestions[0]?.official?.bankVersion ?? "legacy";
+        if (!manifest || loadedQuestions.length === 0) {
+          setAttemptHydrated(true);
+          return;
+        }
+        const computedBankHash = await computeQuestionBankHash(loadedQuestions);
+        setBankHash(computedBankHash);
+        const expectedIdentity = {
+          grade,
+          subject,
+          testType,
+          practiceTest,
+          bankVersion: manifest.bankVersion,
+          bankHash: computedBankHash,
+          responseSchemaVersion: manifest.responseSchemaVersion,
+        };
         try {
           const saved = window.localStorage.getItem(attemptStorageKey);
           if (saved) {
-            const parsed = JSON.parse(saved);
-            if (
-              parsed.bankVersion === bankVersion &&
-              parsed.grade === grade &&
-              parsed.subject === subject &&
-              parsed.testType === testType &&
-              parsed.practiceTest === practiceTest
-            ) {
+            const parsed = JSON.parse(saved) as Partial<AttemptRecord>;
+            if (attemptMatchesBank(parsed, expectedIdentity)) {
               setAnswers(parsed.answers ?? {});
               setFlagged(new Set(parsed.flagged ?? []));
-              setCurrentIndex(Math.min(parsed.currentIndex ?? 0, Math.max(loadedQuestions.length - 1, 0)));
+              const accepted = Boolean(parsed.transitionAccepted);
+              const restoredSegment = elaPtFlow
+                ? normalizeElaPtSegment(parsed.segment, accepted)
+                : "part1";
+              setTransitionAccepted(accepted);
+              setSegment(restoredSegment);
+              setNotes(parsed.notes ?? "");
+              const minimumIndex = accepted && elaPtFlow
+                ? Math.max(loadedQuestions.findIndex((question) => elaPtFlow.part2ItemIds.includes(question.id)), 0)
+                : 0;
+              setCurrentIndex(Math.max(
+                minimumIndex,
+                Math.min(parsed.currentIndex ?? minimumIndex, Math.max(loadedQuestions.length - 1, 0))
+              ));
+              startedAtRef.current = parsed.startedAt ?? startedAtRef.current;
+            } else {
+              setStaleAttempt(true);
             }
           }
         } catch {
-          window.localStorage.removeItem(attemptStorageKey);
+          setStaleAttempt(true);
         }
         setAttemptHydrated(true);
       })
       .finally(() => setLoading(false));
-  }, [grade, subject, testType, practiceTest, attemptStorageKey]);
+  }, [grade, subject, testType, practiceTest, attemptStorageKey, manifest, elaPtFlow]);
 
   useEffect(() => {
-    if (!attemptHydrated || questions.length === 0) return;
-    window.localStorage.setItem(attemptStorageKey, JSON.stringify({
+    if (!attemptHydrated || questions.length === 0 || !manifest || !bankHash || staleAttempt) return;
+    const now = new Date().toISOString();
+    const record: AttemptRecord = {
       attemptId,
-      bankVersion: questions[0]?.official?.bankVersion ?? "legacy",
+      bankVersion: manifest.bankVersion,
+      bankHash,
+      responseSchemaVersion: manifest.responseSchemaVersion,
       grade,
       subject,
       testType,
@@ -715,8 +777,18 @@ function TestContent() {
       answers,
       flagged: [...flagged],
       currentIndex,
-    }));
-  }, [answers, flagged, currentIndex, attemptHydrated, questions, attemptId, attemptStorageKey, grade, subject, testType, practiceTest]);
+      notes,
+      ...(elaPtFlow ? {
+        segment,
+        transitionAccepted,
+        sourcePackageId: elaPtFlow.sourcePackageId,
+        sourcePackageVersion: elaPtFlow.sourcePackageVersion,
+      } : {}),
+      startedAt: startedAtRef.current,
+      updatedAt: now,
+    };
+    window.localStorage.setItem(attemptStorageKey, JSON.stringify(record));
+  }, [answers, flagged, currentIndex, notes, segment, transitionAccepted, attemptHydrated, questions, attemptId, attemptStorageKey, grade, subject, testType, practiceTest, manifest, bankHash, staleAttempt, elaPtFlow]);
 
   const current = questions[currentIndex];
 
@@ -767,16 +839,30 @@ function TestContent() {
       setShowAttentionDialog(true);
       return;
     }
+    if (elaPtFlow && segment === "part1" && elaPtFlow.part1ItemIds.includes(current.id)) {
+      const part1Indexes = questions
+        .map((question, index) => elaPtFlow.part1ItemIds.includes(question.id) ? index : -1)
+        .filter((index) => index >= 0);
+      const lastPart1Index = part1Indexes.at(-1);
+      if (currentIndex === lastPart1Index) {
+        setSegment("part1-review");
+        return;
+      }
+    }
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
-  }, [currentIndex, questions.length, current, answers]);
+  }, [currentIndex, questions, current, answers, elaPtFlow, segment]);
 
   const goBack = useCallback(() => {
+    const firstPart2Index = elaPtFlow
+      ? questions.findIndex((question) => elaPtFlow.part2ItemIds.includes(question.id))
+      : -1;
+    if (transitionAccepted && firstPart2Index >= 0 && currentIndex <= firstPart2Index) return;
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
-  }, [currentIndex]);
+  }, [currentIndex, elaPtFlow, questions, transitionAccepted]);
 
   const handleSubmit = useCallback(() => {
     const unanswered = questions.filter((q) => {
@@ -788,21 +874,42 @@ function TestContent() {
         return;
       }
     }
-    const data = {
-      grade,
-      subject,
-      testType,
-      practiceTest,
-      attemptId,
-      bankVersion: questions[0]?.official?.bankVersion ?? "legacy",
+    if (!manifest || !bankHash) return;
+    const now = new Date().toISOString();
+    const attempt: AttemptRecord = {
+      attemptId, grade, subject, testType, practiceTest,
+      bankVersion: manifest.bankVersion,
+      bankHash,
+      responseSchemaVersion: manifest.responseSchemaVersion,
       answers,
-      questionIds: questions.map((q) => q.id),
+      flagged: [...flagged],
+      currentIndex,
+      notes,
+      ...(elaPtFlow ? {
+        segment,
+        transitionAccepted,
+        sourcePackageId: elaPtFlow.sourcePackageId,
+        sourcePackageVersion: elaPtFlow.sourcePackageVersion,
+      } : {}),
+      startedAt: startedAtRef.current,
+      updatedAt: now,
     };
-    sessionStorage.setItem(`testResults:${attemptId}`, JSON.stringify(data));
-    sessionStorage.setItem("testResults", JSON.stringify(data));
+    const objectiveScores = Object.fromEntries(
+      questions
+        .filter((question) => !isManuallyScored(question))
+        .map((question) => [question.id, scoreResponse(question, answers[question.id] ?? "")])
+    );
+    const data: SubmittedResultRecord = {
+      attempt,
+      questionIds: questions.map((question) => question.id),
+      objectiveScores,
+      manualScores: {},
+      submittedAt: now,
+    };
+    localStorage.setItem(resultStorageKey(attemptId), JSON.stringify(data));
     sessionStorage.removeItem(`caaspp-latest:${grade}:${subject}:${testType}:${practiceTest}`);
-    router.push("/results");
-  }, [grade, subject, testType, practiceTest, attemptId, answers, questions, router]);
+    router.push(`/results?attempt=${encodeURIComponent(attemptId)}`);
+  }, [grade, subject, testType, practiceTest, attemptId, answers, flagged, currentIndex, notes, segment, transitionAccepted, questions, router, manifest, bankHash, elaPtFlow]);
 
   if (loading) {
     return <div style={{ padding: 40, textAlign: "center" }}>Loading...</div>;
@@ -832,6 +939,99 @@ function TestContent() {
     );
   }
 
+  if (staleAttempt) {
+    return (
+      <div style={{ maxWidth: 680, margin: "64px auto", padding: 32 }}>
+        <h1>This saved attempt uses a different test version</h1>
+        <p>
+          Your prior work has been preserved and will not be overwritten or rescored against the
+          current question bank. Start a new attempt to continue with this version.
+        </p>
+        <button
+          className="tds-submit-btn"
+          onClick={() => {
+            const newAttemptId = window.crypto.randomUUID();
+            sessionStorage.setItem(
+              `caaspp-latest:${grade}:${subject}:${testType}:${practiceTest}`,
+              newAttemptId
+            );
+            router.push(`/test?grade=${grade}&subject=${subject}&type=${testType}&test=${practiceTest}&attempt=${newAttemptId}`);
+          }}
+        >
+          START NEW ATTEMPT
+        </button>
+      </div>
+    );
+  }
+
+  if (elaPtFlow && segment === "part1-review") {
+    const part1Questions = questions.filter((question) => elaPtFlow.part1ItemIds.includes(question.id));
+    return (
+      <div className="results-container" data-testid="ela-pt-part1-review">
+        <div className="results-header"><h1>Part 1 Review</h1></div>
+        <div className="results-body">
+          <p>Review both research tasks before moving to Part 2. Once you continue, you cannot return to Part 1.</p>
+          {part1Questions.map((question, index) => (
+            <div className="question-review" key={question.id}>
+              <div className="question-review-header">
+                <span><strong>Research Task {index + 1}</strong></span>
+                <span>{isQuestionAnswered(question, answers[question.id]) ? "Answered" : "Not answered"}</span>
+              </div>
+              <button
+                className="retake-btn"
+                onClick={() => {
+                  setCurrentIndex(questions.findIndex((candidate) => candidate.id === question.id));
+                  setSegment("part1");
+                }}
+              >
+                REVIEW TASK {index + 1}
+              </button>
+            </div>
+          ))}
+          <button className="tds-submit-btn" onClick={() => setSegment("part2-transition")}>
+            CONTINUE TO PART 2
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (elaPtFlow && segment === "part2-transition") {
+    return (
+      <div className="results-container" data-testid="ela-pt-part2-transition">
+        <div className="results-header"><h1>Part 2 — Writing Task</h1></div>
+        <div className="results-body">
+          <p>
+            In Part 2, you will write one informational article using the research sources. Your
+            sources and Global Notes will remain available. You cannot return to the Part 1 research
+            tasks after beginning Part 2.
+          </p>
+          <label style={{ display: "block", fontWeight: 600, marginBottom: 8 }} htmlFor="transition-notes">
+            Global Notes
+          </label>
+          <textarea
+            id="transition-notes"
+            value={notes}
+            onChange={(event) => setNotes(event.target.value)}
+            rows={8}
+            style={{ width: "100%", marginBottom: 20 }}
+          />
+          <button
+            className="tds-submit-btn"
+            onClick={() => {
+              const firstPart2Index = questions.findIndex((question) => elaPtFlow.part2ItemIds.includes(question.id));
+              setTransitionAccepted(true);
+              setSegment("part2");
+              setCurrentIndex(Math.max(firstPart2Index, 0));
+            }}
+          >
+            BEGIN PART 2
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   const isAnswered = (id: number) => isQuestionAnswered(
     questions.find((q) => q.id === id) as Question,
     answers[id]
@@ -844,6 +1044,16 @@ function TestContent() {
   const hasPassage = Boolean(current.passage || current.studentDirections);
   const passageKey = current.passageTitle ?? (current.studentDirections ? `${subject}-${testType}-directions` : null);
   const showPassage = passageKey === null || collapsedPassageKey !== passageKey;
+  const visibleQuestionEntries = questions
+    .map((question, index) => ({ question, index }))
+    .filter(({ question }) => {
+      if (!elaPtFlow) return true;
+      return transitionAccepted
+        ? elaPtFlow.part2ItemIds.includes(question.id)
+        : elaPtFlow.part1ItemIds.includes(question.id);
+    });
+  const firstVisibleIndex = visibleQuestionEntries[0]?.index ?? 0;
+  const canGoBack = currentIndex > firstVisibleIndex;
 
   return (
     <div className="tds-wrapper">
@@ -878,7 +1088,7 @@ function TestContent() {
         <div className="tds-toolbar-left">
           <button
             className="tds-nav-icon"
-            disabled={currentIndex === 0}
+            disabled={!canGoBack}
             onClick={goBack}
             title="Back"
           >
@@ -915,6 +1125,12 @@ function TestContent() {
           </button>
         </div>
         <div className="tds-toolbar-right">
+          {elaPtFlow && (
+            <button className="tds-tool-icon" title="Global Notes" onClick={() => setShowNotes(true)}>
+              <span aria-hidden="true">📝</span>
+              <span className="tds-icon-label">Global Notes</span>
+            </button>
+          )}
           <button className="tds-tool-icon" title="Line Reader">
             <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2"/><line x1="6" y1="12" x2="18" y2="12" stroke="currentColor" strokeWidth="2"/></svg>
             <span className="tds-icon-label">Line Reader</span>
@@ -932,7 +1148,7 @@ function TestContent() {
 
       {/* Row 3: Question progress dots */}
       <div className="tds-progress-dots">
-        {questions.map((q, i) => (
+        {visibleQuestionEntries.map(({ question: q, index: i }) => (
           <div
             key={q.id}
             className={`tds-dot ${i === currentIndex ? "current" : ""} ${
@@ -997,7 +1213,7 @@ function TestContent() {
           {/* Question number boxes (top of question panel for ELA) */}
           {hasPassage && (
             <div className="tds-question-numbers">
-              {questions.map((q, i) => (
+              {visibleQuestionEntries.map(({ question: q, index: i }, visibleIndex) => (
                 <button
                   key={q.id}
                   className={`tds-q-num ${i === currentIndex ? "current" : ""} ${
@@ -1005,7 +1221,7 @@ function TestContent() {
                   }`}
                   onClick={() => setCurrentIndex(i)}
                 >
-                  {i + 1}
+                  {transitionAccepted ? visibleIndex + 1 : i + 1}
                 </button>
               ))}
             </div>
@@ -1146,9 +1362,9 @@ function TestContent() {
 
           {current.type === "multi-input" && current.responseFields && (
             <>
-              {current.id === 40030 && (
+              {current.interactionHelp && (
                 <p className="interaction-helper fruit-count-helper" role="note">
-                  Accessible response: enter the number of fruit pieces for each weight range. You do not need to drag the fruit.
+                  {current.interactionHelp}
                 </p>
               )}
               <MultiInput
@@ -1159,10 +1375,11 @@ function TestContent() {
             </>
           )}
 
-          {current.type === "symmetry-line" && (
+          {current.type === "symmetry-line" && current.symmetry && (
             <SymmetryLine
-              value={(answers[current.id] as string) || ""}
-              onChange={handleTextInput}
+              config={current.symmetry}
+              value={answers[current.id] || ""}
+              onChange={(value) => setAnswers((previous) => ({ ...previous, [current.id]: value }))}
             />
           )}
 
@@ -1214,11 +1431,28 @@ function TestContent() {
       </div>
 
       {/* Submit button at bottom for last question */}
-      {currentIndex === questions.length - 1 && (
+      {currentIndex === questions.length - 1 && (!elaPtFlow || transitionAccepted) && (
         <div className="tds-submit-bar">
           <button className="tds-submit-btn" onClick={handleSubmit}>
             SUBMIT TEST
           </button>
+        </div>
+      )}
+
+      {showNotes && (
+        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.45)", display: "grid", placeItems: "center", zIndex: 50 }}>
+          <div role="dialog" aria-modal="true" aria-labelledby="global-notes-title" style={{ background: "white", width: "min(680px, 92vw)", padding: 24, borderRadius: 8 }}>
+            <h2 id="global-notes-title">Global Notes</h2>
+            <p>These notes stay available in both parts of the performance task.</p>
+            <textarea
+              aria-label="Global Notes"
+              value={notes}
+              onChange={(event) => setNotes(event.target.value)}
+              rows={12}
+              style={{ width: "100%" }}
+            />
+            <button className="tds-submit-btn" onClick={() => setShowNotes(false)}>SAVE AND CLOSE</button>
+          </div>
         </div>
       )}
 

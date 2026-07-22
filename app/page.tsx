@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { TOTAL_PRACTICE_TESTS } from "@/lib/questions";
+import { listAvailableAssessments } from "@/lib/assessment-manifest";
 
 const tests = [
   {
@@ -40,6 +40,7 @@ export default function Home() {
   const router = useRouter();
   const [grade, setGrade] = useState("3");
   const [practiceTest, setPracticeTest] = useState("1");
+  const availableTests = listAvailableAssessments(Number(grade));
 
   const handleStart = (subject: string, type: string) => {
     const sectionKey = `caaspp-latest:${grade}:${subject}:${type}:${practiceTest}`;
@@ -65,7 +66,8 @@ export default function Home() {
                 value={grade}
                 onChange={(e) => {
                   setGrade(e.target.value);
-                  if (e.target.value === "4") setPracticeTest("1");
+                  const firstAvailable = listAvailableAssessments(Number(e.target.value))[0];
+                  setPracticeTest(String(firstAvailable?.testNumber ?? 1));
                 }}
               >
                 <option value="3">Grade 3</option>
@@ -82,9 +84,9 @@ export default function Home() {
                 value={practiceTest}
                 onChange={(e) => setPracticeTest(e.target.value)}
               >
-                {Array.from({ length: grade === "4" ? 1 : TOTAL_PRACTICE_TESTS }, (_, i) => (
-                  <option key={i + 1} value={String(i + 1)}>
-                    Test {i + 1}{i === 0 ? " (Original)" : ""}
+                {availableTests.map((assessment) => (
+                  <option key={assessment.testNumber} value={String(assessment.testNumber)}>
+                    Test {assessment.testNumber}{assessment.testNumber === 1 ? " (Original)" : ""}
                   </option>
                 ))}
               </select>

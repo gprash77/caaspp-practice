@@ -58,14 +58,49 @@ test.describe("Grade 4 Test 1 official baseline", () => {
     await expect(page.locator(".tds-passage-body")).toContainText("Each balloon needs between fifty and seventy wranglers.");
   });
 
-  test("renders all 3 ELA PT items with the complete source set and source images", async ({ page }) => {
+  test("uses the explicit ELA PT Part 1 review and forward-only Part 2 transition", async ({ page }) => {
     await startGrade4(page, "ELA — Performance Task Segment");
-    await reviewEveryRenderedItem(page, 3);
+    await expect(page.locator(".tds-progress-dots .tds-dot")).toHaveCount(2);
     const passage = page.locator(".tds-passage-body");
     await expect(passage).toContainText("It's a Cold (Hot, Dry, Dark) Cruel World!");
     await expect(passage).toContainText("Animal Architects");
     await expect(passage).toContainText("Don't Step in that Ecosystem!");
     await expect(passage.locator("img")).toHaveCount(3);
+
+    await page.getByTitle("Global Notes").click();
+    await page.getByRole("textbox", { name: "Global Notes" }).fill("Source notes persist across both parts.");
+    await page.getByRole("button", { name: "SAVE AND CLOSE" }).click();
+    await page.locator(".short-answer-input").fill("A response using two details from Source 2.");
+    await page.locator(".tds-progress-dots .tds-dot").nth(1).click({ force: true });
+    await page.locator(".grid-match-checkbox").first().check();
+    await page.getByTitle("Next").click();
+    await expect(page.getByTestId("ela-pt-part1-review")).toBeVisible();
+    await expect(page.getByText("Research Task 1")).toBeVisible();
+    await expect(page.getByText("Research Task 2")).toBeVisible();
+    await page.getByRole("button", { name: "CONTINUE TO PART 2" }).click();
+    await expect(page.getByTestId("ela-pt-part2-transition")).toBeVisible();
+    await expect(page.getByRole("textbox", { name: "Global Notes" })).toHaveValue("Source notes persist across both parts.");
+    await page.getByRole("button", { name: "BEGIN PART 2" }).click();
+    await expect(page.locator(".tds-progress-dots .tds-dot")).toHaveCount(1);
+    await expect(page.locator(".tds-question-text")).toContainText("informational article");
+    await expect(page.getByTitle("Back")).toBeDisabled();
+    await page.getByTitle("Global Notes").click();
+    await expect(page.getByRole("textbox", { name: "Global Notes" })).toHaveValue("Source notes persist across both parts.");
+    await page.getByRole("button", { name: "SAVE AND CLOSE" }).click();
+    await page.locator(".rich-editor-body").fill("An informational article using the research sources.");
+    await page.getByRole("button", { name: "SUBMIT TEST" }).click();
+    await expect(page).toHaveURL(/\/results\?attempt=/);
+    await expect(page.getByText(/Part 1 — Research Task 1/)).toBeVisible();
+    await expect(page.getByText(/Part 1 — Research Task 2/)).toBeVisible();
+    await expect(page.getByText(/Part 2 — Full Write/)).toBeVisible();
+
+    const firstTask = page.locator(".question-review").first();
+    await firstTask.getByLabel("Scorer name").fill("Parent Reviewer");
+    await firstTask.getByLabel("Awarded points").fill("0");
+    await firstTask.getByRole("button", { name: "SAVE MANUAL SCORE" }).click();
+    await expect(firstTask.getByText("Manually Scored (0/2)")).toBeVisible();
+    await page.reload();
+    await expect(page.locator(".question-review").first().getByText("Manually Scored (0/2)")).toBeVisible();
   });
 
   test("supports every new Math interaction family", async ({ page }) => {
@@ -118,19 +153,44 @@ test.describe("Grade 4 Test 1 official baseline", () => {
   });
 
   test("results reports official partial credit", async ({ page }) => {
-    await page.goto("/");
-    await page.evaluate(() => {
-      sessionStorage.setItem("testResults", JSON.stringify({
-        grade: 4,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 1,
-        attemptId: "partial-credit-check",
-        answers: { 40019: ["3", "222"] },
-        questionIds: [40019],
-      }));
-    });
-    await page.goto("/results");
+    await startGrade4(page, "Mathematics — Computer Adaptive Test");
+    const dots = page.locator(".tds-progress-dots .tds-dot");
+    await dots.nth(18).click({ force: true });
+    await page.locator(".multi-input-field input").nth(0).fill("3");
+    await page.locator(".multi-input-field input").nth(1).fill("222");
+    await dots.nth(30).click({ force: true });
+    page.on("dialog", (dialog) => dialog.accept());
+    await page.getByRole("button", { name: "SUBMIT TEST" }).click();
+    await expect(page).toHaveURL(/\/results\?attempt=/);
     await expect(page.getByText("Partial Credit (1/2)")).toBeVisible();
+  });
+
+  test("keeps high-risk Grade 4 PT controls usable at a narrow viewport", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await startGrade4(page, "ELA — Performance Task Segment");
+    await expect(page.locator(".tds-question-text")).toBeVisible();
+    await page.getByTitle("Global Notes").click();
+    const notes = page.getByRole("textbox", { name: "Global Notes" });
+    await expect(notes).toBeVisible();
+    await notes.fill("Narrow viewport note");
+    await expect(page.getByRole("button", { name: "SAVE AND CLOSE" })).toBeVisible();
+    const viewportLayout = await page.evaluate(() => ({
+      overflow: document.documentElement.scrollWidth - window.innerWidth,
+      mediaMatches: matchMedia("(max-width: 700px)").matches,
+      sessionDisplay: getComputedStyle(document.querySelector(".tds-session-label")!).display,
+      offenders: [...document.querySelectorAll("*")]
+        .map((element) => {
+          const bounds = element.getBoundingClientRect();
+          return {
+            tag: element.tagName,
+            className: typeof element.className === "string" ? element.className : "",
+            right: Math.round(bounds.right),
+            width: Math.round(bounds.width),
+          };
+        })
+        .filter((entry) => entry.right > window.innerWidth + 1 || entry.width > window.innerWidth + 1)
+        .slice(0, 8),
+    }));
+    expect(viewportLayout.overflow, JSON.stringify(viewportLayout)).toBeLessThanOrEqual(1);
   });
 });

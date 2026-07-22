@@ -23,6 +23,7 @@ import { practiceTest17Questions } from "./practice-test-17";
 import { practiceTest18Questions } from "./practice-test-18";
 import { grade4MathCat, grade4MathPt } from "./grade4-test1-math";
 import { grade4ElaCat, grade4ElaPt } from "./grade4-test1-ela";
+import { getAssessmentManifest } from "./assessment-manifest";
 
 export interface Question {
   id: number;
@@ -88,6 +89,7 @@ export interface Question {
   rubric: string;
   points: number;
   evidenceStatement?: string;
+  interactionHelp?: string;
   explanation?: string;
   practiceTest?: number;
   audio?: {
@@ -121,18 +123,37 @@ export interface Question {
     minimumActivityMinutes: number;
     minimumBreakMinutes: number;
     breakAndLunchMinutes: number;
+    breakActivity?: string;
+    lunchActivity?: string;
+  };
+  symmetry?: {
+    shapePath: string;
+    shapeAlt: string;
+    choices: { id: string; label: string; path?: string }[];
+    maxSelections?: number;
+    noneChoiceId: string;
   };
   /** Independent scoring cases are stored outside the runtime bank. */
   scoringRule?:
     | { kind: "exact" }
     | { kind: "ordered-fields" }
-    | { kind: "grade4-math-item-10" }
-    | { kind: "grade4-math-item-19" }
-    | { kind: "grade4-math-item-20" }
-    | { kind: "grade4-math-item-29" }
-    | { kind: "grade4-math-item-30" }
+    | { kind: "unordered-set"; acceptedAnswers: string[] }
+    | { kind: "numeric-range"; greaterThan?: number; lessThan?: number; min?: number; max?: number; integer?: boolean }
+    | { kind: "constraints"; constraint: ResponseConstraint }
+    | { kind: "partial-credit"; tiers: { points: number; constraint: ResponseConstraint }[] }
+    | { kind: "schedule" }
     | { kind: "manual-rubric" };
 }
+
+export type ResponseConstraint =
+  | { kind: "all"; constraints: ResponseConstraint[] }
+  | { kind: "any"; constraints: ResponseConstraint[] }
+  | { kind: "field-equals"; index: number; value: string }
+  | { kind: "field-one-of"; index: number; values: string[] }
+  | { kind: "field-number"; index: number; min?: number; max?: number; integer?: boolean; endsWith?: number }
+  | { kind: "field-product"; factor: number; multiplierIndex: number; productIndex: number }
+  | { kind: "field-unordered-set"; indexes: number[]; values: string[] }
+  | { kind: "field-factor-list"; numberIndex: number; countIndex: number; factorsIndex: number };
 
 const presentationAudioRollout: Record<number, Record<string, Question["audio"]>> = {
   1: {
@@ -2223,7 +2244,10 @@ export function getQuestions(
   testType: "cat" | "pt" = "cat",
   practiceTest: number = 1
 ): Question[] {
-  if (practiceTest > 1) {
+  const manifest = getAssessmentManifest(grade, practiceTest);
+  if (!manifest) return [];
+
+  if (grade === 3 && practiceTest > 1) {
     const dedicatedPracticeTests: Record<number, Question[]> = {
       2: practiceTest2Questions,
       3: practiceTest3Questions,
@@ -2277,10 +2301,10 @@ export function getQuestions(
   let questions: Question[] = [];
   if (grade === 3 && subject === "math") questions = grade3Math;
   if (grade === 3 && subject === "ela") questions = grade3ELA;
-  if (grade === 4 && subject === "math") {
+  if (grade === 4 && practiceTest === 1 && subject === "math") {
     questions = testType === "cat" ? grade4MathCat : grade4MathPt;
   }
-  if (grade === 4 && subject === "ela") {
+  if (grade === 4 && practiceTest === 1 && subject === "ela") {
     questions = testType === "cat" ? grade4ElaCat : grade4ElaPt;
   }
   return mergeExplanations(
@@ -2295,6 +2319,9 @@ export async function fetchQuestions(
   testType: "cat" | "pt" = "cat",
   practiceTest: number = 1
 ): Promise<Question[]> {
+  const manifest = getAssessmentManifest(grade, practiceTest);
+  if (!manifest) return [];
+
   // Local question banks are the source of truth while Test 1 baseline work is in progress.
   const localQuestions = getQuestions(grade, subject, testType, practiceTest);
   if (localQuestions.length > 0) {
@@ -2308,6 +2335,7 @@ export async function fetchQuestions(
     .eq("grade", grade)
     .eq("subject", subject)
     .eq("test_type", testType)
+    .eq("practice_test", practiceTest)
     .order("id");
 
   if (error) {
@@ -2315,7 +2343,8 @@ export async function fetchQuestions(
     return localQuestions;
   }
 
-  if (!data || data.length === 0 || data.length < localQuestions.length) {
+  const expectedCount = manifest.sections[`${subject}-${testType}`].itemCount;
+  if (!data || data.length !== expectedCount) {
     return localQuestions;
   }
 

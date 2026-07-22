@@ -1439,3 +1439,91 @@ body {
 .retake-btn:hover {
   background: var(--tds-dark-blue);
 }
+
+@media (max-width: 700px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .tds-info-bar {
+    flex-wrap: wrap;
+    padding: 6px 8px;
+  }
+
+  .tds-progress-bar {
+    flex-basis: 80px;
+  }
+
+  .tds-progress-text {
+    white-space: normal;
+    font-size: 11px;
+  }
+
+  .tds-session-label {
+    display: none;
+  }
+
+  .tds-toolbar {
+    align-items: flex-start;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 4px 6px;
+  }
+
+  .tds-toolbar-left,
+  .tds-toolbar-right {
+    gap: 0;
+  }
+
+  .tds-nav-icon,
+  .tds-tool-icon {
+    min-width: 44px;
+    padding: 4px 5px;
+  }
+
+  .tds-content.split-view {
+    flex-direction: column;
+  }
+
+  .tds-passage-panel {
+    flex: 0 0 auto;
+    max-height: 46vh;
+    border-right: 0;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .tds-passage-toggle {
+    display: none;
+  }
+
+  .tds-passage-body,
+  .tds-question-panel {
+    padding: 14px;
+  }
+
+  .tds-question-numbers {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .question-review-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .results-body {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .question-review-body input,
+  .question-review-body select,
+  .question-review-body textarea {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+  }
+}

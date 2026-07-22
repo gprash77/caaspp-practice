@@ -4,25 +4,25 @@
     "math-cat": {
       "count": 31,
       "rawPoints": 32,
-      "canonicalSha256": "bef27dff4d51e4ce1adcbb1ba0537d60f19b13b4c04cc58f9a00c315c348de38",
+      "canonicalSha256": "10f9418f2d3f721848179554261d134164e38c4f47620b4f7247f9707a2884d2",
       "keys": ["423","B","90","C","D","0:1|1:0|2:0","D","A|C","12","300|210|90|63|663","0:0|1:1|2:0","C","0:1|1:0|2:1","115","0:0|1:0|2:1","B|C","3.75","vertical","4|712","4|3|1 2 4","2.75","17.5","2.6","1500","300","0:0|1:0|2:0|3:0|4:0|5:0","7488","0.06","1|3","2|4","C"]
     },
     "math-pt": {
       "count": 5,
       "rawPoints": 6,
-      "canonicalSha256": "3c99c7d7c455950e23bfbeefa78fa0dd9f73b511e689e2c1674f47fdd556c2e5",
+      "canonicalSha256": "e060b1860c10302d90af153e821ae1c730c440729271e0b20885ba32c7b29f44",
       "keys": ["48","72","A 2-point response compares the amount of chalk needed to the amount available, determines whether more chalk is needed, and gives a justification.","9:00|10:30|10:30|10:45|10:45|12:15|12:15|1:00|1:00|2:00","A valid response agrees or disagrees with Katie and supplies a mathematically logical explanation using the diagram."]
     },
     "ela-cat": {
       "count": 30,
       "rawPoints": 30,
-      "canonicalSha256": "4c88b0e4cf6aafc1a08b829b554cc591b67d30e7411e48212d92308e02945635",
+      "canonicalSha256": "8aac4b92bab379e4eaa2f648896c583dbeb72c4cafaca6149c4f5c0c30dea6fe",
       "keys": ["B|D","A|E|F","D","D","D|B","A","A","C|D","C","C|D","D","D","A|C|E","D|F","D","B","A|D","D","A|C","A","B","D|D","D","D|E","B|D","C","0:0|1:1|2:0|3:1","D|F","D","D|F"]
     },
     "ela-pt": {
       "count": 3,
       "rawPoints": 13,
-      "canonicalSha256": "bf826d91df7f9a50e580aec06092ddabf614a06cc5e897a852fa1e83c08261ed",
+      "canonicalSha256": "18c2000c40b26cde4b7c1ba0fe876ad4ba7541f39cf8c4386f7572ac4dd26fe2",
       "keys": ["See the two-point evidence-based rubric and key elements from Source #2.","0:0|1:2|2:1","Responses will vary. See rubric."]
     }
   },

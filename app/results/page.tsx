@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   fetchQuestions,
   mathClaims,
@@ -9,22 +9,38 @@ import {
   mathDomains,
   type Question,
 } from "@/lib/questions";
-import { isManuallyScored, scoreResponse, type ScoreResult } from "@/lib/scoring";
-
-interface TestData {
-  grade: number;
-  subject: "math" | "ela";
-  testType?: "cat" | "pt";
-  practiceTest?: number;
-  answers: Record<number, string | string[]>;
-  questionIds: number[];
-}
+import { isManuallyScored, type ScoreResult } from "@/lib/scoring";
+import { getAssessmentManifest } from "@/lib/assessment-manifest";
+import { computeQuestionBankHash } from "@/lib/bank-identity";
+import { getElaPtFlow } from "@/lib/assessment-flow";
+import { resultStorageKey, type AttemptRecord, type SubmittedResultRecord } from "@/lib/attempt-records";
+import {
+  createManualScore,
+  getManualRubric,
+  type ManualRubricDefinition,
+  type ManualScoreRecord,
+  type ScorerRole,
+} from "@/lib/manual-rubrics";
 
 interface QuestionResult {
   question: Question;
   userAnswer: string | string[];
   isCorrect: boolean;
   score: ScoreResult;
+  manualScore?: ManualScoreRecord;
+}
+
+function scoreFromManual(question: Question, manualScore?: ManualScoreRecord): ScoreResult {
+  if (!manualScore) return { earnedPoints: 0, maxPoints: question.points, status: "manual" };
+  return {
+    earnedPoints: manualScore.awardedPoints,
+    maxPoints: question.points,
+    status: manualScore.awardedPoints === question.points
+      ? "correct"
+      : manualScore.awardedPoints > 0
+        ? "partial"
+        : "incorrect",
+  };
 }
 
 function formatAnswer(answer: string | string[]): string {
@@ -41,7 +57,11 @@ function getManualAnswerKey(question: Question): string | null {
     : question.correctAnswer;
 
   const normalized = answer.trim().toLowerCase();
-  if (!normalized || normalized === "responses will vary. see rubric.") {
+  if (
+    !normalized ||
+    normalized === "responses will vary. see rubric." ||
+    normalized.startsWith("see the two-point")
+  ) {
     return null;
   }
 
@@ -115,41 +135,172 @@ function getPerformanceLevel(pct: number): { label: string; color: string; class
   return { label: "Below Standard", color: "#c62828", className: "struggling" };
 }
 
-export default function ResultsPage() {
+function ManualRubricForm({
+  rubric,
+  existing,
+  onSave,
+}: {
+  rubric: ManualRubricDefinition;
+  existing?: ManualScoreRecord;
+  onSave: (record: ManualScoreRecord) => void;
+}) {
+  const [scorerName, setScorerName] = useState(existing?.scorerName ?? "");
+  const [scorerRole, setScorerRole] = useState<ScorerRole>(existing?.scorerRole ?? "parent");
+  const [scoredAt, setScoredAt] = useState(
+    existing?.scoredAt ? existing.scoredAt.slice(0, 10) : new Date().toISOString().slice(0, 10)
+  );
+  const [comments, setComments] = useState(existing?.comments ?? "");
+  const [noScore, setNoScore] = useState(existing?.noScore ?? false);
+  const [awardedPoints, setAwardedPoints] = useState(String(existing?.awardedPoints ?? 0));
+  const [traits, setTraits] = useState<Record<string, string>>(
+    rubric.kind === "traits"
+      ? Object.fromEntries(rubric.traits.map((trait) => [trait.id, String(existing?.traits?.[trait.id] ?? 0)]))
+      : {}
+  );
+  const [errors, setErrors] = useState<string[]>([]);
+
+  return (
+    <div style={{ borderTop: "1px solid #ffe082", marginTop: 14, paddingTop: 14 }}>
+      <h4 style={{ margin: "0 0 12px" }}>Enter Manual Score</h4>
+      {rubric.kind === "points" ? (
+        <label style={{ display: "block", marginBottom: 10 }}>
+          Awarded points (0–{rubric.maxPoints})
+          <input
+            aria-label="Awarded points"
+            type="number"
+            min={0}
+            max={rubric.maxPoints}
+            value={awardedPoints}
+            disabled={noScore}
+            onChange={(event) => setAwardedPoints(event.target.value)}
+          />
+        </label>
+      ) : (
+        rubric.traits.map((trait) => (
+          <label key={trait.id} style={{ display: "block", marginBottom: 10 }}>
+            {trait.label} ({trait.min}–{trait.max})
+            <input
+              aria-label={trait.label}
+              type="number"
+              min={trait.min}
+              max={trait.max}
+              value={traits[trait.id]}
+              disabled={noScore}
+              onChange={(event) => setTraits((current) => ({ ...current, [trait.id]: event.target.value }))}
+            />
+          </label>
+        ))
+      )}
+      <label style={{ display: "block", marginBottom: 10 }}>
+        <input type="checkbox" checked={noScore} onChange={(event) => setNoScore(event.target.checked)} />
+        {" "}NS — insufficient, off-topic/off-purpose, copied, or not in English
+      </label>
+      <label style={{ display: "block", marginBottom: 10 }}>
+        Scorer name
+        <input aria-label="Scorer name" value={scorerName} onChange={(event) => setScorerName(event.target.value)} />
+      </label>
+      <label style={{ display: "block", marginBottom: 10 }}>
+        Scorer role
+        <select aria-label="Scorer role" value={scorerRole} onChange={(event) => setScorerRole(event.target.value as ScorerRole)}>
+          <option value="parent">Parent</option>
+          <option value="teacher">Teacher</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label style={{ display: "block", marginBottom: 10 }}>
+        Scoring date
+        <input aria-label="Scoring date" type="date" value={scoredAt} onChange={(event) => setScoredAt(event.target.value)} />
+      </label>
+      <label style={{ display: "block", marginBottom: 10 }}>
+        Comments (optional)
+        <textarea aria-label="Scoring comments" value={comments} onChange={(event) => setComments(event.target.value)} rows={3} />
+      </label>
+      {errors.length > 0 && <ul role="alert">{errors.map((error) => <li key={error}>{error}</li>)}</ul>}
+      <button
+        className="retake-btn"
+        onClick={() => {
+          const outcome = createManualScore(rubric, {
+            awardedPoints: Number(awardedPoints),
+            traits: Object.fromEntries(Object.entries(traits).map(([key, value]) => [key, Number(value)])),
+            noScore,
+            scorerName,
+            scorerRole,
+            scoredAt,
+            comments,
+          });
+          setErrors(outcome.errors);
+          if (outcome.record) onSave(outcome.record);
+        }}
+      >
+        SAVE MANUAL SCORE
+      </button>
+    </div>
+  );
+}
+
+function ResultsContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const attemptId = searchParams.get("attempt");
   const [loadedResults, setLoadedResults] = useState<{
-    testData: TestData;
+    record: SubmittedResultRecord;
+    testData: AttemptRecord;
     results: QuestionResult[];
   } | null>(null);
   const [expandedQ, setExpandedQ] = useState<Set<number>>(new Set());
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
-    const stored = sessionStorage.getItem("testResults");
+    if (!attemptId) {
+      Promise.resolve().then(() => setLoadError("This results link is missing its attempt ID."));
+      return;
+    }
+    const stored = localStorage.getItem(resultStorageKey(attemptId));
     if (!stored) {
-      router.push("/");
+      Promise.resolve().then(() => setLoadError("No saved results were found for this attempt."));
       return;
     }
-    let data: TestData;
+    let record: SubmittedResultRecord;
     try {
-      data = JSON.parse(stored);
+      record = JSON.parse(stored) as SubmittedResultRecord;
     } catch {
-      router.push("/");
+      Promise.resolve().then(() => setLoadError("The saved results record is malformed."));
       return;
     }
-    fetchQuestions(data.grade, data.subject, data.testType || "cat", data.practiceTest || 1).then((questions) => {
-      const attemptedQuestions = data.questionIds?.length
-        ? questions.filter((question) => data.questionIds.includes(question.id))
-        : questions;
+    const data = record.attempt;
+    fetchQuestions(data.grade, data.subject, data.testType, data.practiceTest).then(async (questions) => {
+      const manifest = getAssessmentManifest(data.grade, data.practiceTest);
+      const currentHash = questions.length > 0 ? await computeQuestionBankHash(questions) : "";
+      if (
+        !manifest ||
+        manifest.bankVersion !== data.bankVersion ||
+        manifest.responseSchemaVersion !== data.responseSchemaVersion ||
+        currentHash !== data.bankHash
+      ) {
+        setLoadError("These results belong to a different test-bank or response-schema version. They were not rescored.");
+        return;
+      }
+      const attemptedQuestions = questions.filter((question) => record.questionIds.includes(question.id));
+      if (attemptedQuestions.length !== record.questionIds.length) {
+        setLoadError("The exact attempted question bank is no longer available. These results were not rescored.");
+        return;
+      }
       const qResults: QuestionResult[] = attemptedQuestions.map((q) => {
-        const score = scoreResponse(q, data.answers[q.id] || "");
+        const manualScore = record.manualScores[q.id];
+        const score = isManuallyScored(q)
+          ? scoreFromManual(q, manualScore)
+          : record.objectiveScores[q.id];
+        if (!score) throw new Error(`Missing stored score for item ${q.id}.`);
         return {
           question: q,
           userAnswer: data.answers[q.id] || "",
           isCorrect: score.status === "correct",
           score,
+          manualScore,
         };
       });
       setLoadedResults({
+        record,
         testData: data,
         results: qResults,
       });
@@ -160,26 +311,39 @@ export default function ResultsPage() {
             .map((result) => result.question.id)
         )
       );
-    });
-  }, [router]);
+    }).catch(() => setLoadError("The saved result could not be verified."));
+  }, [attemptId]);
+
+  if (loadError) {
+    return (
+      <div style={{ maxWidth: 720, margin: "64px auto", padding: 32 }}>
+        <h1>Results unavailable</h1>
+        <p>{loadError}</p>
+        <button className="retake-btn" onClick={() => router.push("/")}>Back to Home</button>
+      </div>
+    );
+  }
 
   if (!loadedResults || loadedResults.results.length === 0) {
     return <div style={{ padding: 40, textAlign: "center" }}>Loading results...</div>;
   }
 
-  const { testData, results } = loadedResults;
+  const { record, testData, results } = loadedResults;
 
   const autoScoredResults = results.filter((r) => !isManuallyScored(r.question));
   const manualResults = results.filter((r) => isManuallyScored(r.question));
-  const totalCorrect = autoScoredResults.reduce((sum, entry) => sum + entry.score.earnedPoints, 0);
-  const totalAutoQuestions = autoScoredResults.reduce((sum, entry) => sum + entry.score.maxPoints, 0);
-  const totalPct = totalAutoQuestions > 0 ? Math.round((totalCorrect / totalAutoQuestions) * 100) : 0;
+  const scoredManualResults = manualResults.filter((result) => result.manualScore);
+  const unscoredManualResults = manualResults.filter((result) => !result.manualScore);
+  const scoredResults = [...autoScoredResults, ...scoredManualResults];
+  const totalCorrect = scoredResults.reduce((sum, entry) => sum + entry.score.earnedPoints, 0);
+  const totalScoredPoints = scoredResults.reduce((sum, entry) => sum + entry.score.maxPoints, 0);
+  const totalPct = totalScoredPoints > 0 ? Math.round((totalCorrect / totalScoredPoints) * 100) : 0;
   const overallLevel = getPerformanceLevel(totalPct);
 
-  // Group by claim (only auto-scored for claim percentages)
+  // Unscored manual tasks are excluded until a scorer explicitly awards points, including zero.
   const claimLabels = testData.subject === "math" ? mathClaims : elaClaims;
   const claimGroups: Record<number, QuestionResult[]> = {};
-  autoScoredResults.forEach((r) => {
+  scoredResults.forEach((r) => {
     const claim = r.question.claim;
     if (!claimGroups[claim]) claimGroups[claim] = [];
     claimGroups[claim].push(r);
@@ -230,6 +394,26 @@ export default function ResultsPage() {
     setExpandedQ(next);
   };
 
+  const saveManualScore = (questionId: number, manualScore: ManualScoreRecord) => {
+    const nextRecord: SubmittedResultRecord = {
+      ...record,
+      manualScores: { ...record.manualScores, [questionId]: manualScore },
+    };
+    localStorage.setItem(resultStorageKey(record.attempt.attemptId), JSON.stringify(nextRecord));
+    setLoadedResults((current) => current ? {
+      ...current,
+      record: nextRecord,
+      results: current.results.map((entry) => entry.question.id === questionId
+        ? {
+            ...entry,
+            manualScore,
+            score: scoreFromManual(entry.question, manualScore),
+            isCorrect: manualScore.awardedPoints === entry.question.points,
+          }
+        : entry),
+    } : current);
+  };
+
   return (
     <div className="results-container">
       <div className="results-header">
@@ -246,9 +430,11 @@ export default function ResultsPage() {
         <div className="score-summary">
           <div className="score-card">
             <div className="score-value">
-              {totalCorrect}/{totalAutoQuestions}
+              {totalCorrect}/{totalScoredPoints}
             </div>
-            <div className="score-label">Auto-Scored Questions Correct</div>
+            <div className="score-label">
+              {unscoredManualResults.length > 0 ? "Points Scored So Far" : "Total Points"}
+            </div>
           </div>
           <div className="score-card">
             <div className="score-value" style={{ color: overallLevel.color }}>
@@ -257,7 +443,7 @@ export default function ResultsPage() {
             <div className="score-label">{overallLevel.label}</div>
           </div>
         </div>
-        {manualResults.length > 0 && (
+        {unscoredManualResults.length > 0 && (
           <div style={{
             background: "#e3f2fd",
             border: "1px solid #90caf9",
@@ -267,7 +453,7 @@ export default function ResultsPage() {
             fontSize: 14,
             lineHeight: 1.5,
           }}>
-            <strong>Note:</strong> {manualResults.length} question{manualResults.length > 1 ? "s" : ""} (short-answer and essay writing) require manual scoring by a parent or teacher. The question review below now opens those items with the scoring guide, expected answer details, and rationale visible inline.
+            <strong>Provisional result:</strong> {unscoredManualResults.length} response{unscoredManualResults.length > 1 ? "s" : ""} still require manual scoring by a parent or teacher. An unscored response is distinct from a response awarded zero points.
           </div>
         )}
 
@@ -289,7 +475,7 @@ export default function ResultsPage() {
                   {claimLabels[claim] || `Claim ${claim}`}
                 </span>
                 <span className={`claim-score ${level.className}`}>
-                  {correct}/{qResults.length} — {level.label}
+                  {correct}/{possible} — {level.label}
                 </span>
               </div>
               <div className="progress-bar">
@@ -352,6 +538,15 @@ export default function ResultsPage() {
         </h2>
         {results.map((r, i) => {
           const manual = isManuallyScored(r.question);
+          const manualRubric = getManualRubric(testData.grade, testData.practiceTest, r.question.id);
+          const ptFlow = testData.subject === "ela" && testData.testType === "pt"
+            ? getElaPtFlow(testData.grade, testData.practiceTest)
+            : undefined;
+          const taskLabel = ptFlow?.part1ItemIds.includes(r.question.id)
+            ? `Part 1 — Research Task ${ptFlow.part1ItemIds.indexOf(r.question.id) + 1}`
+            : ptFlow?.part2ItemIds.includes(r.question.id)
+              ? "Part 2 — Full Write"
+              : `Q${i + 1}`;
           const hasAnswer = Array.isArray(r.userAnswer)
             ? r.userAnswer.length > 0
             : r.userAnswer !== undefined && r.userAnswer !== "";
@@ -363,14 +558,18 @@ export default function ResultsPage() {
                 onClick={() => toggleQuestion(r.question.id)}
               >
                 <span>
-                  <strong>Q{i + 1}.</strong>{" "}
+                  <strong>{taskLabel}.</strong>{" "}
                   {r.question.questionText
                     ? r.question.questionText.slice(0, 80) + (r.question.questionText.length > 80 ? "..." : "")
                     : "(Essay writing task)"}
                 </span>
                 <span>
                   {manual ? (
-                    <span className="manual-badge">Needs Manual Scoring</span>
+                    r.manualScore ? (
+                      <span className="correct-badge">Manually Scored ({r.score.earnedPoints}/{r.score.maxPoints})</span>
+                    ) : (
+                      <span className="manual-badge">Needs Manual Scoring</span>
+                    )
                   ) : r.score.status === "partial" ? (
                     <span className="manual-badge">Partial Credit ({r.score.earnedPoints}/{r.score.maxPoints})</span>
                   ) : r.isCorrect ? (
@@ -458,6 +657,13 @@ export default function ResultsPage() {
                           No response was provided for this question.
                         </p>
                       )}
+                      {manualRubric && (
+                        <ManualRubricForm
+                          rubric={manualRubric}
+                          existing={r.manualScore}
+                          onSave={(manualScore) => saveManualScore(r.question.id, manualScore)}
+                        />
+                      )}
                     </div>
                   )}
                   {r.question.evidenceStatement && (
@@ -492,5 +698,13 @@ export default function ResultsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ResultsPage() {
+  return (
+    <Suspense fallback={<div style={{ padding: 40, textAlign: "center" }}>Loading results...</div>}>
+      <ResultsContent />
+    </Suspense>
   );
 }

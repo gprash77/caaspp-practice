@@ -25,12 +25,18 @@ describe("Grade 4 Test 1 official fidelity gate", () => {
     ["rubric", (question: Question) => { question.rubric += " changed"; }],
     ["asset hash", (question: Question) => { if (question.stimulusImages?.[0]) question.stimulusImages[0].sha256 = "0".repeat(64); }],
     ["scoring rule", (question: Question) => { question.scoringRule = { kind: "manual-rubric" }; }],
+    ["accepted answer", (question: Question) => { question.acceptedAnswers = ["WRONG"]; }],
+    ["interaction configuration", (question: Question) => { question.shadeGrid = { rows: 2, cols: 5, requiredCount: 2 }; }],
   ])("rejects a %s mutation", (_name, mutate) => {
     const changed = clone(mathCat());
     const target = _name === "asset hash"
       ? changed.find((question) => question.stimulusImages?.length)!
       : _name === "option order"
         ? changed.find((question) => question.options?.length)!
+        : _name === "accepted answer"
+          ? changed.find((question) => question.acceptedAnswers?.length)!
+          : _name === "interaction configuration"
+            ? changed.find((question) => question.shadeGrid)!
         : changed[0];
     mutate(target);
     const result = evaluateGrade4Test1({ "math-cat": changed });

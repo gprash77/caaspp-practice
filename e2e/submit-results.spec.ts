@@ -1,198 +1,115 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 
-test.describe("Submit test and view results", () => {
-  test("can complete a few questions and submit to see results", async ({ page }) => {
-    await page.goto("/test?grade=3&subject=math&type=cat&test=1");
+async function submitAttempt(
+  page: Page,
+  options: {
+    grade?: number;
+    subject?: "math" | "ela";
+    type?: "cat" | "pt";
+    test?: number;
+    answers?: Record<number, string | string[]>;
+  } = {}
+) {
+  const grade = options.grade ?? 3;
+  const subject = options.subject ?? "math";
+  const type = options.type ?? "cat";
+  const practiceTest = options.test ?? 1;
+  const attemptId = `e2e-${crypto.randomUUID()}`;
+  const attemptKey = `caaspp-attempt:${attemptId}`;
+  await page.goto(`/test?grade=${grade}&subject=${subject}&type=${type}&test=${practiceTest}&attempt=${attemptId}`);
+  await expect(page.locator(".tds-progress-dots .tds-dot").first()).toBeVisible();
+  await page.waitForFunction((key) => Boolean(localStorage.getItem(key)), attemptKey);
+  await page.evaluate(({ key, answers }) => {
+    const record = JSON.parse(localStorage.getItem(key)!);
+    record.answers = answers;
+    record.updatedAt = new Date().toISOString();
+    localStorage.setItem(key, JSON.stringify(record));
+  }, { key: attemptKey, answers: options.answers ?? {} });
+  await page.reload();
+  const dots = page.locator(".tds-progress-dots .tds-dot");
+  await expect(dots.first()).toBeVisible();
+  await dots.last().click({ force: true });
+  page.on("dialog", (dialog) => dialog.accept());
+  await page.getByRole("button", { name: "SUBMIT TEST" }).click();
+  await expect(page).toHaveURL(new RegExp(`/results\\?attempt=${attemptId}`));
+}
 
-    // Answer first 3 questions quickly
-    // Q1: text-input
-    await page.locator(".number-pad-input").fill("52");
-    await page.locator(".tds-icon-label", { hasText: "Next" }).click();
-
-    // Q2: text-input
-    await page.locator(".number-pad-input").fill("809");
-    await page.locator(".tds-icon-label", { hasText: "Next" }).click();
-
-    // Q3: text-input
-    await page.locator(".number-pad-input").fill("15");
-    await page.locator(".tds-icon-label", { hasText: "Next" }).click();
-
-    // Now submit with remaining unanswered (confirm dialog)
-    page.on("dialog", (dialog) => dialog.accept());
-
-    // Navigate to last question and submit
-    // Or just use the submit via URL manipulation - let's use sessionStorage directly
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 1,
-        answers: { 1: "52", 2: "809", 3: "15", 4: "wrong", 5: "wrong" },
-        questionIds: [1, 2, 3, 4, 5],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
-    });
-    await page.goto("/results");
-
-    // Results page should load
+test.describe("Submit test and view version-safe results", () => {
+  test("submits an attempt and opens its isolated result", async ({ page }) => {
+    await submitAttempt(page, { answers: { 1: "52", 2: "809", 3: "15" } });
     await expect(page.locator("h1")).toHaveText("Practice Test Results");
-    await expect(page.getByText("Grade 3")).toBeVisible();
+    await expect(page.getByText("Grade 3 Mathematics")).toBeVisible();
     await expect(page.getByText("Practice Test 1")).toBeVisible();
   });
 
   test("results page shows score summary", async ({ page }) => {
-    // Set up test data with known answers
-    await page.goto("/");
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 1,
-        answers: { 1: "52", 2: "809", 3: "15", 4: "6", 5: "6" },
-        questionIds: [1, 2, 3, 4, 5],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
-    });
-    await page.goto("/results");
-
-    // Should show score cards
+    await submitAttempt(page, { answers: { 1: "52", 2: "809", 3: "15" } });
     await expect(page.locator(".score-card").first()).toBeVisible();
-    await expect(page.getByText("Auto-Scored Questions Correct")).toBeVisible();
+    await expect(page.getByText("Total Points")).toBeVisible();
   });
 
-  test("results page shows claim breakdown", async ({ page }) => {
-    await page.goto("/");
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 1,
-        answers: { 1: "52", 2: "809", 3: "15" },
-        questionIds: [1, 2, 3],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
-    });
-    await page.goto("/results");
-
+  test("results page shows point-based claim breakdown", async ({ page }) => {
+    await submitAttempt(page, { answers: { 1: "52", 2: "809", 3: "15" } });
     await expect(page.getByText("Score by Category (Claims)")).toBeVisible();
     await expect(page.locator(".claim-section").first()).toBeVisible();
   });
 
   test("results page shows question review with expand/collapse", async ({ page }) => {
-    await page.goto("/");
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 1,
-        answers: { 1: "52", 2: "999" },
-        questionIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
-    });
-    await page.goto("/results");
-
-    // Question review section
+    await submitAttempt(page, { answers: { 1: "52", 2: "999" } });
     await expect(page.getByText("Question Review")).toBeVisible();
-
-    // Should show all official Test 1 Math CAT question review items
     const reviews = page.locator(".question-review");
     await expect(reviews).toHaveCount(31);
-
-    // Q1 should be correct (52 is right)
     await expect(page.locator(".correct-badge").first()).toBeVisible();
-
-    // Q2 should be incorrect (999 is wrong for 356+453=809)
     await expect(page.locator(".incorrect-badge").first()).toBeVisible();
-
-    // Q2 is incorrect, so it should open with the correct answer and explanation.
     const q2Body = reviews.nth(1).locator(".question-review-body");
     await expect(q2Body.getByText("Correct answer:")).toBeVisible();
     await expect(q2Body.getByText("Explanation:")).toBeVisible();
   });
 
   test("results page shows correct answer in green for wrong answers", async ({ page }) => {
-    await page.goto("/");
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 1,
-        answers: { 1: "99" }, // wrong answer for Q1 (correct is 52)
-        questionIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
-    });
-    await page.goto("/results");
-
-    // Q1 is incorrect, so it opens with the user's answer and correct answer visible.
-    const reviewBody = page.locator(".question-review-body").first();
-    await expect(reviewBody.getByText("99")).toBeVisible();
-
-    // Correct answer "52" should be shown
-    await expect(reviewBody.getByText("Correct answer:")).toBeVisible();
+    await submitAttempt(page, { answers: { 1: "999" } });
+    const firstReview = page.locator(".question-review").first();
+    await expect(firstReview.getByText("Correct answer:")).toBeVisible();
+    await expect(firstReview.getByText("52", { exact: true })).toBeVisible();
   });
 
   test("Take Another Test button goes back to homepage", async ({ page }) => {
-    await page.goto("/");
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 1,
-        answers: { 1: "52" },
-        questionIds: [1],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
-    });
-    await page.goto("/results");
-
-    await page.locator(".retake-btn").click();
-    await expect(page).toHaveURL("/");
+    await submitAttempt(page, { answers: { 1: "52" } });
+    await page.getByRole("button", { name: "Take Another Test" }).click();
+    await expect(page).toHaveURL(/\/$/);
   });
-});
 
-test.describe("Results for different practice tests", () => {
   test("results page shows correct practice test number", async ({ page }) => {
-    await page.goto("/");
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "math",
-        testType: "cat",
-        practiceTest: 2,
-        answers: { 1001: "52" },
-        questionIds: [1001],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
-    });
-    await page.goto("/results");
-
+    await submitAttempt(page, { test: 2, answers: { 1001: "52" } });
     await expect(page.getByText("Practice Test 2")).toBeVisible();
   });
 
-  test("ELA results show manually-scored notice for PT", async ({ page }) => {
-    await page.goto("/");
-    await page.evaluate(() => {
-      const data = {
-        grade: 3,
-        subject: "ela",
-        testType: "pt",
-        practiceTest: 1,
-        answers: { 150: "B", 151: "test answer", 152: "my essay", 153: "B,C" },
-        questionIds: [150, 151, 152, 153],
-      };
-      sessionStorage.setItem("testResults", JSON.stringify(data));
+  test("ELA PT results distinguish unscored manual responses", async ({ page }) => {
+    await submitAttempt(page, {
+      subject: "ela",
+      type: "pt",
+      answers: { 150: ["0:0"], 151: "Student short response", 152: "Student essay" },
     });
-    await page.goto("/results");
+    await expect(page.getByText(/still require manual scoring/)).toBeVisible();
+    await expect(page.getByText(/unscored response is distinct/)).toBeVisible();
+  });
 
-    // Should mention manual scoring
-    await expect(page.getByText("require manual scoring")).toBeVisible();
+  test("a result cannot be opened without its attempt ID", async ({ page }) => {
+    await page.goto("/results");
+    await expect(page.getByRole("heading", { name: "Results unavailable" })).toBeVisible();
+    await expect(page.getByText(/missing its attempt ID/)).toBeVisible();
+  });
+
+  test("a stale bank hash is blocked instead of rescored", async ({ page }) => {
+    await submitAttempt(page, { answers: { 1: "52" } });
+    const attemptId = new URL(page.url()).searchParams.get("attempt")!;
+    await page.evaluate((key) => {
+      const record = JSON.parse(localStorage.getItem(key)!);
+      record.attempt.bankHash = "stale-bank-hash";
+      localStorage.setItem(key, JSON.stringify(record));
+    }, `caaspp-results:${attemptId}`);
+    await page.reload();
+    await expect(page.getByRole("heading", { name: "Results unavailable" })).toBeVisible();
+    await expect(page.getByText(/were not rescored/)).toBeVisible();
   });
 });
