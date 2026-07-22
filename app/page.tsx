@@ -90,7 +90,7 @@ export default function Home() {
                     {assessment.grade === 4 && assessment.origin === "official-public-practice"
                       ? " (Official Baseline)"
                       : assessment.grade === 4 && assessment.origin === "original-companion"
-                        ? " (Original · Easy)"
+                        ? ` (Original · ${assessment.difficulty[0].toUpperCase()}${assessment.difficulty.slice(1)})`
                         : assessment.testNumber === 1
                           ? " (Original)"
                           : ""}

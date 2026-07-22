@@ -49,6 +49,20 @@ const audioTargets: AudioTarget[] = [
   },
   {
     grade: 4,
+    testNum: 4,
+    title: "From Clay to a Fired Bowl",
+    output: "public/audio/presentations/grade-4/test-4-from-clay-to-a-fired-bowl.m4a",
+    rate: 30,
+  },
+  {
+    grade: 4,
+    testNum: 4,
+    title: "Reading a Weather Map",
+    output: "public/audio/presentations/grade-4/test-4-reading-a-weather-map.m4a",
+    rate: 80,
+  },
+  {
+    grade: 4,
     testNum: 2,
     title: "Watching the Moon's Appearance",
     output: "public/audio/presentations/grade-4/test-2-watching-the-moons-appearance.m4a",

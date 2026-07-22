@@ -83,7 +83,11 @@ const grade4Test1: AssessmentManifest = {
   },
 };
 
-function plannedGrade4EasyForm(testNumber: 2 | 3): AssessmentManifest {
+function grade4CompanionForm(
+  testNumber: 2 | 3 | 4 | 5,
+  difficulty: "easy" | "medium" | "hard",
+  available: boolean
+): AssessmentManifest {
   return {
     grade: 4,
     testNumber,
@@ -91,8 +95,8 @@ function plannedGrade4EasyForm(testNumber: 2 | 3): AssessmentManifest {
     origin: "original-companion",
     bankVersion: "2026-07-22.1",
     responseSchemaVersion: "1",
-    difficulty: "easy",
-    available: true,
+    difficulty,
+    available,
     sections: {
       "math-cat": { itemCount: 31, rawPoints: 32 },
       "math-pt": { itemCount: 5, rawPoints: 6 },
@@ -105,8 +109,10 @@ function plannedGrade4EasyForm(testNumber: 2 | 3): AssessmentManifest {
 export const assessmentManifests: readonly AssessmentManifest[] = [
   ...GRADE_3_SECTION_TOTALS.map((_, index) => grade3Manifest(index + 1)),
   grade4Test1,
-  plannedGrade4EasyForm(2),
-  plannedGrade4EasyForm(3),
+  grade4CompanionForm(2, "easy", true),
+  grade4CompanionForm(3, "easy", true),
+  grade4CompanionForm(4, "medium", true),
+  grade4CompanionForm(5, "hard", false),
 ];
 
 export function assessmentKey(grade: number, testNumber: number): string {

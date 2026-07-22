@@ -82,6 +82,21 @@ const RUBRICS = new Map<string, ManualRubricDefinition>([
       ],
     },
   ],
+  ["4:4:46104", { kind: "points", rubricVersion: "g4-t4-food-pantry-2pt-v1", maxPoints: 2 }],
+  ["4:4:47101", { kind: "points", rubricVersion: "g4-t4-lunch-line-evidence-2pt-v1", maxPoints: 2 }],
+  [
+    "4:4:47103",
+    {
+      kind: "traits",
+      rubricVersion: "g4-t4-opinion-4-4-2-v1",
+      maxPoints: 10,
+      traits: [
+        { id: "organizationPurpose", label: "Organization/Purpose", min: 0, max: 4 },
+        { id: "evidenceElaboration", label: "Evidence/Elaboration", min: 0, max: 4 },
+        { id: "conventions", label: "Conventions", min: 0, max: 2 },
+      ],
+    },
+  ],
 ]);
 
 export function getManualRubric(
