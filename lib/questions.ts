@@ -69,6 +69,16 @@ export interface Question {
   tableMinSumExclusive?: number;
   gridRows?: string[];
   gridColumns?: string[];
+  selection?: {
+    min: number;
+    max: number;
+  };
+  gridSelection?: {
+    perRowMin: number;
+    perRowMax: number;
+    totalMin?: number;
+    totalMax?: number;
+  };
   correctAnswer: string | string[];
   acceptedAnswers?: string[];
   fractionRange?: {
@@ -138,6 +148,7 @@ export interface Question {
     | { kind: "exact" }
     | { kind: "ordered-fields" }
     | { kind: "unordered-set"; acceptedAnswers: string[] }
+    | { kind: "numeric-equivalent"; acceptedValues: number[]; tolerance?: number }
     | { kind: "numeric-range"; greaterThan?: number; lessThan?: number; min?: number; max?: number; integer?: boolean }
     | { kind: "constraints"; constraint: ResponseConstraint }
     | { kind: "partial-credit"; tiers: { points: number; constraint: ResponseConstraint }[] }
@@ -152,6 +163,12 @@ export type ResponseConstraint =
   | { kind: "field-one-of"; index: number; values: string[] }
   | { kind: "field-number"; index: number; min?: number; max?: number; integer?: boolean; endsWith?: number }
   | { kind: "field-product"; factor: number; multiplierIndex: number; productIndex: number }
+  | {
+      kind: "linear-comparison";
+      terms: { index: number; coefficient: number }[];
+      operator: "<=" | ">=" | "==" | "<" | ">";
+      value: number;
+    }
   | { kind: "field-unordered-set"; indexes: number[]; values: string[] }
   | { kind: "field-factor-list"; numberIndex: number; countIndex: number; factorsIndex: number };
 

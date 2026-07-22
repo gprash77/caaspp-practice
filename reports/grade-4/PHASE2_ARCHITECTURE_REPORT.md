@@ -2,7 +2,7 @@
 
 Status: Ready for Test 2 item-matrix review
 
-Date: 2026-07-21
+Date: 2026-07-22
 
 Test 1 baseline: `2026-07-20.1`
 
@@ -38,6 +38,10 @@ The canonical Test 1 hashes were deliberately regenerated because the evaluator 
 - `None` is mutually exclusive with line selections.
 - Item-specific helper copy is authored as interaction metadata rather than selected by item ID.
 - Item-named scoring branches were replaced with reusable exact/ordered/unordered/numeric-range/constraint/partial-credit/schedule/manual rule families.
+- Multi-select and grid interactions support authored minimum/maximum cardinality, prevent excess choices, and require the configured count before a response is complete.
+- Numeric-equivalent scoring parses whole numbers, decimals, fractions, mixed numbers, and supported vulgar-fraction characters.
+- Reusable linear comparisons support cross-field quantity, distance, and ceiling/floor constraints without item-named logic.
+- Line-plot input is normalized to bottom-up column stacks so a response cannot contain vertical gaps.
 - Schedule boundaries and rest/meal roles are data-driven rather than hardcoded to Art Day names or times.
 
 ### Manual scoring
@@ -66,7 +70,7 @@ The canonical Test 1 hashes were deliberately regenerated because the evaluator 
 | Gate | Result |
 |---|---|
 | Grade 4 Test 1 eval | PASS — 69 items reviewed |
-| Unit/data/scoring tests | PASS — 6 files / 1,728 tests |
+| Unit/data/scoring tests | PASS — 6 files / 1,731 tests |
 | TypeScript | PASS |
 | ESLint | PASS |
 | Production build | PASS |

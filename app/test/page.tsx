@@ -14,6 +14,12 @@ import {
   type SubmittedResultRecord,
 } from "@/lib/attempt-records";
 import { isManuallyScored, scoreResponse } from "@/lib/scoring";
+import {
+  canAddGridSelection,
+  canAddMultiSelection,
+  selectionIsComplete,
+  updateLinePlotStack,
+} from "@/lib/response-validation";
 import ReactMarkdown from "react-markdown";
 
 function RichTextEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
@@ -70,11 +76,13 @@ function RichTextEditor({ value, onChange }: { value: string; onChange: (v: stri
 function GridMatch({
   rows,
   columns,
+  selection,
   value,
   onChange,
 }: {
   rows: string[];
   columns: string[];
+  selection?: NonNullable<Question["gridSelection"]>;
   value: string[];
   onChange: (v: string[]) => void;
 }) {
@@ -83,6 +91,7 @@ function GridMatch({
     if (value.includes(key)) {
       onChange(value.filter((v) => v !== key));
     } else {
+      if (!canAddGridSelection(value, rowIdx, selection)) return;
       onChange([...value, key]);
     }
   };
@@ -175,15 +184,7 @@ function LinePlot({
   onChange: (v: string[]) => void;
 }) {
   const toggleCell = (labelIndex: number, rowIndex: number) => {
-    const key = `${labelIndex}:${rowIndex}`;
-    if (value.includes(key)) {
-      onChange(value.filter((item) => item !== key));
-      return;
-    }
-
-    const inColumn = value.filter((item) => item.startsWith(`${labelIndex}:`));
-    if (inColumn.length >= maxDots) return;
-    onChange([...value, key]);
+    onChange(updateLinePlotStack(value, labelIndex, rowIndex));
   };
 
   return (
@@ -518,7 +519,11 @@ function SymmetryLine({
           ))}
         </svg>
       </div>
-      <p className="interaction-helper">Choose the direction of the line you want to place, or choose None.</p>
+      <p className="interaction-helper">
+        {config.maxSelections === 1
+          ? "Choose the direction of the line you want to place, or choose None."
+          : "Choose every line of symmetry that applies, or choose None."}
+      </p>
       <div className="symmetry-tools" aria-label="Line choices">
         {config.choices.map((choice) => (
           <button
@@ -650,6 +655,13 @@ function isQuestionAnswered(question: Question, answer: string | string[] | unde
   if (Array.isArray(answer)) {
     if (question.type === "two-part") {
       return answer.length === 2 && answer.every((entry) => entry.trim() !== "");
+    }
+
+    if (
+      (question.type === "multi-select" && question.selection) ||
+      (question.type === "grid-match" && question.gridSelection)
+    ) {
+      return selectionIsComplete(question, answer);
     }
 
     if (question.type === "table-input") {
@@ -802,7 +814,9 @@ function TestContent() {
             ...prevAnswers,
             [current.id]: prev.includes(label)
               ? prev.filter((l) => l !== label)
-              : [...prev, label],
+              : !canAddMultiSelection(prev, current.selection)
+                ? prev
+                : [...prev, label],
           };
         });
       } else {
@@ -1251,7 +1265,9 @@ function TestContent() {
             <ReactMarkdown>{current.questionText}</ReactMarkdown>
             {current.type === "multi-select" && (
               <span style={{ color: "#c62828", display: "block", marginTop: 4, fontSize: 14 }}>
-                (Select all that apply)
+                {current.selection && current.selection.min === current.selection.max
+                  ? `(Select exactly ${current.selection.min})`
+                  : "(Select all that apply)"}
               </span>
             )}
           </div>
@@ -1346,6 +1362,7 @@ function TestContent() {
             <GridMatch
               rows={current.gridRows}
               columns={current.gridColumns}
+              selection={current.gridSelection}
               value={(answers[current.id] as string[]) || []}
               onChange={(v) => setAnswers((prevAnswers) => ({ ...prevAnswers, [current.id]: v }))}
             />

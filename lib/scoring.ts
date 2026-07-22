@@ -4,8 +4,25 @@ export function normalizeAnswer(a: string): string {
   return a.trim().toLowerCase().replace(/\s+/g, " ");
 }
 
-function parseNumericExpression(input: string): number | null {
-  const normalized = normalizeAnswer(input);
+export function parseNumericExpression(input: string): number | null {
+  const vulgarFractions: Record<string, number> = {
+    "¼": 1 / 4,
+    "½": 1 / 2,
+    "¾": 3 / 4,
+    "⅓": 1 / 3,
+    "⅔": 2 / 3,
+    "⅕": 1 / 5,
+    "⅖": 2 / 5,
+    "⅗": 3 / 5,
+    "⅘": 4 / 5,
+    "⅙": 1 / 6,
+    "⅚": 5 / 6,
+    "⅛": 1 / 8,
+    "⅜": 3 / 8,
+    "⅝": 5 / 8,
+    "⅞": 7 / 8,
+  };
+  const normalized = normalizeAnswer(input).replace(/,/g, "");
 
   if (/^\d+(\.\d+)?$/.test(normalized)) {
     return Number(normalized);
@@ -16,6 +33,16 @@ function parseNumericExpression(input: string): number | null {
     if (denominator === 0) return null;
     return numerator / denominator;
   }
+
+  const mixed = normalized.match(/^(\d+)\s+(\d+)\s*\/\s*(\d+)$/);
+  if (mixed) {
+    const denominator = Number(mixed[3]);
+    if (denominator === 0) return null;
+    return Number(mixed[1]) + Number(mixed[2]) / denominator;
+  }
+
+  const vulgar = normalized.match(/^(\d+)?\s*([¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞])$/);
+  if (vulgar) return Number(vulgar[1] ?? 0) + vulgarFractions[vulgar[2]];
 
   return null;
 }
@@ -135,6 +162,19 @@ function constraintMatches(constraint: ResponseConstraint, userAnswer: string | 
     const product = Number(fields[constraint.productIndex]);
     return Number.isFinite(multiplier) && Number.isFinite(product) && constraint.factor * multiplier === product;
   }
+  if (constraint.kind === "linear-comparison") {
+    const values = constraint.terms.map(({ index, coefficient }) => {
+      const value = parseNumericExpression(fields[index] ?? "");
+      return value === null ? null : coefficient * value;
+    });
+    if (values.some((value) => value === null)) return false;
+    const total = (values as number[]).reduce((sum, value) => sum + value, 0);
+    if (constraint.operator === "<=") return total <= constraint.value;
+    if (constraint.operator === ">=") return total >= constraint.value;
+    if (constraint.operator === "==") return total === constraint.value;
+    if (constraint.operator === "<") return total < constraint.value;
+    return total > constraint.value;
+  }
   if (constraint.kind === "field-unordered-set") {
     const actual = constraint.indexes.map((index) => normalizeAnswer(fields[index] ?? "")).sort();
     const expected = constraint.values.map(normalizeAnswer).sort();
@@ -186,6 +226,16 @@ export function scoreResponse(question: Question, userAnswer: string | string[])
         : 0,
       question.points
     );
+  }
+
+  if (question.scoringRule?.kind === "numeric-equivalent") {
+    if (typeof userAnswer !== "string") return result(0, question.points);
+    const value = parseNumericExpression(userAnswer);
+    const tolerance = question.scoringRule.tolerance ?? 1e-9;
+    const valid = value !== null && question.scoringRule.acceptedValues.some(
+      (expected) => Math.abs(value - expected) <= tolerance
+    );
+    return result(valid ? question.points : 0, question.points);
   }
 
   if (question.scoringRule?.kind === "numeric-range") {

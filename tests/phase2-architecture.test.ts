@@ -6,6 +6,12 @@ import { createManualScore, getManualRubric } from "../lib/manual-rubrics";
 import { getQuestions } from "../lib/questions";
 import type { Question } from "../lib/questions";
 import { scoreResponse } from "../lib/scoring";
+import {
+  canAddGridSelection,
+  canAddMultiSelection,
+  selectionIsComplete,
+  updateLinePlotStack,
+} from "../lib/response-validation";
 
 describe("Phase 2 architecture contracts", () => {
   it("hashes every enumerable bank field deterministically", async () => {
@@ -97,5 +103,85 @@ describe("Phase 2 architecture contracts", () => {
       },
     };
     expect(scoreResponse(question, ["8:00", "9:00", "9:00", "9:15", "9:15", "10:30", "10:30", "11:15", "11:15", "12:00"]).status).toBe("correct");
+  });
+
+  it("enforces authored multi-select and grid-selection contracts", () => {
+    expect(canAddMultiSelection(["A"], { min: 2, max: 2 })).toBe(true);
+    expect(canAddMultiSelection(["A", "B"], { min: 2, max: 2 })).toBe(false);
+
+    const multiSelect = {
+      ...getQuestions(4, "ela", "cat", 1).find((question) => question.type === "multi-select")!,
+      selection: { min: 2, max: 2 },
+    };
+    expect(selectionIsComplete(multiSelect, ["A"])).toBe(false);
+    expect(selectionIsComplete(multiSelect, ["A", "B"])).toBe(true);
+    expect(selectionIsComplete(multiSelect, ["A", "not-an-option"])).toBe(false);
+
+    const gridSelection = { perRowMin: 1, perRowMax: 1, totalMin: 2, totalMax: 2 };
+    expect(canAddGridSelection(["0:0"], 0, gridSelection)).toBe(false);
+    expect(canAddGridSelection(["0:0"], 1, gridSelection)).toBe(true);
+    const grid = {
+      ...getQuestions(4, "ela", "pt", 1).find((question) => question.type === "grid-match")!,
+      gridRows: ["First", "Second"],
+      gridSelection,
+    };
+    expect(selectionIsComplete(grid, ["0:0", "1:1"])).toBe(true);
+    expect(selectionIsComplete(grid, ["0:0", "0:1"])).toBe(false);
+    expect(selectionIsComplete(grid, ["0:0", "9:9"])).toBe(false);
+  });
+
+  it("scores numeric equivalence and reusable cross-field comparisons", () => {
+    const base = getQuestions(4, "math", "cat", 1)[0];
+    const equivalent: Question = {
+      ...base,
+      type: "text-input",
+      correctAnswer: "3.75",
+      scoringRule: { kind: "numeric-equivalent", acceptedValues: [3.75] },
+    };
+    for (const answer of ["3.75", "3 3/4", "15/4", "3¾"]) {
+      expect(scoreResponse(equivalent, answer).status).toBe("correct");
+    }
+    expect(scoreResponse(equivalent, "3.5").status).toBe("incorrect");
+
+    const budget: Question = {
+      ...base,
+      type: "multi-input",
+      correctAnswer: [],
+      responseFields: [{ label: "Boxes" }, { label: "Packs" }],
+      scoringRule: {
+        kind: "constraints",
+        constraint: {
+          kind: "all",
+          constraints: [
+            { kind: "field-number", index: 0, min: 0, integer: true },
+            { kind: "field-number", index: 1, min: 0, integer: true },
+            {
+              kind: "linear-comparison",
+              terms: [{ index: 0, coefficient: 6 }, { index: 1, coefficient: 4 }],
+              operator: "<=",
+              value: 20,
+            },
+          ],
+        },
+      },
+    };
+    expect(scoreResponse(budget, ["2", "2"]).status).toBe("correct");
+    expect(scoreResponse(budget, ["3", "1"]).status).toBe("incorrect");
+  });
+
+  it("stores line-plot marks as bottom-up stacks without vertical gaps", () => {
+    expect(updateLinePlotStack([], 1, 3)).toEqual(["1:1", "1:2", "1:3"]);
+    expect(updateLinePlotStack(["0:1", "1:1", "1:2", "1:3"], 1, 3)).toEqual([
+      "0:1",
+      "1:1",
+      "1:2",
+    ]);
+    expect(updateLinePlotStack(["0:1", "1:1"], 1, 4)).toEqual([
+      "0:1",
+      "1:1",
+      "1:2",
+      "1:3",
+      "1:4",
+    ]);
   });
 });
