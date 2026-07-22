@@ -76,6 +76,7 @@ export interface Question {
   gridSelection?: {
     perRowMin: number;
     perRowMax: number;
+    rowSelections?: { min: number; max: number }[];
     totalMin?: number;
     totalMax?: number;
   };
@@ -140,6 +141,7 @@ export interface Question {
     shapePath: string;
     shapeAlt: string;
     choices: { id: string; label: string; path?: string }[];
+    minSelections?: number;
     maxSelections?: number;
     noneChoiceId: string;
   };

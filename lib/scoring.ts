@@ -71,10 +71,11 @@ function result(earnedPoints: number, maxPoints: number, manual = false): ScoreR
 }
 
 function orderedFieldsMatch(question: Question, userAnswer: string | string[]): boolean {
-  if (!Array.isArray(userAnswer) || !question.responseFields) return false;
-  if (userAnswer.length !== question.responseFields.length) return false;
-  return question.responseFields.every((field, index) => {
-    const accepted = field.acceptedAnswers ?? [];
+  if (!Array.isArray(userAnswer) || !Array.isArray(question.correctAnswer)) return false;
+  const expectedLength = question.responseFields?.length ?? question.correctAnswer.length;
+  if (userAnswer.length !== expectedLength || question.correctAnswer.length !== expectedLength) return false;
+  return question.correctAnswer.every((correct, index) => {
+    const accepted = question.responseFields?.[index]?.acceptedAnswers ?? [correct];
     return accepted.some((answer) => normalizeAnswer(answer) === normalizeAnswer(userAnswer[index] ?? ""));
   });
 }
@@ -252,7 +253,7 @@ export function scoreResponse(question: Question, userAnswer: string | string[])
     return result(valid ? question.points : 0, question.points);
   }
 
-  if (question.type === "multi-input" && question.scoringRule?.kind === "ordered-fields") {
+  if (question.scoringRule?.kind === "ordered-fields") {
     return result(orderedFieldsMatch(question, userAnswer) ? question.points : 0, question.points);
   }
 

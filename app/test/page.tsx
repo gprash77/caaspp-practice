@@ -659,9 +659,10 @@ function isQuestionAnswered(question: Question, answer: string | string[] | unde
 
     if (
       (question.type === "multi-select" && question.selection) ||
-      (question.type === "grid-match" && question.gridSelection)
+      (question.type === "grid-match" && question.gridSelection) ||
+      (question.type === "symmetry-line" && question.symmetry?.minSelections)
     ) {
-      return selectionIsComplete(question, answer);
+      return selectionIsComplete(question, Array.isArray(answer) ? answer : [answer]);
     }
 
     if (question.type === "table-input") {

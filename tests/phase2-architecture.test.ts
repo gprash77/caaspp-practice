@@ -128,6 +128,50 @@ describe("Phase 2 architecture contracts", () => {
     expect(selectionIsComplete(grid, ["0:0", "1:1"])).toBe(true);
     expect(selectionIsComplete(grid, ["0:0", "0:1"])).toBe(false);
     expect(selectionIsComplete(grid, ["0:0", "9:9"])).toBe(false);
+
+    const variedGrid = {
+      ...grid,
+      gridSelection: {
+        perRowMin: 1,
+        perRowMax: 2,
+        rowSelections: [{ min: 1, max: 1 }, { min: 2, max: 2 }],
+        totalMin: 3,
+        totalMax: 3,
+      },
+    };
+    expect(selectionIsComplete(variedGrid, ["0:0", "1:0", "1:1"])).toBe(true);
+    expect(selectionIsComplete(variedGrid, ["0:0", "1:0"])).toBe(false);
+
+    const symmetry: Question = {
+      ...getQuestions(4, "math", "cat", 1).find((question) => question.type === "symmetry-line")!,
+      symmetry: {
+        shapePath: "M0 0",
+        shapeAlt: "Rectangle",
+        choices: [
+          { id: "vertical", label: "Vertical" },
+          { id: "horizontal", label: "Horizontal" },
+          { id: "none", label: "None" },
+        ],
+        minSelections: 2,
+        maxSelections: 2,
+        noneChoiceId: "none",
+      },
+    };
+    expect(selectionIsComplete(symmetry, ["vertical"])).toBe(false);
+    expect(selectionIsComplete(symmetry, ["vertical", "horizontal"])).toBe(true);
+    expect(selectionIsComplete(symmetry, ["none"])).toBe(true);
+  });
+
+  it("uses ordered-field scoring for table-input responses", () => {
+    const table: Question = {
+      ...getQuestions(4, "math", "cat", 1)[0],
+      type: "table-input",
+      tableColumns: ["Meters", "Centimeters"],
+      correctAnswer: ["2", "200"],
+      scoringRule: { kind: "ordered-fields" },
+    };
+    expect(scoreResponse(table, ["2", "200"]).status).toBe("correct");
+    expect(scoreResponse(table, ["200", "2"]).status).toBe("incorrect");
   });
 
   it("scores numeric equivalence and reusable cross-field comparisons", () => {
@@ -141,7 +185,12 @@ describe("Phase 2 architecture contracts", () => {
     for (const answer of ["3.75", "3 3/4", "15/4", "3¾"]) {
       expect(scoreResponse(equivalent, answer).status).toBe("correct");
     }
+    expect(scoreResponse(equivalent, "3.7500000005").status).toBe("correct");
     expect(scoreResponse(equivalent, "3.5").status).toBe("incorrect");
+    expect(scoreResponse(equivalent, "3.75001").status).toBe("incorrect");
+    for (const malformed of ["", "abc", "3/0", "3 3/0"]) {
+      expect(scoreResponse(equivalent, malformed).status).toBe("incorrect");
+    }
 
     const budget: Question = {
       ...base,
@@ -167,6 +216,8 @@ describe("Phase 2 architecture contracts", () => {
     };
     expect(scoreResponse(budget, ["2", "2"]).status).toBe("correct");
     expect(scoreResponse(budget, ["3", "1"]).status).toBe("incorrect");
+    expect(scoreResponse(budget, ["", "2"]).status).toBe("incorrect");
+    expect(scoreResponse(budget, ["-1", "2"]).status).toBe("incorrect");
   });
 
   it("stores line-plot marks as bottom-up stacks without vertical gaps", () => {

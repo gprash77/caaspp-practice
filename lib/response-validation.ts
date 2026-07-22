@@ -15,7 +15,8 @@ export function canAddGridSelection(
   if (!selection) return true;
   const rowPrefix = `${rowIndex}:`;
   const rowCount = currentSelections.filter((entry) => entry.startsWith(rowPrefix)).length;
-  if (rowCount >= selection.perRowMax) return false;
+  const rowMaximum = selection.rowSelections?.[rowIndex]?.max ?? selection.perRowMax;
+  if (rowCount >= rowMaximum) return false;
   return selection.totalMax === undefined || currentSelections.length < selection.totalMax;
 }
 
@@ -42,12 +43,29 @@ export function selectionIsComplete(question: Question, answer: string[]): boole
     const rowCounts = (question.gridRows ?? []).map((_, rowIndex) =>
       answer.filter((entry) => entry.startsWith(`${rowIndex}:`)).length
     );
-    const withinRows = rowCounts.every(
-      (count) => count >= question.gridSelection!.perRowMin && count <= question.gridSelection!.perRowMax
-    );
+    const withinRows = rowCounts.every((count, rowIndex) => {
+      const rowContract = question.gridSelection!.rowSelections?.[rowIndex];
+      const minimum = rowContract?.min ?? question.gridSelection!.perRowMin;
+      const maximum = rowContract?.max ?? question.gridSelection!.perRowMax;
+      return count >= minimum && count <= maximum;
+    });
     const aboveTotalMin = question.gridSelection.totalMin === undefined || answer.length >= question.gridSelection.totalMin;
     const belowTotalMax = question.gridSelection.totalMax === undefined || answer.length <= question.gridSelection.totalMax;
     return withinRows && aboveTotalMin && belowTotalMax;
+  }
+  if (question.type === "symmetry-line" && question.symmetry) {
+    const selections = Array.isArray(answer) ? answer : [answer];
+    const unique = new Set(selections);
+    const validIds = new Set(question.symmetry.choices.map((choice) => choice.id));
+    if (unique.size !== selections.length || selections.some((entry) => !validIds.has(entry))) {
+      return false;
+    }
+    if (selections.includes(question.symmetry.noneChoiceId)) {
+      return selections.length === 1;
+    }
+    const minimum = question.symmetry.minSelections ?? 1;
+    const maximum = question.symmetry.maxSelections ?? 1;
+    return selections.length >= minimum && selections.length <= maximum;
   }
   return answer.length > 0;
 }
