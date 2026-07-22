@@ -17,6 +17,15 @@ const ELA_PT_FLOWS = new Map<string, ElaPtFlowDefinition>([
       part2ItemIds: [41103],
     },
   ],
+  [
+    "4:2",
+    {
+      sourcePackageId: "g4-test2-outdoor-learning-spaces",
+      sourcePackageVersion: "2026-07-22.1",
+      part1ItemIds: [43101, 43102],
+      part2ItemIds: [43103],
+    },
+  ],
 ]);
 
 export function getElaPtFlow(grade: number, testNumber: number): ElaPtFlowDefinition | undefined {

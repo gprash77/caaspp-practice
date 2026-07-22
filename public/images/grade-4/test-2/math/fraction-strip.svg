@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">Fraction strip showing three fourths</title>
+  <desc id="desc">A strip divided into four equal parts with the first three shaded blue.</desc>
+  <rect width="760" height="220" fill="white"/>
+  <text x="40" y="45" font-family="Arial, sans-serif" font-size="26" fill="#17243a">Model</text>
+  <g transform="translate(40 75)" stroke="#17243a" stroke-width="3">
+    <rect x="0" y="0" width="160" height="90" fill="#b7daf5"/>
+    <rect x="160" y="0" width="160" height="90" fill="#b7daf5"/>
+    <rect x="320" y="0" width="160" height="90" fill="#b7daf5"/>
+    <rect x="480" y="0" width="160" height="90" fill="white"/>
+  </g>
+</svg>

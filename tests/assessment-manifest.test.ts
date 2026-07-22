@@ -10,13 +10,14 @@ import {
 import { getQuestions } from "../lib/questions";
 
 describe("assessment manifest", () => {
-  it("lists availability by grade without exposing planned Grade 4 forms", () => {
+  it("lists completed Grade 4 forms without exposing the planned Test 3 form", () => {
     expect(listAvailableAssessments(3).map((manifest) => manifest.testNumber)).toEqual(
       Array.from({ length: 18 }, (_, index) => index + 1)
     );
-    expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual([1]);
-    expect(getAssessmentManifest(4, 2)).toBeUndefined();
-    expect(getAssessmentManifest(4, 2, { includeUnavailable: true })?.difficulty).toBe("easy");
+    expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual([1, 2]);
+    expect(getAssessmentManifest(4, 2)?.difficulty).toBe("easy");
+    expect(getAssessmentManifest(4, 3)).toBeUndefined();
+    expect(getAssessmentManifest(4, 3, { includeUnavailable: true })?.difficulty).toBe("easy");
   });
 
   it("records the complete Grade 4 Test 1 structure", () => {
@@ -55,7 +56,7 @@ describe("assessment manifest", () => {
   it("keeps the same test number isolated by grade", () => {
     expect(getQuestions(3, "math", "cat", 1)[0]?.grade).toBe(3);
     expect(getQuestions(4, "math", "cat", 1)[0]?.grade).toBe(4);
-    expect(getQuestions(4, "math", "cat", 2)).toEqual([]);
+    expect(getQuestions(4, "math", "cat", 2)).toHaveLength(31);
     expect(getQuestions(4, "ela", "pt", 3)).toEqual([]);
   });
 

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img" aria-labelledby="title desc">
+  <title id="title">Neighborhood walking route map</title>
+  <desc id="desc">A triangular route connects the library, park, and museum. Segment A from library to park is 450 meters. Segment B from park to museum is 600 meters and passes a rest point. Segment C from museum to library is 750 meters.</desc>
+  <rect width="900" height="430" fill="white"/>
+  <g stroke="#1976d2" stroke-width="10" fill="none" stroke-linecap="round"><path d="M160 325 L445 75"/><path d="M445 75 L760 325"/><path d="M760 325 L160 325"/></g>
+  <g fill="#17243a" font-family="Arial,sans-serif"><circle cx="160" cy="325" r="16"/><circle cx="445" cy="75" r="16"/><circle cx="760" cy="325" r="16"/><circle cx="600" cy="198" r="12" fill="#ef6c00"/>
+  <text x="70" y="370" font-size="27">Library</text><text x="410" y="45" font-size="27">Park</text><text x="735" y="370" font-size="27">Museum</text>
+  <text x="215" y="180" font-size="23">A: 450 m</text><text x="565" y="135" font-size="23">B: 600 m</text><text x="405" y="360" font-size="23">C: 750 m</text><text x="615" y="215" font-size="20">Rest point</text></g>
+</svg>

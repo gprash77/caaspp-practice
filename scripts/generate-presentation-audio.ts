@@ -10,6 +10,7 @@ type AudioTarget = {
   testNum: number;
   title: string;
   output: string;
+  rate?: number;
 };
 
 const audioTargets: AudioTarget[] = [
@@ -24,6 +25,20 @@ const audioTargets: AudioTarget[] = [
     testNum: 1,
     title: "Balloon Wranglers",
     output: "public/audio/presentations/grade-4/test-1-balloon-wranglers.m4a",
+  },
+  {
+    grade: 4,
+    testNum: 2,
+    title: "From Paper Bin to New Paper",
+    output: "public/audio/presentations/grade-4/test-2-from-paper-bin-to-new-paper.m4a",
+    rate: 30,
+  },
+  {
+    grade: 4,
+    testNum: 2,
+    title: "Watching the Moon's Appearance",
+    output: "public/audio/presentations/grade-4/test-2-watching-the-moons-appearance.m4a",
+    rate: 30,
   },
   {
     testNum: 1,
@@ -215,7 +230,7 @@ function cleanTranscript(source: string): string {
 }
 
 function findTranscript(grade: number, testNum: number, title: string): string {
-  const questions = getQuestions(grade, "ela", "cat", testNum);
+  const questions = getQuestions(grade, "ela", "cat", testNum, { includeUnavailable: true });
   const question = questions.find((item) => item.passageTitle === title && item.passage);
 
   if (!question?.passage) {
@@ -225,13 +240,13 @@ function findTranscript(grade: number, testNum: number, title: string): string {
   return cleanTranscript(question.passage);
 }
 
-function generateAudioFile(transcript: string, outputPath: string) {
+function generateAudioFile(transcript: string, outputPath: string, rate = 170) {
   const absoluteOutput = path.resolve(outputPath);
   fs.mkdirSync(path.dirname(absoluteOutput), { recursive: true });
 
   const tempAiff = path.join(os.tmpdir(), `${path.basename(outputPath, ".m4a")}.aiff`);
 
-  execFileSync("say", ["-v", "Samantha", "-r", "170", "-o", tempAiff, transcript], {
+  execFileSync("say", ["-v", "Samantha", "-r", String(rate), "-o", tempAiff, transcript], {
     stdio: "inherit",
   });
 
@@ -255,6 +270,6 @@ for (const target of audioTargets) {
   }
 
   const transcript = findTranscript(grade, target.testNum, target.title);
-  generateAudioFile(transcript, target.output);
+  generateAudioFile(transcript, target.output, target.rate);
   console.log(`Generated ${target.output}`);
 }

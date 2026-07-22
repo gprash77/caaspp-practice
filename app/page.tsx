@@ -86,7 +86,14 @@ export default function Home() {
               >
                 {availableTests.map((assessment) => (
                   <option key={assessment.testNumber} value={String(assessment.testNumber)}>
-                    Test {assessment.testNumber}{assessment.testNumber === 1 ? " (Original)" : ""}
+                    Test {assessment.testNumber}
+                    {assessment.grade === 4 && assessment.origin === "official-public-practice"
+                      ? " (Official Baseline)"
+                      : assessment.grade === 4 && assessment.origin === "original-companion"
+                        ? " (Original · Easy)"
+                        : assessment.testNumber === 1
+                          ? " (Original)"
+                          : ""}
                   </option>
                 ))}
               </select>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" role="img" aria-labelledby="title desc">
+  <title id="title">Three pairs of hundred grids</title>
+  <desc id="desc">Pair A represents 45 hundredths and 50 hundredths. Pair B represents 32 hundredths and 29 hundredths. Pair C represents 70 hundredths and 70 hundredths.</desc>
+  <rect width="900" height="330" fill="white"/>
+  <style>.label{font:22px Arial,sans-serif;fill:#17243a}.grid{stroke:#17243a;stroke-width:2}.fill{fill:#90caf9}.empty{fill:#fff}.note{font:18px Arial,sans-serif;fill:#334155}</style>
+  <text class="label" x="40" y="45">Pair A</text><text class="note" x="40" y="75">45 shaded squares</text><text class="note" x="240" y="75">50 shaded squares</text>
+  <rect class="grid fill" x="40" y="95" width="150" height="80"/><rect class="grid fill" x="240" y="95" width="150" height="80"/>
+  <text class="label" x="40" y="235">Pair B</text><text class="note" x="40" y="265">32 shaded squares</text><text class="note" x="240" y="265">29 shaded squares</text>
+  <rect class="grid fill" x="40" y="280" width="150" height="35"/><rect class="grid fill" x="240" y="280" width="136" height="35"/>
+  <text class="label" x="500" y="45">Pair C</text><text class="note" x="500" y="75">70 shaded squares</text><text class="note" x="700" y="75">70 shaded squares</text>
+  <rect class="grid fill" x="500" y="95" width="150" height="112"/><rect class="grid fill" x="700" y="95" width="150" height="112"/>
+</svg>

@@ -47,6 +47,7 @@ export interface AssessmentEvaluationInput {
   ) => Question[];
   overrides?: Partial<Record<AssessmentSectionId, Question[]>>;
   requireOfficialProvenance?: boolean;
+  requireOriginalProvenance?: boolean;
 }
 
 const sectionParams: Record<AssessmentSectionId, ["math" | "ela", "cat" | "pt"]> = {
@@ -115,6 +116,17 @@ export function evaluateAssessmentBank(input: AssessmentEvaluationInput): EvalRe
         }
         if (question.official?.bankVersion !== input.golden.bankVersion) {
           errors.push({ section, itemId: question.id, field: "official.bankVersion", message: "Bank version is missing or stale." });
+        }
+      }
+      if (input.requireOriginalProvenance) {
+        const provenance = question.provenance;
+        if (!provenance || provenance.origin !== "original") {
+          errors.push({ section, itemId: question.id, field: "provenance", message: "Original provenance is missing." });
+        } else {
+          if (!provenance.sourceId.trim()) errors.push({ section, itemId: question.id, field: "provenance.sourceId", message: "Source ID is required." });
+          if (!provenance.author.trim()) errors.push({ section, itemId: question.id, field: "provenance.author", message: "Author is required." });
+          if (!provenance.license.trim()) errors.push({ section, itemId: question.id, field: "provenance.license", message: "License is required." });
+          if (Number.isNaN(Date.parse(provenance.reviewedAt))) errors.push({ section, itemId: question.id, field: "provenance.reviewedAt", message: "Review date is invalid." });
         }
       }
       if (!question.rubric.trim()) {

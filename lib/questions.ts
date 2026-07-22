@@ -23,6 +23,8 @@ import { practiceTest17Questions } from "./practice-test-17";
 import { practiceTest18Questions } from "./practice-test-18";
 import { grade4MathCat, grade4MathPt } from "./grade4-test1-math";
 import { grade4ElaCat, grade4ElaPt } from "./grade4-test1-ela";
+import { grade4Test2MathCat, grade4Test2MathPt } from "./grade4-test2-math";
+import { grade4Test2ElaCat, grade4Test2ElaPt } from "./grade4-test2-ela";
 import { getAssessmentManifest } from "./assessment-manifest";
 
 export interface Question {
@@ -55,6 +57,7 @@ export interface Question {
   passageAuthor?: string;
   studentDirections?: string;
   dataTable?: {
+    rowHeader?: string;
     columns: string[];
     rows: { label: string; values: (string | number)[] }[];
   };
@@ -115,6 +118,14 @@ export interface Question {
     sourcePage: number;
     bankVersion: string;
     fidelity: "exact" | "equivalent-approved" | "blocked" | "mismatch";
+  };
+  /** Authorship and license record for original or externally sourced companion content. */
+  provenance?: {
+    sourceId: string;
+    origin: "original" | "public-domain" | "licensed";
+    author: string;
+    license: string;
+    reviewedAt: string;
   };
   /** Visual stimulus assets required to answer the item fairly. */
   stimulusImages?: {
@@ -2261,9 +2272,10 @@ export function getQuestions(
   grade: number,
   subject: "math" | "ela",
   testType: "cat" | "pt" = "cat",
-  practiceTest: number = 1
+  practiceTest: number = 1,
+  options: { includeUnavailable?: boolean } = {}
 ): Question[] {
-  const manifest = getAssessmentManifest(grade, practiceTest);
+  const manifest = getAssessmentManifest(grade, practiceTest, options);
   if (!manifest) return [];
 
   if (grade === 3 && practiceTest > 1) {
@@ -2325,6 +2337,12 @@ export function getQuestions(
   }
   if (grade === 4 && practiceTest === 1 && subject === "ela") {
     questions = testType === "cat" ? grade4ElaCat : grade4ElaPt;
+  }
+  if (grade === 4 && practiceTest === 2 && subject === "math") {
+    questions = testType === "cat" ? grade4Test2MathCat : grade4Test2MathPt;
+  }
+  if (grade === 4 && practiceTest === 2 && subject === "ela") {
+    questions = testType === "cat" ? grade4Test2ElaCat : grade4Test2ElaPt;
   }
   return mergeExplanations(
     questions.filter((q) => q.testType === testType).sort((a, b) => a.id - b.id)

@@ -1,0 +1,37 @@
+{
+  "bankVersion": "2026-07-22.1",
+  "sections": {
+    "math-cat": {
+      "count": 31,
+      "rawPoints": 32,
+      "canonicalSha256": "ba748e5f59d471f2a30357a4c3555d763e063c5d01f76d4a6482f77c7288178e",
+      "keys": ["125","C","380000","525419","600|180|80|24|884","B","A|B|D","0:0|1:1|2:2","C","A|B","5/8","C|A","15/8|1 7/8","0.37","0:0|1:2|2:1","300|5000|4000","C","104","3|2|16","18|1058","C|B","B","B|C","0:0|0:1|1:1|1:2|2:2|2:3","vertical|horizontal","A|A","77","B|D","0:1|0:2|1:1|2:1|2:2|2:3|3:1|3:2","0:1|1:2|2:0","1/2 + 3/4 + 1/4|1 1/2|miles"]
+    },
+    "math-pt": {
+      "count": 5,
+      "rawPoints": 6,
+      "canonicalSha256": "fa394c99a5e56e1ed340de75d96603610d8d1a697831eba0e27b06ee7c103995",
+      "keys": ["1800","250","600|1050","Disagree. The three segments total 450 + 600 + 750 = 1,800 meters, which is 1.8 kilometers, not 2 kilometers.","1|2|1"]
+    },
+    "ela-cat": {
+      "count": 30,
+      "rawPoints": 30,
+      "canonicalSha256": "5e9bfdba5ac354ef1672d3da28e53760e2986963a51dd235c7963ac4eca86735",
+      "keys": ["B","C","A","B|C","B|D","B","B|A","B","B","B","B|B","A|C","0:0|1:1|2:2","B","A|B","B","A|B","B","B","A","B|D","A","A|B","B|C","B","0:0|1:1|2:2","A|B","B|C","A","A|C"]
+    },
+    "ela-pt": {
+      "count": 3,
+      "rawPoints": 13,
+      "canonicalSha256": "6de93916184f6d4d105094aae612b3914a06e7700cd2351f92b33d43e52f123f",
+      "keys": ["A complete response explains that Source 1 supplies a potential learning or participation benefit while Source 2 supplies a concrete planning requirement or limitation, using one accurate detail from each.","0:0|1:1|1:2|2:2","Responses will vary. Either position or a conditional position is acceptable when supported with accurate evidence from more than one source."]
+    }
+  },
+  "stimulusSufficiency": [
+    {"items":"Math CAT 7-8, 12, 15, 23-25, 29-31","status":"exact","evidence":"All interaction data, diagrams, labels, answer fields, and required constraints are embedded in the bank and locally hashed assets."},
+    {"items":"Math PT 1-5","status":"exact","evidence":"The complete walking-routes map and all route distances remain visible on every linked item; all calculations are answerable from the supplied context."},
+    {"items":"ELA CAT 1-15","status":"exact","evidence":"Both complete original reading passages, the mail-process diagram, and the stage table remain attached to every linked item."},
+    {"items":"ELA CAT 16-21, 28-30","status":"exact","evidence":"Every writing and research item supplies the complete student excerpt or source information required for its key."},
+    {"items":"ELA CAT 22-27","status":"exact","evidence":"Every keyed fact is explicitly spoken in the original transcript; local audio is generated from that transcript at 125-145 words per minute."},
+    {"items":"ELA PT 1-3","status":"exact","evidence":"All three balanced original sources, accessibility constraints, data table, directions, prompts, and complete rubrics remain visible."}
+  ]
+}

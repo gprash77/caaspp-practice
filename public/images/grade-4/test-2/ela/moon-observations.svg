@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="300" viewBox="0 0 780 300" role="img" aria-labelledby="title desc">
+  <title id="title">Optional moon observation chart</title>
+  <desc id="desc">Observation 1 shows a thin bright curve on the right, called waxing crescent. Observation 2 shows the right half bright, called first quarter. Observation 3 shows a full bright circle, called full moon.</desc>
+  <rect width="780" height="300" fill="#101a33"/>
+  <g font-family="Arial,sans-serif" fill="white" text-anchor="middle" font-size="21"><text x="130" y="260">Observation 1</text><text x="390" y="260">Observation 2</text><text x="650" y="260">Observation 3</text></g>
+  <g stroke="white" stroke-width="3"><circle cx="130" cy="130" r="72" fill="#182747"/><path d="M130 58 A72 72 0 0 1 130 202 A52 72 0 0 0 130 58" fill="#fff7c2"/><path d="M390 58 A72 72 0 0 1 390 202 L390 58" fill="#fff7c2"/><path d="M390 58 A72 72 0 0 0 390 202 L390 58" fill="#182747"/><circle cx="650" cy="130" r="72" fill="#fff7c2"/></g>
+</svg>

@@ -421,9 +421,11 @@ function TableInput({
 }
 
 function StimulusTable({
+  rowHeader,
   columns,
   rows,
 }: {
+  rowHeader?: string;
   columns: string[];
   rows: { label: string; values: (string | number)[] }[];
 }) {
@@ -432,7 +434,7 @@ function StimulusTable({
       <table className="stimulus-table-table">
         <thead>
           <tr>
-            <th>Class</th>
+            <th>{rowHeader ?? "Class"}</th>
             {columns.map((column) => (
               <th key={column}>{column}</th>
             ))}
@@ -450,6 +452,28 @@ function StimulusTable({
         </tbody>
       </table>
     </div>
+  );
+}
+
+const DATA_TABLE_MARKER = "[[DATA_TABLE]]";
+
+function PassageMarkdown({ question }: { question: Question }) {
+  const parts = question.passage?.split(DATA_TABLE_MARKER) ?? [];
+  return (
+    <>
+      {parts.map((part, index) => (
+        <div key={`${question.id}-passage-${index}`}>
+          <ReactMarkdown>{part}</ReactMarkdown>
+          {index < parts.length - 1 && question.dataTable && (
+            <StimulusTable
+              rowHeader={question.dataTable.rowHeader}
+              columns={question.dataTable.columns}
+              rows={question.dataTable.rows}
+            />
+          )}
+        </div>
+      ))}
+    </>
   );
 }
 
@@ -1202,14 +1226,15 @@ function TestContent() {
                       )}
                     </div>
                   )}
-                  {current.dataTable && (
+                  {current.dataTable && !current.passage?.includes(DATA_TABLE_MARKER) && (
                     <StimulusTable
+                      rowHeader={current.dataTable.rowHeader}
                       columns={current.dataTable.columns}
                       rows={current.dataTable.rows}
                     />
                   )}
                   {current.passage && (
-                    <ReactMarkdown>{current.passage}</ReactMarkdown>
+                    <PassageMarkdown question={current} />
                   )}
                 </div>
               </>

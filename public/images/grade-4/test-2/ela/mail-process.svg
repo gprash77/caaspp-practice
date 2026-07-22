@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="230" viewBox="0 0 980 230" role="img" aria-labelledby="title desc">
+  <title id="title">Five stages in a letter's trip</title>
+  <desc id="desc">The stages are collection, first sorting center, transportation, local sorting center, and delivery.</desc>
+  <rect width="980" height="230" fill="white"/>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1976d2"/></marker></defs>
+  <g font-family="Arial,sans-serif" text-anchor="middle"><g fill="#e3f2fd" stroke="#17243a" stroke-width="2"><rect x="20" y="65" width="155" height="90" rx="12"/><rect x="215" y="65" width="155" height="90" rx="12"/><rect x="410" y="65" width="155" height="90" rx="12"/><rect x="605" y="65" width="155" height="90" rx="12"/><rect x="800" y="65" width="155" height="90" rx="12"/></g>
+  <g font-size="21" fill="#17243a"><text x="97" y="105">1. Collection</text><text x="292" y="100">2. First</text><text x="292" y="128">sorting center</text><text x="487" y="105">3. Travel</text><text x="682" y="100">4. Local</text><text x="682" y="128">sorting center</text><text x="877" y="105">5. Delivery</text></g></g>
+  <g stroke="#1976d2" stroke-width="4" marker-end="url(#arrow)"><path d="M178 110 L208 110"/><path d="M373 110 L403 110"/><path d="M568 110 L598 110"/><path d="M763 110 L793 110"/></g>
+</svg>
