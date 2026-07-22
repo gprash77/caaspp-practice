@@ -22,9 +22,9 @@ Date: 2026-07-22
 
 ## Release
 
-- [ ] Intended Phase 2 files committed to `main`.
-- [ ] `main` pushed to GitHub.
-- [ ] Vercel production deployment confirmed.
-- [ ] Live Test 3 routes, audio, images, and homepage label verified.
+- [x] Intended Phase 2 files committed to `main` (`bf4c5d4`).
+- [x] `main` pushed to GitHub.
+- [x] Vercel production deployment confirmed through the new production bundle.
+- [x] Live Test 3 route, both audio files, representative images, and the available Test 3 manifest verified with HTTP 200 responses.
 
 The release boxes are completed only after the corresponding GitHub, Vercel, and live HTTP checks succeed.
