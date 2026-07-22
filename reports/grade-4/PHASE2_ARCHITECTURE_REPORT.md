@@ -1,6 +1,6 @@
 # Grade 4 Phase 2 — Architecture Regression Report
 
-Status: Ready for Test 2 item-matrix review
+Status: Final Phase 2 regression gate passed
 
 Date: 2026-07-22
 
@@ -8,7 +8,7 @@ Test 1 baseline: `2026-07-20.1`
 
 ## Outcome
 
-The shared Phase 2 architecture prerequisites are implemented without exposing Grade 4 Test 2 or Test 3. Grade 4 Test 1 remains the only available Grade 4 form, and its 69 prompts, answer keys, point values, sources, and rubrics remain unchanged.
+The shared Phase 2 architecture prerequisites are implemented and now support the released Grade 4 Tests 2 and 3. Grade 4 Test 1 remains unchanged as the official 69-item golden baseline.
 
 The canonical Test 1 hashes were deliberately regenerated because the evaluator now serializes every enumerable authored/runtime field and because five item-named scoring rules were replaced by declarative rules. This is an architecture-hash projection change, not a content rebaseline.
 
@@ -18,7 +18,7 @@ The canonical Test 1 hashes were deliberately regenerated because the evaluator 
 
 - Availability, title, origin, bank version, response-schema version, form difficulty, section counts, and raw points now live in `lib/assessment-manifest.ts`.
 - Grade and test number form a composite bank identity.
-- Grade 4 Tests 2 and 3 exist only as unavailable planning records.
+- Grade 4 Tests 2 and 3 are complete manifest-backed original Easy forms.
 - The homepage derives available tests from the manifest.
 - Direct routes to unavailable forms return no questions.
 - Supabase fallback now filters by practice-test number and rejects a section unless its count exactly matches the manifest.
@@ -71,13 +71,13 @@ The canonical Test 1 hashes were deliberately regenerated because the evaluator 
 | Gate | Result |
 |---|---|
 | Grade 4 Test 1 eval | PASS — 69 items reviewed |
-| Unit/data/scoring tests | PASS — 6 files / 1,732 tests |
+| Unit/data/scoring tests | PASS — 8 files / 1,758 tests |
 | TypeScript | PASS |
 | ESLint | PASS |
 | Production build | PASS |
-| Full Playwright suite | PASS — 52/52 |
-| Targeted Grade 4 browser suite | PASS — 10/10 within full run |
-| In-app browser visual review | Unavailable in this session; browser discovery returned no available browser |
+| Full Playwright suite | PASS — 62/62 |
+| Targeted Test 3 browser suite | PASS — 5/5 |
+| In-app browser visual review | PASS — theater PT, student-news PT, semantic source table, and listening layout |
 
 The production build initially hit a sandbox-only Turbopack restriction while creating an internal helper process and binding a port. It passed when rerun with the required execution permission. This was not an application/build error.
 
@@ -94,11 +94,8 @@ The production build initially hit a sandbox-only Turbopack restriction while cr
 - Official partial credit retained.
 - Existing Grade 3 homepage, test flow, input, passage, and results behavior.
 
-## Remaining Before Test 2 Content
+## Final Phase 2 status
 
-1. User reviews and approves/revises the detailed Test 2 item matrix.
-2. After approval, author the complete Test 2 source packages and items.
-3. Add Test 2 golden fixture, provenance, media, scoring cases, fairness review, and browser coverage.
-4. Keep Test 2 unavailable until all four sections pass every gate.
+Both original Easy forms now use the architecture described above. Test 2 and Test 3 each passed their locked-bank eval, scoring tests, complete browser navigation, PT segmentation, manual-score persistence, production build, and cross-form review before release.
 
 No Test 2 question, passage, listening script, source package, image, or audio has been authored or enabled at this checkpoint.

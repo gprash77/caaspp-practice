@@ -25,6 +25,8 @@ import { grade4MathCat, grade4MathPt } from "./grade4-test1-math";
 import { grade4ElaCat, grade4ElaPt } from "./grade4-test1-ela";
 import { grade4Test2MathCat, grade4Test2MathPt } from "./grade4-test2-math";
 import { grade4Test2ElaCat, grade4Test2ElaPt } from "./grade4-test2-ela";
+import { grade4Test3MathCat, grade4Test3MathPt } from "./grade4-test3-math";
+import { grade4Test3ElaCat, grade4Test3ElaPt } from "./grade4-test3-ela";
 import { getAssessmentManifest } from "./assessment-manifest";
 
 export interface Question {
@@ -2343,6 +2345,12 @@ export function getQuestions(
   }
   if (grade === 4 && practiceTest === 2 && subject === "ela") {
     questions = testType === "cat" ? grade4Test2ElaCat : grade4Test2ElaPt;
+  }
+  if (grade === 4 && practiceTest === 3 && subject === "math") {
+    questions = testType === "cat" ? grade4Test3MathCat : grade4Test3MathPt;
+  }
+  if (grade === 4 && practiceTest === 3 && subject === "ela") {
+    questions = testType === "cat" ? grade4Test3ElaCat : grade4Test3ElaPt;
   }
   return mergeExplanations(
     questions.filter((q) => q.testType === testType).sort((a, b) => a.id - b.id)

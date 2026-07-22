@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" viewBox="0 0 760 260" role="img" aria-labelledby="title desc">
+  <title id="title">Three labeled pairs of lines</title><desc id="desc">Pair A has parallel diagonal lines, Pair B has perpendicular lines, and Pair C has intersecting lines that are not perpendicular.</desc>
+  <rect width="760" height="260" fill="#fff"/><g stroke="#174c73" stroke-width="7" stroke-linecap="round"><path d="M45 170L190 70M85 210L230 110"/><path d="M375 45V215M290 130H460"/><path d="M535 200L700 60M545 55L690 210"/></g><path d="M375 130h24v24h-24" fill="none" stroke="#d96d22" stroke-width="4"/><g font-family="Arial" font-size="24" font-weight="700"><text x="125" y="245">A</text><text x="365" y="245">B</text><text x="610" y="245">C</text></g>
+</svg>

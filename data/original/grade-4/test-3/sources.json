@@ -1,0 +1,12 @@
+{
+  "bankVersion":"2026-07-22.1",
+  "reviewedOn":"2026-07-22",
+  "author":"CAASPP Practice Project",
+  "license":"Original companion content; all rights reserved for this project.",
+  "sections":[
+    {"id":"g4-t3-math-cat","itemCount":31,"rawPoints":32,"sourcePackages":["original-independent-items"]},
+    {"id":"g4-t3-math-pt","itemCount":5,"rawPoints":6,"sourcePackages":["community-theater-seating"]},
+    {"id":"g4-t3-ela-cat","itemCount":30,"rawPoints":30,"sourcePackages":["the-extra-stitch","inside-a-water-tower","from-cotton-fiber-to-cloth","mapping-a-neighborhood-with-symbols","original-writing-and-research-items"]},
+    {"id":"g4-t3-ela-pt","itemCount":3,"rawPoints":13,"sourcePackages":["student-news-program"]}
+  ]
+}

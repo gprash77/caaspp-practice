@@ -35,6 +35,20 @@ const audioTargets: AudioTarget[] = [
   },
   {
     grade: 4,
+    testNum: 3,
+    title: "From Cotton Fiber to Cloth",
+    output: "public/audio/presentations/grade-4/test-3-from-cotton-fiber-to-cloth.m4a",
+    rate: 60,
+  },
+  {
+    grade: 4,
+    testNum: 3,
+    title: "Mapping a Neighborhood with Symbols",
+    output: "public/audio/presentations/grade-4/test-3-mapping-a-neighborhood-with-symbols.m4a",
+    rate: 30,
+  },
+  {
+    grade: 4,
     testNum: 2,
     title: "Watching the Moon's Appearance",
     output: "public/audio/presentations/grade-4/test-2-watching-the-moons-appearance.m4a",

@@ -89,10 +89,10 @@ function plannedGrade4EasyForm(testNumber: 2 | 3): AssessmentManifest {
     testNumber,
     title: `Grade 4 Original Practice Test ${testNumber}`,
     origin: "original-companion",
-    bankVersion: testNumber === 2 ? "2026-07-22.1" : "grade4-test3-draft",
+    bankVersion: "2026-07-22.1",
     responseSchemaVersion: "1",
     difficulty: "easy",
-    available: testNumber === 2,
+    available: true,
     sections: {
       "math-cat": { itemCount: 31, rawPoints: 32 },
       "math-pt": { itemCount: 5, rawPoints: 6 },

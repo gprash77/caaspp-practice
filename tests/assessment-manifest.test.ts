@@ -10,13 +10,13 @@ import {
 import { getQuestions } from "../lib/questions";
 
 describe("assessment manifest", () => {
-  it("lists completed Grade 4 forms without exposing the planned Test 3 form", () => {
+  it("lists all completed Grade 4 forms", () => {
     expect(listAvailableAssessments(3).map((manifest) => manifest.testNumber)).toEqual(
       Array.from({ length: 18 }, (_, index) => index + 1)
     );
-    expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual([1, 2]);
+    expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual([1, 2, 3]);
     expect(getAssessmentManifest(4, 2)?.difficulty).toBe("easy");
-    expect(getAssessmentManifest(4, 3)).toBeUndefined();
+    expect(getAssessmentManifest(4, 3)?.difficulty).toBe("easy");
     expect(getAssessmentManifest(4, 3, { includeUnavailable: true })?.difficulty).toBe("easy");
   });
 
@@ -57,7 +57,7 @@ describe("assessment manifest", () => {
     expect(getQuestions(3, "math", "cat", 1)[0]?.grade).toBe(3);
     expect(getQuestions(4, "math", "cat", 1)[0]?.grade).toBe(4);
     expect(getQuestions(4, "math", "cat", 2)).toHaveLength(31);
-    expect(getQuestions(4, "ela", "pt", 3)).toEqual([]);
+    expect(getQuestions(4, "ela", "pt", 3)).toHaveLength(3);
   });
 
   it("rejects an exposed manifest with incomplete section metadata", () => {

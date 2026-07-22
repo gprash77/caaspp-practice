@@ -1,6 +1,6 @@
 # Grade 4 Phase 2 Plan — Full-Length Practice Tests 2 and 3
 
-Status: Revised draft for approval before implementation
+Status: Approved and implemented
 
 Baseline: Grade 4 Test 1, bank version `2026-07-20.1`
 

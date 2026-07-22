@@ -11,7 +11,8 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "eval:grade4-test1": "node --import tsx scripts/eval-grade4-test1.ts",
-    "eval:grade4-test2": "node --import tsx scripts/eval-grade4-test2.ts"
+    "eval:grade4-test2": "node --import tsx scripts/eval-grade4-test2.ts",
+    "eval:grade4-test3": "node --import tsx scripts/eval-grade4-test3.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.1",

@@ -4,7 +4,7 @@ async function startGrade4(page: Page, label: string) {
   await page.goto("/");
   await page.locator("#grade").selectOption("4");
   await expect(page.locator("#grade")).toHaveValue("4");
-  await expect(page.locator("#practiceTest option")).toHaveCount(2);
+  await expect(page.locator("#practiceTest option")).toHaveCount(3);
   await page.locator("#practiceTest").selectOption("1");
   await page.getByRole("button").filter({ hasText: label }).click();
   await expect(page).toHaveURL(/grade=4/);
@@ -24,13 +24,14 @@ async function reviewEveryRenderedItem(page: Page, expectedCount: number) {
 }
 
 test.describe("Grade 4 Test 1 official baseline", () => {
-  test("Grade 4 exposes completed Tests 1 and 2", async ({ page }) => {
+  test("Grade 4 exposes completed Tests 1, 2, and 3", async ({ page }) => {
     await page.goto("/");
     await page.locator("#grade").selectOption("4");
-    await expect(page.locator("#practiceTest option")).toHaveCount(2);
+    await expect(page.locator("#practiceTest option")).toHaveCount(3);
     await expect(page.locator("#practiceTest option")).toHaveText([
       "Test 1 (Official Baseline)",
       "Test 2 (Original · Easy)",
+      "Test 3 (Original · Easy)",
     ]);
     await expect(page.locator("#practiceTest")).toHaveValue("1");
   });

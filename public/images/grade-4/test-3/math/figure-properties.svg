@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title desc">
+  <title id="title">Three labeled geometric figures</title><desc id="desc">Figure A is a square, Figure B is an acute triangle, and Figure C is a non-rectangular parallelogram.</desc>
+  <rect width="760" height="250" fill="#fff"/><g fill="#e8f2fb" stroke="#174c73" stroke-width="6"><rect x="60" y="55" width="140" height="140"/><path d="M305 190L385 48L470 190Z"/><path d="M555 65H700L650 195H505Z"/></g><g font-family="Arial" font-size="24" font-weight="700" fill="#183b5b"><text x="115" y="230">A</text><text x="378" y="230">B</text><text x="594" y="230">C</text></g>
+</svg>

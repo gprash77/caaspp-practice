@@ -26,6 +26,15 @@ const ELA_PT_FLOWS = new Map<string, ElaPtFlowDefinition>([
       part2ItemIds: [43103],
     },
   ],
+  [
+    "4:3",
+    {
+      sourcePackageId: "g4-test3-student-news",
+      sourcePackageVersion: "2026-07-22.1",
+      part1ItemIds: [45101, 45102],
+      part2ItemIds: [45103],
+    },
+  ],
 ]);
 
 export function getElaPtFlow(grade: number, testNumber: number): ElaPtFlowDefinition | undefined {
