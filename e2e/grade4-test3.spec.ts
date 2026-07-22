@@ -110,8 +110,19 @@ test.describe("Grade 4 Test 3 original easy form", () => {
     await page.getByRole("button", { name: "SAVE AND CLOSE" }).click();
     await page.locator(".short-answer-input").fill("Source 1 explains communication practice; Source 2 requires privacy review.");
     await page.locator(".tds-progress-dots .tds-dot").nth(1).click({ force: true });
-    for (const index of [0, 4, 5, 8]) await page.locator(".grid-match-checkbox").nth(index).check();
-    await page.getByTitle("Next").click();
+    await expect(page.getByRole("note")).toContainText(
+      "row 1: exactly 1 (selected 0); row 2: exactly 2 (selected 0); row 3: exactly 1 (selected 0)"
+    );
+    for (const index of [0, 4, 8]) await page.locator(".grid-match-checkbox").nth(index).check();
+    await expect(page.getByTitle("Review Part 1")).toBeVisible();
+    await page.getByTitle("Review Part 1").click();
+    await expect(page.getByText("Missing selections: row 2 needs 1 more selection.")).toBeVisible();
+    await page.getByRole("button", { name: "OK" }).click();
+    await page.locator(".grid-match-checkbox").nth(5).check();
+    await expect(page.getByRole("note")).toContainText(
+      "row 1: exactly 1 (selected 1); row 2: exactly 2 (selected 2); row 3: exactly 1 (selected 1)"
+    );
+    await page.getByTitle("Review Part 1").click();
     await expect(page.getByTestId("ela-pt-part1-review")).toBeVisible();
     await page.getByRole("button", { name: "CONTINUE TO PART 2" }).click();
     await expect(page.getByTestId("ela-pt-part2-transition")).toBeVisible();
@@ -120,6 +131,7 @@ test.describe("Grade 4 Test 3 original easy form", () => {
     );
     await page.getByRole("button", { name: "BEGIN PART 2" }).click();
     await expect(page.getByTitle("Back")).toBeDisabled();
+    await expect(page.getByTitle("Submit")).toBeVisible();
     await expect(page.locator(".tds-question-text")).toContainText("school planning team");
     await page.locator(".rich-editor-body").fill("The school should run a small trial with privacy review and shared access. Sources 1 and 2 explain the benefits and required safeguards.");
     await page.getByRole("button", { name: "SUBMIT TEST" }).click();

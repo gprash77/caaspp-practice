@@ -79,7 +79,7 @@ test.describe("Grade 4 Test 1 official baseline", () => {
     await page.locator(".short-answer-input").fill("A response using two details from Source 2.");
     await page.locator(".tds-progress-dots .tds-dot").nth(1).click({ force: true });
     await page.locator(".grid-match-checkbox").first().check();
-    await page.getByTitle("Next").click();
+    await page.getByTitle("Review Part 1").click();
     await expect(page.getByTestId("ela-pt-part1-review")).toBeVisible();
     await expect(page.getByText("Research Task 1")).toBeVisible();
     await expect(page.getByText("Research Task 2")).toBeVisible();

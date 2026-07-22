@@ -86,6 +86,15 @@ function GridMatch({
   value: string[];
   onChange: (v: string[]) => void;
 }) {
+  const rowRequirements = rows.map((_, rowIndex) => {
+    const rowContract = selection?.rowSelections?.[rowIndex];
+    return {
+      minimum: rowContract?.min ?? selection?.perRowMin,
+      maximum: rowContract?.max ?? selection?.perRowMax,
+      selected: value.filter((entry) => entry.startsWith(`${rowIndex}:`)).length,
+    };
+  });
+
   const toggleCell = (rowIdx: number, colIdx: number) => {
     const key = `${rowIdx}:${colIdx}`;
     if (value.includes(key)) {
@@ -98,6 +107,17 @@ function GridMatch({
 
   return (
     <div className="grid-match">
+      {selection && (
+        <div className="interaction-helper" role="note">
+          <strong>Required selections:</strong>{" "}
+          {rowRequirements.map((requirement, index) => {
+            const required = requirement.minimum === requirement.maximum
+              ? `exactly ${requirement.minimum}`
+              : `${requirement.minimum}–${requirement.maximum}`;
+            return `${index > 0 ? "; " : ""}row ${index + 1}: ${required} (selected ${requirement.selected})`;
+          })}
+        </div>
+      )}
       <table className="grid-match-table">
         <thead>
           <tr>
@@ -1041,7 +1061,7 @@ function TestContent() {
         <div className="results-header"><h1>Part 2 — Writing Task</h1></div>
         <div className="results-body">
           <p>
-            In Part 2, you will write one informational article using the research sources. Your
+            In Part 2, you will complete one full-write response using the research sources. Your
             sources and Global Notes will remain available. You cannot return to the Part 1 research
             tasks after beginning Part 2.
           </p>
@@ -1093,6 +1113,31 @@ function TestContent() {
     });
   const firstVisibleIndex = visibleQuestionEntries[0]?.index ?? 0;
   const canGoBack = currentIndex > firstVisibleIndex;
+  const isLastPart1Question = Boolean(
+    elaPtFlow &&
+    segment === "part1" &&
+    elaPtFlow.part1ItemIds.at(-1) === current.id
+  );
+  const isFinalQuestion = currentIndex === questions.length - 1;
+  const forwardActionLabel = isLastPart1Question
+    ? "Review Part 1"
+    : isFinalQuestion
+      ? "Submit"
+      : "Next";
+  const incompleteSelectionDetail = (() => {
+    if (current.type !== "grid-match" || !current.gridSelection || !current.gridRows) return null;
+    const currentAnswer = Array.isArray(answers[current.id]) ? answers[current.id] as string[] : [];
+    const missingRows = current.gridRows.flatMap((_, rowIndex) => {
+      const contract = current.gridSelection?.rowSelections?.[rowIndex];
+      const minimum = contract?.min ?? current.gridSelection!.perRowMin;
+      const selected = currentAnswer.filter((entry) => entry.startsWith(`${rowIndex}:`)).length;
+      const missing = Math.max(0, minimum - selected);
+      return missing > 0
+        ? [`row ${rowIndex + 1} needs ${missing} more selection${missing === 1 ? "" : "s"}`]
+        : [];
+    });
+    return missingRows.length > 0 ? missingRows.join("; ") : null;
+  })();
 
   return (
     <div className="tds-wrapper">
@@ -1137,10 +1182,10 @@ function TestContent() {
           <button
             className="tds-nav-icon"
             onClick={currentIndex < questions.length - 1 ? goNext : handleSubmit}
-            title={currentIndex < questions.length - 1 ? "Next" : "Submit"}
+            title={forwardActionLabel}
           >
             <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M10 8l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            <span className="tds-icon-label">Next</span>
+            <span className="tds-icon-label">{forwardActionLabel}</span>
           </button>
           <button
             className={`tds-nav-icon ${flagged.has(current.id) ? "active-flag" : ""}`}
@@ -1543,6 +1588,11 @@ function TestContent() {
                 to the next screen. You must answer all questions on this
                 page before moving to the next page.
               </p>
+              {incompleteSelectionDetail && (
+                <p style={{ margin: "0 0 12px", fontSize: 13, lineHeight: 1.5, color: "#8a2d00", fontWeight: 600 }}>
+                  Missing selections: {incompleteSelectionDetail}.
+                </p>
+              )}
               <p style={{ margin: "0 0 16px", fontSize: 11, color: "#999" }}>
                 [MessageCode: 12109]
               </p>

@@ -114,7 +114,7 @@ test.describe("Grade 4 Test 2 original easy form", () => {
     await page.locator(".short-answer-input").fill("Source 1 gives a learning benefit; Source 2 gives an access requirement.");
     await page.locator(".tds-progress-dots .tds-dot").nth(1).click({ force: true });
     for (const index of [0, 4, 5, 8]) await page.locator(".grid-match-checkbox").nth(index).check();
-    await page.getByTitle("Next").click();
+    await page.getByTitle("Review Part 1").click();
     await expect(page.getByTestId("ela-pt-part1-review")).toBeVisible();
     await page.getByRole("button", { name: "CONTINUE TO PART 2" }).click();
     await expect(page.getByTestId("ela-pt-part2-transition")).toBeVisible();
