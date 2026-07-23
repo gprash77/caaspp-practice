@@ -1,5 +1,239 @@
 # CODEX HANDOFF
 
+## July 23, 2026 Handoff — Grade 4 Phases 1–3 Complete and Live
+
+### Read This First
+
+The Grade 4 program is no longer waiting on Phase 2 or Phase 3 implementation. Grade 4 Tests 1–5 are complete, pushed to `main`, deployed through Vercel, and independently verified in production.
+
+Before changing Grade 4 code or content, read:
+
+1. `AGENTS.md`
+2. This July 23 section in `CODEX_HANDOFF.md`
+3. `reports/grade-4/PHASE2_ARCHITECTURE_REPORT.md`
+4. `reports/grade-4/PHASE2_RELEASE_CHECKLIST.md`
+5. `reports/grade-4/PHASE3_PLAN.md`
+6. The item matrix and evaluation report for any form being touched:
+   - `reports/grade-4/test-1/PHASE1_EVAL_REPORT.md`
+   - `reports/grade-4/test-2/ITEM_MATRIX.md`
+   - `reports/grade-4/test-2/EVAL_REPORT.md`
+   - `reports/grade-4/test-3/ITEM_MATRIX.md`
+   - `reports/grade-4/test-3/EVAL_REPORT.md`
+   - `reports/grade-4/test-4/ITEM_MATRIX.md`
+   - `reports/grade-4/test-4/EVAL_REPORT.md`
+   - `reports/grade-4/test-5/ITEM_MATRIX.md`
+   - `reports/grade-4/test-5/EVAL_REPORT.md`
+
+The older July 21 section below is retained as history. Its instructions to wait for Phase 2 approval and its list of unimplemented architecture prerequisites are superseded: the user approved the work, and Phases 2 and 3 are finished.
+
+### Current Repository and Production State
+
+- Repo: `/Users/gprash77/projects/caaspp-practice`
+- Branch: `main`
+- Current application/content commit: `8d0cda6` `Add Grade 4 hard practice Test 5`
+- `HEAD`, `origin/main`, and `origin/HEAD` all resolved to `8d0cda6caa0c7305bbb61bcd6c8fc32834d1a70d` before this documentation-only handoff update.
+- Production: `https://caaspp-practice.vercel.app`
+- Production was checked after the Test 5 push:
+  - Grade 4 selector showed Test 4 as `Original · Medium`.
+  - Grade 4 selector showed Test 5 as `Original · Hard`.
+  - Test 5 Math PT opened the complete five-item Community Water Station Delivery Plan.
+  - Test 5 ELA listening loaded its deployed audio without console errors.
+  - Both Test 5 M4A assets returned HTTP 200 with their expected byte sizes.
+- The only pre-existing untracked path is `tmp/`. It contains local audit material and must remain untracked. Do not commit, delete, or “clean” it merely to make `git status` empty.
+- There is no unfinished Grade 4 Phase 3 task. Ask the user what they want next rather than assuming a new phase or modifying the released forms speculatively.
+
+### Locked Product Decisions
+
+- Grade 4 Test 1 is the corrected official public-practice golden baseline.
+- Grade 4 Tests 2–5 are original, CAASPP-blueprint-aligned companion forms. Never describe them as official copies.
+- Every Grade 4 form is full length:
+  - Math CAT: 31 items / 32 points
+  - Math PT: 5 items / 6 points
+  - ELA CAT: 30 items / 30 points
+  - ELA PT: 3 scored tasks / 13 points
+  - Total: 69 scored tasks / 81 raw points
+- Difficulty is assigned to the complete form:
+  - Test 1: Official Baseline
+  - Test 2: Original · Easy
+  - Test 3: Original · Easy
+  - Test 4: Original · Medium
+  - Test 5: Original · Hard
+- Difficulty must come from reasoning, evidence integration, scaffolding, and meaningful constraints—not obscure vocabulary, tricks, missing information, cultural assumptions, or unfamiliar controls.
+- Test 1 bank version is `2026-07-20.1`.
+- Tests 2–5 use original companion bank version `2026-07-22.1`.
+- Treat the locked fixtures, matrices, rubrics, source packages, and generated audio as released data. Any content change requires re-locking the affected fixture and rerunning the complete CAASPP eval gate.
+
+### Delivered Grade 4 Forms
+
+#### Test 1 — Official Baseline
+
+- Commit: `9529402` plus interaction/fidelity fixes `6308b25` and `21aef28`.
+- Exact locked official-baseline counts, prompts, source associations, keys, points, and rubrics.
+- Local listening narration uses exact recovered transcripts but generated M4A files; it remains explicitly `equivalent-approved`, not the original protected official audio binary.
+- This is the canonical comparison dataset for all companion-form evaluations.
+
+#### Test 2 — Original · Easy
+
+- Release commit: `accf3e3`.
+- Locked fixture: `data/original/grade-4/test-2/golden.json`.
+- Shared Math PT: fictional walking-route plan with visible distances, conversion facts, Rest Point condition, and route rules.
+- Literary source: “The Last Practice Lap.”
+- Informational source: “How a Letter Finds Its Way.”
+- Listening: “From Paper Bin to New Paper” and “Watching the Moon's Appearance.”
+- ELA PT: a balanced school-improvement source package with access, safety, budget, upkeep, and mixed outcome evidence.
+- Passed complete fairness, scoring, browser, audio, persistence, manual-rubric, desktop, and 390 × 844 checks.
+
+#### Test 3 — Original · Easy
+
+- Release commit: `bf4c5d4`.
+- Locked fixture: `data/original/grade-4/test-3/golden.json`.
+- Shared Math PT: Community Theater Seating Plan.
+- Literary source: “The Extra Stitch.”
+- Informational source: “Inside a Water Tower.”
+- Listening: “From Cotton Fiber to Cloth” and “Mapping a Neighborhood with Symbols.”
+- ELA PT: “Should Our School Create a Student News Program?”
+- The source package supports yes, no, and conditional positions and treats privacy, accessibility, permission, shared equipment, and adult review as requirements.
+
+#### Test 4 — Original · Medium
+
+- Release commit: `aa85cef`.
+- Locked fixture: `data/original/grade-4/test-4/golden.json`.
+- Shared Math PT: Community Food Pantry Packing Plan.
+- Literary source: “The Unmarked Beat.”
+- Informational source: “When a Drawbridge Opens.”
+- Listening: “From Clay to a Fired Bowl” and “Reading a Weather Map.”
+- ELA PT: “How Should Our School Improve the Lunch Line?”
+- Medium difficulty increases inference, representation connections, relevant-information decisions, and multistep reasoning while keeping every rule and source visible.
+- Cross-form comparison found no exact prompt or passage reuse against Grade 4 Tests 1–3 or the Grade 3 banks.
+
+#### Test 5 — Original · Hard
+
+- Release commit: `8d0cda6`.
+- Locked fixture: `data/original/grade-4/test-5/golden.json`.
+- Shared Math PT: Community Water Station Delivery Plan.
+- Literary source: “Signals Across the Cove.”
+- Informational source: “Room for Roots Beneath a City Street.”
+- Listening: “Testing a Model Building Against Shaking” and “How Sand Dunes Move.”
+- ELA PT: “Should the Town Use Shielded LED Streetlights?”
+- Hard difficulty comes from non-routine modeling, evidence qualification, competing evidence, and layered but fully visible constraints.
+- The streetlight package supports replacement, rejection, and conditional/phased recommendations. Safety and accessibility are required constraints; mixed pilot evidence prevents one forced position.
+- Exact and normalized-number duplicate review found no reuse against Grade 4 Tests 1–4 or any Grade 3 bank.
+
+### Shared Architecture Now in Production
+
+The Phase 2 architecture prerequisites listed in the older handoff are complete:
+
+- `lib/assessment-manifest.ts`
+  - grade-aware manifest
+  - availability, origin, difficulty, bank version, response schema, item counts, and raw points
+  - homepage labels and available-form behavior derive from the manifest
+- `lib/assessment-flow.ts`
+  - explicit ELA PT Part 1 research tasks
+  - Part 1 review
+  - separate Part 2 transition
+  - forward-only Part 2 in normal flow
+  - source and Global Notes continuity
+- `lib/scoring.ts`
+  - reusable exact, ordered, unordered, numeric-equivalent, numeric-range, partial-credit, schedule, constraint, and manual scoring
+  - no released Grade 4 form depends on item-ID-specific scoring logic
+- `lib/manual-rubrics.ts`
+  - versioned 2-point research rubrics
+  - 10-point 4/4/2 writing rubrics
+  - NS, scorer metadata, comments, dates, range validation, and persisted totals
+  - unscored remains distinct from a scored zero
+- `lib/attempt-records.ts` and `/results`
+  - attempt-isolated persistence
+  - complete bank SHA-256 and response-schema identity
+  - frozen submission scoring
+  - stale-bank records are blocked from silent overwrite or rescoring
+- `lib/validation/assessment-bank.ts`
+  - reusable locked-fixture evaluator
+  - complete stable serialization of authored/runtime fields
+- Interaction contracts support exact row/selection cardinality, mutually exclusive `None`, multiple symmetry lines, normalized line plots, structured multi-input constraints, and explicit response-completeness guidance.
+
+### Important User-Reported UX Fixes
+
+The user manually exercised the released ELA flows and identified ambiguity that was corrected:
+
+- Commit `4f9d9c2` `Fix ELA PT source-selection guidance`
+  - clarified the required number of selections for source-matching rows
+  - removed the confusing “please answer the questions” loop caused by incomplete row-cardinality feedback
+- Commit `2bcaf8c` `Clarify leaving a practice test`
+  - made Exit Test behavior clearer
+  - normal browser Back is not the supported way to switch tests because attempt history/persistence can return to the prior test
+- Test 5 release also fixed stale-attempt recovery in `app/test/page.tsx`.
+  - Previously, “START NEW ATTEMPT” could update the attempt ID but remain on the stale-version warning because component state was not cleared.
+  - The question-load effect now clears `staleAttempt` before hydrating the new attempt.
+  - `e2e/grade4-test5.spec.ts` contains a regression that seeds an old-bank attempt, preserves it, starts a clean current-bank attempt, and reaches question 1.
+
+Do not remove these behaviors without replacing their regression coverage.
+
+### Final Verification Evidence
+
+Final gates after Test 5 and the stale-attempt recovery fix:
+
+- `npm test`: 10 files / 1,784 tests passed.
+- `npm run eval:grade4-test1`: passed, 69 locked baseline items.
+  - The only warning is the longstanding, approved Test 1 generated-audio equivalence notice.
+- `npm run eval:grade4-test2`: passed, 69 locked original items.
+- `npm run eval:grade4-test3`: passed, 69 locked original items.
+- `npm run eval:grade4-test4`: passed, 69 reviewed items, zero errors/warnings.
+- `npm run eval:grade4-test5`: passed, 69 reviewed items, zero errors/warnings.
+- `npm run lint`: passed.
+- `npm run build`: passed, including Vitest, TypeScript, Next production compilation, and static generation.
+- `npm run test:e2e`: 74/74 passed after adding stale-attempt recovery coverage.
+- Every Test 5 Math CAT, Math PT, ELA CAT, and ELA PT item rendered in Chromium.
+- High-risk interaction, partial-credit, constraint, grid-cardinality, manual-scoring, PT transition, submission, answer persistence, notes/source continuity, and stale-bank behaviors are covered across the full suite.
+- Desktop visual QA passed for the Medium pantry/lunch-line and Hard water/streetlight layouts.
+- 390 × 844 checks passed without page-level horizontal overflow.
+- Final production checks passed for the Test 5 label, Math PT route, listening route, representative source content, and both audio assets.
+
+Test-specific evidence remains in:
+
+- `reports/grade-4/test-2/EVAL_REPORT.md`
+- `reports/grade-4/test-3/EVAL_REPORT.md`
+- `reports/grade-4/test-4/EVAL_REPORT.md`
+- `reports/grade-4/test-5/EVAL_REPORT.md`
+
+### Commit Timeline for the Completed Grade 4 Work
+
+- `9529402` Add official Grade 4 Test 1 baseline
+- `6308b25` Improve Grade 4 Math interactions
+- `21aef28` Show fixed Art Day boundary times
+- `f26e73a` Document Grade 4 Phase 2 handoff
+- `cf56adb` Build Grade 4 Phase 2 architecture
+- `18750e6` Harden Grade 4 Test 2 planning contracts
+- `8142182` Finalize Grade 4 Test 2 review matrix
+- `accf3e3` Release Grade 4 Test 2 easy form
+- `bf4c5d4` Release Grade 4 Test 3 easy form
+- `7e9636e` Record Grade 4 Phase 2 production release
+- `4f9d9c2` Fix ELA PT source-selection guidance
+- `2bcaf8c` Clarify leaving a practice test
+- `aa85cef` Add Grade 4 medium practice Test 4
+- `8d0cda6` Add Grade 4 hard practice Test 5
+
+### Exact Next-Agent Instructions
+
+1. Read this July 23 section, `AGENTS.md`, and the relevant plan/matrix/eval report before touching a released form.
+2. Run `git status --short` and confirm that only the known untracked `tmp/` path is present unless the user has intentionally added other work.
+3. Confirm the user's next objective. Phase 3 is complete; do not infer that the next task is Grade 5, more Grade 4 forms, or a redesign.
+4. If the user reports a bug, reproduce it locally first and add a focused regression test. Preserve attempt isolation, bank-version safety, ELA PT segmentation, and the Test 1 golden baseline.
+5. If any test-bank content changes, run the affected locked-fixture eval plus Test 1 and all intervening Grade 4 regression evals.
+6. For visible or stateful changes, run unit/scoring tests, lint, production build, full browser automation, and in-app visual QA before asking the user to check.
+7. Commit only intended files, never include `tmp/`, push `main`, allow Vercel to deploy from GitHub, and verify production rather than assuming deployment succeeded.
+
+### Do Not Do
+
+- Do not alter Grade 4 Test 1 as a convenience template for companion-form changes.
+- Do not label Tests 2–5 or their generated audio as official or exact.
+- Do not shorten any released Grade 4 form or change its 69-item / 81-point structure without explicit user approval.
+- Do not weaken Hard difficulty by removing required reasoning, or make it harder through ambiguity or missing information.
+- Do not change locked answers, rubrics, sources, constraints, hashes, or bank versions without rebuilding the fixture and rerunning the complete gate.
+- Do not silently rescore or overwrite attempts from a different bank hash/schema.
+- Do not flatten ELA PT back into three ordinary tabs; preserve Part 1 review and the forward-only Part 2 transition.
+- Do not ask the user to be the first QA pass.
+- Do not commit or delete `tmp/`, `.playwright-cli/`, screenshots, traces, or local generated artifacts unless explicitly requested.
+
 ## July 21, 2026 End-of-Day Handoff — Grade 4 Phase 1 Complete / Phase 2 Planned
 
 ### Read This First
