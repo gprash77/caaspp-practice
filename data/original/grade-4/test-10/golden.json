@@ -1,0 +1,134 @@
+{
+  "bankVersion": "2026-07-27.1",
+  "sections": {
+    "math-cat": {
+      "count": 31,
+      "rawPoints": 32,
+      "canonicalSha256": "c02f9438fb47db1bd7e426fd007021bf0aa0a27bc1aec8274af0db9721dfa7c3",
+      "keys": [
+        "A|B",
+        "C",
+        "B|D",
+        "472845|472845",
+        "819|1014",
+        "D|A",
+        "B",
+        "0:0|1:1|1:2|2:0",
+        "C|D",
+        "A",
+        "B|C",
+        "1 1/2",
+        "B|C",
+        "0:0|1:1|2:2",
+        "D|A",
+        "24|288",
+        "0:0|0:1|0:2|1:0|1:1|2:0|2:2",
+        "40|40",
+        "4|1/2",
+        "800|1160",
+        "B|C",
+        "C|D",
+        "D|A",
+        "0:0|0:1|1:2|2:1",
+        "vertical|horizontal|diagonal-a|diagonal-b",
+        "75|105",
+        "B",
+        "A|B",
+        "1/4|1/4|1/2|3/4|3/4|3/4|1",
+        "3|7",
+        "8/4|3/4|11/4"
+      ]
+    },
+    "math-pt": {
+      "count": 5,
+      "rawPoints": 6,
+      "canonicalSha256": "cab5e7c7905801ae2bf3b4da56cf75326841af2cd5e6ea0467b2b4ac491b48cd",
+      "keys": [
+        "36",
+        "7|5",
+        "12:05 p.m.|12:45 p.m.",
+        "The plan supplies 63 units, which is legal but equals the maximum, so it leaves 0 spare units. The spare-unit statement is false.",
+        "4|3|3|3"
+      ]
+    },
+    "ela-cat": {
+      "count": 30,
+      "rawPoints": 30,
+      "canonicalSha256": "238f3c28b2a7d1cb8c307c96dec09774be15773cf161d40da698b14914c1de1e",
+      "keys": [
+        "A",
+        "B",
+        "C|D",
+        "A|B",
+        "A|D",
+        "0:0|1:1|2:2",
+        "C|D",
+        "A",
+        "B",
+        "C",
+        "D|A",
+        "A|B",
+        "0:0|1:1|2:2",
+        "B|C",
+        "B|C",
+        "D",
+        "A|B",
+        "C",
+        "D",
+        "A|B",
+        "A|D",
+        "C",
+        "B|C",
+        "D|A",
+        "B",
+        "0:0|1:1|2:2",
+        "B|C",
+        "A|B",
+        "C|D",
+        "C|D"
+      ]
+    },
+    "ela-pt": {
+      "count": 3,
+      "rawPoints": 13,
+      "canonicalSha256": "7108dbdbd09cf7a598961cd55ff752f44ef7a8b23434bcd163f1018f5c176e62",
+      "keys": [
+        "Source 1 explains the planning idea and how it should be evaluated. Source 3 reports local pilot measurements, including discarded single-use packages fell substantially during pilot days. The pilot is limited because fourteen weeks did not include a full school year, summer storage, equipment replacement, or every menu type.",
+        "0:0|1:1|1:2|2:2",
+        "Responses vary and are scored with the 4-4-2 opinion-writing rubric."
+      ]
+    }
+  },
+  "stimulusSufficiency": [
+    {
+      "items": "Math CAT 1-31",
+      "status": "exact",
+      "evidence": "Every number, response rule, selection count, and model constraint is visible in the authored item."
+    },
+    {
+      "items": "Math PT 1-5",
+      "status": "exact",
+      "evidence": "The shared plan displays all quantities, conversions, timing, capacity, minimum, and whole-unit rules required by its five tasks."
+    },
+    {
+      "items": "ELA CAT 1-15",
+      "status": "exact",
+      "evidence": "The complete original literary and informational sources contain every keyed detail and stated limitation."
+    },
+    {
+      "items": "ELA CAT 16-21, 28-30",
+      "status": "exact",
+      "evidence": "Every writing and research task includes the complete sentence, context, or source description needed to answer."
+    },
+    {
+      "items": "ELA CAT 22-27",
+      "status": "exact",
+      "evidence": "The exact attached transcript states every controlled variable, stage, measurement, conclusion, and evidence limit used by the questions."
+    },
+    {
+      "items": "ELA PT 1-3",
+      "status": "exact",
+      "evidence": "The three-source package supplies explanatory evidence, requirements, pilot data, competing results, limitations, row cardinality, and full-write directions."
+    }
+  ]
+}

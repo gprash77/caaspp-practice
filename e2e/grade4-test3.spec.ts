@@ -9,6 +9,11 @@ async function startTest3(page: Page, label: string) {
     "Test 3 (Original · Easy)",
     "Test 4 (Original · Medium)",
     "Test 5 (Original · Hard)",
+    "Test 6 (Original · Easy)",
+    "Test 7 (Original · Easy)",
+    "Test 8 (Original · Medium)",
+    "Test 9 (Original · Hard)",
+    "Test 10 (Original · Hard)",
   ]);
   await page.locator("#practiceTest").selectOption("3");
   await page.getByRole("button").filter({ hasText: label }).click();

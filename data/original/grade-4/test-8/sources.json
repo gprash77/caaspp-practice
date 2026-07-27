@@ -1,0 +1,40 @@
+{
+  "bankVersion": "2026-07-27.1",
+  "reviewedOn": "2026-07-27",
+  "author": "CAASPP Practice Project",
+  "license": "Original companion content; all rights reserved for this project.",
+  "sections": [
+    {
+      "id": "g4-t8-math-cat",
+      "itemCount": 31,
+      "rawPoints": 32,
+      "sourcePackages": [
+        "g4-t8-math-cat-original"
+      ]
+    },
+    {
+      "id": "g4-t8-math-pt",
+      "itemCount": 5,
+      "rawPoints": 6,
+      "sourcePackages": [
+        "g4-t8-math-pt-original"
+      ]
+    },
+    {
+      "id": "g4-t8-ela-cat",
+      "itemCount": 30,
+      "rawPoints": 30,
+      "sourcePackages": [
+        "g4-t8-ela-cat-original"
+      ]
+    },
+    {
+      "id": "g4-t8-ela-pt",
+      "itemCount": 3,
+      "rawPoints": 13,
+      "sourcePackages": [
+        "g4-t8-ela-pt-original"
+      ]
+    }
+  ]
+}

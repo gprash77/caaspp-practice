@@ -14,12 +14,19 @@ describe("assessment manifest", () => {
     expect(listAvailableAssessments(3).map((manifest) => manifest.testNumber)).toEqual(
       Array.from({ length: 18 }, (_, index) => index + 1)
     );
-    expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual([1, 2, 3, 4, 5]);
+    expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual(
+      Array.from({ length: 10 }, (_, index) => index + 1)
+    );
     expect(getAssessmentManifest(4, 2)?.difficulty).toBe("easy");
     expect(getAssessmentManifest(4, 3)?.difficulty).toBe("easy");
     expect(getAssessmentManifest(4, 3, { includeUnavailable: true })?.difficulty).toBe("easy");
     expect(getAssessmentManifest(4, 4)?.difficulty).toBe("medium");
     expect(getAssessmentManifest(4, 5)?.difficulty).toBe("hard");
+    expect(getAssessmentManifest(4, 6)?.difficulty).toBe("easy");
+    expect(getAssessmentManifest(4, 7)?.difficulty).toBe("easy");
+    expect(getAssessmentManifest(4, 8)?.difficulty).toBe("medium");
+    expect(getAssessmentManifest(4, 9)?.difficulty).toBe("hard");
+    expect(getAssessmentManifest(4, 10)?.difficulty).toBe("hard");
     expect(getAssessmentManifest(4, 4, { includeUnavailable: true })?.difficulty).toBe("medium");
     expect(getAssessmentManifest(4, 5, { includeUnavailable: true })?.difficulty).toBe("hard");
   });

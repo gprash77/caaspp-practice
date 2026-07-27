@@ -14,7 +14,12 @@
     "eval:grade4-test2": "node --import tsx scripts/eval-grade4-test2.ts",
     "eval:grade4-test3": "node --import tsx scripts/eval-grade4-test3.ts",
     "eval:grade4-test4": "node --import tsx scripts/eval-grade4-test4.ts",
-    "eval:grade4-test5": "node --import tsx scripts/eval-grade4-test5.ts"
+    "eval:grade4-test5": "node --import tsx scripts/eval-grade4-test5.ts",
+    "eval:grade4-test6": "node --import tsx scripts/eval-grade4-test6.ts",
+    "eval:grade4-test7": "node --import tsx scripts/eval-grade4-test7.ts",
+    "eval:grade4-test8": "node --import tsx scripts/eval-grade4-test8.ts",
+    "eval:grade4-test9": "node --import tsx scripts/eval-grade4-test9.ts",
+    "eval:grade4-test10": "node --import tsx scripts/eval-grade4-test10.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.1",

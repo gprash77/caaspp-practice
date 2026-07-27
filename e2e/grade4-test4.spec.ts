@@ -3,7 +3,7 @@ import { expect, test, type Page } from "@playwright/test";
 async function startTest4(page:Page,label:string){
   await page.goto("/");
   await page.locator("#grade").selectOption("4");
-  await expect(page.locator("#practiceTest option")).toHaveText(["Test 1 (Official Baseline)","Test 2 (Original · Easy)","Test 3 (Original · Easy)","Test 4 (Original · Medium)","Test 5 (Original · Hard)"]);
+  await expect(page.locator("#practiceTest option")).toHaveText(["Test 1 (Official Baseline)","Test 2 (Original · Easy)","Test 3 (Original · Easy)","Test 4 (Original · Medium)","Test 5 (Original · Hard)","Test 6 (Original · Easy)","Test 7 (Original · Easy)","Test 8 (Original · Medium)","Test 9 (Original · Hard)","Test 10 (Original · Hard)"]);
   await page.locator("#practiceTest").selectOption("4");
   await page.getByRole("button").filter({hasText:label}).click();
   await expect(page).toHaveURL(/grade=4/);await expect(page).toHaveURL(/test=4/);await expect(page.locator(".tds-q-badge")).toHaveText("1");

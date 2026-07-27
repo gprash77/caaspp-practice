@@ -112,6 +112,29 @@ const RUBRICS = new Map<string, ManualRubricDefinition>([
       ],
     },
   ],
+  ["4:6:50104", { kind: "points", rubricVersion: "g4-t6-garden-watering-2pt-v1", maxPoints: 2 }],
+  ["4:6:51101", { kind: "points", rubricVersion: "g4-t6-reading-courtyard-evidence-2pt-v1", maxPoints: 2 }],
+  ["4:7:52104", { kind: "points", rubricVersion: "g4-t7-book-cart-2pt-v1", maxPoints: 2 }],
+  ["4:7:53101", { kind: "points", rubricVersion: "g4-t7-art-wall-evidence-2pt-v1", maxPoints: 2 }],
+  ["4:8:54104", { kind: "points", rubricVersion: "g4-t8-camera-battery-2pt-v1", maxPoints: 2 }],
+  ["4:8:55101", { kind: "points", rubricVersion: "g4-t8-library-spaces-evidence-2pt-v1", maxPoints: 2 }],
+  ["4:9:56104", { kind: "points", rubricVersion: "g4-t9-exhibit-transport-2pt-v1", maxPoints: 2 }],
+  ["4:9:57101", { kind: "points", rubricVersion: "g4-t9-pocket-park-evidence-2pt-v1", maxPoints: 2 }],
+  ["4:10:58104", { kind: "points", rubricVersion: "g4-t10-event-power-2pt-v1", maxPoints: 2 }],
+  ["4:10:59101", { kind: "points", rubricVersion: "g4-t10-reusable-containers-evidence-2pt-v1", maxPoints: 2 }],
+  ...([6, 7, 8, 9, 10] as const).map((testNumber) => [
+    `4:${testNumber}:${49103 + (testNumber - 5) * 2000}`,
+    {
+      kind: "traits" as const,
+      rubricVersion: `g4-t${testNumber}-opinion-4-4-2-v1`,
+      maxPoints: 10,
+      traits: [
+        { id: "organizationPurpose", label: "Organization/Purpose", min: 0, max: 4 },
+        { id: "evidenceElaboration", label: "Evidence/Elaboration", min: 0, max: 4 },
+        { id: "conventions", label: "Conventions", min: 0, max: 2 },
+      ],
+    },
+  ] as [string, ManualRubricDefinition]),
 ]);
 
 export function getManualRubric(

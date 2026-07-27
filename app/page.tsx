@@ -158,6 +158,27 @@ export default function Home() {
           </div>
 
           <Link
+            href="/learn"
+            style={{
+              display: "block",
+              marginTop: 16,
+              padding: "16px 18px",
+              border: "2px solid #176d50",
+              borderRadius: 8,
+              background: "#edf8f2",
+              color: "#154735",
+              textDecoration: "none",
+            }}
+          >
+            <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 4 }}>
+              Grade 4 Learn
+            </div>
+            <div style={{ fontSize: 13, lineHeight: 1.4, color: "#315c4a" }}>
+              Review standards-aligned Math and ELA lessons before starting a practice test.
+            </div>
+          </Link>
+
+          <Link
             href="/minemath"
             style={{
               display: "block",

@@ -53,6 +53,51 @@ const ELA_PT_FLOWS = new Map<string, ElaPtFlowDefinition>([
       part2ItemIds: [49103],
     },
   ],
+  [
+    "4:6",
+    {
+      sourcePackageId: "g4-test6-reading-courtyard",
+      sourcePackageVersion: "2026-07-27.1",
+      part1ItemIds: [51101, 51102],
+      part2ItemIds: [51103],
+    },
+  ],
+  [
+    "4:7",
+    {
+      sourcePackageId: "g4-test7-community-art-wall",
+      sourcePackageVersion: "2026-07-27.1",
+      part1ItemIds: [53101, 53102],
+      part2ItemIds: [53103],
+    },
+  ],
+  [
+    "4:8",
+    {
+      sourcePackageId: "g4-test8-flexible-library-spaces",
+      sourcePackageVersion: "2026-07-27.1",
+      part1ItemIds: [55101, 55102],
+      part2ItemIds: [55103],
+    },
+  ],
+  [
+    "4:9",
+    {
+      sourcePackageId: "g4-test9-pocket-park",
+      sourcePackageVersion: "2026-07-27.1",
+      part1ItemIds: [57101, 57102],
+      part2ItemIds: [57103],
+    },
+  ],
+  [
+    "4:10",
+    {
+      sourcePackageId: "g4-test10-reusable-containers",
+      sourcePackageVersion: "2026-07-27.1",
+      part1ItemIds: [59101, 59102],
+      part2ItemIds: [59103],
+    },
+  ],
 ]);
 
 export function getElaPtFlow(grade: number, testNumber: number): ElaPtFlowDefinition | undefined {
