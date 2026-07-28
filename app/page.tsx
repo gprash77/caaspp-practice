@@ -174,7 +174,7 @@ export default function Home() {
               Grade 4 Learn
             </div>
             <div style={{ fontSize: 13, lineHeight: 1.4, color: "#315c4a" }}>
-              Review standards-aligned Math and ELA lessons before starting a practice test.
+              Explore 31 California- and SFUSD-aligned Math and ELA lessons with 124 original practice tasks.
             </div>
           </Link>
 

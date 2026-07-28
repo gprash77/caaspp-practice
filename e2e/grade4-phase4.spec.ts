@@ -33,21 +33,47 @@ test.describe("Grade 4 Phase 4 release", () => {
     await expect(page.locator("#practiceTest option")).toHaveText(grade4Labels);
   });
 
-  test("Learn provides separate standards-tagged Math and ELA preparation", async ({ page }) => {
+  test("Learn exposes the complete California and SFUSD-aligned Math and ELA program", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: /Grade 4 Learn/ }).click();
     await expect(page).toHaveURL(/\/learn$/);
-    await expect(page.getByRole("note")).toContainText("Preparation only");
-    await expect(page.getByRole("navigation", { name: "Grade 4 lessons" }).getByRole("button"))
-      .toHaveCount(8);
+    await expect(page.getByRole("note")).toContainText("not endorsed by or affiliated with SFUSD");
+    await expect(page.getByRole("region", { name: "Learn coverage and progress" }))
+      .toContainText("60practice tasks");
+    const lessonNav = page.getByRole("navigation", { name: "Grade 4 lessons" });
+    await expect(lessonNav.getByRole("button")).toHaveCount(15);
+    await lessonNav.getByRole("button", { name: /Place Value and Rounding/ }).click();
     await expect(page.getByTestId("learn-lesson")).toContainText("4.NBT.A.1");
+    await expect(page.getByTestId("learn-lesson")).toContainText("SFUSD · Multi-digit fluency");
     await expect(page.getByRole("status")).toHaveCount(0);
-    await page.getByTestId("learn-lesson").getByRole("button").first().click();
+    await page.getByTestId("learn-lesson").locator("button").first().click();
     await expect(page.getByRole("status")).toBeVisible();
 
-    await page.getByRole("button", { name: "Main Idea and Summary" }).click();
+    await page.getByRole("button", { name: "English Language Arts" }).click();
+    await expect(lessonNav.getByRole("button")).toHaveCount(16);
+    await lessonNav.getByRole("button", { name: /Main Idea and Summary/ }).click();
     await expect(page.getByTestId("learn-lesson")).toContainText("RI.4.2");
+    await expect(page.getByTestId("learn-lesson")).toContainText("SFUSD · Complex-text comprehension");
     await expect(page.getByTestId("learn-lesson")).toContainText("Worked example");
+  });
+
+  test("Learn persists prep-only choice and written-response progress", async ({ page }) => {
+    await page.goto("/learn");
+    const lessonNav = page.getByRole("navigation", { name: "Grade 4 lessons" });
+    await lessonNav.getByRole("button", { name: /Multi-Step Problems and Remainders/ }).click();
+    await page.getByTestId("learn-lesson").getByRole("button").first().click();
+    const response = page.getByLabel("Response to practice task 4");
+    await response.fill("Four buses hold 144 riders, so the remaining rider requires a fifth bus.");
+    await page.getByRole("button", { name: "Review my response" }).click();
+    await expect(page.getByText("One strong model:")).toBeVisible();
+    await page.reload();
+    await lessonNav.getByRole("button", { name: /Multi-Step Problems and Remainders/ }).click();
+    await expect(page.getByLabel("Response to practice task 4")).toHaveValue(
+      "Four buses hold 144 riders, so the remaining rider requires a fifth bus."
+    );
+    const keys = await page.evaluate(() => Object.keys(localStorage));
+    expect(keys).toContain("caaspp-learn:grade4:v2");
+    expect(keys.filter((key) => key.startsWith("caaspp-attempt:"))).toEqual([]);
   });
 
   for (const [testNumber, difficulty] of [

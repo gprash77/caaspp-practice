@@ -59,9 +59,84 @@
   margin-bottom: 24px;
 }
 
+.dashboard {
+  margin-bottom: 24px;
+  padding: 18px;
+  border: 1px solid #bed2df;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 10px 24px rgba(35, 66, 88, .07);
+}
+
+.subjectTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.subjectTabs button {
+  border: 1px solid #a8c3d4;
+  border-radius: 999px;
+  background: #fff;
+  color: #274b62;
+  padding: 9px 14px;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.subjectTabs .subjectActive {
+  border-color: #075c9b;
+  background: #075c9b;
+  color: #fff;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f2f7fa;
+}
+
+.stats strong {
+  color: #075c9b;
+  font-size: 23px;
+}
+
+.stats span {
+  color: #587080;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.progressRow {
+  display: grid;
+  grid-template-columns: auto minmax(120px, 1fr);
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  color: #3b586a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.progressRow progress {
+  width: 100%;
+  height: 12px;
+  accent-color: #176d50;
+}
+
 .layout {
   display: grid;
-  grid-template-columns: 290px minmax(0, 1fr);
+  grid-template-columns: 310px minmax(0, 1fr);
   gap: 22px;
   align-items: start;
 }
@@ -78,6 +153,27 @@
   padding: 16px;
   position: sticky;
   top: 18px;
+  max-height: calc(100vh - 36px);
+  overflow-y: auto;
+}
+
+.domainFilter {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+  color: #4b6575;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.domainFilter select {
+  width: 100%;
+  border: 1px solid #b6cad6;
+  border-radius: 9px;
+  background: #fff;
+  color: #213f52;
+  padding: 9px 10px;
+  font: inherit;
 }
 
 .subjectLabel {
@@ -90,6 +186,10 @@
 }
 
 .lessonButton {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
   width: 100%;
   border: 0;
   border-radius: 10px;
@@ -101,6 +201,12 @@
   cursor: pointer;
   font: inherit;
   font-weight: 650;
+}
+
+.lessonButton small {
+  flex: 0 0 auto;
+  color: #668091;
+  font-size: 11px;
 }
 
 .lessonButton:hover {
@@ -116,11 +222,17 @@
   padding: clamp(20px, 4vw, 38px);
 }
 
-.standards {
+.tagGroup {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.standards,
+.sfusdTags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 14px;
 }
 
 .standard {
@@ -131,6 +243,25 @@
   color: #12613f;
   font-size: 12px;
   font-weight: 800;
+}
+
+.sfusdTag {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e8efff;
+  color: #304e88;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.domainName {
+  margin: 0 0 7px;
+  color: #657d8c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 
 .lesson h2 {
@@ -183,6 +314,55 @@
   margin-bottom: 12px;
 }
 
+.questionHeading {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.questionHeading .questionPrompt {
+  margin-top: 0;
+}
+
+.difficulty {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.foundation {
+  background: #e9f7ec;
+  color: #246138;
+}
+
+.core {
+  background: #e9f1fb;
+  color: #285985;
+}
+
+.challenge {
+  background: #fff0d7;
+  color: #80500b;
+}
+
+.questionStandard {
+  margin: -5px 0 12px;
+  color: #617786;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.practiceIntro {
+  margin: -3px 0 8px;
+  color: #5b7180;
+  line-height: 1.5;
+}
+
 .options {
   display: grid;
   gap: 9px;
@@ -224,6 +404,68 @@
   color: #7b3c12;
 }
 
+.writtenPractice {
+  display: grid;
+  gap: 10px;
+}
+
+.writtenPractice textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  border: 1px solid #b8cbd7;
+  border-radius: 10px;
+  padding: 12px;
+  color: #183043;
+  background: #fff;
+  font: inherit;
+  line-height: 1.5;
+}
+
+.writtenPractice textarea:focus {
+  outline: 3px solid rgba(7, 92, 155, .16);
+  border-color: #075c9b;
+}
+
+.writtenPractice > button {
+  justify-self: start;
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 14px;
+  background: #075c9b;
+  color: #fff;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.writtenPractice > button:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+}
+
+.guidance {
+  padding: 14px 16px;
+  border-left: 4px solid #176d50;
+  border-radius: 9px;
+  background: #edf8f2;
+  color: #244f3d;
+  line-height: 1.55;
+}
+
+.guidance h4 {
+  margin: 0 0 7px;
+}
+
+.guidance ul {
+  margin: 0 0 9px;
+  padding-left: 20px;
+}
+
+.guidance p {
+  margin: 0;
+}
+
 @media (max-width: 760px) {
   .page {
     padding: 20px 12px 40px;
@@ -244,5 +486,31 @@
 
   .nav {
     position: static;
+    max-height: none;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .progressRow {
+    grid-template-columns: 1fr;
+  }
+
+  .subjectTabs {
+    align-items: stretch;
+  }
+
+  .subjectTabs button {
+    flex: 1;
+  }
+
+  .questionHeading {
+    display: block;
+  }
+
+  .difficulty {
+    display: inline-flex;
+    margin-bottom: 10px;
   }
 }
