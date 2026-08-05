@@ -1,5 +1,83 @@
 # CODEX HANDOFF
 
+## August 5, 2026 Handoff — Guided Learn Pilot Complete and Live
+
+### Read This First
+
+The first step toward a deeper Grade 4 curriculum is complete and live. Grade 4
+Learn now opens with a guided instructional path while preserving the released
+31-lesson, 124-task Practice Library. This release does not add Tests 11–15;
+additional full-length forms remain a later objective after the instructional
+model is expanded or refined.
+
+Before changing Guided Learn, read:
+
+1. `AGENTS.md`
+2. This section
+3. `reports/grade-4/GUIDED_LEARN_PILOT_REPORT.md`
+4. `reports/grade-4/LEARN_ALIGNMENT_REPORT.md`
+
+### Current Repository and Production State
+
+- Guided Learn release commit: `f10fa32` `Add guided Grade 4 learning pilots`
+- The release was pushed to `main` and the GitHub-triggered Vercel production
+  deployment reached `Ready`.
+- Production: `https://caaspp-practice.vercel.app/learn`
+- The production alias was checked for both live pilot entry points:
+  `Fractions That Make Sense` and `Evidence Detective`.
+- The original Practice Library remains live and selectable.
+- The known untracked `tmp/` audit directory remains user-owned and unmodified.
+
+### Delivered Guided Units
+
+| Subject | Unit | Standards | Steps | Guided checks |
+| --- | --- | --- | ---: | ---: |
+| Math | Fractions That Make Sense | `4.NF.A.1`, `4.NF.A.2` | 6 | 5 |
+| ELA | Evidence Detective | `RL.4.1`, `RI.4.1` | 6 | 5 |
+
+Each unit provides direct teaching, a reusable strategy, a modeled example,
+guided practice, targeted retry feedback, optional hints, independent work, and
+a mastery check. Steps unlock sequentially and completed work remains
+revisitable.
+
+### Locked Product Decisions and Safety
+
+- Guided Learn is the default Learn mode; the comprehensive lesson bank is the
+  separate Practice Library mode.
+- Preserve all released Practice Library lessons, tasks, standards tags, SFUSD
+  priority tags, and written-guidance gating.
+- Guided progress extends `caaspp-learn:grade4:v2`; it does not create or read
+  assessment-attempt records.
+- Preserve Learn/assessment isolation and never expose released test-bank keys.
+- The two pilot units are the proof of the instructional model, not a claim that
+  the full guided Grade 4 curriculum is complete.
+
+### Verification Evidence
+
+- Corrected Test 1 69-item evaluation gate passed with only its longstanding
+  approved generated-audio equivalence warning.
+- All 1,804 unit, integrity, and scoring tests passed.
+- Lint, TypeScript, and the production build passed.
+- All 85 Playwright browser regressions passed.
+- Desktop and 390 × 844 visual QA passed for the Math and ELA pilots with no
+  horizontal overflow or browser warning/error output.
+- Production was checked after Vercel reached `Ready`; both guided units and the
+  Practice Library selector were present with no browser errors.
+
+### Recommended Next Decision
+
+Use the pilot to decide whether the child-facing lesson rhythm, reading level,
+amount of explanation, retry feedback, and sequential unlocking feel right.
+Then choose between:
+
+1. expanding this guided contract across the complete Grade 4 Math and ELA
+   standards crosswalk, or
+2. adjusting the pilot interaction before scaling it.
+
+After the learning path is on a stable expansion track, additional original
+full-length assessments can be scoped as Tests 11–15 with the same corrected
+Test 1 eval and locked-fixture gates used for Tests 2–10.
+
 ## August 5, 2026 Handoff — Grade 4 Phase 4 and Comprehensive Learn Complete and Live
 
 ### Read This First

@@ -2,7 +2,7 @@
 
 Date: August 5, 2026
 
-Status: Local release gate passed
+Status: Release gate passed and live
 
 ## Outcome
 
@@ -64,6 +64,9 @@ test-bank key.
   There was no horizontal overflow and no browser warning/error output.
 - The browser suite can use `PLAYWRIGHT_PORT` to avoid reusing an unrelated
   local app that happens to occupy port 3000.
+- Commit `f10fa32` was pushed to `main`, the Vercel production deployment
+  reached `Ready`, and the public `/learn` route was verified for both pilot
+  units and the retained Practice Library selector with no browser errors.
 
 ## Pilot Boundary and Recommended Expansion
 
