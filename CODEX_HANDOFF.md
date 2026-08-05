@@ -1,5 +1,212 @@
 # CODEX HANDOFF
 
+## August 5, 2026 Handoff — Grade 4 Phase 4 and Comprehensive Learn Complete and Live
+
+### Read This First
+
+Grade 4 Phases 1–4 are complete. Tests 1–10 and the comprehensive Grade 4 Learn
+program are pushed to `main`, deployed through Vercel, and verified in
+production. There is no unfinished implementation task at this handoff.
+
+Before changing Grade 4 code or content, read:
+
+1. `AGENTS.md`
+2. This August 5 section in `CODEX_HANDOFF.md`
+3. `reports/grade-4/PHASE4_PLAN.md`
+4. `reports/grade-4/PHASE4_EVAL_REPORT.md`
+5. `reports/grade-4/LEARN_ALIGNMENT_PLAN.md`
+6. `reports/grade-4/LEARN_ALIGNMENT_REPORT.md`
+7. The test-specific matrix and evaluation report for any released form being
+   changed.
+
+The July 23 section remains useful for the Phase 1–3 architecture and locked
+product decisions, but its statement that Tests 1–5 are the complete Grade 4
+program is superseded by this section. Tests 6–10 and the expanded Learn program
+are now released.
+
+### Current Repository and Production State
+
+- Repo: `/Users/gprash77/projects/caaspp-practice`
+- Branch: `main`
+- Latest pushed application/content commit before this handoff update:
+  `c70622c` `Expand Grade 4 Learn alignment`
+- Phase 4 assessment release commit:
+  `714bd6a` `Implement Grade 4 Phase 4 learn and assessments`
+- At handoff start, `HEAD`, `origin/main`, and `origin/HEAD` all resolved to
+  `c70622ce0e6e8a66e33753d37be760d63d8e9832`.
+- Production: `https://caaspp-practice.vercel.app`
+- The Vercel production deployment triggered by `c70622c` reached `Ready`, and
+  the public `/learn` route was checked for the new headline, Math lesson/task
+  totals, and independent-resource/SFUSD disclaimer.
+- The only pre-existing untracked path is `tmp/`. It contains local audit
+  material and must remain untracked. Do not commit, delete, or clean it merely
+  to make `git status` empty.
+- No active goal or unfinished code change remains. Confirm the user's next
+  objective rather than inferring Grade 5, Spanish, more test forms, or a
+  redesign.
+
+### Delivered Phase 4 Assessments
+
+Five additional original Grade 4 companion forms are live:
+
+| Test | Label | Math PT | ELA PT decision topic |
+| --- | --- | --- | --- |
+| 6 | Original · Easy | School Garden Watering Plan | Quiet Reading Courtyard |
+| 7 | Original · Easy | Library Book Cart Plan | Community Art Wall |
+| 8 | Original · Medium | Wildlife Camera Battery Plan | Flexible Library Spaces |
+| 9 | Original · Hard | Museum Exhibit Transport Plan | Pocket Park |
+| 10 | Original · Hard | Community Event Power Plan | Reusable Food Containers |
+
+Each form preserves the established complete-assessment contract:
+
+- Math CAT: 31 items / 32 points
+- Math PT: 5 items / 6 points
+- ELA CAT: 30 items / 30 points
+- ELA PT: 3 authored tasks / 13 points, with two Part 1 research tasks and one
+  forward-only Part 2 full write
+- Total: 69 items / 81 raw points
+
+All five forms use bank version `2026-07-27.1`. Their locked fixtures live under
+`data/original/grade-4/test-6/` through `test-10/`. Treat the fixtures, source
+packages, transcripts, audio, keys, constraints, and rubrics as released data.
+Any content change requires re-locking the affected form and rerunning the full
+CAASPP eval gate.
+
+### Comprehensive Grade 4 Learn Program
+
+The initial eight-question Learn MVP was expanded after the user requested a
+more comprehensive program aligned to both California and SFUSD public
+guidance.
+
+- Route: `/learn`
+- Math: 15 lessons, 60 tasks, 15 guided written tasks, all 28 targeted Grade 4
+  California Math standards, and six SFUSD instructional priorities
+- ELA: 16 lessons, 64 tasks, 16 guided written tasks, 43 applicable Grade 4
+  California ELA standards, and nine SFUSD instructional priorities
+- Total: 31 lessons, 124 original tasks, 31 guided written tasks
+- Every lesson visibly shows California standard tags and SFUSD-priority tags.
+- Difficulty progresses from Foundation to Core to Challenge.
+- Subject and domain filters, lesson progress, and completion summaries make the
+  larger bank navigable.
+- Learn progress persists under the dedicated browser key
+  `caaspp-learn:grade4:v2` and remains isolated from assessment attempts.
+- Choice feedback appears after answering. Written guidance and a model response
+  remain hidden until the learner drafts a response and explicitly chooses to
+  review it.
+- Learn is preparation-only: it never reads active assessment answers, exposes
+  released test-bank keys, or coaches an active test.
+- “SFUSD aligned” means crosswalked to SFUSD's public Grade 4 expectations and
+  instructional priorities. It does not mean SFUSD endorsement or affiliation,
+  and no proprietary SFUSD, Imagine Learning, HMH, or CAASPP content was copied.
+
+The durable standard/priorities crosswalk and source list are in
+`reports/grade-4/LEARN_ALIGNMENT_REPORT.md`.
+
+### Locked Product Decisions and Invariants
+
+- Grade 4 Test 1 remains the corrected official public-practice golden baseline.
+- Tests 2–10 are original CAASPP-blueprint-aligned companion forms. Never call
+  them official copies.
+- Preserve every released form's 69-item / 81-point structure.
+- Preserve form-level difficulty labels:
+  - Test 1: Official Baseline
+  - Tests 2, 3, 6, and 7: Original · Easy
+  - Tests 4 and 8: Original · Medium
+  - Tests 5, 9, and 10: Original · Hard
+- Difficulty must come from reasoning, evidence integration, scaffolding, and
+  meaningful visible constraints—not tricks, ambiguity, obscure vocabulary,
+  cultural assumptions, or missing information.
+- Preserve attempt isolation, bank-hash/schema checks, frozen submission
+  scoring, manual-rubric state, ELA PT Part 1 review, and the forward-only Part
+  2 transition.
+- Preserve the clarified Exit Test behavior and source-selection completeness
+  guidance added in the earlier user-reported UX fixes.
+- Keep Learn storage and assessment-attempt storage independent.
+
+### Final Verification Evidence
+
+Phase 4 assessment release (`714bd6a`):
+
+- Grade 4 Tests 1–10 eval gate passed across 690 runtime items.
+- Tests 6–10 had zero eval errors and zero warnings; Test 1 retained only its
+  longstanding approved generated-audio equivalence warning.
+- All 345 Phase 4 item keys passed runtime scoring.
+- Cross-bank checks found no exact or number-normalized prompt duplicates
+  against Grade 3, Grade 4 Tests 1–5, or another Phase 4 form.
+- All 25 Phase 4 passage/source clusters were distinct.
+- Ten local M4A narrations exactly matched their visible transcripts.
+- 1,800 unit/integrity tests, lint, TypeScript, production build, and 83 browser
+  regressions passed.
+
+Comprehensive Learn release (`c70622c`):
+
+- Corrected Test 1 structural/stimulus/fairness eval gate passed for 69 items;
+  only the approved audio-equivalence warning remained.
+- 1,803 unit, integrity, and scoring tests passed.
+- Learn coverage tests confirmed every targeted California standard and all 15
+  SFUSD priorities, unique IDs/prompts, valid keys/explanations, guided-response
+  criteria, and balanced answer positions.
+- No exact or number-normalized Learn prompt duplicated Grade 4 Tests 1–10.
+- Lint, TypeScript, and the production build passed.
+- All 84 Playwright tests passed, covering Learn persistence and assessment
+  isolation as well as Tests 1–10, scoring, navigation, and narrow screens.
+- Desktop and 390 × 844 visual QA passed for Math and ELA Learn. There was no
+  horizontal overflow and no browser warning/error output.
+- `main` was pushed, Vercel reached `Ready`, and the public production Learn
+  content was verified.
+
+### Exact Next-Agent Instructions
+
+1. Read this August 5 section, `AGENTS.md`, and the directly relevant plan,
+   matrix, fixture, and eval report before touching released content.
+2. Run `git status --short`. Expect only the known untracked `tmp/` directory
+   unless the user intentionally added work.
+3. Ask the user for the next product objective. Phase 4 and the comprehensive
+   Learn expansion are complete; do not invent a Phase 5 scope.
+4. For a reported bug, reproduce it locally first and add focused regression
+   coverage. Preserve Test 1, attempt isolation, bank-version safety, ELA PT
+   segmentation, Learn/assessment separation, and released fixtures.
+5. For any test-bank content change, run the corrected Test 1 eval gate plus the
+   affected locked-fixture evals, scoring checks, originality comparisons,
+   stimulus/source fairness review, and cross-form regression coverage.
+6. For Learn content changes, maintain California/SFUSD tags, original-content
+   checks, answer-position quality, written-guidance gating, and independence
+   from active assessments.
+7. For visible or stateful changes, complete unit/scoring tests, lint,
+   production build, full browser automation, and in-app desktop/mobile visual
+   QA before asking the user to test.
+8. Commit only intended files, never include `tmp/`, push `main`, let Vercel
+   deploy from GitHub, and verify production rather than assuming it succeeded.
+
+### Do Not Do
+
+- Do not modify Grade 3 or add Spanish support without explicit user approval.
+- Do not alter Test 1 as a convenience template.
+- Do not label Tests 2–10 or generated narration as official/exact.
+- Do not shorten a released Grade 4 form or change its 69-item / 81-point
+  contract without explicit approval.
+- Do not change locked prompts, sources, keys, rubrics, constraints, fixtures,
+  hashes, schemas, or bank versions without rebuilding and rerunning the gate.
+- Do not silently rescore or overwrite an attempt created from a different bank
+  hash or response schema.
+- Do not flatten ELA PT into ordinary tabs or remove its Part 1 review and
+  forward-only Part 2 transition.
+- Do not connect Learn to active assessment answers or reveal released keys.
+- Do not claim official SFUSD endorsement or copy proprietary curriculum.
+- Do not ask the user to be the first QA pass.
+- Do not commit or delete `tmp/`, `.playwright-cli/`, screenshots, traces, or
+  other local artifacts unless explicitly requested.
+
+### Key Commit Timeline
+
+- `9529402` Add official Grade 4 Test 1 baseline
+- `accf3e3` Release Grade 4 Test 2 easy form
+- `bf4c5d4` Release Grade 4 Test 3 easy form
+- `aa85cef` Add Grade 4 medium practice Test 4
+- `8d0cda6` Add Grade 4 hard practice Test 5
+- `714bd6a` Implement Grade 4 Phase 4 learn and assessments
+- `c70622c` Expand Grade 4 Learn alignment
+
 ## July 23, 2026 Handoff — Grade 4 Phases 1–3 Complete and Live
 
 ### Read This First
