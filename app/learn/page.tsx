@@ -11,7 +11,9 @@ import {
   type LearnDifficulty,
 } from "@/lib/grade4-learn-aligned";
 import type { LearnSubject } from "@/lib/grade4-learn";
+import { guidedUnitsForSubject } from "@/lib/grade4-guided-units";
 
+import GuidedPath from "./guided-path";
 import styles from "./learn.module.css";
 
 const STORAGE_KEY = "caaspp-learn:grade4:v2";
@@ -19,7 +21,12 @@ const STORAGE_KEY = "caaspp-learn:grade4:v2";
 interface StoredLearnProgress {
   answers: Record<string, number | string>;
   reviewedWritten: string[];
+  guidedAnswers?: Record<string, number>;
+  guidedCompletedSteps?: string[];
+  guidedHints?: string[];
 }
+
+type LearnMode = "guided" | "library";
 
 const difficultyLabel: Record<LearnDifficulty, string> = {
   foundation: "Foundation",
@@ -28,11 +35,15 @@ const difficultyLabel: Record<LearnDifficulty, string> = {
 };
 
 export default function LearnPage() {
+  const [mode, setMode] = useState<LearnMode>("guided");
   const [subject, setSubject] = useState<LearnSubject>("math");
   const [domain, setDomain] = useState("all");
   const [selectedLessonId, setSelectedLessonId] = useState(lessonsForSubject("math")[0].id);
   const [answers, setAnswers] = useState<Record<string, number | string>>({});
   const [reviewedWritten, setReviewedWritten] = useState<string[]>([]);
+  const [guidedAnswers, setGuidedAnswers] = useState<Record<string, number>>({});
+  const [guidedCompletedSteps, setGuidedCompletedSteps] = useState<string[]>([]);
+  const [guidedHints, setGuidedHints] = useState<string[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -47,6 +58,9 @@ export default function LearnPage() {
       if (parsed) {
         setAnswers(parsed.answers ?? {});
         setReviewedWritten(parsed.reviewedWritten ?? []);
+        setGuidedAnswers(parsed.guidedAnswers ?? {});
+        setGuidedCompletedSteps(parsed.guidedCompletedSteps ?? []);
+        setGuidedHints(parsed.guidedHints ?? []);
       }
       setHydrated(true);
     });
@@ -54,9 +68,15 @@ export default function LearnPage() {
 
   useEffect(() => {
     if (!hydrated) return;
-    const progress: StoredLearnProgress = { answers, reviewedWritten };
+    const progress: StoredLearnProgress = {
+      answers,
+      reviewedWritten,
+      guidedAnswers,
+      guidedCompletedSteps,
+      guidedHints,
+    };
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-  }, [answers, reviewedWritten, hydrated]);
+  }, [answers, reviewedWritten, guidedAnswers, guidedCompletedSteps, guidedHints, hydrated]);
 
   const subjectLessons = useMemo(() => lessonsForSubject(subject), [subject]);
   const domains = useMemo(
@@ -69,6 +89,11 @@ export default function LearnPage() {
   const selectedLesson =
     grade4AlignedLessons.find((lesson) => lesson.id === selectedLessonId) ?? visibleLessons[0];
   const coverage = learnCoverage(subject);
+  const guidedUnits = guidedUnitsForSubject(subject);
+  const guidedStepCount = guidedUnits.flatMap((unit) => unit.steps).length;
+  const guidedCompletedCount = guidedUnits
+    .flatMap((unit) => unit.steps)
+    .filter((step) => guidedCompletedSteps.includes(step.id)).length;
   const answeredCount = subjectLessons
     .flatMap((lesson) => lesson.practice)
     .filter((question) => {
@@ -92,6 +117,10 @@ export default function LearnPage() {
     setSelectedLessonId(lessonsForSubject(nextSubject)[0].id);
   };
 
+  const completeGuidedStep = (stepId: string) => {
+    setGuidedCompletedSteps((current) => current.includes(stepId) ? current : [...current, stepId]);
+  };
+
   const selectDomain = (nextDomain: string) => {
     setDomain(nextDomain);
     const nextLesson = nextDomain === "all"
@@ -106,10 +135,10 @@ export default function LearnPage() {
         <header className={styles.header}>
           <div>
             <p className={styles.eyebrow}>Grade 4 Learn</p>
-            <h1>California standards. SFUSD priorities. Real practice.</h1>
+            <h1>Learn it step by step. Practice when you&apos;re ready.</h1>
             <p>
-              Build skills through original Math and English Language Arts lessons mapped to
-              California Grade 4 standards and SFUSD&apos;s published Grade 4 learning priorities.
+              Start with guided teaching that explains each idea, helps you practice, and checks
+              your understanding. Use the full lesson library whenever you want more practice.
             </p>
           </div>
           <Link className={styles.homeLink} href="/">Back to practice tests</Link>
@@ -121,7 +150,31 @@ export default function LearnPage() {
           attempts and never reads active answers or reveals test-bank keys.
         </div>
 
-        <section className={styles.dashboard} aria-label="Learn coverage and progress">
+        <section className={styles.dashboard} aria-label="Learn path and progress">
+          <div className={styles.modePicker}>
+            <div>
+              <p className={styles.modeEyebrow}>Choose how to learn</p>
+              <h2>{mode === "guided" ? "Follow a guided path" : "Explore the practice library"}</h2>
+            </div>
+            <div className={styles.modeTabs} role="group" aria-label="Choose a learning mode">
+              <button
+                aria-pressed={mode === "guided"}
+                className={mode === "guided" ? styles.modeActive : ""}
+                onClick={() => setMode("guided")}
+                type="button"
+              >
+                Guided path
+              </button>
+              <button
+                aria-pressed={mode === "library"}
+                className={mode === "library" ? styles.modeActive : ""}
+                onClick={() => setMode("library")}
+                type="button"
+              >
+                Practice library
+              </button>
+            </div>
+          </div>
           <div className={styles.subjectTabs} role="group" aria-label="Choose a Learn subject">
             <button
               aria-pressed={subject === "math"}
@@ -140,18 +193,52 @@ export default function LearnPage() {
               English Language Arts
             </button>
           </div>
-          <div className={styles.stats}>
-            <div><strong>{coverage.lessons}</strong><span>lessons</span></div>
-            <div><strong>{coverage.practiceTasks}</strong><span>practice tasks</span></div>
-            <div><strong>{coverage.standards}</strong><span>standards mapped</span></div>
-            <div><strong>{completedLessons}/{coverage.lessons}</strong><span>lessons complete</span></div>
-          </div>
-          <div className={styles.progressRow}>
-            <span>{answeredCount} of {coverage.practiceTasks} tasks attempted</span>
-            <progress max={coverage.practiceTasks} value={answeredCount} />
-          </div>
+          {mode === "guided" ? (
+            <>
+              <div className={styles.guidedStats}>
+                <div><strong>{guidedUnits.length}</strong><span>pilot unit</span></div>
+                <div><strong>{guidedStepCount}</strong><span>guided steps</span></div>
+                <div><strong>{guidedCompletedCount}/{guidedStepCount}</strong><span>steps complete</span></div>
+              </div>
+              <div className={styles.progressRow}>
+                <span>{guidedCompletedCount === guidedStepCount ? "Unit complete" : "Your guided-unit progress"}</span>
+                <progress max={guidedStepCount} value={guidedCompletedCount} />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className={styles.stats}>
+                <div><strong>{coverage.lessons}</strong><span>lessons</span></div>
+                <div><strong>{coverage.practiceTasks}</strong><span>practice tasks</span></div>
+                <div><strong>{coverage.standards}</strong><span>standards mapped</span></div>
+                <div><strong>{completedLessons}/{coverage.lessons}</strong><span>lessons complete</span></div>
+              </div>
+              <div className={styles.progressRow}>
+                <span>{answeredCount} of {coverage.practiceTasks} tasks attempted</span>
+                <progress max={coverage.practiceTasks} value={answeredCount} />
+              </div>
+            </>
+          )}
         </section>
 
+        {mode === "guided" ? (hydrated ? (
+          <GuidedPath
+            answers={guidedAnswers}
+            completedSteps={guidedCompletedSteps}
+            onAnswer={(questionId, answerIndex) => setGuidedAnswers((current) => ({
+              ...current,
+              [questionId]: answerIndex,
+            }))}
+            onCompleteStep={completeGuidedStep}
+            onShowHint={(questionId) => setGuidedHints((current) =>
+              current.includes(questionId) ? current : [...current, questionId]
+            )}
+            shownHints={guidedHints}
+            subject={subject}
+          />
+        ) : (
+          <div className={styles.loadingCard} role="status">Loading your learning path…</div>
+        )) : (
         <div className={styles.layout}>
           <nav className={styles.nav} aria-label="Grade 4 lessons">
             <label className={styles.domainFilter}>
@@ -303,6 +390,7 @@ export default function LearnPage() {
             </section>
           </article>
         </div>
+        )}
       </div>
     </main>
   );

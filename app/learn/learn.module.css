@@ -68,6 +68,56 @@
   box-shadow: 0 10px 24px rgba(35, 66, 88, .07);
 }
 
+.modePicker {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #dce6ec;
+}
+
+.modePicker h2 {
+  margin: 2px 0 0;
+  font-size: 21px;
+}
+
+.modeEyebrow {
+  margin: 0;
+  color: #627786;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.modeTabs {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 12px;
+  background: #eaf1f5;
+}
+
+.modeTabs button {
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 14px;
+  background: transparent;
+  color: #3d5b6e;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.modeTabs .modeActive {
+  background: #fff;
+  color: #075c9b;
+  box-shadow: 0 2px 7px rgba(35, 66, 88, .13);
+}
+
 .subjectTabs {
   display: flex;
   gap: 8px;
@@ -95,6 +145,32 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+}
+
+.guidedStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.guidedStats div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f2f7fa;
+}
+
+.guidedStats strong {
+  color: #176d50;
+  font-size: 23px;
+}
+
+.guidedStats span {
+  color: #587080;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .stats div {
@@ -444,6 +520,340 @@
   opacity: .45;
 }
 
+.guidedShell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.loadingCard {
+  padding: 32px;
+  border: 1px solid #cad9e3;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .96);
+  color: #4f6878;
+  font-weight: 750;
+  text-align: center;
+}
+
+.unitRail,
+.tutorial {
+  border: 1px solid #cad9e3;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 12px 30px rgba(35, 66, 88, .09);
+}
+
+.unitRail {
+  position: sticky;
+  top: 18px;
+  overflow: hidden;
+}
+
+.unitSummary {
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(145deg, #075c9b, #176d50);
+}
+
+.unitKicker {
+  margin: 0 0 7px;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.unitSummary h2 {
+  margin: 0 0 8px;
+  font-size: 23px;
+  line-height: 1.15;
+}
+
+.unitSummary > p:not(.unitKicker) {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: .92;
+}
+
+.unitMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 14px 0 8px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.unitSummary progress {
+  width: 100%;
+  height: 10px;
+  accent-color: #ffd166;
+}
+
+.stepNav {
+  display: grid;
+  padding: 10px;
+}
+
+.stepButton {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  border-radius: 11px;
+  padding: 10px;
+  background: transparent;
+  color: #294557;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.stepButton:hover:not(:disabled) {
+  background: #edf5fa;
+}
+
+.stepButton:disabled {
+  cursor: not-allowed;
+  opacity: .48;
+}
+
+.stepButtonActive {
+  background: #e5f3ff;
+  color: #004b82;
+}
+
+.stepButton small {
+  display: block;
+  margin-bottom: 2px;
+  color: #69808f;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.stepNumber {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 2px solid #b7cbd7;
+  border-radius: 50%;
+  color: #587080;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.stepNumberComplete {
+  border-color: #176d50;
+  background: #176d50;
+  color: #fff;
+}
+
+.tutorial {
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.tutorialTopline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #176d50;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.tutorial > h2 {
+  margin: 0 0 7px;
+  font-size: clamp(27px, 4vw, 38px);
+  letter-spacing: -.025em;
+}
+
+.tutorialGoal {
+  margin: 0 0 22px;
+  color: #4f6878;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.outcomeCard {
+  margin-bottom: 22px;
+  padding: 14px 16px;
+  border: 1px solid #bcd8cb;
+  border-radius: 12px;
+  background: #f0f9f4;
+}
+
+.outcomeCard > span,
+.cardLabel {
+  margin: 0 0 5px;
+  color: #176d50;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.outcomeCard > p {
+  margin: 0 0 10px;
+  color: #234f3d;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.teachingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.teachingCard {
+  padding: 17px;
+  border: 1px solid #d5e1e8;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.teachingCard h3,
+.strategyCard h3,
+.guidedExample h3,
+.guidedQuestion h3 {
+  margin: 0 0 8px;
+}
+
+.teachingCard p {
+  margin: 0;
+  color: #4c6474;
+  line-height: 1.6;
+}
+
+.strategyCard {
+  margin: 20px 0;
+  padding: 18px 20px;
+  border-radius: 13px;
+  background: #fff8df;
+  border: 1px solid #e7d392;
+}
+
+.strategyCard ol,
+.guidedExample ol {
+  margin: 10px 0 0;
+  padding-left: 23px;
+  line-height: 1.65;
+}
+
+.strategyCard li::marker,
+.guidedExample li::marker {
+  color: #b46b00;
+  font-weight: 900;
+}
+
+.guidedExample {
+  margin: 22px 0;
+  padding: 20px;
+  border-left: 5px solid #075c9b;
+  border-radius: 13px;
+  background: #eef7fd;
+}
+
+.exampleAnswer {
+  margin: 13px 0 0;
+  color: #075c9b;
+  font-weight: 850;
+}
+
+.guidedQuestion {
+  margin-top: 24px;
+  padding: 22px;
+  border: 2px solid #b8cfdf;
+  border-radius: 15px;
+  background: #fbfdff;
+}
+
+.guidedQuestion .options {
+  margin-top: 14px;
+}
+
+.optionSelected {
+  border-color: #075c9b;
+  background: #eaf5fd;
+  box-shadow: 0 0 0 2px rgba(7, 92, 155, .1);
+}
+
+.hintButton {
+  margin-top: 13px;
+  border: 1px solid #bd8b28;
+  border-radius: 9px;
+  padding: 9px 13px;
+  background: #fff8df;
+  color: #714909;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 750;
+}
+
+.hint {
+  margin-top: 13px;
+  padding: 11px 13px;
+  border-radius: 9px;
+  background: #fff8df;
+  color: #714909;
+  line-height: 1.5;
+}
+
+.nextStepButton {
+  margin-top: 18px;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 17px;
+  background: #075c9b;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  box-shadow: 0 5px 12px rgba(7, 92, 155, .2);
+}
+
+.celebration {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 18px;
+  border: 2px solid #e1bc4d;
+  border-radius: 14px;
+  background: #fff8df;
+  color: #65430d;
+}
+
+.celebration > span {
+  color: #d28a00;
+  font-size: 34px;
+}
+
+.celebration h3,
+.celebration p {
+  margin: 0;
+}
+
+.celebration p {
+  margin-top: 4px;
+  line-height: 1.45;
+}
+
 .guidance {
   padding: 14px 16px;
   border-left: 4px solid #176d50;
@@ -484,6 +894,22 @@
     grid-template-columns: 1fr;
   }
 
+  .guidedShell {
+    grid-template-columns: 1fr;
+  }
+
+  .unitRail {
+    position: static;
+  }
+
+  .modePicker {
+    display: grid;
+  }
+
+  .modeTabs button {
+    flex: 1;
+  }
+
   .nav {
     position: static;
     max-height: none;
@@ -491,6 +917,10 @@
 
   .stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .guidedStats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .progressRow {

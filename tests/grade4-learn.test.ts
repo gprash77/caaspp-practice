@@ -7,11 +7,40 @@ import {
   learnCoverage,
   sfusdPriorityLabels,
 } from "@/lib/grade4-learn-aligned";
+import { grade4GuidedUnits } from "@/lib/grade4-guided-units";
 
 const normalizedPrompt = (value: string) =>
   value.toLowerCase().replace(/\d+/g, "#").replace(/[^a-z#?+\-×÷<>=/ ]/g, "").replace(/\s+/g, " ").trim();
 
 describe("Grade 4 Learn California and SFUSD alignment", () => {
+  it("provides sequenced guided Math and ELA pilots with valid teaching checks", () => {
+    expect(grade4GuidedUnits.map((unit) => unit.subject)).toEqual(["math", "ela"]);
+    const stepIds = new Set<string>();
+    const questionIds = new Set<string>();
+    for (const unit of grade4GuidedUnits) {
+      expect(unit.steps).toHaveLength(6);
+      expect(unit.steps[0].phase).toBe("Learn");
+      expect(unit.steps.at(-1)?.phase).toBe("Mastery check");
+      expect(unit.standards.length).toBeGreaterThan(0);
+      for (const step of unit.steps) {
+        expect(stepIds.has(step.id), step.id).toBe(false);
+        stepIds.add(step.id);
+        expect(step.teaching.length).toBeGreaterThan(0);
+        if (!step.question) continue;
+        expect(questionIds.has(step.question.id), step.question.id).toBe(false);
+        questionIds.add(step.question.id);
+        expect(step.question.options).toHaveLength(4);
+        expect(step.question.correctIndex).toBeGreaterThanOrEqual(0);
+        expect(step.question.correctIndex).toBeLessThan(4);
+        expect(step.question.hint.trim()).not.toBe("");
+        expect(step.question.retry.trim()).not.toBe("");
+        expect(step.question.explanation.trim()).not.toBe("");
+      }
+    }
+    expect(stepIds.size).toBe(12);
+    expect(questionIds.size).toBe(10);
+  });
+
   it("delivers the documented lesson and practice floor", () => {
     expect(learnCoverage("math")).toEqual({
       lessons: 15,
@@ -105,6 +134,12 @@ describe("Grade 4 Learn California and SFUSD alignment", () => {
     }
     for (const lesson of grade4AlignedLessons) {
       for (const question of lesson.practice) {
+        expect(released.has(question.prompt), question.prompt).toBe(false);
+        expect(normalizedReleased.has(normalizedPrompt(question.prompt)), question.prompt).toBe(false);
+      }
+    }
+    for (const unit of grade4GuidedUnits) {
+      for (const question of unit.steps.flatMap((step) => step.question ? [step.question] : [])) {
         expect(released.has(question.prompt), question.prompt).toBe(false);
         expect(normalizedReleased.has(normalizedPrompt(question.prompt)), question.prompt).toBe(false);
       }

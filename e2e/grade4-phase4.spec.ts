@@ -38,7 +38,9 @@ test.describe("Grade 4 Phase 4 release", () => {
     await page.getByRole("link", { name: /Grade 4 Learn/ }).click();
     await expect(page).toHaveURL(/\/learn$/);
     await expect(page.getByRole("note")).toContainText("not endorsed by or affiliated with SFUSD");
-    await expect(page.getByRole("region", { name: "Learn coverage and progress" }))
+    await expect(page.getByTestId("guided-tutorial")).toContainText("Start with equal parts");
+    await page.getByRole("button", { name: "Practice library" }).click();
+    await expect(page.getByRole("region", { name: "Learn path and progress" }))
       .toContainText("60practice tasks");
     const lessonNav = page.getByRole("navigation", { name: "Grade 4 lessons" });
     await expect(lessonNav.getByRole("button")).toHaveCount(15);
@@ -59,6 +61,7 @@ test.describe("Grade 4 Phase 4 release", () => {
 
   test("Learn persists prep-only choice and written-response progress", async ({ page }) => {
     await page.goto("/learn");
+    await page.getByRole("button", { name: "Practice library" }).click();
     const lessonNav = page.getByRole("navigation", { name: "Grade 4 lessons" });
     await lessonNav.getByRole("button", { name: /Multi-Step Problems and Remainders/ }).click();
     await page.getByTestId("learn-lesson").getByRole("button").first().click();
@@ -67,6 +70,7 @@ test.describe("Grade 4 Phase 4 release", () => {
     await page.getByRole("button", { name: "Review my response" }).click();
     await expect(page.getByText("One strong model:")).toBeVisible();
     await page.reload();
+    await page.getByRole("button", { name: "Practice library" }).click();
     await lessonNav.getByRole("button", { name: /Multi-Step Problems and Remainders/ }).click();
     await expect(page.getByLabel("Response to practice task 4")).toHaveValue(
       "Four buses hold 144 riders, so the remaining rider requires a fifth bus."
@@ -74,6 +78,31 @@ test.describe("Grade 4 Phase 4 release", () => {
     const keys = await page.evaluate(() => Object.keys(localStorage));
     expect(keys).toContain("caaspp-learn:grade4:v2");
     expect(keys.filter((key) => key.startsWith("caaspp-attempt:"))).toEqual([]);
+  });
+
+  test("guided Learn teaches in sequence, gives hints, and persists mastery progress", async ({ page }) => {
+    await page.goto("/learn");
+    const tutorial = page.getByTestId("guided-tutorial");
+    const stepNav = page.getByRole("navigation", { name: "Fractions That Make Sense steps" });
+    await expect(stepNav.getByRole("button", { name: /Compare with common parts/ })).toBeDisabled();
+    await page.getByRole("button", { name: "I understand the parts" }).click();
+    await expect(tutorial).toContainText("Make an equivalent fraction");
+    await tutorial.getByRole("button", { name: /A\. 4\/5/ }).click();
+    await expect(tutorial.getByRole("status")).toContainText("Good try");
+    await page.getByRole("button", { name: "I need a hint" }).click();
+    await expect(tutorial.getByRole("note")).toContainText("multiplies 4");
+    await tutorial.getByRole("button", { name: /C\. 6\/8/ }).click();
+    await expect(tutorial.getByRole("status")).toContainText("You got it");
+    await expect(stepNav.getByRole("button", { name: /Compare with common parts/ })).toBeEnabled();
+    await page.reload();
+    await expect(page.getByTestId("guided-tutorial")).toContainText("Compare with common parts");
+    const stored = await page.evaluate(() => JSON.parse(localStorage.getItem("caaspp-learn:grade4:v2") ?? "{}"));
+    expect(stored.guidedCompletedSteps).toEqual(expect.arrayContaining(["fraction-parts", "fraction-equivalent"]));
+    expect(Object.keys(localStorage).filter((key) => key.startsWith("caaspp-attempt:"))).toEqual([]);
+
+    await page.getByRole("button", { name: "English Language Arts" }).click();
+    await expect(page.getByRole("region", { name: "Evidence Detective guided unit" })).toBeVisible();
+    await expect(page.getByTestId("guided-tutorial")).toContainText("Separate evidence from inference");
   });
 
   for (const [testNumber, difficulty] of [
@@ -163,7 +192,7 @@ test.describe("Grade 4 Phase 4 release", () => {
   test("keeps Learn and the Hard Math PT usable on a narrow screen", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/learn");
-    await expect(page.getByTestId("learn-lesson")).toBeVisible();
+    await expect(page.getByTestId("guided-tutorial")).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth))
       .toBeLessThanOrEqual(1);
 
