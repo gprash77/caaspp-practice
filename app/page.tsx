@@ -61,6 +61,7 @@ export default function Home() {
           <nav aria-label="Learning areas" style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 24 }}>
             <span aria-current="page" style={{ padding: "10px 16px", borderRadius: 6, background: "#00529b", color: "white", fontWeight: 600 }}>CAASPP Practice</span>
             <Link href="/studies" style={{ padding: "10px 16px", borderRadius: 6, background: "#e7f1e9", color: "#173d3b", fontWeight: 600, textDecoration: "none", border: "1px solid #abc4b5" }}>School Studies · Science & Social Studies →</Link>
+            <Link href="/star" style={{ padding: "10px 16px", borderRadius: 6, background: "#e7eff9", color: "#143d62", fontWeight: 600, textDecoration: "none", border: "1px solid #a9bed5" }}>STAR Reading & Math →</Link>
           </nav>
           <div style={{ display: "flex", gap: 16, marginBottom: 0 }}>
             <div className="select-group" style={{ flex: 1 }}>
