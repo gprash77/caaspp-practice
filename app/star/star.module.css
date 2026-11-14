@@ -436,3 +436,13 @@
     font-size:14px
   }
 }
+.dataTable { border-collapse:collapse; width:100%; margin:20px 0; font-size:15px }
+.dataTable caption { text-align:left; font-weight:700; margin-bottom:8px }
+.dataTable th,.dataTable td { border:1px solid #9aafbf; padding:8px 12px; text-align:left }
+.dataTable thead { background:#e6f2fa }
+.diagram { margin:16px 0 }
+.diagram svg { width:100%; max-width:360px; font:16px Arial,sans-serif }
+.diagram figcaption { font-size:12px; color:#4f687d }
+.warning { color:#a13512; font-weight:700 }
+.passage p,.reviewPassage p { white-space:pre-line }
+@media(max-width:700px) { .progress { flex-wrap:wrap } .progress [role=timer] { flex-basis:100%; text-align:right } }
