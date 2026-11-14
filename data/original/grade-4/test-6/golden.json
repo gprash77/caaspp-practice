@@ -1,10 +1,10 @@
 {
-  "bankVersion": "2026-07-27.1",
+  "bankVersion": "2026-11-14.1",
   "sections": {
     "math-cat": {
       "count": 31,
       "rawPoints": 32,
-      "canonicalSha256": "1d1934c6a85b1dddf07add78707ef40a0f975e9e48b72471e320693be64aba61",
+      "canonicalSha256": "3492be5ad8d8bc2d9f6affc7ec768a3e053ce6b923f22937a3fa0d8915ffccfc",
       "keys": [
         "A|B",
         "C",
@@ -42,13 +42,13 @@
     "math-pt": {
       "count": 5,
       "rawPoints": 6,
-      "canonicalSha256": "ed52cec497f2e7d3465b305088353f0263b7de027e439615b4e2ba28b8e1df8a",
+      "canonicalSha256": "c56cb6b9141c65884726e68d61305f4c120bd773378f8e410fc26e7c3a94dc3d",
       "keys": [
         "16",
         "18|9",
         "8:30 a.m.|9:05 a.m.",
         "The cart carries 34 liters, which is within 36 liters, but the three minimums total 34 liters, so the claim is correct if the water is divided as listed.",
-        "2|3|2|2"
+        "3|4|3|2"
       ]
     },
     "ela-cat": {

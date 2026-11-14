@@ -1,10 +1,10 @@
 {
-  "bankVersion": "2026-07-27.1",
+  "bankVersion": "2026-11-14.1",
   "sections": {
     "math-cat": {
       "count": 31,
       "rawPoints": 32,
-      "canonicalSha256": "010467fd2f885eb48a2a8ca4b4c1e901cdee276d7b7e7e3ef6dc460e9b516e50",
+      "canonicalSha256": "d6df66e6d23c215a8d18b899f914df519945e397dd12c716cb6c7247551049df",
       "keys": [
         "A|B",
         "C",

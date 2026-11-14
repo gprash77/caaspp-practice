@@ -98,6 +98,11 @@ const ELA_PT_FLOWS = new Map<string, ElaPtFlowDefinition>([
       part2ItemIds: [59103],
     },
   ],
+  ...Array.from({ length: 8 }, (_, i): [string, ElaPtFlowDefinition] => {
+    const testNumber = i + 11, base = 51100 + (testNumber - 6) * 2000;
+    return [`4:${testNumber}`, { sourcePackageId: `g4-test${testNumber}-opinion-sources`, sourcePackageVersion: '2026-11-14.1', part1ItemIds: [base + 1, base + 2], part2ItemIds: [base + 3] }];
+  }),
+
 ]);
 
 export function getElaPtFlow(grade: number, testNumber: number): ElaPtFlowDefinition | undefined {

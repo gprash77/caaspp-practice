@@ -15,7 +15,7 @@ describe("assessment manifest", () => {
       Array.from({ length: 18 }, (_, index) => index + 1)
     );
     expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual(
-      Array.from({ length: 10 }, (_, index) => index + 1)
+      Array.from({ length: 18 }, (_, index) => index + 1)
     );
     expect(getAssessmentManifest(4, 2)?.difficulty).toBe("easy");
     expect(getAssessmentManifest(4, 3)?.difficulty).toBe("easy");

@@ -2370,12 +2370,12 @@ export function getQuestions(
   if (grade === 4 && practiceTest === 5 && subject === "ela") {
     questions = testType === "cat" ? grade4Test5ElaCat : grade4Test5ElaPt;
   }
-  if (grade === 4 && practiceTest >= 6 && practiceTest <= 10 && subject === "math") {
-    const bank = grade4Phase4MathBanks.get(practiceTest as 6 | 7 | 8 | 9 | 10);
+  if (grade === 4 && practiceTest >= 6 && practiceTest <= 18 && subject === "math") {
+    const bank = grade4Phase4MathBanks.get(practiceTest);
     questions = testType === "cat" ? bank?.cat ?? [] : bank?.pt ?? [];
   }
-  if (grade === 4 && practiceTest >= 6 && practiceTest <= 10 && subject === "ela") {
-    const bank = grade4Phase4ElaBanks.get(practiceTest as 6 | 7 | 8 | 9 | 10);
+  if (grade === 4 && practiceTest >= 6 && practiceTest <= 18 && subject === "ela") {
+    const bank = grade4Phase4ElaBanks.get(practiceTest);
     questions = testType === "cat" ? bank?.cat ?? [] : bank?.pt ?? [];
   }
   return mergeExplanations(

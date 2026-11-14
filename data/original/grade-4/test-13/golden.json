@@ -1,0 +1,134 @@
+{
+  "bankVersion": "2026-11-14.1",
+  "sections": {
+    "math-cat": {
+      "count": 31,
+      "rawPoints": 32,
+      "canonicalSha256": "2b761c805deb5a673374a6d2ac34f56d66cfc490c4fb9cd161039f8507db8e41",
+      "keys": [
+        "A|B",
+        "C",
+        "B|D",
+        "463465|463465",
+        "1275|1734",
+        "D|A",
+        "B",
+        "0:0|1:1|1:2|2:0",
+        "C|D",
+        "A",
+        "B|C",
+        "1 1/2",
+        "B|C",
+        "0:0|1:1|2:2",
+        "D|A",
+        "36|432",
+        "0:0|0:1|0:2|1:0|1:1|2:0|2:2",
+        "40|40",
+        "4|1/2",
+        "960|1584",
+        "B|C",
+        "C|D",
+        "D|A",
+        "0:0|0:1|1:2|2:1",
+        "vertical|horizontal|diagonal-a|diagonal-b",
+        "71|109",
+        "B",
+        "A|B",
+        "1/4|1/4|1/2|3/4|3/4|3/4|1",
+        "3|9",
+        "12/4|3/4|15/4"
+      ]
+    },
+    "math-pt": {
+      "count": 5,
+      "rawPoints": 6,
+      "canonicalSha256": "f83755e63348da0f16cb429e355df15c5ad585ad972d5ef704b627dce8b2b768",
+      "keys": [
+        "22",
+        "26|20",
+        "11:53 a.m.|12:20 p.m.",
+        "The load is 3 × 8 + 6 × 6 = 60 kg. It is legal but exactly equals the capacity, leaving 0 kg, so the spare-capacity claim is false.",
+        "3|4|3|2"
+      ]
+    },
+    "ela-cat": {
+      "count": 30,
+      "rawPoints": 30,
+      "canonicalSha256": "c4477dae181631c6730414ff271cae74a7a3807ec16e86ecb7bdfa39c6057c21",
+      "keys": [
+        "A",
+        "B",
+        "C|D",
+        "A|B",
+        "A|D",
+        "0:0|1:1|2:2",
+        "C|D",
+        "A",
+        "B",
+        "C",
+        "D|A",
+        "A|B",
+        "0:0|1:1|2:2",
+        "B|C",
+        "B|C",
+        "D",
+        "A|B",
+        "C",
+        "D",
+        "A|B",
+        "A|D",
+        "C",
+        "B|C",
+        "D|A",
+        "B",
+        "0:0|1:1|2:2",
+        "B|C",
+        "A|B",
+        "C|D",
+        "C|D"
+      ]
+    },
+    "ela-pt": {
+      "count": 3,
+      "rawPoints": 13,
+      "canonicalSha256": "7bbde64b962f8f2632b79ddb9f227e00e3b1069a056324fe949d3d70dd200185",
+      "keys": [
+        "Source 1 explains the planning idea and how it should be evaluated. Source 3 reports local pilot measurements, including completed activities increased during the second half of the pilot. The pilot is limited because the pilot did not include every season, a full replacement cycle, or every group that might use the service. Further trials should include quieter and busier periods and record every required access check.",
+        "0:0|1:1|1:2|2:2",
+        "Responses vary and are scored with the 4-4-2 opinion-writing rubric."
+      ]
+    }
+  },
+  "stimulusSufficiency": [
+    {
+      "items": "Math CAT 1-31",
+      "status": "exact",
+      "evidence": "Every quantity, rule, selection count, and shape description is included; discrete fractional shares are whole and constraints match visible rules."
+    },
+    {
+      "items": "Math PT 1-5",
+      "status": "exact",
+      "evidence": "The shared plan includes all starting quantities, delivery minimums, capacities, units and timing. Sample loads meet independently totaled delivery minimums."
+    },
+    {
+      "items": "ELA CAT 1-15",
+      "status": "exact",
+      "evidence": "Complete original literary and informational passages provide keyed facts, definitions, sequence, evidence and limitations."
+    },
+    {
+      "items": "ELA CAT 16-21,28-30",
+      "status": "exact",
+      "evidence": "Sentence editing, writing and research items include their contexts and source descriptions."
+    },
+    {
+      "items": "ELA CAT 22-27",
+      "status": "exact",
+      "evidence": "Complete original transcripts and matching generated audio provide the controlled variables, observations, stages and limits; no unseen visual is required."
+    },
+    {
+      "items": "ELA PT 1-3",
+      "status": "exact",
+      "evidence": "All three original sources, pilot table, competing evidence, limitations, source-match cardinalities and opinion directions are included."
+    }
+  ]
+}

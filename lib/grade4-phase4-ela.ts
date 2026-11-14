@@ -1,7 +1,7 @@
 import type { Question } from "./questions";
 import { grade4Phase4Sources } from "./grade4-phase4-sources";
 
-const BANK_VERSION = "2026-07-27.1";
+const BANK_VERSION = "2026-11-14.1";
 const LETTERS = "ABCDEFGH";
 type ElaItem = Omit<Question, "id" | "grade" | "subject" | "practiceTest" | "provenance" | "claim" | "dok"> & { dok?: number };
 
@@ -113,7 +113,7 @@ function buildEla(source: (typeof grade4Phase4Sources)[number]): { cat: Question
       origin: "original",
       author: "CAASPP Practice Project",
       license: "Original companion content; all rights reserved for this project.",
-      reviewedAt: "2026-07-27",
+      reviewedAt: testNumber >= 11 ? "2026-11-14" : "2026-07-27",
     },
   });
   const literaryFields = { passage: source.literaryText, passageTitle: literary.title };
@@ -174,7 +174,7 @@ function buildEla(source: (typeof grade4Phase4Sources)[number]): { cat: Question
     origin: "original" as const,
     author: "CAASPP Practice Project",
     license: "Original companion content; all rights reserved for this project.",
-    reviewedAt: "2026-07-27",
+    reviewedAt: testNumber >= 11 ? "2026-11-14" : "2026-07-27",
   };
   const ptShared = { passage: source.ptText, passageTitle: ptConfig.title, dataTable: ptConfig.table };
   const pt: Question[] = [

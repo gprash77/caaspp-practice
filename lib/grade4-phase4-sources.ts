@@ -1,7 +1,8 @@
+import { expandedSourceConfigs } from "./grade4-expanded-configs";
 import type { Question } from "./questions";
 
 export interface Phase4SourceConfig {
-  testNumber: 6 | 7 | 8 | 9 | 10;
+  testNumber: number;
   difficulty: "easy" | "medium" | "hard";
   literary: {
     title: string;
@@ -197,7 +198,7 @@ const configs: Phase4SourceConfig[] = [
   },
 ];
 
-export const grade4Phase4Sources = configs.map((config) => ({
+export const grade4Phase4Sources = [...configs, ...expandedSourceConfigs].map((config) => ({
   ...config,
   literaryText: literaryText(config.literary),
   informationText: informationText(config.information),

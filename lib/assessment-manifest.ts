@@ -84,7 +84,7 @@ const grade4Test1: AssessmentManifest = {
 };
 
 function grade4CompanionForm(
-  testNumber: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
+  testNumber: number,
   difficulty: "easy" | "medium" | "hard",
   available: boolean
 ): AssessmentManifest {
@@ -93,7 +93,7 @@ function grade4CompanionForm(
     testNumber,
     title: `Grade 4 Original Practice Test ${testNumber}`,
     origin: "original-companion",
-    bankVersion: testNumber <= 5 ? "2026-07-22.1" : "2026-07-27.1",
+    bankVersion: testNumber === 4 || testNumber >= 6 ? "2026-11-14.1" : "2026-07-22.1",
     responseSchemaVersion: "1",
     difficulty,
     available,
@@ -118,6 +118,7 @@ export const assessmentManifests: readonly AssessmentManifest[] = [
   grade4CompanionForm(8, "medium", true),
   grade4CompanionForm(9, "hard", true),
   grade4CompanionForm(10, "hard", true),
+  ...Array.from({ length: 8 }, (_, index) => grade4CompanionForm(index + 11, index < 2 ? "easy" : index < 5 ? "medium" : "hard", true)),
 ];
 
 export function assessmentKey(grade: number, testNumber: number): string {

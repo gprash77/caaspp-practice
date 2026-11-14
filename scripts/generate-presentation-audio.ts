@@ -3,6 +3,7 @@ import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 
+import { expandedSourceConfigs } from "../lib/grade4-expanded-configs";
 import { getQuestions } from "../lib/questions";
 
 type AudioTarget = {
@@ -369,6 +370,11 @@ function generateAudioFile(transcript: string, outputPath: string, rate = 170) {
   fs.rmSync(tempAiff, { force: true });
 }
 
+audioTargets.push(...expandedSourceConfigs.flatMap(source => source.listening.map(presentation => ({
+  grade: 4, testNum: source.testNumber, title: presentation.title,
+  output: `public/audio/presentations/grade-4/test-${source.testNumber}-${presentation.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}.m4a`,
+  rate: 170,
+}))));
 const requestedTests = new Set(process.argv.slice(2));
 
 for (const target of audioTargets) {

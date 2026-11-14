@@ -38,6 +38,8 @@ export interface ManualScoreInput {
 }
 
 const RUBRICS = new Map<string, ManualRubricDefinition>([
+  ["4:1:40103", { kind: "points", rubricVersion: "g4-test1-math-chalk-evidence-2pt-v1", maxPoints: 2 }],
+  ["4:1:40105", { kind: "points", rubricVersion: "g4-test1-math-reasoning-1pt-v1", maxPoints: 1 }],
   ["4:1:41101", { kind: "points", rubricVersion: "g4-ela-pt-short-response-v1", maxPoints: 2 }],
   [
     "4:1:41103",
@@ -122,7 +124,11 @@ const RUBRICS = new Map<string, ManualRubricDefinition>([
   ["4:9:57101", { kind: "points", rubricVersion: "g4-t9-pocket-park-evidence-2pt-v1", maxPoints: 2 }],
   ["4:10:58104", { kind: "points", rubricVersion: "g4-t10-event-power-2pt-v1", maxPoints: 2 }],
   ["4:10:59101", { kind: "points", rubricVersion: "g4-t10-reusable-containers-evidence-2pt-v1", maxPoints: 2 }],
-  ...([6, 7, 8, 9, 10] as const).map((testNumber) => [
+  ...Array.from({ length: 8 }, (_, i) => i + 11).flatMap(testNumber => [
+    [`4:${testNumber}:${50104 + (testNumber - 6) * 2000}`, { kind: "points", rubricVersion: `g4-t${testNumber}-math-evidence-v1`, maxPoints: 2 }],
+    [`4:${testNumber}:${51101 + (testNumber - 6) * 2000}`, { kind: "points", rubricVersion: `g4-t${testNumber}-source-evidence-v1`, maxPoints: 2 }],
+  ] as [string, ManualRubricDefinition][]),
+  ...Array.from({ length: 13 }, (_, i) => i + 6).map((testNumber) => [
     `4:${testNumber}:${49103 + (testNumber - 5) * 2000}`,
     {
       kind: "traits" as const,

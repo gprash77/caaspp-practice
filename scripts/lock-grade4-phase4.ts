@@ -1,10 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import { getAssessmentManifest } from "../lib/assessment-manifest";
 import { getQuestions } from "../lib/questions";
 import { sectionHash } from "../lib/validation/assessment-bank";
 
-const BANK_VERSION = "2026-07-27.1";
+
 const sections = {
   "math-cat": ["math", "cat"],
   "math-pt": ["math", "pt"],
@@ -12,7 +13,7 @@ const sections = {
   "ela-pt": ["ela", "pt"],
 } as const;
 
-for (let testNumber = 6; testNumber <= 10; testNumber += 1) {
+for (let testNumber = 6; testNumber <= 18; testNumber += 1) {
   const lockedSections = Object.fromEntries(
     Object.entries(sections).map(([id, [subject, testType]]) => {
       const questions = getQuestions(4, subject, testType, testNumber, { includeUnavailable: true });
@@ -30,7 +31,7 @@ for (let testNumber = 6; testNumber <= 10; testNumber += 1) {
     })
   );
   const golden = {
-    bankVersion: BANK_VERSION,
+    bankVersion: getAssessmentManifest(4, testNumber)!.bankVersion,
     sections: lockedSections,
     stimulusSufficiency: [
       { items: "Math CAT 1-31", status: "exact", evidence: "Every number, response rule, selection count, and model constraint is visible in the authored item." },
@@ -48,8 +49,8 @@ for (let testNumber = 6; testNumber <= 10; testNumber += 1) {
     `g4-t${testNumber}-ela-pt-original`,
   ];
   const sources = {
-    bankVersion: BANK_VERSION,
-    reviewedOn: "2026-07-27",
+    bankVersion: getAssessmentManifest(4, testNumber)!.bankVersion,
+    reviewedOn: getAssessmentManifest(4, testNumber)!.bankVersion.split(".")[0],
     author: "CAASPP Practice Project",
     license: "Original companion content; all rights reserved for this project.",
     sections: Object.entries(lockedSections).map(([id, section], index) => ({

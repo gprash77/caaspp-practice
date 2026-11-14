@@ -27,13 +27,13 @@ const normalizedPrompt = (value: string) =>
 describe("Grade 4 Phase 4 release gate", () => {
   it("exposes Tests 6–10 with their approved labels after validation", () => {
     expect(listAvailableAssessments(4).map((manifest) => manifest.testNumber)).toEqual(
-      Array.from({ length: 10 }, (_, index) => index + 1)
+      Array.from({ length: 18 }, (_, index) => index + 1)
     );
     expect(tests.map((testNumber) => getAssessmentManifest(4, testNumber, { includeUnavailable: true })?.difficulty))
       .toEqual(["easy", "easy", "medium", "hard", "hard"]);
     for (const testNumber of tests) {
       expect(getAssessmentManifest(4, testNumber)).toBeDefined();
-      expect(getAssessmentManifest(4, testNumber, { includeUnavailable: true })?.bankVersion).toBe("2026-07-27.1");
+      expect(getAssessmentManifest(4, testNumber, { includeUnavailable: true })?.bankVersion).toBe("2026-11-14.1");
     }
   });
 

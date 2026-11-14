@@ -13,7 +13,7 @@ async function startTest3(page: Page, label: string) {
     "Test 7 (Original · Easy)",
     "Test 8 (Original · Medium)",
     "Test 9 (Original · Hard)",
-    "Test 10 (Original · Hard)",
+    "Test 10 (Original · Hard)", ...Array.from({ length: 8 }, (_, i) => `Test ${i + 11} (Original · ${i < 2 ? "Easy" : i < 5 ? "Medium" : "Hard"})`),
   ]);
   await page.locator("#practiceTest").selectOption("3");
   await page.getByRole("button").filter({ hasText: label }).click();
