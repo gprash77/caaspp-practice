@@ -49,7 +49,7 @@ describe("Grade 4 Test 1 official fidelity gate", () => {
       questions.forEach((question, index) => {
         expect(question.official?.itemNumber).toBe(index + 1);
         expect(question.official?.sourcePage).toBeGreaterThan(0);
-        expect(question.official?.bankVersion).toBe("2026-07-20.1");
+        expect(question.official?.bankVersion).toBe("2026-11-14.2");
       });
     }
   });
@@ -96,7 +96,17 @@ describe("Grade 4 independent scoring cases", () => {
     const question = mathCat().find((entry) => entry.id === 40019)!;
     expect(scoreResponse(question, ["4", "712"])).toMatchObject({ earnedPoints: 2, maxPoints: 2, status: "correct" });
     expect(scoreResponse(question, ["9", "1602"]).earnedPoints).toBe(2);
-    expect(scoreResponse(question, ["3", "222"]).earnedPoints).toBe(1);
+    expect(scoreResponse(question, ["3", "222"]).earnedPoints).toBe(0);
+    expect(scoreResponse(question, ["4", "222"]).earnedPoints).toBe(1);
+    expect(scoreResponse(question, ["9", "9992"]).earnedPoints).toBe(1);
+    expect(scoreResponse(question, ["4.0", "712.0"]).earnedPoints).toBe(2);
+    expect(scoreResponse(question, ["4", "1602"]).earnedPoints).toBe(1);
+    // The published second partial-credit sentence explicitly reverses the fields.
+    expect(scoreResponse(question, ["222", "712"]).earnedPoints).toBe(1);
+    expect(scoreResponse(question, ["222", "1602"]).earnedPoints).toBe(1);
+    expect(scoreResponse(question, ["222", "222"]).earnedPoints).toBe(0);
+    expect(scoreResponse(question, ["4", "22"]).earnedPoints).toBe(0);
+    expect(scoreResponse(question, ["4", "10002"]).earnedPoints).toBe(0);
     expect(scoreResponse(question, ["0", "111"]).earnedPoints).toBe(0);
   });
 

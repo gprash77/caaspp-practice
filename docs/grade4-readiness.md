@@ -1,10 +1,10 @@
 # Grade 4 practice readiness
 
-Review date: November 14, 2026.
+Review date: November 14, 2026. See the [fresh official-source recheck](grade4-official-recheck.md) and the site’s `/alignment` parent reference for current source fingerprints, item links, known adaptations, and the Test 1 scoring correction.
 
 ## Available practice forms
 
-All 18 grade 4 CAASPP-style forms have all four sections. Test 1 remains the corrected official public-practice baseline. Tests 2–18 are original companion forms, not additional official CAASPP exams.
+All 18 grade 4 CAASPP-style forms have all four sections. Test 1 remains the corrected released-content public-practice baseline, with adapted controls and re-recorded audio. Tests 2–18 are original companion forms, not additional official CAASPP exams.
 
 | Level | Tests | Forms |
 | --- | --- | --- |
@@ -38,10 +38,10 @@ The companion forms share some templates and skills. The labels are intended pra
 ## Verification and repeatable release gate
 
 - `npm run eval:grade4`: all 18 forms pass; 1,242 runtime items checked against locked fixtures, corrected Test 1 section counts/points, scoring keys, required assets, and manual-rubric registrations.
-- Test 1's existing approved warning remains: local narration follows exact official transcripts rather than copying the original session-scoped audio file.
-- All 1,830 automated tests pass, including data, integrity, scoring, constraint, and content regressions.
+- Test 1’s documented adaptations include typed/selected response controls and visible editing targets. Its listening warning remains: local narration follows exact official transcripts rather than copying the original session-scoped audio file.
+- All 1,834 automated tests pass, including data, integrity, scoring, constraint, and content regressions.
 - Production build and TypeScript checks pass.
-- The complete 110-check Chromium browser suite passes, plus an added targeted mobile math check: existing CAASPP flows, new forms and question screens, custom response controls, listening-media metadata loading, forward-only writing flow, persistence, navigation, version isolation, School Studies regression, all six complete STAR fixed attempts, both adaptive routes, timer expiry and legacy-record isolation.
+- The complete 114-check Chromium browser suite passes: existing CAASPP flows, new forms and question screens, custom response controls, listening-media metadata loading, forward-only writing flow, persistence, navigation, version isolation, School Studies regression, all six complete STAR fixed attempts, both adaptive routes, timer expiry and legacy-record isolation.
 - Desktop and mobile STAR screenshots visually reviewed; no horizontal overflow in the mobile check. Screenshots and local QA files remain outside the commit.
 
 For future forms: author and independently review answers and distractors; include complete stimuli and matching audio; register manual rubrics and segmented writing flow; compare counts, points, and fairness with corrected Test 1; lock only the reviewed content; run the combined eval, automated checks, build, and browser interactions before commit/push. Actual school assessments and psychometric equivalence are outside the claims of this practice site.

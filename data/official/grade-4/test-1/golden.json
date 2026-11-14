@@ -1,28 +1,28 @@
 {
-  "bankVersion": "2026-07-20.1",
+  "bankVersion": "2026-11-14.2",
   "sections": {
     "math-cat": {
       "count": 31,
       "rawPoints": 32,
-      "canonicalSha256": "10f9418f2d3f721848179554261d134164e38c4f47620b4f7247f9707a2884d2",
+      "canonicalSha256": "96f6d6f00fe97d8506f2ad635166216c56f227a5532ae597178e9967327afee9",
       "keys": ["423","B","90","C","D","0:1|1:0|2:0","D","A|C","12","300|210|90|63|663","0:0|1:1|2:0","C","0:1|1:0|2:1","115","0:0|1:0|2:1","B|C","3.75","vertical","4|712","4|3|1 2 4","2.75","17.5","2.6","1500","300","0:0|1:0|2:0|3:0|4:0|5:0","7488","0.06","1|3","2|4","C"]
     },
     "math-pt": {
       "count": 5,
       "rawPoints": 6,
-      "canonicalSha256": "e060b1860c10302d90af153e821ae1c730c440729271e0b20885ba32c7b29f44",
+      "canonicalSha256": "9d6dc53b701f99c6b97e483365b4275ace661add3bdbba00c308e810306c24da",
       "keys": ["48","72","A 2-point response compares the amount of chalk needed to the amount available, determines whether more chalk is needed, and gives a justification.","9:00|10:30|10:30|10:45|10:45|12:15|12:15|1:00|1:00|2:00","A valid response agrees or disagrees with Katie and supplies a mathematically logical explanation using the diagram."]
     },
     "ela-cat": {
       "count": 30,
       "rawPoints": 30,
-      "canonicalSha256": "8aac4b92bab379e4eaa2f648896c583dbeb72c4cafaca6149c4f5c0c30dea6fe",
+      "canonicalSha256": "84238c2a4ffad84beae3311f4b276f9269e038bd06310cdc9f101be5d2ef3637",
       "keys": ["B|D","A|E|F","D","D","D|B","A","A","C|D","C","C|D","D","D","A|C|E","D|F","D","B","A|D","D","A|C","A","B","D|D","D","D|E","B|D","C","0:0|1:1|2:0|3:1","D|F","D","D|F"]
     },
     "ela-pt": {
       "count": 3,
       "rawPoints": 13,
-      "canonicalSha256": "18c2000c40b26cde4b7c1ba0fe876ad4ba7541f39cf8c4386f7572ac4dd26fe2",
+      "canonicalSha256": "7821c2e957d12bd9b019985b542b663ee44c62b3503fdb96f65b28da70c3b46a",
       "keys": ["See the two-point evidence-based rubric and key elements from Source #2.","0:0|1:2|2:1","Responses will vary. See rubric."]
     }
   },
@@ -37,6 +37,7 @@
     {"items":"Math PT 1-5","status":"exact","evidence":"Full Art Day directions stay visible; schedule restrictions and official tapered paint diagram are present."},
     {"items":"ELA CAT 1-15","status":"exact","evidence":"Both complete reading passages remain visible for every linked item."},
     {"items":"ELA CAT 22-27","status":"equivalent-approved","evidence":"Official transcripts are exact; local M4A narration is generated from those transcripts rather than copied from the session-scoped official audio binary."},
-    {"items":"ELA PT 1-3","status":"exact","evidence":"All three complete sources, official source images, directions, prompts, and rubrics remain visible."}
+    {"items":"ELA PT 1-3","status":"exact","evidence":"All three complete sources, official source images, directions, prompts, and rubrics remain visible."},
+    {"items":"Math CAT 10,18,30; ELA CAT 3,10,11,17–21; ELA PT 2","status":"equivalent-approved","evidence":"Official content is retained with adapted response controls or explicit target formatting. Editing targets are visibly bold, selected-text tasks use choices, and two drag tasks use response boxes. All adaptations are listed in the parent source review."}
   ]
 }

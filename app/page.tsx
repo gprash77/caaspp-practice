@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { listAvailableAssessments } from "@/lib/assessment-manifest";
@@ -38,6 +38,8 @@ const tests = [
 
 export default function Home() {
   const router = useRouter();
+  const [ready, setReady] = useState(false);
+  useEffect(() => { setReady(true); }, []);
   const [grade, setGrade] = useState("3");
   const [practiceTest, setPracticeTest] = useState("1");
   const availableTests = listAvailableAssessments(Number(grade));
@@ -62,12 +64,14 @@ export default function Home() {
             <span aria-current="page" style={{ padding: "10px 16px", borderRadius: 6, background: "#00529b", color: "white", fontWeight: 600 }}>CAASPP Practice</span>
             <Link href="/studies" style={{ padding: "10px 16px", borderRadius: 6, background: "#e7f1e9", color: "#173d3b", fontWeight: 600, textDecoration: "none", border: "1px solid #abc4b5" }}>School Studies · Science & Social Studies →</Link>
             <Link href="/star" style={{ padding: "10px 16px", borderRadius: 6, background: "#e7eff9", color: "#143d62", fontWeight: 600, textDecoration: "none", border: "1px solid #a9bed5" }}>STAR Reading & Math →</Link>
+            <Link href="/alignment" style={{ padding: "10px 16px", color: "#143d62", fontWeight: 600 }}>Sources & accuracy checks →</Link>
           </nav>
           <div style={{ display: "flex", gap: 16, marginBottom: 0 }}>
             <div className="select-group" style={{ flex: 1 }}>
               <label htmlFor="grade">Select Grade</label>
               <select
                 id="grade"
+                disabled={!ready}
                 value={grade}
                 onChange={(e) => {
                   setGrade(e.target.value);
@@ -86,6 +90,7 @@ export default function Home() {
               <label htmlFor="practiceTest">Practice Test</label>
               <select
                 id="practiceTest"
+                disabled={!ready}
                 value={practiceTest}
                 onChange={(e) => setPracticeTest(e.target.value)}
               >
@@ -113,6 +118,7 @@ export default function Home() {
               {tests.map((t) => (
                 <button
                   key={t.id}
+                  disabled={!ready}
                   onClick={() => handleStart(t.subject, t.type)}
                   style={{
                     background: "white",

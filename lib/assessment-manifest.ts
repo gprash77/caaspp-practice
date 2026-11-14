@@ -71,7 +71,7 @@ const grade4Test1: AssessmentManifest = {
   testNumber: 1,
   title: "Grade 4 Public Practice Test 1",
   origin: "official-public-practice",
-  bankVersion: "2026-07-20.1",
+  bankVersion: "2026-11-14.2",
   responseSchemaVersion: "1",
   difficulty: "baseline",
   available: true,

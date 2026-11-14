@@ -12,7 +12,7 @@ const ELA_PT_FLOWS = new Map<string, ElaPtFlowDefinition>([
     "4:1",
     {
       sourcePackageId: "g4-test1-animals-surroundings",
-      sourcePackageVersion: "2026-07-20.1",
+      sourcePackageVersion: "2026-11-14.2",
       part1ItemIds: [41101, 41102],
       part2ItemIds: [41103],
     },

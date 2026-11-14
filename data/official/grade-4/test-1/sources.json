@@ -1,5 +1,5 @@
 {
-  "bankVersion": "2026-07-20.1",
+  "bankVersion": "2026-11-14.2",
   "retrievedOn": "2026-07-20",
   "sections": [
     {
@@ -13,10 +13,10 @@
     },
     {
       "id": "g4-math-pt",
-      "title": "Grade 4 Mathematics Performance Task Scoring Guide — Art Day!",
+      "title": "Grade 4 Mathematics Performance Task Scoring Guide \u2014 Art Day!",
       "url": "https://portal.smarterbalanced.org/library/en/gr4-math-pt-scoring-guide-art-day.pdf",
       "sha256": "6cb33fc346c3fc9cf7c335eecee956b563fab8f9eea3e02bf19ed0034c481c1f",
-      "pageCount": 32,
+      "pageCount": 19,
       "itemCount": 5,
       "rawPoints": 6
     },
@@ -30,11 +30,13 @@
     },
     {
       "id": "g4-ela-pt",
-      "title": "Grade 4 ELA Performance Task Scoring Guide — Animals and Their Surroundings",
+      "title": "Grade 4 ELA Performance Task Scoring Guide \u2014 Animals and Their Surroundings",
       "url": "https://portal.smarterbalanced.org/library/en/g4-ela-practice-test-pt-scoring-guide.pdf",
       "sha256": "471365e63c0c9fffa359e4d4ea431990d2690fdd8300a235223b53abf2ecba5a",
       "pageCount": 22,
       "itemCount": 3
     }
-  ]
+  ],
+  "lastVerifiedOn": "2026-11-14",
+  "resourceIndex": "https://www.caaspp-elpac.org/resources/preparation/practice-and-training-tests/practice-and-training-resources/"
 }

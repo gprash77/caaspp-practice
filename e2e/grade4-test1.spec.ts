@@ -169,7 +169,7 @@ test.describe("Grade 4 Test 1 official baseline", () => {
     await startGrade4(page, "Mathematics — Computer Adaptive Test");
     const dots = page.locator(".tds-progress-dots .tds-dot");
     await dots.nth(18).click({ force: true });
-    await page.locator(".multi-input-field input").nth(0).fill("3");
+    await page.locator(".multi-input-field input").nth(0).fill("4");
     await page.locator(".multi-input-field input").nth(1).fill("222");
     await dots.nth(30).click({ force: true });
     page.on("dialog", (dialog) => dialog.accept());

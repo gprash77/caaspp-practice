@@ -34,7 +34,7 @@ describe("assessment manifest", () => {
   it("records the complete Grade 4 Test 1 structure", () => {
     const manifest = getAssessmentManifest(4, 1);
     expect(manifest).toBeDefined();
-    expect(manifest?.bankVersion).toBe("2026-07-20.1");
+    expect(manifest?.bankVersion).toBe("2026-11-14.2");
     expect(manifest?.origin).toBe("official-public-practice");
     expect(
       Object.values(manifest!.sections).reduce((sum, section) => sum + section.itemCount, 0)
