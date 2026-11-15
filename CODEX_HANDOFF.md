@@ -1,5 +1,104 @@
 # CODEX HANDOFF
 
+## November 15, 2026 — Assessment alignment and classroom follow-up
+
+This is the latest handoff and supersedes older inventory/next-step statements
+below. This session reviewed alignment and agreed on next steps; no application
+or question-bank changes were made. User explicitly requested this durable
+handoff so work can continue next time.
+
+### Current released state
+
+- Site: https://caaspp-practice.vercel.app/
+- Evidence page: https://caaspp-practice.vercel.app/alignment
+- STAR practice: https://caaspp-practice.vercel.app/star
+- Science/social studies: https://caaspp-practice.vercel.app/studies
+- Latest application commit: `a94908b` (official-source recheck and Test 1
+  scoring corrections), preceded by `e03bd79` (STAR alignment).
+- Prior release evidence, not checks newly run by this discussion: 18 CAASPP
+  form evals / 1,242 questions, 1,834 unit tests, production build, and 114
+  Chromium browser checks passed. See `docs/grade4-official-recheck.md` and
+  `docs/grade4-readiness.md`. Prior release was pushed and deployed.
+- Untracked `tmp/` is unrelated local audit material. Leave it untracked and
+  do not clean it up.
+
+### CAASPP: next substantive work
+
+- There are 18 complete Grade 4 forms: Test 1 uses released official practice
+  content with documented interaction/audio adaptations; Tests 2–18 are
+  original companions. Each has 69 items / 81 raw points.
+- Easy: 2, 3, 6, 7, 11, 12. Medium: 4, 8, 13, 14, 15.
+  Hard: 5, 9, 10, 16, 17, 18.
+- Similar skills and question formats, passing structural checks, and matching
+  section counts do not establish statistically equivalent difficulty.
+  Passage lengths and interaction proportions vary; some forms share templates.
+- Recommended next deliverable: per-form coverage report for Tests 2–18,
+  mapping Grade 4 standards/claims, question formats, reasoning demands,
+  passage/listening load, stimulus sufficiency, and writing rubrics against
+  corrected Test 1 and official public guidance. Identify gaps or uneven
+  difficulty before adding more forms. This report has NOT been completed.
+- Family plan: use Test 1 across several sessions, review errors, then choose
+  an easy/medium form; reserve hard forms for later. Adult rubric review is
+  needed for written responses and essays.
+
+### STAR: await child's experience, preserve honest claims
+
+- Six fixed 34-question forms (Reading/Math at three levels) plus two adaptive
+  routes drawing from the SAME 204 original items. Adaptive practice is a
+  transparent three-level staircase, not Renaissance's calibrated CAT.
+- User will have the child try practice and report back. Suggested starting
+  point: one medium Reading OR Math form, untimed. Ask about wording, passage
+  length, question style, and challenge relative to school. No feedback yet.
+- Public Renaissance sample questions are the appropriate reference for format
+  and skill alignment. A personal STAR report is optional for personalization,
+  not required for that alignment.
+- Latest research found public sample questions and pre-assessment practice
+  questions, but did NOT locate a public full-length Grade 4 test with answer
+  key comparable to CAASPP's released test. Do not assert that samples are a
+  complete official blueprint or that all sample screenshots are Grade 4.
+- Potential follow-up: question-by-question crosswalk to published examples
+  and skills. This has NOT been completed. Child feedback can improve usability,
+  not validate score comparability. Never claim official scaled scores,
+  percentiles, grade equivalents, or equivalent difficulty from these forms.
+- References: `docs/star-alignment-review.md`;
+  https://www.renaissance.com/products/assessment/star-assessments/star-reading/
+  https://www.renaissance.com/products/assessment/star-assessments/star-math/
+  https://www.renaissance.com/family-resources-star-assessments/
+- Direct sample-item CDN links could not be opened by the web tool during this
+  discussion; do not describe those PDFs as freshly inspected.
+
+### Science/social studies: await teacher confirmation
+
+- User will ask whether the combined Grade 4/5 class follows Grade 4 or Grade 5
+  curricula and report back; user suspects Grade 5. Do not assume the SAME
+  grade sequence for both subjects.
+- Current companion has 21 home-study sections / 63 practice questions, based
+  on previously reviewed September, October, and November–December newsletters
+  plus public sources. It is not a complete two-grade curriculum.
+- Patterns of Earth and Sky and Modeling Matter are Amplify Grade 5 science.
+  Modeling Matter has three official chapters; our fourth section is original
+  home review. The Earth System and Ecosystem Restoration are previews whose
+  classroom sequence remains unconfirmed.
+- California geography/water scarcity and From Territory to Golden State
+  (missions, Mexican rule, Gold Rush, statehood) fit Grade 4 social studies.
+  Grade 5 U.S. history is not fully covered. The combined class may use a
+  rotation; confirm teacher scope before expanding.
+- Useful teacher evidence: this year's separate science/social studies grade
+  rotations, exact current Amplify lessons/learning goals, social studies unit
+  list and project rubric, and student-facing vocabulary/review materials.
+- Then reconcile existing lessons with actual class scope, map standards and
+  gaps, and add missing explanations/activities/practice as warranted. Do not
+  publish private newsletter text, child reports, or family identifiers.
+- See `docs/school-studies-review.md` and `lib/school-studies.ts`.
+
+### Resume workflow
+
+Read the shared and repository `AGENTS.md` first. Preserve corrected Test 1 as
+required golden baseline. For future content/code edits, complete applicable
+content evals, local checks, and browser QA before focused commit → push main
+→ GitHub-triggered Vercel deployment. Child/parent feedback supplements agent
+QA; it must not replace it. No new implementation was requested by this handoff.
+
 ## August 5, 2026 Handoff — Guided Learn Pilot Complete and Live
 
 ### Read This First
